@@ -1,0 +1,110 @@
+{
+  "id": "math-4e-puissances-racines",
+  "subject": "Maths",
+  "title": "Maths · 4e · Puissances, écriture scientifique et racines",
+  "description": "4e · 2026-2027 · Puissances, écriture scientifique et racines. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#E2D6F3",
+  "daily_new_limit": 3,
+  "grade": "4e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "attendus-4e-2020",
+  "cards": [
+    {
+      "id": "puissance",
+      "front": "Que signifie $a^n$ pour un entier $n\\geq1$ ?",
+      "back": "Le produit de n facteurs tous égaux à a.",
+      "kind": "cours"
+    },
+    {
+      "id": "dix-negatif",
+      "front": "Écris $10^{-4}$ en écriture décimale.",
+      "back": "$0{,}0001$, car $10^{-4}=\\frac{1}{10^4}$.",
+      "kind": "application"
+    },
+    {
+      "id": "exposant-zero",
+      "front": "Combien vaut $10^0$ ?",
+      "back": "1.",
+      "kind": "cours"
+    },
+    {
+      "id": "produit-dix",
+      "front": "Simplifie $10^3\\times10^5$.",
+      "back": "$10^8$ : on additionne les exposants des puissances de 10 multipliées.",
+      "kind": "application"
+    },
+    {
+      "id": "quotient-dix",
+      "front": "Simplifie $10^2\\div10^6$.",
+      "back": "$10^{-4}$ : on soustrait les exposants.",
+      "kind": "application"
+    },
+    {
+      "id": "scientifique",
+      "front": "Quelle forme a l’écriture scientifique d’un nombre strictement positif ?",
+      "back": "$a\\times10^n$, avec $1\\leq a<10$ et n entier relatif.",
+      "kind": "cours"
+    },
+    {
+      "id": "grand",
+      "front": "Écris 5 800 000 en notation scientifique.",
+      "back": "$5{,}8\\times10^6$.",
+      "kind": "application"
+    },
+    {
+      "id": "petit",
+      "front": "Écris $0{,}00072$ en notation scientifique.",
+      "back": "$7{,}2\\times10^{-4}$.",
+      "kind": "application"
+    },
+    {
+      "id": "comparer",
+      "front": "Compare $9\\times10^4$ et $2\\times10^5$.",
+      "back": "$9\\times10^4<2\\times10^5$, car $90\\,000<200\\,000$.",
+      "kind": "application"
+    },
+    {
+      "id": "prefixes",
+      "front": "À quelles puissances de 10 correspondent nano, micro, milli, kilo, méga et giga ?",
+      "back": "Nano : $10^{-9}$ ; micro : $10^{-6}$ ; milli : $10^{-3}$ ; kilo : $10^3$ ; méga : $10^6$ ; giga : $10^9$.",
+      "kind": "cours"
+    },
+    {
+      "id": "micro",
+      "front": "Exprime 4 micromètres en mètres.",
+      "back": "$4\\times10^{-6}$ m, soit $0{,}000004$ m.",
+      "kind": "application"
+    },
+    {
+      "id": "racine",
+      "front": "Qu’est-ce que $\\sqrt{a}$ pour $a\\geq0$ ?",
+      "back": "L’unique nombre positif ou nul dont le carré vaut a.",
+      "kind": "cours"
+    },
+    {
+      "id": "racine-parfaite",
+      "front": "Calcule $\\sqrt{121}$.",
+      "back": "11, car $11^2=121$.",
+      "kind": "application"
+    },
+    {
+      "id": "encadrer",
+      "front": "Encadre $\\sqrt{30}$ entre deux entiers consécutifs.",
+      "back": "$5<\\sqrt{30}<6$ car $25<30<36$.",
+      "kind": "application"
+    },
+    {
+      "id": "racine-signe",
+      "front": "$\\sqrt{49}$ vaut-il 7 ou −7 ?",
+      "back": "Il vaut 7 uniquement. −7 a aussi pour carré 49, mais la racine carrée désigne la valeur positive ou nulle.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "carre-negatif",
+      "front": "Calcule $(-3)^2$ et $-3^2$.",
+      "back": "$(-3)^2=9$ ; $-3^2=-(3^2)=-9$. Les parenthèses changent la base élevée au carré.",
+      "kind": "application"
+    }
+  ]
+}

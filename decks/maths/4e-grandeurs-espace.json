@@ -1,0 +1,110 @@
+{
+  "id": "math-4e-grandeurs-espace",
+  "subject": "Maths",
+  "title": "Maths · 4e · Volumes, vitesses et agrandissements",
+  "description": "4e · 2026-2027 · Volumes, vitesses et agrandissements. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#E2D6F3",
+  "daily_new_limit": 3,
+  "grade": "4e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "attendus-4e-2020",
+  "cards": [
+    {
+      "id": "pyramide",
+      "front": "Quelle est la formule du volume d’une pyramide de hauteur h et de base d’aire B ?",
+      "back": "$V=\\frac{Bh}{3}$. La hauteur est perpendiculaire au plan de la base.",
+      "kind": "cours"
+    },
+    {
+      "id": "volume-pyramide",
+      "front": "Une pyramide a une base d’aire 24 cm² et une hauteur de 9 cm. Quel est son volume ?",
+      "back": "72 cm³ : $24\\times9\\div3=72$.",
+      "kind": "application"
+    },
+    {
+      "id": "cone",
+      "front": "Quel est le volume d’un cône de révolution de rayon r et de hauteur h ?",
+      "back": "$V=\\frac{\\pi r^2h}{3}$.",
+      "kind": "cours"
+    },
+    {
+      "id": "volume-cone",
+      "front": "Un cône a un rayon de 3 cm et une hauteur de 4 cm. Quel est son volume exact ?",
+      "back": "$12\\pi$ cm³ : $\\pi\\times9\\times4\\div3$.",
+      "kind": "application"
+    },
+    {
+      "id": "hauteur-generatrice",
+      "front": "La génératrice oblique d’un cône est-elle sa hauteur ?",
+      "back": "Non. La hauteur relie le sommet au plan de base perpendiculairement ; la génératrice relie le sommet au cercle de base.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "patron-pyramide",
+      "front": "De quelles faces se compose une pyramide à base carrée ?",
+      "back": "Un carré pour base et quatre triangles pour faces latérales.",
+      "kind": "cours"
+    },
+    {
+      "id": "coordonnees",
+      "front": "Dans un repère de l’espace, un point est $(2\\,;\\,3\\,;\\,5)$. Quelle est son altitude ?",
+      "back": "5 : c’est la troisième coordonnée, après l’abscisse et l’ordonnée.",
+      "kind": "application"
+    },
+    {
+      "id": "vitesse",
+      "front": "Quelle relation lie vitesse moyenne v, distance d et durée t non nulle ?",
+      "back": "$v=\\frac{d}{t}$. Les unités doivent être cohérentes.",
+      "kind": "cours"
+    },
+    {
+      "id": "vitesse-calcul",
+      "front": "On parcourt 150 km en 2 h 30 min. Quelle est la vitesse moyenne ?",
+      "back": "60 km/h : $2\\text{ h }30\\text{ min}=2{,}5$ h, puis $150\\div2{,}5=60$.",
+      "kind": "application"
+    },
+    {
+      "id": "conversion-vitesse",
+      "front": "Convertis 72 km/h en m/s.",
+      "back": "20 m/s : $72\\times1000\\div3600=20$.",
+      "kind": "application"
+    },
+    {
+      "id": "debit",
+      "front": "Un robinet débite 0,5 L/s. Quel volume coule en 3 min ?",
+      "back": "90 L : 3 min = 180 s, puis $0{,}5\\times180=90$.",
+      "kind": "application"
+    },
+    {
+      "id": "conversion-debit",
+      "front": "Convertis 2 m³/min en L/s.",
+      "back": "$\\frac{100}{3}$ L/s, soit environ 33,3 L/s : $2000\\div60$.",
+      "kind": "application"
+    },
+    {
+      "id": "agrandissement-longueur",
+      "front": "Une figure est agrandie avec un coefficient 3. Que devient un segment de 5 cm ?",
+      "back": "15 cm : les longueurs sont multipliées par 3.",
+      "kind": "application"
+    },
+    {
+      "id": "agrandissement-aire",
+      "front": "Si toutes les longueurs sont multipliées par un coefficient $k>0$, par quoi les aires sont-elles multipliées ?",
+      "back": "Par $k^2$, car deux dimensions sont multipliées par k.",
+      "kind": "cours"
+    },
+    {
+      "id": "agrandissement-volume",
+      "front": "Toutes les arêtes d’un solide sont doublées. Par combien son volume est-il multiplié ?",
+      "back": "8 : $2^3=8$.",
+      "kind": "application"
+    },
+    {
+      "id": "reduction",
+      "front": "Un solide de volume 81 cm³ est réduit au tiers sur toutes ses longueurs. Quel est le nouveau volume ?",
+      "back": "3 cm³ : $81\\times(\\frac{1}{3})^3=81\\div27=3$.",
+      "kind": "application"
+    }
+  ]
+}

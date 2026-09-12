@@ -48,13 +48,14 @@ def main():
     require({n["grade"] for n in nodes.values()} == GRADES, "Classe manquante")
     deck_ids = set()
     # Check global ID collisions, including the pre-existing non-college decks.
-    for path in (ROOT / "decks").glob("*.json"):
+    for path in (ROOT / "decks").glob("*/*.json"):
         deck = json.loads(path.read_text())
         require(deck["id"] not in deck_ids, f"ID de deck dupliqué : {deck['id']}")
         deck_ids.add(deck["id"])
 
-    catalog_files = {p.stem for p in (ROOT / "decks").glob("math-[3456]e-*.json")}
-    require(catalog_files == set(nodes), "Les fichiers et le catalogue ne correspondent pas")
+    catalog_files = {p.stem for p in (ROOT / "decks" / "maths").glob("[3456]e-*.json")}
+    require(catalog_files == {node_id.removeprefix("math-") for node_id in nodes},
+            "Les fichiers et le catalogue ne correspondent pas")
     stats = Counter()
     for node_id, node in nodes.items():
         require(node["deck_id"] == node_id and SLUG.fullmatch(node_id), f"ID incorrect : {node_id}")
@@ -66,7 +67,7 @@ def main():
             require(parent in nodes, f"{node_id}: prérequis inconnu {parent}")
             require(int(nodes[parent]["grade"][0]) >= int(node["grade"][0]),
                     f"{node_id}: prérequis d'une classe ultérieure")
-        deck = json.loads((ROOT / "decks" / f"{node_id}.json").read_text())
+        deck = json.loads((ROOT / "decks" / "maths" / f"{node_id.removeprefix('math-')}.json").read_text())
         require(deck["id"] == node_id and deck["grade"] == node["grade"], f"{node_id}: identité incohérente")
         require(deck["format"] == "math", f"{node_id}: format incorrect")
         require(deck["school_year"] == manifest["school_year"], f"{node_id}: année incohérente")

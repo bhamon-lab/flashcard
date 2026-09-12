@@ -1,0 +1,23 @@
+{
+  "id": "math-derivees",
+  "subject": "Maths",
+  "title": "Maths · Dérivées",
+  "description": "Les formules de dérivation à connaître par cœur",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 5,
+  "cards": [
+    { "id": "constante", "front": "Dérivée d'une constante $k$", "back": "$0$" },
+    { "id": "puissance", "front": "Dérivée de $x^n$", "back": "$n\\,x^{n-1}$ (pour $n \\neq 0$)" },
+    { "id": "inverse", "front": "Dérivée de $\\dfrac{1}{x}$", "back": "$-\\dfrac{1}{x^{2}}$" },
+    { "id": "racine", "front": "Dérivée de $\\sqrt{x}$", "back": "$\\dfrac{1}{2\\sqrt{x}}$" },
+    { "id": "somme", "front": "Dérivée de $u + v$", "back": "$u' + v'$ (linéarité)" },
+    { "id": "produit", "front": "Dérivée de $u \\times v$", "back": "$u'v + uv'$" },
+    { "id": "quotient", "front": "Dérivée de $\\dfrac{u}{v}$", "back": "$\\dfrac{u'v - uv'}{v^{2}}$" },
+    { "id": "exponentielle", "front": "Dérivée de $e^{x}$", "back": "$e^{x}$" },
+    { "id": "logarithme", "front": "Dérivée de $\\ln x$", "back": "$\\dfrac{1}{x}$ (pour $x > 0$)" },
+    { "id": "sinus", "front": "Dérivée de $\\sin x$", "back": "$\\cos x$" },
+    { "id": "cosinus", "front": "Dérivée de $\\cos x$", "back": "$-\\sin x$" },
+    { "id": "composee", "front": "Dérivée de $u\\bigl(v(x)\\bigr)$", "back": "$v'(x) \\cdot u'\\bigl(v(x)\\bigr)$" }
+  ]
+}

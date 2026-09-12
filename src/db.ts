@@ -86,6 +86,9 @@ export async function initializeDatabase() {
     await db.execAsync('ALTER TABLE decks ADD COLUMN sync_id TEXT');
     await db.execAsync('CREATE INDEX IF NOT EXISTS decks_sync_idx ON decks(sync_id)');
   }
+  if (!existingColumns.has('subject')) {
+    await db.execAsync("ALTER TABLE decks ADD COLUMN subject TEXT NOT NULL DEFAULT 'Divers'");
+  }
 
   const syncedAnswerFix = await db.getFirstAsync<{ value: string }>(
     "SELECT value FROM app_metadata WHERE key = 'synced-answer-field-fixed'",
@@ -158,13 +161,13 @@ export async function getCards(deckId: number): Promise<Card[]> {
   );
 }
 
-export async function createDeck(title: string, description: string) {
+export async function createDeck(title: string, description: string, subject = 'Divers') {
   const db = await getDatabase();
   const palette = ['#DFE5FA', '#FBF2CF', '#FBE3DE', '#DCEDE2'];
   const count = await db.getFirstAsync<{ count: number }>('SELECT COUNT(*) AS count FROM decks');
   return db.runAsync(
-    'INSERT INTO decks (title, description, color, daily_new_limit, created_at) VALUES (?, ?, ?, ?, ?)',
-    title.trim(), description.trim(), palette[(count?.count ?? 0) % palette.length], 5, Date.now(),
+    'INSERT INTO decks (title, description, color, daily_new_limit, subject, created_at) VALUES (?, ?, ?, ?, ?, ?)',
+    title.trim(), description.trim(), palette[(count?.count ?? 0) % palette.length], 5, subject.trim() || 'Divers', Date.now(),
   );
 }
 
@@ -295,6 +298,37 @@ export async function setMetadata(key: string, value: string) {
   );
 }
 
+export async function getMetadata(key: string): Promise<string | null> {
+  const db = await getDatabase();
+  const row = await db.getFirstAsync<{ value: string }>('SELECT value FROM app_metadata WHERE key = ?', key);
+  return row?.value ?? null;
+}
+
+export type SubjectPrefs = {
+  hidden: string[];
+  custom: string[];
+};
+
+const SUBJECT_PREFS_KEY = 'subject-prefs';
+
+export async function getSubjectPrefs(): Promise<SubjectPrefs> {
+  const raw = await getMetadata(SUBJECT_PREFS_KEY);
+  if (!raw) return { hidden: [], custom: [] };
+  try {
+    const parsed = JSON.parse(raw) as Partial<SubjectPrefs>;
+    return {
+      hidden: Array.isArray(parsed.hidden) ? parsed.hidden : [],
+      custom: Array.isArray(parsed.custom) ? parsed.custom : [],
+    };
+  } catch {
+    return { hidden: [], custom: [] };
+  }
+}
+
+export async function setSubjectPrefs(prefs: SubjectPrefs) {
+  await setMetadata(SUBJECT_PREFS_KEY, JSON.stringify({ hidden: prefs.hidden, custom: prefs.custom }));
+}
+
 export type SyncedCard = {
   id: string;
   front: string;
@@ -308,6 +342,7 @@ export type SyncedDeck = {
   color?: string;
   format?: string;
   daily_new_limit?: number;
+  subject?: string;
   cards: SyncedCard[];
 };
 
@@ -318,22 +353,23 @@ export async function upsertSyncedDeck(deck: SyncedDeck): Promise<'created' | 'u
   const color = deck.color && /^#[0-9A-Fa-f]{6}$/.test(deck.color) ? deck.color : '#DDE9DE';
   const dailyNewLimit = Math.max(0, Math.round(deck.daily_new_limit ?? 5));
   const description = deck.description?.trim() ?? '';
+  const subject = deck.subject?.trim() || 'Divers';
 
   const existing = await db.getFirstAsync<{ id: number }>('SELECT id FROM decks WHERE sync_id = ?', deck.id);
   let deckId: number;
   let outcome: 'created' | 'updated';
   if (existing) {
     await db.runAsync(
-      'UPDATE decks SET title = ?, description = ?, color = ?, kind = ?, daily_new_limit = ? WHERE id = ?',
-      deck.title, description, color, kind, dailyNewLimit, existing.id,
+      'UPDATE decks SET title = ?, description = ?, color = ?, kind = ?, daily_new_limit = ?, subject = ? WHERE id = ?',
+      deck.title, description, color, kind, dailyNewLimit, subject, existing.id,
     );
     deckId = existing.id;
     outcome = 'updated';
   } else {
     const inserted = await db.runAsync(
-      `INSERT INTO decks (title, description, color, daily_new_limit, kind, sync_id, created_at)
-       VALUES (?, ?, ?, ?, ?, ?, ?)`,
-      deck.title, description, color, dailyNewLimit, kind, deck.id, Date.now(),
+      `INSERT INTO decks (title, description, color, daily_new_limit, kind, sync_id, subject, created_at)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+      deck.title, description, color, dailyNewLimit, kind, deck.id, subject, Date.now(),
     );
     deckId = inserted.lastInsertRowId;
     outcome = 'created';

@@ -1,0 +1,104 @@
+{
+  "id": "math-4e-statistiques-probabilites",
+  "subject": "Maths",
+  "title": "Maths · 4e · Médiane et événements contraires",
+  "description": "4e · 2026-2027 · Médiane et événements contraires. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#E2D6F3",
+  "daily_new_limit": 3,
+  "grade": "4e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "attendus-4e-2020",
+  "cards": [
+    {
+      "id": "mediane",
+      "front": "Quelle propriété caractérise une médiane d’une série ?",
+      "back": "Au moins la moitié des valeurs lui sont inférieures ou égales et au moins la moitié lui sont supérieures ou égales.",
+      "kind": "cours"
+    },
+    {
+      "id": "tri",
+      "front": "Quelle étape est indispensable avant de chercher une médiane dans une liste brute ?",
+      "back": "Ranger les valeurs dans l’ordre croissant.",
+      "kind": "cours"
+    },
+    {
+      "id": "impair",
+      "front": "Donne la médiane de 2, 4, 7, 9 et 15.",
+      "back": "7 : c’est la troisième valeur d’une série ordonnée de cinq valeurs.",
+      "kind": "application"
+    },
+    {
+      "id": "pair",
+      "front": "Avec la convention de la moyenne des deux valeurs centrales, donne la médiane de 2, 5, 8 et 13.",
+      "back": "6,5 : $(5+8)\\div2=6{,}5$.",
+      "kind": "application"
+    },
+    {
+      "id": "interpretation",
+      "front": "Une médiane de 12 signifie-t-elle que la moitié des valeurs sont exactement égales à 12 ?",
+      "back": "Non : au moins la moitié sont inférieures ou égales à 12, et au moins la moitié supérieures ou égales à 12.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "moyenne-ponderee",
+      "front": "On a deux notes de 10 et trois notes de 15. Quelle est la moyenne ?",
+      "back": "13 : $(2\\times10+3\\times15)\\div5=65\\div5$.",
+      "kind": "application"
+    },
+    {
+      "id": "moyenne-mediane",
+      "front": "Pour 1, 2, 3, 4, 40, compare moyenne et médiane.",
+      "back": "La moyenne vaut 10 et la médiane 3. La grande valeur 40 augmente fortement la moyenne.",
+      "kind": "application"
+    },
+    {
+      "id": "diagramme",
+      "front": "Un groupe de 40 personnes comprend 15 cyclistes. Quel angle leur associer dans un diagramme circulaire ?",
+      "back": "135° : $\\frac{15}{40}\\times360=135$.",
+      "kind": "application"
+    },
+    {
+      "id": "contraire",
+      "front": "Qu’est-ce que l’événement contraire de A ?",
+      "back": "L’événement « A ne se réalise pas ». Il contient toutes les issues qui ne sont pas dans A.",
+      "kind": "cours"
+    },
+    {
+      "id": "formule-contraire",
+      "front": "Comment calculer la probabilité de l’événement contraire de A ?",
+      "back": "$P(\\overline A)=1-P(A)$.",
+      "kind": "cours"
+    },
+    {
+      "id": "calcul-contraire",
+      "front": "La probabilité de gagner vaut 0,35. Quelle est la probabilité de ne pas gagner ?",
+      "back": "0,65 : $1-0{,}35=0{,}65$.",
+      "kind": "application"
+    },
+    {
+      "id": "de-contraire",
+      "front": "Sur un dé numéroté de 1 à 6, quel est le contraire de « obtenir au moins 5 » ?",
+      "back": "« Obtenir au plus 4 », soit les issues 1, 2, 3 ou 4.",
+      "kind": "application"
+    },
+    {
+      "id": "equiprobabilite-condition",
+      "front": "Peut-on toujours calculer une probabilité par « nombre d’issues favorables / nombre total d’issues » ?",
+      "back": "Seulement quand les issues comptées sont équiprobables. Sinon, elles peuvent avoir des poids différents.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "urne",
+      "front": "Une urne contient 7 billes vertes et 3 jaunes indiscernables au toucher. Probabilité de ne pas tirer une jaune au hasard ?",
+      "back": "$\\frac{7}{10}=0{,}7$, soit 70 %.",
+      "kind": "application"
+    },
+    {
+      "id": "possible",
+      "front": "Une probabilité de 0,01 signifie-t-elle que l’événement est impossible ?",
+      "back": "Non : il est peu probable mais possible. Dans les modèles finis étudiés, l’impossible a une probabilité nulle.",
+      "kind": "comprehension"
+    }
+  ]
+}

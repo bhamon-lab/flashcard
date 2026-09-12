@@ -16,6 +16,7 @@ export type SyncResult = {
 type GitHubContent = {
   name: string;
   type: string;
+  path: string;
   download_url: string | null;
 };
 
@@ -28,8 +29,15 @@ function slugify(value: string) {
   return value.trim().toLowerCase().replace(/[^a-z0-9-_]+/g, '-');
 }
 
+/** Nom de matière affiché à partir du nom de dossier (« maths » → « Maths »). */
+function subjectFromFolder(folderName: string) {
+  const cleaned = folderName.replace(/[-_]+/g, ' ').trim();
+  if (!cleaned) return 'Divers';
+  return cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+}
+
 /** Valide et normalise un deck JSON brut du dépôt. */
-function asDeck(raw: unknown, fileName: string): SyncedDeck | null {
+function asDeck(raw: unknown, fileName: string, fallbackSubject: string): SyncedDeck | null {
   if (!raw || typeof raw !== 'object') return null;
   const candidate = raw as Record<string, unknown>;
   const title = typeof candidate.title === 'string' ? candidate.title.trim() : '';
@@ -52,9 +60,11 @@ function asDeck(raw: unknown, fileName: string): SyncedDeck | null {
     });
   });
   if (!normalized.length) return null;
+  const subject = typeof candidate.subject === 'string' && candidate.subject.trim() ? candidate.subject.trim() : fallbackSubject;
   return {
     id,
     title,
+    subject,
     description: typeof candidate.description === 'string' ? candidate.description.trim() : '',
     color: typeof candidate.color === 'string' ? candidate.color : undefined,
     format: candidate.format === 'math' ? 'math' : 'people',
@@ -63,34 +73,59 @@ function asDeck(raw: unknown, fileName: string): SyncedDeck | null {
   };
 }
 
-async function fetchRepoDecks(): Promise<{ decks: SyncedDeck[]; errors: string[] }> {
+async function listGithubContents(path: string): Promise<GitHubContent[]> {
   const repo = repoIdentifier();
-  const listResponse = await fetch(`https://api.github.com/repos/${repo}/contents/${DECKS_PATH}`, {
+  const response = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
     headers: { Accept: 'application/vnd.github+json' },
   });
-  if (!listResponse.ok) {
-    if (listResponse.status === 404) throw new Error(`Dossier « ${DECKS_PATH}/ » introuvable dans ${repo}.`);
-    throw new Error(`GitHub a répondu ${listResponse.status}.`);
+  if (!response.ok) {
+    if (response.status === 404) throw new Error(`Dossier « ${path}/ » introuvable dans ${repo}.`);
+    throw new Error(`GitHub a répondu ${response.status}.`);
   }
-  const entries = (await listResponse.json()) as GitHubContent[];
+  const entries = (await response.json()) as GitHubContent[];
   if (!Array.isArray(entries)) throw new Error('Réponse GitHub inattendue.');
+  return entries;
+}
 
+async function fetchDeckFile(
+  entry: GitHubContent,
+  fallbackSubject: string,
+  decks: SyncedDeck[],
+  errors: string[],
+): Promise<void> {
+  if (entry.type !== 'file' || !entry.name.toLowerCase().endsWith('.json')) return;
+  if (!entry.download_url) {
+    errors.push(`${entry.name} : URL de téléchargement indisponible.`);
+    return;
+  }
+  try {
+    const fileResponse = await fetch(entry.download_url);
+    if (!fileResponse.ok) throw new Error(`HTTP ${fileResponse.status}`);
+    const deck = asDeck(await fileResponse.json(), entry.name, fallbackSubject);
+    if (deck) decks.push(deck);
+    else errors.push(`${entry.name} : format invalide (title et cards avec front requis).`);
+  } catch (error) {
+    errors.push(`${entry.name} : ${error instanceof Error ? error.message : 'illisible'}`);
+  }
+}
+
+async function fetchRepoDecks(): Promise<{ decks: SyncedDeck[]; errors: string[] }> {
   const errors: string[] = [];
   const decks: SyncedDeck[] = [];
+  const entries = await listGithubContents(DECKS_PATH);
   for (const entry of entries) {
-    if (entry.type !== 'file' || !entry.name.toLowerCase().endsWith('.json')) continue;
-    if (!entry.download_url) {
-      errors.push(`${entry.name} : URL de téléchargement indisponible.`);
-      continue;
-    }
-    try {
-      const fileResponse = await fetch(entry.download_url);
-      if (!fileResponse.ok) throw new Error(`HTTP ${fileResponse.status}`);
-      const deck = asDeck(await fileResponse.json(), entry.name);
-      if (deck) decks.push(deck);
-      else errors.push(`${entry.name} : format invalide (title et cards avec front requis).`);
-    } catch (error) {
-      errors.push(`${entry.name} : ${error instanceof Error ? error.message : 'illisible'}`);
+    if (entry.type === 'dir') {
+      try {
+        const subjectFiles = await listGithubContents(entry.path);
+        for (const file of subjectFiles) {
+          await fetchDeckFile(file, subjectFromFolder(entry.name), decks, errors);
+        }
+      } catch (error) {
+        errors.push(`${entry.name}/ : ${error instanceof Error ? error.message : 'illisible'}`);
+      }
+    } else {
+      // Ancienne organisation à plat : paquets sans dossier de matière.
+      await fetchDeckFile(entry, 'Divers', decks, errors);
     }
   }
   return { decks, errors };
@@ -98,7 +133,8 @@ async function fetchRepoDecks(): Promise<{ decks: SyncedDeck[]; errors: string[]
 
 /**
  * Synchronise les decks du dossier `decks/` du dépôt GitHub vers la base locale :
- * crée, met à jour et supprime les paquets pour refléter le dépôt.
+ * chaque sous-dossier (ex. `decks/maths/`) devient une matière, les fichiers
+ * JSON à la racine restent acceptés (matière « Divers »).
  */
 export async function syncDecks(): Promise<SyncResult> {
   const { decks, errors } = await fetchRepoDecks();

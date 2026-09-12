@@ -1,0 +1,104 @@
+{
+  "id": "math-5e-proportionnalite",
+  "subject": "Maths",
+  "title": "Maths · 5e · Proportions, échelles et dépendances",
+  "description": "5e · 2026-2027 · Proportions, échelles et dépendances. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 3,
+  "grade": "5e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "cycle4-2026-5e",
+  "cards": [
+    {
+      "id": "coefficient",
+      "front": "3 kg coûtent 7,50 €. Quel coefficient transforme la masse en kilogrammes en prix en euros ?",
+      "back": "2,5 : $7{,}50\\div3=2{,}5$ euro par kilogramme.",
+      "kind": "application"
+    },
+    {
+      "id": "prix",
+      "front": "À 2,50 € le kilogramme, combien coûtent 4,2 kg ?",
+      "back": "10,50 € : $2{,}5\\times4{,}2=10{,}5$.",
+      "kind": "application"
+    },
+    {
+      "id": "echelle",
+      "front": "Que signifie une échelle de $1:1000$ ?",
+      "back": "Une longueur sur le plan est 1000 fois plus petite que la longueur réelle, dans la même unité.",
+      "kind": "cours"
+    },
+    {
+      "id": "plan",
+      "front": "Sur un plan à l’échelle $1:200$, un mur mesure 4 cm. Quelle est sa longueur réelle ?",
+      "back": "8 m : $4\\times200=800$ cm.",
+      "kind": "application"
+    },
+    {
+      "id": "reduction-plan",
+      "front": "Une distance réelle de 3 km est représentée à l’échelle $1:50\\,000$. Quelle longueur sur la carte ?",
+      "back": "6 cm : $3\\text{ km}=300\\,000\\text{ cm}$, puis $300\\,000\\div50\\,000=6$.",
+      "kind": "application"
+    },
+    {
+      "id": "pourcentage",
+      "front": "Calcule 18 % de 250.",
+      "back": "45 : $\\frac{18}{100}\\times250=45$.",
+      "kind": "application"
+    },
+    {
+      "id": "proportion",
+      "front": "12 objets sur 80 sont défectueux. Quel pourcentage cela représente-t-il ?",
+      "back": "15 % : $12\\div80=0{,}15$.",
+      "kind": "application"
+    },
+    {
+      "id": "vitesse",
+      "front": "À vitesse constante, on parcourt 45 km en 3 h. Combien en 4 h ?",
+      "back": "60 km : 15 km par heure, puis $15\\times4=60$.",
+      "kind": "application"
+    },
+    {
+      "id": "graphique",
+      "front": "Comment reconnaître graphiquement des données proportionnelles ?",
+      "back": "Les points sont alignés avec l’origine du repère.",
+      "kind": "cours"
+    },
+    {
+      "id": "origine",
+      "front": "Des points alignés sur une droite qui ne passe pas par l’origine représentent-ils une proportionnalité ?",
+      "back": "Non. L’alignement seul ne suffit pas : la droite doit aussi passer par l’origine.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "dependance",
+      "front": "Un carré a un côté de longueur c. Exprime son périmètre en fonction de c.",
+      "back": "$P=4c$. La valeur du périmètre dépend de celle du côté.",
+      "kind": "application"
+    },
+    {
+      "id": "tableau",
+      "front": "Pour $P=4c$, donne les périmètres correspondant à $c=1$, $c=2$ et $c=3$ cm.",
+      "back": "4, 8 et 12 cm : on multiplie chaque côté par 4.",
+      "kind": "application"
+    },
+    {
+      "id": "aire-non-proportionnelle",
+      "front": "L’aire d’un carré est-elle proportionnelle à la longueur de son côté ?",
+      "back": "Non : un côté de 1 donne une aire de 1, un côté de 2 donne une aire de 4. Doubler le côté quadruple l’aire.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "forfait",
+      "front": "Un abonnement coûte 6 € plus 2 € par séance. Exprime le coût pour n séances.",
+      "back": "$6+2n$ euros.",
+      "kind": "application"
+    },
+    {
+      "id": "point-courbe",
+      "front": "Pour un trajet, le tableau associe 2 h à 30 km. Quel point placer si l’axe horizontal porte les heures ?",
+      "back": "Le point $(2\\,;\\,30)$ : temps en abscisse, distance en ordonnée.",
+      "kind": "application"
+    }
+  ]
+}
