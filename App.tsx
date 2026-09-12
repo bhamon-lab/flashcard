@@ -629,8 +629,7 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
       <View style={styles.studyProgress}><View style={[styles.studyProgressFill, { width: `${Math.max(8, 100 / Math.max(queue.length, 1))}%` }]} /></View>
       <View style={styles.studyContent}>
         <View style={[styles.flashCard, smallPhoto && styles.flashCardSmall]}>
-          <Grid tint={colors.gridChalk} step={30} />
-          {current.photo_uri ? <Image source={{ uri: current.photo_uri }} style={styles.flashImage} resizeMode="cover" /> : <Text style={styles.flashWatermark}>{glyphFor(current.id)}</Text>}
+          {current.photo_uri ? <Image source={{ uri: current.photo_uri }} style={styles.flashImage} resizeMode="cover" /> : null}
           {current.photo_uri ? <View style={styles.photoShade} /> : null}
           {revealed ? (
             <View style={styles.answerPaper}>
@@ -1009,7 +1008,7 @@ const styles = StyleSheet.create({
   studyProgress: { height: 4, backgroundColor: '#DDDED8' },
   studyProgressFill: { height: 4, backgroundColor: colors.blue, borderRadius: 2 },
   studyContent: { flex: 1, width: '100%', maxWidth: 620, alignSelf: 'center', paddingHorizontal: 20, paddingTop: 22, paddingBottom: 12 },
-  flashCard: { flex: 1, minHeight: 320, maxHeight: 560, backgroundColor: colors.board, borderRadius: radius.large, overflow: 'hidden', justifyContent: 'center', alignItems: 'center', ...shadow },
+  flashCard: { flex: 1, minHeight: 320, maxHeight: 560, backgroundColor: '#F7F4ED', borderRadius: radius.large, overflow: 'hidden', justifyContent: 'center', alignItems: 'center', borderWidth: 1, borderColor: '#DED9CD', ...shadow },
   flashCardSmall: {
     flex: 0,
     height: '54%',
@@ -1019,15 +1018,14 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   flashImage: { position: 'absolute', top: 0, right: 0, bottom: 0, left: 0 },
-  flashWatermark: { position: 'absolute', right: -8, bottom: -30, fontSize: 150, fontWeight: '700', color: colors.chalkDim, opacity: 0.22, fontFamily: mono, transform: [{ rotate: '-8deg' }] },
-  photoShade: { position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, backgroundColor: 'rgba(12, 18, 32, 0.05)' },
+  photoShade: { position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, backgroundColor: 'rgba(12, 23, 42, 0.32)' },
   questionBadge: { position: 'absolute', top: 18, right: 18, width: 38, height: 38, borderRadius: 13, backgroundColor: 'rgba(255,255,255,0.9)', alignItems: 'center', justifyContent: 'center' },
   questionStage: { paddingHorizontal: 28, alignItems: 'center', zIndex: 2 },
-  questionEyebrow: { color: colors.chalkDim, fontSize: 10, fontWeight: '900', letterSpacing: 2.4, marginBottom: 14, fontFamily: mono },
-  questionBig: { color: colors.chalk, fontSize: 25, lineHeight: 34, fontWeight: '700', textAlign: 'center', fontFamily: mono },
-  questionStrip: { position: 'absolute', left: 14, right: 14, bottom: 14, borderRadius: 16, backgroundColor: 'rgba(24, 42, 34, 0.9)', paddingVertical: 15, paddingHorizontal: 16, zIndex: 2 },
-  questionStripText: { color: colors.chalk, fontSize: 16, fontWeight: '700', textAlign: 'center', fontFamily: mono },
-  answerPaper: { position: 'absolute', left: 14, right: 14, bottom: 14, borderRadius: 16, backgroundColor: colors.paper, paddingVertical: 16, paddingHorizontal: 18, alignItems: 'center', zIndex: 2 },
+  questionEyebrow: { color: '#5E6C84', fontSize: 10, fontWeight: '900', letterSpacing: 2.4, marginBottom: 14, fontFamily: mono },
+  questionBig: { color: '#17233A', fontSize: 26, lineHeight: 35, fontWeight: '800', textAlign: 'center', fontFamily: mono },
+  questionStrip: { position: 'absolute', left: 14, right: 14, bottom: 14, borderRadius: 16, backgroundColor: 'rgba(18, 33, 55, 0.94)', paddingVertical: 15, paddingHorizontal: 16, zIndex: 2 },
+  questionStripText: { color: '#FFFFFF', fontSize: 16, fontWeight: '800', textAlign: 'center', fontFamily: mono },
+  answerPaper: { position: 'absolute', left: 14, right: 14, bottom: 14, borderRadius: 16, backgroundColor: '#FFFDFC', borderWidth: 1, borderColor: '#DED9CD', paddingVertical: 16, paddingHorizontal: 18, alignItems: 'center', zIndex: 2 },
   answerEyebrow: { color: colors.red, fontSize: 10, fontWeight: '900', letterSpacing: 1.6 },
   answerText: { color: colors.ink, fontSize: 21, fontWeight: '700', letterSpacing: -0.3, textAlign: 'center', marginTop: 6, fontFamily: mono },
   answerNote: { color: colors.muted, fontSize: 13, marginTop: 5, fontWeight: '600' },
