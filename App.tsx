@@ -27,6 +27,7 @@ import {
   getCards,
   getDeck,
   getDecks,
+  getDecksByIds,
   getNewCards,
   getSessionCards,
   importCsv,
@@ -48,7 +49,7 @@ type Route =
   | { name: 'home' }
   | { name: 'deck'; deckId: number }
   | { name: 'settings'; deckId: number }
-  | { name: 'study'; deckId: number; newCardAllowance: number }
+  | { name: 'study'; deckIds: number[]; newCardAllowance: number }
   | { name: 'import'; deckId: number };
 
 const formatDelay = (minutes: number) => {
@@ -96,9 +97,10 @@ function PersonImage({ card, style }: { card: Card; style: object }) {
   return <Image source={{ uri: card.photo_uri }} style={style} resizeMode="cover" />;
 }
 
-function HomeScreen({ onOpenDeck, onCreate }: { onOpenDeck: (id: number) => void; onCreate: () => void }) {
+function HomeScreen({ onOpenDeck, onCreate, onStudy }: { onOpenDeck: (id: number) => void; onCreate: () => void; onStudy: (deckIds: number[], newCardAllowance: number) => void }) {
   const [decks, setDecks] = useState<Deck[]>([]);
   const [refreshing, setRefreshing] = useState(false);
+  const [mixOpen, setMixOpen] = useState(false);
   const load = useCallback(async () => setDecks(await getDecks()), []);
   useEffect(() => { load(); }, [load]);
   const dueTotal = decks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
@@ -129,6 +131,15 @@ function HomeScreen({ onOpenDeck, onCreate }: { onOpenDeck: (id: number) => void
             <View style={styles.stackCardFront}><Ionicons name="sparkles" size={30} color={colors.green} /></View>
           </View>
         </View>
+
+        <Pressable onPress={() => setMixOpen(true)} style={({ pressed }) => [styles.mixCard, pressed && styles.cardPressed]}>
+          <View style={styles.mixIcon}><Ionicons name="shuffle" size={22} color={colors.green} /></View>
+          <View style={styles.mixCopy}>
+            <Text style={styles.mixTitle}>Session mixte</Text>
+            <Text style={styles.mixCaption}>Mélange les paquets de ton choix dans une seule révision</Text>
+          </View>
+          <Ionicons name="chevron-forward" size={19} color={colors.muted} />
+        </Pressable>
 
         <View style={styles.sectionHeader}>
           <View>
@@ -165,6 +176,13 @@ function HomeScreen({ onOpenDeck, onCreate }: { onOpenDeck: (id: number) => void
           <View style={styles.newDeckIcon}><Ionicons name="add" size={24} color={colors.green} /></View>
           <View><Text style={styles.newDeckTitle}>Nouveau paquet</Text><Text style={styles.newDeckCaption}>Créer un nouveau groupe de personnes</Text></View>
         </Pressable>
+
+        <CustomSessionSheet
+          visible={mixOpen}
+          decks={decks}
+          onClose={() => setMixOpen(false)}
+          onStart={(deckIds, newCardAllowance) => { setMixOpen(false); onStudy(deckIds, newCardAllowance); }}
+        />
       </ScrollView>
     </SafeAreaView>
   );
@@ -421,8 +439,8 @@ function CardEditor({ visible, deckId, card, onClose, onSaved }: { visible: bool
   );
 }
 
-function StudyScreen({ deckId, newCardAllowance, onClose }: { deckId: number; newCardAllowance: number; onClose: () => void }) {
-  const [deck, setDeck] = useState<Deck | null>(null);
+function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]; newCardAllowance: number; onClose: () => void }) {
+  const [decks, setDecks] = useState<Deck[]>([]);
   const [queue, setQueue] = useState<Card[]>([]);
   const [revealed, setRevealed] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -438,10 +456,10 @@ function StudyScreen({ deckId, newCardAllowance, onClose }: { deckId: number; ne
   }, []);
 
   useEffect(() => {
-    Promise.all([getDeck(deckId), getSessionCards(deckId, newCardAllowance)]).then(([nextDeck, cards]) => {
-      setDeck(nextDeck); setQueue(cards); setLoading(false);
+    Promise.all([getDecksByIds(deckIds), getSessionCards(deckIds, newCardAllowance)]).then(([nextDecks, cards]) => {
+      setDecks(nextDecks); setQueue(cards); setLoading(false);
     });
-  }, [deckId, newCardAllowance]);
+  }, [deckIds, newCardAllowance]);
 
   const current = queue[0];
   useEffect(() => {
@@ -480,12 +498,13 @@ function StudyScreen({ deckId, newCardAllowance, onClose }: { deckId: number; ne
   };
   const addFresh = async (amount: number) => {
     const excluded = queue.map((item) => item.id);
-    const fresh = await getNewCards(deckId, amount, excluded);
+    const fresh = await getNewCards(deckIds, amount, excluded);
     setQueue((items) => items.length ? [items[0], ...fresh, ...items.slice(1)] : fresh);
     setManualOpen(false);
-    if (!fresh.length) Alert.alert('Tout est déjà là', 'Il ne reste aucune nouvelle carte dans ce paquet.');
+    if (!fresh.length) Alert.alert('Tout est déjà là', 'Il ne reste aucune nouvelle carte dans ces paquets.');
   };
   const restartAllCards = () => {
+    if (deckIds.length !== 1) return;
     Alert.alert(
       'Réinitialiser le paquet ?',
       'Toutes les cartes redeviendront nouvelles et leur historique de révision sera effacé.',
@@ -495,9 +514,8 @@ function StudyScreen({ deckId, newCardAllowance, onClose }: { deckId: number; ne
           text: 'Réinitialiser',
           style: 'destructive',
           onPress: async () => {
-            await resetDeckProgress(deckId);
-            const [nextDeck, cards] = await Promise.all([getDeck(deckId), getSessionCards(deckId)]);
-            setDeck(nextDeck);
+            await resetDeckProgress(deckIds[0]);
+            const cards = await getSessionCards(deckIds);
             setQueue(cards);
             setReviewed(0);
           },
@@ -506,26 +524,28 @@ function StudyScreen({ deckId, newCardAllowance, onClose }: { deckId: number; ne
     );
   };
 
-  if (loading || !deck) return <View style={styles.loading}><ActivityIndicator color={colors.green} /></View>;
+  if (loading || !decks.length) return <View style={styles.loading}><ActivityIndicator color={colors.green} /></View>;
+  const isMixed = decks.length > 1;
+  const sessionTitle = isMixed ? 'Session mixte' : decks[0].title;
   if (!current) {
     return (
       <SafeAreaView style={styles.studyScreen} edges={['top', 'bottom']}>
-        <View style={styles.studyTop}><IconButton name="close" label="Quitter" onPress={onClose} /><Text style={styles.studyDeckName}>{deck.title}</Text><View style={{ width: 44 }} /></View>
+        <View style={styles.studyTop}><IconButton name="close" label="Quitter" onPress={onClose} /><Text style={styles.studyDeckName}>{sessionTitle}</Text><View style={{ width: 44 }} /></View>
         <View style={styles.completeWrap}>
           <View style={styles.completeIcon}><Ionicons name="checkmark" size={42} color={colors.green} /></View>
           <Text style={styles.completeTitle}>Session terminée</Text>
           <Text style={styles.completeText}>{reviewed ? `${reviewed} réponse${reviewed > 1 ? 's' : ''} enregistrée${reviewed > 1 ? 's' : ''}.` : 'Aucune carte n’est due pour le moment.'}</Text>
           <View style={styles.completeActions}>
             <PrimaryButton label="Ajouter de nouvelles cartes" icon="add" onPress={() => setManualOpen(true)} />
-            <Pressable onPress={restartAllCards} style={styles.resetButton}><Ionicons name="refresh-outline" size={18} color={colors.green} /><Text style={styles.resetButtonText}>Réinitialiser toutes les cartes</Text></Pressable>
+            {!isMixed ? <Pressable onPress={restartAllCards} style={styles.resetButton}><Ionicons name="refresh-outline" size={18} color={colors.green} /><Text style={styles.resetButtonText}>Réinitialiser toutes les cartes</Text></Pressable> : null}
             <Pressable onPress={onClose} style={styles.secondaryButton}><Text style={styles.secondaryButtonText}>Retour à l’accueil</Text></Pressable>
           </View>
         </View>
         <ManualNewModal
           visible={manualOpen}
-          dailyLimit={Number(deck.daily_new_limit)}
+          dailyLimit={isMixed ? undefined : Number(decks[0].daily_new_limit)}
           onClose={() => setManualOpen(false)}
-          onLimitChange={async (limit) => { await updateDailyLimit(deckId, limit); setDeck((value) => value ? { ...value, daily_new_limit: limit } : value); }}
+          onLimitChange={isMixed ? undefined : async (limit) => { await updateDailyLimit(deckIds[0], limit); setDecks((value) => value.map((deck, index) => index === 0 ? { ...deck, daily_new_limit: limit } : deck)); }}
           onSelect={addFresh}
         />
       </SafeAreaView>
@@ -536,7 +556,7 @@ function StudyScreen({ deckId, newCardAllowance, onClose }: { deckId: number; ne
     <SafeAreaView style={styles.studyScreen} edges={['top', 'bottom']}>
       <View style={styles.studyTop}>
         <IconButton name="close" label="Quitter" onPress={onClose} />
-        <View style={styles.studyTitleWrap}><Text style={styles.studyDeckName}>{deck.title}</Text><Text style={styles.studyRemaining}>{queue.length} dans la file</Text></View>
+        <View style={styles.studyTitleWrap}><Text style={styles.studyDeckName}>{sessionTitle}</Text><Text style={styles.studyRemaining}>{isMixed ? `${decks.length} paquets · ` : ''}{queue.length} dans la file</Text></View>
         <IconButton name="person-add-outline" label="Ajouter de nouvelles cartes" onPress={() => setManualOpen(true)} />
       </View>
       <View style={styles.studyProgress}><View style={[styles.studyProgressFill, { width: `${Math.max(8, 100 / Math.max(queue.length, 1))}%` }]} /></View>
@@ -563,7 +583,7 @@ function StudyScreen({ deckId, newCardAllowance, onClose }: { deckId: number; ne
           <View style={styles.ratingArea}>
             <Text style={styles.ratingPrompt}>Quand veux-tu la revoir ?</Text>
             <View style={styles.ratingGrid}>
-              {getDelayOptions(deck).map((option) => (
+              {getDelayOptions(decks[0]).map((option) => (
                 <Pressable accessibilityRole="button" accessibilityLabel={`Revoir ${option.title}`} disabled={rating} key={option.icon} onPress={() => rate(option.value)} style={({ pressed }) => [styles.ratingButton, { backgroundColor: option.color }, rating && styles.disabled, pressed && styles.pressed]}>
                   <Ionicons name={option.icon} size={21} color={colors.ink} />
                   <View><Text style={styles.ratingTitle}>{option.title}</Text><Text style={styles.ratingSubtitle}>{option.subtitle}</Text></View>
@@ -575,17 +595,18 @@ function StudyScreen({ deckId, newCardAllowance, onClose }: { deckId: number; ne
       </View>
       <ManualNewModal
         visible={manualOpen}
-        dailyLimit={Number(deck.daily_new_limit)}
+        dailyLimit={isMixed ? undefined : Number(decks[0].daily_new_limit)}
         onClose={() => setManualOpen(false)}
-        onLimitChange={async (limit) => { await updateDailyLimit(deckId, limit); setDeck((value) => value ? { ...value, daily_new_limit: limit } : value); }}
+        onLimitChange={isMixed ? undefined : async (limit) => { await updateDailyLimit(deckIds[0], limit); setDecks((value) => value.map((deck, index) => index === 0 ? { ...deck, daily_new_limit: limit } : deck)); }}
         onSelect={addFresh}
       />
     </SafeAreaView>
   );
 }
 
-function ManualNewModal({ visible, dailyLimit, onClose, onSelect, onLimitChange }: { visible: boolean; dailyLimit: number; onClose: () => void; onSelect: (value: number) => void; onLimitChange: (value: number) => void }) {
+function ManualNewModal({ visible, dailyLimit, onClose, onSelect, onLimitChange }: { visible: boolean; dailyLimit?: number; onClose: () => void; onSelect: (value: number) => void; onLimitChange?: (value: number) => void }) {
   const [custom, setCustom] = useState('');
+  const showQuota = dailyLimit !== undefined && onLimitChange !== undefined;
   return (
     <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
       <Pressable style={styles.scrim} onPress={onClose}>
@@ -593,20 +614,90 @@ function ManualNewModal({ visible, dailyLimit, onClose, onSelect, onLimitChange 
           <View style={styles.sheetHandle} />
           <Text style={styles.sheetTitle}>Ajouter des nouvelles cartes</Text>
           <Text style={styles.sheetText}>Elles seront placées juste après la carte en cours, même si ton quota du jour est atteint.</Text>
-          <View style={styles.inSessionLimit}>
-            <View><Text style={styles.inSessionLimitTitle}>Quota quotidien</Text><Text style={styles.inSessionLimitText}>Pour les prochaines sessions</Text></View>
-            <View style={styles.stepper}>
-              <Pressable onPress={() => onLimitChange(Math.max(0, dailyLimit - 1))} style={styles.stepperButton}><Ionicons name="remove" size={18} color={colors.ink} /></Pressable>
-              <Text style={styles.stepperValue}>{dailyLimit}</Text>
-              <Pressable onPress={() => onLimitChange(dailyLimit + 1)} style={styles.stepperButton}><Ionicons name="add" size={18} color={colors.ink} /></Pressable>
+          {showQuota ? (
+            <View style={styles.inSessionLimit}>
+              <View><Text style={styles.inSessionLimitTitle}>Quota quotidien</Text><Text style={styles.inSessionLimitText}>Pour les prochaines sessions</Text></View>
+              <View style={styles.stepper}>
+                <Pressable onPress={() => onLimitChange(Math.max(0, dailyLimit - 1))} style={styles.stepperButton}><Ionicons name="remove" size={18} color={colors.ink} /></Pressable>
+                <Text style={styles.stepperValue}>{dailyLimit}</Text>
+                <Pressable onPress={() => onLimitChange(dailyLimit + 1)} style={styles.stepperButton}><Ionicons name="add" size={18} color={colors.ink} /></Pressable>
+              </View>
             </View>
-          </View>
+          ) : null}
           <Text style={styles.manualLabel}>AJOUTER MAINTENANT</Text>
           <View style={styles.amountRow}>{[1, 5, 10].map((amount) => <Pressable key={amount} onPress={() => onSelect(amount)} style={styles.amountButton}><Text style={styles.amountText}>+{amount}</Text></Pressable>)}</View>
           <View style={styles.customRow}>
             <TextInput value={custom} onChangeText={setCustom} keyboardType="number-pad" placeholder="Autre nombre" style={styles.customInput} />
             <Pressable onPress={() => onSelect(Math.max(1, Number(custom) || 1))} style={styles.customGo}><Ionicons name="arrow-forward" size={20} color={colors.white} /></Pressable>
           </View>
+        </Pressable>
+      </Pressable>
+    </Modal>
+  );
+}
+
+function CustomSessionSheet({ visible, decks, onClose, onStart }: { visible: boolean; decks: Deck[]; onClose: () => void; onStart: (deckIds: number[], newCardAllowance: number) => void }) {
+  const [selected, setSelected] = useState<number[]>([]);
+  const [manualNew, setManualNew] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (!visible) return;
+    setSelected(decks.map((deck) => deck.id));
+    setManualNew(null);
+  }, [visible, decks]);
+
+  const defaultAllowance = decks.reduce((sum, deck) => sum + Math.max(0, Number(deck.daily_new_limit) - Number(deck.introduced_today)), 0);
+  const allowance = manualNew ?? defaultAllowance;
+  const selectedDecks = decks.filter((deck) => selected.includes(deck.id));
+  const dueCount = selectedDecks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
+  const newTotal = selectedDecks.reduce((sum, deck) => sum + Number(deck.new_count), 0);
+  const sessionCount = dueCount + Math.min(newTotal, allowance);
+
+  const toggle = (deckId: number) => {
+    setSelected((current) => current.includes(deckId) ? current.filter((id) => id !== deckId) : [...current, deckId]);
+  };
+
+  return (
+    <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
+      <Pressable style={styles.scrim} onPress={onClose}>
+        <Pressable style={styles.sheet} onPress={() => {}}>
+          <View style={styles.sheetHandle} />
+          <Text style={styles.sheetTitle}>Session mixte</Text>
+          <Text style={styles.sheetText}>Choisis les paquets à mélanger : les cartes à revoir et les nouvelles cartes seront fusionnées dans une seule file.</Text>
+          <ScrollView style={styles.mixList} nestedScrollEnabled>
+            <View style={styles.mixGroup}>
+              {decks.map((deck, index) => {
+                const active = selected.includes(deck.id);
+                return (
+                  <Pressable key={deck.id} onPress={() => toggle(deck.id)} style={[styles.mixRow, index < decks.length - 1 && styles.mixRowBorder]}>
+                    <View style={[styles.mixCheckbox, active && styles.mixCheckboxOn]}>
+                      {active ? <Ionicons name="checkmark" size={15} color={colors.white} /> : null}
+                    </View>
+                    <View style={styles.mixRowCopy}>
+                      <Text style={styles.mixRowTitle} numberOfLines={1}>{deck.title}</Text>
+                      <Text style={styles.mixRowMeta}>{Number(deck.due_count)} à revoir · {Number(deck.new_count)} nouvelles</Text>
+                    </View>
+                    <View style={[styles.deckMarkSmall, { backgroundColor: deck.color }]}><Ionicons name="people-outline" size={15} color={colors.green} /></View>
+                  </Pressable>
+                );
+              })}
+              {!decks.length ? <View style={styles.mixEmpty}><Text style={styles.mixEmptyText}>Crée d’abord un paquet pour lancer une session.</Text></View> : null}
+            </View>
+          </ScrollView>
+          <View style={styles.inSessionLimit}>
+            <View><Text style={styles.inSessionLimitTitle}>Nouvelles cartes</Text><Text style={styles.inSessionLimitText}>Ajoutées à la file, en plus des révisions</Text></View>
+            <View style={styles.stepper}>
+              <Pressable onPress={() => setManualNew(Math.max(0, allowance - 1))} style={styles.stepperButton}><Ionicons name="remove" size={18} color={colors.ink} /></Pressable>
+              <Text style={styles.stepperValue}>{allowance}</Text>
+              <Pressable onPress={() => setManualNew(allowance + 1)} style={styles.stepperButton}><Ionicons name="add" size={18} color={colors.ink} /></Pressable>
+            </View>
+          </View>
+          <PrimaryButton
+            label={!selected.length ? 'Choisis au moins un paquet' : sessionCount ? `Commencer · ${sessionCount} carte${sessionCount > 1 ? 's' : ''}` : 'Lancer une session'}
+            icon="play"
+            disabled={!selected.length}
+            onPress={() => onStart(selected, allowance)}
+          />
         </Pressable>
       </Pressable>
     </Modal>
@@ -739,10 +830,10 @@ function AppContent() {
   return (
     <View style={styles.app}>
       <StatusBar style="dark" />
-      {route.name === 'home' ? <HomeScreen onOpenDeck={(deckId) => setRoute({ name: 'deck', deckId })} onCreate={() => setCreateOpen(true)} /> : null}
-      {route.name === 'deck' ? <DeckScreen deckId={route.deckId} onBack={() => setRoute({ name: 'home' })} onStudy={(newCardAllowance) => setRoute({ name: 'study', deckId: route.deckId, newCardAllowance })} onImport={() => setRoute({ name: 'import', deckId: route.deckId })} onSettings={() => setRoute({ name: 'settings', deckId: route.deckId })} /> : null}
+      {route.name === 'home' ? <HomeScreen onOpenDeck={(deckId) => setRoute({ name: 'deck', deckId })} onCreate={() => setCreateOpen(true)} onStudy={(deckIds, newCardAllowance) => setRoute({ name: 'study', deckIds, newCardAllowance })} /> : null}
+      {route.name === 'deck' ? <DeckScreen deckId={route.deckId} onBack={() => setRoute({ name: 'home' })} onStudy={(newCardAllowance) => setRoute({ name: 'study', deckIds: [route.deckId], newCardAllowance })} onImport={() => setRoute({ name: 'import', deckId: route.deckId })} onSettings={() => setRoute({ name: 'settings', deckId: route.deckId })} /> : null}
       {route.name === 'settings' ? <DeckSettingsScreen deckId={route.deckId} onBack={() => setRoute({ name: 'deck', deckId: route.deckId })} /> : null}
-      {route.name === 'study' ? <StudyScreen deckId={route.deckId} newCardAllowance={route.newCardAllowance} onClose={() => setRoute({ name: 'home' })} /> : null}
+      {route.name === 'study' ? <StudyScreen deckIds={route.deckIds} newCardAllowance={route.newCardAllowance} onClose={() => setRoute({ name: 'home' })} /> : null}
       {route.name === 'import' ? <ImportScreen deckId={route.deckId} onBack={() => setRoute({ name: 'deck', deckId: route.deckId })} onDone={() => setRoute({ name: 'deck', deckId: route.deckId })} /> : null}
       <CreateDeckModal visible={createOpen} onClose={() => setCreateOpen(false)} onCreated={(deckId) => { setCreateOpen(false); setRoute({ name: 'deck', deckId }); }} />
     </View>
@@ -943,4 +1034,21 @@ const styles = StyleSheet.create({
   importErrorText: { color: '#8B3E31', fontSize: 12, lineHeight: 18, flex: 1 },
   errorText: { color: '#A64D3D', fontSize: 11, marginBottom: 5 },
   createIcon: { width: 94, height: 94, borderRadius: 30, backgroundColor: colors.greenSoft, alignItems: 'center', justifyContent: 'center', alignSelf: 'center', marginVertical: 28 },
+  mixCard: { backgroundColor: colors.paper, borderRadius: radius.medium, padding: 16, flexDirection: 'row', alignItems: 'center', gap: 13, borderWidth: 1, borderColor: '#ECEBE6', marginBottom: 24, ...shadow },
+  mixIcon: { width: 46, height: 46, borderRadius: 15, backgroundColor: colors.lime, alignItems: 'center', justifyContent: 'center' },
+  mixCopy: { flex: 1, minWidth: 0 },
+  mixTitle: { fontSize: 15, fontWeight: '800', color: colors.ink },
+  mixCaption: { fontSize: 12, color: colors.muted, marginTop: 3 },
+  mixList: { maxHeight: 260, marginTop: 18 },
+  mixGroup: { backgroundColor: colors.paper, borderRadius: 16, borderWidth: 1, borderColor: colors.line, paddingHorizontal: 14 },
+  mixRow: { minHeight: 64, flexDirection: 'row', alignItems: 'center', gap: 11 },
+  mixRowBorder: { borderBottomWidth: 1, borderBottomColor: '#ECECE7' },
+  mixCheckbox: { width: 24, height: 24, borderRadius: 8, borderWidth: 1.5, borderColor: '#C7CBC5', alignItems: 'center', justifyContent: 'center' },
+  mixCheckboxOn: { backgroundColor: colors.green, borderColor: colors.green },
+  mixRowCopy: { flex: 1, minWidth: 0 },
+  mixRowTitle: { fontSize: 14, fontWeight: '800', color: colors.ink },
+  mixRowMeta: { fontSize: 11, color: colors.muted, marginTop: 3 },
+  deckMarkSmall: { width: 30, height: 34, borderRadius: 10, alignItems: 'center', justifyContent: 'center' },
+  mixEmpty: { paddingVertical: 22, alignItems: 'center' },
+  mixEmptyText: { color: colors.muted, fontSize: 13, textAlign: 'center' },
 });
