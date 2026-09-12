@@ -31,7 +31,7 @@ export async function initializeDatabase() {
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       title TEXT NOT NULL,
       description TEXT NOT NULL DEFAULT '',
-      color TEXT NOT NULL DEFAULT '#DDE9DE',
+      color TEXT NOT NULL DEFAULT '#DFE5FA',
       daily_new_limit INTEGER NOT NULL DEFAULT 5,
       created_at INTEGER NOT NULL
     );
@@ -127,6 +127,13 @@ export async function getDeck(deckId: number) {
   return decks.find((deck) => deck.id === deckId) ?? null;
 }
 
+export async function getDecksByIds(deckIds: number[]): Promise<Deck[]> {
+  if (!deckIds.length) return [];
+  const decks = await getDecks();
+  const wanted = new Set(deckIds);
+  return decks.filter((deck) => wanted.has(deck.id));
+}
+
 export async function getCards(deckId: number): Promise<Card[]> {
   const db = await getDatabase();
   return db.getAllAsync<Card>(
@@ -139,7 +146,7 @@ export async function getCards(deckId: number): Promise<Card[]> {
 
 export async function createDeck(title: string, description: string) {
   const db = await getDatabase();
-  const palette = ['#DDE9DE', '#CBDDF5', '#FBE5DF', '#F4E8B5'];
+  const palette = ['#DFE5FA', '#FBF2CF', '#FBE3DE', '#DCEDE2'];
   const count = await db.getFirstAsync<{ count: number }>('SELECT COUNT(*) AS count FROM decks');
   return db.runAsync(
     'INSERT INTO decks (title, description, color, daily_new_limit, created_at) VALUES (?, ?, ?, ?, ?)',
@@ -192,32 +199,34 @@ export async function deleteCard(cardId: number) {
   await db.runAsync('DELETE FROM cards WHERE id = ?', cardId);
 }
 
-export async function getSessionCards(deckId: number, newCardAllowance?: number): Promise<Card[]> {
+export async function getSessionCards(deckIds: number[], newCardAllowance?: number): Promise<Card[]> {
   const db = await getDatabase();
-  const deck = await getDeck(deckId);
-  if (!deck) return [];
+  const decks = await getDecksByIds(deckIds);
+  if (!decks.length) return [];
+  const placeholders = deckIds.map(() => '?').join(',');
   const due = await db.getAllAsync<Card>(
     `SELECT c.*, p.first_seen_at, p.next_due_at, p.suspended
      FROM cards c JOIN progress p ON p.card_id = c.id
-     WHERE c.deck_id = ? AND p.suspended = 0 AND p.next_due_at IS NOT NULL AND p.next_due_at <= ?
+     WHERE c.deck_id IN (${placeholders}) AND p.suspended = 0 AND p.next_due_at IS NOT NULL AND p.next_due_at <= ?
      ORDER BY p.next_due_at ASC`,
-    deckId, Date.now(),
+    ...deckIds, Date.now(),
   );
-  const allowance = newCardAllowance ?? Math.max(0, deck.daily_new_limit - deck.introduced_today);
-  const fresh = await getNewCards(deckId, allowance);
+  const allowance = newCardAllowance ?? decks.reduce((sum, deck) => sum + Math.max(0, Number(deck.daily_new_limit) - Number(deck.introduced_today)), 0);
+  const fresh = await getNewCards(deckIds, allowance);
   return shuffleCards([...due, ...fresh]);
 }
 
-export async function getNewCards(deckId: number, limit: number, excludedIds: number[] = []): Promise<Card[]> {
-  if (limit <= 0) return [];
+export async function getNewCards(deckIds: number[], limit: number, excludedIds: number[] = []): Promise<Card[]> {
+  if (limit <= 0 || !deckIds.length) return [];
   const db = await getDatabase();
+  const deckPlaceholders = deckIds.map(() => '?').join(',');
   const exclusion = excludedIds.length ? `AND c.id NOT IN (${excludedIds.map(() => '?').join(',')})` : '';
   return db.getAllAsync<Card>(
     `SELECT c.*, p.first_seen_at, p.next_due_at, p.suspended
      FROM cards c JOIN progress p ON p.card_id = c.id
-     WHERE c.deck_id = ? AND p.first_seen_at IS NULL AND p.suspended = 0 ${exclusion}
+     WHERE c.deck_id IN (${deckPlaceholders}) AND p.first_seen_at IS NULL AND p.suspended = 0 ${exclusion}
      ORDER BY c.created_at ASC LIMIT ?`,
-    deckId, ...excludedIds, limit,
+    ...deckIds, ...excludedIds, limit,
   );
 }
 
