@@ -32,7 +32,7 @@ export async function initializeDatabase() {
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       title TEXT NOT NULL,
       description TEXT NOT NULL DEFAULT '',
-      color TEXT NOT NULL DEFAULT '#DDE9DE',
+      color TEXT NOT NULL DEFAULT '#DFE5FA',
       daily_new_limit INTEGER NOT NULL DEFAULT 5,
       created_at INTEGER NOT NULL
     );
@@ -133,7 +133,7 @@ export async function getCards(deckId: number): Promise<Card[]> {
 
 export async function createDeck(title: string, description: string) {
   const db = await getDatabase();
-  const palette = ['#DDE9DE', '#CBDDF5', '#FBE5DF', '#F4E8B5'];
+  const palette = ['#DFE5FA', '#FBF2CF', '#FBE3DE', '#DCEDE2'];
   const count = await db.getFirstAsync<{ count: number }>('SELECT COUNT(*) AS count FROM decks');
   return db.runAsync(
     'INSERT INTO decks (title, description, color, daily_new_limit, created_at) VALUES (?, ?, ?, ?, ?)',
@@ -273,7 +273,7 @@ export async function importCsv(deckId: number, csvText: string, photoUris: Reco
       const photoUri = photoUris[row.photo] ?? photoUris[row.photo.split('/').pop() ?? ''] ?? row.photo.trim();
       if (!firstName) {
         result.skipped += 1;
-        result.errors.push(`Ligne ${row.line} : prénom manquant`);
+        result.errors.push(`Ligne ${row.line} : question manquante`);
         continue;
       }
       if (externalId) {

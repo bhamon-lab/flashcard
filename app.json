@@ -12,7 +12,7 @@
     "android": {
       "package": "com.hamon.memento",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#DFE5FA",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
@@ -27,7 +27,7 @@
       [
         "expo-image-picker",
         {
-          "photosPermission": "Mémento utilise tes photos pour créer des cartes de personnes."
+          "photosPermission": "Mémento utilise tes photos pour ajouter des schémas à tes cartes."
         }
       ],
       "expo-font"
