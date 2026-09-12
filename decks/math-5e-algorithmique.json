@@ -1,0 +1,103 @@
+{
+  "id": "math-5e-algorithmique",
+  "title": "Maths · 5e · Entrées, sorties et répétitions",
+  "description": "5e · 2026-2027 · Entrées, sorties et répétitions. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 3,
+  "grade": "5e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "cycle4-2026-5e",
+  "cards": [
+    {
+      "id": "entree",
+      "front": "Qu’est-ce qu’une entrée d’un programme ?",
+      "back": "Une donnée reçue pour effectuer le traitement, par exemple la réponse à une question posée à l’utilisateur.",
+      "kind": "cours"
+    },
+    {
+      "id": "sortie",
+      "front": "Qu’est-ce qu’une sortie d’un programme ?",
+      "back": "Un résultat produit, par exemple un nombre affiché ou une figure tracée.",
+      "kind": "cours"
+    },
+    {
+      "id": "lecture-donnee",
+      "front": "On demande un nombre puis on affiche « réponse × 3 ». L’utilisateur saisit 7. Que voit-il ?",
+      "back": "21 : $7\\times3=21$.",
+      "kind": "application"
+    },
+    {
+      "id": "expression",
+      "front": "Quelle expression traduit « ajouter 4 au nombre saisi puis multiplier le tout par 2 » ?",
+      "back": "$(\\text{réponse}+4)\\times2$.",
+      "kind": "application"
+    },
+    {
+      "id": "parentheses",
+      "front": "Pourquoi les parenthèses comptent-elles dans $(n+4)\\times2$ ?",
+      "back": "Elles imposent l’addition avant la multiplication. Sans elles, $n+4\\times2$ donne un autre calcul.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "prevoir",
+      "front": "Un programme affiche $n^2+1$. Que renvoie-t-il pour une entrée égale à 6 ?",
+      "back": "37 : $6^2+1=36+1$.",
+      "kind": "application"
+    },
+    {
+      "id": "boucle",
+      "front": "À quoi sert « répéter 5 fois » dans un programme par blocs ?",
+      "back": "À exécuter cinq fois la séquence d’instructions contenue dans le bloc.",
+      "kind": "cours"
+    },
+    {
+      "id": "compter",
+      "front": "On répète 6 fois « avancer de 8 pas, tourner de 60° ». Quelle distance totale parcourt-on ?",
+      "back": "48 pas : les rotations ne rajoutent pas de distance.",
+      "kind": "application"
+    },
+    {
+      "id": "hexagone",
+      "front": "Crayon baissé, on répète 6 fois « avancer de 8 pas, tourner à gauche de 60° ». Quelle figure obtient-on ?",
+      "back": "Un hexagone régulier de côté 8 pas.",
+      "kind": "application"
+    },
+    {
+      "id": "modifier",
+      "front": "Un programme trace un carré avec 4 répétitions de « avancer de 20, tourner de 90° ». Que changer pour un côté de 35 ?",
+      "back": "Remplacer 20 par 35. Le nombre de répétitions et l’angle restent les mêmes.",
+      "kind": "application"
+    },
+    {
+      "id": "triangle",
+      "front": "Pour tracer un triangle équilatéral, quel angle de rotation utiliser après chaque côté ?",
+      "back": "120° : le robot tourne de l’angle extérieur, soit $180-60=120$.",
+      "kind": "application"
+    },
+    {
+      "id": "repetition-sequence",
+      "front": "On répète 3 fois « avancer de 2 pas, avancer de 4 pas ». Quelle distance totale ?",
+      "back": "18 pas : $3\\times(2+4)=18$.",
+      "kind": "application"
+    },
+    {
+      "id": "trace",
+      "front": "Comment vérifier manuellement un programme de calcul ?",
+      "back": "Suivre les instructions dans l’ordre, en notant les résultats intermédiaires, puis comparer la sortie avec le résultat attendu.",
+      "kind": "cours"
+    },
+    {
+      "id": "entree-zero",
+      "front": "Un programme affiche $4n+3$. Que renvoie-t-il quand l’entrée vaut 0 ?",
+      "back": "3, car $4\\times0+3=3$.",
+      "kind": "application"
+    },
+    {
+      "id": "ordre-blocs",
+      "front": "Peut-on afficher un résultat calculé à partir d’une saisie avant d’avoir demandé cette saisie ?",
+      "back": "Pas pour cette nouvelle saisie : il faut d’abord recevoir la donnée, puis effectuer le calcul et afficher son résultat.",
+      "kind": "comprehension"
+    }
+  ]
+}

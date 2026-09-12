@@ -1,0 +1,103 @@
+{
+  "id": "math-5e-statistiques-probabilites",
+  "title": "Maths · 5e · Statistiques et probabilités",
+  "description": "5e · 2026-2027 · Statistiques et probabilités. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 3,
+  "grade": "5e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "cycle4-2026-5e",
+  "cards": [
+    {
+      "id": "frequence",
+      "front": "Comment calcule-t-on la fréquence d’une catégorie ?",
+      "back": "Effectif de la catégorie divisé par effectif total, à condition que le total soit non nul.",
+      "kind": "cours"
+    },
+    {
+      "id": "frequence-calcul",
+      "front": "Sur 40 élèves, 14 pratiquent le basket. Quelle est leur fréquence ?",
+      "back": "$\\frac{14}{40}=0{,}35=35\\%$.",
+      "kind": "application"
+    },
+    {
+      "id": "effectif-manquant",
+      "front": "Une série compte 30 observations réparties en 9, 13 et n observations. Que vaut n ?",
+      "back": "8 : $30-9-13=8$.",
+      "kind": "application"
+    },
+    {
+      "id": "moyenne",
+      "front": "Comment calculer la moyenne simple d’une série ?",
+      "back": "Additionner toutes les valeurs et diviser par le nombre de valeurs.",
+      "kind": "cours"
+    },
+    {
+      "id": "moyenne-calcul",
+      "front": "Calcule la moyenne de 7, 10 et 16.",
+      "back": "11 : $(7+10+16)\\div3=33\\div3$.",
+      "kind": "application"
+    },
+    {
+      "id": "moyenne-sens",
+      "front": "La moyenne de 4, 4 et 13 vaut 7. Cela signifie-t-il qu’une des valeurs est 7 ?",
+      "back": "Non. La moyenne est un indicateur calculé ; elle peut ne pas apparaître dans la série.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "angle-secteur",
+      "front": "Quel angle représente 20 % d’un diagramme circulaire ?",
+      "back": "72° : $0{,}20\\times360=72$.",
+      "kind": "application"
+    },
+    {
+      "id": "representation",
+      "front": "Quelle représentation choisir pour montrer l’évolution d’une température au fil du temps ?",
+      "back": "Une courbe avec le temps sur l’axe horizontal et la température sur l’axe vertical.",
+      "kind": "cours"
+    },
+    {
+      "id": "issue",
+      "front": "Qu’est-ce qu’une issue d’une expérience aléatoire ?",
+      "back": "Un résultat possible de cette expérience. Pour un dé, obtenir 4 est une issue.",
+      "kind": "cours"
+    },
+    {
+      "id": "evenement",
+      "front": "Qu’est-ce qu’un événement dans une expérience aléatoire ?",
+      "back": "Un ensemble d’issues. « Obtenir un nombre supérieur à 4 » avec un dé correspond à 5 ou 6.",
+      "kind": "cours"
+    },
+    {
+      "id": "equiprobabilite",
+      "front": "Que signifie « issues équiprobables » ?",
+      "back": "Toutes les issues ont la même probabilité de se produire.",
+      "kind": "cours"
+    },
+    {
+      "id": "calcul-hasard",
+      "front": "Une roue équilibrée a 8 secteurs égaux, dont 3 verts. Probabilité d’obtenir vert ?",
+      "back": "$\\frac{3}{8}=0{,}375=37{,}5\\%$.",
+      "kind": "application"
+    },
+    {
+      "id": "proba-de",
+      "front": "Avec un dé équilibré à six faces, probabilité d’obtenir au moins 5 ?",
+      "back": "$\\frac{2}{6}=\\frac{1}{3}$ : 5 et 6 conviennent.",
+      "kind": "application"
+    },
+    {
+      "id": "frequence-experience",
+      "front": "On obtient 18 piles en 40 lancers. Quelle est la fréquence observée de pile ?",
+      "back": "$\\frac{18}{40}=0{,}45$, soit 45 %.",
+      "kind": "application"
+    },
+    {
+      "id": "frequence-proba",
+      "front": "Obtenir 18 piles en 40 lancers prouve-t-il que la probabilité de pile vaut 45 % ?",
+      "back": "Non. 45 % est une fréquence observée sur cette série ; elle ne détermine pas exactement la probabilité du modèle.",
+      "kind": "comprehension"
+    }
+  ]
+}

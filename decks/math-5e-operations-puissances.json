@@ -1,0 +1,103 @@
+{
+  "id": "math-5e-operations-puissances",
+  "title": "Maths · 5e · Priorités, divisibilité et puissances",
+  "description": "5e · 2026-2027 · Priorités, divisibilité et puissances. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 3,
+  "grade": "5e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "cycle4-2026-5e",
+  "cards": [
+    {
+      "id": "priorites",
+      "front": "Dans quel ordre effectuer un calcul avec parenthèses, carrés, produits et sommes ?",
+      "back": "Parenthèses, puis puissances, puis multiplications et divisions, puis additions et soustractions. À priorité égale, avancer de gauche à droite.",
+      "kind": "cours"
+    },
+    {
+      "id": "application-priorites",
+      "front": "Calcule $7+3\\times4$.",
+      "back": "19 : on calcule $3\\times4=12$ avant d’ajouter 7.",
+      "kind": "application"
+    },
+    {
+      "id": "parentheses",
+      "front": "Calcule $(7+3)\\times4$.",
+      "back": "40 : on calcule d’abord la parenthèse.",
+      "kind": "application"
+    },
+    {
+      "id": "divisions-suite",
+      "front": "Calcule $24\\div6\\times2$.",
+      "back": "8 : $24\\div6=4$, puis $4\\times2=8$.",
+      "kind": "application"
+    },
+    {
+      "id": "division-decimale",
+      "front": "Calcule $4{,}8\\div0{,}6$.",
+      "back": "8 : le quotient est égal à $48\\div6$.",
+      "kind": "application"
+    },
+    {
+      "id": "distributivite",
+      "front": "Calcule $17\\times99$ en utilisant $99=100-1$.",
+      "back": "1683 : $17\\times100-17=1700-17$.",
+      "kind": "application"
+    },
+    {
+      "id": "termes-facteurs",
+      "front": "Comment nomme-t-on les nombres additionnés et les nombres multipliés ?",
+      "back": "Les nombres additionnés sont des termes ; les nombres multipliés sont des facteurs.",
+      "kind": "cours"
+    },
+    {
+      "id": "divisibilite-trois",
+      "front": "246 est-il divisible par 3 ?",
+      "back": "Oui : $2+4+6=12$ est divisible par 3.",
+      "kind": "application"
+    },
+    {
+      "id": "divisibilite-neuf",
+      "front": "351 est-il divisible par 9 ?",
+      "back": "Oui : $3+5+1=9$ est divisible par 9.",
+      "kind": "application"
+    },
+    {
+      "id": "carre",
+      "front": "Que signifie $a^2$ ?",
+      "back": "$a\\times a$, le carré de a. Ce n’est pas $2\\times a$.",
+      "kind": "cours"
+    },
+    {
+      "id": "cube",
+      "front": "Calcule $4^3$.",
+      "back": "64 : $4\\times4\\times4=64$.",
+      "kind": "application"
+    },
+    {
+      "id": "carres-memorises",
+      "front": "Calcule $11^2$ et $12^2$.",
+      "back": "$11^2=121$ et $12^2=144$.",
+      "kind": "application"
+    },
+    {
+      "id": "dix-cube",
+      "front": "Combien vaut $10^3$ ?",
+      "back": "1000 : $10\\times10\\times10=1000$.",
+      "kind": "application"
+    },
+    {
+      "id": "puissance-priorite",
+      "front": "Calcule $2+3^2\\times2$.",
+      "back": "20 : $3^2=9$, puis $9\\times2=18$, puis $2+18=20$.",
+      "kind": "application"
+    },
+    {
+      "id": "carre-erreur",
+      "front": "Pourquoi $5^2$ n’est-il pas égal à 10 ?",
+      "back": "L’exposant 2 indique deux facteurs égaux à 5 : $5^2=5\\times5=25$. Dix serait $2\\times5$.",
+      "kind": "comprehension"
+    }
+  ]
+}
