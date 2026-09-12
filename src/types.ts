@@ -3,6 +3,8 @@ export type Deck = {
   title: string;
   description: string;
   color: string;
+  kind: string;
+  sync_id: string | null;
   daily_new_limit: number;
   again_delay_minutes: number;
   soon_delay_minutes: number;
@@ -36,11 +38,4 @@ export type ReviewDelays = {
   soon: number;
   later: number;
   tomorrow: number;
-};
-
-export type ImportResult = {
-  imported: number;
-  updated: number;
-  skipped: number;
-  errors: string[];
 };

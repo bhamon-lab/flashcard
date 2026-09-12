@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
 import { Ionicons } from '@expo/vector-icons';
-import * as DocumentPicker from 'expo-document-picker';
 import * as FileSystem from 'expo-file-system/legacy';
 import * as ImagePicker from 'expo-image-picker';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -29,7 +28,6 @@ import {
   getDecks,
   getNewCards,
   getSessionCards,
-  importCsv,
   initializeDatabase,
   markCardSeen,
   recordReview,
@@ -39,17 +37,17 @@ import {
   updateReviewDelays,
 } from './src/db';
 import { colors, radius } from './src/theme';
-import { prepareImport } from './src/importAsset';
+import { MathView, stripMathText } from './src/MathView';
+import { syncDecks } from './src/sync';
 import { checkForAppUpdate } from './src/app-update';
-import { Card, Deck, ImportResult, ReviewDelay, ReviewDelays } from './src/types';
+import { Card, Deck, ReviewDelay, ReviewDelays } from './src/types';
 import { insertLaterInQueue } from './src/sessionQueue';
 
 type Route =
   | { name: 'home' }
   | { name: 'deck'; deckId: number }
   | { name: 'settings'; deckId: number }
-  | { name: 'study'; deckId: number; newCardAllowance: number }
-  | { name: 'import'; deckId: number };
+  | { name: 'study'; deckId: number; newCardAllowance: number };
 
 const formatDelay = (minutes: number) => {
   if (minutes === 0) return 'Immédiatement';
@@ -99,8 +97,38 @@ function PersonImage({ card, style }: { card: Card; style: object }) {
 function HomeScreen({ onOpenDeck, onCreate }: { onOpenDeck: (id: number) => void; onCreate: () => void }) {
   const [decks, setDecks] = useState<Deck[]>([]);
   const [refreshing, setRefreshing] = useState(false);
+  const [syncing, setSyncing] = useState(false);
+  const [syncNote, setSyncNote] = useState('');
   const load = useCallback(async () => setDecks(await getDecks()), []);
-  useEffect(() => { load(); }, [load]);
+  useEffect(() => { void load(); }, [load]);
+
+  const runSync = useCallback(async (announce: boolean) => {
+    setSyncing(true);
+    try {
+      const result = await syncDecks();
+      if (announce) {
+        const parts: string[] = [];
+        if (result.created) parts.push(`${result.created} nouveau${result.created > 1 ? 'x' : ''} paquet${result.created > 1 ? 's' : ''}`);
+        if (result.updated) parts.push(`${result.updated} mis${result.updated > 1 ? 's' : ''} à jour`);
+        if (result.removed) parts.push(`${result.removed} supprimé${result.removed > 1 ? 's' : ''}`);
+        setSyncNote(parts.length ? `Synchronisé · ${parts.join(', ')}` : 'Paquets déjà à jour');
+      }
+    } catch {
+      if (announce) setSyncNote('Synchronisation impossible (hors ligne ?)');
+    } finally {
+      setSyncing(false);
+      await load();
+    }
+  }, [load]);
+
+  // Synchronise les decks du dépôt à l'ouverture de l'app.
+  useEffect(() => { void runSync(false); }, [runSync]);
+  useEffect(() => {
+    if (!syncNote) return;
+    const timer = setTimeout(() => setSyncNote(''), 5000);
+    return () => clearTimeout(timer);
+  }, [syncNote]);
+
   const dueTotal = decks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
   const total = decks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
 
@@ -108,12 +136,17 @@ function HomeScreen({ onOpenDeck, onCreate }: { onOpenDeck: (id: number) => void
     <SafeAreaView style={styles.screen} edges={['top']}>
       <ScrollView
         contentContainerStyle={styles.page}
-        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={async () => { setRefreshing(true); await load(); setRefreshing(false); }} />}
+        refreshControl={(
+          <RefreshControl
+            refreshing={refreshing || syncing}
+            onRefresh={async () => { setRefreshing(true); await runSync(true); setRefreshing(false); }}
+          />
+        )}
       >
         <View style={styles.homeHeader}>
           <View>
             <Text style={styles.eyebrow}>MÉMENTO</Text>
-            <Text style={styles.heroTitle}>Des prénoms qui{`\n`}restent en tête.</Text>
+            <Text style={styles.heroTitle}>Des cartes qui{`\n`}restent en tête.</Text>
           </View>
           <View style={styles.avatar}><Ionicons name="person" size={20} color={colors.green} /></View>
         </View>
@@ -133,24 +166,26 @@ function HomeScreen({ onOpenDeck, onCreate }: { onOpenDeck: (id: number) => void
         <View style={styles.sectionHeader}>
           <View>
             <Text style={styles.sectionTitle}>Mes paquets</Text>
-            <Text style={styles.sectionCaption}>{total} {total === 1 ? 'personne' : 'personnes'} au total</Text>
+            <Text style={styles.sectionCaption}>{syncing ? 'Synchronisation…' : syncNote || `${total} ${total === 1 ? 'carte' : 'cartes'} au total`}</Text>
           </View>
           <Pressable onPress={onCreate} style={styles.addRound}><Ionicons name="add" size={25} color={colors.white} /></Pressable>
         </View>
 
         {decks.map((deck) => {
           const progress = deck.total_count ? Math.round((Number(deck.learned_count) / Number(deck.total_count)) * 100) : 0;
+          const isMath = deck.kind === 'math';
           return (
             <Pressable key={deck.id} onPress={() => onOpenDeck(deck.id)} style={({ pressed }) => [styles.deckCard, pressed && styles.cardPressed]}>
               <View style={[styles.deckMark, { backgroundColor: deck.color }]}>
-                <Ionicons name="people-outline" size={27} color={colors.green} />
+                <Ionicons name={isMath ? 'calculator-outline' : 'people-outline'} size={27} color={colors.green} />
               </View>
               <View style={styles.deckBody}>
                 <View style={styles.deckTitleRow}>
                   <Text style={styles.deckTitle} numberOfLines={1}>{deck.title}</Text>
+                  {deck.sync_id ? <Ionicons name="cloud-outline" size={15} color={colors.muted} /> : null}
                   <Ionicons name="chevron-forward" size={19} color={colors.muted} />
                 </View>
-                <Text style={styles.deckDescription} numberOfLines={1}>{deck.description || `${deck.total_count} cartes`}</Text>
+                <Text style={styles.deckDescription} numberOfLines={1}>{stripMathText(deck.description) || `${deck.total_count} cartes`}</Text>
                 <View style={styles.progressTrack}><View style={[styles.progressFill, { width: `${progress}%` }]} /></View>
                 <View style={styles.deckMeta}>
                   <Text style={styles.deckMetaText}>{progress}% appris</Text>
@@ -163,14 +198,14 @@ function HomeScreen({ onOpenDeck, onCreate }: { onOpenDeck: (id: number) => void
 
         <Pressable onPress={onCreate} style={styles.newDeckCard}>
           <View style={styles.newDeckIcon}><Ionicons name="add" size={24} color={colors.green} /></View>
-          <View><Text style={styles.newDeckTitle}>Nouveau paquet</Text><Text style={styles.newDeckCaption}>Créer un nouveau groupe de personnes</Text></View>
+          <View><Text style={styles.newDeckTitle}>Nouveau paquet</Text><Text style={styles.newDeckCaption}>Créer un paquet de cartes local</Text></View>
         </Pressable>
       </ScrollView>
     </SafeAreaView>
   );
 }
 
-function DeckScreen({ deckId, onBack, onStudy, onImport, onSettings }: { deckId: number; onBack: () => void; onStudy: (newCardAllowance: number) => void; onImport: () => void; onSettings: () => void }) {
+function DeckScreen({ deckId, onBack, onStudy, onSettings }: { deckId: number; onBack: () => void; onStudy: (newCardAllowance: number) => void; onSettings: () => void }) {
   const [deck, setDeck] = useState<Deck | null>(null);
   const [cards, setCards] = useState<Card[]>([]);
   const [editorCard, setEditorCard] = useState<Card | null | undefined>(undefined);
@@ -181,6 +216,7 @@ function DeckScreen({ deckId, onBack, onStudy, onImport, onSettings }: { deckId:
     setDeck(nextDeck); setCards(nextCards);
   }, [deckId]);
   useEffect(() => { load(); }, [load]);
+  const isMath = deck?.kind === 'math';
   const visibleCards = useMemo(() => cards.filter((card) => `${card.first_name} ${card.last_name} ${card.context}`.toLowerCase().includes(query.toLowerCase())), [cards, query]);
 
   if (!deck) return <View style={styles.loading}><ActivityIndicator color={colors.green} /></View>;
@@ -208,9 +244,11 @@ function DeckScreen({ deckId, onBack, onStudy, onImport, onSettings }: { deckId:
         </View>
 
         <View style={styles.deckHero}>
-          <View style={[styles.largeDeckMark, { backgroundColor: deck.color }]}><Ionicons name="people" size={32} color={colors.green} /></View>
+          <View style={[styles.largeDeckMark, { backgroundColor: deck.color }]}>
+            <Ionicons name={isMath ? 'calculator' : 'people'} size={32} color={colors.green} />
+          </View>
           <Text style={styles.deckHeroTitle}>{deck.title}</Text>
-          <Text style={styles.deckHeroDescription}>{deck.description}</Text>
+          <Text style={styles.deckHeroDescription}>{stripMathText(deck.description)}</Text>
           <View style={styles.statRow}>
             <View style={styles.stat}><Text style={styles.statValue}>{deck.due_count}</Text><Text style={styles.statLabel}>À revoir</Text></View>
             <View style={styles.statDivider} />
@@ -233,27 +271,30 @@ function DeckScreen({ deckId, onBack, onStudy, onImport, onSettings }: { deckId:
         </View>
 
         <View style={styles.sectionHeaderCompact}>
-          <Text style={styles.sectionTitle}>Les personnes</Text>
+          <Text style={styles.sectionTitle}>{isMath ? 'Les formules' : 'Les personnes'}</Text>
           <View style={styles.actionsRow}>
-            <Pressable onPress={onImport} style={styles.smallAction}><Ionicons name="document-text-outline" size={18} color={colors.green} /><Text style={styles.smallActionText}>CSV</Text></Pressable>
             <Pressable onPress={() => setEditorCard(null)} style={styles.smallAction}><Ionicons name="add" size={19} color={colors.green} /><Text style={styles.smallActionText}>Ajouter</Text></Pressable>
           </View>
         </View>
-        <View style={styles.searchBox}><Ionicons name="search" size={19} color={colors.muted} /><TextInput value={query} onChangeText={setQuery} placeholder="Chercher une personne" placeholderTextColor="#9B9F9C" style={styles.searchInput} /></View>
+        <View style={styles.searchBox}><Ionicons name="search" size={19} color={colors.muted} /><TextInput value={query} onChangeText={setQuery} placeholder={isMath ? 'Chercher une formule' : 'Chercher une personne'} placeholderTextColor="#9B9F9C" style={styles.searchInput} /></View>
 
         <View style={styles.peopleList}>
           {visibleCards.map((card, index) => (
             <Pressable key={card.id} onPress={() => setEditorCard(card)} style={[styles.personRow, index < visibleCards.length - 1 && styles.personRowBorder]}>
-              <View style={styles.personThumbWrap}><PersonImage card={card} style={styles.personThumb} /></View>
+              {isMath ? (
+                <View style={styles.mathThumb}><Ionicons name="calculator-outline" size={22} color={colors.green} /></View>
+              ) : (
+                <View style={styles.personThumbWrap}><PersonImage card={card} style={styles.personThumb} /></View>
+              )}
               <View style={styles.personText}>
-                <Text style={styles.personName}>{card.first_name} {card.last_name}</Text>
-                <Text style={styles.personContext}>{card.context || 'Aucun contexte'}</Text>
+                <Text style={styles.personName} numberOfLines={1}>{isMath ? stripMathText(card.first_name) : `${card.first_name} ${card.last_name}`}</Text>
+                <Text style={styles.personContext} numberOfLines={1}>{isMath ? stripMathText(card.context) : card.context || 'Aucun contexte'}</Text>
               </View>
               <View style={[styles.statusDot, { backgroundColor: card.first_seen_at ? colors.green : colors.yellow }]} />
               <Ionicons name="chevron-forward" size={18} color="#A6AAA7" />
             </Pressable>
           ))}
-          {!visibleCards.length ? <View style={styles.emptyList}><Ionicons name="person-add-outline" size={30} color={colors.muted} /><Text style={styles.emptyText}>Aucune personne trouvée</Text></View> : null}
+          {!visibleCards.length ? <View style={styles.emptyList}><Ionicons name={isMath ? 'calculator-outline' : 'person-add-outline'} size={30} color={colors.muted} /><Text style={styles.emptyText}>{isMath ? 'Aucune formule trouvée' : 'Aucune personne trouvée'}</Text></View> : null}
         </View>
       </ScrollView>
       <CardEditor
@@ -542,15 +583,25 @@ function StudyScreen({ deckId, newCardAllowance, onClose }: { deckId: number; ne
       <View style={styles.studyProgress}><View style={[styles.studyProgressFill, { width: `${Math.max(8, 100 / Math.max(queue.length, 1))}%` }]} /></View>
       <View style={styles.studyContent}>
         <View style={[styles.flashCard, smallPhoto && styles.flashCardSmall]}>
-          {current.photo_uri ? <Image source={{ uri: current.photo_uri }} style={styles.flashImage} resizeMode="cover" /> : <View style={styles.flashPlaceholder}><Initials card={current} size={116} /></View>}
+          {deck.kind === 'math' ? (
+            <View style={styles.mathCardBody}>
+              <MathView text={current.first_name} fontSize={26} />
+            </View>
+          ) : current.photo_uri ? <Image source={{ uri: current.photo_uri }} style={styles.flashImage} resizeMode="cover" /> : <View style={styles.flashPlaceholder}><Initials card={current} size={116} /></View>}
           <View style={styles.photoShade} />
           {!revealed ? <View style={styles.questionBadge}><Ionicons name="help" size={20} color={colors.green} /></View> : null}
           {revealed ? (
             <View style={styles.answerOverlay}>
-              <Text style={styles.answerName}>{current.first_name} {current.last_name}</Text>
-              {current.context ? <Text style={styles.answerContext}>{current.context}</Text> : null}
+              {deck.kind === 'math' ? (
+                <MathView text={current.context} fontSize={21} color={colors.green} />
+              ) : (
+                <>
+                  <Text style={styles.answerName}>{current.first_name} {current.last_name}</Text>
+                  {current.context ? <Text style={styles.answerContext}>{current.context}</Text> : null}
+                </>
+              )}
             </View>
-          ) : (
+          ) : deck.kind === 'math' ? null : (
             <View style={styles.questionOverlay}><Text style={styles.questionText}>Comment s’appelle cette personne ?</Text></View>
           )}
         </View>
@@ -610,58 +661,6 @@ function ManualNewModal({ visible, dailyLimit, onClose, onSelect, onLimitChange 
         </Pressable>
       </Pressable>
     </Modal>
-  );
-}
-
-function ImportScreen({ deckId, onBack, onDone }: { deckId: number; onBack: () => void; onDone: () => void }) {
-  const [fileName, setFileName] = useState('');
-  const [csvText, setCsvText] = useState('');
-  const [photoUris, setPhotoUris] = useState<Record<string, string>>({});
-  const [result, setResult] = useState<ImportResult | null>(null);
-  const [working, setWorking] = useState(false);
-  const [readingFile, setReadingFile] = useState(false);
-  const [importError, setImportError] = useState('');
-  const chooseFile = async () => {
-    const picked = await DocumentPicker.getDocumentAsync({ type: '*/*', copyToCacheDirectory: true });
-    if (picked.canceled) return;
-    setReadingFile(true); setImportError(''); setFileName(''); setCsvText(''); setPhotoUris({}); setResult(null);
-    try {
-      const prepared = await prepareImport(picked.assets[0].uri, picked.assets[0].name);
-      setFileName(picked.assets[0].name); setCsvText(prepared.csvText); setPhotoUris(prepared.photoUris); setResult(null);
-    } catch (error) {
-      setImportError(error instanceof Error ? error.message : 'Impossible de lire ce fichier.');
-    } finally { setReadingFile(false); }
-  };
-  const runImport = async () => {
-    if (!csvText) return;
-    setWorking(true); setResult(await importCsv(deckId, csvText, photoUris)); setWorking(false);
-  };
-  return (
-    <SafeAreaView style={styles.screen} edges={['top', 'bottom']}>
-      <ScrollView contentContainerStyle={styles.page}>
-        <View style={styles.topBar}><IconButton name="arrow-back" label="Retour" onPress={onBack} /><Text style={styles.topBarTitle}>Importer un CSV</Text><View style={{ width: 44 }} /></View>
-        <View style={styles.importHero}><View style={styles.importIcon}><Ionicons name="document-text" size={34} color={colors.green} /></View><Text style={styles.importTitle}>Ajoute tout un groupe</Text><Text style={styles.importText}>Choisis un CSV, ou un ZIP qui contient le CSV et les portraits. Le format Pronote/ENT est reconnu.</Text></View>
-        <View style={styles.formatCard}>
-          <Text style={styles.formatTitle}>Format attendu</Text>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}><Text style={styles.codeText}>prenom,nom,photo,contexte,id_externe{`\n`}Alice,Martin,https://…/alice.jpg,Design,alice-01</Text></ScrollView>
-          <Text style={styles.formatHint}>Seul le prénom est obligatoire. La photo peut être une URL.</Text>
-        </View>
-        <Pressable disabled={readingFile} onPress={chooseFile} style={[styles.dropZone, fileName ? styles.dropZoneReady : null]}>
-          <Ionicons name={fileName ? 'checkmark-circle' : 'cloud-upload-outline'} size={34} color={colors.green} />
-          <Text style={styles.dropTitle}>{readingFile ? 'Lecture du fichier…' : fileName || 'Choisir un fichier CSV'}</Text>
-          <Text style={styles.dropText}>{fileName ? `${new Set(Object.values(photoUris)).size} portrait(s) détecté(s)` : 'CSV ou ZIP · virgule ou point-virgule'}</Text>
-        </Pressable>
-        {importError ? <View style={styles.importErrorCard}><Ionicons name="alert-circle-outline" size={21} color="#A64D3D" /><Text style={styles.importErrorText}>{importError}</Text></View> : null}
-        {result ? (
-          <View style={styles.resultCard}>
-            <Ionicons name="checkmark-circle" size={28} color={colors.green} />
-            <View style={{ flex: 1 }}><Text style={styles.resultTitle}>{result.imported} ajoutée{result.imported > 1 ? 's' : ''}, {result.updated} mise{result.updated > 1 ? 's' : ''} à jour</Text><Text style={styles.resultText}>{result.skipped ? `${result.skipped} ligne(s) ignorée(s)` : 'Toutes les lignes ont été traitées.'}</Text></View>
-          </View>
-        ) : null}
-        {result?.errors.slice(0, 5).map((error) => <Text key={error} style={styles.errorText}>• {error}</Text>)}
-        <PrimaryButton label={readingFile ? 'Lecture du fichier…' : working ? 'Import en cours…' : result ? 'Terminer' : 'Importer les cartes'} icon={result ? 'checkmark' : 'download-outline'} disabled={!csvText || working || readingFile} onPress={result ? onDone : runImport} />
-      </ScrollView>
-    </SafeAreaView>
   );
 }
 
@@ -740,10 +739,9 @@ function AppContent() {
     <View style={styles.app}>
       <StatusBar style="dark" />
       {route.name === 'home' ? <HomeScreen onOpenDeck={(deckId) => setRoute({ name: 'deck', deckId })} onCreate={() => setCreateOpen(true)} /> : null}
-      {route.name === 'deck' ? <DeckScreen deckId={route.deckId} onBack={() => setRoute({ name: 'home' })} onStudy={(newCardAllowance) => setRoute({ name: 'study', deckId: route.deckId, newCardAllowance })} onImport={() => setRoute({ name: 'import', deckId: route.deckId })} onSettings={() => setRoute({ name: 'settings', deckId: route.deckId })} /> : null}
+      {route.name === 'deck' ? <DeckScreen deckId={route.deckId} onBack={() => setRoute({ name: 'home' })} onStudy={(newCardAllowance) => setRoute({ name: 'study', deckId: route.deckId, newCardAllowance })} onSettings={() => setRoute({ name: 'settings', deckId: route.deckId })} /> : null}
       {route.name === 'settings' ? <DeckSettingsScreen deckId={route.deckId} onBack={() => setRoute({ name: 'deck', deckId: route.deckId })} /> : null}
       {route.name === 'study' ? <StudyScreen deckId={route.deckId} newCardAllowance={route.newCardAllowance} onClose={() => setRoute({ name: 'home' })} /> : null}
-      {route.name === 'import' ? <ImportScreen deckId={route.deckId} onBack={() => setRoute({ name: 'deck', deckId: route.deckId })} onDone={() => setRoute({ name: 'deck', deckId: route.deckId })} /> : null}
       <CreateDeckModal visible={createOpen} onClose={() => setCreateOpen(false)} onCreated={(deckId) => { setCreateOpen(false); setRoute({ name: 'deck', deckId }); }} />
     </View>
   );
@@ -924,23 +922,7 @@ const styles = StyleSheet.create({
   customRow: { flexDirection: 'row', marginTop: 10, gap: 8 },
   customInput: { flex: 1, height: 50, borderRadius: 15, paddingHorizontal: 15, backgroundColor: colors.paper, borderWidth: 1, borderColor: colors.line },
   customGo: { width: 50, height: 50, borderRadius: 15, backgroundColor: colors.green, alignItems: 'center', justifyContent: 'center' },
-  importHero: { alignItems: 'center', paddingVertical: 25 },
-  importIcon: { width: 72, height: 72, borderRadius: 23, backgroundColor: colors.greenSoft, alignItems: 'center', justifyContent: 'center' },
-  importTitle: { fontSize: 27, fontWeight: '900', color: colors.ink, marginTop: 17, letterSpacing: -0.7 },
-  importText: { maxWidth: 390, textAlign: 'center', color: colors.muted, fontSize: 13, lineHeight: 19, marginTop: 7 },
-  formatCard: { backgroundColor: '#242B27', borderRadius: radius.medium, padding: 18 },
-  formatTitle: { fontSize: 12, color: '#B7C8BB', fontWeight: '800', marginBottom: 12, letterSpacing: 0.5 },
-  codeText: { color: '#ECF5EE', fontSize: 11, lineHeight: 19, fontFamily: Platform.select({ ios: 'Menlo', android: 'monospace', default: 'monospace' }) },
-  formatHint: { color: '#A4ADA7', fontSize: 10, marginTop: 13 },
-  dropZone: { minHeight: 145, borderRadius: radius.medium, borderWidth: 1.5, borderStyle: 'dashed', borderColor: '#B9BDB7', alignItems: 'center', justifyContent: 'center', marginVertical: 17, paddingHorizontal: 20 },
-  dropZoneReady: { backgroundColor: '#EDF4EC', borderColor: colors.green },
-  dropTitle: { color: colors.ink, fontSize: 15, fontWeight: '800', marginTop: 9, textAlign: 'center' },
-  dropText: { color: colors.muted, fontSize: 11, marginTop: 4 },
-  resultCard: { backgroundColor: colors.greenSoft, borderRadius: 16, padding: 15, flexDirection: 'row', alignItems: 'center', gap: 12, marginBottom: 12 },
-  resultTitle: { color: colors.ink, fontSize: 14, fontWeight: '800' },
-  resultText: { color: colors.muted, fontSize: 11, marginTop: 3 },
-  importErrorCard: { backgroundColor: '#FCEDEA', borderRadius: 16, padding: 14, flexDirection: 'row', gap: 10, alignItems: 'flex-start', marginBottom: 12 },
-  importErrorText: { color: '#8B3E31', fontSize: 12, lineHeight: 18, flex: 1 },
-  errorText: { color: '#A64D3D', fontSize: 11, marginBottom: 5 },
+  mathThumb: { width: 52, height: 52, borderRadius: 17, overflow: 'hidden', alignItems: 'center', justifyContent: 'center', backgroundColor: colors.greenSoft },
+  mathCardBody: { width: '100%', alignItems: 'center', justifyContent: 'center', paddingHorizontal: 18 },
   createIcon: { width: 94, height: 94, borderRadius: 30, backgroundColor: colors.greenSoft, alignItems: 'center', justifyContent: 'center', alignSelf: 'center', marginVertical: 28 },
 });
