@@ -2,7 +2,7 @@
   "id": "math-3e-trigonometrie",
   "subject": "Maths",
   "title": "Maths · 3e · Trigonométrie dans le triangle rectangle",
-  "description": "3e · 2026-2027 · Trigonométrie dans le triangle rectangle. Cours, applications et raisonnements courts.",
+  "description": "3e · 2026-2027 · Formules, définitions et règles essentielles.",
   "format": "math",
   "color": "#F5DFC5",
   "daily_new_limit": 3,
@@ -11,94 +11,58 @@
   "curriculum_reference": "attendus-3e-2020",
   "cards": [
     {
-      "id": "sinus",
-      "front": "Dans un triangle rectangle, quel rapport donne le sinus d’un angle aigu ?",
-      "back": "$\\sin(\\alpha)=\\frac{\\text{côté opposé}}{\\text{hypoténuse}}$.",
-      "kind": "cours"
+      "id": "rappel-cadre",
+      "kind": "propriete",
+      "front": "Dans quel triangle utilise-t-on les rapports sinus, cosinus et tangente du collège ?",
+      "back": "Dans un triangle rectangle, pour un angle aigu."
     },
     {
-      "id": "cosinus",
-      "front": "Dans un triangle rectangle, quel rapport donne le cosinus d’un angle aigu ?",
-      "back": "$\\cos(\\alpha)=\\frac{\\text{côté adjacent}}{\\text{hypoténuse}}$.",
-      "kind": "cours"
+      "id": "rappel-sinus",
+      "kind": "formule",
+      "front": "Sinus d’un angle aigu α dans un triangle rectangle ?",
+      "back": "$\\sin\\alpha=\\frac{\\text{opposé}}{\\text{hypoténuse}}$."
     },
     {
-      "id": "tangente",
-      "front": "Dans un triangle rectangle, quel rapport donne la tangente d’un angle aigu ?",
-      "back": "$\\tan(\\alpha)=\\frac{\\text{côté opposé}}{\\text{côté adjacent}}$.",
-      "kind": "cours"
+      "id": "rappel-cosinus",
+      "kind": "formule",
+      "front": "Cosinus d’un angle aigu α dans un triangle rectangle ?",
+      "back": "$\\cos\\alpha=\\frac{\\text{adjacent}}{\\text{hypoténuse}}$."
     },
     {
-      "id": "reference-angle",
-      "front": "Un côté est-il « opposé » quel que soit l’angle aigu choisi ?",
-      "back": "Non : les rôles opposé et adjacent dépendent de l’angle choisi. L’hypoténuse reste la même.",
-      "kind": "comprehension"
+      "id": "rappel-tangente",
+      "kind": "formule",
+      "front": "Tangente d’un angle aigu α dans un triangle rectangle ?",
+      "back": "$\\tan\\alpha=\\frac{\\text{opposé}}{\\text{adjacent}}$."
     },
     {
-      "id": "sinus-calcul",
-      "front": "Le côté opposé mesure 5 cm et l’hypoténuse 13 cm. Quel est le sinus de l’angle aigu choisi ?",
-      "back": "$\\frac{5}{13}$.",
-      "kind": "application"
+      "id": "rappel-oppose-sinus",
+      "kind": "formule",
+      "front": "Côté opposé à partir de l’hypoténuse et de l’angle aigu α ?",
+      "back": "$\\text{opposé}=\\text{hypoténuse}\\times\\sin\\alpha$."
     },
     {
-      "id": "tangente-calcul",
-      "front": "Les côtés opposé et adjacent à un angle aigu mesurent 3 cm et 4 cm. Quelle est sa tangente ?",
-      "back": "$\\frac{3}{4}=0{,}75$.",
-      "kind": "application"
+      "id": "rappel-adjacent-cosinus",
+      "kind": "formule",
+      "front": "Côté adjacent à partir de l’hypoténuse et de l’angle aigu α ?",
+      "back": "$\\text{adjacent}=\\text{hypoténuse}\\times\\cos\\alpha$."
     },
     {
-      "id": "oppose",
-      "front": "Un triangle rectangle a une hypoténuse de 10 cm et un angle aigu de 30°. Calcule le côté opposé à cet angle.",
-      "back": "5 cm : $10\\sin(30^\\circ)=10\\times0{,}5$.",
-      "kind": "application"
+      "id": "rappel-oppose-tangente",
+      "kind": "formule",
+      "front": "Côté opposé à partir du côté adjacent et de l’angle aigu α ?",
+      "back": "$\\text{opposé}=\\text{adjacent}\\times\\tan\\alpha$."
     },
     {
-      "id": "adjacent",
-      "front": "Un triangle rectangle a une hypoténuse de 12 cm et un angle aigu de 60°. Calcule le côté adjacent à cet angle.",
-      "back": "6 cm : $12\\cos(60^\\circ)=12\\times0{,}5$.",
-      "kind": "application"
+      "id": "rappel-angle",
+      "kind": "methode",
+      "front": "Comment retrouver un angle à partir d’un rapport trigonométrique ?",
+      "back": "Utiliser la fonction inverse correspondante : sinus inverse, cosinus inverse ou tangente inverse."
     },
     {
-      "id": "hypotenuse",
-      "front": "Le côté opposé à un angle de 30° mesure 7 cm. Calcule l’hypoténuse.",
-      "back": "14 cm : $7\\div\\sin(30^\\circ)=7\\div0{,}5$.",
-      "kind": "application"
-    },
-    {
-      "id": "angle-tangente",
-      "front": "Dans un triangle rectangle, les côtés opposé et adjacent à un angle aigu ont la même longueur. Combien mesure cet angle ?",
-      "back": "45° : sa tangente vaut 1, et le triangle rectangle est isocèle.",
-      "kind": "application"
-    },
-    {
-      "id": "choisir-sinus",
-      "front": "On connaît l’hypoténuse et on cherche le côté opposé à un angle aigu connu. Quel rapport choisir ?",
-      "back": "Le sinus, qui relie précisément ces deux côtés.",
-      "kind": "application"
-    },
-    {
-      "id": "choisir-tangente",
-      "front": "On connaît le côté adjacent et un angle aigu ; on cherche le côté opposé. Quel rapport choisir ?",
-      "back": "La tangente : opposé = adjacent × tangente de l’angle.",
-      "kind": "application"
-    },
-    {
-      "id": "degres",
-      "front": "Quel réglage vérifier avant un calcul trigonométrique avec des angles en degrés ?",
-      "back": "Le mode degrés (DEG) de la calculatrice.",
-      "kind": "cours"
-    },
-    {
-      "id": "inverse",
-      "front": "Comment retrouver un angle aigu dont le sinus vaut 0,4 ?",
-      "back": "Calculer le sinus inverse de 0,4 en mode degrés, soit environ 23,6°. Ne pas calculer $1/\\sin(0{,}4)$.",
-      "kind": "cours"
-    },
-    {
-      "id": "limite",
-      "front": "La tangente d’un angle aigu peut-elle dépasser 1 ?",
-      "back": "Oui si le côté opposé est plus long que l’adjacent. Par exemple, un rapport $4/3$ est supérieur à 1.",
-      "kind": "comprehension"
+      "id": "rappel-degres",
+      "kind": "methode",
+      "front": "Réglage de calculatrice pour des angles en degrés ?",
+      "back": "Le mode degrés, souvent noté DEG."
     }
   ]
 }

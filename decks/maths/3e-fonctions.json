@@ -2,7 +2,7 @@
   "id": "math-3e-fonctions",
   "subject": "Maths",
   "title": "Maths · 3e · Fonctions, images et antécédents",
-  "description": "3e · 2026-2027 · Fonctions, images et antécédents. Cours, applications et raisonnements courts.",
+  "description": "3e · 2026-2027 · Formules, définitions et règles essentielles.",
   "format": "math",
   "color": "#F5DFC5",
   "daily_new_limit": 3,
@@ -11,94 +11,64 @@
   "curriculum_reference": "attendus-3e-2020",
   "cards": [
     {
-      "id": "image",
-      "front": "Que signifie $f(3)=7$ ?",
-      "back": "L’image de 3 par f est 7 ; 3 est un antécédent de 7 par f.",
-      "kind": "cours"
+      "id": "rappel-fonction",
+      "kind": "definition",
+      "front": "Qu’associe une fonction à chaque nombre de son ensemble de définition ?",
+      "back": "Une unique image."
     },
     {
-      "id": "calcul-image",
-      "front": "Pour $f(x)=2x^2-1$, calcule $f(3)$.",
-      "back": "17 : $2\\times3^2-1=18-1$.",
-      "kind": "application"
+      "id": "rappel-image",
+      "kind": "definition",
+      "front": "Dans $f(a)=b$, quel nombre est l’image de a ?",
+      "back": "b."
     },
     {
-      "id": "image-negative",
-      "front": "Pour $g(x)=x^2+2x$, calcule $g(-3)$.",
-      "back": "3 : $(-3)^2+2\\times(-3)=9-6$.",
-      "kind": "application"
+      "id": "rappel-antecedent",
+      "kind": "definition",
+      "front": "Dans $f(a)=b$, que représente a pour b ?",
+      "back": "Un antécédent de b par f."
     },
     {
-      "id": "antecedent",
-      "front": "Pour $f(x)=3x+2$, cherche l’antécédent de 14.",
-      "back": "4, en résolvant $3x+2=14$.",
-      "kind": "application"
+      "id": "rappel-calcul-image",
+      "kind": "methode",
+      "front": "Comment calculer l’image de a à partir d’une formule ?",
+      "back": "Remplacer x par a dans l’expression de $f(x)$."
     },
     {
-      "id": "plusieurs",
-      "front": "Pour $f(x)=x^2$, quels sont les antécédents de 9 ?",
-      "back": "3 et −3, car leurs carrés valent 9.",
-      "kind": "application"
+      "id": "rappel-calcul-antecedent",
+      "kind": "methode",
+      "front": "Comment chercher les antécédents de b ?",
+      "back": "Résoudre $f(x)=b$."
     },
     {
-      "id": "aucun",
-      "front": "Pour $f(x)=x^2$, combien −1 a-t-il d’antécédents réels ?",
-      "back": "Aucun : un carré réel ne peut pas être négatif.",
-      "kind": "application"
+      "id": "rappel-point",
+      "kind": "propriete",
+      "front": "Si la courbe de f passe par le point (a ; b), quelle égalité écrire ?",
+      "back": "$f(a)=b$."
     },
     {
-      "id": "unicite",
-      "front": "Un nombre de l’ensemble de définition d’une fonction peut-il avoir deux images ?",
-      "back": "Non : une fonction lui associe une unique image. Une même image peut en revanche avoir plusieurs antécédents.",
-      "kind": "comprehension"
+      "id": "rappel-lecture-image",
+      "kind": "methode",
+      "front": "Lire une image sur une courbe ?",
+      "back": "Partir de l’abscisse donnée, rejoindre la courbe verticalement, puis lire l’ordonnée."
     },
     {
-      "id": "point",
-      "front": "La courbe de f passe par $A(2\\,;\\,5)$. Quelle égalité peut-on écrire ?",
-      "back": "$f(2)=5$.",
-      "kind": "application"
+      "id": "rappel-lecture-antecedent",
+      "kind": "methode",
+      "front": "Lire les antécédents de b sur une courbe ?",
+      "back": "Tracer mentalement l’horizontale d’ordonnée b et lire les abscisses de ses intersections avec la courbe."
     },
     {
-      "id": "lecture-image",
-      "front": "Comment lire l’image de a sur la courbe d’une fonction ?",
-      "back": "Partir de a sur l’axe horizontal, rejoindre la courbe verticalement, puis lire l’ordonnée du point obtenu.",
-      "kind": "cours"
+      "id": "rappel-nombre-antecedents",
+      "kind": "propriete",
+      "front": "Un nombre peut-il avoir plusieurs antécédents ?",
+      "back": "Oui : aucun, un ou plusieurs selon la fonction."
     },
     {
-      "id": "lecture-antecedent",
-      "front": "Comment lire les antécédents de b sur une courbe ?",
-      "back": "Chercher les intersections avec la droite horizontale d’ordonnée b, puis lire leurs abscisses.",
-      "kind": "cours"
-    },
-    {
-      "id": "tableau",
-      "front": "Un tableau donne $f(-1)=4$, $f(0)=1$ et $f(2)=4$. Quels antécédents de 4 sont visibles ?",
-      "back": "−1 et 2. Le tableau seul ne permet pas d’exclure d’autres antécédents hors des valeurs affichées.",
-      "kind": "application"
-    },
-    {
-      "id": "programme",
-      "front": "Un programme double un nombre puis soustrait 5. Quelle fonction décrit-il ?",
-      "back": "$f(x)=2x-5$.",
-      "kind": "application"
-    },
-    {
-      "id": "aire",
-      "front": "Un rectangle a un périmètre de 20 cm et un côté x cm. Exprime son aire en fonction de x.",
-      "back": "$A(x)=x(10-x)$ cm², pour $0<x<10$.",
-      "kind": "application"
-    },
-    {
-      "id": "domaine",
-      "front": "Dans $A(x)=x(10-x)$ pour un rectangle de périmètre 20 cm, pourquoi x = 12 n’a-t-il pas de sens ?",
-      "back": "L’autre côté vaudrait −2 cm. Le modèle impose $0<x<10$.",
-      "kind": "comprehension"
-    },
-    {
-      "id": "egalite-graphique",
-      "front": "Que représentent les abscisses des intersections des courbes de f et de g ?",
-      "back": "Les solutions de $f(x)=g(x)$ : les deux fonctions ont la même image pour ces abscisses.",
-      "kind": "cours"
+      "id": "rappel-intersection",
+      "kind": "propriete",
+      "front": "Que donnent les abscisses des intersections des courbes de f et de g ?",
+      "back": "Les solutions de $f(x)=g(x)$."
     }
   ]
 }

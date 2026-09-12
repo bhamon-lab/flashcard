@@ -2,7 +2,7 @@
   "id": "math-4e-relatifs-fractions",
   "subject": "Maths",
   "title": "Maths · 4e · Calcul avec les relatifs et les fractions",
-  "description": "4e · 2026-2027 · Calcul avec les relatifs et les fractions. Cours, applications et raisonnements courts.",
+  "description": "4e · 2026-2027 · Formules, définitions et règles essentielles.",
   "format": "math",
   "color": "#E2D6F3",
   "daily_new_limit": 3,
@@ -11,94 +11,64 @@
   "curriculum_reference": "attendus-4e-2020",
   "cards": [
     {
-      "id": "signe-produit",
-      "front": "Quelle est la règle des signes pour multiplier deux nombres non nuls ?",
-      "back": "Même signe : produit positif. Signes différents : produit négatif.",
-      "kind": "cours"
+      "id": "rappel-signe-meme",
+      "kind": "propriete",
+      "front": "Signe du produit de deux nombres non nuls de même signe ?",
+      "back": "Positif."
     },
     {
-      "id": "produit",
-      "front": "Calcule $(-6)\\times(-4)$.",
-      "back": "24 : le produit de deux nombres négatifs est positif.",
-      "kind": "application"
+      "id": "rappel-signe-different",
+      "kind": "propriete",
+      "front": "Signe du produit de deux nombres non nuls de signes différents ?",
+      "back": "Négatif."
     },
     {
-      "id": "quotient",
-      "front": "Calcule $18\\div(-3)$.",
-      "back": "$-6$, car les deux nombres sont de signes différents.",
-      "kind": "application"
+      "id": "rappel-quotient",
+      "kind": "propriete",
+      "front": "Règle des signes pour un quotient de deux nombres non nuls ?",
+      "back": "Même signe : positif. Signes différents : négatif."
     },
     {
-      "id": "plusieurs-signes",
-      "front": "Quel est le signe de $(-2)\\times5\\times(-3)\\times(-7)$ ?",
-      "back": "Négatif : le produit contient trois facteurs négatifs, un nombre impair.",
-      "kind": "application"
+      "id": "rappel-inverse",
+      "kind": "definition",
+      "front": "Inverse d’un nombre non nul a ?",
+      "back": "$\\frac{1}{a}$ : son produit par a vaut 1."
     },
     {
-      "id": "priorites",
-      "front": "Calcule $-5+3\\times(-4)$.",
-      "back": "$-17$ : $3\\times(-4)=-12$, puis $-5-12=-17$.",
-      "kind": "application"
+      "id": "rappel-inverse-fraction",
+      "kind": "formule",
+      "front": "Inverse de $\\frac{a}{b}$ ?",
+      "back": "$\\frac{b}{a}$, avec $a\\ne0$ et $b\\ne0$."
     },
     {
-      "id": "inverse",
-      "front": "Qu’est-ce que l’inverse d’un nombre non nul a ?",
-      "back": "Le nombre $\\frac{1}{a}$, dont le produit par a vaut 1.",
-      "kind": "cours"
+      "id": "rappel-produit-fractions",
+      "kind": "formule",
+      "front": "Produit de deux fractions ?",
+      "back": "$\\frac{a}{b}\\times\\frac{c}{d}=\\frac{ac}{bd}$, avec $b\\ne0$ et $d\\ne0$."
     },
     {
-      "id": "zero-inverse",
-      "front": "Pourquoi 0 n’a-t-il pas d’inverse ?",
-      "back": "Car $0\\times x=0$ pour tout x ; ce produit ne peut jamais valoir 1.",
-      "kind": "comprehension"
+      "id": "rappel-division-fractions",
+      "kind": "formule",
+      "front": "Quotient de deux fractions ?",
+      "back": "$\\frac{a}{b}\\div\\frac{c}{d}=\\frac{a}{b}\\times\\frac{d}{c}$, avec $b,c,d\\ne0$."
     },
     {
-      "id": "inverse-fraction",
-      "front": "Quel est l’inverse de $-\\frac{3}{7}$ ?",
-      "back": "$-\\frac{7}{3}$, car leur produit vaut 1.",
-      "kind": "application"
+      "id": "rappel-division-regle",
+      "kind": "methode",
+      "front": "Diviser par un nombre non nul revient à quoi ?",
+      "back": "Multiplier par son inverse."
     },
     {
-      "id": "produit-fractions",
-      "front": "Calcule $\\frac{3}{4}\\times\\frac{2}{5}$.",
-      "back": "$\\frac{6}{20}=\\frac{3}{10}$. On multiplie les numérateurs et les dénominateurs.",
-      "kind": "application"
+      "id": "rappel-moins-fraction",
+      "kind": "formule",
+      "front": "Où placer le signe moins d’une fraction ?",
+      "back": "$-\\frac{a}{b}=\\frac{-a}{b}=\\frac{a}{-b}$, avec $b\\ne0$."
     },
     {
-      "id": "division-fractions",
-      "front": "Calcule $\\frac{5}{6}\\div\\frac{2}{3}$.",
-      "back": "$\\frac{5}{6}\\times\\frac{3}{2}=\\frac{15}{12}=\\frac{5}{4}$.",
-      "kind": "application"
-    },
-    {
-      "id": "negatifs-fractions",
-      "front": "Calcule $-\\frac{2}{3}+\\frac{1}{4}$.",
-      "back": "$-\\frac{8}{12}+\\frac{3}{12}=-\\frac{5}{12}$.",
-      "kind": "application"
-    },
-    {
-      "id": "priorites-fractions",
-      "front": "Calcule $\\frac{1}{2}+\\frac{3}{4}\\times\\frac{2}{3}$.",
-      "back": "1 : le produit vaut $\\frac{1}{2}$, puis on additionne.",
-      "kind": "application"
-    },
-    {
-      "id": "fraction-fraction",
-      "front": "Les $\\frac{2}{3}$ d’un groupe sont inscrits ; la moitié des inscrits participe. Quelle fraction du groupe participe ?",
-      "back": "$\\frac{1}{2}\\times\\frac{2}{3}=\\frac{1}{3}$.",
-      "kind": "application"
-    },
-    {
-      "id": "oppose-inverse",
-      "front": "L’opposé et l’inverse de 4 sont-ils identiques ?",
-      "back": "Non : l’opposé est −4, l’inverse est $\\frac{1}{4}$. Le premier donne une somme nulle, le second un produit égal à 1.",
-      "kind": "comprehension"
-    },
-    {
-      "id": "comparer-negatifs",
-      "front": "Compare $-\\frac{3}{4}$ et $-\\frac{2}{3}$.",
-      "back": "$-\\frac{3}{4}<-\\frac{2}{3}$ car $-\\frac{9}{12}<-\\frac{8}{12}$.",
-      "kind": "application"
+      "id": "rappel-double-moins",
+      "kind": "formule",
+      "front": "Deux signes moins dans une fraction ?",
+      "back": "$\\frac{-a}{-b}=\\frac{a}{b}$, avec $b\\ne0$."
     }
   ]
 }

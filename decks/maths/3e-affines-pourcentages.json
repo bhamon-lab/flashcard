@@ -2,7 +2,7 @@
   "id": "math-3e-affines-pourcentages",
   "subject": "Maths",
   "title": "Maths · 3e · Fonctions affines et pourcentages",
-  "description": "3e · 2026-2027 · Fonctions affines et pourcentages. Cours, applications et raisonnements courts.",
+  "description": "3e · 2026-2027 · Formules, définitions et règles essentielles.",
   "format": "math",
   "color": "#F5DFC5",
   "daily_new_limit": 3,
@@ -11,94 +11,76 @@
   "curriculum_reference": "attendus-3e-2020",
   "cards": [
     {
-      "id": "lineaire",
-      "front": "Quelle est la forme d’une fonction linéaire ?",
-      "back": "$f(x)=ax$. Elle modélise une situation de proportionnalité de coefficient a.",
-      "kind": "cours"
+      "id": "rappel-lineaire",
+      "kind": "formule",
+      "front": "Forme générale d’une fonction linéaire ?",
+      "back": "$f(x)=ax$."
     },
     {
-      "id": "affine",
-      "front": "Quelle est la forme d’une fonction affine ?",
-      "back": "$f(x)=ax+b$, où a et b sont des nombres fixés.",
-      "kind": "cours"
+      "id": "rappel-affine",
+      "kind": "formule",
+      "front": "Forme générale d’une fonction affine ?",
+      "back": "$f(x)=ax+b$."
     },
     {
-      "id": "origine",
-      "front": "Pour $f(x)=4x-3$, quelle est l’ordonnée à l’origine ?",
-      "back": "−3 : $f(0)=-3$.",
-      "kind": "application"
+      "id": "rappel-coefficient",
+      "kind": "definition",
+      "front": "Dans $f(x)=ax+b$, que représente a ?",
+      "back": "Le coefficient directeur de la droite."
     },
     {
-      "id": "coefficient",
-      "front": "Pour $f(x)=-2x+5$, que vaut le coefficient directeur ?",
-      "back": "−2 : quand x augmente de 1, l’image diminue de 2.",
-      "kind": "application"
+      "id": "rappel-origine",
+      "kind": "definition",
+      "front": "Dans $f(x)=ax+b$, que représente b ?",
+      "back": "L’ordonnée à l’origine : $f(0)=b$."
     },
     {
-      "id": "calcul-coefficient",
-      "front": "Une droite passe par $(1\\,;\\,3)$ et $(4\\,;\\,9)$. Quel est son coefficient directeur ?",
-      "back": "2 : $\\frac{9-3}{4-1}=2$.",
-      "kind": "application"
+      "id": "rappel-pente",
+      "kind": "formule",
+      "front": "Coefficient directeur d’une droite passant par A et B ?",
+      "back": "$a=\\frac{y_B-y_A}{x_B-x_A}$, avec $x_A\\ne x_B$."
     },
     {
-      "id": "formule-droite",
-      "front": "Une fonction affine a pour coefficient directeur 2 et vérifie $f(1)=3$. Quelle est sa formule ?",
-      "back": "$f(x)=2x+1$ : $3=2\\times1+b$, donc $b=1$.",
-      "kind": "application"
+      "id": "rappel-graphique-lineaire",
+      "kind": "propriete",
+      "front": "Représentation graphique d’une fonction linéaire ?",
+      "back": "Une droite passant par l’origine."
     },
     {
-      "id": "tracer",
-      "front": "Comment tracer la représentation de $f(x)=2x+1$ ?",
-      "back": "Placer deux points, par exemple $(0\\,;\\,1)$ et $(1\\,;\\,3)$, puis tracer la droite qui les relie.",
-      "kind": "cours"
+      "id": "rappel-hausse",
+      "kind": "formule",
+      "front": "Coefficient multiplicateur d’une hausse de t % ?",
+      "back": "$1+\\frac{t}{100}$."
     },
     {
-      "id": "constante",
-      "front": "Une fonction constante est-elle affine ?",
-      "back": "Oui : $f(x)=b$ correspond à $a=0$. Sa représentation est une droite horizontale.",
-      "kind": "comprehension"
+      "id": "rappel-baisse",
+      "kind": "formule",
+      "front": "Coefficient multiplicateur d’une baisse de t % ?",
+      "back": "$1-\\frac{t}{100}$."
     },
     {
-      "id": "hausse",
-      "front": "Quel coefficient multiplicateur correspond à une hausse de t % ?",
-      "back": "$1+\\frac{t}{100}$.",
-      "kind": "cours"
+      "id": "rappel-finale",
+      "kind": "formule",
+      "front": "Valeur finale à partir de la valeur initiale et du coefficient k ?",
+      "back": "$V_f=kV_i$."
     },
     {
-      "id": "baisse",
-      "front": "Quel coefficient multiplicateur correspond à une baisse de t % ?",
-      "back": "$1-\\frac{t}{100}$.",
-      "kind": "cours"
+      "id": "rappel-initiale",
+      "kind": "formule",
+      "front": "Valeur initiale à partir de la valeur finale et du coefficient k ?",
+      "back": "$V_i=\\frac{V_f}{k}$, avec $k\\ne0$."
     },
     {
-      "id": "prix-hausse",
-      "front": "Un prix de 80 € augmente de 15 %. Quel est le nouveau prix ?",
-      "back": "92 € : $80\\times1{,}15=92$.",
-      "kind": "application"
+      "id": "rappel-taux",
+      "kind": "formule",
+      "front": "Taux d’évolution en pourcentage ?",
+      "back": "$t=\\frac{V_f-V_i}{V_i}\\times100$, avec $V_i>0$."
     },
     {
-      "id": "prix-baisse",
-      "front": "Un prix de 120 € baisse de 25 %. Quel est le nouveau prix ?",
-      "back": "90 € : $120\\times0{,}75=90$.",
-      "kind": "application"
-    },
-    {
-      "id": "evolution",
-      "front": "Un prix passe de 50 € à 60 €. Quel est son pourcentage d’augmentation ?",
-      "back": "20 % : $\\frac{60-50}{50}\\times100=20$.",
-      "kind": "application"
-    },
-    {
-      "id": "retour",
-      "front": "Après une hausse de 20 %, un prix est de 72 €. Quel était le prix initial ?",
-      "back": "60 € : $72\\div1{,}20=60$.",
-      "kind": "application"
-    },
-    {
-      "id": "successives",
-      "front": "Une hausse de 10 % suivie d’une baisse de 10 % ramène-t-elle au prix initial ?",
-      "back": "Non : $1{,}1\\times0{,}9=0{,}99$. Le prix final est inférieur de 1 % au prix initial.",
-      "kind": "comprehension"
+      "id": "rappel-successives",
+      "kind": "formule",
+      "front": "Coefficient global de deux évolutions successives ?",
+      "back": "$k=k_1k_2$."
     }
   ]
 }
