@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
 GRADES = {"6e", "5e", "4e", "3e"}
-KINDS = {"cours", "application", "comprehension"}
+KINDS = {"formule", "definition", "propriete", "methode"}
 
 
 def require(condition, message):
@@ -75,9 +75,9 @@ def main():
         require(re.fullmatch(r"#[0-9a-fA-F]{6}", deck["color"]), f"{node_id}: couleur invalide")
         require(isinstance(deck["daily_new_limit"], int) and deck["daily_new_limit"] > 0,
                 f"{node_id}: limite quotidienne incorrecte")
-        require(len(deck["cards"]) == node["card_count"] and len(deck["cards"]) >= 12,
+        require(len(deck["cards"]) == node["card_count"] and len(deck["cards"]) >= 8,
                 f"{node_id}: nombre de cartes incohérent")
-        require({c["kind"] for c in deck["cards"]} == KINDS, f"{node_id}: type pédagogique manquant")
+        require({c["kind"] for c in deck["cards"]} <= KINDS, f"{node_id}: type pédagogique inconnu")
         ids, fronts = set(), set()
         for card in deck["cards"]:
             location = f"{node_id}:{card['id']}"

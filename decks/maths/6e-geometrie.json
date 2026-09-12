@@ -2,7 +2,7 @@
   "id": "math-6e-geometrie",
   "subject": "Maths",
   "title": "Maths · 6e · Distances, angles et triangles",
-  "description": "6e · 2026-2027 · Distances, angles et triangles. Cours, applications et raisonnements courts.",
+  "description": "6e · 2026-2027 · Formules, définitions et règles essentielles.",
   "format": "math",
   "color": "#CDEAE0",
   "daily_new_limit": 3,
@@ -11,142 +11,82 @@
   "curriculum_reference": "cycle3-2025",
   "cards": [
     {
-      "id": "segment",
-      "front": "Quelle différence entre $[AB]$ et $(AB)$ ?",
-      "back": "$[AB]$ est le segment limité par A et B ; $(AB)$ est la droite passant par A et B, illimitée.",
-      "kind": "cours"
+      "id": "rappel-milieu",
+      "kind": "definition",
+      "front": "Milieu M du segment [AB] ?",
+      "back": "$M\\in[AB]$ et $AM=MB$."
     },
     {
-      "id": "milieu",
-      "front": "Quelles conditions définissent le milieu M de $[AB]$ ?",
-      "back": "M appartient à $[AB]$ et $AM=MB$.",
-      "kind": "cours"
+      "id": "rappel-cercle",
+      "kind": "definition",
+      "front": "Cercle de centre O et de rayon r ?",
+      "back": "L’ensemble des points M tels que $OM=r$."
     },
     {
-      "id": "cercle",
-      "front": "Quels points appartiennent au cercle de centre O et de rayon 3 cm ?",
-      "back": "Tous les points M tels que $OM=3$ cm.",
-      "kind": "cours"
+      "id": "rappel-disque",
+      "kind": "definition",
+      "front": "Disque de centre O et de rayon r ?",
+      "back": "L’ensemble des points M tels que $OM\\leq r$."
     },
     {
-      "id": "disque",
-      "front": "Un point à 2 cm de O appartient-il au disque de centre O et de rayon 3 cm ?",
-      "back": "Oui, car $2\\leq3$. Il n’appartient pas au cercle, situé exactement à 3 cm de O.",
-      "kind": "comprehension"
+      "id": "rappel-diametre",
+      "kind": "formule",
+      "front": "Lien entre diamètre d et rayon r ?",
+      "back": "$d=2r$."
     },
     {
-      "id": "diametre",
-      "front": "Un cercle a un rayon de 4,5 cm. Quel est son diamètre ?",
-      "back": "9 cm : le diamètre vaut deux fois le rayon.",
-      "kind": "application"
+      "id": "rappel-mediatrice",
+      "kind": "definition",
+      "front": "Médiatrice d’un segment ?",
+      "back": "La droite perpendiculaire au segment passant par son milieu."
     },
     {
-      "id": "corde",
-      "front": "Qu’est-ce qu’une corde d’un cercle ?",
-      "back": "Un segment dont les deux extrémités appartiennent au cercle. Un diamètre est une corde passant par le centre.",
-      "kind": "cours"
+      "id": "rappel-equidistance",
+      "kind": "propriete",
+      "front": "Propriété des points de la médiatrice de [AB] ?",
+      "back": "Ils sont à égale distance de A et de B : $MA=MB$."
     },
     {
-      "id": "mediatrice",
-      "front": "Qu’est-ce que la médiatrice de $[AB]$ ?",
-      "back": "La droite perpendiculaire à $(AB)$ passant par le milieu de $[AB]$.",
-      "kind": "cours"
+      "id": "rappel-droit",
+      "kind": "definition",
+      "front": "Mesure d’un angle droit ?",
+      "back": "$90^\\circ$."
     },
     {
-      "id": "equidistance",
-      "front": "Si $MA=MB$, où se trouve M par rapport à $[AB]$ ?",
-      "back": "Sur la médiatrice de $[AB]$ : ses points sont exactement ceux qui sont équidistants de A et de B.",
-      "kind": "comprehension"
+      "id": "rappel-plat",
+      "kind": "definition",
+      "front": "Mesure d’un angle plat ?",
+      "back": "$180^\\circ$."
     },
     {
-      "id": "angle-obtus",
-      "front": "Qu’est-ce qu’un angle obtus ?",
-      "back": "Un angle strictement supérieur à $90^\\circ$ et strictement inférieur à $180^\\circ$.",
-      "kind": "cours"
+      "id": "rappel-bissectrice",
+      "kind": "definition",
+      "front": "Bissectrice d’un angle ?",
+      "back": "La demi-droite qui partage l’angle en deux angles de même mesure."
     },
     {
-      "id": "rapporteur",
-      "front": "Comment placer le rapporteur pour mesurer un angle ?",
-      "back": "Son centre sur le sommet, la graduation zéro sur un côté ; lire la graduation atteinte par l’autre côté sur la bonne échelle.",
-      "kind": "cours"
+      "id": "rappel-triangle",
+      "kind": "formule",
+      "front": "Somme des angles d’un triangle ?",
+      "back": "$180^\\circ$."
     },
     {
-      "id": "supplementaires",
-      "front": "Deux angles sont supplémentaires. L’un mesure $68^\\circ$. Combien mesure l’autre ?",
-      "back": "$112^\\circ$ : leur somme vaut $180^\\circ$.",
-      "kind": "application"
+      "id": "rappel-isocele",
+      "kind": "propriete",
+      "front": "Angles à la base d’un triangle isocèle ?",
+      "back": "Ils ont la même mesure."
     },
     {
-      "id": "bissectrice",
-      "front": "Une bissectrice partage un angle de $74^\\circ$. Quelle est la mesure de chaque moitié ?",
-      "back": "$37^\\circ$. La bissectrice partage l’angle en deux angles égaux.",
-      "kind": "application"
+      "id": "rappel-equilateral",
+      "kind": "propriete",
+      "front": "Angles d’un triangle équilatéral ?",
+      "back": "Trois angles de $60^\\circ$."
     },
     {
-      "id": "triangle-somme",
-      "front": "Deux angles d’un triangle mesurent $48^\\circ$ et $62^\\circ$. Calcule le troisième.",
-      "back": "$70^\\circ$, car $180-48-62=70$.",
-      "kind": "application"
-    },
-    {
-      "id": "isocele",
-      "front": "ABC est isocèle en A et son angle en A mesure $40^\\circ$. Combien mesure l’angle en B ?",
-      "back": "$70^\\circ$. Les angles en B et C sont égaux et leur somme vaut $140^\\circ$.",
-      "kind": "application"
-    },
-    {
-      "id": "equilateral",
-      "front": "Combien mesure chaque angle d’un triangle équilatéral ?",
-      "back": "$60^\\circ$ : ses trois angles sont égaux et leur somme vaut $180^\\circ$.",
-      "kind": "cours"
-    },
-    {
-      "id": "construction",
-      "front": "Comment construire un triangle dont les côtés mesurent 4, 5 et 6 cm ?",
-      "back": "Tracer un côté de 6 cm ; tracer deux arcs de rayons 4 et 5 cm centrés aux extrémités. Une intersection donne le troisième sommet.",
-      "kind": "cours"
-    },
-    {
-      "id": "circonscrit",
-      "front": "Où se trouve le centre du cercle circonscrit à un triangle ?",
-      "back": "À l’intersection des médiatrices. Ce point est à égale distance des trois sommets.",
-      "kind": "cours"
-    },
-    {
-      "id": "paralleles",
-      "front": "Dans un plan, deux droites distinctes perpendiculaires à une même droite sont-elles parallèles ?",
-      "back": "Oui. Cette propriété permet de justifier le parallélisme sans se fier au dessin.",
-      "kind": "comprehension"
-    },
-    {
-      "id": "angle-aigu",
-      "kind": "cours",
-      "front": "Qu’est-ce qu’un angle aigu ?",
-      "back": "Un angle strictement supérieur à 0° et strictement inférieur à 90°."
-    },
-    {
-      "id": "angle-plat",
-      "kind": "cours",
-      "front": "Combien mesure un angle plat ?",
-      "back": "180° : ses côtés forment deux demi-droites opposées."
-    },
-    {
-      "id": "angle-plein",
-      "kind": "cours",
-      "front": "Combien mesure un angle plein ?",
-      "back": "360° : il correspond à un tour complet. Un angle nul mesure 0°."
-    },
-    {
-      "id": "adjacents",
-      "kind": "cours",
-      "front": "Qu’est-ce que deux angles adjacents ?",
-      "back": "Deux angles ayant le même sommet, un côté commun et des intérieurs qui ne se chevauchent pas."
-    },
-    {
-      "id": "construire-angle",
-      "kind": "cours",
-      "front": "Comment construire un angle de 50° à partir d’une demi-droite ?",
-      "back": "Placer le centre du rapporteur sur l’origine et le zéro sur la demi-droite ; marquer 50°, puis tracer la demi-droite reliant l’origine à cette marque."
+      "id": "rappel-circonscrit",
+      "kind": "propriete",
+      "front": "Centre du cercle circonscrit à un triangle ?",
+      "back": "Le point d’intersection de ses médiatrices."
     }
   ]
 }

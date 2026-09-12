@@ -2,7 +2,7 @@
   "id": "math-3e-thales-similitude",
   "subject": "Maths",
   "title": "Maths · 3e · Thalès et triangles semblables",
-  "description": "3e · 2026-2027 · Thalès et triangles semblables. Cours, applications et raisonnements courts.",
+  "description": "3e · 2026-2027 · Formules, définitions et règles essentielles.",
   "format": "math",
   "color": "#F5DFC5",
   "daily_new_limit": 3,
@@ -11,94 +11,58 @@
   "curriculum_reference": "attendus-3e-2020",
   "cards": [
     {
-      "id": "papillon",
-      "front": "A, O, B sont alignés, C, O, D sont alignés, O est entre A et B et entre C et D, et (AC) est parallèle à (BD). Quelle égalité donne Thalès ?",
-      "back": "$\\frac{OA}{OB}=\\frac{OC}{OD}=\\frac{AC}{BD}$, avec deux droites sécantes distinctes en O.",
-      "kind": "cours"
+      "id": "rappel-papillon",
+      "kind": "propriete",
+      "front": "Conditions de Thalès en configuration papillon ?",
+      "back": "Deux droites distinctes se coupent en O. A et B sont de part et d’autre de O sur l’une, C et D sur l’autre ; $(AC)\\parallel(BD)$."
     },
     {
-      "id": "papillon-calcul",
-      "front": "Dans cette configuration papillon, $OA=3$, $OB=6$, $OC=4$. Calcule OD.",
-      "back": "8 : $\\frac{3}{6}=\\frac{4}{OD}$.",
-      "kind": "application"
+      "id": "rappel-rapports",
+      "kind": "formule",
+      "front": "En papillon : A, O, B alignés, C, O, D alignés, O entre les points de chaque paire, sur deux droites distinctes, et (AC) parallèle à (BD). Formule de Thalès ?",
+      "back": "$\\frac{OA}{OB}=\\frac{OC}{OD}=\\frac{AC}{BD}$."
     },
     {
-      "id": "papillon-segment",
-      "front": "Dans la même configuration, $OA/OB=3/4$ et $BD=12$ cm. Combien vaut AC ?",
-      "back": "9 cm : $12\\times\\frac{3}{4}=9$.",
-      "kind": "application"
+      "id": "rappel-reciproque",
+      "kind": "propriete",
+      "front": "Réciproque de Thalès en papillon ?",
+      "back": "Avec A, O, B alignés et C, O, D alignés, de part et d’autre de O : si $\\frac{OA}{OB}=\\frac{OC}{OD}$, alors $(AC)\\parallel(BD)$."
     },
     {
-      "id": "reciproque",
-      "front": "Dans la configuration papillon, avec O entre A et B et entre C et D, si $OA/OB=OC/OD$, que conclure ?",
-      "back": "$(AC)$ et $(BD)$ sont parallèles, par la réciproque de Thalès.",
-      "kind": "cours"
+      "id": "rappel-semblables",
+      "kind": "definition",
+      "front": "Triangles semblables ?",
+      "back": "Des triangles dont les angles sont respectivement égaux."
     },
     {
-      "id": "non-paralleles",
-      "front": "A et B sont sur une même demi-droite d’origine O, C et D sur une autre. Si $OA/OB=2/3$ et $OC/OD=3/4$, les droites (AC) et (BD) sont-elles parallèles ?",
-      "back": "Non : les rapports sont différents. Si elles étaient parallèles, Thalès imposerait leur égalité.",
-      "kind": "application"
+      "id": "rappel-deux-angles",
+      "kind": "propriete",
+      "front": "Deux angles respectivement égaux suffisent-ils pour reconnaître des triangles semblables ?",
+      "back": "Oui : les troisièmes angles sont alors aussi égaux."
     },
     {
-      "id": "alignement",
-      "front": "Des rapports égaux suffisent-ils à prouver le parallélisme sans vérifier la position des points ?",
-      "back": "Non : il faut vérifier les alignements et l’ordre des points requis par la réciproque.",
-      "kind": "comprehension"
+      "id": "rappel-cotes",
+      "kind": "propriete",
+      "front": "Côtés correspondants de triangles semblables ?",
+      "back": "Leurs longueurs sont proportionnelles."
     },
     {
-      "id": "semblables",
-      "front": "Qu’est-ce que deux triangles semblables ?",
-      "back": "Deux triangles dont les angles sont respectivement égaux.",
-      "kind": "cours"
+      "id": "rappel-coefficient",
+      "kind": "formule",
+      "front": "Rapport k du premier triangle vers le second ?",
+      "back": "$k=\\frac{\\text{côté du second}}{\\text{côté correspondant du premier}}$."
     },
     {
-      "id": "deux-angles",
-      "front": "Pourquoi deux angles respectivement égaux suffisent-ils à reconnaître des triangles semblables ?",
-      "back": "Le troisième angle vaut $180^\\circ$ moins la somme des deux autres ; il est donc aussi égal.",
-      "kind": "cours"
+      "id": "rappel-aires",
+      "kind": "propriete",
+      "front": "Rapport des aires si le rapport des longueurs vaut $k>0$ ?",
+      "back": "$k^2$."
     },
     {
-      "id": "cotes-proportionnels",
-      "front": "Quelle propriété ont les côtés correspondants de deux triangles semblables ?",
-      "back": "Leurs longueurs sont proportionnelles.",
-      "kind": "cours"
-    },
-    {
-      "id": "coefficient",
-      "front": "Deux triangles semblables ont des côtés correspondants de 4 et 10 cm. Quel est le coefficient du petit vers le grand ?",
-      "back": "2,5 : $10\\div4=2{,}5$.",
-      "kind": "application"
-    },
-    {
-      "id": "longueur",
-      "front": "Deux triangles semblables sont dans un rapport d’agrandissement 2,5. Un côté du petit vaut 6 cm. Côté correspondant du grand ?",
-      "back": "15 cm : $6\\times2{,}5=15$.",
-      "kind": "application"
-    },
-    {
-      "id": "reconnaitre",
-      "front": "Des triangles de côtés 3, 4, 5 et 6, 8, 10 sont-ils semblables ?",
-      "back": "Oui : les côtés correspondants sont dans le même rapport 2.",
-      "kind": "application"
-    },
-    {
-      "id": "angles-correspondants",
-      "front": "Deux triangles ont des angles de 40°, 60° et 80°. Quel côté correspond au côté opposé à 40° ?",
-      "back": "Le côté opposé à l’angle de 40° dans l’autre triangle.",
-      "kind": "application"
-    },
-    {
-      "id": "egalite",
-      "front": "Deux triangles semblables sont-ils toujours égaux ?",
-      "back": "Non. Ils ne sont superposables que si le rapport des longueurs correspondantes vaut 1.",
-      "kind": "comprehension"
-    },
-    {
-      "id": "aire",
-      "front": "Le rapport des longueurs de deux triangles semblables est 3. Quel est le rapport de leurs aires ?",
-      "back": "9 : les aires sont dans le rapport $3^2$.",
-      "kind": "application"
+      "id": "rappel-egaux",
+      "kind": "propriete",
+      "front": "Quand deux triangles semblables sont-ils aussi égaux ?",
+      "back": "Quand leur rapport de longueurs vaut 1."
     }
   ]
 }

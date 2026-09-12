@@ -2,7 +2,7 @@
   "id": "math-3e-algorithmique",
   "subject": "Maths",
   "title": "Maths · 3e · Programmes, boucles et simulations",
-  "description": "3e · 2026-2027 · Programmes, boucles et simulations. Cours, applications et raisonnements courts.",
+  "description": "3e · 2026-2027 · Formules, définitions et règles essentielles.",
   "format": "math",
   "color": "#F5DFC5",
   "daily_new_limit": 3,
@@ -11,106 +11,64 @@
   "curriculum_reference": "attendus-3e-2020",
   "cards": [
     {
-      "id": "condition-composee",
-      "front": "Le test « x > 0 et x < 10 » est-il vrai pour x = 10 ?",
-      "back": "Non : la seconde condition est fausse. Les deux doivent être vraies.",
-      "kind": "application"
+      "id": "rappel-et",
+      "kind": "propriete",
+      "front": "Quand une condition « A et B » est-elle vraie ?",
+      "back": "Quand A et B sont toutes les deux vraies."
     },
     {
-      "id": "ou",
-      "front": "Le test « x < 0 ou x > 10 » est-il vrai pour x = −3 ?",
-      "back": "Oui : il suffit qu’une des conditions soit vraie, ici $-3<0$.",
-      "kind": "application"
+      "id": "rappel-ou",
+      "kind": "propriete",
+      "front": "Quand une condition « A ou B » est-elle vraie ?",
+      "back": "Quand au moins l’une des deux est vraie."
     },
     {
-      "id": "boucle-condition",
-      "front": "Quelle différence entre « répéter 5 fois » et « répéter jusqu’à x ≥ 5 » ?",
-      "back": "La première fixe le nombre de répétitions. La seconde s’arrête selon une condition sur la valeur de x.",
-      "kind": "cours"
+      "id": "rappel-jusqua",
+      "kind": "definition",
+      "front": "Boucle « répéter jusqu’à… » ?",
+      "back": "Elle répète ses instructions tant que la condition d’arrêt est fausse."
     },
     {
-      "id": "trace",
-      "front": "On met x à 0, puis on répète « ajouter 3 à x » jusqu’à x ≥ 8. Valeur finale ?",
-      "back": "9 : les valeurs sont 0, 3, 6, 9. La condition devient vraie après trois répétitions.",
-      "kind": "application"
+      "id": "rappel-arret",
+      "kind": "methode",
+      "front": "Que vérifier pour éviter une boucle infinie ?",
+      "back": "Que la condition d’arrêt peut devenir vraie et que les instructions permettent de l’atteindre."
     },
     {
-      "id": "zero-iteration",
-      "front": "x vaut 10. Une boucle teste avant chaque passage « répéter jusqu’à x ≥ 8 ». Combien de passages ?",
-      "back": "Zéro : la condition d’arrêt est déjà vraie avant le premier passage.",
-      "kind": "application"
+      "id": "rappel-accumulateur",
+      "kind": "definition",
+      "front": "Accumulateur ?",
+      "back": "Une variable qui conserve un total mis à jour au fil des étapes."
     },
     {
-      "id": "infini",
-      "front": "x vaut 0. On répète « ajouter 2 à x » jusqu’à x = 5. Pourquoi la boucle ne s’arrête-t-elle pas ?",
-      "back": "x reste pair : 0, 2, 4, 6… Il ne vaut jamais 5. Un arrêt « x ≥ 5 » conviendrait pour atteindre ou dépasser 5.",
-      "kind": "comprehension"
+      "id": "rappel-bloc",
+      "kind": "definition",
+      "front": "Bloc personnalisé ?",
+      "back": "Une suite d’instructions nommée que l’on peut réutiliser."
     },
     {
-      "id": "accumulateur",
-      "front": "On met s à 0. Pour n prenant successivement 1, 2, 3, 4, on ajoute n à s. Valeur finale ?",
-      "back": "10 : $1+2+3+4=10$.",
-      "kind": "application"
+      "id": "rappel-parametre",
+      "kind": "definition",
+      "front": "Paramètre d’un bloc ?",
+      "back": "Une donnée fournie au bloc pour adapter son exécution."
     },
     {
-      "id": "imbrication",
-      "front": "On répète 3 fois une boucle qui affiche 4 fois « bonjour ». Combien d’affichages ?",
-      "back": "12 : $3\\times4=12$.",
-      "kind": "application"
+      "id": "rappel-simulation",
+      "kind": "definition",
+      "front": "Simulation aléatoire ?",
+      "back": "Une reproduction informatique d’une expérience selon un modèle de hasard."
     },
     {
-      "id": "bloc",
-      "front": "Pourquoi créer un bloc personnalisé pour un motif répété dans Scratch ?",
-      "back": "Pour définir le motif une fois, le réutiliser et rendre le programme plus facile à lire et à modifier.",
-      "kind": "cours"
+      "id": "rappel-parallele",
+      "kind": "propriete",
+      "front": "Deux scripts déclenchés par le même événement s’exécutent-ils forcément l’un après l’autre ?",
+      "back": "Non : ils peuvent s’exécuter en parallèle."
     },
     {
-      "id": "parametre",
-      "front": "Un bloc « carré(côté) » trace un carré. Que signifie l’appel « carré(40) » ?",
-      "back": "Exécuter le bloc en donnant la valeur 40 au paramètre côté.",
-      "kind": "application"
-    },
-    {
-      "id": "modele-de",
-      "front": "Comment simuler un lancer de dé équilibré à six faces avec un programme ?",
-      "back": "Choisir au hasard un entier de 1 à 6, avec la même probabilité pour chaque entier.",
-      "kind": "cours"
-    },
-    {
-      "id": "simulation-compteur",
-      "front": "On initialise c à 0, on simule 100 lancers, et on ajoute 1 à c à chaque 6. Que représente c / 100 ?",
-      "back": "La fréquence observée de la face 6 dans cette simulation.",
-      "kind": "application"
-    },
-    {
-      "id": "variable-avant",
-      "front": "Pourquoi faut-il remettre le compteur de succès à 0 avant une nouvelle simulation ?",
-      "back": "Pour ne compter que les succès de la nouvelle série, sans y ajouter ceux de la précédente.",
-      "kind": "comprehension"
-    },
-    {
-      "id": "programme-formule",
-      "front": "Un programme prend x, lui ajoute 2 puis élève le résultat au carré. Quelle expression affiche-t-il ?",
-      "back": "$(x+2)^2$, soit $x^2+4x+4$.",
-      "kind": "application"
-    },
-    {
-      "id": "preuve-vs-test",
-      "front": "Tester une identité algébrique pour 100 valeurs prouve-t-il qu’elle est toujours vraie ?",
-      "back": "Non. Les tests peuvent révéler une erreur, mais une preuve générale doit couvrir toutes les valeurs autorisées.",
-      "kind": "comprehension"
-    },
-    {
-      "id": "scripts-paralleles",
-      "kind": "comprehension",
-      "front": "Deux scripts se déclenchent au clic sur le drapeau vert. Le second attend-il forcément la fin du premier ?",
-      "back": "Non : ils peuvent s’exécuter en parallèle. Il faut prévoir une coordination si l’un dépend du résultat de l’autre."
-    },
-    {
-      "id": "message",
-      "kind": "cours",
-      "front": "Comment déclencher une action d’un second lutin quand le premier termine une étape dans Scratch ?",
-      "back": "Le premier envoie un message ; le second démarre son script avec « quand je reçois [message] ». Cela coordonne les étapes."
+      "id": "rappel-message",
+      "kind": "methode",
+      "front": "Comment coordonner deux scripts dans Scratch ?",
+      "back": "Envoyer un message et déclencher l’autre script à sa réception."
     }
   ]
 }
