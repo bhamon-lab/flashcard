@@ -20,7 +20,7 @@
       "id": "rappel-moyenne",
       "kind": "formule",
       "front": "Moyenne pondérée d’une série ?",
-      "back": "$\\frac{\\text{somme des (valeur × effectif)}}{\\text{effectif total}}$, avec un total non nul."
+      "back": "$\\frac{\\text{somme des (valeur fois effectif)}}{\\text{effectif total}}$, avec un total non nul."
     },
     {
       "id": "rappel-frequence",

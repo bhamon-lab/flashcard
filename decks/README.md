@@ -23,8 +23,10 @@ Les fichiers `.json` posés directement à la racine de `decks/` restent accept�
 
 ## Mathématiques du collège
 
-Le catalogue 2026-2027 contient **38 decks et 600 cartes** : 138 en 6e,
-150 en 5e, 154 en 4e et 158 en 3e. Les titres commencent par la classe.
+Le catalogue 2026-2027 contient **38 decks et 373 cartes** : 85 en 6e,
+92 en 5e, 97 en 4e et 99 en 3e. Les titres commencent par la classe.
+Chaque carte demande une formule, une définition, une propriété ou une méthode
+générale. Les réponses sont courtes, sans problème chiffré à résoudre.
 Consulter le [guide des contenus, sources et prérequis](../docs/college-2026-2027.md)
 et le [graphe de progression](../curriculum/college-2026-2027.json).
 

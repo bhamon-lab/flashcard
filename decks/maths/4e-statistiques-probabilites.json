@@ -38,7 +38,7 @@
       "id": "rappel-ponderee",
       "kind": "formule",
       "front": "Moyenne pondérée par des effectifs ?",
-      "back": "$\\frac{\\text{somme des (valeur × effectif)}}{\\text{effectif total}}$, avec un total non nul."
+      "back": "$\\frac{\\text{somme des (valeur fois effectif)}}{\\text{effectif total}}$, avec un total non nul."
     },
     {
       "id": "rappel-contraire",
