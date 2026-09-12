@@ -1,0 +1,23 @@
+// Injected by the GitHub Actions release workflow after Expo Prebuild.
+// Credentials stay in GitHub Actions secrets and are never written to the repo.
+//
+// This is an init script, so it also runs for included builds. Configure only
+// the application project, and do it while its Android DSL is still mutable.
+gradle.beforeProject { project ->
+    if (project.path != ":app") {
+        return
+    }
+
+    project.pluginManager.withPlugin("com.android.application") {
+        def android = project.extensions.getByName("android")
+        def signingConfigs = android.signingConfigs
+        def releaseConfig = signingConfigs.findByName("release") ?: signingConfigs.create("release")
+
+        releaseConfig.storeFile = project.rootProject.file(System.getenv("ANDROID_KEYSTORE_PATH"))
+        releaseConfig.storePassword = System.getenv("ANDROID_KEYSTORE_PASSWORD")
+        releaseConfig.keyAlias = System.getenv("ANDROID_KEY_ALIAS")
+        releaseConfig.keyPassword = System.getenv("ANDROID_KEY_PASSWORD")
+
+        android.buildTypes.getByName("release").signingConfig = releaseConfig
+    }
+}
