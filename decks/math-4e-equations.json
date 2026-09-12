@@ -1,0 +1,103 @@
+{
+  "id": "math-4e-equations",
+  "title": "Maths · 4e · Développement, factorisation et équations",
+  "description": "4e · 2026-2027 · Développement, factorisation et équations. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#E2D6F3",
+  "daily_new_limit": 3,
+  "grade": "4e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "attendus-4e-2020",
+  "cards": [
+    {
+      "id": "distributivite",
+      "front": "Quelle égalité exprime la distributivité simple ?",
+      "back": "$k(a+b)=ka+kb$. Elle sert à développer de gauche à droite et à factoriser de droite à gauche.",
+      "kind": "cours"
+    },
+    {
+      "id": "developper",
+      "front": "Développe $-3(2x-5)$.",
+      "back": "$-6x+15$. Le facteur −3 multiplie les deux termes.",
+      "kind": "application"
+    },
+    {
+      "id": "reduire",
+      "front": "Réduis $7x-4+2x+9$.",
+      "back": "$9x+5$ : on regroupe les termes de même nature.",
+      "kind": "application"
+    },
+    {
+      "id": "factoriser",
+      "front": "Factorise $8x+12$.",
+      "back": "$4(2x+3)$ ; 4 est un facteur commun.",
+      "kind": "application"
+    },
+    {
+      "id": "facteur-lettre",
+      "front": "Factorise $6x^2+9x$.",
+      "back": "$3x(2x+3)$.",
+      "kind": "application"
+    },
+    {
+      "id": "equilibre",
+      "front": "Quelle opération peut-on appliquer aux deux membres d’une équation sans changer ses solutions ?",
+      "back": "Ajouter ou soustraire un même nombre ; multiplier ou diviser par un même nombre non nul.",
+      "kind": "cours"
+    },
+    {
+      "id": "equation-simple",
+      "front": "Résous $3x+5=20$.",
+      "back": "$x=5$ : soustraire 5 donne $3x=15$, puis diviser par 3.",
+      "kind": "application"
+    },
+    {
+      "id": "deux-membres",
+      "front": "Résous $5x-4=2x+8$.",
+      "back": "$x=4$ : $3x=12$ après avoir retiré $2x$ et ajouté 4.",
+      "kind": "application"
+    },
+    {
+      "id": "solution-negative",
+      "front": "Résous $2x+7=1$.",
+      "back": "$x=-3$ : $2x=-6$.",
+      "kind": "application"
+    },
+    {
+      "id": "fraction-solution",
+      "front": "Résous $4x=7$.",
+      "back": "$x=\\frac{7}{4}=1{,}75$.",
+      "kind": "application"
+    },
+    {
+      "id": "parentheses",
+      "front": "Résous $2(x+3)=14$.",
+      "back": "$x=4$ : diviser par 2 donne $x+3=7$, puis soustraire 3.",
+      "kind": "application"
+    },
+    {
+      "id": "verifier",
+      "front": "Vérifie que −2 est solution de $3x+7=1$.",
+      "back": "$3\\times(-2)+7=-6+7=1$. L’égalité est vérifiée.",
+      "kind": "application"
+    },
+    {
+      "id": "modeliser",
+      "front": "Un billet coûte x euros et la réservation 3 €. Deux billets coûtent 19 € réservation comprise. Trouve x.",
+      "back": "$2x+3=19$, donc $2x=16$ et $x=8$ euros.",
+      "kind": "application"
+    },
+    {
+      "id": "programmes",
+      "front": "« Tripler puis ajouter 12 » et « ajouter 4 puis tripler » donnent-ils toujours le même résultat ?",
+      "back": "Oui : $3(x+4)=3x+12$ pour tout x.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "contre-exemple",
+      "front": "$2(x+1)=2x+1$ est-elle une identité ?",
+      "back": "Non. Pour $x=0$, on obtient 2 à gauche et 1 à droite. Le développement correct est $2x+2$.",
+      "kind": "comprehension"
+    }
+  ]
+}

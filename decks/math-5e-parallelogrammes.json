@@ -1,0 +1,103 @@
+{
+  "id": "math-5e-parallelogrammes",
+  "title": "Maths · 5e · Parallélogrammes et symétrie centrale",
+  "description": "5e · 2026-2027 · Parallélogrammes et symétrie centrale. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 3,
+  "grade": "5e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "cycle4-2026-5e",
+  "cards": [
+    {
+      "id": "definition",
+      "front": "Qu’est-ce qu’un parallélogramme ?",
+      "back": "Un quadrilatère dont les côtés opposés sont parallèles deux à deux.",
+      "kind": "cours"
+    },
+    {
+      "id": "diagonales",
+      "front": "Quelle propriété des diagonales caractérise un parallélogramme ?",
+      "back": "Ses diagonales se coupent en leur milieu.",
+      "kind": "cours"
+    },
+    {
+      "id": "cotes",
+      "front": "ABCD est un parallélogramme avec $AB=7$ cm et $BC=4$ cm. Combien vaut $CD$ ?",
+      "back": "7 cm : les côtés opposés ont la même longueur.",
+      "kind": "application"
+    },
+    {
+      "id": "angles",
+      "front": "Un angle d’un parallélogramme mesure 65°. Combien mesure un angle voisin ?",
+      "back": "115° : deux angles consécutifs sont supplémentaires.",
+      "kind": "application"
+    },
+    {
+      "id": "construction",
+      "front": "Comment construire le quatrième sommet D d’un parallélogramme ABCD à partir de A, B et C ?",
+      "back": "Tracer par A la parallèle à (BC) et par C la parallèle à (AB). Leur intersection est D.",
+      "kind": "cours"
+    },
+    {
+      "id": "rectangle",
+      "front": "Comment reconnaître un rectangle parmi les parallélogrammes à l’aide des diagonales ?",
+      "back": "C’est un parallélogramme dont les diagonales ont la même longueur.",
+      "kind": "cours"
+    },
+    {
+      "id": "losange",
+      "front": "Comment reconnaître un losange parmi les parallélogrammes à l’aide des diagonales ?",
+      "back": "C’est un parallélogramme dont les diagonales sont perpendiculaires.",
+      "kind": "cours"
+    },
+    {
+      "id": "carre",
+      "front": "Quelles propriétés réunies font d’un parallélogramme un carré ?",
+      "back": "Être à la fois rectangle et losange : quatre angles droits et quatre côtés de même longueur.",
+      "kind": "cours"
+    },
+    {
+      "id": "reciproque-incomplete",
+      "front": "Un quadrilatère dont les diagonales sont égales est-il forcément un rectangle ?",
+      "back": "Non : il faut aussi, par exemple, qu’elles se coupent en leur milieu. Un trapèze isocèle non rectangle est un contre-exemple.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "aire",
+      "front": "Un parallélogramme a une base de 8 cm et une hauteur correspondante de 3 cm. Calcule son aire.",
+      "back": "24 cm² : base × hauteur, soit $8\\times3$.",
+      "kind": "application"
+    },
+    {
+      "id": "demi-tour",
+      "front": "Qu’est-ce que la symétrie centrale de centre O ?",
+      "back": "Un demi-tour autour de O. Pour un point A distinct de O, son image A′ vérifie que O est le milieu de $[AA']$.",
+      "kind": "cours"
+    },
+    {
+      "id": "point-centre",
+      "front": "Quelle est l’image du centre O par sa propre symétrie centrale ?",
+      "back": "O lui-même : il est fixe.",
+      "kind": "application"
+    },
+    {
+      "id": "conservation",
+      "front": "Quelles mesures sont conservées par une symétrie centrale ?",
+      "back": "Les longueurs, les angles et les aires. L’alignement et le parallélisme sont aussi conservés.",
+      "kind": "cours"
+    },
+    {
+      "id": "coordonnees",
+      "front": "Quelle est l’image de $(3\\,;\\,-2)$ par la symétrie centrale de centre l’origine ?",
+      "back": "$(-3\\,;\\,2)$. On prend les opposés des deux coordonnées.",
+      "kind": "application"
+    },
+    {
+      "id": "centre-parallelogramme",
+      "front": "Quel est le centre de symétrie d’un parallélogramme ?",
+      "back": "Le point d’intersection de ses diagonales.",
+      "kind": "cours"
+    }
+  ]
+}

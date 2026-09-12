@@ -1,0 +1,121 @@
+{
+  "id": "math-6e-mesures-espace",
+  "title": "Maths · 6e · Mesures, symétrie et espace",
+  "description": "6e · 2026-2027 · Mesures, symétrie et espace. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#CDEAE0",
+  "daily_new_limit": 3,
+  "grade": "6e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "cycle3-2025",
+  "cards": [
+    {
+      "id": "perimetre",
+      "front": "Quel est le périmètre d’un rectangle de 8 cm sur 3 cm ?",
+      "back": "22 cm : $2\\times(8+3)=22$.",
+      "kind": "application"
+    },
+    {
+      "id": "aire-rectangle",
+      "front": "Quelle est l’aire d’un rectangle de 8 cm sur 3 cm ?",
+      "back": "24 cm² : $8\\times3=24$.",
+      "kind": "application"
+    },
+    {
+      "id": "aire-composee",
+      "front": "On retire un carré de 2 cm de côté d’un rectangle de 8 cm sur 3 cm. Quelle aire reste-t-il ?",
+      "back": "20 cm² : $8\\times3-2\\times2=24-4=20$.",
+      "kind": "application"
+    },
+    {
+      "id": "longueur-cercle",
+      "front": "Quelle est la longueur d’un cercle de rayon $r$ ?",
+      "back": "$2\\pi r$, ou $\\pi d$ avec $d$ le diamètre.",
+      "kind": "cours"
+    },
+    {
+      "id": "cercle-application",
+      "front": "Donne la longueur exacte d’un cercle de diamètre 10 cm.",
+      "back": "$10\\pi$ cm. Avec $\\pi\\approx3{,}14$, elle vaut environ 31,4 cm.",
+      "kind": "application"
+    },
+    {
+      "id": "conversion-longueur",
+      "front": "Convertis 2,35 m en centimètres.",
+      "back": "235 cm : un mètre contient 100 centimètres.",
+      "kind": "application"
+    },
+    {
+      "id": "conversion-aire",
+      "front": "Convertis 2 m² en cm².",
+      "back": "20 000 cm² : $1\\text{ m}^2=100\\times100=10\\,000\\text{ cm}^2$.",
+      "kind": "application"
+    },
+    {
+      "id": "unites",
+      "front": "Pourquoi une aire ne s’exprime-t-elle pas en centimètres ?",
+      "back": "Elle mesure une surface, avec des unités carrées comme le cm². Le centimètre mesure une longueur.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "volume-unite",
+      "front": "Que représente $1\\text{ cm}^3$ ?",
+      "back": "Le volume d’un cube de 1 cm de côté.",
+      "kind": "cours"
+    },
+    {
+      "id": "empilement",
+      "front": "Un assemblage plein comporte 3 couches de 8 cubes unité. Quel est son volume ?",
+      "back": "24 unités de volume : $3\\times8=24$.",
+      "kind": "application"
+    },
+    {
+      "id": "duree",
+      "front": "Combien de temps s’écoule de 9 h 45 à 11 h 10 ?",
+      "back": "1 h 25 min : 15 min jusqu’à 10 h, puis 1 h 10 min.",
+      "kind": "application"
+    },
+    {
+      "id": "heure-decimale",
+      "front": "1,5 h est-il égal à 1 h 50 min ?",
+      "back": "Non : $0{,}5\\times60=30$. Donc 1,5 h = 1 h 30 min.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "symetrique",
+      "front": "Si A est hors de la droite d, comment caractériser son symétrique A′ par rapport à d ?",
+      "back": "d est la médiatrice de $[AA']$ : elle coupe le segment perpendiculairement en son milieu.",
+      "kind": "cours"
+    },
+    {
+      "id": "conservation",
+      "front": "Un segment mesure 7 cm. Combien mesure son image par symétrie axiale ?",
+      "back": "7 cm. La symétrie axiale conserve les longueurs, les angles et les aires.",
+      "kind": "application"
+    },
+    {
+      "id": "point-axe",
+      "front": "Quelle est l’image d’un point situé sur l’axe de symétrie ?",
+      "back": "Lui-même : les points de l’axe restent fixes.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "cube",
+      "front": "Combien de faces, d’arêtes et de sommets possède un cube ?",
+      "back": "6 faces carrées, 12 arêtes et 8 sommets.",
+      "kind": "cours"
+    },
+    {
+      "id": "vue-dessus",
+      "front": "Deux piles de cubes de hauteurs 1 et 3 peuvent-elles avoir la même vue de dessus ?",
+      "back": "Oui si elles ont la même base : la vue de dessus seule ne donne pas la hauteur.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "patron",
+      "front": "Qu’est-ce qu’un patron de solide ?",
+      "back": "Une figure plane qui, découpée et pliée, permet de reconstituer sa surface sans chevauchement des faces.",
+      "kind": "cours"
+    }
+  ]
+}

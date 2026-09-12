@@ -1,0 +1,103 @@
+{
+  "id": "math-5e-fractions",
+  "title": "Maths · 5e · Comparer et additionner les fractions",
+  "description": "5e · 2026-2027 · Comparer et additionner les fractions. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 3,
+  "grade": "5e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "cycle4-2026-5e",
+  "cards": [
+    {
+      "id": "commun",
+      "front": "Comment additionner deux fractions de dénominateurs différents ?",
+      "back": "Les écrire avec un dénominateur commun, puis additionner leurs numérateurs en gardant ce dénominateur.",
+      "kind": "cours"
+    },
+    {
+      "id": "somme",
+      "front": "Calcule $\\frac{2}{3}+\\frac{1}{4}$.",
+      "back": "$\\frac{8}{12}+\\frac{3}{12}=\\frac{11}{12}$.",
+      "kind": "application"
+    },
+    {
+      "id": "soustraction",
+      "front": "Calcule $\\frac{5}{6}-\\frac{1}{4}$.",
+      "back": "$\\frac{10}{12}-\\frac{3}{12}=\\frac{7}{12}$.",
+      "kind": "application"
+    },
+    {
+      "id": "multiple",
+      "front": "Calcule $\\frac{3}{5}+\\frac{1}{10}$.",
+      "back": "$\\frac{6}{10}+\\frac{1}{10}=\\frac{7}{10}$.",
+      "kind": "application"
+    },
+    {
+      "id": "somme-superieure",
+      "front": "Calcule $\\frac{3}{4}+\\frac{5}{6}$.",
+      "back": "$\\frac{9}{12}+\\frac{10}{12}=\\frac{19}{12}=1+\\frac{7}{12}$.",
+      "kind": "application"
+    },
+    {
+      "id": "complement",
+      "front": "Calcule $1-\\frac{7}{12}$.",
+      "back": "$\\frac{5}{12}$, car $1=\\frac{12}{12}$.",
+      "kind": "application"
+    },
+    {
+      "id": "comparer",
+      "front": "Compare $\\frac{5}{8}$ et $\\frac{2}{3}$.",
+      "back": "$\\frac{5}{8}<\\frac{2}{3}$ car $\\frac{15}{24}<\\frac{16}{24}$.",
+      "kind": "application"
+    },
+    {
+      "id": "encadrer",
+      "front": "Encadre $\\frac{23}{5}$ entre deux entiers consécutifs.",
+      "back": "$4<\\frac{23}{5}<5$ car $20<23<25$.",
+      "kind": "application"
+    },
+    {
+      "id": "forme-mixte",
+      "front": "Écris $\\frac{17}{6}$ comme un entier plus une fraction inférieure à 1.",
+      "back": "$2+\\frac{5}{6}$ car $17=2\\times6+5$.",
+      "kind": "application"
+    },
+    {
+      "id": "egalite",
+      "front": "Les fractions $\\frac{14}{21}$ et $\\frac{10}{15}$ sont-elles égales ?",
+      "back": "Oui : elles se simplifient toutes les deux en $\\frac{2}{3}$.",
+      "kind": "application"
+    },
+    {
+      "id": "addition-erreur",
+      "front": "Pourquoi $\\frac{1}{2}+\\frac{1}{3}$ n’est-il pas égal à $\\frac{2}{5}$ ?",
+      "back": "On doit additionner des parts de même taille : $\\frac{3}{6}+\\frac{2}{6}=\\frac{5}{6}$.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "lecture",
+      "front": "Lina lit $\\frac{1}{3}$ d’un livre lundi et $\\frac{1}{4}$ mardi. Quelle fraction a-t-elle lue ?",
+      "back": "$\\frac{7}{12}$ du livre : $\\frac{4}{12}+\\frac{3}{12}=\\frac{7}{12}$.",
+      "kind": "application"
+    },
+    {
+      "id": "reste",
+      "front": "Un réservoir était plein. On utilise $\\frac{2}{5}$ de sa capacité puis $\\frac{1}{4}$ de sa capacité. Quelle fraction reste ?",
+      "back": "$\\frac{7}{20}$ : $1-\\frac{8}{20}-\\frac{5}{20}=\\frac{7}{20}$.",
+      "kind": "application"
+    },
+    {
+      "id": "reference",
+      "front": "Peut-on additionner directement « la moitié d’un petit gâteau » et « le quart d’un grand gâteau » pour donner une fraction d’un gâteau ?",
+      "back": "Non sans connaître les tailles. Pour additionner ces parts comme fractions d’un même tout, il faut une unité de référence commune.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "quantite",
+      "front": "Dans 35 objets, $\\frac{3}{7}$ sont bleus. Combien sont bleus ?",
+      "back": "15 : $35\\div7\\times3=15$.",
+      "kind": "application"
+    }
+  ]
+}
