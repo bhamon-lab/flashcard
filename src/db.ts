@@ -1,6 +1,5 @@
 import * as SQLite from 'expo-sqlite';
-import { Card, Deck, ImportResult, ReviewDelays } from './types';
-import { parseImportRows } from './csv';
+import { Card, Deck, ReviewDelays } from './types';
 import { shuffleCards } from './sessionQueue';
 
 let dbPromise: Promise<SQLite.SQLiteDatabase> | null = null;
@@ -79,6 +78,13 @@ export async function initializeDatabase() {
     if (!existingColumns.has(name)) {
       await db.execAsync(`ALTER TABLE decks ADD COLUMN ${name} INTEGER NOT NULL DEFAULT ${defaultValue}`);
     }
+  }
+  if (!existingColumns.has('kind')) {
+    await db.execAsync("ALTER TABLE decks ADD COLUMN kind TEXT NOT NULL DEFAULT 'people'");
+  }
+  if (!existingColumns.has('sync_id')) {
+    await db.execAsync('ALTER TABLE decks ADD COLUMN sync_id TEXT');
+    await db.execAsync('CREATE INDEX IF NOT EXISTS decks_sync_idx ON decks(sync_id)');
   }
 
   const demoRemoval = await db.getFirstAsync<{ value: string }>(
@@ -267,45 +273,95 @@ export async function resetDeckProgress(deckId: number) {
   });
 }
 
-export async function importCsv(deckId: number, csvText: string, photoUris: Record<string, string> = {}): Promise<ImportResult> {
+export async function setMetadata(key: string, value: string) {
   const db = await getDatabase();
-  const parsed = parseImportRows(csvText);
-  const result: ImportResult = { imported: 0, updated: 0, skipped: 0, errors: [...parsed.errors] };
-  const rows = parsed.rows;
+  await db.runAsync(
+    'INSERT INTO app_metadata (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value',
+    key, value,
+  );
+}
+
+export type SyncedCard = {
+  id: string;
+  front: string;
+  back?: string;
+};
+
+export type SyncedDeck = {
+  id: string;
+  title: string;
+  description?: string;
+  color?: string;
+  format?: string;
+  daily_new_limit?: number;
+  cards: SyncedCard[];
+};
+
+/** Crée ou met à jour un paquet synchronisé (et ses cartes) en conservant la progression. */
+export async function upsertSyncedDeck(deck: SyncedDeck): Promise<'created' | 'updated'> {
+  const db = await getDatabase();
+  const kind = deck.format === 'math' ? 'math' : 'people';
+  const color = deck.color && /^#[0-9A-Fa-f]{6}$/.test(deck.color) ? deck.color : '#DDE9DE';
+  const dailyNewLimit = Math.max(0, Math.round(deck.daily_new_limit ?? 5));
+  const description = deck.description?.trim() ?? '';
+
+  const existing = await db.getFirstAsync<{ id: number }>('SELECT id FROM decks WHERE sync_id = ?', deck.id);
+  let deckId: number;
+  let outcome: 'created' | 'updated';
+  if (existing) {
+    await db.runAsync(
+      'UPDATE decks SET title = ?, description = ?, color = ?, kind = ?, daily_new_limit = ? WHERE id = ?',
+      deck.title, description, color, kind, dailyNewLimit, existing.id,
+    );
+    deckId = existing.id;
+    outcome = 'updated';
+  } else {
+    const inserted = await db.runAsync(
+      `INSERT INTO decks (title, description, color, daily_new_limit, kind, sync_id, created_at)
+       VALUES (?, ?, ?, ?, ?, ?, ?)`,
+      deck.title, description, color, dailyNewLimit, kind, deck.id, Date.now(),
+    );
+    deckId = inserted.lastInsertRowId;
+    outcome = 'created';
+  }
+
   await db.withTransactionAsync(async () => {
-    for (let index = 0; index < rows.length; index += 1) {
-      const row = rows[index];
-      const firstName = row.firstName.trim();
-      const lastName = row.lastName.trim();
-      const context = row.context.trim();
-      const externalId = row.externalId.trim();
-      const photoUri = photoUris[row.photo] ?? photoUris[row.photo.split('/').pop() ?? ''] ?? row.photo.trim();
-      if (!firstName) {
-        result.skipped += 1;
-        result.errors.push(`Ligne ${row.line} : question manquante`);
+    for (const card of deck.cards) {
+      const front = card.front.trim();
+      const back = card.back?.trim() ?? '';
+      const externalId = `${deck.id}:${card.id}`;
+      const existingCard = await db.getFirstAsync<{ id: number }>(
+        'SELECT id FROM cards WHERE deck_id = ? AND external_id = ?', deckId, externalId,
+      );
+      if (existingCard) {
+        await db.runAsync(
+          "UPDATE cards SET first_name = ?, last_name = '', context = ?, photo_uri = '' WHERE id = ?",
+          front, back, existingCard.id,
+        );
         continue;
       }
-      if (externalId) {
-        const existing = await db.getFirstAsync<{ id: number }>(
-          'SELECT id FROM cards WHERE deck_id = ? AND external_id = ?', deckId, externalId,
-        );
-        if (existing) {
-          await db.runAsync(
-            `UPDATE cards SET first_name = ?, last_name = ?, context = ?, photo_uri = ? WHERE id = ?`,
-            firstName, lastName, context, photoUri, existing.id,
-          );
-          result.updated += 1;
-          continue;
-        }
-      }
-      const inserted = await db.runAsync(
+      const insertedCard = await db.runAsync(
         `INSERT INTO cards (deck_id, first_name, last_name, context, photo_uri, external_id, created_at)
-         VALUES (?, ?, ?, ?, ?, ?, ?)`,
-        deckId, firstName, lastName, context, photoUri, externalId || null, Date.now(),
+         VALUES (?, ?, '', ?, '', ?, ?)`,
+        deckId, front, back, externalId, Date.now(),
       );
-      await db.runAsync('INSERT INTO progress (card_id) VALUES (?)', inserted.lastInsertRowId);
-      result.imported += 1;
+      await db.runAsync('INSERT INTO progress (card_id) VALUES (?)', insertedCard.lastInsertRowId);
     }
   });
-  return result;
+  return outcome;
+}
+
+/** Supprime les paquets synchronisés absents du dépôt (cascade cartes + progression). */
+export async function removeDecksNotIn(syncIds: string[]): Promise<number> {
+  const db = await getDatabase();
+  if (!syncIds.length) {
+    const result = await db.runAsync('DELETE FROM decks WHERE sync_id IS NOT NULL');
+    return result.changes;
+  }
+  const placeholders = syncIds.map(() => '?').join(', ');
+  const result = await db.runAsync(
+    `DELETE FROM decks WHERE sync_id IS NOT NULL AND sync_id NOT IN (${placeholders})`,
+    ...syncIds,
+  );
+  return result.changes;
 }

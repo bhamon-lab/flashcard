@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
 import { Ionicons } from '@expo/vector-icons';
-import * as DocumentPicker from 'expo-document-picker';
 import * as FileSystem from 'expo-file-system/legacy';
 import * as ImagePicker from 'expo-image-picker';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -30,7 +29,6 @@ import {
   getDecksByIds,
   getNewCards,
   getSessionCards,
-  importCsv,
   initializeDatabase,
   markCardSeen,
   recordReview,
@@ -40,17 +38,20 @@ import {
   updateReviewDelays,
 } from './src/db';
 import { colors, mono, radius } from './src/theme';
-import { prepareImport } from './src/importAsset';
+import { MathView, stripMathText } from './src/MathView';
+import { syncDecks } from './src/sync';
 import { checkForAppUpdate } from './src/app-update';
-import { Card, Deck, ImportResult, ReviewDelay, ReviewDelays } from './src/types';
+import { Card, Deck, ReviewDelay, ReviewDelays } from './src/types';
 import { insertLaterInQueue } from './src/sessionQueue';
 
 type Route =
   | { name: 'home' }
   | { name: 'deck'; deckId: number }
   | { name: 'settings'; deckId: number }
-  | { name: 'study'; deckIds: number[]; newCardAllowance: number }
-  | { name: 'import'; deckId: number };
+  | { name: 'study'; deckIds: number[]; newCardAllowance: number };
+
+/** True si la chaîne contient du LaTeX à rendre ($…$ ou $$…$$). */
+const hasMath = (text: string) => text.includes('$');
 
 const formatDelay = (minutes: number) => {
   if (minutes === 0) return 'Immédiatement';
@@ -131,8 +132,38 @@ function HomeScreen({ onOpenDeck, onCreate, onStudy }: { onOpenDeck: (id: number
   const [decks, setDecks] = useState<Deck[]>([]);
   const [refreshing, setRefreshing] = useState(false);
   const [mixOpen, setMixOpen] = useState(false);
+  const [syncing, setSyncing] = useState(false);
+  const [syncNote, setSyncNote] = useState('');
   const load = useCallback(async () => setDecks(await getDecks()), []);
-  useEffect(() => { load(); }, [load]);
+  useEffect(() => { void load(); }, [load]);
+
+  const runSync = useCallback(async (announce: boolean) => {
+    setSyncing(true);
+    try {
+      const result = await syncDecks();
+      if (announce) {
+        const parts: string[] = [];
+        if (result.created) parts.push(`${result.created} nouveau${result.created > 1 ? 'x' : ''} paquet${result.created > 1 ? 's' : ''}`);
+        if (result.updated) parts.push(`${result.updated} mis${result.updated > 1 ? 's' : ''} à jour`);
+        if (result.removed) parts.push(`${result.removed} supprimé${result.removed > 1 ? 's' : ''}`);
+        setSyncNote(parts.length ? `Synchronisé · ${parts.join(', ')}` : 'Paquets déjà à jour');
+      }
+    } catch {
+      if (announce) setSyncNote('Synchronisation impossible (hors ligne ?)');
+    } finally {
+      setSyncing(false);
+      await load();
+    }
+  }, [load]);
+
+  // Synchronise les paquets du dépôt à l'ouverture de l'app.
+  useEffect(() => { void runSync(false); }, [runSync]);
+  useEffect(() => {
+    if (!syncNote) return;
+    const timer = setTimeout(() => setSyncNote(''), 5000);
+    return () => clearTimeout(timer);
+  }, [syncNote]);
+
   const dueTotal = decks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
   const total = decks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
 
@@ -140,7 +171,12 @@ function HomeScreen({ onOpenDeck, onCreate, onStudy }: { onOpenDeck: (id: number
     <SafeAreaView style={styles.screen} edges={['top']}>
       <ScrollView
         contentContainerStyle={styles.page}
-        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={async () => { setRefreshing(true); await load(); setRefreshing(false); }} />}
+        refreshControl={(
+          <RefreshControl
+            refreshing={refreshing || syncing}
+            onRefresh={async () => { setRefreshing(true); await runSync(true); setRefreshing(false); }}
+          />
+        )}
       >
         <View style={styles.homeHeader}>
           <View>
@@ -175,7 +211,7 @@ function HomeScreen({ onOpenDeck, onCreate, onStudy }: { onOpenDeck: (id: number
         <View style={styles.sectionHeader}>
           <View>
             <Text style={styles.sectionTitle}>Mes paquets</Text>
-            <Text style={styles.sectionCaption}>{total} {total === 1 ? 'carte' : 'cartes'} au total</Text>
+            <Text style={styles.sectionCaption}>{syncing ? 'Synchronisation…' : syncNote || `${total} ${total === 1 ? 'carte' : 'cartes'} au total`}</Text>
           </View>
           <Pressable onPress={onCreate} style={styles.addRound}><Ionicons name="add" size={25} color={colors.white} /></Pressable>
         </View>
@@ -190,9 +226,10 @@ function HomeScreen({ onOpenDeck, onCreate, onStudy }: { onOpenDeck: (id: number
               <View style={styles.deckBody}>
                 <View style={styles.deckTitleRow}>
                   <Text style={styles.deckTitle} numberOfLines={1}>{deck.title}</Text>
+                  {deck.sync_id ? <Ionicons name="cloud-outline" size={15} color={colors.muted} /> : null}
                   <Ionicons name="chevron-forward" size={19} color={colors.muted} />
                 </View>
-                <Text style={styles.deckDescription} numberOfLines={1}>{deck.description || `${deck.total_count} cartes`}</Text>
+                <Text style={styles.deckDescription} numberOfLines={1}>{stripMathText(deck.description) || `${deck.total_count} cartes`}</Text>
                 <View style={styles.progressTrack}><View style={[styles.progressFill, { width: `${progress}%` }]} /></View>
                 <View style={styles.deckMeta}>
                   <Text style={styles.deckMetaText}>{progress}% appris</Text>
@@ -219,7 +256,7 @@ function HomeScreen({ onOpenDeck, onCreate, onStudy }: { onOpenDeck: (id: number
   );
 }
 
-function DeckScreen({ deckId, onBack, onStudy, onImport, onSettings }: { deckId: number; onBack: () => void; onStudy: (newCardAllowance: number) => void; onImport: () => void; onSettings: () => void }) {
+function DeckScreen({ deckId, onBack, onStudy, onSettings }: { deckId: number; onBack: () => void; onStudy: (newCardAllowance: number) => void; onSettings: () => void }) {
   const [deck, setDeck] = useState<Deck | null>(null);
   const [cards, setCards] = useState<Card[]>([]);
   const [editorCard, setEditorCard] = useState<Card | null | undefined>(undefined);
@@ -259,7 +296,7 @@ function DeckScreen({ deckId, onBack, onStudy, onImport, onSettings }: { deckId:
         <View style={styles.deckHero}>
           <View style={[styles.largeDeckMark, { backgroundColor: deck.color }]}><Text style={styles.largeDeckGlyph}>{glyphFor(deck.id)}</Text></View>
           <Text style={styles.deckHeroTitle}>{deck.title}</Text>
-          <Text style={styles.deckHeroDescription}>{deck.description}</Text>
+          <Text style={styles.deckHeroDescription}>{stripMathText(deck.description)}</Text>
           <View style={styles.statRow}>
             <View style={styles.stat}><Text style={styles.statValue}>{deck.due_count}</Text><Text style={styles.statLabel}>À revoir</Text></View>
             <View style={styles.statDivider} />
@@ -284,7 +321,6 @@ function DeckScreen({ deckId, onBack, onStudy, onImport, onSettings }: { deckId:
         <View style={styles.sectionHeaderCompact}>
           <Text style={styles.sectionTitle}>Les cartes</Text>
           <View style={styles.actionsRow}>
-            <Pressable onPress={onImport} style={styles.smallAction}><Ionicons name="document-text-outline" size={18} color={colors.blue} /><Text style={styles.smallActionText}>CSV</Text></Pressable>
             <Pressable onPress={() => setEditorCard(null)} style={styles.smallAction}><Ionicons name="add" size={19} color={colors.blue} /><Text style={styles.smallActionText}>Ajouter</Text></Pressable>
           </View>
         </View>
@@ -295,8 +331,8 @@ function DeckScreen({ deckId, onBack, onStudy, onImport, onSettings }: { deckId:
             <Pressable key={card.id} onPress={() => setEditorCard(card)} style={[styles.cardRow, index < visibleCards.length - 1 && styles.cardRowBorder]}>
               <View style={styles.cardThumbWrap}><CardImage card={card} style={styles.cardThumb} /></View>
               <View style={styles.cardText}>
-                <Text style={styles.cardFront} numberOfLines={1}>{card.first_name}</Text>
-                <Text style={styles.cardBack} numberOfLines={1}>{card.last_name || card.context || 'Pas encore de réponse'}</Text>
+                <Text style={styles.cardFront} numberOfLines={1}>{stripMathText(card.first_name)}</Text>
+                <Text style={styles.cardBack} numberOfLines={1}>{stripMathText(card.last_name || card.context) || 'Pas encore de réponse'}</Text>
               </View>
               <View style={[styles.statusDot, { backgroundColor: card.first_seen_at ? colors.green : colors.yellow }]} />
               <Ionicons name="chevron-forward" size={18} color="#A9AFC0" />
@@ -599,8 +635,20 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
           {revealed ? (
             <View style={styles.answerPaper}>
               <Text style={styles.answerEyebrow}>RÉPONSE</Text>
-              {current.last_name ? <Text style={styles.answerText}>{current.last_name}</Text> : null}
-              {current.context ? <Text style={styles.answerNote}>{current.context}</Text> : null}
+              {current.last_name ? (
+                hasMath(current.last_name)
+                  ? <MathView text={current.last_name} fontSize={22} />
+                  : <Text style={styles.answerText}>{current.last_name}</Text>
+              ) : null}
+              {current.context ? (!current.last_name ? (
+                hasMath(current.context)
+                  ? <MathView text={current.context} fontSize={22} />
+                  : <Text style={styles.answerText}>{current.context}</Text>
+              ) : (
+                hasMath(current.context)
+                  ? <MathView text={current.context} fontSize={15} color={colors.muted} />
+                  : <Text style={styles.answerNote}>{current.context}</Text>
+              )) : null}
               {!current.last_name && !current.context ? <Text style={styles.answerText}>Pas de réponse enregistrée</Text> : null}
             </View>
           ) : current.photo_uri ? (
@@ -608,7 +656,9 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
           ) : (
             <View style={styles.questionStage}>
               <Text style={styles.questionEyebrow}>QUESTION</Text>
-              <Text style={styles.questionBig}>{current.first_name}</Text>
+              {hasMath(current.first_name)
+                ? <MathView text={current.first_name} fontSize={25} />
+                : <Text style={styles.questionBig}>{current.first_name}</Text>}
             </View>
           )}
           {!revealed && current.photo_uri ? <View style={styles.questionBadge}><Ionicons name="help" size={20} color={colors.blue} /></View> : null}
@@ -743,58 +793,6 @@ function CustomSessionSheet({ visible, decks, onClose, onStart }: { visible: boo
   );
 }
 
-function ImportScreen({ deckId, onBack, onDone }: { deckId: number; onBack: () => void; onDone: () => void }) {
-  const [fileName, setFileName] = useState('');
-  const [csvText, setCsvText] = useState('');
-  const [photoUris, setPhotoUris] = useState<Record<string, string>>({});
-  const [result, setResult] = useState<ImportResult | null>(null);
-  const [working, setWorking] = useState(false);
-  const [readingFile, setReadingFile] = useState(false);
-  const [importError, setImportError] = useState('');
-  const chooseFile = async () => {
-    const picked = await DocumentPicker.getDocumentAsync({ type: '*/*', copyToCacheDirectory: true });
-    if (picked.canceled) return;
-    setReadingFile(true); setImportError(''); setFileName(''); setCsvText(''); setPhotoUris({}); setResult(null);
-    try {
-      const prepared = await prepareImport(picked.assets[0].uri, picked.assets[0].name);
-      setFileName(picked.assets[0].name); setCsvText(prepared.csvText); setPhotoUris(prepared.photoUris); setResult(null);
-    } catch (error) {
-      setImportError(error instanceof Error ? error.message : 'Impossible de lire ce fichier.');
-    } finally { setReadingFile(false); }
-  };
-  const runImport = async () => {
-    if (!csvText) return;
-    setWorking(true); setResult(await importCsv(deckId, csvText, photoUris)); setWorking(false);
-  };
-  return (
-    <SafeAreaView style={styles.screen} edges={['top', 'bottom']}>
-      <ScrollView contentContainerStyle={styles.page}>
-        <View style={styles.topBar}><IconButton name="arrow-back" label="Retour" onPress={onBack} /><Text style={styles.topBarTitle}>Importer un CSV</Text><View style={{ width: 44 }} /></View>
-        <View style={styles.importHero}><View style={styles.importIcon}><Ionicons name="document-text" size={34} color={colors.blue} /></View><Text style={styles.importTitle}>Ajoute un chapitre entier</Text><Text style={styles.importText}>Choisis un CSV, ou un ZIP qui contient le CSV et les schémas. Le format Pronote/ENT reste reconnu.</Text></View>
-        <View style={styles.formatCard}>
-          <Text style={styles.formatTitle}>FORMAT DU CSV</Text>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}><Text style={styles.codeText}>question,reponse,photo,indice,id_externe{`\n`}Aire du disque,π × r²,,Cours ch. 5,exo-12</Text></ScrollView>
-          <Text style={styles.formatHint}>Seule la question est obligatoire. La photo peut être une URL.</Text>
-        </View>
-        <Pressable disabled={readingFile} onPress={chooseFile} style={[styles.dropZone, fileName ? styles.dropZoneReady : null]}>
-          <Ionicons name={fileName ? 'checkmark-circle' : 'cloud-upload-outline'} size={34} color={colors.blue} />
-          <Text style={styles.dropTitle}>{readingFile ? 'Lecture du fichier…' : fileName || 'Choisir un fichier CSV'}</Text>
-          <Text style={styles.dropText}>{fileName ? `${new Set(Object.values(photoUris)).size} schéma(s) détecté(s)` : 'CSV ou ZIP · virgule ou point-virgule'}</Text>
-        </Pressable>
-        {importError ? <View style={styles.importErrorCard}><Ionicons name="alert-circle-outline" size={21} color={colors.red} /><Text style={styles.importErrorText}>{importError}</Text></View> : null}
-        {result ? (
-          <View style={styles.resultCard}>
-            <Ionicons name="checkmark-circle" size={28} color={colors.green} />
-            <View style={{ flex: 1 }}><Text style={styles.resultTitle}>{result.imported} ajoutée{result.imported > 1 ? 's' : ''}, {result.updated} mise{result.updated > 1 ? 's' : ''} à jour</Text><Text style={styles.resultText}>{result.skipped ? `${result.skipped} ligne(s) ignorée(s)` : 'Toutes les lignes ont été traitées.'}</Text></View>
-          </View>
-        ) : null}
-        {result?.errors.slice(0, 5).map((error) => <Text key={error} style={styles.errorText}>• {error}</Text>)}
-        <PrimaryButton label={readingFile ? 'Lecture du fichier…' : working ? 'Import en cours…' : result ? 'Terminer' : 'Importer les cartes'} icon={result ? 'checkmark' : 'download-outline'} disabled={!csvText || working || readingFile} onPress={result ? onDone : runImport} />
-      </ScrollView>
-    </SafeAreaView>
-  );
-}
-
 function CreateDeckModal({ visible, onClose, onCreated }: { visible: boolean; onClose: () => void; onCreated: (id: number) => void }) {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -870,10 +868,9 @@ function AppContent() {
     <View style={styles.app}>
       <StatusBar style="dark" />
       {route.name === 'home' ? <HomeScreen onOpenDeck={(deckId) => setRoute({ name: 'deck', deckId })} onCreate={() => setCreateOpen(true)} onStudy={(deckIds, newCardAllowance) => setRoute({ name: 'study', deckIds, newCardAllowance })} /> : null}
-      {route.name === 'deck' ? <DeckScreen deckId={route.deckId} onBack={() => setRoute({ name: 'home' })} onStudy={(newCardAllowance) => setRoute({ name: 'study', deckIds: [route.deckId], newCardAllowance })} onImport={() => setRoute({ name: 'import', deckId: route.deckId })} onSettings={() => setRoute({ name: 'settings', deckId: route.deckId })} /> : null}
+      {route.name === 'deck' ? <DeckScreen deckId={route.deckId} onBack={() => setRoute({ name: 'home' })} onStudy={(newCardAllowance) => setRoute({ name: 'study', deckIds: [route.deckId], newCardAllowance })} onSettings={() => setRoute({ name: 'settings', deckId: route.deckId })} /> : null}
       {route.name === 'settings' ? <DeckSettingsScreen deckId={route.deckId} onBack={() => setRoute({ name: 'deck', deckId: route.deckId })} /> : null}
       {route.name === 'study' ? <StudyScreen deckIds={route.deckIds} newCardAllowance={route.newCardAllowance} onClose={() => setRoute({ name: 'home' })} /> : null}
-      {route.name === 'import' ? <ImportScreen deckId={route.deckId} onBack={() => setRoute({ name: 'deck', deckId: route.deckId })} onDone={() => setRoute({ name: 'deck', deckId: route.deckId })} /> : null}
       <CreateDeckModal visible={createOpen} onClose={() => setCreateOpen(false)} onCreated={(deckId) => { setCreateOpen(false); setRoute({ name: 'deck', deckId }); }} />
     </View>
   );
