@@ -29,11 +29,13 @@ import {
   getDecksByIds,
   getNewCards,
   getSessionCards,
+  getSubjectPrefs,
   initializeDatabase,
   markCardSeen,
   recordReview,
   resetDeckProgress,
   saveCard,
+  setSubjectPrefs,
   updateDailyLimit,
   updateReviewDelays,
 } from './src/db';
@@ -46,6 +48,7 @@ import { insertLaterInQueue } from './src/sessionQueue';
 
 type Route =
   | { name: 'home' }
+  | { name: 'subject'; subject: string }
   | { name: 'deck'; deckId: number }
   | { name: 'settings'; deckId: number }
   | { name: 'study'; deckIds: number[]; newCardAllowance: number };
@@ -68,8 +71,44 @@ const getDelayOptions = (deck: Deck): Array<{ value: ReviewDelay; title: string;
   { value: Number(deck.tomorrow_delay_minutes), title: formatDelay(Number(deck.tomorrow_delay_minutes)), subtitle: 'Demain', color: colors.greenSoft, fg: colors.green, icon: 'calendar-outline' },
 ];
 
-const GLYPHS = ['π', '∑', '√', 'ƒ', 'Δ', '∞', 'θ', 'x²'];
+const GLYPHS = ['π', '∑', '√', 'ƒ', 'Δ', '∞', 'θ', 'x²', 'λ', 'Ω', '§', 'æ'];
 const glyphFor = (id: number) => GLYPHS[Math.abs(id) % GLYPHS.length];
+
+type SubjectVisual = { icon: keyof typeof Ionicons.glyphMap; tint: string; fg: string };
+
+const SUBJECT_VISUALS: Array<{ match: RegExp } & SubjectVisual> = [
+  { match: /math|alg[eè]bre|g[eé]om|calcul|arithm/i, icon: 'calculator', tint: colors.blueSoft, fg: colors.blue },
+  { match: /fran[cç]ais|gramm|orthographe|conjug|litt[eé]r/i, icon: 'book', tint: '#EFE7F7', fg: '#6D4FA3' },
+  { match: /histoire/i, icon: 'time', tint: colors.redSoft, fg: colors.red },
+  { match: /g[eé]ogr/i, icon: 'earth', tint: '#E4F3F7', fg: '#1E7E8C' },
+  { match: /anglais|espagnol|allemand|latin|langue/i, icon: 'language', tint: colors.greenSoft, fg: colors.green },
+  { match: /physique|chimie|science/i, icon: 'flask', tint: colors.greenSoft, fg: colors.green },
+  { match: /bio|svt/i, icon: 'leaf', tint: colors.greenSoft, fg: colors.green },
+  { match: /philo/i, icon: 'bulb', tint: colors.yellowSoft, fg: '#9A7412' },
+  { match: /musique|art/i, icon: 'musical-notes', tint: colors.yellowSoft, fg: '#9A7412' },
+  { match: /tech|info|num[eé]rique|code/i, icon: 'hardware-chip', tint: '#E4F3F7', fg: '#1E7E8C' },
+];
+
+const DEFAULT_SUBJECT_VISUAL: SubjectVisual = { icon: 'school', tint: colors.blueSoft, fg: colors.blue };
+
+function subjectVisual(subject: string): SubjectVisual {
+  return SUBJECT_VISUALS.find((entry) => entry.match.test(subject)) ?? DEFAULT_SUBJECT_VISUAL;
+}
+
+type SubjectGroup = { name: string; decks: Deck[] };
+
+/** Regroupe les paquets par matière (comparaison insensible à la casse). */
+function groupBySubject(decks: Deck[]): SubjectGroup[] {
+  const groups = new Map<string, SubjectGroup>();
+  for (const deck of decks) {
+    const name = deck.subject?.trim() || 'Divers';
+    const key = name.toLowerCase();
+    const group = groups.get(key) ?? { name, decks: [] };
+    group.decks.push(deck);
+    groups.set(key, group);
+  }
+  return [...groups.values()].sort((a, b) => a.name.localeCompare(b.name, 'fr'));
+}
 
 function Grid({ tint = colors.grid, step = 26 }: { tint?: string; step?: number }) {
   const [size, setSize] = useState({ width: 0, height: 0 });
@@ -128,13 +167,43 @@ function CardImage({ card, style }: { card: Card; style: object }) {
   return <Image source={{ uri: card.photo_uri }} style={style} resizeMode="cover" />;
 }
 
-function HomeScreen({ onOpenDeck, onCreate, onStudy }: { onOpenDeck: (id: number) => void; onCreate: () => void; onStudy: (deckIds: number[], newCardAllowance: number) => void }) {
+function DeckCard({ deck, onOpen }: { deck: Deck; onOpen: (id: number) => void }) {
+  const progress = deck.total_count ? Math.round((Number(deck.learned_count) / Number(deck.total_count)) * 100) : 0;
+  return (
+    <Pressable onPress={() => onOpen(deck.id)} style={({ pressed }) => [styles.deckCard, pressed && styles.cardPressed]}>
+      <View style={[styles.deckMark, { backgroundColor: deck.color }]}>
+        <Text style={styles.deckMarkGlyph}>{glyphFor(deck.id)}</Text>
+      </View>
+      <View style={styles.deckBody}>
+        <View style={styles.deckTitleRow}>
+          <Text style={styles.deckTitle} numberOfLines={1}>{deck.title}</Text>
+          {deck.sync_id ? <Ionicons name="cloud-outline" size={15} color={colors.muted} /> : null}
+          <Ionicons name="chevron-forward" size={19} color={colors.muted} />
+        </View>
+        <Text style={styles.deckDescription} numberOfLines={1}>{stripMathText(deck.description) || `${deck.total_count} cartes`}</Text>
+        <View style={styles.progressTrack}><View style={[styles.progressFill, { width: `${progress}%` }]} /></View>
+        <View style={styles.deckMeta}>
+          <Text style={styles.deckMetaText}>{progress}% appris</Text>
+          <View style={styles.duePill}><Text style={styles.duePillText}>{deck.due_count} à revoir</Text></View>
+        </View>
+      </View>
+    </Pressable>
+  );
+}
+
+function HomeScreen({ onOpenSubject, onStudy }: { onOpenSubject: (subject: string) => void; onStudy: (deckIds: number[], newCardAllowance: number) => void }) {
   const [decks, setDecks] = useState<Deck[]>([]);
+  const [prefs, setPrefs] = useState<{ hidden: string[]; custom: string[] }>({ hidden: [], custom: [] });
   const [refreshing, setRefreshing] = useState(false);
   const [mixOpen, setMixOpen] = useState(false);
+  const [editorOpen, setEditorOpen] = useState(false);
   const [syncing, setSyncing] = useState(false);
   const [syncNote, setSyncNote] = useState('');
-  const load = useCallback(async () => setDecks(await getDecks()), []);
+  const load = useCallback(async () => {
+    const [nextDecks, nextPrefs] = await Promise.all([getDecks(), getSubjectPrefs()]);
+    setDecks(nextDecks);
+    setPrefs(nextPrefs);
+  }, []);
   useEffect(() => { void load(); }, [load]);
 
   const runSync = useCallback(async (announce: boolean) => {
@@ -164,8 +233,22 @@ function HomeScreen({ onOpenDeck, onCreate, onStudy }: { onOpenDeck: (id: number
     return () => clearTimeout(timer);
   }, [syncNote]);
 
+  const subjects = groupBySubject(decks);
+  const customOnly = prefs.custom
+    .filter((name) => !subjects.some((group) => group.name.toLowerCase() === name.trim().toLowerCase()))
+    .map((name) => ({ name: name.trim(), decks: [] as Deck[] }))
+    .filter((group) => group.name.length > 0);
+  const allSubjects = [...subjects, ...customOnly];
+  const hiddenKeys = new Set(prefs.hidden.map((name) => name.toLowerCase()));
+  const visibleSubjects = allSubjects.filter((group) => !hiddenKeys.has(group.name.toLowerCase()));
+
   const dueTotal = decks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
   const total = decks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
+
+  const updatePrefs = async (next: { hidden: string[]; custom: string[] }) => {
+    setPrefs(next);
+    await setSubjectPrefs(next);
+  };
 
   return (
     <SafeAreaView style={styles.screen} edges={['top']}>
@@ -180,10 +263,10 @@ function HomeScreen({ onOpenDeck, onCreate, onStudy }: { onOpenDeck: (id: number
       >
         <View style={styles.homeHeader}>
           <View>
-            <Text style={styles.eyebrow}>MÉMENTO · MATHS</Text>
-            <Text style={styles.heroTitle}>Des maths qui{`\n`}restent en tête.</Text>
+            <Text style={styles.eyebrow}>MÉMENTO · MATIÈRES</Text>
+            <Text style={styles.heroTitle}>Tout ce qui{`\n`}reste en tête.</Text>
           </View>
-          <View style={styles.avatar}><Ionicons name="calculator" size={20} color={colors.blue} /></View>
+          <View style={styles.avatar}><Ionicons name="school" size={20} color={colors.blue} /></View>
         </View>
 
         <View style={styles.todayCard}>
@@ -210,40 +293,49 @@ function HomeScreen({ onOpenDeck, onCreate, onStudy }: { onOpenDeck: (id: number
 
         <View style={styles.sectionHeader}>
           <View>
-            <Text style={styles.sectionTitle}>Mes paquets</Text>
-            <Text style={styles.sectionCaption}>{syncing ? 'Synchronisation…' : syncNote || `${total} ${total === 1 ? 'carte' : 'cartes'} au total`}</Text>
+            <Text style={styles.sectionTitle}>Mes matières</Text>
+            <Text style={styles.sectionCaption}>{syncing ? 'Synchronisation…' : syncNote || `${visibleSubjects.length} ${visibleSubjects.length === 1 ? 'matière' : 'matières'} · ${total} ${total === 1 ? 'carte' : 'cartes'}`}</Text>
           </View>
-          <Pressable onPress={onCreate} style={styles.addRound}><Ionicons name="add" size={25} color={colors.white} /></Pressable>
+          <Pressable onPress={() => setEditorOpen(true)} accessibilityLabel="Modifier les matières" style={({ pressed }) => [styles.addRound, pressed && styles.pressed]}>
+            <Ionicons name="options" size={22} color={colors.white} />
+          </Pressable>
         </View>
 
-        {decks.map((deck) => {
-          const progress = deck.total_count ? Math.round((Number(deck.learned_count) / Number(deck.total_count)) * 100) : 0;
+        {visibleSubjects.map((group) => {
+          const visual = subjectVisual(group.name);
+          const groupDue = group.decks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
+          const groupCards = group.decks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
           return (
-            <Pressable key={deck.id} onPress={() => onOpenDeck(deck.id)} style={({ pressed }) => [styles.deckCard, pressed && styles.cardPressed]}>
-              <View style={[styles.deckMark, { backgroundColor: deck.color }]}>
-                <Text style={styles.deckMarkGlyph}>{glyphFor(deck.id)}</Text>
+            <Pressable
+              key={group.name.toLowerCase()}
+              onPress={() => onOpenSubject(group.name)}
+              style={({ pressed }) => [styles.subjectCard, pressed && styles.cardPressed]}
+            >
+              <View style={[styles.subjectIcon, { backgroundColor: visual.tint }]}>
+                <Ionicons name={visual.icon} size={23} color={visual.fg} />
               </View>
-              <View style={styles.deckBody}>
+              <View style={styles.subjectBody}>
                 <View style={styles.deckTitleRow}>
-                  <Text style={styles.deckTitle} numberOfLines={1}>{deck.title}</Text>
-                  {deck.sync_id ? <Ionicons name="cloud-outline" size={15} color={colors.muted} /> : null}
+                  <Text style={styles.subjectTitle} numberOfLines={1}>{group.name}</Text>
                   <Ionicons name="chevron-forward" size={19} color={colors.muted} />
                 </View>
-                <Text style={styles.deckDescription} numberOfLines={1}>{stripMathText(deck.description) || `${deck.total_count} cartes`}</Text>
-                <View style={styles.progressTrack}><View style={[styles.progressFill, { width: `${progress}%` }]} /></View>
-                <View style={styles.deckMeta}>
-                  <Text style={styles.deckMetaText}>{progress}% appris</Text>
-                  <View style={styles.duePill}><Text style={styles.duePillText}>{deck.due_count} à revoir</Text></View>
+                <View style={styles.subjectMeta}>
+                  <Text style={styles.subjectMetaText}>
+                    {group.decks.length === 0 ? 'Aucun paquet' : `${group.decks.length} ${group.decks.length === 1 ? 'paquet' : 'paquets'} · ${groupCards} ${groupCards === 1 ? 'carte' : 'cartes'}`}
+                  </Text>
+                  {groupDue > 0 ? <View style={styles.duePill}><Text style={styles.duePillText}>{groupDue} à revoir</Text></View> : null}
                 </View>
               </View>
             </Pressable>
           );
         })}
 
-        <Pressable onPress={onCreate} style={styles.newDeckCard}>
-          <View style={styles.newDeckIcon}><Ionicons name="add" size={24} color={colors.blue} /></View>
-          <View><Text style={styles.newDeckTitle}>Nouveau paquet</Text><Text style={styles.newDeckCaption}>Créer une nouvelle série de cartes</Text></View>
-        </Pressable>
+        {!visibleSubjects.length ? (
+          <Pressable onPress={() => setEditorOpen(true)} style={styles.newDeckCard}>
+            <View style={styles.newDeckIcon}><Ionicons name="add" size={24} color={colors.blue} /></View>
+            <View><Text style={styles.newDeckTitle}>Aucune matière visible</Text><Text style={styles.newDeckCaption}>Choisis les matières à afficher</Text></View>
+          </Pressable>
+        ) : null}
 
         <CustomSessionSheet
           visible={mixOpen}
@@ -251,6 +343,180 @@ function HomeScreen({ onOpenDeck, onCreate, onStudy }: { onOpenDeck: (id: number
           onClose={() => setMixOpen(false)}
           onStart={(deckIds, newCardAllowance) => { setMixOpen(false); onStudy(deckIds, newCardAllowance); }}
         />
+
+        <SubjectsEditorModal
+          visible={editorOpen}
+          subjects={allSubjects}
+          hidden={prefs.hidden}
+          custom={prefs.custom}
+          onClose={() => setEditorOpen(false)}
+          onChange={updatePrefs}
+        />
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
+
+function SubjectsEditorModal({ visible, subjects, hidden, custom, onClose, onChange }: {
+  visible: boolean;
+  subjects: SubjectGroup[];
+  hidden: string[];
+  custom: string[];
+  onClose: () => void;
+  onChange: (prefs: { hidden: string[]; custom: string[] }) => void;
+}) {
+  const [draftName, setDraftName] = useState('');
+  useEffect(() => {
+    if (visible) setDraftName('');
+  }, [visible]);
+
+  const hiddenKeys = new Set(hidden.map((name) => name.toLowerCase()));
+  const toggle = (name: string) => {
+    const key = name.toLowerCase();
+    const next = hiddenKeys.has(key) ? hidden.filter((entry) => entry.toLowerCase() !== key) : [...hidden, name];
+    onChange({ hidden: next, custom });
+  };
+  const addSubject = () => {
+    const name = draftName.trim();
+    if (!name) return;
+    if (subjects.some((group) => group.name.toLowerCase() === name.toLowerCase())) {
+      toggle(name);
+      setDraftName('');
+      return;
+    }
+    if (custom.some((entry) => entry.toLowerCase() === name.toLowerCase())) {
+      setDraftName('');
+      return;
+    }
+    onChange({ hidden: hidden.filter((entry) => entry.toLowerCase() !== name.toLowerCase()), custom: [...custom, name] });
+    setDraftName('');
+  };
+  const removeCustom = (name: string) => {
+    onChange({ hidden, custom: custom.filter((entry) => entry !== name) });
+  };
+
+  return (
+    <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
+      <Pressable style={styles.scrim} onPress={onClose}>
+        <Pressable style={styles.sheet} onPress={() => {}}>
+          <View style={styles.sheetHandle} />
+          <Text style={styles.sheetTitle}>Mes matières</Text>
+          <Text style={styles.sheetText}>Choisis les matières affichées sur l’accueil, ou ajoute les tiennes pour y ranger tes paquets.</Text>
+          <ScrollView style={styles.subjectEditorList} nestedScrollEnabled>
+            {subjects.map((group, index) => {
+              const visual = subjectVisual(group.name);
+              const isHidden = hiddenKeys.has(group.name.toLowerCase());
+              const isCustom = custom.some((entry) => entry.toLowerCase() === group.name.toLowerCase());
+              return (
+                <View key={group.name.toLowerCase()} style={[styles.subjectEditorRow, index < subjects.length - 1 && styles.subjectEditorRowBorder]}>
+                  <View style={[styles.subjectEditorIcon, { backgroundColor: visual.tint }]}>
+                    <Ionicons name={visual.icon} size={18} color={visual.fg} />
+                  </View>
+                  <View style={styles.subjectEditorCopy}>
+                    <Text style={styles.subjectEditorTitle} numberOfLines={1}>{group.name}</Text>
+                    <Text style={styles.subjectEditorMeta}>{group.decks.length === 0 ? 'Vide' : `${group.decks.length} ${group.decks.length === 1 ? 'paquet' : 'paquets'}`}</Text>
+                  </View>
+                  {isCustom && group.decks.length === 0 ? (
+                    <Pressable onPress={() => removeCustom(group.name)} accessibilityLabel={`Supprimer ${group.name}`} style={styles.subjectEditorAction}>
+                      <Ionicons name="trash-outline" size={19} color={colors.red} />
+                    </Pressable>
+                  ) : null}
+                  <Pressable
+                    onPress={() => toggle(group.name)}
+                    accessibilityLabel={isHidden ? `Afficher ${group.name}` : `Masquer ${group.name}`}
+                    style={[styles.subjectEditorAction, isHidden && styles.subjectEditorActionOff]}
+                  >
+                    <Ionicons name={isHidden ? 'eye-off' : 'eye'} size={19} color={isHidden ? colors.muted : colors.blue} />
+                  </Pressable>
+                </View>
+              );
+            })}
+          </ScrollView>
+          <Text style={styles.manualLabel}>AJOUTER UNE MATIÈRE</Text>
+          <View style={styles.customRow}>
+            <TextInput
+              value={draftName}
+              onChangeText={setDraftName}
+              placeholder="Ex. Physique-chimie"
+              placeholderTextColor="#9AA0B2"
+              style={styles.customInput}
+              onSubmitEditing={addSubject}
+              returnKeyType="done"
+            />
+            <Pressable onPress={addSubject} accessibilityLabel="Ajouter la matière" style={styles.customGo}><Ionicons name="add" size={20} color={colors.white} /></Pressable>
+          </View>
+          <PrimaryButton label="Terminé" onPress={onClose} />
+        </Pressable>
+      </Pressable>
+    </Modal>
+  );
+}
+
+function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
+  subject: string;
+  onBack: () => void;
+  onOpenDeck: (deckId: number) => void;
+  onStudy: (deckIds: number[], newCardAllowance: number) => void;
+  onCreate: (subject: string) => void;
+}) {
+  const [decks, setDecks] = useState<Deck[]>([]);
+  useEffect(() => { void getDecks().then(setDecks); }, []);
+  const group = groupBySubject(decks).find((entry) => entry.name.toLowerCase() === subject.toLowerCase())
+    ?? { name: subject, decks: [] as Deck[] };
+
+  const dueTotal = group.decks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
+  const newTotal = group.decks.reduce((sum, deck) => sum + Number(deck.new_count), 0);
+  const totalCards = group.decks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
+  const allowance = group.decks.reduce((sum, deck) => sum + Math.max(0, Number(deck.daily_new_limit) - Number(deck.introduced_today)), 0);
+  const sessionCount = dueTotal + Math.min(newTotal, allowance);
+  const deckIds = group.decks.map((deck) => deck.id);
+  const visual = subjectVisual(group.name);
+
+  return (
+    <SafeAreaView style={styles.screen} edges={['top']}>
+      <ScrollView contentContainerStyle={styles.page}>
+        <View style={styles.topBar}>
+          <IconButton name="arrow-back" label="Retour" onPress={onBack} />
+          <Text style={styles.topBarTitle} numberOfLines={1}>{group.name}</Text>
+          <IconButton name="add" label="Nouveau paquet" onPress={() => onCreate(group.name)} />
+        </View>
+
+        <View style={styles.deckHero}>
+          <View style={[styles.largeDeckMark, { backgroundColor: visual.tint }]}><Ionicons name={visual.icon} size={30} color={visual.fg} /></View>
+          <Text style={styles.deckHeroTitle}>{group.name}</Text>
+          <Text style={styles.deckHeroDescription}>{group.decks.length} {group.decks.length === 1 ? 'paquet' : 'paquets'} · {totalCards} {totalCards === 1 ? 'carte' : 'cartes'}</Text>
+          <View style={styles.statRow}>
+            <View style={styles.stat}><Text style={styles.statValue}>{dueTotal}</Text><Text style={styles.statLabel}>À revoir</Text></View>
+            <View style={styles.statDivider} />
+            <View style={styles.stat}><Text style={styles.statValue}>{newTotal}</Text><Text style={styles.statLabel}>Nouvelles</Text></View>
+            <View style={styles.statDivider} />
+            <View style={styles.stat}><Text style={styles.statValue}>{totalCards}</Text><Text style={styles.statLabel}>Total</Text></View>
+          </View>
+        </View>
+
+        <View style={styles.sessionPanel}>
+          <View style={styles.panelTop}>
+            <View><Text style={styles.panelTitle}>Session de matière</Text><Text style={styles.panelCaption}>Tous les paquets de {group.name} en une file</Text></View>
+            <View style={styles.sessionPanelIcon}><Ionicons name="play-circle-outline" size={30} color={colors.blue} /></View>
+          </View>
+          <PrimaryButton
+            label={deckIds.length === 0 ? 'Crée un premier paquet' : sessionCount ? `Commencer · ${sessionCount} carte${sessionCount > 1 ? 's' : ''}` : 'Lancer une session'}
+            icon="play"
+            disabled={deckIds.length === 0}
+            onPress={() => onStudy(deckIds, allowance)}
+          />
+        </View>
+
+        <View style={styles.sectionHeaderCompact}>
+          <Text style={styles.sectionTitle}>Les paquets</Text>
+        </View>
+
+        {group.decks.map((deck) => <DeckCard key={deck.id} deck={deck} onOpen={onOpenDeck} />)}
+
+        <Pressable onPress={() => onCreate(group.name)} style={styles.newDeckCard}>
+          <View style={styles.newDeckIcon}><Ionicons name="add" size={24} color={colors.blue} /></View>
+          <View><Text style={styles.newDeckTitle}>Nouveau paquet</Text><Text style={styles.newDeckCaption}>Créer une nouvelle série de cartes</Text></View>
+        </Pressable>
       </ScrollView>
     </SafeAreaView>
   );
@@ -753,24 +1019,31 @@ function CustomSessionSheet({ visible, decks, onClose, onStart }: { visible: boo
           <Text style={styles.sheetTitle}>Session mixte</Text>
           <Text style={styles.sheetText}>Choisis les paquets à mélanger : les cartes à revoir et les nouvelles cartes seront fusionnées dans une seule file.</Text>
           <ScrollView style={styles.mixList} nestedScrollEnabled>
-            <View style={styles.mixGroup}>
-              {decks.map((deck, index) => {
-                const active = selected.includes(deck.id);
-                return (
-                  <Pressable key={deck.id} onPress={() => toggle(deck.id)} style={[styles.mixRow, index < decks.length - 1 && styles.mixRowBorder]}>
-                    <View style={[styles.mixCheckbox, active && styles.mixCheckboxOn]}>
-                      {active ? <Ionicons name="checkmark" size={15} color={colors.white} /> : null}
-                    </View>
-                    <View style={styles.mixRowCopy}>
-                      <Text style={styles.mixRowTitle} numberOfLines={1}>{deck.title}</Text>
-                      <Text style={styles.mixRowMeta}>{Number(deck.due_count)} à revoir · {Number(deck.new_count)} nouvelles</Text>
-                    </View>
-                    <View style={[styles.deckMarkSmall, { backgroundColor: deck.color }]}><Text style={styles.deckMarkSmallGlyph}>{glyphFor(deck.id)}</Text></View>
-                  </Pressable>
-                );
-              })}
-              {!decks.length ? <View style={styles.mixEmpty}><Text style={styles.mixEmptyText}>Crée d’abord un paquet pour lancer une session.</Text></View> : null}
-            </View>
+            {groupBySubject(decks).map((group) => (
+              <View key={group.name.toLowerCase()} style={styles.mixGroup}>
+                <Text style={styles.mixGroupTitle}>{group.name}</Text>
+                {group.decks.map((deck, index) => {
+                  const active = selected.includes(deck.id);
+                  return (
+                    <Pressable key={deck.id} onPress={() => toggle(deck.id)} style={[styles.mixRow, index < group.decks.length - 1 && styles.mixRowBorder]}>
+                      <View style={[styles.mixCheckbox, active && styles.mixCheckboxOn]}>
+                        {active ? <Ionicons name="checkmark" size={15} color={colors.white} /> : null}
+                      </View>
+                      <View style={styles.mixRowCopy}>
+                        <Text style={styles.mixRowTitle} numberOfLines={1}>{deck.title}</Text>
+                        <Text style={styles.mixRowMeta}>{Number(deck.due_count)} à revoir · {Number(deck.new_count)} nouvelles</Text>
+                      </View>
+                      <View style={[styles.deckMarkSmall, { backgroundColor: deck.color }]}><Text style={styles.deckMarkSmallGlyph}>{glyphFor(deck.id)}</Text></View>
+                    </Pressable>
+                  );
+                })}
+              </View>
+            ))}
+            {!decks.length ? (
+              <View style={styles.mixGroup}>
+                <View style={styles.mixEmpty}><Text style={styles.mixEmptyText}>Crée d’abord un paquet pour lancer une session.</Text></View>
+              </View>
+            ) : null}
           </ScrollView>
           <View style={styles.inSessionLimit}>
             <View><Text style={styles.inSessionLimitTitle}>Nouvelles cartes</Text><Text style={styles.inSessionLimitText}>Ajoutées à la file, en plus des révisions</Text></View>
@@ -792,23 +1065,45 @@ function CustomSessionSheet({ visible, decks, onClose, onStart }: { visible: boo
   );
 }
 
-function CreateDeckModal({ visible, onClose, onCreated }: { visible: boolean; onClose: () => void; onCreated: (id: number) => void }) {
+function CreateDeckModal({ visible, defaultSubject, subjects, onClose, onCreated }: { visible: boolean; defaultSubject: string; subjects: string[]; onClose: () => void; onCreated: (id: number) => void }) {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const [subject, setSubject] = useState('');
+  useEffect(() => {
+    if (visible) {
+      setTitle('');
+      setDescription('');
+      setSubject(defaultSubject);
+    }
+  }, [visible, defaultSubject]);
   const submit = async () => {
     if (!title.trim()) return;
-    const result = await createDeck(title, description);
-    setTitle(''); setDescription(''); onCreated(result.lastInsertRowId);
+    const result = await createDeck(title, description, subject.trim() || 'Divers');
+    onCreated(result.lastInsertRowId);
   };
+  const suggestions = subjects.filter((name) => name.toLowerCase() !== subject.trim().toLowerCase());
   return (
     <Modal visible={visible} animationType="slide" presentationStyle="pageSheet" onRequestClose={onClose}>
       <SafeAreaView style={styles.modalScreen} edges={['top', 'bottom']}>
-        <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={styles.modalPage}>
-          <View style={styles.topBar}><IconButton name="close" label="Fermer" onPress={onClose} /><Text style={styles.topBarTitle}>Nouveau paquet</Text><View style={{ width: 44 }} /></View>
-          <View style={styles.createIcon}><Text style={styles.createGlyph}>π</Text></View>
-          <Text style={styles.inputLabel}>NOM DU PAQUET *</Text><TextInput value={title} onChangeText={setTitle} placeholder="Tables de multiplication" style={styles.input} autoFocus />
-          <Text style={styles.inputLabel}>DESCRIPTION</Text><TextInput value={description} onChangeText={setDescription} placeholder="Formules, théorèmes, définitions…" style={[styles.input, styles.multilineInput]} multiline />
-          <PrimaryButton label="Créer le paquet" onPress={submit} disabled={!title.trim()} />
+        <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={{ flex: 1 }}>
+          <ScrollView contentContainerStyle={styles.modalPage} keyboardShouldPersistTaps="handled">
+            <View style={styles.topBar}><IconButton name="close" label="Fermer" onPress={onClose} /><Text style={styles.topBarTitle}>Nouveau paquet</Text><View style={{ width: 44 }} /></View>
+            <View style={styles.createIcon}><Text style={styles.createGlyph}>π</Text></View>
+            <Text style={styles.inputLabel}>NOM DU PAQUET *</Text><TextInput value={title} onChangeText={setTitle} placeholder="Tables de multiplication" style={styles.input} autoFocus />
+            <Text style={styles.inputLabel}>MATIÈRE</Text>
+            <TextInput value={subject} onChangeText={setSubject} placeholder="Maths" style={styles.input} />
+            {suggestions.length ? (
+              <View style={styles.chipRow}>
+                {suggestions.slice(0, 8).map((name) => (
+                  <Pressable key={name.toLowerCase()} onPress={() => setSubject(name)} style={styles.chip}>
+                    <Text style={styles.chipText}>{name}</Text>
+                  </Pressable>
+                ))}
+              </View>
+            ) : null}
+            <Text style={styles.inputLabel}>DESCRIPTION</Text><TextInput value={description} onChangeText={setDescription} placeholder="Formules, théorèmes, définitions…" style={[styles.input, styles.multilineInput]} multiline />
+            <PrimaryButton label="Créer le paquet" onPress={submit} disabled={!title.trim()} />
+          </ScrollView>
         </KeyboardAvoidingView>
       </SafeAreaView>
     </Modal>
@@ -820,6 +1115,8 @@ function AppContent() {
   const [initializationError, setInitializationError] = useState<string | null>(null);
   const [route, setRoute] = useState<Route>({ name: 'home' });
   const [createOpen, setCreateOpen] = useState(false);
+  const [createSubject, setCreateSubject] = useState('Divers');
+  const [subjects, setSubjects] = useState<string[]>([]);
   const initialize = useCallback(async () => {
     setReady(false);
     setInitializationError(null);
@@ -837,13 +1134,22 @@ function AppContent() {
     const timeout = setTimeout(() => void checkForAppUpdate(), 700);
     return () => clearTimeout(timeout);
   }, []);
+  const openCreate = useCallback(async (subject: string) => {
+    setCreateSubject(subject || 'Divers');
+    const [decks, prefs] = await Promise.all([getDecks(), getSubjectPrefs()]);
+    const names = new Map<string, string>();
+    for (const group of groupBySubject(decks)) names.set(group.name.toLowerCase(), group.name);
+    for (const name of prefs.custom) names.set(name.trim().toLowerCase(), name.trim());
+    setSubjects([...names.values()]);
+    setCreateOpen(true);
+  }, []);
   useEffect(() => {
     if (Platform.OS !== 'android') return;
 
     const subscription = BackHandler.addEventListener('hardwareBackPress', () => {
       if (route.name === 'home') return false;
 
-      if (route.name === 'deck' || route.name === 'study') {
+      if (route.name === 'deck' || route.name === 'study' || route.name === 'subject') {
         setRoute({ name: 'home' });
       } else {
         setRoute({ name: 'deck', deckId: route.deckId });
@@ -866,11 +1172,12 @@ function AppContent() {
   return (
     <View style={styles.app}>
       <StatusBar style="dark" />
-      {route.name === 'home' ? <HomeScreen onOpenDeck={(deckId) => setRoute({ name: 'deck', deckId })} onCreate={() => setCreateOpen(true)} onStudy={(deckIds, newCardAllowance) => setRoute({ name: 'study', deckIds, newCardAllowance })} /> : null}
+      {route.name === 'home' ? <HomeScreen onOpenSubject={(subject) => setRoute({ name: 'subject', subject })} onStudy={(deckIds, newCardAllowance) => setRoute({ name: 'study', deckIds, newCardAllowance })} /> : null}
+      {route.name === 'subject' ? <SubjectScreen subject={route.subject} onBack={() => setRoute({ name: 'home' })} onOpenDeck={(deckId) => setRoute({ name: 'deck', deckId })} onStudy={(deckIds, newCardAllowance) => setRoute({ name: 'study', deckIds, newCardAllowance })} onCreate={(subject) => void openCreate(subject)} /> : null}
       {route.name === 'deck' ? <DeckScreen deckId={route.deckId} onBack={() => setRoute({ name: 'home' })} onStudy={(newCardAllowance) => setRoute({ name: 'study', deckIds: [route.deckId], newCardAllowance })} onSettings={() => setRoute({ name: 'settings', deckId: route.deckId })} /> : null}
       {route.name === 'settings' ? <DeckSettingsScreen deckId={route.deckId} onBack={() => setRoute({ name: 'deck', deckId: route.deckId })} /> : null}
       {route.name === 'study' ? <StudyScreen deckIds={route.deckIds} newCardAllowance={route.newCardAllowance} onClose={() => setRoute({ name: 'home' })} /> : null}
-      <CreateDeckModal visible={createOpen} onClose={() => setCreateOpen(false)} onCreated={(deckId) => { setCreateOpen(false); setRoute({ name: 'deck', deckId }); }} />
+      <CreateDeckModal visible={createOpen} defaultSubject={createSubject} subjects={subjects} onClose={() => setCreateOpen(false)} onCreated={(deckId) => { setCreateOpen(false); setRoute({ name: 'deck', deckId }); }} />
     </View>
   );
 }
@@ -932,6 +1239,25 @@ const styles = StyleSheet.create({
   deckMetaText: { fontSize: 11, color: colors.muted, fontWeight: '600' },
   duePill: { backgroundColor: colors.redSoft, borderRadius: 20, paddingHorizontal: 8, paddingVertical: 4 },
   duePillText: { color: colors.red, fontSize: 10, fontWeight: '800' },
+  subjectCard: { backgroundColor: colors.paper, borderRadius: radius.medium, padding: 16, flexDirection: 'row', alignItems: 'center', marginBottom: 12, borderWidth: 1, borderColor: '#ECECF0', ...shadow },
+  subjectIcon: { width: 50, height: 58, borderRadius: 14, alignItems: 'center', justifyContent: 'center', marginRight: 15 },
+  subjectBody: { flex: 1, minWidth: 0 },
+  subjectTitle: { fontSize: 17, fontWeight: '800', color: colors.ink, flex: 1 },
+  subjectMeta: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 5 },
+  subjectMetaText: { fontSize: 12, color: colors.muted, fontWeight: '600' },
+  subjectEditorList: { maxHeight: 300, marginTop: 18 },
+  subjectEditorRow: { minHeight: 62, flexDirection: 'row', alignItems: 'center', gap: 11 },
+  subjectEditorRowBorder: { borderBottomWidth: 1, borderBottomColor: '#ECECF1' },
+  subjectEditorIcon: { width: 38, height: 42, borderRadius: 11, alignItems: 'center', justifyContent: 'center' },
+  subjectEditorCopy: { flex: 1, minWidth: 0 },
+  subjectEditorTitle: { fontSize: 14, fontWeight: '800', color: colors.ink },
+  subjectEditorMeta: { fontSize: 11, color: colors.muted, marginTop: 3 },
+  subjectEditorAction: { width: 38, height: 38, borderRadius: 12, alignItems: 'center', justifyContent: 'center' },
+  subjectEditorActionOff: { backgroundColor: '#F4F4F6' },
+  sessionPanelIcon: { width: 44, height: 44, borderRadius: 13, backgroundColor: colors.blueSoft, alignItems: 'center', justifyContent: 'center' },
+  chipRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 7, marginTop: 9 },
+  chip: { height: 34, borderRadius: 17, backgroundColor: colors.blueSoft, paddingHorizontal: 13, alignItems: 'center', justifyContent: 'center' },
+  chipText: { fontSize: 12, fontWeight: '700', color: colors.blue },
   newDeckCard: { borderWidth: 1.5, borderStyle: 'dashed', borderColor: '#C7CAD4', borderRadius: radius.medium, padding: 17, flexDirection: 'row', alignItems: 'center', marginTop: 2 },
   newDeckIcon: { width: 46, height: 46, borderRadius: 14, backgroundColor: colors.blueSoft, alignItems: 'center', justifyContent: 'center', marginRight: 13 },
   newDeckTitle: { fontWeight: '800', color: colors.ink, fontSize: 15 },
@@ -1086,8 +1412,9 @@ const styles = StyleSheet.create({
   mixCopy: { flex: 1, minWidth: 0 },
   mixTitle: { fontSize: 15, fontWeight: '800', color: colors.ink },
   mixCaption: { fontSize: 12, color: colors.muted, marginTop: 3 },
-  mixList: { maxHeight: 260, marginTop: 18 },
-  mixGroup: { backgroundColor: colors.paper, borderRadius: 14, borderWidth: 1, borderColor: colors.line, paddingHorizontal: 14 },
+  mixList: { maxHeight: 320, marginTop: 18 },
+  mixGroup: { backgroundColor: colors.paper, borderRadius: 14, borderWidth: 1, borderColor: colors.line, paddingHorizontal: 14, marginBottom: 10, paddingVertical: 6 },
+  mixGroupTitle: { fontSize: 11, fontWeight: '900', letterSpacing: 1, color: colors.muted, textTransform: 'uppercase', paddingVertical: 7 },
   mixRow: { minHeight: 64, flexDirection: 'row', alignItems: 'center', gap: 11 },
   mixRowBorder: { borderBottomWidth: 1, borderBottomColor: '#ECECF1' },
   mixCheckbox: { width: 24, height: 24, borderRadius: 8, borderWidth: 1.5, borderColor: '#C7CAD4', alignItems: 'center', justifyContent: 'center' },

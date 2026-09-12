@@ -1,0 +1,104 @@
+{
+  "id": "math-3e-affines-pourcentages",
+  "subject": "Maths",
+  "title": "Maths · 3e · Fonctions affines et pourcentages",
+  "description": "3e · 2026-2027 · Fonctions affines et pourcentages. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#F5DFC5",
+  "daily_new_limit": 3,
+  "grade": "3e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "attendus-3e-2020",
+  "cards": [
+    {
+      "id": "lineaire",
+      "front": "Quelle est la forme d’une fonction linéaire ?",
+      "back": "$f(x)=ax$. Elle modélise une situation de proportionnalité de coefficient a.",
+      "kind": "cours"
+    },
+    {
+      "id": "affine",
+      "front": "Quelle est la forme d’une fonction affine ?",
+      "back": "$f(x)=ax+b$, où a et b sont des nombres fixés.",
+      "kind": "cours"
+    },
+    {
+      "id": "origine",
+      "front": "Pour $f(x)=4x-3$, quelle est l’ordonnée à l’origine ?",
+      "back": "−3 : $f(0)=-3$.",
+      "kind": "application"
+    },
+    {
+      "id": "coefficient",
+      "front": "Pour $f(x)=-2x+5$, que vaut le coefficient directeur ?",
+      "back": "−2 : quand x augmente de 1, l’image diminue de 2.",
+      "kind": "application"
+    },
+    {
+      "id": "calcul-coefficient",
+      "front": "Une droite passe par $(1\\,;\\,3)$ et $(4\\,;\\,9)$. Quel est son coefficient directeur ?",
+      "back": "2 : $\\frac{9-3}{4-1}=2$.",
+      "kind": "application"
+    },
+    {
+      "id": "formule-droite",
+      "front": "Une fonction affine a pour coefficient directeur 2 et vérifie $f(1)=3$. Quelle est sa formule ?",
+      "back": "$f(x)=2x+1$ : $3=2\\times1+b$, donc $b=1$.",
+      "kind": "application"
+    },
+    {
+      "id": "tracer",
+      "front": "Comment tracer la représentation de $f(x)=2x+1$ ?",
+      "back": "Placer deux points, par exemple $(0\\,;\\,1)$ et $(1\\,;\\,3)$, puis tracer la droite qui les relie.",
+      "kind": "cours"
+    },
+    {
+      "id": "constante",
+      "front": "Une fonction constante est-elle affine ?",
+      "back": "Oui : $f(x)=b$ correspond à $a=0$. Sa représentation est une droite horizontale.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "hausse",
+      "front": "Quel coefficient multiplicateur correspond à une hausse de t % ?",
+      "back": "$1+\\frac{t}{100}$.",
+      "kind": "cours"
+    },
+    {
+      "id": "baisse",
+      "front": "Quel coefficient multiplicateur correspond à une baisse de t % ?",
+      "back": "$1-\\frac{t}{100}$.",
+      "kind": "cours"
+    },
+    {
+      "id": "prix-hausse",
+      "front": "Un prix de 80 € augmente de 15 %. Quel est le nouveau prix ?",
+      "back": "92 € : $80\\times1{,}15=92$.",
+      "kind": "application"
+    },
+    {
+      "id": "prix-baisse",
+      "front": "Un prix de 120 € baisse de 25 %. Quel est le nouveau prix ?",
+      "back": "90 € : $120\\times0{,}75=90$.",
+      "kind": "application"
+    },
+    {
+      "id": "evolution",
+      "front": "Un prix passe de 50 € à 60 €. Quel est son pourcentage d’augmentation ?",
+      "back": "20 % : $\\frac{60-50}{50}\\times100=20$.",
+      "kind": "application"
+    },
+    {
+      "id": "retour",
+      "front": "Après une hausse de 20 %, un prix est de 72 €. Quel était le prix initial ?",
+      "back": "60 € : $72\\div1{,}20=60$.",
+      "kind": "application"
+    },
+    {
+      "id": "successives",
+      "front": "Une hausse de 10 % suivie d’une baisse de 10 % ramène-t-elle au prix initial ?",
+      "back": "Non : $1{,}1\\times0{,}9=0{,}99$. Le prix final est inférieur de 1 % au prix initial.",
+      "kind": "comprehension"
+    }
+  ]
+}

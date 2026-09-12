@@ -1,0 +1,110 @@
+{
+  "id": "math-6e-fractions",
+  "subject": "Maths",
+  "title": "Maths · 6e · Fractions et quotients",
+  "description": "6e · 2026-2027 · Fractions et quotients. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#CDEAE0",
+  "daily_new_limit": 3,
+  "grade": "6e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "cycle3-2025",
+  "cards": [
+    {
+      "id": "quotient",
+      "front": "Quel nombre représente $\\frac{a}{b}$, avec $b\\ne0$ ?",
+      "back": "Le quotient $a\\div b$ : c’est le nombre qui, multiplié par $b$, donne $a$.",
+      "kind": "cours"
+    },
+    {
+      "id": "denominateur",
+      "front": "Dans $\\frac{5}{8}$, que représente le dénominateur 8 dans un partage de l’unité ?",
+      "back": "L’unité est partagée en huit parts égales. On en prend cinq.",
+      "kind": "cours"
+    },
+    {
+      "id": "superieur-un",
+      "front": "Une fraction peut-elle être supérieure à 1 ?",
+      "back": "Oui : $\\frac{7}{4}=1+\\frac{3}{4}>1$. Une fraction peut représenter plus d’une unité.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "trou",
+      "front": "Complète $7\\times\\ldots=3$.",
+      "back": "$\\frac{3}{7}$, par définition du quotient.",
+      "kind": "application"
+    },
+    {
+      "id": "equivalence",
+      "front": "Complète $\\frac{3}{5}=\\frac{\\ldots}{20}$.",
+      "back": "12. On multiplie numérateur et dénominateur par 4.",
+      "kind": "application"
+    },
+    {
+      "id": "simplifier",
+      "front": "Simplifie $\\frac{12}{18}$.",
+      "back": "$\\frac{2}{3}$, en divisant le numérateur et le dénominateur par 6.",
+      "kind": "application"
+    },
+    {
+      "id": "comparer",
+      "front": "Compare $\\frac{3}{8}$ et $\\frac{5}{8}$.",
+      "back": "$\\frac{3}{8}<\\frac{5}{8}$ : les parts ont la même taille, mais on en prend moins.",
+      "kind": "application"
+    },
+    {
+      "id": "unitaire",
+      "front": "Pourquoi $\\frac{1}{3}>\\frac{1}{5}$ ?",
+      "back": "Pour un même tout, une part obtenue en divisant en 3 est plus grande qu’une part obtenue en divisant en 5.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "somme",
+      "front": "Calcule $\\frac{2}{7}+\\frac{3}{7}$.",
+      "back": "$\\frac{5}{7}$. On additionne les numérateurs et on conserve l’unité « septième ».",
+      "kind": "application"
+    },
+    {
+      "id": "demi-quart",
+      "front": "Calcule $\\frac{1}{2}+\\frac{1}{4}$.",
+      "back": "$\\frac{3}{4}$ car $\\frac{1}{2}=\\frac{2}{4}$.",
+      "kind": "application"
+    },
+    {
+      "id": "complement",
+      "front": "Calcule $1-\\frac{2}{5}$.",
+      "back": "$\\frac{3}{5}$ car $1=\\frac{5}{5}$.",
+      "kind": "application"
+    },
+    {
+      "id": "fraction-quantite",
+      "front": "Combien vaut $\\frac{3}{4}$ de 28 ?",
+      "back": "21 : $28\\div4\\times3=21$.",
+      "kind": "application"
+    },
+    {
+      "id": "fois-entier",
+      "front": "Calcule $3\\times\\frac{2}{5}$.",
+      "back": "$\\frac{6}{5}=1{,}2$.",
+      "kind": "application"
+    },
+    {
+      "id": "partage-exact",
+      "front": "Trois gâteaux sont partagés également entre 4 personnes. Quelle part reçoit chacune ?",
+      "back": "$\\frac{3}{4}$ de gâteau, soit $0{,}75$ gâteau.",
+      "kind": "application"
+    },
+    {
+      "id": "non-decimal",
+      "front": "$\\frac{1}{3}$ est-il exactement égal à $0{,}33$ ?",
+      "back": "Non : $3\\times0{,}33=0{,}99$. $0{,}33$ est une valeur approchée de $\\frac{1}{3}$.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "graduation",
+      "front": "Sur une demi-droite graduée en quarts, quelle abscisse est à la 6e graduation après 0 ?",
+      "back": "$\\frac{6}{4}=1{,}5$.",
+      "kind": "application"
+    }
+  ]
+}

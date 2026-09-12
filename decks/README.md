@@ -1,8 +1,25 @@
 # Decks
 
 Ce dossier stocke les paquets de cartes synchronisés par l'application.
-Chaque fichier `.json` devient un paquet disponible sur l'écran d'accueil,
-synchronisé à l'ouverture de l'app (ou en tirant la liste vers le bas).
+Chaque **sous-dossier est une matière** (ex. `maths/`, `francais/`, `histoire/`)
+affichée sur l'écran d'accueil. Chaque fichier `.json` du sous-dossier devient
+un paquet de cette matière, synchronisé à l'ouverture de l'app (ou en tirant la
+liste vers le bas).
+
+```
+decks/
+  maths/
+    6e-nombres.json … 3e-trigonometrie.json   (catalogue collège)
+    derivees.json
+    trigonometrie.json
+  francais/
+    orthographe.json
+  histoire/
+    dates-xxe-siecle.json
+```
+
+Les fichiers `.json` posés directement à la racine de `decks/` restent acceptés
+(rétro-compatibilité) et sont rangés dans la matière « Divers ».
 
 ## Mathématiques du collège
 
@@ -22,6 +39,7 @@ Vérifier le catalogue avec `python3 scripts/validate_college_decks.py`.
 ```json
 {
   "id": "mon-paquet",              // unique, stable (sert de clé de synchronisation)
+  "subject": "Maths",              // matière affichée (défaut : nom du dossier)
   "title": "Titre du paquet",
   "description": "Description courte (optionnel)",
   "format": "math",                // "math" (rendu LaTeX) ou "people" (défaut)
@@ -37,6 +55,15 @@ Vérifier le catalogue avec `python3 scripts/validate_college_decks.py`.
 }
 ```
 
+## Matières
+
+- Le nom du dossier donne la matière (`maths` → « Maths ») ; le champ
+  `subject` du JSON permet de préciser le nom affiché (ex. `francais/` →
+  « Français » avec l'accent).
+- Créer un nouveau dossier = créer une nouvelle matière dans l'app.
+- Dans l'app, chaque matière peut être masquée ou affichée depuis l'accueil
+  (bouton en haut à droite de la section « Mes matières »).
+
 ## Rendu des formules
 
 Avec `"format": "math"`, le LaTeX inline (`$x^n$`) et display (`$$\frac{a}{b}$$`)
@@ -47,4 +74,6 @@ est rendu avec KaTeX. Le texte hors délimiteurs reste tel quel.
 - Ajouter / modifier / supprimer un fichier ici, puis pousser sur la branche par défaut.
 - Les cartes sont identifiées par `id-paquet:id-carte` : garder les `id` stables
   préserve la progression (révisions) des cartes modifiées.
+- Déplacer un paquet d'un dossier à l'autre change sa matière mais conserve sa
+  progression (tant que son `id` ne change pas).
 - Un paquet supprimé du dossier est retiré de l'app à la synchronisation suivante.

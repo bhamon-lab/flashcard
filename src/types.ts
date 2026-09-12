@@ -4,6 +4,7 @@ export type Deck = {
   description: string;
   color: string;
   kind: string;
+  subject: string;
   sync_id: string | null;
   daily_new_limit: number;
   again_delay_minutes: number;

@@ -1,0 +1,25 @@
+{
+  "id": "histoire-dates-xxe",
+  "subject": "Histoire",
+  "title": "Histoire · Dates clés du XXe siècle",
+  "description": "Les grandes dates du programme à situer sans hésiter",
+  "format": "people",
+  "color": "#FBE3DE",
+  "daily_new_limit": 5,
+  "cards": [
+    { "id": "1914", "front": "1914", "back": "Début de la Première Guerre mondiale (assassinat de Sarajevo, puis déclaration de guerre)" },
+    { "id": "1918", "front": "11 novembre 1918", "back": "Armistice de la Première Guerre mondiale" },
+    { "id": "1917", "front": "1917", "back": "Révolution russe ; entrée en guerre des États-Unis" },
+    { "id": "1929", "front": "1929", "back": "Jeudi noir : début de la Grande Dépression économique mondiale" },
+    { "id": "1936", "front": "1936 (France)", "back": "Front populaire : gouvernement de Léon Blum, congés payés, semaine de 40 h" },
+    { "id": "1939", "front": "3 septembre 1939", "back": "La France et le Royaume-Uni déclarent la guerre à l'Allemagne" },
+    { "id": "1940", "front": "18 juin 1940", "back": "Appel du général de Gaulle à la BBC pour continuer le combat" },
+    { "id": "1944", "front": "6 juin 1944", "back": "Débarquement de Normandie" },
+    { "id": "1945", "front": "8 mai 1945", "back": "Capitulation de l'Allemagne ; fin de la Seconde Guerre mondiale en Europe" },
+    { "id": "1945-onu", "front": "Juin 1945 (international)", "back": "Création de l'ONU (charte de San Francisco)" },
+    { "id": "1957", "front": "25 mars 1957", "back": "Traité de Rome : création de la CEE, ancêtre de l'Union européenne" },
+    { "id": "1958", "front": "1958 (France)", "back": "Naissance de la Ve République ; de Gaulle élu président en décembre" },
+    { "id": "1962", "front": "18 mars 1962", "back": "Accords d'Évian : fin de la guerre d'Algérie" },
+    { "id": "1989", "front": "9 novembre 1989", "back": "Chute du mur de Berlin" }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "math-3e-calcul-litteral",
+  "subject": "Maths",
+  "title": "Maths · 3e · Calcul littéral et factorisation",
+  "description": "3e · 2026-2027 · Calcul littéral et factorisation. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#F5DFC5",
+  "daily_new_limit": 3,
+  "grade": "3e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "attendus-3e-2020",
+  "cards": [
+    {
+      "id": "oppose",
+      "front": "Développe $-(4x-7)$.",
+      "back": "$-4x+7$ : chaque terme change de signe.",
+      "kind": "application"
+    },
+    {
+      "id": "double-distributivite",
+      "front": "Développe la forme générale $(a+b)(c+d)$.",
+      "back": "$ac+ad+bc+bd$ : chaque terme de la première parenthèse multiplie chaque terme de la seconde.",
+      "kind": "cours"
+    },
+    {
+      "id": "produit",
+      "front": "Développe $(x+2)(x+5)$.",
+      "back": "$x^2+7x+10$ : $x^2+5x+2x+10$.",
+      "kind": "application"
+    },
+    {
+      "id": "produit-signes",
+      "front": "Développe $(2x-3)(x+4)$.",
+      "back": "$2x^2+5x-12$ : $2x^2+8x-3x-12$.",
+      "kind": "application"
+    },
+    {
+      "id": "difference-carres",
+      "front": "Quelle factorisation utiliser pour $a^2-b^2$ ?",
+      "back": "$(a-b)(a+b)$.",
+      "kind": "cours"
+    },
+    {
+      "id": "factorisation-carres",
+      "front": "Factorise $x^2-49$.",
+      "back": "$(x-7)(x+7)$, car $49=7^2$.",
+      "kind": "application"
+    },
+    {
+      "id": "factorisation-coefficients",
+      "front": "Factorise $9x^2-16$.",
+      "back": "$(3x-4)(3x+4)$.",
+      "kind": "application"
+    },
+    {
+      "id": "produit-conjugue",
+      "front": "Développe $(x-6)(x+6)$.",
+      "back": "$x^2-36$ ; les termes $6x$ et $-6x$ s’annulent.",
+      "kind": "application"
+    },
+    {
+      "id": "carre-somme",
+      "front": "Développe $(x+4)^2$ par double distributivité.",
+      "back": "$x^2+8x+16$ : $(x+4)(x+4)=x^2+4x+4x+16$.",
+      "kind": "application"
+    },
+    {
+      "id": "carre-difference",
+      "front": "Développe $(x-3)^2$ par double distributivité.",
+      "back": "$x^2-6x+9$.",
+      "kind": "application"
+    },
+    {
+      "id": "erreur-carre",
+      "front": "Pourquoi $(x+4)^2$ n’est-il pas égal à $x^2+16$ en général ?",
+      "back": "Il manque $8x$, issu des deux produits croisés. Pour $x=1$, on aurait 25 d’un côté et 17 de l’autre.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "facteur-commun",
+      "front": "Factorise $12x^2-8x$.",
+      "back": "$4x(3x-2)$.",
+      "kind": "application"
+    },
+    {
+      "id": "facteur-parenthese",
+      "front": "Factorise $3(x+1)+x(x+1)$.",
+      "back": "$(x+1)(x+3)$ : le facteur commun est $x+1$.",
+      "kind": "application"
+    },
+    {
+      "id": "choix-forme",
+      "front": "Pourquoi une forme factorisée est-elle utile pour résoudre une équation ?",
+      "back": "Elle peut transformer l’équation en produit nul, ce qui permet de chercher quand chaque facteur est nul.",
+      "kind": "cours"
+    },
+    {
+      "id": "preuve",
+      "front": "Justifie que $(n+1)^2-n^2=2n+1$.",
+      "back": "En développant : $n^2+2n+1-n^2=2n+1$. L’égalité est vraie pour tout nombre n.",
+      "kind": "comprehension"
+    }
+  ]
+}
