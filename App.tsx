@@ -35,6 +35,7 @@ import {
   recordReview,
   resetDeckProgress,
   saveCard,
+  setDeckFavorite,
   setSubjectPrefs,
   updateDailyLimit,
   updateReviewDelays,
@@ -167,8 +168,12 @@ function CardImage({ card, style }: { card: Card; style: object }) {
   return <Image source={{ uri: card.photo_uri }} style={style} resizeMode="cover" />;
 }
 
-function DeckCard({ deck, onOpen }: { deck: Deck; onOpen: (id: number) => void }) {
+/** Un paquet est visible s'il est marqué favori (les paquets synchronisés non favoris restent cachés). */
+const isFavorite = (deck: Deck) => Number(deck.favorite) > 0;
+
+function DeckCard({ deck, onOpen, onToggleFavorite }: { deck: Deck; onOpen: (id: number) => void; onToggleFavorite: (id: number) => void }) {
   const progress = deck.total_count ? Math.round((Number(deck.learned_count) / Number(deck.total_count)) * 100) : 0;
+  const favorite = isFavorite(deck);
   return (
     <Pressable onPress={() => onOpen(deck.id)} style={({ pressed }) => [styles.deckCard, pressed && styles.cardPressed]}>
       <View style={[styles.deckMark, { backgroundColor: deck.color }]}>
@@ -177,8 +182,13 @@ function DeckCard({ deck, onOpen }: { deck: Deck; onOpen: (id: number) => void }
       <View style={styles.deckBody}>
         <View style={styles.deckTitleRow}>
           <Text style={styles.deckTitle} numberOfLines={1}>{deck.title}</Text>
-          {deck.sync_id ? <Ionicons name="cloud-outline" size={15} color={colors.muted} /> : null}
-          <Ionicons name="chevron-forward" size={19} color={colors.muted} />
+          <Pressable
+            onPress={() => onToggleFavorite(deck.id)}
+            accessibilityLabel={favorite ? `Retirer ${deck.title} des favoris` : `Ajouter ${deck.title} aux favoris`}
+            style={({ pressed }) => [styles.starButton, pressed && styles.pressed]}
+          >
+            <Ionicons name={favorite ? 'star' : 'star-outline'} size={20} color={favorite ? '#D9A112' : colors.muted} />
+          </Pressable>
         </View>
         <Text style={styles.deckDescription} numberOfLines={1}>{stripMathText(deck.description) || `${deck.total_count} cartes`}</Text>
         <View style={styles.progressTrack}><View style={[styles.progressFill, { width: `${progress}%` }]} /></View>
@@ -242,8 +252,8 @@ function HomeScreen({ onOpenSubject, onStudy }: { onOpenSubject: (subject: strin
   const hiddenKeys = new Set(prefs.hidden.map((name) => name.toLowerCase()));
   const visibleSubjects = allSubjects.filter((group) => !hiddenKeys.has(group.name.toLowerCase()));
 
-  const dueTotal = decks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
-  const total = decks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
+  const dueTotal = decks.filter(isFavorite).reduce((sum, deck) => sum + Number(deck.due_count), 0);
+  const total = decks.filter(isFavorite).reduce((sum, deck) => sum + Number(deck.total_count), 0);
 
   const updatePrefs = async (next: { hidden: string[]; custom: string[] }) => {
     setPrefs(next);
@@ -303,8 +313,9 @@ function HomeScreen({ onOpenSubject, onStudy }: { onOpenSubject: (subject: strin
 
         {visibleSubjects.map((group) => {
           const visual = subjectVisual(group.name);
-          const groupDue = group.decks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
-          const groupCards = group.decks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
+          const favoriteDecks = group.decks.filter(isFavorite);
+          const groupDue = favoriteDecks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
+          const groupCards = favoriteDecks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
           return (
             <Pressable
               key={group.name.toLowerCase()}
@@ -321,7 +332,7 @@ function HomeScreen({ onOpenSubject, onStudy }: { onOpenSubject: (subject: strin
                 </View>
                 <View style={styles.subjectMeta}>
                   <Text style={styles.subjectMetaText}>
-                    {group.decks.length === 0 ? 'Aucun paquet' : `${group.decks.length} ${group.decks.length === 1 ? 'paquet' : 'paquets'} · ${groupCards} ${groupCards === 1 ? 'carte' : 'cartes'}`}
+                    {favoriteDecks.length === 0 ? 'Aucun paquet favori' : `${favoriteDecks.length} ${favoriteDecks.length === 1 ? 'paquet' : 'paquets'} · ${groupCards} ${groupCards === 1 ? 'carte' : 'cartes'}`}
                   </Text>
                   {groupDue > 0 ? <View style={styles.duePill}><Text style={styles.duePillText}>{groupDue} à revoir</Text></View> : null}
                 </View>
@@ -339,7 +350,7 @@ function HomeScreen({ onOpenSubject, onStudy }: { onOpenSubject: (subject: strin
 
         <CustomSessionSheet
           visible={mixOpen}
-          decks={decks}
+          decks={decks.filter(isFavorite)}
           onClose={() => setMixOpen(false)}
           onStart={(deckIds, newCardAllowance) => { setMixOpen(false); onStudy(deckIds, newCardAllowance); }}
         />
@@ -460,16 +471,28 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
   onCreate: (subject: string) => void;
 }) {
   const [decks, setDecks] = useState<Deck[]>([]);
+  const [showAll, setShowAll] = useState(false);
   useEffect(() => { void getDecks().then(setDecks); }, []);
   const group = groupBySubject(decks).find((entry) => entry.name.toLowerCase() === subject.toLowerCase())
     ?? { name: subject, decks: [] as Deck[] };
 
-  const dueTotal = group.decks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
-  const newTotal = group.decks.reduce((sum, deck) => sum + Number(deck.new_count), 0);
-  const totalCards = group.decks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
-  const allowance = group.decks.reduce((sum, deck) => sum + Math.max(0, Number(deck.daily_new_limit) - Number(deck.introduced_today)), 0);
+  const favoriteDecks = group.decks.filter(isFavorite);
+  const visibleDecks = showAll ? group.decks : favoriteDecks;
+
+  const toggleFavorite = async (deckId: number) => {
+    const deck = decks.find((entry) => entry.id === deckId);
+    if (!deck) return;
+    const next = !isFavorite(deck);
+    setDecks((current) => current.map((entry) => entry.id === deckId ? { ...entry, favorite: next ? 1 : 0 } : entry));
+    await setDeckFavorite(deckId, next);
+  };
+
+  const dueTotal = favoriteDecks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
+  const newTotal = favoriteDecks.reduce((sum, deck) => sum + Number(deck.new_count), 0);
+  const totalCards = favoriteDecks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
+  const allowance = favoriteDecks.reduce((sum, deck) => sum + Math.max(0, Number(deck.daily_new_limit) - Number(deck.introduced_today)), 0);
   const sessionCount = dueTotal + Math.min(newTotal, allowance);
-  const deckIds = group.decks.map((deck) => deck.id);
+  const deckIds = favoriteDecks.map((deck) => deck.id);
   const visual = subjectVisual(group.name);
 
   return (
@@ -484,7 +507,7 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
         <View style={styles.deckHero}>
           <View style={[styles.largeDeckMark, { backgroundColor: visual.tint }]}><Ionicons name={visual.icon} size={30} color={visual.fg} /></View>
           <Text style={styles.deckHeroTitle}>{group.name}</Text>
-          <Text style={styles.deckHeroDescription}>{group.decks.length} {group.decks.length === 1 ? 'paquet' : 'paquets'} · {totalCards} {totalCards === 1 ? 'carte' : 'cartes'}</Text>
+          <Text style={styles.deckHeroDescription}>{favoriteDecks.length} {favoriteDecks.length === 1 ? 'paquet favori' : 'paquets favoris'} · {totalCards} {totalCards === 1 ? 'carte' : 'cartes'}</Text>
           <View style={styles.statRow}>
             <View style={styles.stat}><Text style={styles.statValue}>{dueTotal}</Text><Text style={styles.statLabel}>À revoir</Text></View>
             <View style={styles.statDivider} />
@@ -496,22 +519,35 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
 
         <View style={styles.sessionPanel}>
           <View style={styles.panelTop}>
-            <View><Text style={styles.panelTitle}>Session de matière</Text><Text style={styles.panelCaption}>Tous les paquets de {group.name} en une file</Text></View>
+            <View><Text style={styles.panelTitle}>Session de matière</Text><Text style={styles.panelCaption}>Les paquets favoris de {group.name} en une file</Text></View>
             <View style={styles.sessionPanelIcon}><Ionicons name="play-circle-outline" size={30} color={colors.blue} /></View>
           </View>
           <PrimaryButton
-            label={deckIds.length === 0 ? 'Crée un premier paquet' : sessionCount ? `Commencer · ${sessionCount} carte${sessionCount > 1 ? 's' : ''}` : 'Lancer une session'}
+            label={!favoriteDecks.length ? (group.decks.length ? 'Ajoute un favori pour réviser' : 'Crée un premier paquet') : sessionCount ? `Commencer · ${sessionCount} carte${sessionCount > 1 ? 's' : ''}` : 'Lancer une session'}
             icon="play"
-            disabled={deckIds.length === 0}
+            disabled={!deckIds.length}
             onPress={() => onStudy(deckIds, allowance)}
           />
         </View>
 
         <View style={styles.sectionHeaderCompact}>
-          <Text style={styles.sectionTitle}>Les paquets</Text>
+          <Text style={styles.sectionTitle}>{showAll ? 'Tous les paquets' : 'Paquets favoris'}</Text>
+          {group.decks.length ? (
+            <Pressable onPress={() => setShowAll((value) => !value)} style={({ pressed }) => [styles.filterToggle, pressed && styles.pressed]}>
+              <Ionicons name={showAll ? 'star' : 'albums-outline'} size={15} color={colors.blue} />
+              <Text style={styles.filterToggleText}>{showAll ? 'Favoris' : `Tous (${group.decks.length})`}</Text>
+            </Pressable>
+          ) : null}
         </View>
 
-        {group.decks.map((deck) => <DeckCard key={deck.id} deck={deck} onOpen={onOpenDeck} />)}
+        {visibleDecks.map((deck) => <DeckCard key={deck.id} deck={deck} onOpen={onOpenDeck} onToggleFavorite={toggleFavorite} />)}
+
+        {!showAll && !favoriteDecks.length && group.decks.length ? (
+          <Pressable onPress={() => setShowAll(true)} style={styles.newDeckCard}>
+            <View style={styles.newDeckIcon}><Ionicons name="star-outline" size={24} color={colors.blue} /></View>
+            <View><Text style={styles.newDeckTitle}>Aucun paquet favori</Text><Text style={styles.newDeckCaption}>Affiche tous les paquets pour en choisir</Text></View>
+          </Pressable>
+        ) : null}
 
         <Pressable onPress={() => onCreate(group.name)} style={styles.newDeckCard}>
           <View style={styles.newDeckIcon}><Ionicons name="add" size={24} color={colors.blue} /></View>
@@ -1232,6 +1268,9 @@ const styles = StyleSheet.create({
   deckBody: { flex: 1, minWidth: 0 },
   deckTitleRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   deckTitle: { fontSize: 17, fontWeight: '800', color: colors.ink, flex: 1 },
+  starButton: { width: 34, height: 34, borderRadius: 12, backgroundColor: colors.blueSoft, alignItems: 'center', justifyContent: 'center', marginLeft: 10 },
+  filterToggle: { height: 36, paddingHorizontal: 12, borderRadius: 12, backgroundColor: colors.blueSoft, flexDirection: 'row', alignItems: 'center', gap: 6 },
+  filterToggleText: { fontSize: 12, fontWeight: '800', color: colors.blue },
   deckDescription: { fontSize: 13, color: colors.muted, marginTop: 3 },
   progressTrack: { height: 5, borderRadius: 3, backgroundColor: '#E8E9EC', overflow: 'hidden', marginTop: 13 },
   progressFill: { height: '100%', borderRadius: 3, backgroundColor: colors.blue },
