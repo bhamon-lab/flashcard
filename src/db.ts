@@ -87,6 +87,20 @@ export async function initializeDatabase() {
     await db.execAsync('CREATE INDEX IF NOT EXISTS decks_sync_idx ON decks(sync_id)');
   }
 
+  const syncedAnswerFix = await db.getFirstAsync<{ value: string }>(
+    "SELECT value FROM app_metadata WHERE key = 'synced-answer-field-fixed'",
+  );
+  if (!syncedAnswerFix) {
+    // Les anciennes synchros enregistraient la réponse dans `context` (affiché
+    // comme INDICE) en laissant `last_name` (RÉPONSE) vide.
+    await db.runAsync(
+      "UPDATE cards SET last_name = context, context = '' WHERE external_id IS NOT NULL AND last_name = '' AND context != ''",
+    );
+    await db.runAsync(
+      "INSERT INTO app_metadata (key, value) VALUES ('synced-answer-field-fixed', '1')",
+    );
+  }
+
   const demoRemoval = await db.getFirstAsync<{ value: string }>(
     "SELECT value FROM app_metadata WHERE key = 'demo-cards-removed'",
   );
@@ -335,14 +349,14 @@ export async function upsertSyncedDeck(deck: SyncedDeck): Promise<'created' | 'u
       );
       if (existingCard) {
         await db.runAsync(
-          "UPDATE cards SET first_name = ?, last_name = '', context = ?, photo_uri = '' WHERE id = ?",
+          "UPDATE cards SET first_name = ?, last_name = ?, context = '', photo_uri = '' WHERE id = ?",
           front, back, existingCard.id,
         );
         continue;
       }
       const insertedCard = await db.runAsync(
         `INSERT INTO cards (deck_id, first_name, last_name, context, photo_uri, external_id, created_at)
-         VALUES (?, ?, '', ?, '', ?, ?)`,
+         VALUES (?, ?, ?, '', '', ?, ?)`,
         deckId, front, back, externalId, Date.now(),
       );
       await db.runAsync('INSERT INTO progress (card_id) VALUES (?)', insertedCard.lastInsertRowId);
