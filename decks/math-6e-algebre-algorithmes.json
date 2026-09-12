@@ -1,0 +1,115 @@
+{
+  "id": "math-6e-algebre-algorithmes",
+  "title": "Maths · 6e · Égalités, motifs et instructions",
+  "description": "6e · 2026-2027 · Égalités, motifs et instructions. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#CDEAE0",
+  "daily_new_limit": 3,
+  "grade": "6e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "cycle3-2025",
+  "cards": [
+    {
+      "id": "egalite",
+      "front": "Que signifie le signe égal dans $8+4=3\\times4$ ?",
+      "back": "Les deux expressions représentent le même nombre, ici 12.",
+      "kind": "cours"
+    },
+    {
+      "id": "trou-additif",
+      "front": "Complète $\\square+17=42$.",
+      "back": "25, car $42-17=25$.",
+      "kind": "application"
+    },
+    {
+      "id": "trou-multiplicatif",
+      "front": "Complète $6\\times\\square=54$.",
+      "back": "9, car $54\\div6=9$.",
+      "kind": "application"
+    },
+    {
+      "id": "programme",
+      "front": "Choisir 5, le doubler, puis ajouter 3. Quel résultat obtient-on ?",
+      "back": "13 : $5\\times2=10$, puis $10+3=13$.",
+      "kind": "application"
+    },
+    {
+      "id": "inverse",
+      "front": "Un nombre est doublé, puis augmenté de 3. Le résultat est 19. Quel était ce nombre ?",
+      "back": "8 : on retire 3 à 19, puis on divise 16 par 2.",
+      "kind": "application"
+    },
+    {
+      "id": "formule",
+      "front": "Un cahier coûte 4 €. Comment exprimer le prix de N cahiers ?",
+      "back": "$4\\times N$ euros : N représente le nombre de cahiers.",
+      "kind": "application"
+    },
+    {
+      "id": "motif",
+      "front": "Une suite commence par 3 et augmente de 4 à chaque étape. Donne ses quatre premiers termes.",
+      "back": "3, 7, 11, 15.",
+      "kind": "application"
+    },
+    {
+      "id": "rang",
+      "front": "Un motif au rang n contient $2\\times n+1$ points. Combien au rang 6 ?",
+      "back": "13 points : $2\\times6+1=13$.",
+      "kind": "application"
+    },
+    {
+      "id": "regle-explicite",
+      "front": "Les trois nombres 2, 4, 6 suffisent-ils à imposer un unique nombre suivant ?",
+      "back": "Non. Il faut préciser la règle. Avec « ajouter 2 », le suivant est 8, mais d’autres règles existent.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "algorithme",
+      "front": "Qu’est-ce qu’un algorithme ?",
+      "back": "Une suite précise et ordonnée d’instructions permettant de réaliser une tâche ou de résoudre un problème.",
+      "kind": "cours"
+    },
+    {
+      "id": "ordre",
+      "front": "« Ajouter 3 puis doubler » donne-t-il toujours le même résultat que « doubler puis ajouter 3 » ?",
+      "back": "Non : en partant de 2, on obtient 10 dans le premier cas et 7 dans le second.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "repetition",
+      "front": "On répète 4 fois « avancer de 3 pas ». Combien de pas sont parcourus ?",
+      "back": "12 pas : $4\\times3=12$.",
+      "kind": "application"
+    },
+    {
+      "id": "carre",
+      "front": "Quel tracé obtient-on en répétant 4 fois « avancer de 5 cm, tourner à gauche de 90° », crayon baissé ?",
+      "back": "Un carré de côté 5 cm. Après quatre quarts de tour, on retrouve le point et la direction de départ.",
+      "kind": "application"
+    },
+    {
+      "id": "debogage",
+      "front": "Un robot doit avancer de 10 cases mais exécute 3 fois « avancer de 3 cases ». Quelle correction simple proposer ?",
+      "back": "Ajouter « avancer d’une case » après la répétition, car $3\\times3=9$.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "decomposition",
+      "front": "Pourquoi décomposer une tâche en petites instructions ?",
+      "back": "Pour pouvoir exécuter chaque étape sans ambiguïté et vérifier où une erreur apparaît.",
+      "kind": "cours"
+    },
+    {
+      "id": "modele-barres",
+      "kind": "application",
+      "front": "Lina a trois fois autant de billes que Sam. Ensemble, ils en ont 28. Combien Sam en a-t-il ?",
+      "back": "7. Représenter Sam par une part et Lina par trois parts : quatre parts valent 28, donc une part vaut $28\\div4=7$."
+    },
+    {
+      "id": "motif-allumettes",
+      "kind": "application",
+      "front": "On aligne des carrés en allumettes, deux voisins partageant un côté. Un carré utilise 4 allumettes. Combien pour 4 carrés ?",
+      "back": "13 : chaque nouveau carré ajoute 3 allumettes, donc $4+3+3+3=13$."
+    }
+  ]
+}

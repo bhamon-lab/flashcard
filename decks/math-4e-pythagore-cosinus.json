@@ -1,0 +1,103 @@
+{
+  "id": "math-4e-pythagore-cosinus",
+  "title": "Maths · 4e · Pythagore et cosinus",
+  "description": "4e · 2026-2027 · Pythagore et cosinus. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#E2D6F3",
+  "daily_new_limit": 3,
+  "grade": "4e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "attendus-4e-2020",
+  "cards": [
+    {
+      "id": "hypotenuse",
+      "front": "Comment repérer l’hypoténuse d’un triangle rectangle ?",
+      "back": "C’est le côté opposé à l’angle droit et le plus long côté du triangle.",
+      "kind": "cours"
+    },
+    {
+      "id": "theoreme",
+      "front": "ABC est rectangle en A. Écris le théorème de Pythagore.",
+      "back": "$BC^2=AB^2+AC^2$.",
+      "kind": "cours"
+    },
+    {
+      "id": "hypotenuse-calcul",
+      "front": "Un triangle rectangle a des côtés de l’angle droit de 6 et 8 cm. Calcule son hypoténuse.",
+      "back": "10 cm : $6^2+8^2=100$, puis $\\sqrt{100}=10$.",
+      "kind": "application"
+    },
+    {
+      "id": "cote-calcul",
+      "front": "Un triangle rectangle a une hypoténuse de 13 cm et un côté de 5 cm. Calcule l’autre côté.",
+      "back": "12 cm : $\\sqrt{13^2-5^2}=\\sqrt{144}=12$.",
+      "kind": "application"
+    },
+    {
+      "id": "valeur-exacte",
+      "front": "Les côtés de l’angle droit mesurent 2 et 3 cm. Donne l’hypoténuse exacte.",
+      "back": "$\\sqrt{13}$ cm, car $2^2+3^2=13$.",
+      "kind": "application"
+    },
+    {
+      "id": "reciproque",
+      "front": "Comment prouver qu’un triangle est rectangle à partir des longueurs de ses côtés ?",
+      "back": "Vérifier que le carré du plus long côté égale la somme des carrés des deux autres, puis appliquer la réciproque de Pythagore.",
+      "kind": "cours"
+    },
+    {
+      "id": "reciproque-calcul",
+      "front": "Un triangle de côtés 5, 12 et 13 cm est-il rectangle ?",
+      "back": "Oui : $13^2=169$ et $5^2+12^2=169$. L’angle droit est opposé au côté de 13 cm.",
+      "kind": "application"
+    },
+    {
+      "id": "non-rectangle",
+      "front": "Un triangle de côtés 4, 6 et 7 cm est-il rectangle ?",
+      "back": "Non : $7^2=49$ mais $4^2+6^2=52$. L’égalité de Pythagore n’est pas vérifiée.",
+      "kind": "application"
+    },
+    {
+      "id": "condition",
+      "front": "Peut-on utiliser Pythagore pour calculer un côté de n’importe quel triangle ?",
+      "back": "Non : il faut savoir que le triangle est rectangle. La réciproque sert, elle, à établir ce caractère.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "cosinus",
+      "front": "Dans un triangle rectangle, quel rapport donne le cosinus d’un angle aigu ?",
+      "back": "$\\cos(\\alpha)=\\frac{\\text{côté adjacent}}{\\text{hypoténuse}}$. Le côté adjacent est le côté de l’angle qui n’est pas l’hypoténuse.",
+      "kind": "cours"
+    },
+    {
+      "id": "cosinus-calcul",
+      "front": "Un angle aigu a un côté adjacent de 6 cm et une hypoténuse de 10 cm. Quel est son cosinus ?",
+      "back": "$\\frac{6}{10}=0{,}6$.",
+      "kind": "application"
+    },
+    {
+      "id": "adjacent",
+      "front": "Dans un triangle rectangle, $\\cos(\\alpha)=0{,}8$ et l’hypoténuse vaut 15 cm. Calcule le côté adjacent.",
+      "back": "12 cm : $15\\times0{,}8=12$.",
+      "kind": "application"
+    },
+    {
+      "id": "angle",
+      "front": "Le cosinus d’un angle aigu vaut 0,5. Quelle est sa mesure en degrés ?",
+      "back": "60°. On peut la retrouver avec la fonction cosinus inverse, calculatrice réglée en degrés.",
+      "kind": "application"
+    },
+    {
+      "id": "borne",
+      "front": "Le cosinus d’un angle aigu d’un triangle rectangle peut-il valoir 1,2 ?",
+      "back": "Non : le côté adjacent est plus court que l’hypoténuse, donc ce rapport est strictement entre 0 et 1.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "choix",
+      "front": "On connaît un angle aigu et l’hypoténuse ; on cherche le côté adjacent. Quel outil utiliser ?",
+      "back": "Le cosinus : côté adjacent = hypoténuse × cosinus de l’angle.",
+      "kind": "application"
+    }
+  ]
+}

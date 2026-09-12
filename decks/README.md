@@ -4,6 +4,19 @@ Ce dossier stocke les paquets de cartes synchronisés par l'application.
 Chaque fichier `.json` devient un paquet disponible sur l'écran d'accueil,
 synchronisé à l'ouverture de l'app (ou en tirant la liste vers le bas).
 
+## Mathématiques du collège
+
+Le catalogue 2026-2027 contient **38 decks et 600 cartes** : 138 en 6e,
+150 en 5e, 154 en 4e et 158 en 3e. Les titres commencent par la classe.
+Consulter le [guide des contenus, sources et prérequis](../docs/college-2026-2027.md)
+et le [graphe de progression](../curriculum/college-2026-2027.json).
+
+Les champs éditoriaux `grade`, `school_year`, `curriculum_reference` et
+`cards[].kind` sont conservés dans les fichiers, mais ignorés par le synchroniseur
+actuel. L'arbre est documenté ; il n'est pas encore affiché dans l'application.
+
+Vérifier le catalogue avec `python3 scripts/validate_college_decks.py`.
+
 ## Format
 
 ```json

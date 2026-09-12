@@ -1,0 +1,103 @@
+{
+  "id": "math-3e-arithmetique",
+  "title": "Maths · 3e · Arithmétique et nombres rationnels",
+  "description": "3e · 2026-2027 · Arithmétique et nombres rationnels. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#F5DFC5",
+  "daily_new_limit": 3,
+  "grade": "3e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "attendus-3e-2020",
+  "cards": [
+    {
+      "id": "rationnel",
+      "front": "Qu’est-ce qu’un nombre rationnel ?",
+      "back": "Un nombre qui peut s’écrire comme le quotient de deux entiers, avec un dénominateur non nul.",
+      "kind": "cours"
+    },
+    {
+      "id": "decimal-rationnel",
+      "front": "Écris $0{,}375$ comme fraction irréductible.",
+      "back": "$\\frac{375}{1000}=\\frac{3}{8}$.",
+      "kind": "application"
+    },
+    {
+      "id": "irreductible",
+      "front": "Quand une fraction est-elle irréductible ?",
+      "back": "Quand son numérateur et son dénominateur n’ont aucun diviseur positif commun autre que 1.",
+      "kind": "cours"
+    },
+    {
+      "id": "decomposition",
+      "front": "Décompose 126 en produit de facteurs premiers.",
+      "back": "$126=2\\times3^2\\times7$.",
+      "kind": "application"
+    },
+    {
+      "id": "simplification",
+      "front": "Rends $\\frac{84}{126}$ irréductible.",
+      "back": "$\\frac{2}{3}$, en divisant numérateur et dénominateur par 42.",
+      "kind": "application"
+    },
+    {
+      "id": "commun",
+      "front": "Quel est le plus grand diviseur commun de 36 et 48 ?",
+      "back": "12 : les diviseurs communs sont 1, 2, 3, 4, 6 et 12.",
+      "kind": "application"
+    },
+    {
+      "id": "partage",
+      "front": "On répartit 36 biscuits et 48 bonbons en un maximum de sachets identiques, sans reste. Combien de sachets ?",
+      "back": "12 sachets : 12 est le plus grand diviseur commun. Chacun contient 3 biscuits et 4 bonbons.",
+      "kind": "application"
+    },
+    {
+      "id": "periodicite",
+      "front": "Deux lumières clignotent toutes les 12 s et toutes les 18 s. Après un clignotement commun, quand se retrouvent-elles pour la première fois ?",
+      "back": "36 s plus tard : 36 est le plus petit multiple strictement positif commun à 12 et 18.",
+      "kind": "application"
+    },
+    {
+      "id": "multiples",
+      "front": "Donne les multiples de 15 compris entre 40 et 80.",
+      "back": "45, 60 et 75.",
+      "kind": "application"
+    },
+    {
+      "id": "divisibilite",
+      "front": "Un entier est divisible par 9. Est-il forcément divisible par 3 ?",
+      "back": "Oui, car $9=3\\times3$. Tout multiple de 9 est donc un multiple de 3.",
+      "kind": "application"
+    },
+    {
+      "id": "reciproque",
+      "front": "Un entier divisible par 3 est-il forcément divisible par 9 ?",
+      "back": "Non : 12 est divisible par 3, mais pas par 9.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "preuve-pair",
+      "front": "Pourquoi le produit de deux entiers consécutifs est-il pair ?",
+      "back": "Parmi deux entiers consécutifs, l’un est pair. Leur produit contient donc un facteur 2.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "somme-premiers",
+      "front": "La somme de deux nombres premiers est-elle toujours première ?",
+      "back": "Non : $3+5=8$, qui n’est pas premier.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "calcul-exact",
+      "front": "Calcule exactement $\\frac{7}{9}\\div\\frac{14}{15}$.",
+      "back": "$\\frac{7}{9}\\times\\frac{15}{14}=\\frac{5}{6}$ après simplification.",
+      "kind": "application"
+    },
+    {
+      "id": "scientifique-produit",
+      "front": "Écris $(3\\times10^5)\\times(4\\times10^{-2})$ en notation scientifique.",
+      "back": "$1{,}2\\times10^4$ : le produit vaut $12\\times10^3$.",
+      "kind": "application"
+    }
+  ]
+}

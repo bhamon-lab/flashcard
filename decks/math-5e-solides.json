@@ -1,0 +1,103 @@
+{
+  "id": "math-5e-solides",
+  "title": "Maths · 5e · Disques, prismes et cylindres",
+  "description": "5e · 2026-2027 · Disques, prismes et cylindres. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 3,
+  "grade": "5e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "cycle4-2026-5e",
+  "cards": [
+    {
+      "id": "aire-disque",
+      "front": "Quelle est l’aire d’un disque de rayon r ?",
+      "back": "$\\pi r^2$. Les unités d’aire sont carrées.",
+      "kind": "cours"
+    },
+    {
+      "id": "disque",
+      "front": "Calcule l’aire exacte d’un disque de rayon 3 cm.",
+      "back": "$9\\pi$ cm², car $\\pi\\times3^2=9\\pi$.",
+      "kind": "application"
+    },
+    {
+      "id": "diametre-piege",
+      "front": "Pour un disque de diamètre 8 cm, faut-il calculer $\\pi\\times8^2$ ?",
+      "back": "Non : le rayon vaut 4 cm, donc l’aire vaut $16\\pi$ cm².",
+      "kind": "comprehension"
+    },
+    {
+      "id": "prisme",
+      "front": "Comment reconnaître un prisme droit ?",
+      "back": "Il possède deux bases polygonales superposables et parallèles, reliées par des faces latérales rectangulaires.",
+      "kind": "cours"
+    },
+    {
+      "id": "volume-prisme",
+      "front": "Quelle est la formule du volume d’un prisme droit ?",
+      "back": "Aire de la base × hauteur : $V=B h$.",
+      "kind": "cours"
+    },
+    {
+      "id": "pave",
+      "front": "Calcule le volume d’un pavé droit de 5 cm sur 3 cm sur 2 cm.",
+      "back": "30 cm³ : $5\\times3\\times2=30$.",
+      "kind": "application"
+    },
+    {
+      "id": "cube",
+      "front": "Calcule le volume d’un cube de 4 cm de côté.",
+      "back": "64 cm³ : $4^3=64$.",
+      "kind": "application"
+    },
+    {
+      "id": "prisme-triangulaire",
+      "front": "Un prisme droit a une base d’aire 12 cm² et une hauteur de 7 cm. Quel est son volume ?",
+      "back": "84 cm³ : $12\\times7=84$.",
+      "kind": "application"
+    },
+    {
+      "id": "cylindre",
+      "front": "Quelle est la formule du volume d’un cylindre de révolution de rayon r et de hauteur h ?",
+      "back": "$V=\\pi r^2h$ : aire du disque de base × hauteur.",
+      "kind": "cours"
+    },
+    {
+      "id": "volume-cylindre",
+      "front": "Un cylindre a un rayon de 2 cm et une hauteur de 5 cm. Donne son volume exact.",
+      "back": "$20\\pi$ cm³ : $\\pi\\times2^2\\times5=20\\pi$.",
+      "kind": "application"
+    },
+    {
+      "id": "patron-cylindre",
+      "front": "De quelles figures se compose un patron usuel de cylindre ?",
+      "back": "Deux disques identiques et un rectangle dont les dimensions sont la hauteur et la longueur du cercle de base.",
+      "kind": "cours"
+    },
+    {
+      "id": "litre",
+      "front": "Quel volume en dm³ correspond à 1 litre ?",
+      "back": "1 dm³. De même, 1 mL = 1 cm³.",
+      "kind": "cours"
+    },
+    {
+      "id": "conversion-cube",
+      "front": "Convertis 2 dm³ en cm³.",
+      "back": "2000 cm³ : $1\\text{ dm}^3=10^3\\text{ cm}^3=1000\\text{ cm}^3$.",
+      "kind": "application"
+    },
+    {
+      "id": "metre-cube",
+      "front": "Combien de litres contient 0,3 m³ ?",
+      "back": "300 L : $1\\text{ m}^3=1000$ L.",
+      "kind": "application"
+    },
+    {
+      "id": "perspective",
+      "front": "Pourquoi dessine-t-on parfois certaines arêtes en pointillés dans une perspective cavalière ?",
+      "back": "Pour signaler les arêtes cachées. Elles existent même si elles ne sont pas visibles depuis le point de vue choisi.",
+      "kind": "comprehension"
+    }
+  ]
+}

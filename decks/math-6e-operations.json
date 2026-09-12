@@ -1,0 +1,103 @@
+{
+  "id": "math-6e-operations",
+  "title": "Maths · 6e · Opérations et problèmes",
+  "description": "6e · 2026-2027 · Opérations et problèmes. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#CDEAE0",
+  "daily_new_limit": 3,
+  "grade": "6e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "cycle3-2025",
+  "cards": [
+    {
+      "id": "somme",
+      "front": "Calcule $12{,}8+3{,}45$.",
+      "back": "$16{,}25$. On additionne les chiffres de même rang.",
+      "kind": "application"
+    },
+    {
+      "id": "difference",
+      "front": "Calcule $8-2{,}75$.",
+      "back": "$5{,}25$, en écrivant $8=8{,}00$.",
+      "kind": "application"
+    },
+    {
+      "id": "produit",
+      "front": "Calcule $1{,}2\\times0{,}4$.",
+      "back": "$0{,}48$ : $12\\times4=48$ et les facteurs sont divisés par 10 chacun.",
+      "kind": "application"
+    },
+    {
+      "id": "multiplier-reduit",
+      "front": "Multiplier un nombre positif par $0{,}5$ le rend-il plus grand ?",
+      "back": "Non : on en prend la moitié. Par exemple $8\\times0{,}5=4$.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "division",
+      "front": "Calcule $14{,}7\\div3$.",
+      "back": "$4{,}9$, car $3\\times4{,}9=14{,}7$.",
+      "kind": "application"
+    },
+    {
+      "id": "euclidienne",
+      "front": "Quelle condition doit respecter le reste d’une division euclidienne ?",
+      "back": "Il est positif ou nul et strictement inférieur au diviseur : $0\\leq r<b$ pour un diviseur $b>0$.",
+      "kind": "cours"
+    },
+    {
+      "id": "reste",
+      "front": "Donne le quotient et le reste de la division euclidienne de 89 par 7.",
+      "back": "Quotient 12, reste 5 : $89=7\\times12+5$.",
+      "kind": "application"
+    },
+    {
+      "id": "autocars",
+      "front": "53 élèves voyagent dans des minibus de 8 places. Combien de minibus faut-il au minimum ?",
+      "back": "7. Six minibus transportent 48 élèves ; il en faut un de plus pour les 5 restants.",
+      "kind": "application"
+    },
+    {
+      "id": "partage",
+      "front": "On partage 18 € également entre 4 personnes. Quelle somme reçoit chacune ?",
+      "back": "$4{,}50$ €, car $18\\div4=4{,}5$.",
+      "kind": "application"
+    },
+    {
+      "id": "prix",
+      "front": "Des pommes coûtent 2,40 € le kilogramme. Quel est le prix de 1,5 kg ?",
+      "back": "$3{,}60$ €, car $2{,}4\\times1{,}5=3{,}6$.",
+      "kind": "application"
+    },
+    {
+      "id": "estimation",
+      "front": "Un élève trouve $19{,}8\\times4{,}9=970{,}2$. Pourquoi ce résultat est-il invraisemblable ?",
+      "back": "Le produit est proche de $20\\times5=100$, pas de 1000. Le résultat exact est $97{,}02$.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "diviseur",
+      "front": "Que signifie « 6 est un diviseur de 42 » ?",
+      "back": "42 est le produit de 6 par un entier : $42=6\\times7$. La division euclidienne a un reste nul.",
+      "kind": "cours"
+    },
+    {
+      "id": "multiple",
+      "front": "Donne les trois premiers multiples strictement positifs de 9.",
+      "back": "9, 18 et 27 : $9\\times1$, $9\\times2$, $9\\times3$.",
+      "kind": "application"
+    },
+    {
+      "id": "divisibilite-cinq",
+      "front": "Comment reconnaître un entier divisible par 5 ?",
+      "back": "Son chiffre des unités est 0 ou 5.",
+      "kind": "cours"
+    },
+    {
+      "id": "probleme-deux-etapes",
+      "front": "Tu achètes 3 cahiers à 2,50 € et paies avec 10 €. Quelle monnaie reçoit-on ?",
+      "back": "$2{,}50$ € : $10-3\\times2{,}50=2{,}50$.",
+      "kind": "application"
+    }
+  ]
+}

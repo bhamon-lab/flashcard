@@ -1,0 +1,103 @@
+{
+  "id": "math-3e-equations",
+  "title": "Maths · 3e · Équations et problèmes",
+  "description": "3e · 2026-2027 · Équations et problèmes. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#F5DFC5",
+  "daily_new_limit": 3,
+  "grade": "3e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "attendus-3e-2020",
+  "cards": [
+    {
+      "id": "premier-degre",
+      "front": "Résous $7x-5=3x+11$.",
+      "back": "$x=4$ : $4x=16$.",
+      "kind": "application"
+    },
+    {
+      "id": "parentheses",
+      "front": "Résous $3(2x-1)=4x+9$.",
+      "back": "$x=6$ : $6x-3=4x+9$, donc $2x=12$.",
+      "kind": "application"
+    },
+    {
+      "id": "produit-nul",
+      "front": "À quelle condition un produit de deux nombres est-il nul ?",
+      "back": "Si et seulement si au moins un des deux facteurs est nul.",
+      "kind": "cours"
+    },
+    {
+      "id": "produit-application",
+      "front": "Résous $(x-4)(x+7)=0$.",
+      "back": "$x=4$ ou $x=-7$.",
+      "kind": "application"
+    },
+    {
+      "id": "produit-coefficients",
+      "front": "Résous $(2x-3)(5x+1)=0$.",
+      "back": "$x=\\frac{3}{2}$ ou $x=-\\frac{1}{5}$.",
+      "kind": "application"
+    },
+    {
+      "id": "factoriser-resoudre",
+      "front": "Résous $x^2-25=0$.",
+      "back": "$(x-5)(x+5)=0$, donc $x=5$ ou $x=-5$.",
+      "kind": "application"
+    },
+    {
+      "id": "carre-positif",
+      "front": "Résous $x^2=12$ dans les réels.",
+      "back": "$x=\\sqrt{12}$ ou $x=-\\sqrt{12}$.",
+      "kind": "application"
+    },
+    {
+      "id": "carre-nul",
+      "front": "Résous $x^2=0$.",
+      "back": "$x=0$ uniquement.",
+      "kind": "application"
+    },
+    {
+      "id": "carre-negatif",
+      "front": "Résous $x^2=-4$ dans les réels.",
+      "back": "Aucune solution : le carré d’un réel est toujours positif ou nul.",
+      "kind": "application"
+    },
+    {
+      "id": "ne-pas-diviser",
+      "front": "Dans $x(x-3)=0$, pourquoi ne faut-il pas diviser directement par x ?",
+      "back": "x peut être nul : on perdrait la solution 0. Les solutions sont 0 et 3.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "non-produit-nul",
+      "front": "Peut-on appliquer la règle du produit nul à $(x-1)(x+2)=6$ ?",
+      "back": "Non : le produit n’est pas égal à zéro. Il faut d’abord transformer l’équation.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "probleme-prix",
+      "front": "Le tarif A est 8 € plus 3 € par séance, le tarif B est 5 € par séance. Pour combien de séances les coûts sont-ils égaux ?",
+      "back": "4 séances : $8+3x=5x$, donc $2x=8$.",
+      "kind": "application"
+    },
+    {
+      "id": "longueur-positive",
+      "front": "Un carré a une aire de 81 cm². Quelle est la longueur de son côté ?",
+      "back": "9 cm. L’équation $x^2=81$ donne ±9, mais une longueur est positive.",
+      "kind": "application"
+    },
+    {
+      "id": "verifier",
+      "front": "Après avoir résolu un problème par une équation, que doit-on vérifier ?",
+      "back": "Que la valeur satisfait l’équation initiale et les contraintes du problème, puis donner une réponse avec l’unité adaptée.",
+      "kind": "cours"
+    },
+    {
+      "id": "aucune-solution",
+      "front": "Résous $2x+3=2x+8$.",
+      "back": "Aucune solution : retirer $2x$ donne $3=8$, ce qui est impossible.",
+      "kind": "application"
+    }
+  ]
+}

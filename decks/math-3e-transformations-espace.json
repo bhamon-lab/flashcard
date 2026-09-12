@@ -1,0 +1,133 @@
+{
+  "id": "math-3e-transformations-espace",
+  "title": "Maths · 3e · Transformations, sphères et volumes",
+  "description": "3e · 2026-2027 · Transformations, sphères et volumes. Cours, applications et raisonnements courts.",
+  "format": "math",
+  "color": "#F5DFC5",
+  "daily_new_limit": 3,
+  "grade": "3e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "attendus-3e-2020",
+  "cards": [
+    {
+      "id": "rotation",
+      "front": "Quels éléments définissent une rotation ?",
+      "back": "Un centre, un angle et un sens de rotation.",
+      "kind": "cours"
+    },
+    {
+      "id": "rotation-distance",
+      "front": "A est à 6 cm du centre O d’une rotation. À quelle distance de O se trouve son image ?",
+      "back": "6 cm. La rotation conserve la distance au centre.",
+      "kind": "application"
+    },
+    {
+      "id": "homothetie",
+      "front": "Comment construire l’image A′ d’un point A par une homothétie de centre O et de rapport $k>0$ ?",
+      "back": "A′ est sur la demi-droite [OA) et $OA'=k\\times OA$ ; O reste fixe.",
+      "kind": "cours"
+    },
+    {
+      "id": "rapport-negatif",
+      "front": "Que change un rapport d’homothétie négatif ?",
+      "back": "Pour A distinct de O, l’image se trouve de l’autre côté de O sur (OA), avec une distance multipliée par la valeur absolue du rapport.",
+      "kind": "cours"
+    },
+    {
+      "id": "longueur",
+      "front": "Un segment de 8 cm subit une homothétie de rapport −0,5. Quelle est la longueur de son image ?",
+      "back": "4 cm : les longueurs sont multipliées par 0,5, même si le rapport est négatif.",
+      "kind": "application"
+    },
+    {
+      "id": "aire",
+      "front": "Une figure d’aire 12 cm² subit une homothétie de rapport 3. Quelle est la nouvelle aire ?",
+      "back": "108 cm² : $12\\times3^2=108$.",
+      "kind": "application"
+    },
+    {
+      "id": "volume",
+      "front": "Un solide de volume 40 cm³ subit une homothétie de rapport 0,5. Quel est son nouveau volume ?",
+      "back": "5 cm³ : $40\\times0{,}5^3=5$.",
+      "kind": "application"
+    },
+    {
+      "id": "sphere-boule",
+      "front": "Quelle différence entre une sphère et une boule de centre O et de rayon r ?",
+      "back": "La sphère est la surface des points à distance r de O ; la boule contient tous les points à distance inférieure ou égale à r.",
+      "kind": "cours"
+    },
+    {
+      "id": "volume-boule",
+      "front": "Quelle est la formule du volume d’une boule de rayon r ?",
+      "back": "$V=\\frac{4}{3}\\pi r^3$.",
+      "kind": "cours"
+    },
+    {
+      "id": "boule-calcul",
+      "front": "Quel est le volume exact d’une boule de rayon 3 cm ?",
+      "back": "$36\\pi$ cm³ : $\\frac{4}{3}\\pi\\times27$.",
+      "kind": "application"
+    },
+    {
+      "id": "assemblage",
+      "front": "Un cylindre de rayon 3 cm et hauteur 4 cm porte une demi-boule de même rayon, sans chevauchement intérieur. Quel volume total ?",
+      "back": "$54\\pi$ cm³ : cylindre $36\\pi$, demi-boule $18\\pi$.",
+      "kind": "application"
+    },
+    {
+      "id": "section",
+      "front": "Quelle est la section d’une boule par un plan passant par son centre ?",
+      "back": "Un disque de même rayon que la boule. La section de la sphère correspondante est le cercle de bord.",
+      "kind": "cours"
+    },
+    {
+      "id": "latitude",
+      "front": "Que repère la latitude d’un point sur la Terre ?",
+      "back": "Sa position angulaire au nord ou au sud de l’équateur, entre 0° et 90°.",
+      "kind": "cours"
+    },
+    {
+      "id": "longitude",
+      "front": "Que repère la longitude d’un point sur la Terre ?",
+      "back": "Sa position angulaire à l’est ou à l’ouest du méridien de référence, entre 0° et 180°.",
+      "kind": "cours"
+    },
+    {
+      "id": "coordonnees-terre",
+      "front": "Un point est à 30° S et 60° E. Dans quels hémisphères est-il ?",
+      "back": "Dans l’hémisphère sud et à l’est du méridien de référence.",
+      "kind": "application"
+    },
+    {
+      "id": "volume-unites",
+      "front": "Pourquoi convertir les longueurs dans une même unité avant de calculer un volume ?",
+      "back": "Pour que leur produit corresponde à une unité cubique cohérente. Multiplier directement des mètres par des centimètres donne un résultat à convertir.",
+      "kind": "comprehension"
+    },
+    {
+      "id": "masse-volumique",
+      "kind": "application",
+      "front": "Un matériau a une masse de 540 g pour un volume de 200 cm³. Calcule sa masse volumique.",
+      "back": "$2{,}7$ g/cm³ : masse divisée par volume, soit $540\\div200$."
+    },
+    {
+      "id": "conversion-masse-volumique",
+      "kind": "application",
+      "front": "Convertis 1 g/cm³ en kg/m³.",
+      "back": "1000 kg/m³ : 1 g = 0,001 kg et 1 cm³ = 0,000001 m³, donc $0{,}001\\div0{,}000001=1000$."
+    },
+    {
+      "id": "section-cylindre",
+      "kind": "cours",
+      "front": "Quelle est la section d’un cylindre de révolution plein par un plan parallèle à ses bases et situé entre elles ?",
+      "back": "Un disque de même rayon que les bases."
+    },
+    {
+      "id": "distance-reaction",
+      "kind": "application",
+      "front": "Un véhicule roule à 90 km/h. Quelle distance parcourt-il pendant une seconde à cette vitesse ?",
+      "back": "25 m : $90\\div3{,}6=25$ m/s, puis $25\\times1=25$ m."
+    }
+  ]
+}
