@@ -29,6 +29,7 @@ import {
   getDecksByIds,
   getNewCards,
   getSessionCards,
+  getStatsSnapshot,
   getSubjectPrefs,
   initializeDatabase,
   markCardSeen,
@@ -45,12 +46,14 @@ import { syncDecks } from './src/sync';
 import { checkForAppUpdate } from './src/app-update';
 import { Card, Deck, ReviewDelay, ReviewDelays } from './src/types';
 import { insertLaterInQueue } from './src/sessionQueue';
+import type { StatsSnapshot } from './src/db';
 
 type Route =
   | { name: 'home' }
   | { name: 'subject'; subject: string }
   | { name: 'deck'; deckId: number }
   | { name: 'settings'; deckId: number }
+  | { name: 'stats' }
   | { name: 'study'; deckIds: number[]; newCardAllowance: number };
 
 /** True si la chaîne contient du LaTeX à rendre ($…$ ou $$…$$). */
@@ -191,7 +194,7 @@ function DeckCard({ deck, onOpen }: { deck: Deck; onOpen: (id: number) => void }
   );
 }
 
-function HomeScreen({ onOpenSubject, onStudy }: { onOpenSubject: (subject: string) => void; onStudy: (deckIds: number[], newCardAllowance: number) => void }) {
+function HomeScreen({ onOpenSubject, onStudy, onOpenStats }: { onOpenSubject: (subject: string) => void; onStudy: (deckIds: number[], newCardAllowance: number) => void; onOpenStats: () => void }) {
   const [decks, setDecks] = useState<Deck[]>([]);
   const [prefs, setPrefs] = useState<{ hidden: string[]; custom: string[] }>({ hidden: [], custom: [] });
   const [refreshing, setRefreshing] = useState(false);
@@ -266,7 +269,10 @@ function HomeScreen({ onOpenSubject, onStudy }: { onOpenSubject: (subject: strin
             <Text style={styles.eyebrow}>MÉMENTO · MATIÈRES</Text>
             <Text style={styles.heroTitle}>Tout ce qui{`\n`}reste en tête.</Text>
           </View>
-          <View style={styles.avatar}><Ionicons name="school" size={20} color={colors.blue} /></View>
+          <View style={styles.homeHeaderActions}>
+            <IconButton name="stats-chart" label="Statistiques" onPress={onOpenStats} />
+            <View style={styles.avatar}><Ionicons name="school" size={20} color={colors.blue} /></View>
+          </View>
         </View>
 
         <View style={styles.todayCard}>
@@ -694,6 +700,126 @@ function DeckSettingsScreen({ deckId, onBack }: { deckId: number; onBack: () => 
         </View>
         <Text style={styles.settingsHint}>0 minute remet la carte immédiatement dans la file. Les changements s’appliqueront à la prochaine réponse.</Text>
         <PrimaryButton label={saving ? 'Enregistrement…' : 'Enregistrer les réglages'} icon="checkmark" disabled={saving} onPress={save} />
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
+
+function StatsScreen({ onBack }: { onBack: () => void }) {
+  const [stats, setStats] = useState<StatsSnapshot | null>(null);
+  useEffect(() => { void getStatsSnapshot().then(setStats).catch(console.error); }, []);
+  if (!stats) return <View style={styles.loading}><ActivityIndicator color={colors.blue} /></View>;
+
+  const breakdownTotal = stats.breakdownToday.again + stats.breakdownToday.soon + stats.breakdownToday.later + stats.breakdownToday.tomorrow;
+  const mastery = breakdownTotal ? Math.round(((stats.breakdownToday.later + stats.breakdownToday.tomorrow) / breakdownTotal) * 100) : 0;
+  const newCards = Math.max(0, stats.totalCards - stats.learnedCards);
+  const learnedPercent = stats.totalCards ? Math.round((stats.learnedCards / stats.totalCards) * 100) : 0;
+  const maxReviews = Math.max(1, ...stats.history.map((day) => day.reviews));
+  const todayKey = stats.history[stats.history.length - 1]?.day;
+  const weekDays = ['D', 'L', 'M', 'M', 'J', 'V', 'S'];
+
+  const breakdownRows: Array<{ key: keyof StatsSnapshot['breakdownToday']; label: string; icon: keyof typeof Ionicons.glyphMap; tint: string; fg: string }> = [
+    { key: 'again', label: 'À la suite', icon: 'refresh', tint: colors.redSoft, fg: colors.red },
+    { key: 'soon', label: 'Encore bientôt', icon: 'timer-outline', tint: colors.yellowSoft, fg: '#9A7412' },
+    { key: 'later', label: 'Plus tard', icon: 'time-outline', tint: colors.blueSoft, fg: colors.blue },
+    { key: 'tomorrow', label: 'Demain', icon: 'calendar-outline', tint: colors.greenSoft, fg: colors.green },
+  ];
+
+  return (
+    <SafeAreaView style={styles.screen} edges={['top']}>
+      <ScrollView contentContainerStyle={styles.page}>
+        <View style={styles.topBar}>
+          <IconButton name="arrow-back" label="Retour" onPress={onBack} />
+          <Text style={styles.topBarTitle}>Statistiques</Text>
+          <View style={{ width: 44 }} />
+        </View>
+
+        <View style={styles.statsBoard}>
+          <Grid tint={colors.gridChalk} step={28} />
+          <View style={styles.statsBoardRow}>
+            <View style={styles.statsBoardCell}>
+              <Text style={styles.statsBoardLabel}>CARTES VUES AUJOURD’HUI</Text>
+              <Text style={styles.statsBoardNumber}>{stats.cardsSeenToday}</Text>
+              <Text style={styles.statsBoardCaption}>{stats.reviewsToday} réponse{stats.reviewsToday > 1 ? 's' : ''} enregistrée{stats.reviewsToday > 1 ? 's' : ''}</Text>
+            </View>
+            <View style={styles.statsBoardDivider} />
+            <View style={styles.statsBoardCell}>
+              <Text style={styles.statsBoardLabel}>CARTES APPRISES</Text>
+              <Text style={styles.statsBoardNumber}>{stats.learnedToday}</Text>
+              <Text style={styles.statsBoardCaption}>nouvelles · « Plus tard » ou « Demain »</Text>
+            </View>
+          </View>
+        </View>
+
+        <View style={styles.statsPillRow}>
+          <View style={styles.statsPill}><Ionicons name="flame-outline" size={15} color={colors.red} /><Text style={styles.statsPillText}>{stats.streakDays} jour{stats.streakDays > 1 ? 's' : ''} de série</Text></View>
+          <View style={styles.statsPill}><Ionicons name="albums-outline" size={15} color={colors.blue} /><Text style={styles.statsPillText}>{stats.dueCards} à revoir</Text></View>
+          <View style={styles.statsPill}><Ionicons name="sparkles-outline" size={15} color="#9A7412" /><Text style={styles.statsPillText}>{stats.newSeenToday} nouvelle{stats.newSeenToday > 1 ? 's' : ''}</Text></View>
+        </View>
+
+        {!stats.reviewsToday ? (
+          <Text style={styles.statsHint}>Aucune révision aujourd’hui : lance une session pour alimenter ton tableau.</Text>
+        ) : null}
+
+        <View style={styles.sectionHeaderCompact}>
+          <View>
+            <Text style={styles.sectionTitle}>Cette semaine</Text>
+            <Text style={styles.sectionCaption}>Réponses des 7 derniers jours</Text>
+          </View>
+        </View>
+        <View style={styles.chartCard}>
+          {stats.history.map((day) => {
+            const date = new Date(`${day.day}T12:00:00`);
+            const isToday = day.day === todayKey;
+            const height = day.reviews ? Math.max(8, Math.round((day.reviews / maxReviews) * 92)) : 4;
+            const barColor = !day.reviews ? '#E4E5E9' : isToday ? colors.blue : '#B9C4F0';
+            return (
+              <View key={day.day} style={styles.chartColumn}>
+                <Text style={styles.chartValue}>{day.reviews || ''}</Text>
+                <View style={styles.chartBarTrack}><View style={[styles.chartBar, { height, backgroundColor: barColor }]} /></View>
+                <Text style={[styles.chartLabel, isToday && styles.chartLabelToday]}>{weekDays[date.getDay()]}</Text>
+              </View>
+            );
+          })}
+        </View>
+
+        <View style={styles.sectionHeaderCompact}>
+          <View>
+            <Text style={styles.sectionTitle}>Réponses du jour</Text>
+            <Text style={styles.sectionCaption}>{mastery}% « Plus tard » ou « Demain » : tu maîtrises</Text>
+          </View>
+        </View>
+        <View style={styles.timerList}>
+          {breakdownRows.map((row, index) => (
+            <View key={row.key} style={[styles.timerRow, index < breakdownRows.length - 1 && styles.timerRowBorder]}>
+              <View style={[styles.timerIcon, { backgroundColor: row.tint }]}><Ionicons name={row.icon} size={20} color={row.fg} /></View>
+              <View style={styles.timerCopy}>
+                <Text style={styles.timerTitle}>{row.label}</Text>
+                <Text style={styles.timerNote}>{breakdownTotal ? `${Math.round((stats.breakdownToday[row.key] / breakdownTotal) * 100)} % des réponses` : 'Aucune réponse aujourd’hui'}</Text>
+              </View>
+              <Text style={styles.statsCount}>{stats.breakdownToday[row.key]}</Text>
+            </View>
+          ))}
+        </View>
+
+        <View style={styles.sectionHeaderCompact}>
+          <View>
+            <Text style={styles.sectionTitle}>Progression globale</Text>
+            <Text style={styles.sectionCaption}>{stats.totalCards} carte{stats.totalCards > 1 ? 's' : ''} au total</Text>
+          </View>
+        </View>
+        <View style={styles.sessionPanel}>
+          <Text style={styles.statsGlobalValue}>{learnedPercent}%</Text>
+          <Text style={styles.statsGlobalCaption}>des cartes ont été ouvertes au moins une fois</Text>
+          <View style={styles.progressTrack}><View style={[styles.progressFill, { width: `${learnedPercent}%` }]} /></View>
+          <View style={styles.statRow}>
+            <View style={styles.stat}><Text style={styles.statValue}>{stats.learnedCards}</Text><Text style={styles.statLabel}>Apprises</Text></View>
+            <View style={styles.statDivider} />
+            <View style={styles.stat}><Text style={styles.statValue}>{newCards}</Text><Text style={styles.statLabel}>Nouvelles</Text></View>
+            <View style={styles.statDivider} />
+            <View style={styles.stat}><Text style={styles.statValue}>{stats.dueCards}</Text><Text style={styles.statLabel}>À revoir</Text></View>
+          </View>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -1149,7 +1275,7 @@ function AppContent() {
     const subscription = BackHandler.addEventListener('hardwareBackPress', () => {
       if (route.name === 'home') return false;
 
-      if (route.name === 'deck' || route.name === 'study' || route.name === 'subject') {
+      if (route.name === 'deck' || route.name === 'study' || route.name === 'subject' || route.name === 'stats') {
         setRoute({ name: 'home' });
       } else {
         setRoute({ name: 'deck', deckId: route.deckId });
@@ -1172,10 +1298,11 @@ function AppContent() {
   return (
     <View style={styles.app}>
       <StatusBar style="dark" />
-      {route.name === 'home' ? <HomeScreen onOpenSubject={(subject) => setRoute({ name: 'subject', subject })} onStudy={(deckIds, newCardAllowance) => setRoute({ name: 'study', deckIds, newCardAllowance })} /> : null}
+      {route.name === 'home' ? <HomeScreen onOpenSubject={(subject) => setRoute({ name: 'subject', subject })} onStudy={(deckIds, newCardAllowance) => setRoute({ name: 'study', deckIds, newCardAllowance })} onOpenStats={() => setRoute({ name: 'stats' })} /> : null}
       {route.name === 'subject' ? <SubjectScreen subject={route.subject} onBack={() => setRoute({ name: 'home' })} onOpenDeck={(deckId) => setRoute({ name: 'deck', deckId })} onStudy={(deckIds, newCardAllowance) => setRoute({ name: 'study', deckIds, newCardAllowance })} onCreate={(subject) => void openCreate(subject)} /> : null}
       {route.name === 'deck' ? <DeckScreen deckId={route.deckId} onBack={() => setRoute({ name: 'home' })} onStudy={(newCardAllowance) => setRoute({ name: 'study', deckIds: [route.deckId], newCardAllowance })} onSettings={() => setRoute({ name: 'settings', deckId: route.deckId })} /> : null}
       {route.name === 'settings' ? <DeckSettingsScreen deckId={route.deckId} onBack={() => setRoute({ name: 'deck', deckId: route.deckId })} /> : null}
+      {route.name === 'stats' ? <StatsScreen onBack={() => setRoute({ name: 'home' })} /> : null}
       {route.name === 'study' ? <StudyScreen deckIds={route.deckIds} newCardAllowance={route.newCardAllowance} onClose={() => setRoute({ name: 'home' })} /> : null}
       <CreateDeckModal visible={createOpen} defaultSubject={createSubject} subjects={subjects} onClose={() => setCreateOpen(false)} onCreated={(deckId) => { setCreateOpen(false); setRoute({ name: 'deck', deckId }); }} />
     </View>
@@ -1426,4 +1553,26 @@ const styles = StyleSheet.create({
   deckMarkSmallGlyph: { fontSize: 13, fontWeight: '700', color: colors.blue, fontFamily: mono },
   mixEmpty: { paddingVertical: 22, alignItems: 'center' },
   mixEmptyText: { color: colors.muted, fontSize: 13, textAlign: 'center' },
+  homeHeaderActions: { flexDirection: 'row', alignItems: 'center', gap: 10 },
+  statsBoard: { backgroundColor: colors.board, borderRadius: radius.large, padding: 22, overflow: 'hidden', ...shadow },
+  statsBoardRow: { flexDirection: 'row', zIndex: 2 },
+  statsBoardCell: { flex: 1 },
+  statsBoardDivider: { width: 1, backgroundColor: 'rgba(241, 247, 239, 0.18)', marginHorizontal: 16 },
+  statsBoardLabel: { color: colors.chalkDim, fontWeight: '800', fontSize: 10, letterSpacing: 1.1 },
+  statsBoardNumber: { color: colors.chalk, fontWeight: '700', fontSize: 46, lineHeight: 52, marginTop: 6, letterSpacing: -2, fontFamily: mono },
+  statsBoardCaption: { color: colors.chalkDim, fontWeight: '600', fontSize: 11, marginTop: 4 },
+  statsPillRow: { flexDirection: 'row', gap: 9, marginTop: 14 },
+  statsPill: { flex: 1, minHeight: 42, borderRadius: 13, backgroundColor: colors.paper, borderWidth: 1, borderColor: '#ECECF0', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, paddingHorizontal: 6 },
+  statsPillText: { fontSize: 11, fontWeight: '800', color: colors.ink },
+  statsHint: { color: colors.muted, fontSize: 12, lineHeight: 17, textAlign: 'center', marginTop: 16 },
+  chartCard: { backgroundColor: colors.paper, borderRadius: radius.medium, borderWidth: 1, borderColor: '#ECECF0', padding: 16, flexDirection: 'row', ...shadow },
+  chartColumn: { flex: 1, alignItems: 'center' },
+  chartValue: { height: 15, fontSize: 10, fontWeight: '800', color: colors.muted, fontFamily: mono },
+  chartBarTrack: { height: 96, justifyContent: 'flex-end', alignItems: 'center' },
+  chartBar: { width: 18, borderRadius: 5 },
+  chartLabel: { fontSize: 10, fontWeight: '800', color: colors.muted, marginTop: 7 },
+  chartLabelToday: { color: colors.blue },
+  statsCount: { fontSize: 20, fontWeight: '700', color: colors.ink, fontFamily: mono },
+  statsGlobalValue: { fontSize: 42, fontWeight: '700', color: colors.ink, fontFamily: mono, letterSpacing: -2 },
+  statsGlobalCaption: { color: colors.muted, fontSize: 12, marginTop: 4, marginBottom: 13 },
 });

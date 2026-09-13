@@ -304,6 +304,131 @@ export async function getMetadata(key: string): Promise<string | null> {
   return row?.value ?? null;
 }
 
+export type ReviewBucket = 'again' | 'soon' | 'later' | 'tomorrow';
+
+export type DayActivity = {
+  /** Jour local au format YYYY-MM-DD. */
+  day: string;
+  reviews: number;
+  cards: number;
+};
+
+export type StatsSnapshot = {
+  /** Cartes distinctes revues aujourd'hui. */
+  cardsSeenToday: number;
+  /** Cartes ouvertes pour la première fois aujourd'hui. */
+  newSeenToday: number;
+  /** Nouvelles cartes du jour dont la dernière réponse est « Plus tard » ou « Demain ». */
+  learnedToday: number;
+  reviewsToday: number;
+  breakdownToday: Record<ReviewBucket, number>;
+  /** Jours consécutifs avec au moins une réponse (aujourd'hui ou hier inclus). */
+  streakDays: number;
+  /** 7 derniers jours, du plus ancien au plus récent. */
+  history: DayActivity[];
+  totalCards: number;
+  learnedCards: number;
+  dueCards: number;
+};
+
+const localDayKey = (date: Date) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+
+export async function getStatsSnapshot(): Promise<StatsSnapshot> {
+  const db = await getDatabase();
+  const todayStart = startOfToday();
+  const now = Date.now();
+
+  const [todayRow, learnedRow, newRow, historyRows, dayRows, globalRow] = await Promise.all([
+    db.getFirstAsync<{ cards_seen: number; reviews: number; again: number; soon: number; later: number; tomorrow: number }>(
+      `SELECT COUNT(DISTINCT r.card_id) AS cards_seen,
+        COUNT(*) AS reviews,
+        COALESCE(SUM(CASE WHEN r.delay_minutes <= d.again_delay_minutes THEN 1 ELSE 0 END), 0) AS again,
+        COALESCE(SUM(CASE WHEN r.delay_minutes > d.again_delay_minutes AND r.delay_minutes <= d.soon_delay_minutes THEN 1 ELSE 0 END), 0) AS soon,
+        COALESCE(SUM(CASE WHEN r.delay_minutes > d.soon_delay_minutes AND r.delay_minutes <= d.later_delay_minutes THEN 1 ELSE 0 END), 0) AS later,
+        COALESCE(SUM(CASE WHEN r.delay_minutes > d.later_delay_minutes THEN 1 ELSE 0 END), 0) AS tomorrow
+      FROM reviews r
+      JOIN cards c ON c.id = r.card_id
+      JOIN decks d ON d.id = c.deck_id
+      WHERE r.reviewed_at >= ?`,
+      todayStart,
+    ),
+    // Dernière réponse du jour par carte nouvelle : en SQLite, les colonnes
+    // nues proviennent de la ligne qui maximise MAX(reviewed_at).
+    db.getFirstAsync<{ learned: number }>(
+      `SELECT COUNT(*) AS learned FROM (
+        SELECT r.delay_minutes AS delay_minutes, d.soon_delay_minutes AS soon_delay, MAX(r.reviewed_at) AS last_review
+        FROM reviews r
+        JOIN cards c ON c.id = r.card_id
+        JOIN decks d ON d.id = c.deck_id
+        WHERE r.reviewed_at >= ?
+          AND r.card_id IN (SELECT card_id FROM progress WHERE first_seen_at >= ?)
+        GROUP BY r.card_id
+      ) WHERE delay_minutes > soon_delay`,
+      todayStart, todayStart,
+    ),
+    db.getFirstAsync<{ count: number }>(
+      'SELECT COUNT(*) AS count FROM progress WHERE first_seen_at >= ?',
+      todayStart,
+    ),
+    db.getAllAsync<{ day: string; reviews: number; cards: number }>(
+      `SELECT strftime('%Y-%m-%d', reviewed_at / 1000, 'unixepoch', 'localtime') AS day,
+        COUNT(*) AS reviews, COUNT(DISTINCT card_id) AS cards
+      FROM reviews
+      WHERE reviewed_at >= ?
+      GROUP BY day`,
+      todayStart - 6 * 86_400_000,
+    ),
+    db.getAllAsync<{ day: string }>(
+      `SELECT DISTINCT strftime('%Y-%m-%d', reviewed_at / 1000, 'unixepoch', 'localtime') AS day
+      FROM reviews ORDER BY day DESC`,
+    ),
+    db.getFirstAsync<{ total: number; learned: number; due: number }>(
+      `SELECT COUNT(*) AS total,
+        COALESCE(SUM(CASE WHEN first_seen_at IS NOT NULL THEN 1 ELSE 0 END), 0) AS learned,
+        COALESCE(SUM(CASE WHEN next_due_at IS NOT NULL AND next_due_at <= ? AND suspended = 0 THEN 1 ELSE 0 END), 0) AS due
+      FROM progress`,
+      now,
+    ),
+  ]);
+
+  const byDay = new Map(historyRows.map((row) => [row.day, row]));
+  const history: DayActivity[] = [];
+  for (let index = 6; index >= 0; index -= 1) {
+    const date = new Date(todayStart);
+    date.setDate(date.getDate() - index);
+    const key = localDayKey(date);
+    const row = byDay.get(key);
+    history.push({ day: key, reviews: Number(row?.reviews ?? 0), cards: Number(row?.cards ?? 0) });
+  }
+
+  const activeDays = new Set(dayRows.map((row) => row.day));
+  let streakDays = 0;
+  const cursor = new Date(todayStart);
+  if (!activeDays.has(localDayKey(cursor))) cursor.setDate(cursor.getDate() - 1);
+  while (activeDays.has(localDayKey(cursor))) {
+    streakDays += 1;
+    cursor.setDate(cursor.getDate() - 1);
+  }
+
+  return {
+    cardsSeenToday: Number(todayRow?.cards_seen ?? 0),
+    reviewsToday: Number(todayRow?.reviews ?? 0),
+    learnedToday: Number(learnedRow?.learned ?? 0),
+    newSeenToday: Number(newRow?.count ?? 0),
+    breakdownToday: {
+      again: Number(todayRow?.again ?? 0),
+      soon: Number(todayRow?.soon ?? 0),
+      later: Number(todayRow?.later ?? 0),
+      tomorrow: Number(todayRow?.tomorrow ?? 0),
+    },
+    streakDays,
+    history,
+    totalCards: Number(globalRow?.total ?? 0),
+    learnedCards: Number(globalRow?.learned ?? 0),
+    dueCards: Number(globalRow?.due ?? 0),
+  };
+}
+
 export type SubjectPrefs = {
   hidden: string[];
   custom: string[];
