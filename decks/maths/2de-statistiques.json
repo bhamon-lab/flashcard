@@ -1,0 +1,80 @@
+{
+  "id": "math-2de-statistiques",
+  "subject": "Maths",
+  "title": "Maths · 2de · Statistiques et tableaux croisés",
+  "description": "2de · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CDEAE0",
+  "daily_new_limit": 3,
+  "grade": "2de",
+  "school_year": "2026-2027",
+  "curriculum_reference": "seconde-2026",
+  "cards": [
+    {
+      "id": "moyenne",
+      "kind": "formule",
+      "front": "Quelle est la moyenne de valeurs $x_i$ d’effectifs $n_i$ ?",
+      "back": "$\\bar x=\\frac{\\sum_i n_i x_i}{N}$, avec $N=\\sum_i n_i>0$."
+    },
+    {
+      "id": "linearite",
+      "kind": "propriete",
+      "front": "Si toutes les valeurs deviennent $ax_i+b$, que devient la moyenne ?",
+      "back": "$\\bar y=a\\bar x+b$."
+    },
+    {
+      "id": "mediane",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’une médiane d’une série ?",
+      "back": "Une valeur telle qu’au moins la moitié des données lui sont inférieures ou égales et au moins la moitié supérieures ou égales."
+    },
+    {
+      "id": "interquartile",
+      "kind": "formule",
+      "front": "Quelle est la formule de l’écart interquartile ?",
+      "back": "$Q_3-Q_1$."
+    },
+    {
+      "id": "ecart-type",
+      "kind": "formule",
+      "front": "Quel est l’écart type de valeurs $x_i$ d’effectifs $n_i$ ?",
+      "back": "$\\sigma=\\sqrt{\\frac{\\sum_i n_i(x_i-\\bar x)^2}{N}}$, avec $N=\\sum_i n_i>0$."
+    },
+    {
+      "id": "dispersion",
+      "kind": "propriete",
+      "front": "Que signifie un écart type plus grand ?",
+      "back": "Une dispersion plus importante des valeurs autour de leur moyenne."
+    },
+    {
+      "id": "centre-classe",
+      "kind": "formule",
+      "front": "Quel est le centre d’une classe $[a;b[$ ?",
+      "back": "$\\frac{a+b}{2}$."
+    },
+    {
+      "id": "moyenne-classes",
+      "kind": "methode",
+      "front": "Comment estimer la moyenne d’une série regroupée en classes ?",
+      "back": "Remplacer chaque classe par son centre et pondérer par ses effectifs ; c’est une approximation."
+    },
+    {
+      "id": "classe-mediane",
+      "kind": "methode",
+      "front": "Comment repérer la classe médiane ?",
+      "back": "Chercher où les effectifs cumulés atteignent la moitié de l’effectif total."
+    },
+    {
+      "id": "frequence-marginale",
+      "kind": "formule",
+      "front": "Quelle est la fréquence marginale d’une catégorie dans un tableau croisé ?",
+      "back": "$\\frac{\\text{total de la catégorie}}{\\text{effectif total}}$."
+    },
+    {
+      "id": "frequence-conditionnelle",
+      "kind": "formule",
+      "front": "Quelle est la fréquence de $B$ parmi les individus de $A$ ?",
+      "back": "$\\frac{n(A\\cap B)}{n(A)}$, si $n(A)>0$."
+    }
+  ]
+}

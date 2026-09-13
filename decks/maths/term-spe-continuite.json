@@ -1,0 +1,62 @@
+{
+  "id": "math-term-spe-continuite",
+  "subject": "Maths",
+  "title": "Maths · Terminale spé · Continuité et valeurs intermédiaires",
+  "description": "Terminale spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#DDD3F2",
+  "daily_new_limit": 3,
+  "grade": "term-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-spe-2019",
+  "cards": [
+    {
+      "id": "continue",
+      "kind": "definition",
+      "front": "Quelle égalité traduit la continuité de $f$ en $a$ ?",
+      "back": "$\\lim_{x\\to a}f(x)=f(a)$."
+    },
+    {
+      "id": "derivable",
+      "kind": "propriete",
+      "front": "Que peut-on déduire de la dérivabilité de $f$ en $a$ ?",
+      "back": "$f$ est continue en $a$."
+    },
+    {
+      "id": "tvi",
+      "kind": "propriete",
+      "front": "Que garantit le théorème des valeurs intermédiaires ?",
+      "back": "Si $f$ est continue sur $[a;b]$, toute valeur entre $f(a)$ et $f(b)$ est atteinte sur $[a;b]$."
+    },
+    {
+      "id": "zero",
+      "kind": "propriete",
+      "front": "Si $f$ est continue sur $[a;b]$ et $f(a)f(b)<0$, que sait-on de $f(x)=0$ ?",
+      "back": "Elle admet au moins une solution dans $]a;b[$."
+    },
+    {
+      "id": "unicite",
+      "kind": "propriete",
+      "front": "Que peut-on ajouter au TVI si $f$ est strictement monotone sur $[a;b]$ ?",
+      "back": "Chaque valeur entre $f(a)$ et $f(b)$ admet un unique antécédent dans $[a;b]$."
+    },
+    {
+      "id": "image-suite",
+      "kind": "propriete",
+      "front": "Si $u_n\\to\\ell$ et $f$ est continue en $\\ell$, quelle est la limite de $f(u_n)$ ?",
+      "back": "$f(\\ell)$."
+    },
+    {
+      "id": "dichotomie",
+      "kind": "methode",
+      "front": "Quel est le principe de la dichotomie pour encadrer un zéro d’une fonction continue ?",
+      "back": "Couper l’intervalle en deux et garder une moitié dont les bornes ont des images de signes opposés ; s’arrêter si le milieu est un zéro."
+    },
+    {
+      "id": "precision",
+      "kind": "formule",
+      "front": "Quelle est la largeur d’un intervalle après $n$ divisions par deux ?",
+      "back": "$\\frac{b-a}{2^n}$ si sa largeur initiale est $b-a$."
+    }
+  ]
+}

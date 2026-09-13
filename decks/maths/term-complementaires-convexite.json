@@ -1,0 +1,62 @@
+{
+  "id": "math-term-complementaires-convexite",
+  "subject": "Maths",
+  "title": "Maths · Terminale complémentaires · Convexité",
+  "description": "Terminale complémentaires · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#F5DDC8",
+  "daily_new_limit": 3,
+  "grade": "term-complementaires",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-complementaires-2019",
+  "cards": [
+    {
+      "id": "seconde",
+      "kind": "definition",
+      "front": "Qu’est-ce que la dérivée seconde $f''$ ?",
+      "back": "La dérivée de la fonction $f'$."
+    },
+    {
+      "id": "convexe",
+      "kind": "definition",
+      "front": "Où se situe la courbe d’une fonction convexe par rapport à ses cordes ?",
+      "back": "En dessous de chaque segment reliant deux points de sa courbe."
+    },
+    {
+      "id": "tangentes",
+      "kind": "propriete",
+      "front": "Où se situe la courbe d’une fonction dérivable convexe par rapport à ses tangentes ?",
+      "back": "Au-dessus de toutes ses tangentes sur l’intervalle de convexité."
+    },
+    {
+      "id": "derivee-croissante",
+      "kind": "propriete",
+      "front": "Quel lien unit convexité de $f$ et variations de $f'$ ?",
+      "back": "Une fonction dérivable est convexe sur un intervalle si et seulement si $f'$ y est croissante."
+    },
+    {
+      "id": "seconde-positive",
+      "kind": "propriete",
+      "front": "Quel signe de $f''$ caractérise une fonction deux fois dérivable convexe ?",
+      "back": "$f''\\ge0$ sur l’intervalle considéré."
+    },
+    {
+      "id": "concave",
+      "kind": "propriete",
+      "front": "Quel signe de $f''$ caractérise une fonction deux fois dérivable concave ?",
+      "back": "$f''\\le0$ sur l’intervalle considéré."
+    },
+    {
+      "id": "inflexion",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’un point d’inflexion ?",
+      "back": "Un point où la courbe change de convexité."
+    },
+    {
+      "id": "critere-inflexion",
+      "kind": "propriete",
+      "front": "Que garantit un changement de signe de $f''$ en $a$, pour $f$ deux fois dérivable autour de $a$ ?",
+      "back": "Le point $(a;f(a))$ est un point d’inflexion."
+    }
+  ]
+}

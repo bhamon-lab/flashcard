@@ -1,0 +1,86 @@
+{
+  "id": "math-2de-calcul-litteral",
+  "subject": "Maths",
+  "title": "Maths · 2de · Calcul littéral",
+  "description": "2de · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CDEAE0",
+  "daily_new_limit": 3,
+  "grade": "2de",
+  "school_year": "2026-2027",
+  "curriculum_reference": "seconde-2026",
+  "cards": [
+    {
+      "id": "puissance-produit",
+      "kind": "formule",
+      "front": "Comment multiplier deux puissances de même base non nulle ?",
+      "back": "$a^m a^n=a^{m+n}$, pour $m,n\\in\\mathbb{Z}$."
+    },
+    {
+      "id": "puissance-quotient",
+      "kind": "formule",
+      "front": "Comment diviser deux puissances de même base non nulle ?",
+      "back": "$\\frac{a^m}{a^n}=a^{m-n}$, pour $m,n\\in\\mathbb{Z}$."
+    },
+    {
+      "id": "puissance-puissance",
+      "kind": "formule",
+      "front": "Comment élever une puissance à une puissance ?",
+      "back": "$(a^m)^n=a^{mn}$, pour $a\\ne0$ et $m,n\\in\\mathbb{Z}$."
+    },
+    {
+      "id": "exposant-negatif",
+      "kind": "formule",
+      "front": "Que vaut $a^{-n}$ pour $a\\ne0$ ?",
+      "back": "$a^{-n}=\\frac{1}{a^n}$."
+    },
+    {
+      "id": "racine-produit",
+      "kind": "formule",
+      "front": "Quelle est la racine d’un produit de deux réels positifs ou nuls ?",
+      "back": "$\\sqrt{ab}=\\sqrt a\\sqrt b$ pour $a,b\\ge0$."
+    },
+    {
+      "id": "racine-quotient",
+      "kind": "formule",
+      "front": "Quelle est la racine d’un quotient ?",
+      "back": "$\\sqrt{\\frac ab}=\\frac{\\sqrt a}{\\sqrt b}$ pour $a\\ge0$ et $b>0$."
+    },
+    {
+      "id": "racine-carre",
+      "kind": "formule",
+      "front": "Que vaut $\\sqrt{a^2}$ pour un réel $a$ ?",
+      "back": "$\\sqrt{a^2}=\\lvert a\\rvert$."
+    },
+    {
+      "id": "carre-somme",
+      "kind": "formule",
+      "front": "Comment développer $(a+b)^2$ ?",
+      "back": "$(a+b)^2=a^2+2ab+b^2$."
+    },
+    {
+      "id": "carre-difference",
+      "kind": "formule",
+      "front": "Comment développer $(a-b)^2$ ?",
+      "back": "$(a-b)^2=a^2-2ab+b^2$."
+    },
+    {
+      "id": "difference-carres",
+      "kind": "formule",
+      "front": "Comment factoriser $a^2-b^2$ ?",
+      "back": "$a^2-b^2=(a-b)(a+b)$."
+    },
+    {
+      "id": "facteur-commun",
+      "kind": "formule",
+      "front": "Comment factoriser $ka+kb$ ?",
+      "back": "$ka+kb=k(a+b)$."
+    },
+    {
+      "id": "fractions",
+      "kind": "formule",
+      "front": "Comment additionner $\\frac ab$ et $\\frac cd$ ?",
+      "back": "$\\frac ab+\\frac cd=\\frac{ad+bc}{bd}$, pour $b,d\\ne0$."
+    }
+  ]
+}

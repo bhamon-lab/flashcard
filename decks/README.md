@@ -36,6 +36,21 @@ actuel. L'arbre est documenté ; il n'est pas encore affiché dans l'application
 
 Vérifier le catalogue avec `python3 scripts/validate_college_decks.py`.
 
+## Mathématiques du lycée
+
+Le catalogue 2026-2027 ajoute **54 decks et 542 cartes** pour la 2de générale et
+technologique, la 1re spécialité, la terminale spécialité et la terminale
+mathématiques complémentaires. Même format de rappel : formules, définitions,
+propriétés et méthodes générales, avec des réponses courtes.
+
+Les fichiers commencent par `2de-`, `1re-spe-`, `term-spe-` ou
+`term-complementaires-`. Chaque titre précise le parcours. Les prérequis forment
+deux branches distinctes en terminale, sans verrouillage dans l’application.
+
+Consulter le [guide du lycée et les sources officielles](../docs/lycee-2026-2027.md)
+et le [graphe de progression](../curriculum/lycee-2026-2027.json).
+Vérifier avec `python3 scripts/validate_lycee_decks.py`.
+
 ## Format
 
 ```json

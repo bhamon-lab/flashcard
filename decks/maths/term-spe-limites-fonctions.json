@@ -1,0 +1,86 @@
+{
+  "id": "math-term-spe-limites-fonctions",
+  "subject": "Maths",
+  "title": "Maths · Terminale spé · Limites et asymptotes",
+  "description": "Terminale spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#DDD3F2",
+  "daily_new_limit": 3,
+  "grade": "term-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-spe-2019",
+  "cards": [
+    {
+      "id": "somme-finie",
+      "kind": "propriete",
+      "front": "Si $f\\to\\ell$ et $g\\to m$ avec des limites finies, quelle est la limite de $f+g$ ?",
+      "back": "$\\ell+m$."
+    },
+    {
+      "id": "produit-fini",
+      "kind": "propriete",
+      "front": "Si $f\\to\\ell$ et $g\\to m$ avec des limites finies, quelle est la limite de $fg$ ?",
+      "back": "$\\ell m$."
+    },
+    {
+      "id": "quotient-fini",
+      "kind": "propriete",
+      "front": "Si $f\\to\\ell$ et $g\\to m\\ne0$, quelle est la limite de $\\frac fg$ ?",
+      "back": "$\\frac\\ell m$."
+    },
+    {
+      "id": "indeterminations",
+      "kind": "propriete",
+      "front": "Quelles formes de limites demandent une transformation avant de conclure ?",
+      "back": "$\\frac00$, $\\frac\\infty\\infty$, $0\\times\\infty$ et $\\infty-\\infty$."
+    },
+    {
+      "id": "dominant",
+      "kind": "methode",
+      "front": "Comment lever une indétermination dans un quotient de polynômes à l’infini ?",
+      "back": "Factoriser le terme de plus haut degré au numérateur et au dénominateur."
+    },
+    {
+      "id": "horizontale",
+      "kind": "propriete",
+      "front": "Quand $y=\\ell$ est-elle une asymptote horizontale à la courbe de $f$ ?",
+      "back": "Si $f(x)\\to\\ell$ quand $x\\to+\\infty$ ou $x\\to-\\infty$."
+    },
+    {
+      "id": "verticale",
+      "kind": "propriete",
+      "front": "Quand $x=a$ est-elle une asymptote verticale ?",
+      "back": "Si $f(x)\\to+\\infty$ ou $-\\infty$ lorsque $x\\to a$ d’au moins un côté."
+    },
+    {
+      "id": "inverse-infini",
+      "kind": "formule",
+      "front": "Quelle est la limite de $\\frac1x$ quand $x\\to+\\infty$ ?",
+      "back": "$0$."
+    },
+    {
+      "id": "inverse-zero",
+      "kind": "formule",
+      "front": "Quelle est la limite de $\\frac1x$ quand $x\\to0^+$ ?",
+      "back": "$+\\infty$."
+    },
+    {
+      "id": "exp-infini",
+      "kind": "formule",
+      "front": "Quelle est la limite de $e^x$ quand $x\\to+\\infty$ ?",
+      "back": "$+\\infty$."
+    },
+    {
+      "id": "exp-moins-infini",
+      "kind": "formule",
+      "front": "Quelle est la limite de $e^x$ quand $x\\to-\\infty$ ?",
+      "back": "$0$."
+    },
+    {
+      "id": "croissance-exp",
+      "kind": "formule",
+      "front": "Pour un entier $n\\ge1$, quelle est la limite de $\\frac{x^n}{e^x}$ en $+\\infty$ ?",
+      "back": "$0$ : l’exponentielle l’emporte sur les puissances."
+    }
+  ]
+}

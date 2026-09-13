@@ -1,0 +1,92 @@
+{
+  "id": "math-1re-spe-suites",
+  "subject": "Maths",
+  "title": "Maths · 1re spé · Suites arithmétiques et géométriques",
+  "description": "1re spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 3,
+  "grade": "1re-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "premiere-spe-2026",
+  "cards": [
+    {
+      "id": "explicite",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’une suite définie explicitement ?",
+      "back": "Une suite dont le terme $u_n$ se calcule directement à partir de $n$ : $u_n=f(n)$."
+    },
+    {
+      "id": "recurrence",
+      "kind": "definition",
+      "front": "Comment définit-on une suite par récurrence d’ordre un ?",
+      "back": "On donne un premier terme et une relation $u_{n+1}=f(u_n)$."
+    },
+    {
+      "id": "arithmetique",
+      "kind": "definition",
+      "front": "Quelle relation définit une suite arithmétique de raison $r$ ?",
+      "back": "$u_{n+1}=u_n+r$."
+    },
+    {
+      "id": "arithmetique-terme",
+      "kind": "formule",
+      "front": "Quel est le terme général d’une suite arithmétique ?",
+      "back": "$u_n=u_p+(n-p)r$ pour $n\\ge p$."
+    },
+    {
+      "id": "arithmetique-somme",
+      "kind": "formule",
+      "front": "Quelle est la somme de termes consécutifs d’une suite arithmétique ?",
+      "back": "$\\text{nombre de termes}\\times\\frac{\\text{premier terme}+\\text{dernier terme}}{2}$."
+    },
+    {
+      "id": "somme-entiers",
+      "kind": "formule",
+      "front": "Que vaut $1+2+\\cdots+n$ ?",
+      "back": "$\\frac{n(n+1)}{2}$."
+    },
+    {
+      "id": "geometrique",
+      "kind": "definition",
+      "front": "Quelle relation définit une suite géométrique de raison $q$ ?",
+      "back": "$u_{n+1}=qu_n$."
+    },
+    {
+      "id": "geometrique-terme",
+      "kind": "formule",
+      "front": "Quel est le terme général d’une suite géométrique de raison non nulle ?",
+      "back": "$u_n=u_pq^{n-p}$ pour $n\\ge p$."
+    },
+    {
+      "id": "geometrique-somme",
+      "kind": "formule",
+      "front": "Que vaut $1+q+\\cdots+q^n$ pour $q\\ne1$ ?",
+      "back": "$\\frac{1-q^{n+1}}{1-q}$."
+    },
+    {
+      "id": "somme-raison-un",
+      "kind": "formule",
+      "front": "Que vaut la somme de $N$ termes d’une suite géométrique de raison $1$ ?",
+      "back": "$N$ fois la valeur du terme constant."
+    },
+    {
+      "id": "variation-difference",
+      "kind": "methode",
+      "front": "Comment étudier les variations d’une suite à l’aide d’une différence ?",
+      "back": "Étudier le signe de $u_{n+1}-u_n$."
+    },
+    {
+      "id": "variation-arithmetique",
+      "kind": "propriete",
+      "front": "Quelles sont les variations d’une suite arithmétique selon $r$ ?",
+      "back": "Croissante si $r>0$, décroissante si $r<0$, constante si $r=0$."
+    },
+    {
+      "id": "variation-geometrique",
+      "kind": "propriete",
+      "front": "Pour une suite géométrique de termes strictement positifs, que donne la raison $q$ ?",
+      "back": "Croissante si $q>1$, décroissante si $0<q<1$, constante si $q=1$."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "math-2de-equations",
+  "subject": "Maths",
+  "title": "Maths · 2de · Équations, inéquations et signes",
+  "description": "2de · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CDEAE0",
+  "daily_new_limit": 3,
+  "grade": "2de",
+  "school_year": "2026-2027",
+  "curriculum_reference": "seconde-2026",
+  "cards": [
+    {
+      "id": "premier-degre",
+      "kind": "formule",
+      "front": "Quelle est la solution de $ax+b=0$ si $a\\ne0$ ?",
+      "back": "$x=-\\frac ba$."
+    },
+    {
+      "id": "produit-nul",
+      "kind": "propriete",
+      "front": "Quand un produit $AB$ est-il nul ?",
+      "back": "$AB=0$ si et seulement si $A=0$ ou $B=0$."
+    },
+    {
+      "id": "quotient-nul",
+      "kind": "propriete",
+      "front": "Quand un quotient $\\frac AB$ est-il nul ?",
+      "back": "Quand $A=0$ et $B\\ne0$."
+    },
+    {
+      "id": "quotient-equation",
+      "kind": "methode",
+      "front": "Comment transformer $\\frac{A(x)}{B(x)}=k$ ?",
+      "back": "Imposer $B(x)\\ne0$, puis résoudre $A(x)=kB(x)$ en gardant cette condition."
+    },
+    {
+      "id": "inegalite-positive",
+      "kind": "propriete",
+      "front": "Que devient $a<b$ si on multiplie par $c>0$ ?",
+      "back": "$ac<bc$ : le sens est conservé."
+    },
+    {
+      "id": "inegalite-negative",
+      "kind": "propriete",
+      "front": "Que devient $a<b$ si on multiplie par $c<0$ ?",
+      "back": "$ac>bc$ : le sens est inversé."
+    },
+    {
+      "id": "somme-inegalites",
+      "kind": "propriete",
+      "front": "Si $a\\le b$ et $c\\le d$, que peut-on additionner ?",
+      "back": "$a+c\\le b+d$."
+    },
+    {
+      "id": "comparaison",
+      "kind": "methode",
+      "front": "Comment comparer $A$ et $B$ à l’aide d’une différence ?",
+      "back": "Étudier le signe de $A-B$ : positif si $A>B$, nul si $A=B$, négatif si $A<B$."
+    },
+    {
+      "id": "signe-affine",
+      "kind": "propriete",
+      "front": "Pour $a\\ne0$, quel est le signe de $ax+b$ ?",
+      "back": "À droite de $-\\frac ba$, le signe de $a$ ; à gauche, le signe opposé ; à la racine, zéro."
+    },
+    {
+      "id": "tableau-signes",
+      "kind": "methode",
+      "front": "Comment obtenir le signe d’un produit ou d’un quotient ?",
+      "back": "Combiner les signes de ses facteurs ; exclure les zéros du dénominateur."
+    }
+  ]
+}

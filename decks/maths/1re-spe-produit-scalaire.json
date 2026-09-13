@@ -1,0 +1,80 @@
+{
+  "id": "math-1re-spe-produit-scalaire",
+  "subject": "Maths",
+  "title": "Maths · 1re spé · Produit scalaire",
+  "description": "1re spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 3,
+  "grade": "1re-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "premiere-spe-2026",
+  "cards": [
+    {
+      "id": "angle",
+      "kind": "formule",
+      "front": "Comment calculer le produit scalaire de deux vecteurs non nuls à l’aide de leur angle $\\theta$ ?",
+      "back": "$\\vec u\\cdot\\vec v=\\lVert\\vec u\\rVert\\lVert\\vec v\\rVert\\cos\\theta$."
+    },
+    {
+      "id": "coordonnees",
+      "kind": "formule",
+      "front": "Quel est le produit scalaire de $(x;y)$ et $(x';y')$ dans une base orthonormée ?",
+      "back": "$xx'+yy'$."
+    },
+    {
+      "id": "orthogonalite",
+      "kind": "propriete",
+      "front": "Quel produit scalaire caractérise des vecteurs orthogonaux ?",
+      "back": "$\\vec u\\cdot\\vec v=0$."
+    },
+    {
+      "id": "carre",
+      "kind": "formule",
+      "front": "Que vaut $\\vec u\\cdot\\vec u$ ?",
+      "back": "$\\lVert\\vec u\\rVert^2$."
+    },
+    {
+      "id": "symetrie",
+      "kind": "propriete",
+      "front": "Que devient un produit scalaire si on échange ses deux vecteurs ?",
+      "back": "$\\vec u\\cdot\\vec v=\\vec v\\cdot\\vec u$."
+    },
+    {
+      "id": "distributivite",
+      "kind": "formule",
+      "front": "Comment développer $\\vec u\\cdot(\\vec v+\\vec w)$ ?",
+      "back": "$\\vec u\\cdot\\vec v+\\vec u\\cdot\\vec w$."
+    },
+    {
+      "id": "facteur",
+      "kind": "formule",
+      "front": "Comment sortir un facteur réel d’un produit scalaire ?",
+      "back": "$(k\\vec u)\\cdot\\vec v=k(\\vec u\\cdot\\vec v)$."
+    },
+    {
+      "id": "norme-somme",
+      "kind": "formule",
+      "front": "Comment développer $\\lVert\\vec u+\\vec v\\rVert^2$ ?",
+      "back": "$\\lVert\\vec u\\rVert^2+2\\vec u\\cdot\\vec v+\\lVert\\vec v\\rVert^2$."
+    },
+    {
+      "id": "polarisation",
+      "kind": "formule",
+      "front": "Comment exprimer $\\vec u\\cdot\\vec v$ avec trois normes ?",
+      "back": "$\\frac{\\lVert\\vec u\\rVert^2+\\lVert\\vec v\\rVert^2-\\lVert\\vec u-\\vec v\\rVert^2}{2}$."
+    },
+    {
+      "id": "al-kashi",
+      "kind": "formule",
+      "front": "Quelle est la formule d’Al-Kashi dans un triangle $ABC$ ?",
+      "back": "$BC^2=AB^2+AC^2-2AB\\times AC\\cos\\widehat{BAC}$."
+    },
+    {
+      "id": "projection",
+      "kind": "propriete",
+      "front": "Si $H$ est le projeté orthogonal de $C$ sur $(AB)$, quel produit scalaire peut-on simplifier ?",
+      "back": "$\\overrightarrow{AB}\\cdot\\overrightarrow{AC}=\\overrightarrow{AB}\\cdot\\overrightarrow{AH}$."
+    }
+  ]
+}

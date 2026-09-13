@@ -1,0 +1,74 @@
+{
+  "id": "math-term-spe-binomiale",
+  "subject": "Maths",
+  "title": "Maths · Terminale spé · Loi binomiale",
+  "description": "Terminale spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#DDD3F2",
+  "daily_new_limit": 3,
+  "grade": "term-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-spe-2019",
+  "cards": [
+    {
+      "id": "schema",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’un schéma de Bernoulli de paramètres $n,p$ ?",
+      "back": "La répétition de $n$ épreuves de Bernoulli identiques et indépendantes, de probabilité de succès $p$."
+    },
+    {
+      "id": "variable",
+      "kind": "definition",
+      "front": "Que compte une variable de loi binomiale $\\mathcal B(n,p)$ ?",
+      "back": "Le nombre de succès dans un schéma de Bernoulli de paramètres $n,p$."
+    },
+    {
+      "id": "valeurs",
+      "kind": "propriete",
+      "front": "Quelles valeurs peut prendre le nombre de succès sur $n$ épreuves ?",
+      "back": "Les entiers de $0$ à $n$."
+    },
+    {
+      "id": "probabilite",
+      "kind": "formule",
+      "front": "Si $X\\sim\\mathcal B(n,p)$ avec $0<p<1$, que vaut $P(X=k)$ ?",
+      "back": "$\\binom nk p^k(1-p)^{n-k}$, pour $k\\in\\{0,\\ldots,n\\}$."
+    },
+    {
+      "id": "esperance",
+      "kind": "formule",
+      "front": "Quelle est l’espérance de $X\\sim\\mathcal B(n,p)$ ?",
+      "back": "$E(X)=np$."
+    },
+    {
+      "id": "variance",
+      "kind": "formule",
+      "front": "Quelle est la variance de $X\\sim\\mathcal B(n,p)$ ?",
+      "back": "$V(X)=np(1-p)$."
+    },
+    {
+      "id": "ecart-type",
+      "kind": "formule",
+      "front": "Quel est l’écart type de $X\\sim\\mathcal B(n,p)$ ?",
+      "back": "$\\sigma(X)=\\sqrt{np(1-p)}$."
+    },
+    {
+      "id": "aucun",
+      "kind": "formule",
+      "front": "Quelle est la probabilité d’aucun succès dans un schéma de Bernoulli à $n\\ge1$ épreuves ?",
+      "back": "$(1-p)^n$."
+    },
+    {
+      "id": "au-moins-un",
+      "kind": "formule",
+      "front": "Quelle est la probabilité d’au moins un succès dans un schéma de Bernoulli à $n\\ge1$ épreuves ?",
+      "back": "$1-(1-p)^n$."
+    },
+    {
+      "id": "cumulee",
+      "kind": "formule",
+      "front": "Pour $X$ à valeurs entières, comment exprimer $P(X\\ge k)$ avec une probabilité cumulée ?",
+      "back": "$P(X\\ge k)=1-P(X\\le k-1)$."
+    }
+  ]
+}

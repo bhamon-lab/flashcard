@@ -1,0 +1,62 @@
+{
+  "id": "math-term-complementaires-derivees",
+  "subject": "Maths",
+  "title": "Maths · Terminale complémentaires · Dérivation et variations",
+  "description": "Terminale complémentaires · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#F5DDC8",
+  "daily_new_limit": 3,
+  "grade": "term-complementaires",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-complementaires-2019",
+  "cards": [
+    {
+      "id": "affine-composee",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $x\\mapsto f(ax+b)$ ?",
+      "back": "$x\\mapsto af'(ax+b)$, là où $f$ est dérivable."
+    },
+    {
+      "id": "carre",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $u^2$ pour $u$ dérivable ?",
+      "back": "$2uu'$."
+    },
+    {
+      "id": "exp",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $e^u$ pour $u$ dérivable ?",
+      "back": "$u'e^u$."
+    },
+    {
+      "id": "ln",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $\\ln u$ pour $u$ dérivable et strictement positive ?",
+      "back": "$\\frac{u'}u$."
+    },
+    {
+      "id": "produit",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $uv$, pour $u,v$ dérivables ?",
+      "back": "$u'v+uv'$."
+    },
+    {
+      "id": "quotient",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $\\frac uv$, pour $u,v$ dérivables et $v\\ne0$ ?",
+      "back": "$\\frac{u'v-uv'}{v^2}$."
+    },
+    {
+      "id": "variations",
+      "kind": "methode",
+      "front": "Comment passer de la dérivée aux variations d’une fonction sur un intervalle ?",
+      "back": "Étudier le signe de $f'$ : $f$ croît où $f'\\ge0$ et décroît où $f'\\le0$."
+    },
+    {
+      "id": "minimum",
+      "kind": "propriete",
+      "front": "Si la dérivée passe de négative à positive en $a$, que présente une fonction dérivable autour de $a$ ?",
+      "back": "Un minimum local en $a$."
+    }
+  ]
+}

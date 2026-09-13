@@ -1,0 +1,80 @@
+{
+  "id": "math-2de-fonctions",
+  "subject": "Maths",
+  "title": "Maths · 2de · Fonctions et variations",
+  "description": "2de · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CDEAE0",
+  "daily_new_limit": 3,
+  "grade": "2de",
+  "school_year": "2026-2027",
+  "curriculum_reference": "seconde-2026",
+  "cards": [
+    {
+      "id": "image",
+      "kind": "definition",
+      "front": "Qu’est-ce que l’image de $x$ par $f$ ?",
+      "back": "Le nombre $f(x)$."
+    },
+    {
+      "id": "antecedent",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’un antécédent de $y$ par $f$ ?",
+      "back": "Un nombre $x$ du domaine tel que $f(x)=y$."
+    },
+    {
+      "id": "domaine",
+      "kind": "definition",
+      "front": "Qu’est-ce que l’ensemble de définition d’une fonction ?",
+      "back": "L’ensemble des valeurs de $x$ pour lesquelles son expression a un sens."
+    },
+    {
+      "id": "domaine-racine",
+      "kind": "propriete",
+      "front": "Quelle condition impose $\\sqrt{u(x)}$ dans une expression réelle ?",
+      "back": "$u(x)\\ge0$."
+    },
+    {
+      "id": "domaine-quotient",
+      "kind": "propriete",
+      "front": "Quelle condition impose un dénominateur $v(x)$ ?",
+      "back": "$v(x)\\ne0$."
+    },
+    {
+      "id": "appartenance",
+      "kind": "propriete",
+      "front": "Quand $M(a;b)$ appartient-il à la courbe de $f$ ?",
+      "back": "Quand $a$ appartient au domaine et $b=f(a)$."
+    },
+    {
+      "id": "croissante",
+      "kind": "definition",
+      "front": "Que signifie « $f$ est croissante sur $I$ » ?",
+      "back": "Pour $x_1,x_2\\in I$, si $x_1<x_2$, alors $f(x_1)\\le f(x_2)$."
+    },
+    {
+      "id": "decroissante",
+      "kind": "definition",
+      "front": "Que signifie « $f$ est décroissante sur $I$ » ?",
+      "back": "Pour $x_1,x_2\\in I$, si $x_1<x_2$, alors $f(x_1)\\ge f(x_2)$."
+    },
+    {
+      "id": "maximum",
+      "kind": "definition",
+      "front": "Quand $f(a)$ est-il le maximum de $f$ sur $I$ ?",
+      "back": "Quand $a\\in I$ et $f(x)\\le f(a)$ pour tout $x\\in I$."
+    },
+    {
+      "id": "minimum",
+      "kind": "definition",
+      "front": "Quand $f(a)$ est-il le minimum de $f$ sur $I$ ?",
+      "back": "Quand $a\\in I$ et $f(x)\\ge f(a)$ pour tout $x\\in I$."
+    },
+    {
+      "id": "intersection-courbes",
+      "kind": "methode",
+      "front": "Comment trouver les abscisses communes aux courbes de $f$ et $g$ ?",
+      "back": "Résoudre $f(x)=g(x)$ sur leur domaine commun."
+    }
+  ]
+}

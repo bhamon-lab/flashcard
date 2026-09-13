@@ -1,0 +1,74 @@
+{
+  "id": "math-2de-nombres",
+  "subject": "Maths",
+  "title": "Maths · 2de · Nombres et arithmétique",
+  "description": "2de · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CDEAE0",
+  "daily_new_limit": 3,
+  "grade": "2de",
+  "school_year": "2026-2027",
+  "curriculum_reference": "seconde-2026",
+  "cards": [
+    {
+      "id": "naturels",
+      "kind": "definition",
+      "front": "Que désigne $\\mathbb{N}$ ?",
+      "back": "L’ensemble des entiers naturels : $0,1,2,\\ldots$"
+    },
+    {
+      "id": "relatifs",
+      "kind": "definition",
+      "front": "Que désigne $\\mathbb{Z}$ ?",
+      "back": "L’ensemble des entiers relatifs : $\\ldots,-2,-1,0,1,2,\\ldots$"
+    },
+    {
+      "id": "rationnel",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’un nombre rationnel ?",
+      "back": "Un nombre de la forme $\\frac{p}{q}$, avec $p,q\\in\\mathbb{Z}$ et $q\\ne0$."
+    },
+    {
+      "id": "decimal",
+      "kind": "definition",
+      "front": "Quelle est la forme générale d’un nombre décimal ?",
+      "back": "$\\frac{a}{10^n}$, avec $a\\in\\mathbb{Z}$ et $n\\in\\mathbb{N}$."
+    },
+    {
+      "id": "inclusions",
+      "kind": "propriete",
+      "front": "Comment s’emboîtent les ensembles de nombres ?",
+      "back": "$\\mathbb{N}\\subset\\mathbb{Z}\\subset\\mathbb{D}\\subset\\mathbb{Q}\\subset\\mathbb{R}$."
+    },
+    {
+      "id": "irrationnel",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’un nombre irrationnel ?",
+      "back": "Un réel qui ne peut pas s’écrire comme un quotient de deux entiers."
+    },
+    {
+      "id": "multiple",
+      "kind": "definition",
+      "front": "Que signifie « $a$ est un multiple de $b$ » pour des entiers ?",
+      "back": "Il existe $k\\in\\mathbb{Z}$ tel que $a=kb$."
+    },
+    {
+      "id": "pair",
+      "kind": "formule",
+      "front": "Quelle est la forme générale d’un entier pair ?",
+      "back": "$2k$, avec $k\\in\\mathbb{Z}$."
+    },
+    {
+      "id": "impair",
+      "kind": "formule",
+      "front": "Quelle est la forme générale d’un entier impair ?",
+      "back": "$2k+1$, avec $k\\in\\mathbb{Z}$."
+    },
+    {
+      "id": "irreductible",
+      "kind": "definition",
+      "front": "Quand une fraction d’entiers est-elle irréductible ?",
+      "back": "Quand le numérateur et le dénominateur n’ont aucun diviseur commun positif autre que $1$."
+    }
+  ]
+}

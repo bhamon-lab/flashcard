@@ -1,0 +1,86 @@
+{
+  "id": "math-1re-spe-derivees",
+  "subject": "Maths",
+  "title": "Maths · 1re spé · Formules de dérivation",
+  "description": "1re spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 3,
+  "grade": "1re-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "premiere-spe-2026",
+  "cards": [
+    {
+      "id": "constante",
+      "kind": "formule",
+      "front": "Quelle est la dérivée d’une constante $c$ ?",
+      "back": "$0$."
+    },
+    {
+      "id": "affine",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $ax+b$ ?",
+      "back": "$a$."
+    },
+    {
+      "id": "puissance",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $x^n$, pour un entier $n\\ge1$ ?",
+      "back": "$nx^{n-1}$."
+    },
+    {
+      "id": "puissance-negative",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $x^n$, pour un entier $n<0$ ?",
+      "back": "$nx^{n-1}$, pour $x\\ne0$."
+    },
+    {
+      "id": "inverse",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $\\frac1x$ ?",
+      "back": "$-\\frac1{x^2}$, pour $x\\ne0$."
+    },
+    {
+      "id": "racine",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $\\sqrt x$ ?",
+      "back": "$\\frac1{2\\sqrt x}$, pour $x>0$."
+    },
+    {
+      "id": "somme",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $u+v$, avec $u,v$ dérivables ?",
+      "back": "$(u+v)'=u'+v'$."
+    },
+    {
+      "id": "multiple",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $ku$, avec $k$ constant et $u$ dérivable ?",
+      "back": "$(ku)'=ku'$."
+    },
+    {
+      "id": "produit",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $uv$, avec $u,v$ dérivables ?",
+      "back": "$(uv)'=u'v+uv'$."
+    },
+    {
+      "id": "inverse-fonction",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $\\frac1u$, avec $u$ dérivable et non nulle ?",
+      "back": "$\\left(\\frac1u\\right)'=-\\frac{u'}{u^2}$."
+    },
+    {
+      "id": "quotient",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $\\frac uv$, avec $u,v$ dérivables et $v\\ne0$ ?",
+      "back": "$\\left(\\frac uv\\right)'=\\frac{u'v-uv'}{v^2}$."
+    },
+    {
+      "id": "absolue-zero",
+      "kind": "propriete",
+      "front": "La fonction valeur absolue est-elle dérivable en $0$ ?",
+      "back": "Non : les pentes à gauche et à droite sont différentes."
+    }
+  ]
+}

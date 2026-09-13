@@ -1,0 +1,62 @@
+{
+  "id": "math-term-complementaires-primitives",
+  "subject": "Maths",
+  "title": "Maths · Terminale complémentaires · Primitives",
+  "description": "Terminale complémentaires · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#F5DDC8",
+  "daily_new_limit": 3,
+  "grade": "term-complementaires",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-complementaires-2019",
+  "cards": [
+    {
+      "id": "definition",
+      "kind": "definition",
+      "front": "Quand $F$ est-elle une primitive de $f$ sur un intervalle ?",
+      "back": "Quand $F$ est dérivable et $F'=f$ sur cet intervalle."
+    },
+    {
+      "id": "constante-integration",
+      "kind": "propriete",
+      "front": "Comment obtenir toutes les primitives à partir d’une primitive $F$ ?",
+      "back": "Elles sont de la forme $F+C$, où $C$ est une constante réelle."
+    },
+    {
+      "id": "constante",
+      "kind": "formule",
+      "front": "Quelle est une primitive de la constante $k$ ?",
+      "back": "$x\\mapsto kx$."
+    },
+    {
+      "id": "puissance",
+      "kind": "formule",
+      "front": "Quelle est une primitive de $x^n$ pour un entier $n\\ge0$ ?",
+      "back": "$\\frac{x^{n+1}}{n+1}$."
+    },
+    {
+      "id": "inverse",
+      "kind": "formule",
+      "front": "Quelle est une primitive de $\\frac1x$ sur $]0;+\\infty[$ ?",
+      "back": "$\\ln x$."
+    },
+    {
+      "id": "exponentielle",
+      "kind": "formule",
+      "front": "Quelle est une primitive de $e^x$ ?",
+      "back": "$e^x$."
+    },
+    {
+      "id": "exp-composee",
+      "kind": "formule",
+      "front": "Quelle est une primitive de $u'e^u$ pour $u$ dérivable ?",
+      "back": "$e^u$."
+    },
+    {
+      "id": "ln-compose",
+      "kind": "formule",
+      "front": "Quelle est une primitive de $\\frac{u'}u$ pour $u$ dérivable et strictement positive ?",
+      "back": "$\\ln u$."
+    }
+  ]
+}

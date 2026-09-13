@@ -1,0 +1,86 @@
+{
+  "id": "math-term-complementaires-logarithme",
+  "subject": "Maths",
+  "title": "Maths · Terminale complémentaires · Logarithme népérien",
+  "description": "Terminale complémentaires · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#F5DDC8",
+  "daily_new_limit": 3,
+  "grade": "term-complementaires",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-complementaires-2019",
+  "cards": [
+    {
+      "id": "domaine",
+      "kind": "definition",
+      "front": "Sur quel ensemble la fonction $\\ln$ est-elle définie ?",
+      "back": "Sur $]0;+\\infty[$."
+    },
+    {
+      "id": "reciproque",
+      "kind": "propriete",
+      "front": "Pour $x>0$, que signifie $y=\\ln x$ ?",
+      "back": "$e^y=x$."
+    },
+    {
+      "id": "ln-exp",
+      "kind": "formule",
+      "front": "Que vaut $\\ln(e^x)$ pour $x\\in\\mathbb{R}$ ?",
+      "back": "$x$."
+    },
+    {
+      "id": "exp-ln",
+      "kind": "formule",
+      "front": "Que vaut $e^{\\ln x}$ pour $x>0$ ?",
+      "back": "$x$."
+    },
+    {
+      "id": "un",
+      "kind": "formule",
+      "front": "Que vaut $\\ln1$ ?",
+      "back": "$0$."
+    },
+    {
+      "id": "produit",
+      "kind": "formule",
+      "front": "Comment développer $\\ln(ab)$ pour $a,b>0$ ?",
+      "back": "$\\ln(ab)=\\ln a+\\ln b$."
+    },
+    {
+      "id": "quotient",
+      "kind": "formule",
+      "front": "Comment développer $\\ln\\left(\\frac ab\\right)$ pour $a,b>0$ ?",
+      "back": "$\\ln\\left(\\frac ab\\right)=\\ln a-\\ln b$."
+    },
+    {
+      "id": "puissance",
+      "kind": "formule",
+      "front": "Que vaut $\\ln(a^n)$ pour $a>0$ et $n\\in\\mathbb{Z}$ ?",
+      "back": "$n\\ln a$."
+    },
+    {
+      "id": "derivee",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $\\ln x$ ?",
+      "back": "$\\frac1x$, pour $x>0$."
+    },
+    {
+      "id": "variation",
+      "kind": "propriete",
+      "front": "Quelles sont les variations de $\\ln$ ?",
+      "back": "La fonction est strictement croissante sur $]0;+\\infty[$."
+    },
+    {
+      "id": "limite-zero",
+      "kind": "formule",
+      "front": "Quelle est la limite de $\\ln x$ quand $x\\to0^+$ ?",
+      "back": "$-\\infty$."
+    },
+    {
+      "id": "limite-infini",
+      "kind": "formule",
+      "front": "Quelle est la limite de $\\ln x$ quand $x\\to+\\infty$ ?",
+      "back": "$+\\infty$."
+    }
+  ]
+}

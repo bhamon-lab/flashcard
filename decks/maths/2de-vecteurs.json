@@ -1,0 +1,74 @@
+{
+  "id": "math-2de-vecteurs",
+  "subject": "Maths",
+  "title": "Maths · 2de · Vecteurs du plan",
+  "description": "2de · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CDEAE0",
+  "daily_new_limit": 3,
+  "grade": "2de",
+  "school_year": "2026-2027",
+  "curriculum_reference": "seconde-2026",
+  "cards": [
+    {
+      "id": "coordonnees",
+      "kind": "formule",
+      "front": "Quelles sont les coordonnées de $\\overrightarrow{AB}$ ?",
+      "back": "$(x_B-x_A\\,;\\,y_B-y_A)$."
+    },
+    {
+      "id": "chasles",
+      "kind": "formule",
+      "front": "Quelle est la relation de Chasles pour les vecteurs ?",
+      "back": "$\\overrightarrow{AB}+\\overrightarrow{BC}=\\overrightarrow{AC}$."
+    },
+    {
+      "id": "somme",
+      "kind": "formule",
+      "front": "Comment additionner $\\vec u=(x;y)$ et $\\vec v=(x';y')$ ?",
+      "back": "$\\vec u+\\vec v=(x+x';y+y')$."
+    },
+    {
+      "id": "scalaire",
+      "kind": "formule",
+      "front": "Quelles sont les coordonnées de $k\\vec u$ si $\\vec u=(x;y)$ ?",
+      "back": "$k\\vec u=(kx;ky)$."
+    },
+    {
+      "id": "norme",
+      "kind": "formule",
+      "front": "Quelle est la norme de $(x;y)$ dans un repère orthonormé ?",
+      "back": "$\\lVert\\vec u\\rVert=\\sqrt{x^2+y^2}$."
+    },
+    {
+      "id": "distance",
+      "kind": "formule",
+      "front": "Quelle est la distance $AB$ dans un repère orthonormé ?",
+      "back": "$AB=\\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}$."
+    },
+    {
+      "id": "milieu",
+      "kind": "formule",
+      "front": "Quelles sont les coordonnées du milieu de $[AB]$ ?",
+      "back": "$\\left(\\frac{x_A+x_B}{2};\\frac{y_A+y_B}{2}\\right)$."
+    },
+    {
+      "id": "determinant",
+      "kind": "formule",
+      "front": "Quel est le déterminant de $\\vec u=(x;y)$ et $\\vec v=(x';y')$ ?",
+      "back": "$\\det(\\vec u,\\vec v)=xy'-yx'$."
+    },
+    {
+      "id": "colinearite",
+      "kind": "propriete",
+      "front": "Quel critère de déterminant caractérise deux vecteurs colinéaires ?",
+      "back": "$\\det(\\vec u,\\vec v)=0$."
+    },
+    {
+      "id": "alignement",
+      "kind": "propriete",
+      "front": "Quel critère vectoriel caractérise trois points alignés ?",
+      "back": "$\\overrightarrow{AB}$ et $\\overrightarrow{AC}$ sont colinéaires."
+    }
+  ]
+}

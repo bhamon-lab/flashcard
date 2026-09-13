@@ -1,0 +1,74 @@
+{
+  "id": "math-2de-logique-python",
+  "subject": "Maths",
+  "title": "Maths · 2de · Logique et bases de Python",
+  "description": "2de · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CDEAE0",
+  "daily_new_limit": 3,
+  "grade": "2de",
+  "school_year": "2026-2027",
+  "curriculum_reference": "seconde-2026",
+  "cards": [
+    {
+      "id": "contre-exemple",
+      "kind": "methode",
+      "front": "Comment réfuter une affirmation portant sur tous les éléments d’un ensemble ?",
+      "back": "Donner un seul contre-exemple."
+    },
+    {
+      "id": "reciproque",
+      "kind": "definition",
+      "front": "Quelle est la réciproque de « si $P$, alors $Q$ » ?",
+      "back": "« Si $Q$, alors $P$ ». Elle n’est pas automatiquement vraie."
+    },
+    {
+      "id": "equivalence",
+      "kind": "definition",
+      "front": "Que signifie « $P$ si et seulement si $Q$ » ?",
+      "back": "Les deux implications : de $P$ vers $Q$ et de $Q$ vers $P$."
+    },
+    {
+      "id": "negation",
+      "kind": "propriete",
+      "front": "Quelle est la négation de $x<a$ ?",
+      "back": "$x\\ge a$."
+    },
+    {
+      "id": "affectation",
+      "kind": "definition",
+      "front": "Que fait l’instruction Python « x = expression » ?",
+      "back": "Elle calcule l’expression puis stocke le résultat dans la variable x."
+    },
+    {
+      "id": "egalite",
+      "kind": "propriete",
+      "front": "Quel opérateur Python teste l’égalité ?",
+      "back": "« == » ; « = » sert à l’affectation."
+    },
+    {
+      "id": "condition",
+      "kind": "definition",
+      "front": "À quoi sert « if … else … » en Python ?",
+      "back": "À choisir les instructions à exécuter selon une condition."
+    },
+    {
+      "id": "for",
+      "kind": "definition",
+      "front": "À quoi sert une boucle « for » ?",
+      "back": "À parcourir une suite de valeurs en répétant des instructions."
+    },
+    {
+      "id": "while",
+      "kind": "definition",
+      "front": "À quoi sert une boucle « while » ?",
+      "back": "À répéter des instructions tant qu’une condition est vraie."
+    },
+    {
+      "id": "retour",
+      "kind": "definition",
+      "front": "À quoi sert « return » dans une fonction Python ?",
+      "back": "À terminer l’appel de la fonction en renvoyant une valeur."
+    }
+  ]
+}

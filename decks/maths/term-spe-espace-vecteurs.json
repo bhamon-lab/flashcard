@@ -1,0 +1,62 @@
+{
+  "id": "math-term-spe-espace-vecteurs",
+  "subject": "Maths",
+  "title": "Maths · Terminale spé · Vecteurs et repères de l’espace",
+  "description": "Terminale spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#DDD3F2",
+  "daily_new_limit": 3,
+  "grade": "term-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-spe-2019",
+  "cards": [
+    {
+      "id": "coordonnees",
+      "kind": "formule",
+      "front": "Quelles sont les coordonnées de $\\overrightarrow{AB}$ dans l’espace ?",
+      "back": "$(x_B-x_A;y_B-y_A;z_B-z_A)$."
+    },
+    {
+      "id": "norme",
+      "kind": "formule",
+      "front": "Quelle est la norme de $(x;y;z)$ dans une base orthonormée ?",
+      "back": "$\\sqrt{x^2+y^2+z^2}$."
+    },
+    {
+      "id": "scalaire",
+      "kind": "formule",
+      "front": "Quel est le produit scalaire de $(x;y;z)$ et $(x';y';z')$ dans une base orthonormée ?",
+      "back": "$xx'+yy'+zz'$."
+    },
+    {
+      "id": "distance",
+      "kind": "formule",
+      "front": "Quelle est la distance $AB$ dans un repère orthonormé de l’espace ?",
+      "back": "$\\sqrt{(x_B-x_A)^2+(y_B-y_A)^2+(z_B-z_A)^2}$."
+    },
+    {
+      "id": "colinearite",
+      "kind": "propriete",
+      "front": "Comment caractériser la colinéarité de $\\vec u$ et d’un vecteur non nul $\\vec v$ ?",
+      "back": "Il existe un réel $k$ tel que $\\vec u=k\\vec v$."
+    },
+    {
+      "id": "combinaison",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’une combinaison linéaire de $\\vec u,\\vec v,\\vec w$ ?",
+      "back": "Un vecteur de la forme $a\\vec u+b\\vec v+c\\vec w$, avec $a,b,c\\in\\mathbb{R}$."
+    },
+    {
+      "id": "coplanaires",
+      "kind": "propriete",
+      "front": "Si $\\vec u,\\vec v$ ne sont pas colinéaires, quand $\\vec u,\\vec v,\\vec w$ sont-ils coplanaires ?",
+      "back": "Quand il existe $a,b\\in\\mathbb{R}$ tels que $\\vec w=a\\vec u+b\\vec v$."
+    },
+    {
+      "id": "base",
+      "kind": "definition",
+      "front": "Quand trois vecteurs de l’espace forment-ils une base ?",
+      "back": "Quand ils ne sont pas coplanaires : chaque vecteur de l’espace a alors une unique décomposition sur cette base."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "math-term-complementaires-statistiques",
+  "subject": "Maths",
+  "title": "Maths · Terminale complémentaires · Corrélation et ajustements",
+  "description": "Terminale complémentaires · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#F5DDC8",
+  "daily_new_limit": 3,
+  "grade": "term-complementaires",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-complementaires-2019",
+  "cards": [
+    {
+      "id": "nuage",
+      "kind": "definition",
+      "front": "Que représente un nuage de points à deux variables ?",
+      "back": "Les couples de données $(x_i;y_i)$ d’une même série statistique."
+    },
+    {
+      "id": "point-moyen",
+      "kind": "formule",
+      "front": "Quelles sont les coordonnées du point moyen d’un nuage ?",
+      "back": "$G(\\bar x;\\bar y)$."
+    },
+    {
+      "id": "ajustement",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’un ajustement affine ?",
+      "back": "Une approximation du lien entre deux variables par une droite $y=ax+b$."
+    },
+    {
+      "id": "moindres-carres",
+      "kind": "definition",
+      "front": "Que minimise la droite des moindres carrés de $y$ en $x$ ?",
+      "back": "La somme $\\sum_i(y_i-(ax_i+b))^2$ des carrés des écarts verticaux."
+    },
+    {
+      "id": "passage-moyen",
+      "kind": "propriete",
+      "front": "Par quel point passe la droite des moindres carrés de $y$ en $x$ ?",
+      "back": "Par le point moyen $G(\\bar x;\\bar y)$."
+    },
+    {
+      "id": "correlation",
+      "kind": "propriete",
+      "front": "Quel est l’intervalle des valeurs du coefficient de corrélation linéaire $r$ ?",
+      "back": "$[-1;1]$, lorsque les deux séries ont un écart type non nul."
+    },
+    {
+      "id": "intensite",
+      "kind": "propriete",
+      "front": "Que suggère un coefficient de corrélation linéaire proche de $1$ ou de $-1$ ?",
+      "back": "Un lien linéaire fort, croissant ou décroissant respectivement."
+    },
+    {
+      "id": "causalite",
+      "kind": "propriete",
+      "front": "Une forte corrélation prouve-t-elle une causalité ?",
+      "back": "Non : un lien observé ne prouve pas qu’une variable cause l’autre."
+    },
+    {
+      "id": "interpolation",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’une interpolation ?",
+      "back": "Une estimation à l’intérieur du domaine des valeurs observées."
+    },
+    {
+      "id": "extrapolation",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’une extrapolation ?",
+      "back": "Une estimation hors du domaine observé ; le modèle peut y devenir inadapté."
+    },
+    {
+      "id": "exponentiel",
+      "kind": "formule",
+      "front": "Comment transformer $y=Ae^{bx}$, avec $A>0$, en relation affine ?",
+      "back": "Poser $z=\\ln y$ : alors $z=bx+\\ln A$."
+    }
+  ]
+}

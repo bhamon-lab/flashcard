@@ -1,0 +1,86 @@
+{
+  "id": "math-term-spe-espace-droites-plans",
+  "subject": "Maths",
+  "title": "Maths · Terminale spé · Droites et plans de l’espace",
+  "description": "Terminale spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#DDD3F2",
+  "daily_new_limit": 3,
+  "grade": "term-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-spe-2019",
+  "cards": [
+    {
+      "id": "droite",
+      "kind": "formule",
+      "front": "Comment décrire la droite passant par $A$ et dirigée par $\\vec u\\ne\\vec0$ ?",
+      "back": "$\\overrightarrow{AM}=t\\vec u$, avec $t\\in\\mathbb{R}$."
+    },
+    {
+      "id": "parametrique",
+      "kind": "formule",
+      "front": "Quelle représentation paramétrique décrit la droite passant par $A$ de directeur $(u;v;w)\\ne(0;0;0)$ ?",
+      "back": "$x=x_A+tu$, $y=y_A+tv$, $z=z_A+tw$, avec un même $t\\in\\mathbb{R}$."
+    },
+    {
+      "id": "plan-vecteurs",
+      "kind": "formule",
+      "front": "Comment décrire le plan passant par $A$ dirigé par deux vecteurs non colinéaires $\\vec u,\\vec v$ ?",
+      "back": "$\\overrightarrow{AM}=s\\vec u+t\\vec v$, avec $s,t\\in\\mathbb{R}$."
+    },
+    {
+      "id": "normal",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’un vecteur normal à un plan ?",
+      "back": "Un vecteur non nul orthogonal à deux vecteurs non colinéaires dirigeant ce plan."
+    },
+    {
+      "id": "plan-cartesien",
+      "kind": "formule",
+      "front": "Quelle est l’équation d’un plan passant par $A$ de normale $(a;b;c)\\ne(0;0;0)$ en repère orthonormé ?",
+      "back": "$a(x-x_A)+b(y-y_A)+c(z-z_A)=0$."
+    },
+    {
+      "id": "normale-cartesienne",
+      "kind": "formule",
+      "front": "Quel vecteur est normal au plan $ax+by+cz+d=0$ en repère orthonormé ?",
+      "back": "$(a;b;c)$."
+    },
+    {
+      "id": "plans-paralleles",
+      "kind": "propriete",
+      "front": "Quand deux plans sont-ils parallèles ?",
+      "back": "Quand leurs vecteurs normaux sont colinéaires."
+    },
+    {
+      "id": "droite-orthogonale",
+      "kind": "propriete",
+      "front": "Quand une droite est-elle perpendiculaire à un plan ?",
+      "back": "Quand un vecteur directeur de la droite est colinéaire à un vecteur normal du plan."
+    },
+    {
+      "id": "droite-parallele",
+      "kind": "propriete",
+      "front": "Que signifie $\\vec u\\cdot\\vec n=0$ pour une droite de directeur $\\vec u$ et un plan de normale $\\vec n$ ?",
+      "back": "La droite est parallèle au plan, éventuellement contenue dans ce plan."
+    },
+    {
+      "id": "intersection",
+      "kind": "methode",
+      "front": "Comment déterminer l’intersection d’une droite et d’un plan ?",
+      "back": "Remplacer les coordonnées paramétriques de la droite dans l’équation du plan, puis résoudre en son paramètre."
+    },
+    {
+      "id": "projection",
+      "kind": "propriete",
+      "front": "Quelles conditions caractérisent le projeté orthogonal $H$ de $M$ sur un plan $P$ ?",
+      "back": "$H\\in P$ et $\\overrightarrow{MH}$ est colinéaire à une normale de $P$."
+    },
+    {
+      "id": "distance",
+      "kind": "propriete",
+      "front": "Quelle est la distance d’un point $M$ à un plan si $H$ est son projeté orthogonal ?",
+      "back": "$MH$, la plus petite distance de $M$ à un point du plan."
+    }
+  ]
+}

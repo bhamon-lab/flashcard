@@ -1,0 +1,68 @@
+{
+  "id": "math-2de-pourcentages",
+  "subject": "Maths",
+  "title": "Maths · 2de · Proportions et évolutions",
+  "description": "2de · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CDEAE0",
+  "daily_new_limit": 3,
+  "grade": "2de",
+  "school_year": "2026-2027",
+  "curriculum_reference": "seconde-2026",
+  "cards": [
+    {
+      "id": "proportion",
+      "kind": "formule",
+      "front": "Quelle est la proportion d’une sous-population d’effectif $n$ dans un total $N>0$ ?",
+      "back": "$p=\\frac nN$."
+    },
+    {
+      "id": "partie",
+      "kind": "formule",
+      "front": "Comment retrouver un effectif à partir d’une proportion $p$ et d’un total $N$ ?",
+      "back": "$n=pN$."
+    },
+    {
+      "id": "pourcentage",
+      "kind": "formule",
+      "front": "Comment convertir une proportion $p$ en pourcentage ?",
+      "back": "Multiplier $p$ par $100$ et ajouter le symbole $\\%$."
+    },
+    {
+      "id": "proportion-proportion",
+      "kind": "formule",
+      "front": "Quelle est la proportion d’une proportion ?",
+      "back": "Si $B$ représente $p$ de $A$ et $C$ représente $q$ de $B$, alors $C$ représente $pq$ de $A$."
+    },
+    {
+      "id": "variation-absolue",
+      "kind": "formule",
+      "front": "Quelle est la variation absolue entre $V_i$ et $V_f$ ?",
+      "back": "$V_f-V_i$."
+    },
+    {
+      "id": "taux",
+      "kind": "formule",
+      "front": "Quel est le taux d’évolution entre $V_i\\ne0$ et $V_f$ ?",
+      "back": "$t=\\frac{V_f-V_i}{V_i}$."
+    },
+    {
+      "id": "coefficient",
+      "kind": "formule",
+      "front": "Quel coefficient multiplicateur correspond à un taux décimal $t$ ?",
+      "back": "$C=1+t$."
+    },
+    {
+      "id": "successifs",
+      "kind": "formule",
+      "front": "Quel est le taux global de deux évolutions de taux $t_1$ et $t_2$ ?",
+      "back": "$t=(1+t_1)(1+t_2)-1$."
+    },
+    {
+      "id": "reciproque",
+      "kind": "formule",
+      "front": "Quel est le taux réciproque d’une évolution de taux $t\\ne-1$ ?",
+      "back": "$t_{\\mathrm{rec}}=\\frac{1}{1+t}-1$."
+    }
+  ]
+}
