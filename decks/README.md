@@ -30,9 +30,10 @@ générale. Les réponses sont courtes, sans problème chiffré à résoudre.
 Consulter le [guide des contenus, sources et prérequis](../docs/college-2026-2027.md)
 et le [graphe de progression](../curriculum/college-2026-2027.json).
 
-Les champs éditoriaux `grade`, `school_year`, `curriculum_reference` et
-`cards[].kind` sont conservés dans les fichiers, mais ignorés par le synchroniseur
-actuel. L'arbre est documenté ; il n'est pas encore affiché dans l'application.
+Le champ `grade` (ex. `"6e"`) est synchronisé et permet de filtrer les paquets
+par classe dans l'application. Les champs `school_year`, `curriculum_reference`
+et `cards[].kind` restent des champs éditoriaux conservés dans les fichiers mais
+ignorés par le synchroniseur.
 
 Vérifier le catalogue avec `python3 scripts/validate_college_decks.py`.
 

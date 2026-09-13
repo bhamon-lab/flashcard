@@ -61,10 +61,12 @@ function asDeck(raw: unknown, fileName: string, fallbackSubject: string): Synced
   });
   if (!normalized.length) return null;
   const subject = typeof candidate.subject === 'string' && candidate.subject.trim() ? candidate.subject.trim() : fallbackSubject;
+  const grade = typeof candidate.grade === 'string' && candidate.grade.trim() ? candidate.grade.trim() : undefined;
   return {
     id,
     title,
     subject,
+    grade,
     description: typeof candidate.description === 'string' ? candidate.description.trim() : '',
     color: typeof candidate.color === 'string' ? candidate.color : undefined,
     format: candidate.format === 'math' ? 'math' : 'people',

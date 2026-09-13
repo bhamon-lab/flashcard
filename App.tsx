@@ -498,12 +498,27 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
 }) {
   const [decks, setDecks] = useState<Deck[]>([]);
   const [showAll, setShowAll] = useState(false);
+  const [gradeFilter, setGradeFilter] = useState<string | null>(null);
   useEffect(() => { void getDecks().then(setDecks); }, []);
   const group = groupBySubject(decks).find((entry) => entry.name.toLowerCase() === subject.toLowerCase())
     ?? { name: subject, decks: [] as Deck[] };
 
-  const favoriteDecks = group.decks.filter(isFavorite);
-  const visibleDecks = showAll ? group.decks : favoriteDecks;
+  // Classes distinctes (6e, 5e…), triées naturellement, pour les paquets de la matière.
+  const grades = useMemo(() => {
+    const seen = new Map<string, string>();
+    for (const deck of group.decks) {
+      const grade = deck.grade?.trim();
+      if (grade && !seen.has(grade.toLowerCase())) seen.set(grade.toLowerCase(), grade);
+    }
+    return [...seen.values()].sort((a, b) => a.localeCompare(b, 'fr', { numeric: true }));
+  }, [group.decks]);
+
+  const gradeKey = gradeFilter?.trim().toLowerCase() ?? null;
+  const gradeFiltered = gradeKey
+    ? group.decks.filter((deck) => (deck.grade ?? '').trim().toLowerCase() === gradeKey)
+    : group.decks;
+  const favoriteDecks = gradeFiltered.filter(isFavorite);
+  const visibleDecks = showAll ? gradeFiltered : favoriteDecks;
 
   const toggleFavorite = async (deckId: number) => {
     const deck = decks.find((entry) => entry.id === deckId);
@@ -566,6 +581,27 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
           ) : null}
         </View>
 
+        {grades.length > 1 ? (
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.mixFilterRow} contentContainerStyle={styles.mixFilterContent}>
+            <Pressable onPress={() => setGradeFilter(null)} style={({ pressed }) => [styles.mixFilterChip, !gradeKey && styles.mixFilterChipOn, pressed && styles.pressed]}>
+              <Ionicons name="albums-outline" size={13} color={!gradeKey ? colors.white : colors.blue} />
+              <Text style={[styles.mixFilterChipText, !gradeKey && styles.mixFilterChipTextOn]}>Toutes</Text>
+            </Pressable>
+            {grades.map((grade) => {
+              const active = gradeKey === grade.toLowerCase();
+              return (
+                <Pressable
+                  key={grade.toLowerCase()}
+                  onPress={() => setGradeFilter(active ? null : grade)}
+                  style={({ pressed }) => [styles.mixFilterChip, active && styles.mixFilterChipOn, pressed && styles.pressed]}
+                >
+                  <Text style={[styles.mixFilterChipText, active && styles.mixFilterChipTextOn]} numberOfLines={1}>{grade}</Text>
+                </Pressable>
+              );
+            })}
+          </ScrollView>
+        ) : null}
+
         {visibleDecks.map((deck) => <DeckCard key={deck.id} deck={deck} onOpen={onOpenDeck} onToggleFavorite={toggleFavorite} />)}
 
         {!showAll && !favoriteDecks.length && group.decks.length ? (
@@ -573,6 +609,13 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
             <View style={styles.newDeckIcon}><Ionicons name="star-outline" size={24} color={colors.blue} /></View>
             <View><Text style={styles.newDeckTitle}>Aucun paquet favori</Text><Text style={styles.newDeckCaption}>Affiche tous les paquets pour en choisir</Text></View>
           </Pressable>
+        ) : null}
+
+        {gradeKey && !gradeFiltered.length ? (
+          <View style={styles.newDeckCard}>
+            <View style={styles.newDeckIcon}><Ionicons name="funnel-outline" size={24} color={colors.muted} /></View>
+            <View><Text style={styles.newDeckTitle}>Aucun paquet en {gradeFilter}</Text><Text style={styles.newDeckCaption}>Choisis une autre classe</Text></View>
+          </View>
         ) : null}
 
         <Pressable onPress={() => onCreate(group.name)} style={styles.newDeckCard}>
