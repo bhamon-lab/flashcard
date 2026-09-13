@@ -36,7 +36,7 @@ import {
   recordReview,
   resetDeckProgress,
   saveCard,
-  setDeckFavorite,
+  setDeckStatus,
   setSubjectPrefs,
   updateDailyLimit,
   updateReviewDelays,
@@ -45,7 +45,7 @@ import { colors, mono, radius } from './src/theme';
 import { MathView, stripMathText } from './src/MathView';
 import { syncDecks } from './src/sync';
 import { checkForAppUpdate } from './src/app-update';
-import { Card, Deck, ReviewDelay, ReviewDelays } from './src/types';
+import { Card, Deck, DeckStatus, ReviewDelay, ReviewDelays } from './src/types';
 import { insertLaterInQueue } from './src/sessionQueue';
 import type { StatsSnapshot } from './src/db';
 
@@ -171,14 +171,27 @@ function CardImage({ card, style }: { card: Card; style: object }) {
   return <Image source={{ uri: card.photo_uri }} style={style} resizeMode="cover" />;
 }
 
-/** Un paquet est visible s'il est marqué favori (les paquets synchronisés non favoris restent cachés). */
-const isFavorite = (deck: Deck) => Number(deck.favorite) > 0;
+type DeckStatusMeta = { value: DeckStatus; label: string; description: string; icon: keyof typeof Ionicons.glyphMap; tint: string; fg: string };
 
-function DeckCard({ deck, onOpen, onToggleFavorite }: { deck: Deck; onOpen: (id: number) => void; onToggleFavorite: (id: number) => void }) {
+const DECK_STATUSES: DeckStatusMeta[] = [
+  { value: 'learning', label: 'En cours', description: 'Tu le travailles : ses cartes alimentent les révisions du jour.', icon: 'book-outline', tint: colors.blueSoft, fg: colors.blue },
+  { value: 'mastered', label: 'Acquis', description: 'Maîtrisé : le paquet reste visible mais sort des sessions de révision.', icon: 'checkmark-circle-outline', tint: colors.greenSoft, fg: colors.green },
+  { value: 'archived', label: 'Archivé', description: 'Mis de côté : le paquet disparaît des listes jusqu’à sa réactivation.', icon: 'archive-outline', tint: '#F1F2F6', fg: colors.muted },
+];
+
+const statusMeta = (status: DeckStatus): DeckStatusMeta => DECK_STATUSES.find((entry) => entry.value === status) ?? DECK_STATUSES[0];
+
+/** Paquet actif : ses cartes comptent dans les totaux et les sessions de révision. */
+const isActive = (deck: Deck) => deck.status === 'learning';
+
+/** Paquet listé par défaut : tout sauf les archivés. */
+const isListed = (deck: Deck) => deck.status !== 'archived';
+
+function DeckCard({ deck, onOpen, onStatus }: { deck: Deck; onOpen: (id: number) => void; onStatus: (deck: Deck) => void }) {
   const progress = deck.total_count ? Math.round((Number(deck.learned_count) / Number(deck.total_count)) * 100) : 0;
-  const favorite = isFavorite(deck);
+  const meta = statusMeta(deck.status);
   return (
-    <Pressable onPress={() => onOpen(deck.id)} style={({ pressed }) => [styles.deckCard, pressed && styles.cardPressed]}>
+    <Pressable onPress={() => onOpen(deck.id)} style={({ pressed }) => [styles.deckCard, deck.status === 'archived' && styles.deckCardArchived, pressed && styles.cardPressed]}>
       <View style={[styles.deckMark, { backgroundColor: deck.color }]}>
         <Text style={styles.deckMarkGlyph}>{glyphFor(deck.id)}</Text>
       </View>
@@ -186,11 +199,12 @@ function DeckCard({ deck, onOpen, onToggleFavorite }: { deck: Deck; onOpen: (id:
         <View style={styles.deckTitleRow}>
           <Text style={styles.deckTitle} numberOfLines={1}>{deck.title}</Text>
           <Pressable
-            onPress={() => onToggleFavorite(deck.id)}
-            accessibilityLabel={favorite ? `Retirer ${deck.title} des favoris` : `Ajouter ${deck.title} aux favoris`}
-            style={({ pressed }) => [styles.starButton, pressed && styles.pressed]}
+            onPress={() => onStatus(deck)}
+            accessibilityLabel={`Changer le statut de ${deck.title}, actuellement ${meta.label}`}
+            style={({ pressed }) => [styles.statusPill, { backgroundColor: meta.tint }, pressed && styles.pressed]}
           >
-            <Ionicons name={favorite ? 'star' : 'star-outline'} size={20} color={favorite ? '#D9A112' : colors.muted} />
+            <Ionicons name={meta.icon} size={13} color={meta.fg} />
+            <Text style={[styles.statusPillText, { color: meta.fg }]}>{meta.label}</Text>
           </Pressable>
         </View>
         <Text style={styles.deckDescription} numberOfLines={1}>{stripMathText(deck.description) || `${deck.total_count} cartes`}</Text>
@@ -201,6 +215,42 @@ function DeckCard({ deck, onOpen, onToggleFavorite }: { deck: Deck; onOpen: (id:
         </View>
       </View>
     </Pressable>
+  );
+}
+
+function DeckStatusSheet({ deck, onClose, onPick }: { deck: Deck | null; onClose: () => void; onPick: (status: DeckStatus) => void }) {
+  return (
+    <Modal visible={!!deck} transparent animationType="fade" onRequestClose={onClose}>
+      <Pressable style={styles.scrim} onPress={onClose}>
+        <Pressable style={styles.sheet} onPress={() => {}}>
+          <View style={styles.sheetHandle} />
+          <Text style={styles.sheetTitle}>Statut du paquet</Text>
+          <Text style={styles.sheetText}>{deck?.title ?? ''}</Text>
+          <View style={styles.statusOptionList}>
+            {DECK_STATUSES.map((entry) => {
+              const active = deck?.status === entry.value;
+              return (
+                <Pressable
+                  key={entry.value}
+                  onPress={() => onPick(entry.value)}
+                  accessibilityLabel={`Statut ${entry.label}`}
+                  style={({ pressed }) => [styles.statusOption, active && styles.statusOptionOn, pressed && styles.pressed]}
+                >
+                  <View style={[styles.statusOptionIcon, { backgroundColor: entry.tint }]}>
+                    <Ionicons name={entry.icon} size={20} color={entry.fg} />
+                  </View>
+                  <View style={styles.statusOptionCopy}>
+                    <Text style={styles.statusOptionTitle}>{entry.label}</Text>
+                    <Text style={styles.statusOptionNote}>{entry.description}</Text>
+                  </View>
+                  {active ? <Ionicons name="checkmark" size={21} color={colors.blue} /> : null}
+                </Pressable>
+              );
+            })}
+          </View>
+        </Pressable>
+      </Pressable>
+    </Modal>
   );
 }
 
@@ -255,8 +305,9 @@ function HomeScreen({ onOpenSubject, onStudy, onOpenStats }: { onOpenSubject: (s
   const hiddenKeys = new Set(prefs.hidden.map((name) => name.toLowerCase()));
   const visibleSubjects = allSubjects.filter((group) => !hiddenKeys.has(group.name.toLowerCase()));
 
-  const dueTotal = decks.filter(isFavorite).reduce((sum, deck) => sum + Number(deck.due_count), 0);
-  const total = decks.filter(isFavorite).reduce((sum, deck) => sum + Number(deck.total_count), 0);
+  const activeDecks = decks.filter(isActive);
+  const dueTotal = activeDecks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
+  const total = activeDecks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
 
   const updatePrefs = async (next: { hidden: string[]; custom: string[] }) => {
     setPrefs(next);
@@ -319,9 +370,13 @@ function HomeScreen({ onOpenSubject, onStudy, onOpenStats }: { onOpenSubject: (s
 
         {visibleSubjects.map((group) => {
           const visual = subjectVisual(group.name);
-          const favoriteDecks = group.decks.filter(isFavorite);
-          const groupDue = favoriteDecks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
-          const groupCards = favoriteDecks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
+          const learningDecks = group.decks.filter(isActive);
+          const masteredCount = group.decks.filter((deck) => deck.status === 'mastered').length;
+          const groupDue = learningDecks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
+          const groupCards = learningDecks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
+          const groupMeta = learningDecks.length
+            ? `${learningDecks.length} ${learningDecks.length === 1 ? 'paquet' : 'paquets'} · ${groupCards} ${groupCards === 1 ? 'carte' : 'cartes'}${masteredCount ? ` · ${masteredCount} acquis` : ''}`
+            : masteredCount ? `${masteredCount} acquis` : group.decks.length ? 'Tous archivés' : 'Aucun paquet';
           return (
             <Pressable
               key={group.name.toLowerCase()}
@@ -337,9 +392,7 @@ function HomeScreen({ onOpenSubject, onStudy, onOpenStats }: { onOpenSubject: (s
                   <Ionicons name="chevron-forward" size={19} color={colors.muted} />
                 </View>
                 <View style={styles.subjectMeta}>
-                  <Text style={styles.subjectMetaText}>
-                    {favoriteDecks.length === 0 ? 'Aucun paquet favori' : `${favoriteDecks.length} ${favoriteDecks.length === 1 ? 'paquet' : 'paquets'} · ${groupCards} ${groupCards === 1 ? 'carte' : 'cartes'}`}
-                  </Text>
+                  <Text style={styles.subjectMetaText}>{groupMeta}</Text>
                   {groupDue > 0 ? <View style={styles.duePill}><Text style={styles.duePillText}>{groupDue} à revoir</Text></View> : null}
                 </View>
               </View>
@@ -376,7 +429,7 @@ function HomeScreen({ onOpenSubject, onStudy, onOpenStats }: { onOpenSubject: (s
 
         <CustomSessionSheet
           visible={mixOpen}
-          decks={decks.filter(isFavorite)}
+          decks={decks.filter(isActive)}
           onClose={() => setMixOpen(false)}
           onStart={(deckIds, newCardAllowance) => { setMixOpen(false); onStudy(deckIds, newCardAllowance); }}
         />
@@ -517,24 +570,29 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
   const gradeFiltered = gradeKey
     ? group.decks.filter((deck) => (deck.grade ?? '').trim().toLowerCase() === gradeKey)
     : group.decks;
-  const favoriteDecks = gradeFiltered.filter(isFavorite);
-  const visibleDecks = showAll ? gradeFiltered : favoriteDecks;
+  const learningDecks = gradeFiltered.filter(isActive);
+  const masteredCount = gradeFiltered.filter((deck) => deck.status === 'mastered').length;
+  const listedDecks = gradeFiltered.filter(isListed);
+  const visibleDecks = showAll ? gradeFiltered : listedDecks;
 
-  const toggleFavorite = async (deckId: number) => {
-    const deck = decks.find((entry) => entry.id === deckId);
-    if (!deck) return;
-    const next = !isFavorite(deck);
-    setDecks((current) => current.map((entry) => entry.id === deckId ? { ...entry, favorite: next ? 1 : 0 } : entry));
-    await setDeckFavorite(deckId, next);
+  const [statusDeck, setStatusDeck] = useState<Deck | null>(null);
+  const changeStatus = async (deckId: number, status: DeckStatus) => {
+    setDecks((current) => current.map((entry) => entry.id === deckId ? { ...entry, status } : entry));
+    await setDeckStatus(deckId, status);
   };
 
-  const dueTotal = favoriteDecks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
-  const newTotal = favoriteDecks.reduce((sum, deck) => sum + Number(deck.new_count), 0);
-  const totalCards = favoriteDecks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
-  const allowance = favoriteDecks.reduce((sum, deck) => sum + Math.max(0, Number(deck.daily_new_limit) - Number(deck.introduced_today)), 0);
+  const dueTotal = learningDecks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
+  const newTotal = learningDecks.reduce((sum, deck) => sum + Number(deck.new_count), 0);
+  const totalCards = learningDecks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
+  const allowance = learningDecks.reduce((sum, deck) => sum + Math.max(0, Number(deck.daily_new_limit) - Number(deck.introduced_today)), 0);
   const sessionCount = dueTotal + Math.min(newTotal, allowance);
-  const deckIds = favoriteDecks.map((deck) => deck.id);
+  const deckIds = learningDecks.map((deck) => deck.id);
   const visual = subjectVisual(group.name);
+  const heroSummary = [
+    `${learningDecks.length} ${learningDecks.length === 1 ? 'paquet en cours' : 'paquets en cours'}`,
+    ...(masteredCount ? [`${masteredCount} acquis`] : []),
+    ...(learningDecks.length ? [`${totalCards} ${totalCards === 1 ? 'carte' : 'cartes'}`] : []),
+  ].join(' · ');
 
   return (
     <SafeAreaView style={styles.screen} edges={['top']}>
@@ -548,7 +606,7 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
         <View style={styles.deckHero}>
           <View style={[styles.largeDeckMark, { backgroundColor: visual.tint }]}><Ionicons name={visual.icon} size={30} color={visual.fg} /></View>
           <Text style={styles.deckHeroTitle}>{group.name}</Text>
-          <Text style={styles.deckHeroDescription}>{favoriteDecks.length} {favoriteDecks.length === 1 ? 'paquet favori' : 'paquets favoris'} · {totalCards} {totalCards === 1 ? 'carte' : 'cartes'}</Text>
+          <Text style={styles.deckHeroDescription}>{heroSummary}</Text>
           <View style={styles.statRow}>
             <View style={styles.stat}><Text style={styles.statValue}>{dueTotal}</Text><Text style={styles.statLabel}>À revoir</Text></View>
             <View style={styles.statDivider} />
@@ -560,11 +618,11 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
 
         <View style={styles.sessionPanel}>
           <View style={styles.panelTop}>
-            <View><Text style={styles.panelTitle}>Session de matière</Text><Text style={styles.panelCaption}>Les paquets favoris de {group.name} en une file</Text></View>
+            <View><Text style={styles.panelTitle}>Session de matière</Text><Text style={styles.panelCaption}>Les paquets en cours de {group.name} en une file</Text></View>
             <View style={styles.sessionPanelIcon}><Ionicons name="play-circle-outline" size={30} color={colors.blue} /></View>
           </View>
           <PrimaryButton
-            label={!favoriteDecks.length ? (group.decks.length ? 'Ajoute un favori pour réviser' : 'Crée un premier paquet') : sessionCount ? `Commencer · ${sessionCount} carte${sessionCount > 1 ? 's' : ''}` : 'Lancer une session'}
+            label={!learningDecks.length ? (group.decks.length ? 'Aucun paquet en cours' : 'Crée un premier paquet') : sessionCount ? `Commencer · ${sessionCount} carte${sessionCount > 1 ? 's' : ''}` : 'Lancer une session'}
             icon="play"
             disabled={!deckIds.length}
             onPress={() => onStudy(deckIds, allowance)}
@@ -572,11 +630,11 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
         </View>
 
         <View style={styles.sectionHeaderCompact}>
-          <Text style={styles.sectionTitle}>{showAll ? 'Tous les paquets' : 'Paquets favoris'}</Text>
+          <Text style={styles.sectionTitle}>{showAll ? 'Tous les paquets' : 'Mes paquets'}</Text>
           {group.decks.length ? (
             <Pressable onPress={() => setShowAll((value) => !value)} style={({ pressed }) => [styles.filterToggle, pressed && styles.pressed]}>
-              <Ionicons name={showAll ? 'star' : 'albums-outline'} size={15} color={colors.blue} />
-              <Text style={styles.filterToggleText}>{showAll ? 'Favoris' : `Tous (${group.decks.length})`}</Text>
+              <Ionicons name={showAll ? 'flash-outline' : 'albums-outline'} size={15} color={colors.blue} />
+              <Text style={styles.filterToggleText}>{showAll ? 'Mes paquets' : `Tous (${group.decks.length})`}</Text>
             </Pressable>
           ) : null}
         </View>
@@ -602,12 +660,12 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
           </ScrollView>
         ) : null}
 
-        {visibleDecks.map((deck) => <DeckCard key={deck.id} deck={deck} onOpen={onOpenDeck} onToggleFavorite={toggleFavorite} />)}
+        {visibleDecks.map((deck) => <DeckCard key={deck.id} deck={deck} onOpen={onOpenDeck} onStatus={setStatusDeck} />)}
 
-        {!showAll && !favoriteDecks.length && group.decks.length ? (
+        {!showAll && !listedDecks.length && group.decks.length ? (
           <Pressable onPress={() => setShowAll(true)} style={styles.newDeckCard}>
-            <View style={styles.newDeckIcon}><Ionicons name="star-outline" size={24} color={colors.blue} /></View>
-            <View><Text style={styles.newDeckTitle}>Aucun paquet favori</Text><Text style={styles.newDeckCaption}>Affiche tous les paquets pour en choisir</Text></View>
+            <View style={styles.newDeckIcon}><Ionicons name="albums-outline" size={24} color={colors.blue} /></View>
+            <View><Text style={styles.newDeckTitle}>Aucun paquet visible</Text><Text style={styles.newDeckCaption}>Affiche tous les paquets, même les archivés</Text></View>
           </Pressable>
         ) : null}
 
@@ -622,6 +680,15 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
           <View style={styles.newDeckIcon}><Ionicons name="add" size={24} color={colors.blue} /></View>
           <View><Text style={styles.newDeckTitle}>Nouveau paquet</Text><Text style={styles.newDeckCaption}>Créer une nouvelle série de cartes</Text></View>
         </Pressable>
+
+        <DeckStatusSheet
+          deck={statusDeck}
+          onClose={() => setStatusDeck(null)}
+          onPick={(status) => {
+            if (statusDeck) void changeStatus(statusDeck.id, status);
+            setStatusDeck(null);
+          }}
+        />
       </ScrollView>
     </SafeAreaView>
   );
@@ -747,6 +814,11 @@ function DeckSettingsScreen({ deckId, onBack }: { deckId: number; onBack: () => 
     setDelays((current) => current ? { ...current, [key]: Number.isFinite(parsed) ? parsed : 0 } : current);
   };
 
+  const changeStatus = async (status: DeckStatus) => {
+    setDeck((current) => (current ? { ...current, status } : current));
+    await setDeckStatus(deckId, status);
+  };
+
   const save = async () => {
     if (!delays) return;
     setSaving(true);
@@ -773,9 +845,27 @@ function DeckSettingsScreen({ deckId, onBack }: { deckId: number; onBack: () => 
           <View style={{ width: 44 }} />
         </View>
         <View style={styles.settingsHero}>
-          <View style={styles.settingsIcon}><Ionicons name="timer-outline" size={31} color={colors.blue} /></View>
-          <Text style={styles.settingsTitle}>Timers de révision</Text>
-          <Text style={styles.settingsText}>Choisis le délai appliqué à chaque réponse pour « {deck.title} ».</Text>
+          <View style={styles.settingsIcon}><Ionicons name="options-outline" size={31} color={colors.blue} /></View>
+          <Text style={styles.settingsTitle}>Réglages du paquet</Text>
+          <Text style={styles.settingsText}>Statut et timers de révision pour « {deck.title} ».</Text>
+        </View>
+        <Text style={styles.settingsLabel}>STATUT DU PAQUET</Text>
+        <View style={styles.timerList}>
+          {DECK_STATUSES.map((entry, index) => {
+            const active = deck.status === entry.value;
+            return (
+              <Pressable
+                key={entry.value}
+                onPress={() => void changeStatus(entry.value)}
+                accessibilityLabel={`Statut ${entry.label}`}
+                style={[styles.timerRow, index < DECK_STATUSES.length - 1 && styles.timerRowBorder]}
+              >
+                <View style={[styles.timerIcon, { backgroundColor: entry.tint }]}><Ionicons name={entry.icon} size={20} color={entry.fg} /></View>
+                <View style={styles.timerCopy}><Text style={styles.timerTitle}>{entry.label}</Text><Text style={styles.timerNote}>{entry.description}</Text></View>
+                {active ? <Ionicons name="checkmark-circle" size={22} color={colors.blue} /> : null}
+              </Pressable>
+            );
+          })}
         </View>
         <Text style={styles.settingsLabel}>DURÉES EN MINUTES</Text>
         <View style={styles.timerList}>
@@ -1292,7 +1382,7 @@ function CustomSessionSheet({ visible, decks, onClose, onStart }: { visible: boo
             ))}
             {!decks.length ? (
               <View style={styles.mixGroup}>
-                <View style={styles.mixEmpty}><Text style={styles.mixEmptyText}>Crée d’abord un paquet pour lancer une session.</Text></View>
+                <View style={styles.mixEmpty}><Text style={styles.mixEmptyText}>Aucun paquet en cours pour lancer une session.</Text></View>
               </View>
             ) : null}
           </ScrollView>
@@ -1484,7 +1574,16 @@ const styles = StyleSheet.create({
   deckBody: { flex: 1, minWidth: 0 },
   deckTitleRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   deckTitle: { fontSize: 17, fontWeight: '800', color: colors.ink, flex: 1 },
-  starButton: { width: 34, height: 34, borderRadius: 12, backgroundColor: colors.blueSoft, alignItems: 'center', justifyContent: 'center', marginLeft: 10 },
+  statusPill: { flexDirection: 'row', alignItems: 'center', gap: 5, height: 27, paddingLeft: 9, paddingRight: 10, borderRadius: 14, marginLeft: 10 },
+  statusPillText: { fontSize: 11, fontWeight: '800' },
+  deckCardArchived: { opacity: 0.62 },
+  statusOptionList: { gap: 9, marginTop: 18 },
+  statusOption: { flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: colors.paper, borderWidth: 1, borderColor: colors.line, borderRadius: 15, padding: 13 },
+  statusOptionOn: { borderColor: colors.blue },
+  statusOptionIcon: { width: 42, height: 42, borderRadius: 13, alignItems: 'center', justifyContent: 'center' },
+  statusOptionCopy: { flex: 1, minWidth: 0 },
+  statusOptionTitle: { fontSize: 15, fontWeight: '800', color: colors.ink },
+  statusOptionNote: { fontSize: 11, color: colors.muted, marginTop: 3, lineHeight: 15 },
   filterToggle: { height: 36, paddingHorizontal: 12, borderRadius: 12, backgroundColor: colors.blueSoft, flexDirection: 'row', alignItems: 'center', gap: 6 },
   filterToggleText: { fontSize: 12, fontWeight: '800', color: colors.blue },
   deckDescription: { fontSize: 13, color: colors.muted, marginTop: 3 },

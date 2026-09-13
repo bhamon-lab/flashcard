@@ -1,3 +1,6 @@
+/** Statut d'avancement d'un paquet : en cours d'apprentissage, maîtrisé ou mis de côté. */
+export type DeckStatus = 'learning' | 'mastered' | 'archived';
+
 export type Deck = {
   id: number;
   title: string;
@@ -7,7 +10,7 @@ export type Deck = {
   subject: string;
   grade: string | null;
   sync_id: string | null;
-  favorite: number;
+  status: DeckStatus;
   daily_new_limit: number;
   again_delay_minutes: number;
   soon_delay_minutes: number;

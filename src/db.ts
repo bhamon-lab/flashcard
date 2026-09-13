@@ -1,5 +1,5 @@
 import * as SQLite from 'expo-sqlite';
-import { Card, Deck, ReviewDelays } from './types';
+import { Card, Deck, DeckStatus, ReviewDelays } from './types';
 import { shuffleCards } from './sessionQueue';
 
 let dbPromise: Promise<SQLite.SQLiteDatabase> | null = null;
@@ -89,30 +89,36 @@ export async function initializeDatabase() {
   if (!existingColumns.has('subject')) {
     await db.execAsync("ALTER TABLE decks ADD COLUMN subject TEXT NOT NULL DEFAULT 'Divers'");
   }
-  if (!existingColumns.has('favorite')) {
-    await db.execAsync('ALTER TABLE decks ADD COLUMN favorite INTEGER NOT NULL DEFAULT 0');
+  if (!existingColumns.has('status')) {
+    await db.execAsync("ALTER TABLE decks ADD COLUMN status TEXT NOT NULL DEFAULT 'learning'");
+    if (existingColumns.has('favorite')) {
+      // Passage des favoris aux statuts : les favoris passent « en cours », les
+      // autres paquets (synchronisés jamais ouverts) sont archivés. Les paquets
+      // locaux ou déjà entamés restent actifs même s'ils n'étaient pas favoris.
+      await db.runAsync(
+        `UPDATE decks SET status = CASE
+          WHEN favorite = 1 THEN 'learning'
+          WHEN sync_id IS NULL THEN 'learning'
+          WHEN EXISTS (
+            SELECT 1 FROM cards c JOIN progress p ON p.card_id = c.id
+            WHERE c.deck_id = decks.id AND p.first_seen_at IS NOT NULL
+          ) THEN 'learning'
+          ELSE 'archived' END`,
+      );
+    } else {
+      // Nouvelle base : les paquets synchronisés jamais étudiés démarrent archivés.
+      await db.runAsync(
+        `UPDATE decks SET status = 'archived'
+         WHERE sync_id IS NOT NULL
+           AND NOT EXISTS (
+             SELECT 1 FROM cards c JOIN progress p ON p.card_id = c.id
+             WHERE c.deck_id = decks.id AND p.first_seen_at IS NOT NULL
+           )`,
+      );
+    }
   }
   if (!existingColumns.has('grade')) {
     await db.execAsync('ALTER TABLE decks ADD COLUMN grade TEXT');
-  }
-
-  const favoritesBackfill = await db.getFirstAsync<{ value: string }>(
-    "SELECT value FROM app_metadata WHERE key = 'favorites-backfilled'",
-  );
-  if (!favoritesBackfill) {
-    // Au passage aux favoris : garde visibles les paquets locaux et ceux
-    // déjà entamés ; les paquets synchronisés jamais étudiés restent cachés.
-    await db.runAsync(
-      `UPDATE decks SET favorite = 1
-       WHERE sync_id IS NULL
-          OR EXISTS (
-            SELECT 1 FROM cards c JOIN progress p ON p.card_id = c.id
-            WHERE c.deck_id = decks.id AND p.first_seen_at IS NOT NULL
-          )`,
-    );
-    await db.runAsync(
-      "INSERT INTO app_metadata (key, value) VALUES ('favorites-backfilled', '1')",
-    );
   }
 
   const syncedAnswerFix = await db.getFirstAsync<{ value: string }>(
@@ -191,14 +197,14 @@ export async function createDeck(title: string, description: string, subject = '
   const palette = ['#DFE5FA', '#FBF2CF', '#FBE3DE', '#DCEDE2'];
   const count = await db.getFirstAsync<{ count: number }>('SELECT COUNT(*) AS count FROM decks');
   return db.runAsync(
-    'INSERT INTO decks (title, description, color, daily_new_limit, subject, favorite, created_at) VALUES (?, ?, ?, ?, ?, 1, ?)',
+    'INSERT INTO decks (title, description, color, daily_new_limit, subject, created_at) VALUES (?, ?, ?, ?, ?, ?)',
     title.trim(), description.trim(), palette[(count?.count ?? 0) % palette.length], 5, subject.trim() || 'Divers', Date.now(),
   );
 }
 
-export async function setDeckFavorite(deckId: number, favorite: boolean) {
+export async function setDeckStatus(deckId: number, status: DeckStatus) {
   const db = await getDatabase();
-  await db.runAsync('UPDATE decks SET favorite = ? WHERE id = ?', favorite ? 1 : 0, deckId);
+  await db.runAsync('UPDATE decks SET status = ? WHERE id = ?', status, deckId);
 }
 
 export async function updateDailyLimit(deckId: number, limit: number) {
