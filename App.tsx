@@ -348,10 +348,30 @@ function HomeScreen({ onOpenSubject, onStudy, onOpenStats }: { onOpenSubject: (s
         })}
 
         {!visibleSubjects.length ? (
-          <Pressable onPress={() => setEditorOpen(true)} style={styles.newDeckCard}>
-            <View style={styles.newDeckIcon}><Ionicons name="add" size={24} color={colors.blue} /></View>
-            <View><Text style={styles.newDeckTitle}>Aucune matière visible</Text><Text style={styles.newDeckCaption}>Choisis les matières à afficher</Text></View>
-          </Pressable>
+          decks.length ? (
+            <Pressable onPress={() => setEditorOpen(true)} style={styles.newDeckCard}>
+              <View style={styles.newDeckIcon}><Ionicons name="add" size={24} color={colors.blue} /></View>
+              <View><Text style={styles.newDeckTitle}>Aucune matière visible</Text><Text style={styles.newDeckCaption}>Choisis les matières à afficher</Text></View>
+            </Pressable>
+          ) : (
+            <View style={styles.syncEmptyCard}>
+              <View style={styles.syncEmptyIcon}>
+                {syncing ? <ActivityIndicator color={colors.blue} /> : <Ionicons name="cloud-download-outline" size={26} color={colors.blue} />}
+              </View>
+              <Text style={styles.syncEmptyTitle}>Aucun paquet pour le moment</Text>
+              <Text style={styles.syncEmptyText}>Synchronise pour récupérer les paquets du dépôt, ou crée le premier toi-même.</Text>
+              <PrimaryButton
+                label={syncing ? 'Synchronisation…' : 'Synchroniser maintenant'}
+                icon="sync"
+                disabled={syncing}
+                onPress={() => void runSync(true)}
+              />
+              <Pressable onPress={() => setEditorOpen(true)} style={({ pressed }) => [styles.syncEmptySkip, pressed && styles.pressed]}>
+                <Text style={styles.syncEmptySkipText}>Ou choisis les matières à afficher</Text>
+              </Pressable>
+              {syncNote ? <Text style={[styles.syncEmptyNote, syncNote.startsWith('Synchronisation impossible') && styles.syncEmptyNoteError]}>{syncNote}</Text> : null}
+            </View>
+          )
         ) : null}
 
         <CustomSessionSheet
@@ -1454,6 +1474,14 @@ const styles = StyleSheet.create({
   newDeckIcon: { width: 46, height: 46, borderRadius: 14, backgroundColor: colors.blueSoft, alignItems: 'center', justifyContent: 'center', marginRight: 13 },
   newDeckTitle: { fontWeight: '800', color: colors.ink, fontSize: 15 },
   newDeckCaption: { color: colors.muted, fontSize: 12, marginTop: 3 },
+  syncEmptyCard: { backgroundColor: colors.paper, borderRadius: radius.large, borderWidth: 1.5, borderStyle: 'dashed', borderColor: '#B9C2E8', padding: 24, alignItems: 'center', marginTop: 2, ...shadow },
+  syncEmptyIcon: { width: 64, height: 64, borderRadius: 20, backgroundColor: colors.blueSoft, alignItems: 'center', justifyContent: 'center', marginBottom: 16 },
+  syncEmptyTitle: { fontSize: 18, fontWeight: '800', color: colors.ink, letterSpacing: -0.3 },
+  syncEmptyText: { color: colors.muted, fontSize: 13, lineHeight: 19, textAlign: 'center', marginTop: 7, marginBottom: 18 },
+  syncEmptySkip: { marginTop: 14, paddingVertical: 6, paddingHorizontal: 12 },
+  syncEmptySkipText: { color: colors.blue, fontSize: 13, fontWeight: '700' },
+  syncEmptyNote: { color: colors.green, fontSize: 12, fontWeight: '700', marginTop: 12 },
+  syncEmptyNoteError: { color: colors.red },
   topBar: { height: 70, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   topBarTitle: { fontSize: 16, fontWeight: '800', color: colors.ink },
   deckHero: { alignItems: 'center', paddingTop: 14 },
