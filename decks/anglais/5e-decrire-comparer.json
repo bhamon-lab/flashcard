@@ -1,0 +1,22 @@
+{
+  "id": "anglais-5e-decrire-comparer",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Décrire et comparer",
+  "description": "Présent continu, comparatifs, superlatifs, quantités et capacité.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 4,
+  "grade": "5e",
+  "cards": [
+    { "id": "present-continuous", "kind": "grammaire", "front": "Complète : Look! They ___ football. (play)", "back": "Look! They are playing football." },
+    { "id": "simple-or-continuous", "kind": "grammaire", "front": "Choisis : She reads / is reading every evening.", "back": "She reads every evening : une habitude appelle le présent simple." },
+    { "id": "continuous-negative", "kind": "grammaire", "front": "Mets à la forme négative : I am listening.", "back": "I am not listening. / I’m not listening." },
+    { "id": "comparative-short", "kind": "grammaire", "front": "Complète : London is ___ than York. (big)", "back": "London is bigger than York." },
+    { "id": "comparative-long", "kind": "grammaire", "front": "Complète : A train is ___ than a bus. (comfortable)", "back": "A train is more comfortable than a bus." },
+    { "id": "superlative", "kind": "grammaire", "front": "Traduis : « C’est le plus haut bâtiment de la ville. »", "back": "It is the tallest building in the city." },
+    { "id": "some-any", "kind": "grammaire", "front": "Complète : Are there ___ shops nearby?", "back": "Are there any shops nearby?" },
+    { "id": "much-many", "kind": "grammaire", "front": "Complète : How ___ students are there?", "back": "How many students are there? Many s’emploie avec un nom dénombrable." },
+    { "id": "can", "kind": "grammaire", "front": "Traduis : « Elle sait très bien nager. »", "back": "She can swim very well." },
+    { "id": "can-question", "kind": "grammaire", "front": "Demande la permission d’ouvrir la fenêtre.", "back": "Can I open the window?" }
+  ]
+}

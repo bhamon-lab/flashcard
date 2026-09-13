@@ -1,0 +1,22 @@
+{
+  "id": "anglais-4e-raconter-prevoir",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Raconter et prévoir",
+  "description": "Prétérit, verbes irréguliers, futur et verbes modaux.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 4,
+  "grade": "4e",
+  "cards": [
+    { "id": "past-regular", "kind": "grammaire", "front": "Mets au prétérit : We visit Edinburgh.", "back": "We visited Edinburgh." },
+    { "id": "past-go", "kind": "grammaire", "front": "Donne le prétérit de go et utilise-le dans une phrase.", "back": "went — We went to Scotland last year." },
+    { "id": "past-see-take", "kind": "grammaire", "front": "Donne le prétérit de see et take.", "back": "saw, took" },
+    { "id": "past-negative", "kind": "grammaire", "front": "Mets à la forme négative : She enjoyed the trip.", "back": "She didn’t enjoy the trip." },
+    { "id": "past-question", "kind": "grammaire", "front": "Pose la question : « Où es-tu allé hier ? »", "back": "Where did you go yesterday?" },
+    { "id": "past-continuous", "kind": "grammaire", "front": "Complète : I ___ when you called. (sleep)", "back": "I was sleeping when you called." },
+    { "id": "will-prediction", "kind": "grammaire", "front": "Traduis cette prédiction : « Il pleuvra demain. »", "back": "It will rain tomorrow." },
+    { "id": "going-to-plan", "kind": "grammaire", "front": "Exprime ce projet : « Nous allons visiter Dublin. »", "back": "We are going to visit Dublin." },
+    { "id": "should", "kind": "grammaire", "front": "Donne un conseil avec should : « Tu devrais voir un médecin. »", "back": "You should see a doctor." },
+    { "id": "must-have-to", "kind": "grammaire", "front": "Traduis : « Je dois porter un uniforme. »", "back": "I have to wear a uniform. / I must wear a uniform." }
+  ]
+}

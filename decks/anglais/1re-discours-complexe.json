@@ -1,0 +1,22 @@
+{
+  "id": "anglais-1re-discours-complexe",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Discours complexe",
+  "description": "Passif, discours indirect, hypothèses et expression de la nuance.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 4,
+  "grade": "1re",
+  "cards": [
+    { "id": "passive-present", "kind": "grammaire", "front": "Mets au passif : Millions of people watch the ceremony.", "back": "The ceremony is watched by millions of people." },
+    { "id": "passive-past", "kind": "grammaire", "front": "Mets au passif : They built the bridge in 1890.", "back": "The bridge was built in 1890." },
+    { "id": "reported-statement", "kind": "grammaire", "front": "Rapporte : She said, “I am tired.”", "back": "She said (that) she was tired." },
+    { "id": "reported-question", "kind": "grammaire", "front": "Rapporte : He asked, “Where do you live?”", "back": "He asked me where I lived." },
+    { "id": "second-conditional", "kind": "grammaire", "front": "Complète : If I ___ more time, I ___ abroad. (have / travel)", "back": "If I had more time, I would travel abroad." },
+    { "id": "wish", "kind": "grammaire", "front": "Traduis : « J’aimerais avoir davantage confiance en moi. »", "back": "I wish I were more confident. / I wish I had more self-confidence." },
+    { "id": "probability", "kind": "expression", "front": "Classe du moins au plus certain : might, must, may.", "back": "might / may expriment une possibilité ; must exprime ici une forte déduction." },
+    { "id": "must-deduction", "kind": "grammaire", "front": "Traduis cette déduction : « Il doit être chez lui. »", "back": "He must be at home." },
+    { "id": "linking-participle", "kind": "grammaire", "front": "Réduis : Because she was inspired by the speech, she took action.", "back": "Inspired by the speech, she took action." },
+    { "id": "despite", "kind": "grammaire", "front": "Complète : ___ the difficulties, they succeeded.", "back": "Despite the difficulties, they succeeded." }
+  ]
+}

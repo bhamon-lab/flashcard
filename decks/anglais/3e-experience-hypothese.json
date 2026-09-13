@@ -1,0 +1,22 @@
+{
+  "id": "anglais-3e-experience-hypothese",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Expérience et hypothèse",
+  "description": "Present perfect, bilan d’expérience, obligation et premier conditionnel.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 4,
+  "grade": "3e",
+  "cards": [
+    { "id": "present-perfect", "kind": "grammaire", "front": "Complète : I ___ never ___ New York. (visit)", "back": "I have never visited New York." },
+    { "id": "ever", "kind": "grammaire", "front": "Demande : « Es-tu déjà allé au Royaume-Uni ? »", "back": "Have you ever been to the United Kingdom?" },
+    { "id": "just", "kind": "grammaire", "front": "Traduis : « Elle vient de finir. »", "back": "She has just finished." },
+    { "id": "since-for", "kind": "grammaire", "front": "Complète : We have lived here ___ 2022 / ___ four years.", "back": "since 2022 / for four years" },
+    { "id": "past-or-perfect", "kind": "grammaire", "front": "Choisis : I have seen / saw that film yesterday.", "back": "I saw that film yesterday : yesterday situe l’action dans un passé terminé." },
+    { "id": "first-conditional", "kind": "grammaire", "front": "Complète : If it rains, we ___ at home. (stay)", "back": "If it rains, we will stay at home." },
+    { "id": "unless", "kind": "grammaire", "front": "Que signifie : Unless we act, the problem will get worse ?", "back": "Si nous n’agissons pas, le problème empirera. Unless signifie « sauf si / si… ne… pas »." },
+    { "id": "obligation", "kind": "grammaire", "front": "Traduis : « Les élèves doivent respecter les règles. »", "back": "Students have to respect the rules. / Students must respect the rules." },
+    { "id": "no-obligation", "kind": "grammaire", "front": "Traduis : « Tu n’es pas obligé de venir. »", "back": "You don’t have to come." },
+    { "id": "prohibition-difference", "kind": "grammaire", "front": "Quelle différence entre mustn’t et don’t have to ?", "back": "mustn’t = interdiction ; don’t have to = absence d’obligation." }
+  ]
+}

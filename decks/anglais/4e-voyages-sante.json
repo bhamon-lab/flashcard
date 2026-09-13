@@ -1,0 +1,22 @@
+{
+  "id": "anglais-4e-voyages-sante",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Voyages et santé",
+  "description": "Se déplacer, réserver, expliquer un problème et donner un conseil.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 4,
+  "grade": "4e",
+  "cards": [
+    { "id": "book-room", "kind": "expression", "front": "Traduis : « Je voudrais réserver une chambre. »", "back": "I’d like to book a room." },
+    { "id": "return-ticket", "kind": "vocabulaire", "front": "Demande un aller-retour pour Londres.", "back": "A return ticket to London, please." },
+    { "id": "platform", "kind": "vocabulaire", "front": "Que signifie « Which platform does the train leave from? » ?", "back": "De quel quai le train part-il ?" },
+    { "id": "delayed", "kind": "vocabulaire", "front": "Traduis : « Le vol est retardé. »", "back": "The flight is delayed." },
+    { "id": "lost", "kind": "expression", "front": "Dis : « Je me suis perdu et j’ai besoin d’aide. »", "back": "I’m lost and I need help." },
+    { "id": "headache", "kind": "vocabulaire", "front": "Traduis : « J’ai mal à la tête. »", "back": "I have a headache." },
+    { "id": "symptoms", "kind": "vocabulaire", "front": "Comment dit-on « toux », « fièvre » et « mal de gorge » ?", "back": "a cough, a fever, a sore throat" },
+    { "id": "advice-rest", "kind": "expression", "front": "Conseille à quelqu’un de se reposer.", "back": "You should rest." },
+    { "id": "prohibition", "kind": "expression", "front": "Dis : « Tu ne dois pas fumer ici. »", "back": "You mustn’t smoke here." },
+    { "id": "emergency", "kind": "expression", "front": "Comment demande-t-on d’appeler une ambulance ?", "back": "Call an ambulance, please!" }
+  ]
+}

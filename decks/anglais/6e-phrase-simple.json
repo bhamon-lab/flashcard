@@ -1,0 +1,22 @@
+{
+  "id": "anglais-6e-phrase-simple",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Phrase simple",
+  "description": "Be, have got, pronoms, présent simple et questions essentielles.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 4,
+  "grade": "6e",
+  "cards": [
+    { "id": "be-i", "kind": "grammaire", "front": "Complète : I ___ French.", "back": "I am French. Forme contractée : I’m French." },
+    { "id": "be-third-person", "kind": "grammaire", "front": "Complète : She ___ my friend.", "back": "She is my friend. Forme contractée : She’s my friend." },
+    { "id": "be-negative", "kind": "grammaire", "front": "Mets à la forme négative : He is tired.", "back": "He isn’t tired. / He is not tired." },
+    { "id": "be-question", "kind": "grammaire", "front": "Transforme en question : You are ready.", "back": "Are you ready?" },
+    { "id": "have-got", "kind": "grammaire", "front": "Traduis : « J’ai un frère. »", "back": "I have got a brother. / I’ve got a brother." },
+    { "id": "articles", "kind": "grammaire", "front": "Complète : ___ apple and ___ banana.", "back": "An apple and a banana." },
+    { "id": "plural", "kind": "grammaire", "front": "Donne le pluriel de child, foot et box.", "back": "children, feet, boxes" },
+    { "id": "present-third-person", "kind": "grammaire", "front": "Complète : Tom ___ football every Saturday. (play)", "back": "Tom plays football every Saturday." },
+    { "id": "present-negative", "kind": "grammaire", "front": "Traduis : « Je n’aime pas le thé. »", "back": "I don’t like tea." },
+    { "id": "present-question", "kind": "grammaire", "front": "Pose la question : « Est-ce que tu aimes la musique ? »", "back": "Do you like music?" }
+  ]
+}
