@@ -57,7 +57,7 @@ Vérifier avec `python3 scripts/validate_lycee_decks.py`.
 
 ## Anglais du collège au lycée
 
-Le catalogue contient **74 decks et 740 cartes**, classés par niveau de la 6e à
+Le catalogue contient **74 decks et 855 cartes**, classés par niveau de la 6e à
 la terminale : listes de vocabulaire, copies de ces listes en compréhension
 orale, culture du monde anglophone, verbes irréguliers et grammaire. Les champs
 éditoriaux `category`, `mode`, `audio_language`, `cards[].kind` et

@@ -10,64 +10,172 @@
   "category": "irregular-verbs",
   "cards": [
     {
-      "id": "deal",
+      "id": "arise",
       "kind": "verbe-irregulier",
-      "front": "deal — traiter",
-      "back": "deal · dealt · dealt"
+      "front": "arise — survenir",
+      "back": "arise · arose · arisen"
     },
     {
-      "id": "draw",
+      "id": "bear",
       "kind": "verbe-irregulier",
-      "front": "draw — dessiner",
-      "back": "draw · drew · drawn"
+      "front": "bear — porter, supporter",
+      "back": "bear · bore · borne/born"
     },
     {
-      "id": "fly",
+      "id": "beat",
       "kind": "verbe-irregulier",
-      "front": "fly — voler",
-      "back": "fly · flew · flown"
+      "front": "beat — battre",
+      "back": "beat · beat · beaten"
     },
     {
-      "id": "lead",
+      "id": "bend",
       "kind": "verbe-irregulier",
-      "front": "lead — mener",
-      "back": "lead · led · led"
+      "front": "bend — plier",
+      "back": "bend · bent · bent"
     },
     {
-      "id": "lie",
+      "id": "bet",
       "kind": "verbe-irregulier",
-      "front": "lie — être allongé",
-      "back": "lie · lay · lain"
+      "front": "bet — parier",
+      "back": "bet · bet · bet"
     },
     {
-      "id": "rise",
+      "id": "bind",
       "kind": "verbe-irregulier",
-      "front": "rise — s'élever",
-      "back": "rise · rose · risen"
+      "front": "bind — lier",
+      "back": "bind · bound · bound"
     },
     {
-      "id": "shake",
+      "id": "breed",
       "kind": "verbe-irregulier",
-      "front": "shake — secouer",
-      "back": "shake · shook · shaken"
+      "front": "breed — élever, se reproduire",
+      "back": "breed · bred · bred"
     },
     {
-      "id": "show",
+      "id": "burst",
       "kind": "verbe-irregulier",
-      "front": "show — montrer",
-      "back": "show · showed · shown"
+      "front": "burst — éclater",
+      "back": "burst · burst · burst"
     },
     {
-      "id": "throw",
+      "id": "flee",
       "kind": "verbe-irregulier",
-      "front": "throw — jeter",
-      "back": "throw · threw · thrown"
+      "front": "flee — fuir",
+      "back": "flee · fled · fled"
     },
     {
-      "id": "wear",
+      "id": "forgive",
       "kind": "verbe-irregulier",
-      "front": "wear — porter",
-      "back": "wear · wore · worn"
+      "front": "forgive — pardonner",
+      "back": "forgive · forgave · forgiven"
+    },
+    {
+      "id": "seek",
+      "kind": "verbe-irregulier",
+      "front": "seek — chercher",
+      "back": "seek · sought · sought"
+    },
+    {
+      "id": "set",
+      "kind": "verbe-irregulier",
+      "front": "set — placer, régler",
+      "back": "set · set · set"
+    },
+    {
+      "id": "shine",
+      "kind": "verbe-irregulier",
+      "front": "shine — briller",
+      "back": "shine · shone · shone"
+    },
+    {
+      "id": "sink",
+      "kind": "verbe-irregulier",
+      "front": "sink — couler",
+      "back": "sink · sank · sunk"
+    },
+    {
+      "id": "slide",
+      "kind": "verbe-irregulier",
+      "front": "slide — glisser",
+      "back": "slide · slid · slid"
+    },
+    {
+      "id": "spread",
+      "kind": "verbe-irregulier",
+      "front": "spread — répandre",
+      "back": "spread · spread · spread"
+    },
+    {
+      "id": "strike",
+      "kind": "verbe-irregulier",
+      "front": "strike — frapper",
+      "back": "strike · struck · struck/stricken"
+    },
+    {
+      "id": "swear",
+      "kind": "verbe-irregulier",
+      "front": "swear — jurer",
+      "back": "swear · swore · sworn"
+    },
+    {
+      "id": "swing",
+      "kind": "verbe-irregulier",
+      "front": "swing — se balancer",
+      "back": "swing · swung · swung"
+    },
+    {
+      "id": "weep",
+      "kind": "verbe-irregulier",
+      "front": "weep — pleurer",
+      "back": "weep · wept · wept"
+    },
+    {
+      "id": "withdraw",
+      "kind": "verbe-irregulier",
+      "front": "withdraw — retirer",
+      "back": "withdraw · withdrew · withdrawn"
+    },
+    {
+      "id": "withstand",
+      "kind": "verbe-irregulier",
+      "front": "withstand — résister à",
+      "back": "withstand · withstood · withstood"
+    },
+    {
+      "id": "overcome",
+      "kind": "verbe-irregulier",
+      "front": "overcome — surmonter",
+      "back": "overcome · overcame · overcome"
+    },
+    {
+      "id": "undertake",
+      "kind": "verbe-irregulier",
+      "front": "undertake — entreprendre",
+      "back": "undertake · undertook · undertaken"
+    },
+    {
+      "id": "mistake",
+      "kind": "verbe-irregulier",
+      "front": "mistake — confondre",
+      "back": "mistake · mistook · mistaken"
+    },
+    {
+      "id": "fit",
+      "kind": "verbe-irregulier",
+      "front": "fit — convenir, aller",
+      "back": "fit · fit/fitted · fit/fitted"
+    },
+    {
+      "id": "string",
+      "kind": "verbe-irregulier",
+      "front": "string — enfiler, tendre",
+      "back": "string · strung · strung"
+    },
+    {
+      "id": "thrust",
+      "kind": "verbe-irregulier",
+      "front": "thrust — pousser brusquement",
+      "back": "thrust · thrust · thrust"
     }
   ]
 }

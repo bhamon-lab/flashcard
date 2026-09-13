@@ -10,64 +10,184 @@
   "category": "irregular-verbs",
   "cards": [
     {
+      "id": "abide",
+      "kind": "verbe-irregulier",
+      "front": "abide — respecter, supporter",
+      "back": "abide · abode/abided · abode/abided"
+    },
+    {
+      "id": "befall",
+      "kind": "verbe-irregulier",
+      "front": "befall — arriver à",
+      "back": "befall · befell · befallen"
+    },
+    {
+      "id": "behold",
+      "kind": "verbe-irregulier",
+      "front": "behold — contempler",
+      "back": "behold · beheld · beheld"
+    },
+    {
+      "id": "bereave",
+      "kind": "verbe-irregulier",
+      "front": "bereave — endeuiller",
+      "back": "bereave · bereaved/bereft · bereaved/bereft"
+    },
+    {
+      "id": "beseech",
+      "kind": "verbe-irregulier",
+      "front": "beseech — supplier",
+      "back": "beseech · besought/beseeched · besought/beseeched"
+    },
+    {
+      "id": "bid",
+      "kind": "verbe-irregulier",
+      "front": "bid — enchérir",
+      "back": "bid · bid · bid"
+    },
+    {
       "id": "broadcast",
       "kind": "verbe-irregulier",
       "front": "broadcast — diffuser",
       "back": "broadcast · broadcast · broadcast"
     },
     {
-      "id": "forbid",
+      "id": "dwell",
       "kind": "verbe-irregulier",
-      "front": "forbid — interdire",
-      "back": "forbid · forbade · forbidden"
+      "front": "dwell — habiter, s'attarder",
+      "back": "dwell · dwelt/dwelled · dwelt/dwelled"
     },
     {
-      "id": "foresee",
+      "id": "fling",
       "kind": "verbe-irregulier",
-      "front": "foresee — prévoir",
-      "back": "foresee · foresaw · foreseen"
+      "front": "fling — lancer violemment",
+      "back": "fling · flung · flung"
     },
     {
-      "id": "overcome",
+      "id": "foretell",
       "kind": "verbe-irregulier",
-      "front": "overcome — surmonter",
-      "back": "overcome · overcame · overcome"
+      "front": "foretell — prédire",
+      "back": "foretell · foretold · foretold"
     },
     {
-      "id": "prove",
+      "id": "forsake",
       "kind": "verbe-irregulier",
-      "front": "prove — prouver",
-      "back": "prove · proved · proven/proved"
+      "front": "forsake — abandonner",
+      "back": "forsake · forsook · forsaken"
     },
     {
-      "id": "withdraw",
+      "id": "mow",
       "kind": "verbe-irregulier",
-      "front": "withdraw — retirer",
-      "back": "withdraw · withdrew · withdrawn"
+      "front": "mow — tondre",
+      "back": "mow · mowed · mown/mowed"
     },
     {
-      "id": "withstand",
+      "id": "plead",
       "kind": "verbe-irregulier",
-      "front": "withstand — résister à",
-      "back": "withstand · withstood · withstood"
+      "front": "plead — plaider",
+      "back": "plead · pleaded/pled · pleaded/pled"
     },
     {
-      "id": "undertake",
+      "id": "rid",
       "kind": "verbe-irregulier",
-      "front": "undertake — entreprendre",
-      "back": "undertake · undertook · undertaken"
+      "front": "rid — débarrasser",
+      "back": "rid · rid · rid"
     },
     {
-      "id": "mislead",
+      "id": "saw",
       "kind": "verbe-irregulier",
-      "front": "mislead — induire en erreur",
-      "back": "mislead · misled · misled"
+      "front": "saw — scier",
+      "back": "saw · sawed · sawn/sawed"
     },
     {
-      "id": "uphold",
+      "id": "sew",
       "kind": "verbe-irregulier",
-      "front": "uphold — maintenir",
-      "back": "uphold · upheld · upheld"
+      "front": "sew — coudre",
+      "back": "sew · sewed · sewn/sewed"
+    },
+    {
+      "id": "sling",
+      "kind": "verbe-irregulier",
+      "front": "sling — lancer, suspendre",
+      "back": "sling · slung · slung"
+    },
+    {
+      "id": "slit",
+      "kind": "verbe-irregulier",
+      "front": "slit — fendre",
+      "back": "slit · slit · slit"
+    },
+    {
+      "id": "sow",
+      "kind": "verbe-irregulier",
+      "front": "sow — semer",
+      "back": "sow · sowed · sown/sowed"
+    },
+    {
+      "id": "speed",
+      "kind": "verbe-irregulier",
+      "front": "speed — aller vite",
+      "back": "speed · sped/speeded · sped/speeded"
+    },
+    {
+      "id": "spill",
+      "kind": "verbe-irregulier",
+      "front": "spill — renverser",
+      "back": "spill · spilled/spilt · spilled/spilt"
+    },
+    {
+      "id": "spoil",
+      "kind": "verbe-irregulier",
+      "front": "spoil — gâcher",
+      "back": "spoil · spoiled/spoilt · spoiled/spoilt"
+    },
+    {
+      "id": "swell",
+      "kind": "verbe-irregulier",
+      "front": "swell — gonfler",
+      "back": "swell · swelled · swollen/swelled"
+    },
+    {
+      "id": "weave",
+      "kind": "verbe-irregulier",
+      "front": "weave — tisser",
+      "back": "weave · wove · woven"
+    },
+    {
+      "id": "wring",
+      "kind": "verbe-irregulier",
+      "front": "wring — tordre",
+      "back": "wring · wrung · wrung"
+    },
+    {
+      "id": "alight",
+      "kind": "verbe-irregulier",
+      "front": "alight — descendre, se poser",
+      "back": "alight · alighted/alit · alighted/alit"
+    },
+    {
+      "id": "beget",
+      "kind": "verbe-irregulier",
+      "front": "beget — engendrer",
+      "back": "beget · begot · begotten"
+    },
+    {
+      "id": "beset",
+      "kind": "verbe-irregulier",
+      "front": "beset — assaillir",
+      "back": "beset · beset · beset"
+    },
+    {
+      "id": "slay",
+      "kind": "verbe-irregulier",
+      "front": "slay — tuer",
+      "back": "slay · slew · slain"
+    },
+    {
+      "id": "smite",
+      "kind": "verbe-irregulier",
+      "front": "smite — frapper violemment",
+      "back": "smite · smote · smitten"
     }
   ]
 }

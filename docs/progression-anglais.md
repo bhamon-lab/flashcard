@@ -1,6 +1,6 @@
 # Arbre de progression en anglais — de la 6e à la terminale
 
-Le catalogue contient **74 decks et 740 cartes**, organisés par classe et par
+Le catalogue contient **74 decks et 855 cartes**, organisés par classe et par
 type d'apprentissage. La classe est un parcours conseillé, pas un verrou : un
 élève peut reprendre une liste antérieure ou avancer dans une branche précise.
 
@@ -123,9 +123,10 @@ Culture
                 └── 1re Littérature et arts
                     └── Terminale Commonwealth et institutions contemporaines
 
-Verbes irréguliers
-Série 1 (6e) → série 2 (5e) → série 3 (4e) → série 4 (3e)
-→ série 5 (2de) → série 6 (1re) → série 7 (Terminale)
+Verbes irréguliers — 185 verbes distincts
+Série 1 (6e, 20 verbes) → série 2 (5e, 25) → série 3 (4e, 25)
+→ série 4 (3e, 30) → série 5 (2de, 28) → série 6 (1re, 27)
+→ série 7 (Terminale, 30)
 
 Grammaire
 Be / have got / pronoms
@@ -148,10 +149,15 @@ Les noms sont prévisibles afin de faciliter les ajouts et la future interface :
 - `{niveau}-verbes-irreguliers.json` : infinitif, prétérit et participe passé ;
 - `{niveau}-grammaire-{theme}.json` : règles et automatismes.
 
-Tous les paquets contiennent dix cartes. Les listes de vocabulaire et leurs
-copies orales partagent les mêmes identifiants de cartes à l'intérieur de deux
-decks distincts, ce qui permet de vérifier automatiquement qu'aucune entrée ne
-manque d'un côté.
+Les paquets de vocabulaire, d'écoute, de culture et de grammaire contiennent dix
+cartes. Les séries de verbes irréguliers contiennent entre vingt et trente
+nouveaux verbes par niveau. Le parcours complet couvre **185 verbes distincts**,
+sans répéter les verbes entre les séries ; les variantes britanniques et
+américaines usuelles sont indiquées ensemble.
+
+Les listes de vocabulaire et leurs copies orales partagent les mêmes identifiants
+de cartes à l'intérieur de deux decks distincts, ce qui permet de vérifier
+automatiquement qu'aucune entrée ne manque d'un côté.
 
 ## Maintenance
 

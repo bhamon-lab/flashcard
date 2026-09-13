@@ -48,7 +48,7 @@
     {
       "id": "make",
       "kind": "verbe-irregulier",
-      "front": "make — fabriquer",
+      "front": "make — faire, fabriquer",
       "back": "make · made · made"
     },
     {
@@ -68,6 +68,66 @@
       "kind": "verbe-irregulier",
       "front": "take — prendre",
       "back": "take · took · taken"
+    },
+    {
+      "id": "eat",
+      "kind": "verbe-irregulier",
+      "front": "eat — manger",
+      "back": "eat · ate · eaten"
+    },
+    {
+      "id": "drink",
+      "kind": "verbe-irregulier",
+      "front": "drink — boire",
+      "back": "drink · drank · drunk"
+    },
+    {
+      "id": "give",
+      "kind": "verbe-irregulier",
+      "front": "give — donner",
+      "back": "give · gave · given"
+    },
+    {
+      "id": "know",
+      "kind": "verbe-irregulier",
+      "front": "know — savoir, connaître",
+      "back": "know · knew · known"
+    },
+    {
+      "id": "read",
+      "kind": "verbe-irregulier",
+      "front": "read — lire",
+      "back": "read · read · read"
+    },
+    {
+      "id": "write",
+      "kind": "verbe-irregulier",
+      "front": "write — écrire",
+      "back": "write · wrote · written"
+    },
+    {
+      "id": "find",
+      "kind": "verbe-irregulier",
+      "front": "find — trouver",
+      "back": "find · found · found"
+    },
+    {
+      "id": "think",
+      "kind": "verbe-irregulier",
+      "front": "think — penser",
+      "back": "think · thought · thought"
+    },
+    {
+      "id": "buy",
+      "kind": "verbe-irregulier",
+      "front": "buy — acheter",
+      "back": "buy · bought · bought"
+    },
+    {
+      "id": "bring",
+      "kind": "verbe-irregulier",
+      "front": "bring — apporter",
+      "back": "bring · brought · brought"
     }
   ]
 }

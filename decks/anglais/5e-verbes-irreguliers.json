@@ -16,58 +16,148 @@
       "back": "begin · began · begun"
     },
     {
-      "id": "bring",
+      "id": "break",
       "kind": "verbe-irregulier",
-      "front": "bring — apporter",
-      "back": "bring · brought · brought"
+      "front": "break — casser",
+      "back": "break · broke · broken"
     },
     {
-      "id": "buy",
+      "id": "choose",
       "kind": "verbe-irregulier",
-      "front": "buy — acheter",
-      "back": "buy · bought · bought"
+      "front": "choose — choisir",
+      "back": "choose · chose · chosen"
     },
     {
-      "id": "drink",
+      "id": "drive",
       "kind": "verbe-irregulier",
-      "front": "drink — boire",
-      "back": "drink · drank · drunk"
+      "front": "drive — conduire",
+      "back": "drive · drove · driven"
     },
     {
-      "id": "eat",
+      "id": "fall",
       "kind": "verbe-irregulier",
-      "front": "eat — manger",
-      "back": "eat · ate · eaten"
+      "front": "fall — tomber",
+      "back": "fall · fell · fallen"
     },
     {
-      "id": "find",
+      "id": "feel",
       "kind": "verbe-irregulier",
-      "front": "find — trouver",
-      "back": "find · found · found"
+      "front": "feel — ressentir",
+      "back": "feel · felt · felt"
     },
     {
-      "id": "give",
+      "id": "forget",
       "kind": "verbe-irregulier",
-      "front": "give — donner",
-      "back": "give · gave · given"
+      "front": "forget — oublier",
+      "back": "forget · forgot · forgotten"
     },
     {
-      "id": "know",
+      "id": "leave",
       "kind": "verbe-irregulier",
-      "front": "know — savoir",
-      "back": "know · knew · known"
+      "front": "leave — quitter",
+      "back": "leave · left · left"
     },
     {
-      "id": "read",
+      "id": "meet",
       "kind": "verbe-irregulier",
-      "front": "read — lire",
-      "back": "read · read · read"
+      "front": "meet — rencontrer",
+      "back": "meet · met · met"
     },
     {
-      "id": "write",
+      "id": "run",
       "kind": "verbe-irregulier",
-      "front": "write — écrire",
-      "back": "write · wrote · written"
+      "front": "run — courir",
+      "back": "run · ran · run"
+    },
+    {
+      "id": "speak",
+      "kind": "verbe-irregulier",
+      "front": "speak — parler",
+      "back": "speak · spoke · spoken"
+    },
+    {
+      "id": "sleep",
+      "kind": "verbe-irregulier",
+      "front": "sleep — dormir",
+      "back": "sleep · slept · slept"
+    },
+    {
+      "id": "sing",
+      "kind": "verbe-irregulier",
+      "front": "sing — chanter",
+      "back": "sing · sang · sung"
+    },
+    {
+      "id": "sit",
+      "kind": "verbe-irregulier",
+      "front": "sit — s'asseoir",
+      "back": "sit · sat · sat"
+    },
+    {
+      "id": "stand",
+      "kind": "verbe-irregulier",
+      "front": "stand — être debout",
+      "back": "stand · stood · stood"
+    },
+    {
+      "id": "swim",
+      "kind": "verbe-irregulier",
+      "front": "swim — nager",
+      "back": "swim · swam · swum"
+    },
+    {
+      "id": "teach",
+      "kind": "verbe-irregulier",
+      "front": "teach — enseigner",
+      "back": "teach · taught · taught"
+    },
+    {
+      "id": "tell",
+      "kind": "verbe-irregulier",
+      "front": "tell — dire, raconter",
+      "back": "tell · told · told"
+    },
+    {
+      "id": "wear",
+      "kind": "verbe-irregulier",
+      "front": "wear — porter",
+      "back": "wear · wore · worn"
+    },
+    {
+      "id": "win",
+      "kind": "verbe-irregulier",
+      "front": "win — gagner",
+      "back": "win · won · won"
+    },
+    {
+      "id": "pay",
+      "kind": "verbe-irregulier",
+      "front": "pay — payer",
+      "back": "pay · paid · paid"
+    },
+    {
+      "id": "put",
+      "kind": "verbe-irregulier",
+      "front": "put — mettre",
+      "back": "put · put · put"
+    },
+    {
+      "id": "send",
+      "kind": "verbe-irregulier",
+      "front": "send — envoyer",
+      "back": "send · sent · sent"
+    },
+    {
+      "id": "build",
+      "kind": "verbe-irregulier",
+      "front": "build — construire",
+      "back": "build · built · built"
+    },
+    {
+      "id": "catch",
+      "kind": "verbe-irregulier",
+      "front": "catch — attraper",
+      "back": "catch · caught · caught"
     }
   ]
 }
