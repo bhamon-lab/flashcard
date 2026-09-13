@@ -5,7 +5,7 @@ import json
 import re
 from collections import Counter
 
-from validate_college_decks import KINDS, ROOT, SLUG, require, validate_text
+from validate_college_decks import KINDS, ROOT, SLUG, load_curriculum, require, validate_text
 
 COURSES = {
     "2de": (0, "seconde-2026", "2de"),
@@ -16,17 +16,11 @@ COURSES = {
 
 
 def main():
-    manifest = json.loads((ROOT / "curriculum/lycee-2026-2027.json").read_text())
-    require(manifest["schema_version"] == 1, "Version de schéma inconnue")
-    require(manifest["school_year"] == "2026-2027", "Année scolaire incorrecte")
+    manifest, all_nodes = load_curriculum()
     sources = {s["id"]: s for s in manifest["sources"]}
-    require(len(sources) == len(manifest["sources"]), "Source dupliquée")
-    require(set(sources) == {v[1] for v in COURSES.values()}, "Programmes de référence incorrects")
-    for source in sources.values():
-        require(source["url"].startswith(("https://www.education.gouv.fr/",
-                                          "https://eduscol.education.gouv.fr/")),
-                f"{source['id']}: source officielle absente")
-        validate_text(source["label"], f"{source['id']}: intitulé de source")
+    require({v[1] for v in COURSES.values()} <= set(sources), "Programmes de référence incorrects")
+    for source_id in {v[1] for v in COURSES.values()}:
+        validate_text(sources[source_id]["label"], f"{source_id}: intitulé de source")
 
     # Include legacy files at decks/ as well as all subject folders.
     all_decks = {}
@@ -35,8 +29,7 @@ def main():
         require(deck["id"] not in all_decks, f"ID de deck dupliqué : {deck['id']}")
         all_decks[deck["id"]] = (path, deck)
 
-    nodes = {n["id"]: n for n in manifest["nodes"]}
-    require(len(nodes) == len(manifest["nodes"]), "Nœud dupliqué")
+    nodes = {nid: n for nid, n in all_nodes.items() if n["grade"] in COURSES}
     require({n["grade"] for n in nodes.values()} == set(COURSES), "Parcours manquant ou inconnu")
     files = {p.stem for course in COURSES
              for p in (ROOT / "decks/maths").glob(f"{course}-*.json")}
