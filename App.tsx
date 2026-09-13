@@ -28,6 +28,7 @@ import {
   getDecks,
   getDecksByIds,
   getNewCards,
+  getProgressionFolds,
   getSessionCards,
   getStatsSnapshot,
   getSubjectPrefs,
@@ -37,6 +38,7 @@ import {
   resetDeckProgress,
   saveCard,
   setDeckFavorite,
+  setProgressionFolds,
   setSubjectPrefs,
   updateDailyLimit,
   updateReviewDelays,
@@ -524,17 +526,19 @@ function ProgressionDeckRow({ entry, onOpen, onToggleFavorite }: {
   );
 }
 
-function ProgressionBranchCard({ branch, onOpen, onToggleFavorite }: {
+function ProgressionBranchCard({ branchKey, branch, expanded, onToggleExpanded, onOpen, onToggleFavorite }: {
+  branchKey: string;
   branch: ProgressionBranch;
+  expanded: boolean;
+  onToggleExpanded: () => void;
   onOpen: (id: number) => void;
   onToggleFavorite: (id: number) => void;
 }) {
-  const [expanded, setExpanded] = useState(true);
   const deckCount = branch.levels.reduce((sum, level) => sum + level.tracks.reduce((acc, track) => acc + track.decks.length, 0), 0);
   return (
     <View style={styles.treeBranch}>
       <Pressable
-        onPress={() => setExpanded((open) => !open)}
+        onPress={onToggleExpanded}
         accessibilityRole="button"
         accessibilityLabel={expanded ? `Replier ${branch.title}` : `Déplier ${branch.title}`}
         style={({ pressed }) => [styles.treeBranchHeader, pressed && styles.pressed]}
@@ -572,6 +576,10 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
   const [showAll, setShowAll] = useState(false);
   const [gradeFilter, setGradeFilter] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<'classe' | 'progression'>('classe');
+  // Branches repliées de l'arbre de progression : null tant que l'état sauvegardé
+  // n'est pas chargé (l'arbre reste replié par défaut).
+  const [foldedBranches, setFoldedBranches] = useState<string[] | null>(null);
+  useEffect(() => { void getProgressionFolds().then((folds) => setFoldedBranches(folds.folded)); }, []);
   useEffect(() => { void getDecks().then(setDecks); }, []);
   const group = groupBySubject(decks).find((entry) => entry.name.toLowerCase() === subject.toLowerCase())
     ?? { name: subject, decks: [] as Deck[] };
@@ -605,6 +613,15 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
     const next = !isFavorite(deck);
     setDecks((current) => current.map((entry) => entry.id === deckId ? { ...entry, favorite: next ? 1 : 0 } : entry));
     await setDeckFavorite(deckId, next);
+  };
+
+  const toggleBranch = (branchKey: string) => {
+    setFoldedBranches((current) => {
+      const folded = current ?? [];
+      const next = folded.includes(branchKey) ? folded.filter((entry) => entry !== branchKey) : [...folded, branchKey];
+      void setProgressionFolds({ folded: next });
+      return next;
+    });
   };
 
   const dueTotal = favoriteDecks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
@@ -701,7 +718,20 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
         ) : null}
 
         {viewMode === 'progression'
-          ? (progression ?? []).map((branch) => <ProgressionBranchCard key={branch.title} branch={branch} onOpen={onOpenDeck} onToggleFavorite={toggleFavorite} />)
+          ? (progression ?? []).map((branch) => {
+            const branchKey = `${group.name.toLowerCase()}::${branch.title}`;
+            return (
+              <ProgressionBranchCard
+                key={branch.title}
+                branchKey={branchKey}
+                branch={branch}
+                expanded={!(foldedBranches ?? []).includes(branchKey)}
+                onToggleExpanded={() => toggleBranch(branchKey)}
+                onOpen={onOpenDeck}
+                onToggleFavorite={toggleFavorite}
+              />
+            );
+          })
           : visibleDecks.map((deck) => <DeckCard key={deck.id} deck={deck} onOpen={onOpenDeck} onToggleFavorite={toggleFavorite} />)}
 
         {viewMode === 'classe' && !showAll && !favoriteDecks.length && group.decks.length ? (

@@ -484,6 +484,28 @@ export async function setSubjectPrefs(prefs: SubjectPrefs) {
   await setMetadata(SUBJECT_PREFS_KEY, JSON.stringify({ hidden: prefs.hidden, custom: prefs.custom }));
 }
 
+/** Branches repliées de l'arbre de progression, par matière et titre de branche. */
+export type ProgressionFolds = {
+  folded: string[];
+};
+
+const PROGRESSION_FOLDS_KEY = 'progression-folds';
+
+export async function getProgressionFolds(): Promise<ProgressionFolds> {
+  const raw = await getMetadata(PROGRESSION_FOLDS_KEY);
+  if (!raw) return { folded: [] };
+  try {
+    const parsed = JSON.parse(raw) as Partial<ProgressionFolds>;
+    return { folded: Array.isArray(parsed.folded) ? parsed.folded : [] };
+  } catch {
+    return { folded: [] };
+  }
+}
+
+export async function setProgressionFolds(folds: ProgressionFolds) {
+  await setMetadata(PROGRESSION_FOLDS_KEY, JSON.stringify({ folded: folds.folded }));
+}
+
 export type SyncedCard = {
   id: string;
   front: string;
