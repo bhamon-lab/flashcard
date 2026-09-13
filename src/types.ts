@@ -5,6 +5,7 @@ export type Deck = {
   color: string;
   kind: string;
   subject: string;
+  grade: string | null;
   sync_id: string | null;
   favorite: number;
   daily_new_limit: number;

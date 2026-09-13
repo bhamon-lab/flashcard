@@ -92,6 +92,9 @@ export async function initializeDatabase() {
   if (!existingColumns.has('favorite')) {
     await db.execAsync('ALTER TABLE decks ADD COLUMN favorite INTEGER NOT NULL DEFAULT 0');
   }
+  if (!existingColumns.has('grade')) {
+    await db.execAsync('ALTER TABLE decks ADD COLUMN grade TEXT');
+  }
 
   const favoritesBackfill = await db.getFirstAsync<{ value: string }>(
     "SELECT value FROM app_metadata WHERE key = 'favorites-backfilled'",
@@ -495,6 +498,7 @@ export type SyncedDeck = {
   format?: string;
   daily_new_limit?: number;
   subject?: string;
+  grade?: string;
   cards: SyncedCard[];
 };
 
@@ -506,22 +510,23 @@ export async function upsertSyncedDeck(deck: SyncedDeck): Promise<'created' | 'u
   const dailyNewLimit = Math.max(0, Math.round(deck.daily_new_limit ?? 5));
   const description = deck.description?.trim() ?? '';
   const subject = deck.subject?.trim() || 'Divers';
+  const grade = deck.grade?.trim() || null;
 
   const existing = await db.getFirstAsync<{ id: number }>('SELECT id FROM decks WHERE sync_id = ?', deck.id);
   let deckId: number;
   let outcome: 'created' | 'updated';
   if (existing) {
     await db.runAsync(
-      'UPDATE decks SET title = ?, description = ?, color = ?, kind = ?, daily_new_limit = ?, subject = ? WHERE id = ?',
-      deck.title, description, color, kind, dailyNewLimit, subject, existing.id,
+      'UPDATE decks SET title = ?, description = ?, color = ?, kind = ?, daily_new_limit = ?, subject = ?, grade = ? WHERE id = ?',
+      deck.title, description, color, kind, dailyNewLimit, subject, grade, existing.id,
     );
     deckId = existing.id;
     outcome = 'updated';
   } else {
     const inserted = await db.runAsync(
-      `INSERT INTO decks (title, description, color, daily_new_limit, kind, sync_id, subject, created_at)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
-      deck.title, description, color, dailyNewLimit, kind, deck.id, subject, Date.now(),
+      `INSERT INTO decks (title, description, color, daily_new_limit, kind, sync_id, subject, grade, created_at)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      deck.title, description, color, dailyNewLimit, kind, deck.id, subject, grade, Date.now(),
     );
     deckId = inserted.lastInsertRowId;
     outcome = 'created';
