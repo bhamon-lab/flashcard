@@ -2,7 +2,7 @@
   "id": "math-6e-proportionnalite",
   "subject": "Maths",
   "title": "Maths · 6e · Proportionnalité et pourcentages",
-  "description": "6e · 2026-2027 · Proportionnalité et pourcentages. Cours, applications et raisonnements courts.",
+  "description": "6e · 2026-2027 · Formules, définitions et règles essentielles.",
   "format": "math",
   "color": "#CDEAE0",
   "daily_new_limit": 3,
@@ -11,94 +11,64 @@
   "curriculum_reference": "cycle3-2025",
   "cards": [
     {
-      "id": "definition",
+      "id": "rappel-definition",
+      "kind": "definition",
       "front": "Quand deux grandeurs sont-elles proportionnelles ?",
-      "back": "Quand on obtient les valeurs de l’une en multipliant celles de l’autre par un même nombre.",
-      "kind": "cours"
+      "back": "Quand les valeurs de l’une s’obtiennent en multipliant celles de l’autre par un même nombre."
     },
     {
-      "id": "retour-unite",
-      "front": "4 stylos identiques coûtent 6 €. Combien coûtent 10 stylos au même prix unitaire ?",
-      "back": "15 € : un stylo coûte $6\\div4=1{,}50$ €, puis $10\\times1{,}50=15$.",
-      "kind": "application"
+      "id": "rappel-coefficient",
+      "kind": "definition",
+      "front": "Comment appelle-t-on ce multiplicateur constant ?",
+      "back": "Le coefficient de proportionnalité."
     },
     {
-      "id": "recette",
-      "front": "Une recette pour 4 personnes utilise 300 g de farine. Combien pour 6 personnes en gardant les proportions ?",
-      "back": "450 g : 75 g par personne, donc $6\\times75=450$.",
-      "kind": "application"
+      "id": "rappel-unite",
+      "kind": "methode",
+      "front": "Que signifie « revenir à l’unité » ?",
+      "back": "Trouver la valeur pour une unité, puis multiplier par la quantité voulue."
     },
     {
-      "id": "additivite",
-      "front": "À prix unitaire constant, 2 kg coûtent 5 € et 3 kg coûtent 7,50 €. Combien coûtent 5 kg ?",
-      "back": "12,50 € : on additionne les quantités et les prix correspondants.",
-      "kind": "application"
+      "id": "rappel-doubler",
+      "kind": "propriete",
+      "front": "Dans une proportionnalité, que se passe-t-il si une quantité double ?",
+      "back": "La quantité correspondante double aussi."
     },
     {
-      "id": "contre-exemple",
-      "front": "L’âge et la taille d’une personne sont-ils proportionnels ?",
-      "back": "Non. Doubler l’âge ne double pas nécessairement la taille.",
-      "kind": "comprehension"
+      "id": "rappel-pourcentage",
+      "kind": "definition",
+      "front": "Que signifie p % ?",
+      "back": "p sur 100 : $p\\%=\\frac{p}{100}$."
     },
     {
-      "id": "tableau",
-      "front": "Les couples (2 ; 6), (4 ; 12), (5 ; 15) suivent-ils une proportionnalité ?",
-      "back": "Oui : la deuxième valeur vaut toujours trois fois la première.",
-      "kind": "application"
+      "id": "rappel-appliquer",
+      "kind": "formule",
+      "front": "Calculer p % d’une quantité Q ?",
+      "back": "$\\frac{p}{100}\\times Q$."
     },
     {
-      "id": "faux-tableau",
-      "front": "Les couples (1 ; 4), (2 ; 5), (3 ; 6) sont-ils proportionnels ?",
-      "back": "Non : les rapports $4\\div1$, $5\\div2$ et $6\\div3$ sont différents.",
-      "kind": "comprehension"
+      "id": "rappel-moitie",
+      "kind": "formule",
+      "front": "50 % d’une quantité correspond à quelle fraction ?",
+      "back": "La moitié : $50\\%=\\frac{1}{2}$."
     },
     {
-      "id": "definition-pourcent",
-      "front": "Que signifie 25 % d’une quantité ?",
-      "back": "25 parts sur 100, soit $\\frac{25}{100}=\\frac{1}{4}$ de cette quantité.",
-      "kind": "cours"
+      "id": "rappel-quart",
+      "kind": "formule",
+      "front": "25 % d’une quantité correspond à quelle fraction ?",
+      "back": "Un quart : $25\\%=\\frac{1}{4}$."
     },
     {
-      "id": "demi",
-      "front": "Calcule 50 % de 86.",
-      "back": "43 : 50 % correspond à la moitié.",
-      "kind": "application"
+      "id": "rappel-dixieme",
+      "kind": "formule",
+      "front": "10 % d’une quantité correspond à quelle fraction ?",
+      "back": "Un dixième : $10\\%=\\frac{1}{10}$."
     },
     {
-      "id": "dix",
-      "front": "Calcule 10 % de 350.",
-      "back": "35 : 10 % correspond à un dixième.",
-      "kind": "application"
-    },
-    {
-      "id": "vingt-cinq",
-      "front": "Calcule 25 % de 60.",
-      "back": "15 : on divise par 4.",
-      "kind": "application"
-    },
-    {
-      "id": "proportion",
-      "front": "Sur 20 élèves, 5 viennent à vélo. Quel pourcentage cela représente-t-il ?",
-      "back": "25 % : $\\frac{5}{20}=\\frac{25}{100}$.",
-      "kind": "application"
-    },
-    {
-      "id": "decimal",
-      "front": "Écris $0{,}35$ sous forme de pourcentage.",
-      "back": "35 %, car $0{,}35=\\frac{35}{100}$.",
-      "kind": "application"
-    },
-    {
-      "id": "reference",
-      "front": "50 % de 20 et 50 % de 80 donnent-ils la même quantité ?",
-      "back": "Non : 10 et 40. Un pourcentage dépend de la quantité de référence.",
-      "kind": "comprehension"
-    },
-    {
-      "id": "distance",
-      "front": "Une marche à allure constante couvre 6 km en 2 h. Quelle distance en 5 h ?",
-      "back": "15 km : 3 km par heure, donc $5\\times3=15$.",
-      "kind": "application"
+      "id": "rappel-proportion",
+      "kind": "formule",
+      "front": "Exprimer une partie d’un tout en pourcentage ?",
+      "back": "$\\frac{\\text{partie}}{\\text{tout}}\\times100$, avec un tout non nul."
     }
   ]
 }

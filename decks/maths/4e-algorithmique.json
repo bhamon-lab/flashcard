@@ -2,7 +2,7 @@
   "id": "math-4e-algorithmique",
   "subject": "Maths",
   "title": "Maths · 4e · Variables, conditions et boucles",
-  "description": "4e · 2026-2027 · Variables, conditions et boucles. Cours, applications et raisonnements courts.",
+  "description": "4e · 2026-2027 · Formules, définitions et règles essentielles.",
   "format": "math",
   "color": "#E2D6F3",
   "daily_new_limit": 3,
@@ -11,100 +11,64 @@
   "curriculum_reference": "attendus-4e-2020",
   "cards": [
     {
-      "id": "variable",
-      "front": "À quoi sert une variable dans un programme ?",
-      "back": "À mémoriser une valeur sous un nom. Cette valeur peut changer au cours de l’exécution.",
-      "kind": "cours"
+      "id": "rappel-variable",
+      "kind": "definition",
+      "front": "Variable informatique ?",
+      "back": "Une valeur mémorisée sous un nom, qui peut changer pendant l’exécution."
     },
     {
-      "id": "affectation",
-      "front": "On met x à 4, puis on ajoute 3 à x. Quelle est la valeur finale de x ?",
-      "back": "7 : l’ancienne valeur 4 est remplacée par $4+3$.",
-      "kind": "application"
+      "id": "rappel-affecter",
+      "kind": "definition",
+      "front": "Que fait « mettre x à a » ?",
+      "back": "Remplace la valeur de x par a."
     },
     {
-      "id": "remplacement",
-      "front": "Quelle différence entre « mettre x à 3 » et « ajouter 3 à x » ?",
-      "back": "La première instruction remplace la valeur par 3 ; la seconde augmente la valeur existante de 3.",
-      "kind": "comprehension"
+      "id": "rappel-incrementer",
+      "kind": "definition",
+      "front": "Que fait « ajouter a à x » ?",
+      "back": "Remplace x par sa valeur précédente augmentée de a."
     },
     {
-      "id": "condition",
-      "front": "Si x > 5, afficher « grand », sinon « petit ». Qu’affiche-t-on pour x = 5 ?",
-      "back": "« petit », car $5>5$ est faux.",
-      "kind": "application"
+      "id": "rappel-initialiser",
+      "kind": "methode",
+      "front": "Comment initialiser un compteur ?",
+      "back": "Lui donner sa valeur de départ avant de commencer à compter, généralement 0."
     },
     {
-      "id": "condition-vraie",
-      "front": "Si x < 0, afficher « négatif », sinon « positif ou nul ». Qu’affiche-t-on pour x = −2 ?",
-      "back": "« négatif », car $-2<0$.",
-      "kind": "application"
+      "id": "rappel-condition",
+      "kind": "definition",
+      "front": "Condition dans un programme ?",
+      "back": "Une expression qui peut être vraie ou fausse."
     },
     {
-      "id": "boucle-variable",
-      "front": "On met x à 1, puis on répète 4 fois « ajouter 2 à x ». Valeur finale ?",
-      "back": "9 : les valeurs successives sont 3, 5, 7, 9.",
-      "kind": "application"
+      "id": "rappel-si",
+      "kind": "propriete",
+      "front": "Quand la branche « alors » d’un bloc « si… alors… sinon » s’exécute-t-elle ?",
+      "back": "Quand la condition est vraie."
     },
     {
-      "id": "boucle-multiplication",
-      "front": "On met x à 2, puis on répète 3 fois « mettre x à 2 × x ». Valeur finale ?",
-      "back": "16 : $2\\to4\\to8\\to16$.",
-      "kind": "application"
+      "id": "rappel-sinon",
+      "kind": "propriete",
+      "front": "Quand la branche « sinon » s’exécute-t-elle ?",
+      "back": "Quand la condition est fausse."
     },
     {
-      "id": "initialisation",
-      "front": "Pourquoi initialiser un compteur avant une série de répétitions ?",
-      "back": "Pour connaître sa valeur de départ et éviter que le résultat dépende d’une valeur laissée par une exécution précédente.",
-      "kind": "comprehension"
+      "id": "rappel-boucle",
+      "kind": "definition",
+      "front": "Boucle à nombre de répétitions fixé ?",
+      "back": "Une boucle qui exécute ses instructions un nombre de fois connu à l’avance."
     },
     {
-      "id": "compteur",
-      "front": "On met c à 0, puis on répète 7 fois « ajouter 1 à c ». Valeur finale ?",
-      "back": "7 : le compteur a enregistré sept répétitions.",
-      "kind": "application"
+      "id": "rappel-declencheur",
+      "kind": "definition",
+      "front": "Rôle d’un événement comme le clic sur le drapeau vert ?",
+      "back": "Déclencher le script associé."
     },
     {
-      "id": "programme-equation",
-      "front": "Un programme affiche $3x-2$. Quelle entrée doit-on saisir pour obtenir 13 ?",
-      "back": "5, en résolvant $3x-2=13$.",
-      "kind": "application"
-    },
-    {
-      "id": "rectangle",
-      "front": "Quel motif répéter deux fois pour tracer un rectangle de côtés 30 et 20 pas ?",
-      "back": "Avancer de 30, tourner de 90°, avancer de 20, tourner de 90°, toujours dans le même sens.",
-      "kind": "application"
-    },
-    {
-      "id": "valeur-test",
-      "front": "Un programme doit accepter x ≥ 10 mais teste x > 10. Quelle valeur révèle l’erreur ?",
-      "back": "10 : elle devrait être acceptée mais échoue au test strict.",
-      "kind": "comprehension"
-    },
-    {
-      "id": "ordre",
-      "front": "On met x à 3 ; y à x + 2 ; puis x à 10. Que vaut y à la fin ?",
-      "back": "5. Le calcul de y a eu lieu quand x valait 3 ; une affectation ultérieure de x ne recalcule pas y.",
-      "kind": "application"
-    },
-    {
-      "id": "evenement",
-      "front": "Dans Scratch, à quoi sert le bloc « quand le drapeau vert est cliqué » ?",
-      "back": "À déclencher le script associé lors du clic sur le drapeau vert.",
-      "kind": "cours"
-    },
-    {
-      "id": "verifier-programme",
-      "front": "Quelles entrées choisir pour tester un programme qui distingue les nombres négatifs des autres ?",
-      "back": "Au moins une valeur négative, zéro et une valeur positive, pour vérifier les branches et la frontière du test.",
-      "kind": "cours"
-    },
-    {
-      "id": "interaction",
-      "kind": "application",
-      "front": "Dans Scratch, on veut faire dire « touché » à un lutin quand il touche un autre lutin. Quelle condition utiliser ?",
-      "back": "Le capteur « touche [autre lutin] ? » dans un bloc « si … alors », avec « dire touché » dans la branche vraie."
+      "id": "rappel-tester",
+      "kind": "methode",
+      "front": "Quelles valeurs tester autour d’une condition de seuil ?",
+      "back": "Une valeur en dessous, la valeur du seuil et une valeur au-dessus."
     }
   ]
 }

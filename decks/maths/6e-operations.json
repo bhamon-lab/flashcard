@@ -1,8 +1,8 @@
 {
   "id": "math-6e-operations",
   "subject": "Maths",
-  "title": "Maths · 6e · Opérations et problèmes",
-  "description": "6e · 2026-2027 · Opérations et problèmes. Cours, applications et raisonnements courts.",
+  "title": "Maths · 6e · Opérations et vocabulaire",
+  "description": "6e · 2026-2027 · Formules, définitions et règles essentielles.",
   "format": "math",
   "color": "#CDEAE0",
   "daily_new_limit": 3,
@@ -11,94 +11,64 @@
   "curriculum_reference": "cycle3-2025",
   "cards": [
     {
-      "id": "somme",
-      "front": "Calcule $12{,}8+3{,}45$.",
-      "back": "$16{,}25$. On additionne les chiffres de même rang.",
-      "kind": "application"
+      "id": "rappel-somme",
+      "kind": "definition",
+      "front": "Résultat d’une addition ?",
+      "back": "Une somme."
     },
     {
-      "id": "difference",
-      "front": "Calcule $8-2{,}75$.",
-      "back": "$5{,}25$, en écrivant $8=8{,}00$.",
-      "kind": "application"
+      "id": "rappel-difference",
+      "kind": "definition",
+      "front": "Résultat d’une soustraction ?",
+      "back": "Une différence."
     },
     {
-      "id": "produit",
-      "front": "Calcule $1{,}2\\times0{,}4$.",
-      "back": "$0{,}48$ : $12\\times4=48$ et les facteurs sont divisés par 10 chacun.",
-      "kind": "application"
+      "id": "rappel-produit",
+      "kind": "definition",
+      "front": "Résultat d’une multiplication ?",
+      "back": "Un produit."
     },
     {
-      "id": "multiplier-reduit",
-      "front": "Multiplier un nombre positif par $0{,}5$ le rend-il plus grand ?",
-      "back": "Non : on en prend la moitié. Par exemple $8\\times0{,}5=4$.",
-      "kind": "comprehension"
+      "id": "rappel-quotient",
+      "kind": "definition",
+      "front": "Résultat d’une division ?",
+      "back": "Un quotient."
     },
     {
-      "id": "division",
-      "front": "Calcule $14{,}7\\div3$.",
-      "back": "$4{,}9$, car $3\\times4{,}9=14{,}7$.",
-      "kind": "application"
+      "id": "rappel-aligner",
+      "kind": "methode",
+      "front": "Comment poser une addition ou une soustraction de décimaux ?",
+      "back": "Aligner les unités sous les unités et les virgules sous les virgules."
     },
     {
-      "id": "euclidienne",
-      "front": "Quelle condition doit respecter le reste d’une division euclidienne ?",
-      "back": "Il est positif ou nul et strictement inférieur au diviseur : $0\\leq r<b$ pour un diviseur $b>0$.",
-      "kind": "cours"
+      "id": "rappel-produit-decimal",
+      "kind": "methode",
+      "front": "Comment placer la virgule dans un produit de décimaux ?",
+      "back": "Multiplier sans les virgules, puis compter au total autant de chiffres après la virgule que dans les deux facteurs."
     },
     {
-      "id": "reste",
-      "front": "Donne le quotient et le reste de la division euclidienne de 89 par 7.",
-      "back": "Quotient 12, reste 5 : $89=7\\times12+5$.",
-      "kind": "application"
+      "id": "rappel-euclidienne",
+      "kind": "formule",
+      "front": "Égalité de la division euclidienne ?",
+      "back": "$a=bq+r$, avec $0\\leq r<b$. a : dividende ; b : diviseur entier positif ; q : quotient ; r : reste."
     },
     {
-      "id": "autocars",
-      "front": "53 élèves voyagent dans des minibus de 8 places. Combien de minibus faut-il au minimum ?",
-      "back": "7. Six minibus transportent 48 élèves ; il en faut un de plus pour les 5 restants.",
-      "kind": "application"
+      "id": "rappel-zero",
+      "kind": "propriete",
+      "front": "Peut-on diviser par zéro ?",
+      "back": "Non : la division par zéro n’est pas définie."
     },
     {
-      "id": "partage",
-      "front": "On partage 18 € également entre 4 personnes. Quelle somme reçoit chacune ?",
-      "back": "$4{,}50$ €, car $18\\div4=4{,}5$.",
-      "kind": "application"
+      "id": "rappel-multiple",
+      "kind": "definition",
+      "front": "Quand a est-il un multiple de b ?",
+      "back": "Quand $a=b\\times k$ pour un entier k."
     },
     {
-      "id": "prix",
-      "front": "Des pommes coûtent 2,40 € le kilogramme. Quel est le prix de 1,5 kg ?",
-      "back": "$3{,}60$ €, car $2{,}4\\times1{,}5=3{,}6$.",
-      "kind": "application"
-    },
-    {
-      "id": "estimation",
-      "front": "Un élève trouve $19{,}8\\times4{,}9=970{,}2$. Pourquoi ce résultat est-il invraisemblable ?",
-      "back": "Le produit est proche de $20\\times5=100$, pas de 1000. Le résultat exact est $97{,}02$.",
-      "kind": "comprehension"
-    },
-    {
-      "id": "diviseur",
-      "front": "Que signifie « 6 est un diviseur de 42 » ?",
-      "back": "42 est le produit de 6 par un entier : $42=6\\times7$. La division euclidienne a un reste nul.",
-      "kind": "cours"
-    },
-    {
-      "id": "multiple",
-      "front": "Donne les trois premiers multiples strictement positifs de 9.",
-      "back": "9, 18 et 27 : $9\\times1$, $9\\times2$, $9\\times3$.",
-      "kind": "application"
-    },
-    {
-      "id": "divisibilite-cinq",
-      "front": "Comment reconnaître un entier divisible par 5 ?",
-      "back": "Son chiffre des unités est 0 ou 5.",
-      "kind": "cours"
-    },
-    {
-      "id": "probleme-deux-etapes",
-      "front": "Tu achètes 3 cahiers à 2,50 € et paies avec 10 €. Quelle monnaie reçoit-on ?",
-      "back": "$2{,}50$ € : $10-3\\times2{,}50=2{,}50$.",
-      "kind": "application"
+      "id": "rappel-estimer",
+      "kind": "methode",
+      "front": "Comment vérifier rapidement la vraisemblance d’un calcul ?",
+      "back": "Comparer le résultat à un ordre de grandeur obtenu avec des nombres arrondis."
     }
   ]
 }

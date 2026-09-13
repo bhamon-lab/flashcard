@@ -35,20 +35,20 @@
       "source_id": "cycle3-2025",
       "source_section": "Nombres entiers et décimaux, p. 13-14",
       "prerequisites": [],
-      "card_count": 15
+      "card_count": 10
     },
     {
       "id": "math-6e-operations",
       "deck_id": "math-6e-operations",
       "grade": "6e",
-      "title": "Opérations et problèmes",
+      "title": "Opérations et vocabulaire",
       "domain": "nombres",
       "source_id": "cycle3-2025",
       "source_section": "Nombres entiers et décimaux, p. 13-14",
       "prerequisites": [
         "math-6e-nombres"
       ],
-      "card_count": 15
+      "card_count": 10
     },
     {
       "id": "math-6e-fractions",
@@ -61,7 +61,7 @@
       "prerequisites": [
         "math-6e-operations"
       ],
-      "card_count": 16
+      "card_count": 12
     },
     {
       "id": "math-6e-proportionnalite",
@@ -74,7 +74,7 @@
       "prerequisites": [
         "math-6e-fractions"
       ],
-      "card_count": 15
+      "card_count": 10
     },
     {
       "id": "math-6e-geometrie",
@@ -87,7 +87,7 @@
       "prerequisites": [
         "math-6e-operations"
       ],
-      "card_count": 23
+      "card_count": 13
     },
     {
       "id": "math-6e-mesures-espace",
@@ -100,7 +100,7 @@
       "prerequisites": [
         "math-6e-geometrie"
       ],
-      "card_count": 18
+      "card_count": 12
     },
     {
       "id": "math-6e-donnees-hasard",
@@ -113,7 +113,7 @@
       "prerequisites": [
         "math-6e-proportionnalite"
       ],
-      "card_count": 19
+      "card_count": 10
     },
     {
       "id": "math-6e-algebre-algorithmes",
@@ -127,7 +127,7 @@
         "math-6e-operations",
         "math-6e-geometrie"
       ],
-      "card_count": 17
+      "card_count": 8
     },
     {
       "id": "math-5e-operations-puissances",
@@ -140,7 +140,7 @@
       "prerequisites": [
         "math-6e-operations"
       ],
-      "card_count": 15
+      "card_count": 10
     },
     {
       "id": "math-5e-relatifs",
@@ -153,7 +153,7 @@
       "prerequisites": [
         "math-6e-nombres"
       ],
-      "card_count": 15
+      "card_count": 10
     },
     {
       "id": "math-5e-fractions",
@@ -167,7 +167,7 @@
         "math-6e-fractions",
         "math-5e-operations-puissances"
       ],
-      "card_count": 15
+      "card_count": 8
     },
     {
       "id": "math-5e-calcul-litteral",
@@ -181,7 +181,7 @@
         "math-6e-algebre-algorithmes",
         "math-5e-operations-puissances"
       ],
-      "card_count": 15
+      "card_count": 10
     },
     {
       "id": "math-5e-proportionnalite",
@@ -196,7 +196,7 @@
         "math-5e-calcul-litteral",
         "math-5e-relatifs"
       ],
-      "card_count": 15
+      "card_count": 8
     },
     {
       "id": "math-5e-triangles-angles",
@@ -210,7 +210,7 @@
         "math-6e-geometrie",
         "math-5e-relatifs"
       ],
-      "card_count": 15
+      "card_count": 10
     },
     {
       "id": "math-5e-parallelogrammes",
@@ -224,7 +224,7 @@
         "math-6e-mesures-espace",
         "math-5e-triangles-angles"
       ],
-      "card_count": 15
+      "card_count": 10
     },
     {
       "id": "math-5e-solides",
@@ -238,7 +238,7 @@
         "math-6e-mesures-espace",
         "math-5e-operations-puissances"
       ],
-      "card_count": 15
+      "card_count": 10
     },
     {
       "id": "math-5e-statistiques-probabilites",
@@ -252,7 +252,7 @@
         "math-6e-donnees-hasard",
         "math-5e-fractions"
       ],
-      "card_count": 15
+      "card_count": 8
     },
     {
       "id": "math-5e-algorithmique",
@@ -266,7 +266,7 @@
         "math-6e-algebre-algorithmes",
         "math-5e-calcul-litteral"
       ],
-      "card_count": 15
+      "card_count": 8
     },
     {
       "id": "math-4e-relatifs-fractions",
@@ -280,7 +280,7 @@
         "math-5e-relatifs",
         "math-5e-fractions"
       ],
-      "card_count": 15
+      "card_count": 10
     },
     {
       "id": "math-4e-puissances-racines",
@@ -294,7 +294,7 @@
         "math-5e-operations-puissances",
         "math-4e-relatifs-fractions"
       ],
-      "card_count": 16
+      "card_count": 12
     },
     {
       "id": "math-4e-arithmetique",
@@ -308,7 +308,7 @@
         "math-5e-operations-puissances",
         "math-5e-fractions"
       ],
-      "card_count": 15
+      "card_count": 8
     },
     {
       "id": "math-4e-equations",
@@ -322,7 +322,7 @@
         "math-5e-calcul-litteral",
         "math-4e-relatifs-fractions"
       ],
-      "card_count": 15
+      "card_count": 10
     },
     {
       "id": "math-4e-pythagore-cosinus",
@@ -336,7 +336,7 @@
         "math-5e-triangles-angles",
         "math-4e-puissances-racines"
       ],
-      "card_count": 15
+      "card_count": 10
     },
     {
       "id": "math-4e-thales-translations",
@@ -350,7 +350,7 @@
         "math-5e-proportionnalite",
         "math-5e-parallelogrammes"
       ],
-      "card_count": 16
+      "card_count": 9
     },
     {
       "id": "math-4e-grandeurs-espace",
@@ -364,7 +364,7 @@
         "math-5e-solides",
         "math-5e-proportionnalite"
       ],
-      "card_count": 16
+      "card_count": 12
     },
     {
       "id": "math-4e-proportionnalite",
@@ -378,7 +378,7 @@
         "math-5e-proportionnalite",
         "math-4e-equations"
       ],
-      "card_count": 15
+      "card_count": 8
     },
     {
       "id": "math-4e-statistiques-probabilites",
@@ -392,7 +392,7 @@
         "math-5e-statistiques-probabilites",
         "math-4e-relatifs-fractions"
       ],
-      "card_count": 15
+      "card_count": 8
     },
     {
       "id": "math-4e-algorithmique",
@@ -406,7 +406,7 @@
         "math-5e-algorithmique",
         "math-4e-equations"
       ],
-      "card_count": 16
+      "card_count": 10
     },
     {
       "id": "math-3e-arithmetique",
@@ -420,7 +420,7 @@
         "math-4e-arithmetique",
         "math-4e-puissances-racines"
       ],
-      "card_count": 15
+      "card_count": 10
     },
     {
       "id": "math-3e-calcul-litteral",
@@ -434,20 +434,20 @@
         "math-4e-equations",
         "math-4e-puissances-racines"
       ],
-      "card_count": 15
+      "card_count": 9
     },
     {
       "id": "math-3e-equations",
       "deck_id": "math-3e-equations",
       "grade": "3e",
-      "title": "Équations et problèmes",
+      "title": "Équations : règles générales",
       "domain": "algebre",
       "source_id": "attendus-3e-2020",
       "source_section": "Équations, p. 3",
       "prerequisites": [
         "math-3e-calcul-litteral"
       ],
-      "card_count": 15
+      "card_count": 9
     },
     {
       "id": "math-3e-fonctions",
@@ -461,7 +461,7 @@
         "math-4e-proportionnalite",
         "math-3e-equations"
       ],
-      "card_count": 15
+      "card_count": 10
     },
     {
       "id": "math-3e-affines-pourcentages",
@@ -475,7 +475,7 @@
         "math-3e-fonctions",
         "math-5e-proportionnalite"
       ],
-      "card_count": 15
+      "card_count": 12
     },
     {
       "id": "math-3e-thales-similitude",
@@ -489,7 +489,7 @@
         "math-4e-thales-translations",
         "math-3e-equations"
       ],
-      "card_count": 15
+      "card_count": 9
     },
     {
       "id": "math-3e-trigonometrie",
@@ -503,7 +503,7 @@
         "math-4e-pythagore-cosinus",
         "math-3e-equations"
       ],
-      "card_count": 15
+      "card_count": 9
     },
     {
       "id": "math-3e-transformations-espace",
@@ -517,7 +517,7 @@
         "math-4e-grandeurs-espace",
         "math-4e-thales-translations"
       ],
-      "card_count": 20
+      "card_count": 11
     },
     {
       "id": "math-3e-statistiques-probabilites",
@@ -530,7 +530,7 @@
       "prerequisites": [
         "math-4e-statistiques-probabilites"
       ],
-      "card_count": 16
+      "card_count": 10
     },
     {
       "id": "math-3e-algorithmique",
@@ -544,7 +544,7 @@
         "math-4e-algorithmique",
         "math-3e-statistiques-probabilites"
       ],
-      "card_count": 17
+      "card_count": 10
     }
   ]
 }

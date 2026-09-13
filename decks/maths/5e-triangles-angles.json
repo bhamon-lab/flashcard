@@ -2,7 +2,7 @@
   "id": "math-5e-triangles-angles",
   "subject": "Maths",
   "title": "Maths · 5e · Triangles et droites remarquables",
-  "description": "5e · 2026-2027 · Triangles et droites remarquables. Cours, applications et raisonnements courts.",
+  "description": "5e · 2026-2027 · Formules, définitions et règles essentielles.",
   "format": "math",
   "color": "#CBDDF5",
   "daily_new_limit": 3,
@@ -11,94 +11,64 @@
   "curriculum_reference": "cycle4-2026-5e",
   "cards": [
     {
-      "id": "alternes",
-      "front": "Deux droites parallèles sont coupées par une sécante. Que dire des angles alternes-internes ?",
-      "back": "Ils ont la même mesure.",
-      "kind": "cours"
+      "id": "rappel-alternes",
+      "kind": "propriete",
+      "front": "Angles alternes-internes entre deux parallèles coupées par une sécante ?",
+      "back": "Ils ont la même mesure."
     },
     {
-      "id": "reciproque-angles",
-      "front": "Deux angles alternes-internes sont égaux. Que peut-on conclure sur les deux droites coupées par la sécante ?",
-      "back": "Elles sont parallèles.",
-      "kind": "cours"
+      "id": "rappel-reciproque",
+      "kind": "propriete",
+      "front": "Deux angles alternes-internes sont égaux : que conclure ?",
+      "back": "Les deux droites coupées par la sécante sont parallèles."
     },
     {
-      "id": "correspondants",
-      "front": "Deux parallèles sont coupées par une sécante. Un angle vaut 58°. Combien vaut l’angle correspondant ?",
-      "back": "58°, car les droites sont parallèles.",
-      "kind": "application"
+      "id": "rappel-correspondants",
+      "kind": "propriete",
+      "front": "Angles correspondants entre deux parallèles coupées par une sécante ?",
+      "back": "Ils ont la même mesure."
     },
     {
-      "id": "opposes-sommet",
-      "front": "Que dire de deux angles opposés par le sommet ?",
-      "back": "Ils sont égaux. Les côtés de l’un prolongent les côtés de l’autre.",
-      "kind": "cours"
+      "id": "rappel-opposes",
+      "kind": "propriete",
+      "front": "Angles opposés par le sommet ?",
+      "back": "Ils ont la même mesure."
     },
     {
-      "id": "triangle-possible",
-      "front": "Peut-on construire un triangle non aplati de côtés 2 cm, 3 cm et 6 cm ?",
-      "back": "Non : $2+3<6$. Les deux petits côtés ne peuvent pas rejoindre les extrémités du grand.",
-      "kind": "application"
+      "id": "rappel-inegalite",
+      "kind": "propriete",
+      "front": "Condition sur les côtés d’un triangle non aplati ?",
+      "back": "Chaque côté est strictement plus court que la somme des deux autres."
     },
     {
-      "id": "triangle-limite",
-      "front": "Des longueurs 2, 3 et 5 cm forment-elles un triangle non aplati ?",
-      "back": "Non : $2+3=5$. Les sommets seraient alignés.",
-      "kind": "comprehension"
+      "id": "rappel-hauteur",
+      "kind": "definition",
+      "front": "Hauteur d’un triangle ?",
+      "back": "La droite passant par un sommet et perpendiculaire au côté opposé ou à son prolongement."
     },
     {
-      "id": "somme-preuve",
-      "front": "Quelle construction aide à prouver que les angles d’un triangle totalisent 180° ?",
-      "back": "Tracer par un sommet la parallèle au côté opposé. Les angles alternes-internes permettent de retrouver les trois angles côte à côte sur un angle plat.",
-      "kind": "comprehension"
+      "id": "rappel-mediane",
+      "kind": "definition",
+      "front": "Médiane d’un triangle ?",
+      "back": "La droite passant par un sommet et le milieu du côté opposé."
     },
     {
-      "id": "hauteur",
-      "front": "Qu’est-ce qu’une hauteur d’un triangle ?",
-      "back": "La droite passant par un sommet et perpendiculaire à la droite portant le côté opposé.",
-      "kind": "cours"
+      "id": "rappel-aire",
+      "kind": "formule",
+      "front": "Aire d’un triangle de base b et de hauteur correspondante h ?",
+      "back": "$A=\\frac{bh}{2}$."
     },
     {
-      "id": "concours-hauteurs",
-      "front": "Que signifie « les hauteurs d’un triangle sont concourantes » ?",
-      "back": "Elles passent par un même point, appelé orthocentre.",
-      "kind": "cours"
+      "id": "rappel-aires-medianes",
+      "kind": "propriete",
+      "front": "Que fait une médiane sur l’aire du triangle ?",
+      "back": "Elle partage le triangle en deux triangles de même aire."
     },
     {
-      "id": "mediane",
-      "front": "Qu’est-ce qu’une médiane d’un triangle ?",
-      "back": "La droite passant par un sommet et le milieu du côté opposé ; le segment correspondant est aussi appelé médiane.",
-      "kind": "cours"
-    },
-    {
-      "id": "mediane-aire",
-      "front": "Pourquoi une médiane partage-t-elle un triangle en deux triangles de même aire ?",
-      "back": "Les deux bases sur le côté coupé sont égales et les deux triangles ont la même hauteur. Leurs aires sont donc égales.",
-      "kind": "comprehension"
-    },
-    {
-      "id": "aire",
-      "front": "Une base d’un triangle mesure 9 cm et sa hauteur correspondante 4 cm. Calcule son aire.",
-      "back": "18 cm² : $9\\times4\\div2=18$.",
-      "kind": "application"
-    },
-    {
-      "id": "hauteur-oblique",
-      "front": "Dans la formule d’aire d’un triangle, peut-on prendre n’importe quel autre côté comme hauteur ?",
-      "back": "Non : la hauteur doit être perpendiculaire à la droite portant la base choisie.",
-      "kind": "comprehension"
-    },
-    {
-      "id": "isocele-medianes",
-      "front": "Dans un triangle isocèle, que dire de la médiane issue du sommet principal ?",
-      "back": "Elle est aussi hauteur, bissectrice et médiatrice de la base.",
-      "kind": "cours"
-    },
-    {
-      "id": "circonscrit",
-      "front": "O est l’intersection des médiatrices d’un triangle ABC. Si $OA=5$ cm, combien vaut $OC$ ?",
-      "back": "5 cm. O est équidistant des trois sommets.",
-      "kind": "application"
+      "id": "rappel-orthocentre",
+      "kind": "definition",
+      "front": "Point d’intersection des hauteurs d’un triangle ?",
+      "back": "L’orthocentre."
     }
   ]
 }

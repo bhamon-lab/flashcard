@@ -2,7 +2,7 @@
   "id": "math-4e-arithmetique",
   "subject": "Maths",
   "title": "Maths · 4e · Nombres premiers et décomposition",
-  "description": "4e · 2026-2027 · Nombres premiers et décomposition. Cours, applications et raisonnements courts.",
+  "description": "4e · 2026-2027 · Formules, définitions et règles essentielles.",
   "format": "math",
   "color": "#E2D6F3",
   "daily_new_limit": 3,
@@ -11,94 +11,52 @@
   "curriculum_reference": "attendus-4e-2020",
   "cards": [
     {
-      "id": "premier",
-      "front": "Qu’est-ce qu’un nombre premier ?",
-      "back": "Un entier naturel qui a exactement deux diviseurs positifs distincts : 1 et lui-même.",
-      "kind": "cours"
+      "id": "rappel-premier",
+      "kind": "definition",
+      "front": "Nombre premier ?",
+      "back": "Un entier naturel ayant exactement deux diviseurs positifs distincts : 1 et lui-même."
     },
     {
-      "id": "un",
-      "front": "Pourquoi 1 n’est-il pas premier ?",
-      "back": "Il n’a qu’un seul diviseur positif, 1, alors qu’un nombre premier doit en avoir exactement deux.",
-      "kind": "comprehension"
+      "id": "rappel-un",
+      "kind": "propriete",
+      "front": "1 est-il premier ?",
+      "back": "Non : il n’a qu’un seul diviseur positif."
     },
     {
-      "id": "pair",
-      "front": "Quel est le seul nombre premier pair ?",
-      "back": "2. Tout entier pair supérieur à 2 est aussi divisible par 2 et n’est donc pas premier.",
-      "kind": "cours"
+      "id": "rappel-pair",
+      "kind": "propriete",
+      "front": "Seul nombre premier pair ?",
+      "back": "2."
     },
     {
-      "id": "petits",
-      "front": "Liste les nombres premiers inférieurs à 20.",
-      "back": "2, 3, 5, 7, 11, 13, 17 et 19.",
-      "kind": "application"
+      "id": "rappel-decomposition",
+      "kind": "methode",
+      "front": "Comment décomposer un entier supérieur à 1 en facteurs premiers ?",
+      "back": "Le diviser successivement par des nombres premiers jusqu’à obtenir 1."
     },
     {
-      "id": "composite",
-      "front": "91 est-il premier ?",
-      "back": "Non : $91=7\\times13$.",
-      "kind": "application"
+      "id": "rappel-diviseur",
+      "kind": "definition",
+      "front": "Diviseur d’un entier a ?",
+      "back": "Un entier non nul par lequel a se divise sans reste."
     },
     {
-      "id": "decomposer",
-      "front": "Décompose 84 en produit de facteurs premiers.",
-      "back": "$84=2^2\\times3\\times7$.",
-      "kind": "application"
+      "id": "rappel-multiple",
+      "kind": "definition",
+      "front": "Multiple d’un entier b ?",
+      "back": "Un nombre de la forme $b\\times k$, avec k entier."
     },
     {
-      "id": "decomposer-cent",
-      "front": "Décompose 100 en produit de facteurs premiers.",
-      "back": "$100=2^2\\times5^2$.",
-      "kind": "application"
+      "id": "rappel-simplification",
+      "kind": "methode",
+      "front": "Comment simplifier une fraction avec les facteurs premiers ?",
+      "back": "Décomposer numérateur et dénominateur, puis supprimer les facteurs communs."
     },
     {
-      "id": "fraction",
-      "front": "Simplifie $\\frac{42}{66}$ avec les facteurs premiers.",
-      "back": "$\\frac{2\\times3\\times7}{2\\times3\\times11}=\\frac{7}{11}$.",
-      "kind": "application"
-    },
-    {
-      "id": "fraction-egale",
-      "front": "Les fractions $\\frac{18}{30}$ et $\\frac{21}{35}$ sont-elles égales ?",
-      "back": "Oui : elles valent toutes deux $\\frac{3}{5}$.",
-      "kind": "application"
-    },
-    {
-      "id": "diviseur",
-      "front": "12 est-il un diviseur de 180 ?",
-      "back": "Oui : $180=12\\times15$.",
-      "kind": "application"
-    },
-    {
-      "id": "liste-diviseurs",
-      "front": "Liste les diviseurs positifs de 18.",
-      "back": "1, 2, 3, 6, 9 et 18, obtenus avec les paires $1\\times18$, $2\\times9$, $3\\times6$.",
-      "kind": "application"
-    },
-    {
-      "id": "bouquets",
-      "front": "On a 18 roses et 24 tulipes. Peut-on faire 6 bouquets identiques en utilisant tout ?",
-      "back": "Oui : chaque bouquet contient 3 roses et 4 tulipes.",
-      "kind": "application"
-    },
-    {
-      "id": "bouquets-impossible",
-      "front": "Peut-on répartir 18 roses et 24 tulipes en 5 bouquets identiques sans reste ?",
-      "back": "Non : 5 ne divise ni 18 ni 24.",
-      "kind": "application"
-    },
-    {
-      "id": "preuve-non-premier",
-      "front": "Pour montrer qu’un entier n’est pas premier, faut-il trouver tous ses diviseurs ?",
-      "back": "Non : un seul diviseur différent de 1 et de lui-même suffit.",
-      "kind": "comprehension"
-    },
-    {
-      "id": "simplification-erreur",
-      "front": "Peut-on simplifier $\\frac{12+5}{12+7}$ en $\\frac{5}{7}$ ?",
-      "back": "Non : on simplifie des facteurs communs dans un produit, pas des termes dans une somme. Ici la fraction vaut $\\frac{17}{19}$.",
-      "kind": "comprehension"
+      "id": "rappel-facteurs",
+      "kind": "propriete",
+      "front": "Que peut-on simplifier dans une fraction ?",
+      "back": "Des facteurs communs non nuls du numérateur et du dénominateur, pas des termes d’une somme."
     }
   ]
 }

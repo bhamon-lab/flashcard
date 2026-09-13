@@ -2,7 +2,7 @@
   "id": "math-5e-relatifs",
   "subject": "Maths",
   "title": "Maths · 5e · Nombres relatifs et repérage",
-  "description": "5e · 2026-2027 · Nombres relatifs et repérage. Cours, applications et raisonnements courts.",
+  "description": "5e · 2026-2027 · Formules, définitions et règles essentielles.",
   "format": "math",
   "color": "#CBDDF5",
   "daily_new_limit": 3,
@@ -11,94 +11,64 @@
   "curriculum_reference": "cycle4-2026-5e",
   "cards": [
     {
-      "id": "oppose",
-      "front": "Qu’est-ce que l’opposé d’un nombre ?",
-      "back": "Le nombre qui, ajouté au premier, donne 0. L’opposé de $-7$ est 7.",
-      "kind": "cours"
+      "id": "rappel-oppose",
+      "kind": "definition",
+      "front": "Opposé d’un nombre a ?",
+      "back": "$-a$. Leur somme vaut zéro : $a+(-a)=0$."
     },
     {
-      "id": "valeur-absolue",
-      "front": "Qu’est-ce que la valeur absolue d’un nombre ?",
-      "back": "Sa distance à 0 sur la droite graduée. Celle de $-4$ vaut 4.",
-      "kind": "cours"
+      "id": "rappel-valeur-absolue",
+      "kind": "definition",
+      "front": "Valeur absolue d’un nombre ?",
+      "back": "Sa distance à zéro sur la droite graduée."
     },
     {
-      "id": "zero",
-      "front": "0 est-il strictement positif ?",
-      "back": "Non. Il est à la fois positif et négatif au sens large, mais ni strictement positif ni strictement négatif.",
-      "kind": "comprehension"
+      "id": "rappel-comparer",
+      "kind": "methode",
+      "front": "Comment comparer deux nombres négatifs ?",
+      "back": "Le plus grand est celui qui est le plus proche de zéro."
     },
     {
-      "id": "comparer",
-      "front": "Compare $-8$ et $-3$.",
-      "back": "$-8<-3$. Sur la droite graduée, −8 est plus à gauche.",
-      "kind": "application"
+      "id": "rappel-somme-meme-signe",
+      "kind": "methode",
+      "front": "Additionner deux nombres de même signe ?",
+      "back": "Additionner leurs distances à zéro et conserver leur signe."
     },
     {
-      "id": "ranger",
-      "front": "Range $-2$, 4, $-5$ et 0 dans l’ordre croissant.",
-      "back": "$-5<-2<0<4$.",
-      "kind": "application"
+      "id": "rappel-somme-signes-differents",
+      "kind": "methode",
+      "front": "Additionner deux nombres de signes différents ?",
+      "back": "Soustraire leurs distances à zéro et garder le signe du plus éloigné de zéro. Si les distances sont égales, la somme vaut 0."
     },
     {
-      "id": "somme-negatifs",
-      "front": "Calcule $-4+(-7)$.",
-      "back": "$-11$. On additionne les distances à zéro et on garde le signe négatif.",
-      "kind": "application"
+      "id": "rappel-soustraction",
+      "kind": "formule",
+      "front": "Soustraire un nombre b ?",
+      "back": "$a-b=a+(-b)$ : ajouter son opposé."
     },
     {
-      "id": "somme-mixte",
-      "front": "Calcule $-9+14$.",
-      "back": "5 : depuis −9, on avance de 14.",
-      "kind": "application"
+      "id": "rappel-moins-moins",
+      "kind": "formule",
+      "front": "Soustraire l’opposé de b ?",
+      "back": "$a-(-b)=a+b$."
     },
     {
-      "id": "soustraire-negatif",
-      "front": "Calcule $5-(-3)$.",
-      "back": "8. Soustraire −3 revient à ajouter son opposé, 3.",
-      "kind": "application"
+      "id": "rappel-abscisse",
+      "kind": "definition",
+      "front": "Dans un point de coordonnées (x ; y), que représente x ?",
+      "back": "L’abscisse : la coordonnée horizontale."
     },
     {
-      "id": "soustraire-positif",
-      "front": "Calcule $-2-6$.",
-      "back": "$-8$ : depuis −2, on recule de 6.",
-      "kind": "application"
+      "id": "rappel-ordonnee",
+      "kind": "definition",
+      "front": "Dans un point de coordonnées (x ; y), que représente y ?",
+      "back": "L’ordonnée : la coordonnée verticale."
     },
     {
-      "id": "enchainement",
-      "front": "Calcule $-4+9-7$.",
-      "back": "$-2$ : $-4+9=5$, puis $5-7=-2$.",
-      "kind": "application"
-    },
-    {
-      "id": "temperature",
-      "front": "La température passe de −6 °C à 3 °C. Quelle est sa variation ?",
-      "back": "Une hausse de 9 °C : $3-(-6)=9$.",
-      "kind": "application"
-    },
-    {
-      "id": "coordonnees",
-      "front": "Dans $A(-2\\,;\\,5)$, quelles sont l’abscisse et l’ordonnée ?",
-      "back": "L’abscisse est −2, l’ordonnée est 5. On lit d’abord la coordonnée horizontale.",
-      "kind": "cours"
-    },
-    {
-      "id": "axe",
-      "front": "Un point a pour coordonnées $(0\\,;\\,-4)$. Sur quel axe est-il ?",
-      "back": "Sur l’axe des ordonnées, car son abscisse est nulle.",
-      "kind": "application"
-    },
-    {
-      "id": "placement",
-      "front": "Depuis l’origine, on va 3 unités à gauche et 2 vers le haut. Quelles sont les coordonnées obtenues ?",
-      "back": "$(-3\\,;\\,2)$.",
-      "kind": "application"
-    },
-    {
-      "id": "oppose-erreur",
-      "front": "L’opposé d’un nombre est-il toujours négatif ?",
-      "back": "Non : l’opposé de −2 est 2. Le signe change, sauf pour 0 qui est son propre opposé.",
-      "kind": "comprehension"
+      "id": "rappel-origine",
+      "kind": "formule",
+      "front": "Coordonnées de l’origine d’un repère ?",
+      "back": "$(0\\,;\\,0)$."
     }
   ]
 }
