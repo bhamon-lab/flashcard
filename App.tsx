@@ -10,6 +10,7 @@ import {
   Image,
   KeyboardAvoidingView,
   Modal,
+  PanResponder,
   Platform,
   Pressable,
   RefreshControl,
@@ -37,7 +38,6 @@ import {
   recordReview,
   resetDeckProgress,
   saveCard,
-  setDeckFavorite,
   setProgressionFolds,
   setSubjectPrefs,
   updateDailyLimit,
@@ -46,7 +46,7 @@ import {
 import { colors, mono, radius } from './src/theme';
 import { MathView, stripMathText } from './src/MathView';
 import { syncDecks } from './src/sync';
-import { buildProgression, type ProgressionBranch } from './src/progression';
+import { buildProgression, getGradeStops, type GradeStop, type ProgressionBranch } from './src/progression';
 import { checkForAppUpdate } from './src/app-update';
 import { Card, Deck, ReviewDelay, ReviewDelays } from './src/types';
 import { insertLaterInQueue } from './src/sessionQueue';
@@ -174,38 +174,8 @@ function CardImage({ card, style }: { card: Card; style: object }) {
   return <Image source={{ uri: card.photo_uri }} style={style} resizeMode="cover" />;
 }
 
-/** Un paquet est visible s'il est marqué favori (les paquets synchronisés non favoris restent cachés). */
-const isFavorite = (deck: Deck) => Number(deck.favorite) > 0;
-
-function DeckCard({ deck, onOpen, onToggleFavorite }: { deck: Deck; onOpen: (id: number) => void; onToggleFavorite: (id: number) => void }) {
-  const progress = deck.total_count ? Math.round((Number(deck.learned_count) / Number(deck.total_count)) * 100) : 0;
-  const favorite = isFavorite(deck);
-  return (
-    <Pressable onPress={() => onOpen(deck.id)} style={({ pressed }) => [styles.deckCard, pressed && styles.cardPressed]}>
-      <View style={[styles.deckMark, { backgroundColor: deck.color }]}>
-        <Text style={styles.deckMarkGlyph}>{glyphFor(deck.id)}</Text>
-      </View>
-      <View style={styles.deckBody}>
-        <View style={styles.deckTitleRow}>
-          <Text style={styles.deckTitle} numberOfLines={1}>{deck.title}</Text>
-          <Pressable
-            onPress={() => onToggleFavorite(deck.id)}
-            accessibilityLabel={favorite ? `Retirer ${deck.title} des favoris` : `Ajouter ${deck.title} aux favoris`}
-            style={({ pressed }) => [styles.starButton, pressed && styles.pressed]}
-          >
-            <Ionicons name={favorite ? 'star' : 'star-outline'} size={20} color={favorite ? '#D9A112' : colors.muted} />
-          </Pressable>
-        </View>
-        <Text style={styles.deckDescription} numberOfLines={1}>{stripMathText(deck.description) || `${deck.total_count} cartes`}</Text>
-        <View style={styles.progressTrack}><View style={[styles.progressFill, { width: `${progress}%` }]} /></View>
-        <View style={styles.deckMeta}>
-          <Text style={styles.deckMetaText}>{progress}% appris</Text>
-          <View style={styles.duePill}><Text style={styles.duePillText}>{deck.due_count} à revoir</Text></View>
-        </View>
-      </View>
-    </Pressable>
-  );
-}
+/** Un paquet est entièrement appris quand toutes ses cartes ont été vues. */
+const isDeckLearned = (deck: Deck) => Number(deck.total_count) > 0 && Number(deck.learned_count) >= Number(deck.total_count);
 
 function HomeScreen({ onOpenSubject, onOpenStats }: { onOpenSubject: (subject: string) => void; onOpenStats: () => void }) {
   const [decks, setDecks] = useState<Deck[]>([]);
@@ -257,7 +227,7 @@ function HomeScreen({ onOpenSubject, onOpenStats }: { onOpenSubject: (subject: s
   const hiddenKeys = new Set(prefs.hidden.map((name) => name.toLowerCase()));
   const visibleSubjects = allSubjects.filter((group) => !hiddenKeys.has(group.name.toLowerCase()));
 
-  const total = decks.filter(isFavorite).reduce((sum, deck) => sum + Number(deck.total_count), 0);
+  const total = decks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
 
   const updatePrefs = async (next: { hidden: string[]; custom: string[] }) => {
     setPrefs(next);
@@ -298,10 +268,9 @@ function HomeScreen({ onOpenSubject, onOpenStats }: { onOpenSubject: (subject: s
 
         {visibleSubjects.map((group) => {
           const visual = subjectVisual(group.name);
-          const favoriteDecks = group.decks.filter(isFavorite);
-          const groupDue = favoriteDecks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
-          const groupCards = favoriteDecks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
-          const groupLearned = favoriteDecks.reduce((sum, deck) => sum + Number(deck.learned_count), 0);
+          const groupDue = group.decks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
+          const groupCards = group.decks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
+          const groupLearned = group.decks.reduce((sum, deck) => sum + Number(deck.learned_count), 0);
           const progress = groupCards ? Math.round((groupLearned / groupCards) * 100) : 0;
           return (
             <Pressable
@@ -315,11 +284,11 @@ function HomeScreen({ onOpenSubject, onOpenStats }: { onOpenSubject: (subject: s
               <View style={styles.subjectBody}>
                 <Text style={styles.subjectTitle} numberOfLines={1}>{group.name}</Text>
                 <Text style={[styles.subjectMetaText, { color: visual.fg }]}>
-                  {favoriteDecks.length === 0
-                    ? 'Aucun paquet favori'
-                    : `${favoriteDecks.length} ${favoriteDecks.length === 1 ? 'paquet' : 'paquets'} · ${groupCards} ${groupCards === 1 ? 'carte' : 'cartes'} · ${progress} % appris`}
+                  {group.decks.length === 0
+                    ? 'Aucun paquet'
+                    : `${group.decks.length} ${group.decks.length === 1 ? 'paquet' : 'paquets'} · ${groupCards} ${groupCards === 1 ? 'carte' : 'cartes'} · ${progress} % appris`}
                 </Text>
-                {favoriteDecks.length ? (
+                {group.decks.length ? (
                   <View style={styles.subjectTrack}>
                     <View style={[styles.subjectTrackFill, { width: `${progress}%`, backgroundColor: visual.fg }]} />
                   </View>
@@ -468,13 +437,11 @@ function SubjectsEditorModal({ visible, subjects, hidden, custom, onClose, onCha
   );
 }
 
-function ProgressionDeckRow({ entry, onOpen, onToggleFavorite }: {
+function ProgressionDeckRow({ entry, onOpen }: {
   entry: { deck: Deck; title: string };
   onOpen: (id: number) => void;
-  onToggleFavorite: (id: number) => void;
 }) {
   const { deck, title } = entry;
-  const favorite = isFavorite(deck);
   const progress = deck.total_count ? Math.round((Number(deck.learned_count) / Number(deck.total_count)) * 100) : 0;
   return (
     <Pressable onPress={() => onOpen(deck.id)} style={({ pressed }) => [styles.treeRow, pressed && styles.cardPressed]}>
@@ -491,24 +458,19 @@ function ProgressionDeckRow({ entry, onOpen, onToggleFavorite }: {
           {progress > 0 ? <Text style={styles.treeRowProgress}>{progress}% appris</Text> : null}
         </View>
       </View>
-      <Pressable
-        onPress={() => onToggleFavorite(deck.id)}
-        accessibilityLabel={favorite ? `Retirer ${title} des favoris` : `Ajouter ${title} aux favoris`}
-        style={({ pressed }) => [styles.starButton, pressed && styles.pressed]}
-      >
-        <Ionicons name={favorite ? 'star' : 'star-outline'} size={18} color={favorite ? '#D9A112' : colors.muted} />
-      </Pressable>
+      {isDeckLearned(deck) ? (
+        <View style={styles.treeRowDone}><Ionicons name="checkmark" size={15} color={colors.green} /></View>
+      ) : null}
     </Pressable>
   );
 }
 
-function ProgressionBranchCard({ branchKey, branch, expanded, onToggleExpanded, onOpen, onToggleFavorite }: {
+function ProgressionBranchCard({ branchKey, branch, expanded, onToggleExpanded, onOpen }: {
   branchKey: string;
   branch: ProgressionBranch;
   expanded: boolean;
   onToggleExpanded: () => void;
   onOpen: (id: number) => void;
-  onToggleFavorite: (id: number) => void;
 }) {
   const deckCount = branch.levels.reduce((sum, level) => sum + level.tracks.reduce((acc, track) => acc + track.decks.length, 0), 0);
   return (
@@ -531,12 +493,88 @@ function ProgressionBranchCard({ branchKey, branch, expanded, onToggleExpanded, 
             <View key={track.label || 'principal'} style={styles.treeTrack}>
               {track.label ? <Text style={styles.treeTrackLabel}>{track.label}</Text> : null}
               {track.decks.map((entry) => (
-                <ProgressionDeckRow key={entry.deck.id} entry={entry} onOpen={onOpen} onToggleFavorite={onToggleFavorite} />
+                <ProgressionDeckRow key={entry.deck.id} entry={entry} onOpen={onOpen} />
               ))}
             </View>
           ))}
         </View>
       )) : null}
+    </View>
+  );
+}
+
+function RangeSlider({ stops, minIndex, maxIndex, onChange }: {
+  stops: GradeStop[];
+  minIndex: number;
+  maxIndex: number;
+  onChange: (minIndex: number, maxIndex: number) => void;
+}) {
+  const widthRef = useRef(0);
+  const valueRef = useRef({ min: minIndex, max: maxIndex });
+  const activeRef = useRef<'min' | 'max' | null>(null);
+  useEffect(() => { valueRef.current = { min: minIndex, max: maxIndex }; }, [minIndex, maxIndex]);
+
+  const count = Math.max(stops.length - 1, 1);
+  const indexForX = (x: number) => Math.min(count, Math.max(0, Math.round((x / Math.max(widthRef.current, 1)) * count)));
+  const apply = (index: number) => {
+    const current = valueRef.current;
+    if (activeRef.current === 'min') {
+      const next = Math.min(index, current.max);
+      if (next !== current.min) { valueRef.current = { min: next, max: current.max }; onChange(next, current.max); }
+    } else if (activeRef.current === 'max') {
+      const next = Math.max(index, current.min);
+      if (next !== current.max) { valueRef.current = { min: current.min, max: next }; onChange(current.min, next); }
+    }
+  };
+  const panResponder = useRef(PanResponder.create({
+    onStartShouldSetPanResponder: () => true,
+    onMoveShouldSetPanResponder: () => true,
+    onPanResponderGrant: (event) => {
+      const index = indexForX(event.nativeEvent.locationX);
+      const current = valueRef.current;
+      activeRef.current = Math.abs(index - current.min) <= Math.abs(index - current.max) ? 'min' : 'max';
+      apply(index);
+    },
+    onPanResponderMove: (event) => apply(indexForX(event.nativeEvent.locationX)),
+    onPanResponderRelease: () => { activeRef.current = null; },
+    onPanResponderTerminate: () => { activeRef.current = null; },
+  })).current;
+
+  const percent = (index: number): `${number}%` => `${(index / count) * 100}%`;
+
+  return (
+    <View style={styles.rangeCard}>
+      <View style={styles.rangeCopy}>
+        <Text style={styles.rangeTitle}>Niveaux</Text>
+        <Text style={styles.rangeCaption}>{stops[minIndex].label} → {stops[maxIndex].label}</Text>
+      </View>
+      <View
+        {...panResponder.panHandlers}
+        onLayout={(event) => { widthRef.current = event.nativeEvent.layout.width; }}
+        style={styles.rangeTrackArea}
+        accessibilityRole="adjustable"
+        accessibilityLabel={`Niveaux de ${stops[minIndex].label} à ${stops[maxIndex].label}`}
+        accessibilityActions={[{ name: 'increment' }, { name: 'decrement' }]}
+        onAccessibilityAction={(event) => {
+          if (event.nativeEvent.actionName === 'increment') onChange(minIndex, Math.min(maxIndex + 1, count));
+          if (event.nativeEvent.actionName === 'decrement') onChange(minIndex, Math.max(maxIndex - 1, minIndex));
+        }}
+      >
+        <View style={styles.rangeTrack} />
+        <View style={[styles.rangeFill, { left: percent(minIndex), width: `${((maxIndex - minIndex) / count) * 100}%` }]} />
+        <View style={[styles.rangeThumb, { left: percent(minIndex) }]} />
+        <View style={[styles.rangeThumb, { left: percent(maxIndex) }]} />
+      </View>
+      <View style={styles.rangeStopsRow}>
+        {stops.map((stop, index) => (
+          <Text
+            key={stop.key}
+            style={[styles.rangeStopLabel, index >= minIndex && index <= maxIndex ? styles.rangeStopLabelOn : null]}
+          >
+            {stop.short}
+          </Text>
+        ))}
+      </View>
     </View>
   );
 }
@@ -549,9 +587,9 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
   onCreate: (subject: string) => void;
 }) {
   const [decks, setDecks] = useState<Deck[]>([]);
-  const [showAll, setShowAll] = useState(false);
-  const [gradeFilter, setGradeFilter] = useState<string | null>(null);
-  const [viewMode, setViewMode] = useState<'classe' | 'progression'>('classe');
+  const [hideLearned, setHideLearned] = useState(false);
+  const [minLevel, setMinLevel] = useState(0);
+  const [maxLevel, setMaxLevel] = useState(Number.MAX_SAFE_INTEGER);
   // Branches repliées de l'arbre de progression : null tant que l'état sauvegardé
   // n'est pas chargé (l'arbre reste replié par défaut).
   const [foldedBranches, setFoldedBranches] = useState<string[] | null>(null);
@@ -566,30 +604,50 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
     [group.name, group.decks],
   );
 
-  // Classes distinctes (6e, 5e…), triées naturellement, pour les paquets de la matière.
-  const grades = useMemo(() => {
-    const seen = new Map<string, string>();
-    for (const deck of group.decks) {
-      const grade = deck.grade?.trim();
-      if (grade && !seen.has(grade.toLowerCase())) seen.set(grade.toLowerCase(), grade);
+  // Hors curriculum : une branche unique liste tous les paquets de la matière.
+  const branches = useMemo<ProgressionBranch[]>(
+    () => progression ?? (group.decks.length ? [{
+      title: 'Tous les paquets',
+      levels: [{ grade: 'autres', label: 'Paquets', tracks: [{ label: '', decks: group.decks.map((deck) => ({ deck, title: deck.title })) }] }],
+    }] : []),
+    [progression, group.decks],
+  );
+
+  // Étapes ordonnées du curseur de niveaux (6e → terminale) pour les matières avec curriculum.
+  const stops = useMemo(() => getGradeStops(group.name), [group.name]);
+  const lastStop = Math.max(stops.length - 1, 0);
+  const rangeMax = Math.min(maxLevel, lastStop);
+  const rangeMin = Math.min(minLevel, rangeMax);
+
+  // Filtre : garde les niveaux de la fourchette sélectionnée (« autres » toujours visible).
+  const allowedGrades = useMemo(() => {
+    if (!stops.length) return null;
+    const set = new Set<string>();
+    for (let index = rangeMin; index <= rangeMax; index += 1) {
+      for (const grade of stops[index].grades) set.add(grade);
     }
-    return [...seen.values()].sort((a, b) => a.localeCompare(b, 'fr', { numeric: true }));
-  }, [group.decks]);
+    return set;
+  }, [stops, rangeMin, rangeMax]);
 
-  const gradeKey = gradeFilter?.trim().toLowerCase() ?? null;
-  const gradeFiltered = gradeKey
-    ? group.decks.filter((deck) => (deck.grade ?? '').trim().toLowerCase() === gradeKey)
-    : group.decks;
-  const favoriteDecks = gradeFiltered.filter(isFavorite);
-  const visibleDecks = showAll ? gradeFiltered : favoriteDecks;
-
-  const toggleFavorite = async (deckId: number) => {
-    const deck = decks.find((entry) => entry.id === deckId);
-    if (!deck) return;
-    const next = !isFavorite(deck);
-    setDecks((current) => current.map((entry) => entry.id === deckId ? { ...entry, favorite: next ? 1 : 0 } : entry));
-    await setDeckFavorite(deckId, next);
-  };
+  // Filtre : niveaux sélectionnés + masque les paquets appris à 100 %.
+  const visibleBranches = useMemo(() => (
+    allowedGrades || hideLearned
+      ? branches
+        .map((branch) => ({
+          ...branch,
+          levels: branch.levels
+            .filter((level) => !allowedGrades || level.grade === 'autres' || allowedGrades.has(level.grade))
+            .map((level) => ({
+              ...level,
+              tracks: level.tracks
+                .map((track) => ({ ...track, decks: track.decks.filter((entry) => !hideLearned || !isDeckLearned(entry.deck)) }))
+                .filter((track) => track.decks.length > 0),
+            }))
+            .filter((level) => level.tracks.length > 0),
+        }))
+        .filter((branch) => branch.levels.length > 0)
+      : branches
+  ), [branches, hideLearned, allowedGrades]);
 
   const toggleBranch = (branchKey: string) => {
     setFoldedBranches((current) => {
@@ -600,12 +658,13 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
     });
   };
 
-  const dueTotal = favoriteDecks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
-  const newTotal = favoriteDecks.reduce((sum, deck) => sum + Number(deck.new_count), 0);
-  const totalCards = favoriteDecks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
-  const allowance = favoriteDecks.reduce((sum, deck) => sum + Math.max(0, Number(deck.daily_new_limit) - Number(deck.introduced_today)), 0);
+  const learnedCount = group.decks.filter(isDeckLearned).length;
+  const dueTotal = group.decks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
+  const newTotal = group.decks.reduce((sum, deck) => sum + Number(deck.new_count), 0);
+  const totalCards = group.decks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
+  const allowance = group.decks.reduce((sum, deck) => sum + Math.max(0, Number(deck.daily_new_limit) - Number(deck.introduced_today)), 0);
   const sessionCount = dueTotal + Math.min(newTotal, allowance);
-  const deckIds = favoriteDecks.map((deck) => deck.id);
+  const deckIds = group.decks.map((deck) => deck.id);
   const visual = subjectVisual(group.name);
 
   return (
@@ -620,7 +679,7 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
         <View style={styles.deckHero}>
           <View style={[styles.largeDeckMark, { backgroundColor: visual.tint }]}><Ionicons name={visual.icon} size={30} color={visual.fg} /></View>
           <Text style={styles.deckHeroTitle}>{group.name}</Text>
-          <Text style={styles.deckHeroDescription}>{favoriteDecks.length} {favoriteDecks.length === 1 ? 'paquet favori' : 'paquets favoris'} · {totalCards} {totalCards === 1 ? 'carte' : 'cartes'}</Text>
+          <Text style={styles.deckHeroDescription}>{group.decks.length} {group.decks.length === 1 ? 'paquet' : 'paquets'} · {totalCards} {totalCards === 1 ? 'carte' : 'cartes'}</Text>
           <View style={styles.statRow}>
             <View style={styles.stat}><Text style={styles.statValue}>{dueTotal}</Text><Text style={styles.statLabel}>À revoir</Text></View>
             <View style={styles.statDivider} />
@@ -632,95 +691,74 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
 
         <View style={styles.sessionPanel}>
           <View style={styles.panelTop}>
-            <View><Text style={styles.panelTitle}>Session de matière</Text><Text style={styles.panelCaption}>Les paquets favoris de {group.name} en une file</Text></View>
+            <View><Text style={styles.panelTitle}>Session de matière</Text><Text style={styles.panelCaption}>Tous les paquets de {group.name} en une file</Text></View>
             <View style={styles.sessionPanelIcon}><Ionicons name="play-circle-outline" size={30} color={colors.blue} /></View>
           </View>
           <PrimaryButton
-            label={!favoriteDecks.length ? (group.decks.length ? 'Ajoute un favori pour réviser' : 'Crée un premier paquet') : sessionCount ? `Commencer · ${sessionCount} carte${sessionCount > 1 ? 's' : ''}` : 'Lancer une session'}
+            label={!group.decks.length ? 'Crée un premier paquet' : sessionCount ? `Commencer · ${sessionCount} carte${sessionCount > 1 ? 's' : ''}` : 'Lancer une session'}
             icon="play"
             disabled={!deckIds.length}
             onPress={() => onStudy(deckIds, allowance)}
           />
         </View>
 
-        {progression && group.decks.length ? (
-          <View style={styles.viewSwitch}>
-            <Pressable onPress={() => setViewMode('classe')} style={({ pressed }) => [styles.viewSwitchButton, viewMode === 'classe' && styles.viewSwitchButtonOn, pressed && styles.pressed]} accessibilityRole="button" accessibilityLabel="Voir par classe">
-              <Ionicons name="albums-outline" size={15} color={viewMode === 'classe' ? colors.blue : colors.muted} />
-              <Text style={[styles.viewSwitchText, viewMode === 'classe' && styles.viewSwitchTextOn]}>Par classe</Text>
-            </Pressable>
-            <Pressable onPress={() => setViewMode('progression')} style={({ pressed }) => [styles.viewSwitchButton, viewMode === 'progression' && styles.viewSwitchButtonOn, pressed && styles.pressed]} accessibilityRole="button" accessibilityLabel="Voir l'arbre de progression">
-              <Ionicons name="git-network-outline" size={15} color={viewMode === 'progression' ? colors.blue : colors.muted} />
-              <Text style={[styles.viewSwitchText, viewMode === 'progression' && styles.viewSwitchTextOn]}>Progression</Text>
-            </Pressable>
-          </View>
-        ) : null}
-
-        {viewMode === 'progression' ? (
+        {progression ? (
           <Text style={styles.treeIntro}>
             De la 6e à la terminale, thèmes puis classes dans l’ordre conseillé. L’arbre est documentaire : aucun paquet n’est verrouillé.
           </Text>
         ) : null}
 
         <View style={styles.sectionHeaderCompact}>
-          <Text style={styles.sectionTitle}>{viewMode === 'progression' ? 'Arbre de progression' : showAll ? 'Tous les paquets' : 'Paquets favoris'}</Text>
-          {viewMode === 'classe' && group.decks.length ? (
-            <Pressable onPress={() => setShowAll((value) => !value)} style={({ pressed }) => [styles.filterToggle, pressed && styles.pressed]}>
-              <Ionicons name={showAll ? 'star' : 'albums-outline'} size={15} color={colors.blue} />
-              <Text style={styles.filterToggleText}>{showAll ? 'Favoris' : `Tous (${group.decks.length})`}</Text>
+          <Text style={styles.sectionTitle}>{progression ? 'Arbre de progression' : 'Tous les paquets'}</Text>
+          {group.decks.length ? (
+            <Pressable
+              onPress={() => setHideLearned((value) => !value)}
+              accessibilityRole="button"
+              accessibilityLabel={hideLearned ? 'Afficher les paquets appris' : 'Masquer les paquets appris'}
+              style={({ pressed }) => [styles.filterToggle, hideLearned && styles.filterToggleOn, pressed && styles.pressed]}
+            >
+              <Ionicons name={hideLearned ? 'eye-off' : 'eye'} size={15} color={colors.blue} />
+              <Text style={styles.filterToggleText}>{hideLearned ? 'Terminés masqués' : 'Masquer les terminés'}</Text>
             </Pressable>
           ) : null}
         </View>
 
-        {viewMode === 'classe' && grades.length > 1 ? (
-          <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.mixFilterRow} contentContainerStyle={styles.mixFilterContent}>
-            <Pressable onPress={() => setGradeFilter(null)} style={({ pressed }) => [styles.mixFilterChip, !gradeKey && styles.mixFilterChipOn, pressed && styles.pressed]}>
-              <Ionicons name="albums-outline" size={13} color={!gradeKey ? colors.white : colors.blue} />
-              <Text style={[styles.mixFilterChipText, !gradeKey && styles.mixFilterChipTextOn]}>Toutes</Text>
-            </Pressable>
-            {grades.map((grade) => {
-              const active = gradeKey === grade.toLowerCase();
-              return (
-                <Pressable
-                  key={grade.toLowerCase()}
-                  onPress={() => setGradeFilter(active ? null : grade)}
-                  style={({ pressed }) => [styles.mixFilterChip, active && styles.mixFilterChipOn, pressed && styles.pressed]}
-                >
-                  <Text style={[styles.mixFilterChipText, active && styles.mixFilterChipTextOn]} numberOfLines={1}>{grade}</Text>
-                </Pressable>
-              );
-            })}
-          </ScrollView>
+        {stops.length > 1 ? (
+          <RangeSlider
+            stops={stops}
+            minIndex={rangeMin}
+            maxIndex={rangeMax}
+            onChange={(min, max) => { setMinLevel(min); setMaxLevel(max); }}
+          />
         ) : null}
 
-        {viewMode === 'progression'
-          ? (progression ?? []).map((branch) => {
-            const branchKey = `${group.name.toLowerCase()}::${branch.title}`;
-            return (
-              <ProgressionBranchCard
-                key={branch.title}
-                branchKey={branchKey}
-                branch={branch}
-                expanded={!(foldedBranches ?? []).includes(branchKey)}
-                onToggleExpanded={() => toggleBranch(branchKey)}
-                onOpen={onOpenDeck}
-                onToggleFavorite={toggleFavorite}
-              />
-            );
-          })
-          : visibleDecks.map((deck) => <DeckCard key={deck.id} deck={deck} onOpen={onOpenDeck} onToggleFavorite={toggleFavorite} />)}
+        {visibleBranches.map((branch) => {
+          const branchKey = `${group.name.toLowerCase()}::${branch.title}`;
+          return (
+            <ProgressionBranchCard
+              key={branch.title}
+              branchKey={branchKey}
+              branch={branch}
+              expanded={!(foldedBranches ?? []).includes(branchKey)}
+              onToggleExpanded={() => toggleBranch(branchKey)}
+              onOpen={onOpenDeck}
+            />
+          );
+        })}
 
-        {viewMode === 'classe' && !showAll && !favoriteDecks.length && group.decks.length ? (
-          <Pressable onPress={() => setShowAll(true)} style={styles.newDeckCard}>
-            <View style={styles.newDeckIcon}><Ionicons name="star-outline" size={24} color={colors.blue} /></View>
-            <View><Text style={styles.newDeckTitle}>Aucun paquet favori</Text><Text style={styles.newDeckCaption}>Affiche tous les paquets pour en choisir</Text></View>
-          </Pressable>
-        ) : null}
-
-        {viewMode === 'classe' && gradeKey && !gradeFiltered.length ? (
+        {group.decks.length && !visibleBranches.length ? (
           <View style={styles.newDeckCard}>
-            <View style={styles.newDeckIcon}><Ionicons name="funnel-outline" size={24} color={colors.muted} /></View>
-            <View><Text style={styles.newDeckTitle}>Aucun paquet en {gradeFilter}</Text><Text style={styles.newDeckCaption}>Choisis une autre classe</Text></View>
+            <View style={styles.newDeckIcon}>
+              <Ionicons name={hideLearned ? 'checkmark-done' : 'funnel-outline'} size={24} color={hideLearned ? colors.green : colors.muted} />
+            </View>
+            <View>
+              <Text style={styles.newDeckTitle}>{hideLearned ? 'Tout est appris' : 'Aucun paquet sur ces niveaux'}</Text>
+              <Text style={styles.newDeckCaption}>
+                {hideLearned
+                  ? `${learnedCount} paquet${learnedCount > 1 ? 's' : ''} à 100\u00A0% masqué${learnedCount > 1 ? 's' : ''}`
+                  : 'Élargis la fourchette de niveaux pour en voir plus'}
+              </Text>
+            </View>
           </View>
         ) : null}
 
@@ -1476,20 +1514,11 @@ const styles = StyleSheet.create({
   sectionTitle: { fontSize: 21, fontWeight: '800', color: colors.ink, letterSpacing: -0.5 },
   sectionCaption: { color: colors.muted, fontSize: 13, marginTop: 3 },
   addRound: { width: 42, height: 42, borderRadius: 14, backgroundColor: colors.blue, alignItems: 'center', justifyContent: 'center' },
-  deckCard: { backgroundColor: colors.paper, borderRadius: radius.medium, padding: 16, flexDirection: 'row', marginBottom: 12, borderWidth: 1, borderColor: '#ECECF0', ...shadow },
-  deckMark: { width: 58, height: 68, borderRadius: 14, alignItems: 'center', justifyContent: 'center', marginRight: 15 },
-  deckMarkGlyph: { fontSize: 27, fontWeight: '700', color: colors.blue, fontFamily: mono },
-  deckBody: { flex: 1, minWidth: 0 },
-  deckTitleRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
-  deckTitle: { fontSize: 17, fontWeight: '800', color: colors.ink, flex: 1 },
-  starButton: { width: 34, height: 34, borderRadius: 12, backgroundColor: colors.blueSoft, alignItems: 'center', justifyContent: 'center', marginLeft: 10 },
   filterToggle: { height: 36, paddingHorizontal: 12, borderRadius: 12, backgroundColor: colors.blueSoft, flexDirection: 'row', alignItems: 'center', gap: 6 },
+  filterToggleOn: { backgroundColor: '#DCEDE2' },
   filterToggleText: { fontSize: 12, fontWeight: '800', color: colors.blue },
-  deckDescription: { fontSize: 13, color: colors.muted, marginTop: 3 },
   progressTrack: { height: 5, borderRadius: 3, backgroundColor: '#E8E9EC', overflow: 'hidden', marginTop: 13 },
   progressFill: { height: '100%', borderRadius: 3, backgroundColor: colors.blue },
-  deckMeta: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 8 },
-  deckMetaText: { fontSize: 11, color: colors.muted, fontWeight: '600' },
   duePill: { backgroundColor: colors.redSoft, borderRadius: 20, paddingHorizontal: 8, paddingVertical: 4 },
   duePillText: { color: colors.red, fontSize: 10, fontWeight: '800' },
   subjectCard: { borderRadius: radius.large, padding: 16, flexDirection: 'row', alignItems: 'center', gap: 13, marginBottom: 12, borderWidth: 1, borderColor: 'rgba(255, 255, 255, 0.7)', ...shadow },
@@ -1672,18 +1701,18 @@ const styles = StyleSheet.create({
   errorText: { color: colors.red, fontSize: 11, marginBottom: 5 },
   createIcon: { width: 94, height: 94, borderRadius: 26, backgroundColor: colors.yellowSoft, alignItems: 'center', justifyContent: 'center', alignSelf: 'center', marginVertical: 28 },
   createGlyph: { fontSize: 42, fontWeight: '700', color: colors.blue, fontFamily: mono },
-  mixFilterRow: { flexGrow: 0, marginTop: 16 },
-  mixFilterContent: { gap: 7, paddingRight: 8, paddingVertical: 2 },
-  mixFilterChip: { height: 34, borderRadius: 17, backgroundColor: colors.blueSoft, paddingHorizontal: 13, flexDirection: 'row', alignItems: 'center', gap: 5 },
-  mixFilterChipOn: { backgroundColor: colors.blue },
-  mixFilterChipText: { fontSize: 12, fontWeight: '800', color: colors.blue },
-  mixFilterChipTextOn: { color: colors.white },
-  viewSwitch: { flexDirection: 'row', backgroundColor: colors.blueSoft, borderRadius: 14, padding: 3, marginTop: 18 },
-  viewSwitchButton: { flex: 1, height: 34, borderRadius: 11, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6 },
-  viewSwitchButtonOn: { backgroundColor: colors.paper, ...shadow },
-  viewSwitchText: { fontSize: 13, fontWeight: '800', color: colors.muted },
-  viewSwitchTextOn: { color: colors.blue },
   treeIntro: { fontSize: 12, color: colors.muted, marginTop: 14, lineHeight: 18 },
+  rangeCard: { backgroundColor: colors.paper, borderRadius: radius.medium, borderWidth: 1, borderColor: '#ECECF0', padding: 16, marginTop: 14, marginBottom: 14, ...shadow },
+  rangeCopy: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 },
+  rangeTitle: { fontSize: 13, fontWeight: '800', color: colors.ink },
+  rangeCaption: { fontSize: 11, fontWeight: '800', color: colors.blue },
+  rangeTrackArea: { height: 34, justifyContent: 'center' },
+  rangeTrack: { position: 'absolute', left: 0, right: 0, height: 4, borderRadius: 2, backgroundColor: '#E8E9EC' },
+  rangeFill: { position: 'absolute', height: 4, borderRadius: 2, backgroundColor: colors.blue },
+  rangeThumb: { position: 'absolute', width: 22, height: 22, borderRadius: 11, backgroundColor: colors.paper, borderWidth: 2, borderColor: colors.blue, transform: [{ translateX: -11 }] },
+  rangeStopsRow: { flexDirection: 'row', justifyContent: 'space-between', marginTop: 8 },
+  rangeStopLabel: { fontSize: 10, fontWeight: '700', color: colors.muted },
+  rangeStopLabelOn: { color: colors.blue },
   treeBranch: { backgroundColor: colors.paper, borderRadius: radius.medium, borderWidth: 1, borderColor: '#ECECF0', padding: 16, marginBottom: 12, ...shadow },
   treeBranchHeader: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 4 },
   treeBranchCount: { fontSize: 12, fontWeight: '800', color: colors.muted, backgroundColor: '#F1F1F5', borderRadius: 999, paddingHorizontal: 8, paddingVertical: 2, overflow: 'hidden' },
@@ -1701,6 +1730,7 @@ const styles = StyleSheet.create({
   treePillNew: { backgroundColor: colors.greenSoft, borderRadius: 20, paddingHorizontal: 8, paddingVertical: 4 },
   treePillNewText: { color: colors.green, fontSize: 10, fontWeight: '800' },
   treeRowProgress: { fontSize: 10, fontWeight: '700', color: colors.muted },
+  treeRowDone: { width: 28, height: 28, borderRadius: 10, backgroundColor: '#DCEDE2', alignItems: 'center', justifyContent: 'center' },
   homeHeaderActions: { flexDirection: 'row', alignItems: 'center', gap: 10 },
   statsBoard: { backgroundColor: colors.board, borderRadius: radius.large, padding: 22, overflow: 'hidden', ...shadow },
   statsBoardRow: { flexDirection: 'row', zIndex: 2 },
