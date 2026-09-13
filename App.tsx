@@ -529,13 +529,22 @@ function ProgressionBranchCard({ branch, onOpen, onToggleFavorite }: {
   onOpen: (id: number) => void;
   onToggleFavorite: (id: number) => void;
 }) {
+  const [expanded, setExpanded] = useState(true);
+  const deckCount = branch.levels.reduce((sum, level) => sum + level.tracks.reduce((acc, track) => acc + track.decks.length, 0), 0);
   return (
     <View style={styles.treeBranch}>
-      <View style={styles.treeBranchHeader}>
+      <Pressable
+        onPress={() => setExpanded((open) => !open)}
+        accessibilityRole="button"
+        accessibilityLabel={expanded ? `Replier ${branch.title}` : `Déplier ${branch.title}`}
+        style={({ pressed }) => [styles.treeBranchHeader, pressed && styles.pressed]}
+      >
         <Ionicons name="git-network-outline" size={16} color={colors.blue} />
         <Text style={styles.treeBranchTitle}>{branch.title}</Text>
-      </View>
-      {branch.levels.map((level) => (
+        {expanded ? null : <Text style={styles.treeBranchCount}>{deckCount}</Text>}
+        <Ionicons name={expanded ? 'chevron-up' : 'chevron-down'} size={16} color={colors.muted} />
+      </Pressable>
+      {expanded ? branch.levels.map((level) => (
         <View key={`${level.grade}-${level.label}`} style={styles.treeLevel}>
           <Text style={styles.treeLevelLabel}>{level.label}</Text>
           {level.tracks.map((track) => (
@@ -547,7 +556,7 @@ function ProgressionBranchCard({ branch, onOpen, onToggleFavorite }: {
             </View>
           ))}
         </View>
-      ))}
+      )) : null}
     </View>
   );
 }
@@ -1784,6 +1793,7 @@ const styles = StyleSheet.create({
   treeIntro: { fontSize: 12, color: colors.muted, marginTop: 14, lineHeight: 18 },
   treeBranch: { backgroundColor: colors.paper, borderRadius: radius.medium, borderWidth: 1, borderColor: '#ECECF0', padding: 16, marginBottom: 12, ...shadow },
   treeBranchHeader: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 4 },
+  treeBranchCount: { fontSize: 12, fontWeight: '800', color: colors.muted, backgroundColor: '#F1F1F5', borderRadius: 999, paddingHorizontal: 8, paddingVertical: 2, overflow: 'hidden' },
   treeBranchTitle: { fontSize: 16, fontWeight: '800', color: colors.ink, flex: 1, letterSpacing: -0.3 },
   treeLevel: { marginTop: 12 },
   treeLevelLabel: { fontSize: 11, fontWeight: '900', letterSpacing: 1, color: colors.muted, textTransform: 'uppercase', marginBottom: 8 },
