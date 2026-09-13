@@ -1029,12 +1029,18 @@ function ManualNewModal({ visible, dailyLimit, onClose, onSelect, onLimitChange 
 function CustomSessionSheet({ visible, decks, onClose, onStart }: { visible: boolean; decks: Deck[]; onClose: () => void; onStart: (deckIds: number[], newCardAllowance: number) => void }) {
   const [selected, setSelected] = useState<number[]>([]);
   const [manualNew, setManualNew] = useState<number | null>(null);
+  const [subjectFilter, setSubjectFilter] = useState<string | null>(null);
 
   useEffect(() => {
     if (!visible) return;
     setSelected(decks.map((deck) => deck.id));
     setManualNew(null);
+    setSubjectFilter(null);
   }, [visible, decks]);
+
+  const groups = useMemo(() => groupBySubject(decks), [decks]);
+  const filterKey = subjectFilter?.trim().toLowerCase() ?? null;
+  const visibleGroups = filterKey ? groups.filter((group) => group.name.toLowerCase() === filterKey) : groups;
 
   const defaultAllowance = decks.reduce((sum, deck) => sum + Math.max(0, Number(deck.daily_new_limit) - Number(deck.introduced_today)), 0);
   const allowance = manualNew ?? defaultAllowance;
@@ -1054,8 +1060,28 @@ function CustomSessionSheet({ visible, decks, onClose, onStart }: { visible: boo
           <View style={styles.sheetHandle} />
           <Text style={styles.sheetTitle}>Session mixte</Text>
           <Text style={styles.sheetText}>Choisis les paquets à mélanger : les cartes à revoir et les nouvelles cartes seront fusionnées dans une seule file.</Text>
+          {groups.length > 1 ? (
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.mixFilterRow} contentContainerStyle={styles.mixFilterContent}>
+              <Pressable onPress={() => setSubjectFilter(null)} style={({ pressed }) => [styles.mixFilterChip, !filterKey && styles.mixFilterChipOn, pressed && styles.pressed]}>
+                <Ionicons name="shuffle" size={13} color={!filterKey ? colors.white : colors.blue} />
+                <Text style={[styles.mixFilterChipText, !filterKey && styles.mixFilterChipTextOn]}>Toutes</Text>
+              </Pressable>
+              {groups.map((group) => {
+                const active = filterKey === group.name.toLowerCase();
+                return (
+                  <Pressable
+                    key={group.name.toLowerCase()}
+                    onPress={() => setSubjectFilter(active ? null : group.name)}
+                    style={({ pressed }) => [styles.mixFilterChip, active && styles.mixFilterChipOn, pressed && styles.pressed]}
+                  >
+                    <Text style={[styles.mixFilterChipText, active && styles.mixFilterChipTextOn]} numberOfLines={1}>{group.name}</Text>
+                  </Pressable>
+                );
+              })}
+            </ScrollView>
+          ) : null}
           <ScrollView style={styles.mixList} nestedScrollEnabled>
-            {groupBySubject(decks).map((group) => (
+            {visibleGroups.map((group) => (
               <View key={group.name.toLowerCase()} style={styles.mixGroup}>
                 <Text style={styles.mixGroupTitle}>{group.name}</Text>
                 {group.decks.map((deck, index) => {
@@ -1452,6 +1478,12 @@ const styles = StyleSheet.create({
   mixTitle: { fontSize: 15, fontWeight: '800', color: colors.ink },
   mixCaption: { fontSize: 12, color: colors.muted, marginTop: 3 },
   mixList: { maxHeight: 320, marginTop: 18 },
+  mixFilterRow: { flexGrow: 0, marginTop: 16 },
+  mixFilterContent: { gap: 7, paddingRight: 8, paddingVertical: 2 },
+  mixFilterChip: { height: 34, borderRadius: 17, backgroundColor: colors.blueSoft, paddingHorizontal: 13, flexDirection: 'row', alignItems: 'center', gap: 5 },
+  mixFilterChipOn: { backgroundColor: colors.blue },
+  mixFilterChipText: { fontSize: 12, fontWeight: '800', color: colors.blue },
+  mixFilterChipTextOn: { color: colors.white },
   mixGroup: { backgroundColor: colors.paper, borderRadius: 14, borderWidth: 1, borderColor: colors.line, paddingHorizontal: 14, marginBottom: 10, paddingVertical: 6 },
   mixGroupTitle: { fontSize: 11, fontWeight: '900', letterSpacing: 1, color: colors.muted, textTransform: 'uppercase', paddingVertical: 7 },
   mixRow: { minHeight: 64, flexDirection: 'row', alignItems: 'center', gap: 11 },
