@@ -205,11 +205,10 @@ function DeckCard({ deck, onOpen, onToggleFavorite }: { deck: Deck; onOpen: (id:
   );
 }
 
-function HomeScreen({ onOpenSubject, onStudy, onOpenStats }: { onOpenSubject: (subject: string) => void; onStudy: (deckIds: number[], newCardAllowance: number) => void; onOpenStats: () => void }) {
+function HomeScreen({ onOpenSubject, onOpenStats }: { onOpenSubject: (subject: string) => void; onOpenStats: () => void }) {
   const [decks, setDecks] = useState<Deck[]>([]);
   const [prefs, setPrefs] = useState<{ hidden: string[]; custom: string[] }>({ hidden: [], custom: [] });
   const [refreshing, setRefreshing] = useState(false);
-  const [mixOpen, setMixOpen] = useState(false);
   const [editorOpen, setEditorOpen] = useState(false);
   const [syncing, setSyncing] = useState(false);
   const [syncNote, setSyncNote] = useState('');
@@ -256,7 +255,6 @@ function HomeScreen({ onOpenSubject, onStudy, onOpenStats }: { onOpenSubject: (s
   const hiddenKeys = new Set(prefs.hidden.map((name) => name.toLowerCase()));
   const visibleSubjects = allSubjects.filter((group) => !hiddenKeys.has(group.name.toLowerCase()));
 
-  const dueTotal = decks.filter(isFavorite).reduce((sum, deck) => sum + Number(deck.due_count), 0);
   const total = decks.filter(isFavorite).reduce((sum, deck) => sum + Number(deck.total_count), 0);
 
   const updatePrefs = async (next: { hidden: string[]; custom: string[] }) => {
@@ -286,28 +284,6 @@ function HomeScreen({ onOpenSubject, onStudy, onOpenStats }: { onOpenSubject: (s
           </View>
         </View>
 
-        <View style={styles.todayCard}>
-          <Grid tint={colors.gridChalk} step={28} />
-          <View style={styles.todayCopy}>
-            <Text style={styles.todayLabel}>À FAIRE AUJOURD’HUI</Text>
-            <Text style={styles.todayNumber}>{dueTotal}</Text>
-            <Text style={styles.todayText}>{dueTotal === 1 ? 'carte à revoir' : 'cartes à revoir'}</Text>
-          </View>
-          <View style={styles.todayIllustration}>
-            <View style={styles.stackCardBack} />
-            <View style={styles.stackCardFront}><Text style={styles.stackCardGlyph}>∑</Text></View>
-          </View>
-        </View>
-
-        <Pressable onPress={() => setMixOpen(true)} style={({ pressed }) => [styles.mixCard, pressed && styles.cardPressed]}>
-          <View style={styles.mixIcon}><Ionicons name="shuffle" size={22} color={colors.ink} /></View>
-          <View style={styles.mixCopy}>
-            <Text style={styles.mixTitle}>Session mixte</Text>
-            <Text style={styles.mixCaption}>Mélange les paquets de ton choix dans une seule révision</Text>
-          </View>
-          <Ionicons name="chevron-forward" size={19} color={colors.muted} />
-        </Pressable>
-
         <View style={styles.sectionHeader}>
           <View>
             <Text style={styles.sectionTitle}>Mes matières</Text>
@@ -323,26 +299,33 @@ function HomeScreen({ onOpenSubject, onStudy, onOpenStats }: { onOpenSubject: (s
           const favoriteDecks = group.decks.filter(isFavorite);
           const groupDue = favoriteDecks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
           const groupCards = favoriteDecks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
+          const groupLearned = favoriteDecks.reduce((sum, deck) => sum + Number(deck.learned_count), 0);
+          const progress = groupCards ? Math.round((groupLearned / groupCards) * 100) : 0;
           return (
             <Pressable
               key={group.name.toLowerCase()}
               onPress={() => onOpenSubject(group.name)}
-              style={({ pressed }) => [styles.subjectCard, pressed && styles.cardPressed]}
+              style={({ pressed }) => [styles.subjectCard, { backgroundColor: visual.tint }, pressed && styles.cardPressed]}
             >
-              <View style={[styles.subjectIcon, { backgroundColor: visual.tint }]}>
-                <Ionicons name={visual.icon} size={23} color={visual.fg} />
+              <View style={styles.subjectIcon}>
+                <Ionicons name={visual.icon} size={25} color={visual.fg} />
               </View>
               <View style={styles.subjectBody}>
-                <View style={styles.deckTitleRow}>
-                  <Text style={styles.subjectTitle} numberOfLines={1}>{group.name}</Text>
-                  <Ionicons name="chevron-forward" size={19} color={colors.muted} />
-                </View>
-                <View style={styles.subjectMeta}>
-                  <Text style={styles.subjectMetaText}>
-                    {favoriteDecks.length === 0 ? 'Aucun paquet favori' : `${favoriteDecks.length} ${favoriteDecks.length === 1 ? 'paquet' : 'paquets'} · ${groupCards} ${groupCards === 1 ? 'carte' : 'cartes'}`}
-                  </Text>
-                  {groupDue > 0 ? <View style={styles.duePill}><Text style={styles.duePillText}>{groupDue} à revoir</Text></View> : null}
-                </View>
+                <Text style={styles.subjectTitle} numberOfLines={1}>{group.name}</Text>
+                <Text style={[styles.subjectMetaText, { color: visual.fg }]}>
+                  {favoriteDecks.length === 0
+                    ? 'Aucun paquet favori'
+                    : `${favoriteDecks.length} ${favoriteDecks.length === 1 ? 'paquet' : 'paquets'} · ${groupCards} ${groupCards === 1 ? 'carte' : 'cartes'} · ${progress} % appris`}
+                </Text>
+                {favoriteDecks.length ? (
+                  <View style={styles.subjectTrack}>
+                    <View style={[styles.subjectTrackFill, { width: `${progress}%`, backgroundColor: visual.fg }]} />
+                  </View>
+                ) : null}
+              </View>
+              <View style={styles.subjectAside}>
+                {groupDue > 0 ? <View style={styles.subjectDuePill}><Text style={styles.duePillText}>{groupDue} à revoir</Text></View> : null}
+                <View style={styles.subjectChevron}><Ionicons name="chevron-forward" size={17} color={visual.fg} /></View>
               </View>
             </Pressable>
           );
@@ -374,13 +357,6 @@ function HomeScreen({ onOpenSubject, onStudy, onOpenStats }: { onOpenSubject: (s
             </View>
           )
         ) : null}
-
-        <CustomSessionSheet
-          visible={mixOpen}
-          decks={decks.filter(isFavorite)}
-          onClose={() => setMixOpen(false)}
-          onStart={(deckIds, newCardAllowance) => { setMixOpen(false); onStudy(deckIds, newCardAllowance); }}
-        />
 
         <SubjectsEditorModal
           visible={editorOpen}
@@ -1315,107 +1291,6 @@ function ManualNewModal({ visible, dailyLimit, onClose, onSelect, onLimitChange 
   );
 }
 
-function CustomSessionSheet({ visible, decks, onClose, onStart }: { visible: boolean; decks: Deck[]; onClose: () => void; onStart: (deckIds: number[], newCardAllowance: number) => void }) {
-  const [selected, setSelected] = useState<number[]>([]);
-  const [manualNew, setManualNew] = useState<number | null>(null);
-  const [subjectFilter, setSubjectFilter] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (!visible) return;
-    setSelected(decks.map((deck) => deck.id));
-    setManualNew(null);
-    setSubjectFilter(null);
-  }, [visible, decks]);
-
-  const groups = useMemo(() => groupBySubject(decks), [decks]);
-  const filterKey = subjectFilter?.trim().toLowerCase() ?? null;
-  const visibleGroups = filterKey ? groups.filter((group) => group.name.toLowerCase() === filterKey) : groups;
-
-  const defaultAllowance = decks.reduce((sum, deck) => sum + Math.max(0, Number(deck.daily_new_limit) - Number(deck.introduced_today)), 0);
-  const allowance = manualNew ?? defaultAllowance;
-  const selectedDecks = decks.filter((deck) => selected.includes(deck.id));
-  const dueCount = selectedDecks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
-  const newTotal = selectedDecks.reduce((sum, deck) => sum + Number(deck.new_count), 0);
-  const sessionCount = dueCount + Math.min(newTotal, allowance);
-
-  const toggle = (deckId: number) => {
-    setSelected((current) => current.includes(deckId) ? current.filter((id) => id !== deckId) : [...current, deckId]);
-  };
-
-  return (
-    <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
-      <Pressable style={styles.scrim} onPress={onClose}>
-        <Pressable style={styles.sheet} onPress={() => {}}>
-          <View style={styles.sheetHandle} />
-          <Text style={styles.sheetTitle}>Session mixte</Text>
-          <Text style={styles.sheetText}>Choisis les paquets à mélanger : les cartes à revoir et les nouvelles cartes seront fusionnées dans une seule file.</Text>
-          {groups.length > 1 ? (
-            <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.mixFilterRow} contentContainerStyle={styles.mixFilterContent}>
-              <Pressable onPress={() => setSubjectFilter(null)} style={({ pressed }) => [styles.mixFilterChip, !filterKey && styles.mixFilterChipOn, pressed && styles.pressed]}>
-                <Ionicons name="shuffle" size={13} color={!filterKey ? colors.white : colors.blue} />
-                <Text style={[styles.mixFilterChipText, !filterKey && styles.mixFilterChipTextOn]}>Toutes</Text>
-              </Pressable>
-              {groups.map((group) => {
-                const active = filterKey === group.name.toLowerCase();
-                return (
-                  <Pressable
-                    key={group.name.toLowerCase()}
-                    onPress={() => setSubjectFilter(active ? null : group.name)}
-                    style={({ pressed }) => [styles.mixFilterChip, active && styles.mixFilterChipOn, pressed && styles.pressed]}
-                  >
-                    <Text style={[styles.mixFilterChipText, active && styles.mixFilterChipTextOn]} numberOfLines={1}>{group.name}</Text>
-                  </Pressable>
-                );
-              })}
-            </ScrollView>
-          ) : null}
-          <ScrollView style={styles.mixList} nestedScrollEnabled>
-            {visibleGroups.map((group) => (
-              <View key={group.name.toLowerCase()} style={styles.mixGroup}>
-                <Text style={styles.mixGroupTitle}>{group.name}</Text>
-                {group.decks.map((deck, index) => {
-                  const active = selected.includes(deck.id);
-                  return (
-                    <Pressable key={deck.id} onPress={() => toggle(deck.id)} style={[styles.mixRow, index < group.decks.length - 1 && styles.mixRowBorder]}>
-                      <View style={[styles.mixCheckbox, active && styles.mixCheckboxOn]}>
-                        {active ? <Ionicons name="checkmark" size={15} color={colors.white} /> : null}
-                      </View>
-                      <View style={styles.mixRowCopy}>
-                        <Text style={styles.mixRowTitle} numberOfLines={1}>{deck.title}</Text>
-                        <Text style={styles.mixRowMeta}>{Number(deck.due_count)} à revoir · {Number(deck.new_count)} nouvelles</Text>
-                      </View>
-                      <View style={[styles.deckMarkSmall, { backgroundColor: deck.color }]}><Text style={styles.deckMarkSmallGlyph}>{glyphFor(deck.id)}</Text></View>
-                    </Pressable>
-                  );
-                })}
-              </View>
-            ))}
-            {!decks.length ? (
-              <View style={styles.mixGroup}>
-                <View style={styles.mixEmpty}><Text style={styles.mixEmptyText}>Crée d’abord un paquet pour lancer une session.</Text></View>
-              </View>
-            ) : null}
-          </ScrollView>
-          <View style={styles.inSessionLimit}>
-            <View><Text style={styles.inSessionLimitTitle}>Nouvelles cartes</Text><Text style={styles.inSessionLimitText}>Ajoutées à la file, en plus des révisions</Text></View>
-            <View style={styles.stepper}>
-              <Pressable onPress={() => setManualNew(Math.max(0, allowance - 1))} style={styles.stepperButton}><Ionicons name="remove" size={18} color={colors.ink} /></Pressable>
-              <Text style={styles.stepperValue}>{allowance}</Text>
-              <Pressable onPress={() => setManualNew(allowance + 1)} style={styles.stepperButton}><Ionicons name="add" size={18} color={colors.ink} /></Pressable>
-            </View>
-          </View>
-          <PrimaryButton
-            label={!selected.length ? 'Choisis au moins un paquet' : sessionCount ? `Commencer · ${sessionCount} carte${sessionCount > 1 ? 's' : ''}` : 'Lancer une session'}
-            icon="play"
-            disabled={!selected.length}
-            onPress={() => onStart(selected, allowance)}
-          />
-        </Pressable>
-      </Pressable>
-    </Modal>
-  );
-}
-
 function CreateDeckModal({ visible, defaultSubject, subjects, onClose, onCreated }: { visible: boolean; defaultSubject: string; subjects: string[]; onClose: () => void; onCreated: (id: number) => void }) {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -1525,7 +1400,7 @@ function AppContent() {
   return (
     <View style={styles.app}>
       <StatusBar style="dark" />
-      {route.name === 'home' ? <HomeScreen onOpenSubject={(subject) => setRoute({ name: 'subject', subject })} onStudy={(deckIds, newCardAllowance) => setRoute({ name: 'study', deckIds, newCardAllowance })} onOpenStats={() => setRoute({ name: 'stats' })} /> : null}
+      {route.name === 'home' ? <HomeScreen onOpenSubject={(subject) => setRoute({ name: 'subject', subject })} onOpenStats={() => setRoute({ name: 'stats' })} /> : null}
       {route.name === 'subject' ? <SubjectScreen subject={route.subject} onBack={() => setRoute({ name: 'home' })} onOpenDeck={(deckId) => setRoute({ name: 'deck', deckId })} onStudy={(deckIds, newCardAllowance) => setRoute({ name: 'study', deckIds, newCardAllowance })} onCreate={(subject) => void openCreate(subject)} /> : null}
       {route.name === 'deck' ? <DeckScreen deckId={route.deckId} onBack={(subject) => setRoute({ name: 'subject', subject })} onStudy={(newCardAllowance) => setRoute({ name: 'study', deckIds: [route.deckId], newCardAllowance })} onSettings={() => setRoute({ name: 'settings', deckId: route.deckId })} /> : null}
       {route.name === 'settings' ? <DeckSettingsScreen deckId={route.deckId} onBack={() => setRoute({ name: 'deck', deckId: route.deckId })} /> : null}
@@ -1566,16 +1441,7 @@ const styles = StyleSheet.create({
   eyebrow: { fontSize: 12, fontWeight: '900', letterSpacing: 2.3, color: colors.blue, marginBottom: 9 },
   heroTitle: { fontSize: 34, lineHeight: 38, letterSpacing: -1.4, fontWeight: '800', color: colors.ink },
   avatar: { width: 44, height: 44, borderRadius: 15, backgroundColor: colors.blueSoft, alignItems: 'center', justifyContent: 'center', marginTop: 3 },
-  todayCard: { minHeight: 174, backgroundColor: colors.board, borderRadius: radius.large, padding: 24, flexDirection: 'row', overflow: 'hidden', ...shadow },
-  todayCopy: { flex: 1, zIndex: 2 },
-  todayLabel: { color: colors.chalkDim, fontWeight: '800', fontSize: 11, letterSpacing: 1.2 },
-  todayNumber: { color: colors.chalk, fontWeight: '700', fontSize: 52, lineHeight: 58, marginTop: 7, letterSpacing: -2, fontFamily: mono },
-  todayText: { color: colors.chalk, fontWeight: '600', fontSize: 16 },
-  todayIllustration: { width: 118, alignItems: 'center', justifyContent: 'center' },
-  stackCardBack: { width: 82, height: 104, borderRadius: 12, backgroundColor: '#33493E', position: 'absolute', transform: [{ rotate: '10deg' }, { translateX: 12 }] },
-  stackCardFront: { width: 82, height: 104, borderRadius: 12, backgroundColor: colors.yellow, alignItems: 'center', justifyContent: 'center', transform: [{ rotate: '-5deg' }] },
-  stackCardGlyph: { fontSize: 40, fontWeight: '700', color: colors.ink, fontFamily: mono },
-  sectionHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 32, marginBottom: 15 },
+  sectionHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 6, marginBottom: 15 },
   sectionHeaderCompact: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 31, marginBottom: 14 },
   sectionTitle: { fontSize: 21, fontWeight: '800', color: colors.ink, letterSpacing: -0.5 },
   sectionCaption: { color: colors.muted, fontSize: 13, marginTop: 3 },
@@ -1596,12 +1462,16 @@ const styles = StyleSheet.create({
   deckMetaText: { fontSize: 11, color: colors.muted, fontWeight: '600' },
   duePill: { backgroundColor: colors.redSoft, borderRadius: 20, paddingHorizontal: 8, paddingVertical: 4 },
   duePillText: { color: colors.red, fontSize: 10, fontWeight: '800' },
-  subjectCard: { backgroundColor: colors.paper, borderRadius: radius.medium, padding: 16, flexDirection: 'row', alignItems: 'center', marginBottom: 12, borderWidth: 1, borderColor: '#ECECF0', ...shadow },
-  subjectIcon: { width: 50, height: 58, borderRadius: 14, alignItems: 'center', justifyContent: 'center', marginRight: 15 },
+  subjectCard: { borderRadius: radius.large, padding: 16, flexDirection: 'row', alignItems: 'center', gap: 13, marginBottom: 12, borderWidth: 1, borderColor: 'rgba(255, 255, 255, 0.7)', ...shadow },
+  subjectIcon: { width: 52, height: 52, borderRadius: 17, backgroundColor: colors.paper, alignItems: 'center', justifyContent: 'center', borderWidth: 1, borderColor: 'rgba(26, 34, 56, 0.05)' },
   subjectBody: { flex: 1, minWidth: 0 },
-  subjectTitle: { fontSize: 17, fontWeight: '800', color: colors.ink, flex: 1 },
-  subjectMeta: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 5 },
-  subjectMetaText: { fontSize: 12, color: colors.muted, fontWeight: '600' },
+  subjectTitle: { fontSize: 17, fontWeight: '800', color: colors.ink, letterSpacing: -0.3 },
+  subjectMetaText: { fontSize: 11.5, fontWeight: '700', marginTop: 3 },
+  subjectTrack: { height: 6, borderRadius: 3, backgroundColor: 'rgba(255, 255, 255, 0.8)', overflow: 'hidden', marginTop: 11 },
+  subjectTrackFill: { height: '100%', borderRadius: 3 },
+  subjectAside: { alignItems: 'flex-end', justifyContent: 'center', gap: 9 },
+  subjectDuePill: { backgroundColor: colors.paper, borderRadius: 20, paddingHorizontal: 9, paddingVertical: 5 },
+  subjectChevron: { opacity: 0.55 },
   subjectEditorList: { maxHeight: 300, marginTop: 18 },
   subjectEditorRow: { minHeight: 62, flexDirection: 'row', alignItems: 'center', gap: 11 },
   subjectEditorRowBorder: { borderBottomWidth: 1, borderBottomColor: '#ECECF1' },
@@ -1772,12 +1642,6 @@ const styles = StyleSheet.create({
   errorText: { color: colors.red, fontSize: 11, marginBottom: 5 },
   createIcon: { width: 94, height: 94, borderRadius: 26, backgroundColor: colors.yellowSoft, alignItems: 'center', justifyContent: 'center', alignSelf: 'center', marginVertical: 28 },
   createGlyph: { fontSize: 42, fontWeight: '700', color: colors.blue, fontFamily: mono },
-  mixCard: { backgroundColor: colors.paper, borderRadius: radius.medium, padding: 16, flexDirection: 'row', alignItems: 'center', gap: 13, borderWidth: 1, borderColor: '#ECECF0', marginBottom: 24, ...shadow },
-  mixIcon: { width: 46, height: 46, borderRadius: 14, backgroundColor: colors.yellow, alignItems: 'center', justifyContent: 'center' },
-  mixCopy: { flex: 1, minWidth: 0 },
-  mixTitle: { fontSize: 15, fontWeight: '800', color: colors.ink },
-  mixCaption: { fontSize: 12, color: colors.muted, marginTop: 3 },
-  mixList: { maxHeight: 320, marginTop: 18 },
   mixFilterRow: { flexGrow: 0, marginTop: 16 },
   mixFilterContent: { gap: 7, paddingRight: 8, paddingVertical: 2 },
   mixFilterChip: { height: 34, borderRadius: 17, backgroundColor: colors.blueSoft, paddingHorizontal: 13, flexDirection: 'row', alignItems: 'center', gap: 5 },
@@ -1807,19 +1671,6 @@ const styles = StyleSheet.create({
   treePillNew: { backgroundColor: colors.greenSoft, borderRadius: 20, paddingHorizontal: 8, paddingVertical: 4 },
   treePillNewText: { color: colors.green, fontSize: 10, fontWeight: '800' },
   treeRowProgress: { fontSize: 10, fontWeight: '700', color: colors.muted },
-  mixGroup: { backgroundColor: colors.paper, borderRadius: 14, borderWidth: 1, borderColor: colors.line, paddingHorizontal: 14, marginBottom: 10, paddingVertical: 6 },
-  mixGroupTitle: { fontSize: 11, fontWeight: '900', letterSpacing: 1, color: colors.muted, textTransform: 'uppercase', paddingVertical: 7 },
-  mixRow: { minHeight: 64, flexDirection: 'row', alignItems: 'center', gap: 11 },
-  mixRowBorder: { borderBottomWidth: 1, borderBottomColor: '#ECECF1' },
-  mixCheckbox: { width: 24, height: 24, borderRadius: 8, borderWidth: 1.5, borderColor: '#C7CAD4', alignItems: 'center', justifyContent: 'center' },
-  mixCheckboxOn: { backgroundColor: colors.blue, borderColor: colors.blue },
-  mixRowCopy: { flex: 1, minWidth: 0 },
-  mixRowTitle: { fontSize: 14, fontWeight: '800', color: colors.ink },
-  mixRowMeta: { fontSize: 11, color: colors.muted, marginTop: 3 },
-  deckMarkSmall: { width: 30, height: 34, borderRadius: 9, alignItems: 'center', justifyContent: 'center' },
-  deckMarkSmallGlyph: { fontSize: 13, fontWeight: '700', color: colors.blue, fontFamily: mono },
-  mixEmpty: { paddingVertical: 22, alignItems: 'center' },
-  mixEmptyText: { color: colors.muted, fontSize: 13, textAlign: 'center' },
   homeHeaderActions: { flexDirection: 'row', alignItems: 'center', gap: 10 },
   statsBoard: { backgroundColor: colors.board, borderRadius: radius.large, padding: 22, overflow: 'hidden', ...shadow },
   statsBoardRow: { flexDirection: 'row', zIndex: 2 },
