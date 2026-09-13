@@ -53,6 +53,8 @@ def main():
             require(isinstance(card.get("front"), str) and card["front"].strip(), f"{path.name}:{card_id}: recto vide")
             require(isinstance(card.get("back"), str) and card["back"].strip(), f"{path.name}:{card_id}: verso vide")
             if deck["category"] == "irregular-verbs":
+                require(isinstance(card.get("indice"), str) and card["indice"].strip(),
+                        f"{path.name}:{card_id}: indice (traduction) manquant")
                 require(card_id not in irregular_ids, f"Verbe irrégulier répété entre les niveaux : {card_id}")
                 irregular_ids.add(card_id)
 

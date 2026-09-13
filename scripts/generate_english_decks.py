@@ -1287,7 +1287,8 @@ def generate():
             {
                 "id": base,
                 "kind": "verbe-irregulier",
-                "front": f"{base} — {meaning}",
+                "front": f"{base} —",
+                "indice": meaning,
                 "back": f"{base} · {past} · {participle}",
             }
             for base, meaning, past, participle in IRREGULAR[level]

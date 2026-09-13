@@ -12,181 +12,211 @@
     {
       "id": "bite",
       "kind": "verbe-irregulier",
-      "front": "bite — mordre",
+      "front": "bite —",
+      "indice": "mordre",
       "back": "bite · bit · bitten"
     },
     {
       "id": "blow",
       "kind": "verbe-irregulier",
-      "front": "blow — souffler",
+      "front": "blow —",
+      "indice": "souffler",
       "back": "blow · blew · blown"
     },
     {
       "id": "burn",
       "kind": "verbe-irregulier",
-      "front": "burn — brûler",
+      "front": "burn —",
+      "indice": "brûler",
       "back": "burn · burned/burnt · burned/burnt"
     },
     {
       "id": "cost",
       "kind": "verbe-irregulier",
-      "front": "cost — coûter",
+      "front": "cost —",
+      "indice": "coûter",
       "back": "cost · cost · cost"
     },
     {
       "id": "dream",
       "kind": "verbe-irregulier",
-      "front": "dream — rêver",
+      "front": "dream —",
+      "indice": "rêver",
       "back": "dream · dreamed/dreamt · dreamed/dreamt"
     },
     {
       "id": "feed",
       "kind": "verbe-irregulier",
-      "front": "feed — nourrir",
+      "front": "feed —",
+      "indice": "nourrir",
       "back": "feed · fed · fed"
     },
     {
       "id": "hide",
       "kind": "verbe-irregulier",
-      "front": "hide — cacher",
+      "front": "hide —",
+      "indice": "cacher",
       "back": "hide · hid · hidden"
     },
     {
       "id": "lay",
       "kind": "verbe-irregulier",
-      "front": "lay — poser à plat",
+      "front": "lay —",
+      "indice": "poser à plat",
       "back": "lay · laid · laid"
     },
     {
       "id": "lead",
       "kind": "verbe-irregulier",
-      "front": "lead — mener",
+      "front": "lead —",
+      "indice": "mener",
       "back": "lead · led · led"
     },
     {
       "id": "learn",
       "kind": "verbe-irregulier",
-      "front": "learn — apprendre",
+      "front": "learn —",
+      "indice": "apprendre",
       "back": "learn · learned/learnt · learned/learnt"
     },
     {
       "id": "lend",
       "kind": "verbe-irregulier",
-      "front": "lend — prêter",
+      "front": "lend —",
+      "indice": "prêter",
       "back": "lend · lent · lent"
     },
     {
       "id": "lie",
       "kind": "verbe-irregulier",
-      "front": "lie — être allongé",
+      "front": "lie —",
+      "indice": "être allongé",
       "back": "lie · lay · lain"
     },
     {
       "id": "light",
       "kind": "verbe-irregulier",
-      "front": "light — allumer",
+      "front": "light —",
+      "indice": "allumer",
       "back": "light · lit/lighted · lit/lighted"
     },
     {
       "id": "shake",
       "kind": "verbe-irregulier",
-      "front": "shake — secouer",
+      "front": "shake —",
+      "indice": "secouer",
       "back": "shake · shook · shaken"
     },
     {
       "id": "shoot",
       "kind": "verbe-irregulier",
-      "front": "shoot — tirer",
+      "front": "shoot —",
+      "indice": "tirer",
       "back": "shoot · shot · shot"
     },
     {
       "id": "smell",
       "kind": "verbe-irregulier",
-      "front": "smell — sentir",
+      "front": "smell —",
+      "indice": "sentir",
       "back": "smell · smelled/smelt · smelled/smelt"
     },
     {
       "id": "spell",
       "kind": "verbe-irregulier",
-      "front": "spell — épeler",
+      "front": "spell —",
+      "indice": "épeler",
       "back": "spell · spelled/spelt · spelled/spelt"
     },
     {
       "id": "stick",
       "kind": "verbe-irregulier",
-      "front": "stick — coller",
+      "front": "stick —",
+      "indice": "coller",
       "back": "stick · stuck · stuck"
     },
     {
       "id": "sweep",
       "kind": "verbe-irregulier",
-      "front": "sweep — balayer",
+      "front": "sweep —",
+      "indice": "balayer",
       "back": "sweep · swept · swept"
     },
     {
       "id": "tear",
       "kind": "verbe-irregulier",
-      "front": "tear — déchirer",
+      "front": "tear —",
+      "indice": "déchirer",
       "back": "tear · tore · torn"
     },
     {
       "id": "freeze",
       "kind": "verbe-irregulier",
-      "front": "freeze — geler",
+      "front": "freeze —",
+      "indice": "geler",
       "back": "freeze · froze · frozen"
     },
     {
       "id": "deal",
       "kind": "verbe-irregulier",
-      "front": "deal — traiter",
+      "front": "deal —",
+      "indice": "traiter",
       "back": "deal · dealt · dealt"
     },
     {
       "id": "dig",
       "kind": "verbe-irregulier",
-      "front": "dig — creuser",
+      "front": "dig —",
+      "indice": "creuser",
       "back": "dig · dug · dug"
     },
     {
       "id": "hang",
       "kind": "verbe-irregulier",
-      "front": "hang — suspendre",
+      "front": "hang —",
+      "indice": "suspendre",
       "back": "hang · hung · hung"
     },
     {
       "id": "bleed",
       "kind": "verbe-irregulier",
-      "front": "bleed — saigner",
+      "front": "bleed —",
+      "indice": "saigner",
       "back": "bleed · bled · bled"
     },
     {
       "id": "lean",
       "kind": "verbe-irregulier",
-      "front": "lean — se pencher",
+      "front": "lean —",
+      "indice": "se pencher",
       "back": "lean · leaned/leant · leaned/leant"
     },
     {
       "id": "leap",
       "kind": "verbe-irregulier",
-      "front": "leap — bondir",
+      "front": "leap —",
+      "indice": "bondir",
       "back": "leap · leaped/leapt · leaped/leapt"
     },
     {
       "id": "spit",
       "kind": "verbe-irregulier",
-      "front": "spit — cracher",
+      "front": "spit —",
+      "indice": "cracher",
       "back": "spit · spat/spit · spat/spit"
     },
     {
       "id": "wind",
       "kind": "verbe-irregulier",
-      "front": "wind — enrouler",
+      "front": "wind —",
+      "indice": "enrouler",
       "back": "wind · wound · wound"
     },
     {
       "id": "wet",
       "kind": "verbe-irregulier",
-      "front": "wet — mouiller",
+      "front": "wet —",
+      "indice": "mouiller",
       "back": "wet · wet/wetted · wet/wetted"
     }
   ]

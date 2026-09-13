@@ -1101,6 +1101,7 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
   const [decks, setDecks] = useState<Deck[]>([]);
   const [queue, setQueue] = useState<Card[]>([]);
   const [revealed, setRevealed] = useState(false);
+  const [hintShown, setHintShown] = useState(false);
   const [loading, setLoading] = useState(true);
   const [reviewed, setReviewed] = useState(0);
   const [manualOpen, setManualOpen] = useState(false);
@@ -1132,6 +1133,10 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
       .catch(() => {});
     return () => { active = false; };
   }, [current?.id, current?.photo_uri]);
+
+  useEffect(() => {
+    setHintShown(false);
+  }, [current?.id]);
 
   useEffect(() => {
     if (current) markCardSeen(current.id).catch(console.error);
@@ -1256,6 +1261,21 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
         {!revealed ? (
           <View style={styles.revealArea}>
             <PrimaryButton label="Voir la réponse" icon="eye-outline" onPress={() => setRevealed(true)} />
+            {current.context ? (
+              hintShown ? (
+                <View style={styles.hintPaper}>
+                  <Text style={styles.hintEyebrow}>INDICE</Text>
+                  {hasMath(current.context)
+                    ? <MathView text={current.context} fontSize={17} />
+                    : <Text style={styles.hintText}>{current.context}</Text>}
+                </View>
+              ) : (
+                <Pressable accessibilityRole="button" accessibilityLabel="Afficher l’indice" onPress={() => setHintShown(true)} style={({ pressed }) => [styles.hintButton, pressed && styles.pressed]}>
+                  <Ionicons name="bulb-outline" size={18} color={colors.blue} />
+                  <Text style={styles.hintButtonText}>Indice</Text>
+                </Pressable>
+              )
+            ) : null}
             <Text style={styles.hint}>Prends le temps de calculer dans ta tête avant de révéler</Text>
           </View>
         ) : (
@@ -1721,6 +1741,11 @@ const styles = StyleSheet.create({
   answerText: { color: colors.ink, fontSize: 21, fontWeight: '700', letterSpacing: -0.3, textAlign: 'center', marginTop: 6, fontFamily: mono },
   answerNote: { color: colors.muted, fontSize: 13, marginTop: 5, fontWeight: '600' },
   revealArea: { paddingTop: 17 },
+  hintButton: { minHeight: 46, borderRadius: 15, borderWidth: 1, borderColor: colors.blue, alignSelf: 'center', paddingHorizontal: 20, marginTop: 10, alignItems: 'center', justifyContent: 'center', flexDirection: 'row', gap: 7, backgroundColor: colors.paper },
+  hintButtonText: { color: colors.blue, fontSize: 14, fontWeight: '800' },
+  hintPaper: { alignSelf: 'stretch', borderRadius: 15, backgroundColor: colors.yellowSoft, borderWidth: 1, borderColor: '#E8D9A0', paddingVertical: 13, paddingHorizontal: 16, marginTop: 10, alignItems: 'center' },
+  hintEyebrow: { color: '#8A6D1B', fontSize: 10, fontWeight: '900', letterSpacing: 1.6 },
+  hintText: { color: colors.ink, fontSize: 15, fontWeight: '700', marginTop: 3, textAlign: 'center' },
   hint: { color: colors.muted, fontSize: 11, textAlign: 'center', marginTop: 10 },
   ratingArea: { paddingTop: 14 },
   ratingPrompt: { color: colors.ink, fontSize: 14, fontWeight: '800', textAlign: 'center', marginBottom: 10 },

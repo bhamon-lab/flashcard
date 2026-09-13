@@ -12,163 +12,190 @@
     {
       "id": "awake",
       "kind": "verbe-irregulier",
-      "front": "awake — s'éveiller",
+      "front": "awake —",
+      "indice": "s'éveiller",
       "back": "awake · awoke · awoken"
     },
     {
       "id": "cast",
       "kind": "verbe-irregulier",
-      "front": "cast — jeter, distribuer un rôle",
+      "front": "cast —",
+      "indice": "jeter, distribuer un rôle",
       "back": "cast · cast · cast"
     },
     {
       "id": "cling",
       "kind": "verbe-irregulier",
-      "front": "cling — s'agripper",
+      "front": "cling —",
+      "indice": "s'agripper",
       "back": "cling · clung · clung"
     },
     {
       "id": "creep",
       "kind": "verbe-irregulier",
-      "front": "creep — ramper",
+      "front": "creep —",
+      "indice": "ramper",
       "back": "creep · crept · crept"
     },
     {
       "id": "forbid",
       "kind": "verbe-irregulier",
-      "front": "forbid — interdire",
+      "front": "forbid —",
+      "indice": "interdire",
       "back": "forbid · forbade · forbidden"
     },
     {
       "id": "forecast",
       "kind": "verbe-irregulier",
-      "front": "forecast — prévoir",
+      "front": "forecast —",
+      "indice": "prévoir",
       "back": "forecast · forecast · forecast"
     },
     {
       "id": "foresee",
       "kind": "verbe-irregulier",
-      "front": "foresee — prévoir",
+      "front": "foresee —",
+      "indice": "prévoir",
       "back": "foresee · foresaw · foreseen"
     },
     {
       "id": "grind",
       "kind": "verbe-irregulier",
-      "front": "grind — moudre",
+      "front": "grind —",
+      "indice": "moudre",
       "back": "grind · ground · ground"
     },
     {
       "id": "kneel",
       "kind": "verbe-irregulier",
-      "front": "kneel — s'agenouiller",
+      "front": "kneel —",
+      "indice": "s'agenouiller",
       "back": "kneel · knelt/kneeled · knelt/kneeled"
     },
     {
       "id": "knit",
       "kind": "verbe-irregulier",
-      "front": "knit — tricoter",
+      "front": "knit —",
+      "indice": "tricoter",
       "back": "knit · knitted/knit · knitted/knit"
     },
     {
       "id": "mislead",
       "kind": "verbe-irregulier",
-      "front": "mislead — induire en erreur",
+      "front": "mislead —",
+      "indice": "induire en erreur",
       "back": "mislead · misled · misled"
     },
     {
       "id": "overtake",
       "kind": "verbe-irregulier",
-      "front": "overtake — dépasser",
+      "front": "overtake —",
+      "indice": "dépasser",
       "back": "overtake · overtook · overtaken"
     },
     {
       "id": "prove",
       "kind": "verbe-irregulier",
-      "front": "prove — prouver",
+      "front": "prove —",
+      "indice": "prouver",
       "back": "prove · proved · proven/proved"
     },
     {
       "id": "quit",
       "kind": "verbe-irregulier",
-      "front": "quit — quitter",
+      "front": "quit —",
+      "indice": "quitter",
       "back": "quit · quit · quit"
     },
     {
       "id": "shed",
       "kind": "verbe-irregulier",
-      "front": "shed — répandre, perdre",
+      "front": "shed —",
+      "indice": "répandre, perdre",
       "back": "shed · shed · shed"
     },
     {
       "id": "shrink",
       "kind": "verbe-irregulier",
-      "front": "shrink — rétrécir",
+      "front": "shrink —",
+      "indice": "rétrécir",
       "back": "shrink · shrank · shrunk"
     },
     {
       "id": "spin",
       "kind": "verbe-irregulier",
-      "front": "spin — tourner, filer",
+      "front": "spin —",
+      "indice": "tourner, filer",
       "back": "spin · spun · spun"
     },
     {
       "id": "split",
       "kind": "verbe-irregulier",
-      "front": "split — diviser",
+      "front": "split —",
+      "indice": "diviser",
       "back": "split · split · split"
     },
     {
       "id": "spring",
       "kind": "verbe-irregulier",
-      "front": "spring — bondir, jaillir",
+      "front": "spring —",
+      "indice": "bondir, jaillir",
       "back": "spring · sprang · sprung"
     },
     {
       "id": "sting",
       "kind": "verbe-irregulier",
-      "front": "sting — piquer",
+      "front": "sting —",
+      "indice": "piquer",
       "back": "sting · stung · stung"
     },
     {
       "id": "stink",
       "kind": "verbe-irregulier",
-      "front": "stink — sentir mauvais",
+      "front": "stink —",
+      "indice": "sentir mauvais",
       "back": "stink · stank/stunk · stunk"
     },
     {
       "id": "strive",
       "kind": "verbe-irregulier",
-      "front": "strive — s'efforcer",
+      "front": "strive —",
+      "indice": "s'efforcer",
       "back": "strive · strove · striven"
     },
     {
       "id": "tread",
       "kind": "verbe-irregulier",
-      "front": "tread — marcher sur",
+      "front": "tread —",
+      "indice": "marcher sur",
       "back": "tread · trod · trodden/trod"
     },
     {
       "id": "undergo",
       "kind": "verbe-irregulier",
-      "front": "undergo — subir",
+      "front": "undergo —",
+      "indice": "subir",
       "back": "undergo · underwent · undergone"
     },
     {
       "id": "upset",
       "kind": "verbe-irregulier",
-      "front": "upset — bouleverser",
+      "front": "upset —",
+      "indice": "bouleverser",
       "back": "upset · upset · upset"
     },
     {
       "id": "forego",
       "kind": "verbe-irregulier",
-      "front": "forego — renoncer à",
+      "front": "forego —",
+      "indice": "renoncer à",
       "back": "forego · forewent · foregone"
     },
     {
       "id": "stride",
       "kind": "verbe-irregulier",
-      "front": "stride — marcher à grands pas",
+      "front": "stride —",
+      "indice": "marcher à grands pas",
       "back": "stride · strode · stridden"
     }
   ]

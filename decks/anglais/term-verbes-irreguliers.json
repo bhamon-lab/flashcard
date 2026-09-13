@@ -12,181 +12,211 @@
     {
       "id": "abide",
       "kind": "verbe-irregulier",
-      "front": "abide — respecter, supporter",
+      "front": "abide —",
+      "indice": "respecter, supporter",
       "back": "abide · abode/abided · abode/abided"
     },
     {
       "id": "befall",
       "kind": "verbe-irregulier",
-      "front": "befall — arriver à",
+      "front": "befall —",
+      "indice": "arriver à",
       "back": "befall · befell · befallen"
     },
     {
       "id": "behold",
       "kind": "verbe-irregulier",
-      "front": "behold — contempler",
+      "front": "behold —",
+      "indice": "contempler",
       "back": "behold · beheld · beheld"
     },
     {
       "id": "bereave",
       "kind": "verbe-irregulier",
-      "front": "bereave — endeuiller",
+      "front": "bereave —",
+      "indice": "endeuiller",
       "back": "bereave · bereaved/bereft · bereaved/bereft"
     },
     {
       "id": "beseech",
       "kind": "verbe-irregulier",
-      "front": "beseech — supplier",
+      "front": "beseech —",
+      "indice": "supplier",
       "back": "beseech · besought/beseeched · besought/beseeched"
     },
     {
       "id": "bid",
       "kind": "verbe-irregulier",
-      "front": "bid — enchérir",
+      "front": "bid —",
+      "indice": "enchérir",
       "back": "bid · bid · bid"
     },
     {
       "id": "broadcast",
       "kind": "verbe-irregulier",
-      "front": "broadcast — diffuser",
+      "front": "broadcast —",
+      "indice": "diffuser",
       "back": "broadcast · broadcast · broadcast"
     },
     {
       "id": "dwell",
       "kind": "verbe-irregulier",
-      "front": "dwell — habiter, s'attarder",
+      "front": "dwell —",
+      "indice": "habiter, s'attarder",
       "back": "dwell · dwelt/dwelled · dwelt/dwelled"
     },
     {
       "id": "fling",
       "kind": "verbe-irregulier",
-      "front": "fling — lancer violemment",
+      "front": "fling —",
+      "indice": "lancer violemment",
       "back": "fling · flung · flung"
     },
     {
       "id": "foretell",
       "kind": "verbe-irregulier",
-      "front": "foretell — prédire",
+      "front": "foretell —",
+      "indice": "prédire",
       "back": "foretell · foretold · foretold"
     },
     {
       "id": "forsake",
       "kind": "verbe-irregulier",
-      "front": "forsake — abandonner",
+      "front": "forsake —",
+      "indice": "abandonner",
       "back": "forsake · forsook · forsaken"
     },
     {
       "id": "mow",
       "kind": "verbe-irregulier",
-      "front": "mow — tondre",
+      "front": "mow —",
+      "indice": "tondre",
       "back": "mow · mowed · mown/mowed"
     },
     {
       "id": "plead",
       "kind": "verbe-irregulier",
-      "front": "plead — plaider",
+      "front": "plead —",
+      "indice": "plaider",
       "back": "plead · pleaded/pled · pleaded/pled"
     },
     {
       "id": "rid",
       "kind": "verbe-irregulier",
-      "front": "rid — débarrasser",
+      "front": "rid —",
+      "indice": "débarrasser",
       "back": "rid · rid · rid"
     },
     {
       "id": "saw",
       "kind": "verbe-irregulier",
-      "front": "saw — scier",
+      "front": "saw —",
+      "indice": "scier",
       "back": "saw · sawed · sawn/sawed"
     },
     {
       "id": "sew",
       "kind": "verbe-irregulier",
-      "front": "sew — coudre",
+      "front": "sew —",
+      "indice": "coudre",
       "back": "sew · sewed · sewn/sewed"
     },
     {
       "id": "sling",
       "kind": "verbe-irregulier",
-      "front": "sling — lancer, suspendre",
+      "front": "sling —",
+      "indice": "lancer, suspendre",
       "back": "sling · slung · slung"
     },
     {
       "id": "slit",
       "kind": "verbe-irregulier",
-      "front": "slit — fendre",
+      "front": "slit —",
+      "indice": "fendre",
       "back": "slit · slit · slit"
     },
     {
       "id": "sow",
       "kind": "verbe-irregulier",
-      "front": "sow — semer",
+      "front": "sow —",
+      "indice": "semer",
       "back": "sow · sowed · sown/sowed"
     },
     {
       "id": "speed",
       "kind": "verbe-irregulier",
-      "front": "speed — aller vite",
+      "front": "speed —",
+      "indice": "aller vite",
       "back": "speed · sped/speeded · sped/speeded"
     },
     {
       "id": "spill",
       "kind": "verbe-irregulier",
-      "front": "spill — renverser",
+      "front": "spill —",
+      "indice": "renverser",
       "back": "spill · spilled/spilt · spilled/spilt"
     },
     {
       "id": "spoil",
       "kind": "verbe-irregulier",
-      "front": "spoil — gâcher",
+      "front": "spoil —",
+      "indice": "gâcher",
       "back": "spoil · spoiled/spoilt · spoiled/spoilt"
     },
     {
       "id": "swell",
       "kind": "verbe-irregulier",
-      "front": "swell — gonfler",
+      "front": "swell —",
+      "indice": "gonfler",
       "back": "swell · swelled · swollen/swelled"
     },
     {
       "id": "weave",
       "kind": "verbe-irregulier",
-      "front": "weave — tisser",
+      "front": "weave —",
+      "indice": "tisser",
       "back": "weave · wove · woven"
     },
     {
       "id": "wring",
       "kind": "verbe-irregulier",
-      "front": "wring — tordre",
+      "front": "wring —",
+      "indice": "tordre",
       "back": "wring · wrung · wrung"
     },
     {
       "id": "alight",
       "kind": "verbe-irregulier",
-      "front": "alight — descendre, se poser",
+      "front": "alight —",
+      "indice": "descendre, se poser",
       "back": "alight · alighted/alit · alighted/alit"
     },
     {
       "id": "beget",
       "kind": "verbe-irregulier",
-      "front": "beget — engendrer",
+      "front": "beget —",
+      "indice": "engendrer",
       "back": "beget · begot · begotten"
     },
     {
       "id": "beset",
       "kind": "verbe-irregulier",
-      "front": "beset — assaillir",
+      "front": "beset —",
+      "indice": "assaillir",
       "back": "beset · beset · beset"
     },
     {
       "id": "slay",
       "kind": "verbe-irregulier",
-      "front": "slay — tuer",
+      "front": "slay —",
+      "indice": "tuer",
       "back": "slay · slew · slain"
     },
     {
       "id": "smite",
       "kind": "verbe-irregulier",
-      "front": "smite — frapper violemment",
+      "front": "smite —",
+      "indice": "frapper violemment",
       "back": "smite · smote · smitten"
     }
   ]

@@ -12,151 +12,176 @@
     {
       "id": "become",
       "kind": "verbe-irregulier",
-      "front": "become — devenir",
+      "front": "become —",
+      "indice": "devenir",
       "back": "become · became · become"
     },
     {
       "id": "grow",
       "kind": "verbe-irregulier",
-      "front": "grow — grandir, pousser",
+      "front": "grow —",
+      "indice": "grandir, pousser",
       "back": "grow · grew · grown"
     },
     {
       "id": "hear",
       "kind": "verbe-irregulier",
-      "front": "hear — entendre",
+      "front": "hear —",
+      "indice": "entendre",
       "back": "hear · heard · heard"
     },
     {
       "id": "hold",
       "kind": "verbe-irregulier",
-      "front": "hold — tenir",
+      "front": "hold —",
+      "indice": "tenir",
       "back": "hold · held · held"
     },
     {
       "id": "lose",
       "kind": "verbe-irregulier",
-      "front": "lose — perdre",
+      "front": "lose —",
+      "indice": "perdre",
       "back": "lose · lost · lost"
     },
     {
       "id": "fight",
       "kind": "verbe-irregulier",
-      "front": "fight — se battre",
+      "front": "fight —",
+      "indice": "se battre",
       "back": "fight · fought · fought"
     },
     {
       "id": "fly",
       "kind": "verbe-irregulier",
-      "front": "fly — voler",
+      "front": "fly —",
+      "indice": "voler",
       "back": "fly · flew · flown"
     },
     {
       "id": "ride",
       "kind": "verbe-irregulier",
-      "front": "ride — monter, faire du vélo",
+      "front": "ride —",
+      "indice": "monter, faire du vélo",
       "back": "ride · rode · ridden"
     },
     {
       "id": "ring",
       "kind": "verbe-irregulier",
-      "front": "ring — sonner",
+      "front": "ring —",
+      "indice": "sonner",
       "back": "ring · rang · rung"
     },
     {
       "id": "rise",
       "kind": "verbe-irregulier",
-      "front": "rise — s'élever",
+      "front": "rise —",
+      "indice": "s'élever",
       "back": "rise · rose · risen"
     },
     {
       "id": "sell",
       "kind": "verbe-irregulier",
-      "front": "sell — vendre",
+      "front": "sell —",
+      "indice": "vendre",
       "back": "sell · sold · sold"
     },
     {
       "id": "show",
       "kind": "verbe-irregulier",
-      "front": "show — montrer",
+      "front": "show —",
+      "indice": "montrer",
       "back": "show · showed · shown"
     },
     {
       "id": "shut",
       "kind": "verbe-irregulier",
-      "front": "shut — fermer",
+      "front": "shut —",
+      "indice": "fermer",
       "back": "shut · shut · shut"
     },
     {
       "id": "spend",
       "kind": "verbe-irregulier",
-      "front": "spend — dépenser, passer",
+      "front": "spend —",
+      "indice": "dépenser, passer",
       "back": "spend · spent · spent"
     },
     {
       "id": "steal",
       "kind": "verbe-irregulier",
-      "front": "steal — voler, dérober",
+      "front": "steal —",
+      "indice": "voler, dérober",
       "back": "steal · stole · stolen"
     },
     {
       "id": "throw",
       "kind": "verbe-irregulier",
-      "front": "throw — jeter",
+      "front": "throw —",
+      "indice": "jeter",
       "back": "throw · threw · thrown"
     },
     {
       "id": "understand",
       "kind": "verbe-irregulier",
-      "front": "understand — comprendre",
+      "front": "understand —",
+      "indice": "comprendre",
       "back": "understand · understood · understood"
     },
     {
       "id": "wake",
       "kind": "verbe-irregulier",
-      "front": "wake — se réveiller",
+      "front": "wake —",
+      "indice": "se réveiller",
       "back": "wake · woke · woken"
     },
     {
       "id": "draw",
       "kind": "verbe-irregulier",
-      "front": "draw — dessiner",
+      "front": "draw —",
+      "indice": "dessiner",
       "back": "draw · drew · drawn"
     },
     {
       "id": "cut",
       "kind": "verbe-irregulier",
-      "front": "cut — couper",
+      "front": "cut —",
+      "indice": "couper",
       "back": "cut · cut · cut"
     },
     {
       "id": "hit",
       "kind": "verbe-irregulier",
-      "front": "hit — frapper",
+      "front": "hit —",
+      "indice": "frapper",
       "back": "hit · hit · hit"
     },
     {
       "id": "hurt",
       "kind": "verbe-irregulier",
-      "front": "hurt — blesser",
+      "front": "hurt —",
+      "indice": "blesser",
       "back": "hurt · hurt · hurt"
     },
     {
       "id": "keep",
       "kind": "verbe-irregulier",
-      "front": "keep — garder",
+      "front": "keep —",
+      "indice": "garder",
       "back": "keep · kept · kept"
     },
     {
       "id": "let",
       "kind": "verbe-irregulier",
-      "front": "let — laisser",
+      "front": "let —",
+      "indice": "laisser",
       "back": "let · let · let"
     },
     {
       "id": "mean",
       "kind": "verbe-irregulier",
-      "front": "mean — signifier",
+      "front": "mean —",
+      "indice": "signifier",
       "back": "mean · meant · meant"
     }
   ]
