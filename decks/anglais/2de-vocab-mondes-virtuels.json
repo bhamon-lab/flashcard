@@ -1,0 +1,73 @@
+{
+  "id": "anglais-2de-vocab-mondes-virtuels",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Vocabulaire · Citoyenneté et mondes virtuels",
+  "description": "Liste de vocabulaire — citoyenneté et mondes virtuels.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "online-community",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une communauté en ligne ».",
+      "back": "an online community"
+    },
+    {
+      "id": "digital-footprint",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une empreinte numérique ».",
+      "back": "a digital footprint"
+    },
+    {
+      "id": "privacy-settings",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les paramètres de confidentialité ».",
+      "back": "privacy settings"
+    },
+    {
+      "id": "user",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un utilisateur ».",
+      "back": "a user"
+    },
+    {
+      "id": "content",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « du contenu ».",
+      "back": "content"
+    },
+    {
+      "id": "moderate",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « modérer ».",
+      "back": "to moderate"
+    },
+    {
+      "id": "report-content",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « signaler un contenu ».",
+      "back": "to report content"
+    },
+    {
+      "id": "harassment",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le harcèlement ».",
+      "back": "harassment"
+    },
+    {
+      "id": "access",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « avoir accès à ».",
+      "back": "to have access to"
+    },
+    {
+      "id": "responsible-use",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un usage responsable ».",
+      "back": "responsible use"
+    }
+  ]
+}

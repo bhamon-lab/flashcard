@@ -1,0 +1,73 @@
+{
+  "id": "anglais-2de-vocab-memoire",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Vocabulaire · Mémoire et patrimoine",
+  "description": "Liste de vocabulaire — mémoire et patrimoine.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "memorial",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un monument commémoratif ».",
+      "back": "a memorial"
+    },
+    {
+      "id": "archive",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « des archives ».",
+      "back": "archives"
+    },
+    {
+      "id": "testimony",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un témoignage ».",
+      "back": "a testimony"
+    },
+    {
+      "id": "ancestor",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un ancêtre ».",
+      "back": "an ancestor"
+    },
+    {
+      "id": "generation",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une génération ».",
+      "back": "a generation"
+    },
+    {
+      "id": "collective-memory",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la mémoire collective ».",
+      "back": "collective memory"
+    },
+    {
+      "id": "preserve",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « préserver ».",
+      "back": "to preserve"
+    },
+    {
+      "id": "remember",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « se souvenir ».",
+      "back": "to remember"
+    },
+    {
+      "id": "honour",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « rendre hommage à ».",
+      "back": "to honour"
+    },
+    {
+      "id": "pass-down",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « transmettre ».",
+      "back": "to pass down"
+    }
+  ]
+}

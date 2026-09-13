@@ -1,0 +1,85 @@
+{
+  "id": "anglais-3e-oral-climat",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Compréhension orale · Climat et écologie",
+  "description": "Même liste que « Climat et écologie », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "global-warming",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le réchauffement climatique",
+      "audio_text": "global warming"
+    },
+    {
+      "id": "greenhouse-gas",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un gaz à effet de serre",
+      "audio_text": "a greenhouse gas"
+    },
+    {
+      "id": "sea-level",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le niveau de la mer",
+      "audio_text": "sea level"
+    },
+    {
+      "id": "wildlife",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la faune sauvage",
+      "audio_text": "wildlife"
+    },
+    {
+      "id": "habitat",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un habitat naturel",
+      "audio_text": "a habitat"
+    },
+    {
+      "id": "endangered",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "menacé",
+      "audio_text": "endangered"
+    },
+    {
+      "id": "protect",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "protéger",
+      "audio_text": "to protect"
+    },
+    {
+      "id": "waste-energy",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "gaspiller de l'énergie",
+      "audio_text": "to waste energy"
+    },
+    {
+      "id": "public-transport",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les transports en commun",
+      "audio_text": "public transport"
+    },
+    {
+      "id": "take-action",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "agir",
+      "audio_text": "to take action"
+    }
+  ]
+}

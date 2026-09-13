@@ -1,0 +1,73 @@
+{
+  "id": "anglais-4e-vocab-achats",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Vocabulaire · Achats et argent",
+  "description": "Liste de vocabulaire — achats et argent.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "price",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le prix ».",
+      "back": "the price"
+    },
+    {
+      "id": "cash",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « des espèces ».",
+      "back": "cash"
+    },
+    {
+      "id": "credit-card",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une carte bancaire ».",
+      "back": "a credit card"
+    },
+    {
+      "id": "receipt",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un reçu ».",
+      "back": "a receipt"
+    },
+    {
+      "id": "change",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la monnaie ».",
+      "back": "change"
+    },
+    {
+      "id": "cheap",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « bon marché ».",
+      "back": "cheap"
+    },
+    {
+      "id": "expensive",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « cher ».",
+      "back": "expensive"
+    },
+    {
+      "id": "try-on",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « essayer un vêtement ».",
+      "back": "to try on"
+    },
+    {
+      "id": "size",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une taille ».",
+      "back": "a size"
+    },
+    {
+      "id": "how-much",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « Combien cela coûte-t-il ? ».",
+      "back": "How much is it?"
+    }
+  ]
+}

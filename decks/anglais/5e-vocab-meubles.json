@@ -1,0 +1,73 @@
+{
+  "id": "anglais-5e-vocab-meubles",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Vocabulaire · Maison et meubles",
+  "description": "Liste de vocabulaire — maison et meubles.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "table",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une table ».",
+      "back": "a table"
+    },
+    {
+      "id": "chair",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une chaise ».",
+      "back": "a chair"
+    },
+    {
+      "id": "bed",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un lit ».",
+      "back": "a bed"
+    },
+    {
+      "id": "wardrobe",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une armoire ».",
+      "back": "a wardrobe"
+    },
+    {
+      "id": "sofa",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un canapé ».",
+      "back": "a sofa"
+    },
+    {
+      "id": "shelf",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une étagère ».",
+      "back": "a shelf"
+    },
+    {
+      "id": "lamp",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une lampe ».",
+      "back": "a lamp"
+    },
+    {
+      "id": "fridge",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un réfrigérateur ».",
+      "back": "a fridge"
+    },
+    {
+      "id": "oven",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un four ».",
+      "back": "an oven"
+    },
+    {
+      "id": "washing-machine",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une machine à laver ».",
+      "back": "a washing machine"
+    }
+  ]
+}

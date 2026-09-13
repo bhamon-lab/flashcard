@@ -1,0 +1,73 @@
+{
+  "id": "anglais-4e-vocab-metiers",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Vocabulaire · Métiers",
+  "description": "Liste de vocabulaire — métiers.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "teacher",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un professeur ».",
+      "back": "a teacher"
+    },
+    {
+      "id": "doctor",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un médecin ».",
+      "back": "a doctor"
+    },
+    {
+      "id": "nurse",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un infirmier ».",
+      "back": "a nurse"
+    },
+    {
+      "id": "engineer",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un ingénieur ».",
+      "back": "an engineer"
+    },
+    {
+      "id": "journalist",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un journaliste ».",
+      "back": "a journalist"
+    },
+    {
+      "id": "lawyer",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un avocat ».",
+      "back": "a lawyer"
+    },
+    {
+      "id": "shop-assistant",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un vendeur ».",
+      "back": "a shop assistant"
+    },
+    {
+      "id": "firefighter",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un pompier ».",
+      "back": "a firefighter"
+    },
+    {
+      "id": "apply",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « postuler ».",
+      "back": "to apply"
+    },
+    {
+      "id": "earn",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « gagner un salaire ».",
+      "back": "to earn"
+    }
+  ]
+}

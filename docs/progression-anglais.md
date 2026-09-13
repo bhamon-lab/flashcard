@@ -1,174 +1,243 @@
 # Arbre de progression en anglais — de la 6e à la terminale
 
-Le catalogue contient **74 decks et 855 cartes**, organisés par classe et par
-type d'apprentissage. La classe est un parcours conseillé, pas un verrou : un
-élève peut reprendre une liste antérieure ou avancer dans une branche précise.
+Le catalogue contient **161 decks et 1 725 cartes**, organisés par classe et par
+type d'apprentissage. Chaque niveau dispose de 23 paquets :
 
-Chaque liste de vocabulaire existe deux fois :
+- 8 listes de vocabulaire écrit ;
+- les 8 mêmes listes en compréhension orale ;
+- 2 listes de culture anglophone ;
+- 1 série de verbes irréguliers ;
+- 4 listes de grammaire.
 
-1. **Vocabulaire** : le français est affiché, l'élève produit le mot ou le groupe
-   de mots anglais.
-2. **Compréhension orale** : le même contenu anglais est fourni dans
-   `cards[].audio_text` et l'élève donne le sens français.
+La classe constitue un parcours conseillé, pas un verrou. Un élève peut reprendre
+une branche d'un niveau antérieur sans recommencer tout le parcours.
 
-Les champs `mode: "listening"`, `audio_language: "en-GB"` et `audio_text` sont
-déjà présents dans les JSON. Ils sont éditoriaux tant que l'application ne prend
-pas encore en charge l'audio.
+## Répartition
 
-## Vue par niveau
+| Niveau | Decks | Cartes | Repère indicatif |
+| --- | ---: | ---: | --- |
+| 6e | 23 | 240 | A1 |
+| 5e | 23 | 245 | A1–A2 |
+| 4e | 23 | 245 | A2 |
+| 3e | 23 | 250 | A2–B1 |
+| 2de | 23 | 248 | B1 |
+| 1re | 23 | 247 | B1–B2 |
+| Terminale | 23 | 250 | B2 |
+
+## Arbre détaillé par niveau
 
 ```text
 Anglais — 6e à Terminale
-├── 6e · Fondations (A1)
-│   ├── Vocabulaire + compréhension orale
+├── 6e · Fondations
+│   ├── Vocabulaire + copies en compréhension orale
 │   │   ├── Salutations et politesse
 │   │   ├── Couleurs
 │   │   ├── Pièces de la maison
 │   │   ├── Famille
-│   │   └── École et classe
-│   ├── Culture · Pays anglophones et capitales
-│   ├── Verbes irréguliers · série 1
+│   │   ├── École et classe
+│   │   ├── Nombres et heure
+│   │   ├── Parties du corps
+│   │   └── Vêtements
+│   ├── Culture
+│   │   ├── Pays anglophones et capitales
+│   │   └── Fêtes et symboles
+│   ├── Verbes irréguliers · série 1 · 20 verbes
 │   └── Grammaire
 │       ├── Be, have got et pronoms
-│       └── Présent simple et questions
-├── 5e · Quotidien (A1–A2)
-│   ├── Vocabulaire + compréhension orale
+│       ├── Présent simple et questions
+│       ├── Articles, démonstratifs et pluriels
+│       └── Possessifs, prépositions et impératif
+├── 5e · Vie quotidienne
+│   ├── Vocabulaire + copies en compréhension orale
 │   │   ├── Routine quotidienne
 │   │   ├── Ville et directions
-│   │   └── Loisirs et sports
-│   ├── Culture · Royaume-Uni : repères et fêtes
-│   ├── Verbes irréguliers · série 2
+│   │   ├── Loisirs et sports
+│   │   ├── Aliments et repas
+│   │   ├── Maison et meubles
+│   │   ├── Animaux et nature
+│   │   ├── Saisons et météo
+│   │   └── Matières scolaires
+│   ├── Culture
+│   │   ├── Royaume-Uni : repères et fêtes
+│   │   └── États-Unis : géographie et monuments
+│   ├── Verbes irréguliers · série 2 · 25 verbes
 │   └── Grammaire
 │       ├── Présent continu et fréquence
-│       └── Comparatifs et quantités
-├── 4e · Récit et déplacement (A2)
-│   ├── Vocabulaire + compréhension orale
+│       ├── Comparatifs et quantités
+│       ├── Introduction au prétérit
+│       └── Possession, pronoms et lieu
+├── 4e · Récit et déplacement
+│   ├── Vocabulaire + copies en compréhension orale
 │   │   ├── Voyage et transports
 │   │   ├── Corps et santé
-│   │   └── Météo et environnement
-│   ├── Culture · Irlande, Canada, Australie et Nouvelle-Zélande
-│   ├── Verbes irréguliers · série 3
+│   │   ├── Météo et environnement
+│   │   ├── Métiers
+│   │   ├── Achats et argent
+│   │   ├── Personnalité
+│   │   ├── Technologie
+│   │   └── Vacances et hébergement
+│   ├── Culture
+│   │   ├── Irlande, Canada, Australie et Nouvelle-Zélande
+│   │   └── Peuples autochtones et paysages
+│   ├── Verbes irréguliers · série 3 · 25 verbes
 │   └── Grammaire
 │       ├── Prétérit simple
-│       └── Récit, futur et modaux
-├── 3e · Médias et citoyenneté (A2–B1)
-│   ├── Vocabulaire + compréhension orale
+│       ├── Récit, futur et modaux
+│       ├── Introduction au present perfect
+│       └── Relatives et formes en -ing
+├── 3e · Médias et citoyenneté
+│   ├── Vocabulaire + copies en compréhension orale
 │   │   ├── Médias et numérique
 │   │   ├── Société et citoyenneté
-│   │   └── Émotions et relations
-│   ├── Culture · Figures historiques et droits civiques
-│   ├── Verbes irréguliers · série 4
+│   │   ├── Émotions et relations
+│   │   ├── Études et orientation
+│   │   ├── Climat et écologie
+│   │   ├── Monde du travail
+│   │   ├── Voyages et expériences
+│   │   └── Justice et sécurité
+│   ├── Culture
+│   │   ├── Figures historiques et droits civiques
+│   │   └── Migrations et mouvements sociaux
+│   ├── Verbes irréguliers · série 4 · 30 verbes
 │   └── Grammaire
 │       ├── Present perfect
-│       └── Conditionnels et obligation
-├── 2de · Identités et représentations (B1)
-│   ├── Vocabulaire + compréhension orale
+│       ├── Conditionnels et obligation
+│       ├── Voix passive et relatives
+│       └── Past perfect et discours indirect
+├── 2de · Identités et représentations
+│   ├── Vocabulaire + copies en compréhension orale
 │   │   ├── Identité et relations
 │   │   ├── Environnement et solutions
-│   │   └── Arts et pouvoir
-│   ├── Culture · Institutions américaines et britanniques
-│   ├── Verbes irréguliers · série 5
+│   │   ├── Arts et pouvoir
+│   │   ├── Voyages et exploration
+│   │   ├── Citoyenneté et mondes virtuels
+│   │   ├── Mémoire et patrimoine
+│   │   ├── Sport et compétition
+│   │   └── Ville et territoires
+│   ├── Culture
+│   │   ├── Institutions américaines et britanniques
+│   │   └── Villes et territoires anglophones
+│   ├── Verbes irréguliers · série 5 · 28 verbes
 │   └── Grammaire
 │       ├── Temps du récit
-│       └── Relatives, passif et modaux
-├── 1re · Analyse et mémoire (B1–B2)
-│   ├── Vocabulaire + compréhension orale
+│       ├── Relatives, passif et modaux
+│       ├── Conditionnels présent et irréel
+│       └── Infinitif, gérondif et connecteurs
+├── 1re · Analyse et mémoire
+│   ├── Vocabulaire + copies en compréhension orale
 │   │   ├── Analyse des médias
 │   │   ├── Innovation et éthique
-│   │   └── Migration et mémoire
-│   ├── Culture · Littérature, arts et figures anglophones
-│   ├── Verbes irréguliers · série 6
+│   │   ├── Migration et mémoire
+│   │   ├── Pouvoir et contestation
+│   │   ├── Analyse littéraire
+│   │   ├── Science et progrès
+│   │   ├── Économie et travail
+│   │   └── Action environnementale
+│   ├── Culture
+│   │   ├── Littérature, arts et figures anglophones
+│   │   └── Sciences et innovations
+│   ├── Verbes irréguliers · série 6 · 27 verbes
 │   └── Grammaire
 │       ├── Passif et discours indirect
-│       └── Hypothèses et nuances
-└── Terminale · Débat et synthèse (B2)
-    ├── Vocabulaire + compréhension orale
+│       ├── Hypothèses et nuances
+│       ├── Troisième conditionnel et souhaits
+│       └── Relatives avancées et causatif
+└── Terminale · Débat et synthèse
+    ├── Vocabulaire + copies en compréhension orale
     │   ├── Débat et argumentation
     │   ├── Politique et société
-    │   └── Enjeux mondiaux et technologie
-    ├── Culture · Commonwealth et institutions contemporaines
-    ├── Verbes irréguliers · série 7
+    │   ├── Enjeux mondiaux et technologie
+    │   ├── Démocratie et institutions
+    │   ├── Économie et mondialisation
+    │   ├── Politique climatique
+    │   ├── Identité et diversité
+    │   └── Vérité et information
+    ├── Culture
+    │   ├── Commonwealth et institutions contemporaines
+    │   └── Repères historiques et géopolitiques
+    ├── Verbes irréguliers · série 7 · 30 verbes
     └── Grammaire
         ├── Conditionnels avancés
-        └── Emphase et synthèse
+        ├── Emphase et synthèse
+        ├── Passif et structures de discours
+        └── Discours formel et articulation
 ```
 
-## Arbre transversal des prérequis
-
-Les quatre branches progressent indépendamment. Un élève peut donc travailler
-la culture de son niveau tout en reprenant la grammaire ou le vocabulaire d'une
-classe précédente.
+## Progression transversale
 
 ```text
-Vocabulaire écrit
-6e Fondations
-└── 5e Quotidien
-    └── 4e Voyage, santé et environnement
-        └── 3e Médias, citoyenneté et relations
-            └── 2de Identité, environnement et arts
-                └── 1re Médias, éthique et mémoire
-                    └── Terminale Débat, société et enjeux mondiaux
-
-Compréhension orale
-Chaque liste de vocabulaire écrit
-└── sa copie orale portant exactement sur les mêmes dix entrées
-    └── les listes orales du niveau suivant
+Vocabulaire et compréhension orale
+Fondations concrètes
+└── Vie quotidienne
+    └── Déplacement, santé et environnement
+        └── Médias, études, travail et citoyenneté
+            └── Identités, territoires et représentations
+                └── Analyse, éthique, mémoire et pouvoir
+                    └── Débat, institutions et enjeux mondiaux
 
 Culture
-6e Pays et capitales
-└── 5e Royaume-Uni et fêtes
-    └── 4e Diversité du monde anglophone
-        └── 3e Figures historiques et droits civiques
-            └── 2de Institutions britanniques et américaines
-                └── 1re Littérature et arts
-                    └── Terminale Commonwealth et institutions contemporaines
+Pays, capitales, fêtes et symboles
+└── Géographie britannique et américaine
+    └── Diversité des sociétés et peuples autochtones
+        └── Droits civiques, migrations et mouvements sociaux
+            └── Institutions, villes et territoires
+                └── Littérature, arts, sciences et innovations
+                    └── Commonwealth, histoire et géopolitique
 
 Verbes irréguliers — 185 verbes distincts
-Série 1 (6e, 20 verbes) → série 2 (5e, 25) → série 3 (4e, 25)
-→ série 4 (3e, 30) → série 5 (2de, 28) → série 6 (1re, 27)
-→ série 7 (Terminale, 30)
+Série 1 (20) → série 2 (25) → série 3 (25) → série 4 (30)
+→ série 5 (28) → série 6 (27) → série 7 (30)
 
 Grammaire
-Be / have got / pronoms
-└── Présent simple et questions
-    └── Présent continu, fréquence, comparaison et quantité
-        └── Prétérit, temps du récit, futur et modaux
-            └── Present perfect, conditionnels et obligation
-                └── Temps du récit, relatives et passif
-                    └── Discours indirect, hypothèses et nuances
-                        └── Conditionnels avancés, emphase et synthèse
+Phrase simple, pronoms, déterminants et présent
+└── Description, quantité et première narration au passé
+    └── Récit, futur, modaux, present perfect et relatives
+        └── Temps composés, conditionnels, passif et discours indirect
+            └── Système des temps, hypothèse et articulation
+                └── Discours complexe, causatif et nuances
+                    └── Emphase, nominalisation et discours formel
 ```
 
-## Organisation des fichiers
+## Structure des cartes audio
 
-Les noms sont prévisibles afin de faciliter les ajouts et la future interface :
+Chaque liste de vocabulaire possède un deck oral parallèle. Les deux decks ont
+les mêmes identifiants de cartes et les mêmes dix entrées. Dans la version orale :
 
-- `{niveau}-vocab-{theme}.json` : production français → anglais ;
-- `{niveau}-oral-{theme}.json` : écoute anglais → sens français ;
-- `{niveau}-culture.json` : repères du monde anglophone ;
+```json
+{
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "the-kitchen",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la cuisine",
+      "audio_text": "the kitchen"
+    }
+  ]
+}
+```
+
+Ces champs sont prêts pour le futur support audio mais restent actuellement
+ignorés par le synchroniseur de l'application.
+
+## Organisation et maintenance
+
+- `{niveau}-vocab-{theme}.json` : français → anglais ;
+- `{niveau}-oral-{theme}.json` : écoute anglais → français ;
+- `{niveau}-culture*.json` : repères du monde anglophone ;
 - `{niveau}-verbes-irreguliers.json` : infinitif, prétérit et participe passé ;
 - `{niveau}-grammaire-{theme}.json` : règles et automatismes.
 
-Les paquets de vocabulaire, d'écoute, de culture et de grammaire contiennent dix
-cartes. Les séries de verbes irréguliers contiennent entre vingt et trente
-nouveaux verbes par niveau. Le parcours complet couvre **185 verbes distincts**,
-sans répéter les verbes entre les séries ; les variantes britanniques et
-américaines usuelles sont indiquées ensemble.
-
-Les listes de vocabulaire et leurs copies orales partagent les mêmes identifiants
-de cartes à l'intérieur de deux decks distincts, ce qui permet de vérifier
-automatiquement qu'aucune entrée ne manque d'un côté.
-
-## Maintenance
-
 Le catalogue est généré depuis
-[`scripts/generate_english_decks.py`](../scripts/generate_english_decks.py).
-Après une modification des listes sources, exécuter :
+[`scripts/generate_english_decks.py`](../scripts/generate_english_decks.py) et
+contrôlé par [`scripts/validate_english_decks.py`](../scripts/validate_english_decks.py).
 
 ```sh
 python3 scripts/generate_english_decks.py
+python3 scripts/validate_english_decks.py
 ```
 
-Le générateur refuse de terminer s'il détecte dans `decks/anglais/` un JSON qui
-n'appartient pas à son catalogue, afin qu'un ancien deck ne reste pas publié par
-erreur.
+Le validateur vérifie les totaux par niveau, les identifiants, les catégories,
+les 185 verbes sans doublon et l'identité exacte des 56 paires
+vocabulaire/compréhension orale.

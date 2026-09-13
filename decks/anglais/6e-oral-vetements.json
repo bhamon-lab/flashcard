@@ -1,0 +1,85 @@
+{
+  "id": "anglais-6e-oral-vetements",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Compréhension orale · Vêtements",
+  "description": "Même liste que « Vêtements », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "tshirt",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un tee-shirt",
+      "audio_text": "a T-shirt"
+    },
+    {
+      "id": "shirt",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une chemise",
+      "audio_text": "a shirt"
+    },
+    {
+      "id": "jumper",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un pull",
+      "audio_text": "a jumper"
+    },
+    {
+      "id": "trousers",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un pantalon",
+      "audio_text": "trousers"
+    },
+    {
+      "id": "dress",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une robe",
+      "audio_text": "a dress"
+    },
+    {
+      "id": "skirt",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une jupe",
+      "audio_text": "a skirt"
+    },
+    {
+      "id": "coat",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un manteau",
+      "audio_text": "a coat"
+    },
+    {
+      "id": "shoes",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "des chaussures",
+      "audio_text": "shoes"
+    },
+    {
+      "id": "socks",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "des chaussettes",
+      "audio_text": "socks"
+    },
+    {
+      "id": "hat",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un chapeau",
+      "audio_text": "a hat"
+    }
+  ]
+}

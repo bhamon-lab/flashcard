@@ -1,0 +1,85 @@
+{
+  "id": "anglais-4e-oral-hebergement",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Compréhension orale · Vacances et hébergement",
+  "description": "Même liste que « Vacances et hébergement », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "hotel",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un hôtel",
+      "audio_text": "a hotel"
+    },
+    {
+      "id": "youth-hostel",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une auberge de jeunesse",
+      "audio_text": "a youth hostel"
+    },
+    {
+      "id": "campsite",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un camping",
+      "audio_text": "a campsite"
+    },
+    {
+      "id": "single-room",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une chambre simple",
+      "audio_text": "a single room"
+    },
+    {
+      "id": "double-room",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une chambre double",
+      "audio_text": "a double room"
+    },
+    {
+      "id": "reception",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la réception",
+      "audio_text": "reception"
+    },
+    {
+      "id": "key",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une clé",
+      "audio_text": "a key"
+    },
+    {
+      "id": "check-in",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "s'enregistrer à l'arrivée",
+      "audio_text": "to check in"
+    },
+    {
+      "id": "check-out",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "libérer la chambre",
+      "audio_text": "to check out"
+    },
+    {
+      "id": "available",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "disponible",
+      "audio_text": "available"
+    }
+  ]
+}

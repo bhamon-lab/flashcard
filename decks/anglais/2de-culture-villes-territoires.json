@@ -1,0 +1,73 @@
+{
+  "id": "anglais-2de-culture-villes-territoires",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Culture · Villes et territoires anglophones",
+  "description": "Repères culturels du monde anglophone.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "culture",
+  "cards": [
+    {
+      "id": "repere-01",
+      "kind": "culture",
+      "front": "Quelle ville britannique est liée à la révolution industrielle et au textile ?",
+      "back": "Manchester."
+    },
+    {
+      "id": "repere-02",
+      "kind": "culture",
+      "front": "Dans quelle ville fut construit le Titanic ?",
+      "back": "Belfast."
+    },
+    {
+      "id": "repere-03",
+      "kind": "culture",
+      "front": "Où se trouve Silicon Valley ?",
+      "back": "In the San Francisco Bay Area, California."
+    },
+    {
+      "id": "repere-04",
+      "kind": "culture",
+      "front": "Que désigne the Rust Belt ?",
+      "back": "A formerly industrial region of the northeastern and midwestern United States."
+    },
+    {
+      "id": "repere-05",
+      "kind": "culture",
+      "front": "Que désigne the Sun Belt ?",
+      "back": "The southern and southwestern region of the United States."
+    },
+    {
+      "id": "repere-06",
+      "kind": "culture",
+      "front": "Quels sont les cinq boroughs de New York ?",
+      "back": "Manhattan, Brooklyn, Queens, the Bronx and Staten Island."
+    },
+    {
+      "id": "repere-07",
+      "kind": "culture",
+      "front": "Pourquoi Washington, D.C. n'appartient-elle à aucun État ?",
+      "back": "It is a federal district created to serve as the national capital."
+    },
+    {
+      "id": "repere-08",
+      "kind": "culture",
+      "front": "Combien le Canada compte-t-il de provinces et territoires ?",
+      "back": "Ten provinces and three territories."
+    },
+    {
+      "id": "repere-09",
+      "kind": "culture",
+      "front": "Combien l'Australie compte-t-elle d'États ?",
+      "back": "Six states, plus two main mainland territories."
+    },
+    {
+      "id": "repere-10",
+      "kind": "culture",
+      "front": "Quelles sont les deux îles principales de la Nouvelle-Zélande ?",
+      "back": "The North Island and the South Island."
+    }
+  ]
+}

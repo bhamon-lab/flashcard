@@ -1,0 +1,85 @@
+{
+  "id": "anglais-1re-oral-economie-travail",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Compréhension orale · Économie et travail",
+  "description": "Même liste que « Économie et travail », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "workforce",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la population active",
+      "audio_text": "the workforce"
+    },
+    {
+      "id": "unemployment",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le chômage",
+      "audio_text": "unemployment"
+    },
+    {
+      "id": "income",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un revenu",
+      "audio_text": "an income"
+    },
+    {
+      "id": "living-wage",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un salaire décent",
+      "audio_text": "a living wage"
+    },
+    {
+      "id": "working-condition",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une condition de travail",
+      "audio_text": "a working condition"
+    },
+    {
+      "id": "trade-union",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un syndicat",
+      "audio_text": "a trade union"
+    },
+    {
+      "id": "strike-action",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une grève",
+      "audio_text": "a strike"
+    },
+    {
+      "id": "hire",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "embaucher",
+      "audio_text": "to hire"
+    },
+    {
+      "id": "dismiss",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "licencier",
+      "audio_text": "to dismiss"
+    },
+    {
+      "id": "make-living",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "gagner sa vie",
+      "audio_text": "to make a living"
+    }
+  ]
+}

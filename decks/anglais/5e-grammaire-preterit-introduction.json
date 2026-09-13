@@ -1,0 +1,73 @@
+{
+  "id": "anglais-5e-grammaire-preterit-introduction",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Grammaire · Introduction au prétérit",
+  "description": "Règles et automatismes — introduction au prétérit.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "was",
+      "kind": "grammaire",
+      "front": "Complète : I ___ at home yesterday.",
+      "back": "I was at home yesterday."
+    },
+    {
+      "id": "were",
+      "kind": "grammaire",
+      "front": "Complète : They ___ happy.",
+      "back": "They were happy."
+    },
+    {
+      "id": "wasnt",
+      "kind": "grammaire",
+      "front": "Mets à la forme négative : She was late.",
+      "back": "She wasn't late."
+    },
+    {
+      "id": "were-question",
+      "kind": "grammaire",
+      "front": "Transforme en question : You were tired.",
+      "back": "Were you tired?"
+    },
+    {
+      "id": "regular-ed",
+      "kind": "grammaire",
+      "front": "Mets au passé : We visit London.",
+      "back": "We visited London."
+    },
+    {
+      "id": "regular-y",
+      "kind": "grammaire",
+      "front": "Mets au passé : She studies English.",
+      "back": "She studied English."
+    },
+    {
+      "id": "didnt",
+      "kind": "grammaire",
+      "front": "Mets à la forme négative : He played tennis.",
+      "back": "He didn't play tennis."
+    },
+    {
+      "id": "did-question",
+      "kind": "grammaire",
+      "front": "Transforme en question : They watched the film.",
+      "back": "Did they watch the film?"
+    },
+    {
+      "id": "yesterday",
+      "kind": "grammaire",
+      "front": "Où place-t-on yesterday : I went to town ?",
+      "back": "I went to town yesterday."
+    },
+    {
+      "id": "short-answer",
+      "kind": "grammaire",
+      "front": "Réponds brièvement : Did you enjoy it? (oui)",
+      "back": "Yes, I did."
+    }
+  ]
+}

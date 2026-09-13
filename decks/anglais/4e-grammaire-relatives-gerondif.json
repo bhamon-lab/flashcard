@@ -1,0 +1,73 @@
+{
+  "id": "anglais-4e-grammaire-relatives-gerondif",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Grammaire · Relatives et formes en -ing",
+  "description": "Règles et automatismes — relatives et formes en -ing.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "who",
+      "kind": "grammaire",
+      "front": "Complète : The man ___ lives here is Irish.",
+      "back": "The man who lives here is Irish."
+    },
+    {
+      "id": "which",
+      "kind": "grammaire",
+      "front": "Complète : The bus ___ goes downtown is late.",
+      "back": "The bus which/that goes downtown is late."
+    },
+    {
+      "id": "where",
+      "kind": "grammaire",
+      "front": "Complète : This is the hotel ___ we stayed.",
+      "back": "This is the hotel where we stayed."
+    },
+    {
+      "id": "whose",
+      "kind": "grammaire",
+      "front": "Complète : The girl ___ bag is red is my friend.",
+      "back": "The girl whose bag is red is my friend."
+    },
+    {
+      "id": "like-ing",
+      "kind": "grammaire",
+      "front": "Complète : I enjoy ___. (read)",
+      "back": "I enjoy reading."
+    },
+    {
+      "id": "good-at",
+      "kind": "grammaire",
+      "front": "Traduis : « Elle est douée en dessin. »",
+      "back": "She is good at drawing."
+    },
+    {
+      "id": "before-ing",
+      "kind": "grammaire",
+      "front": "Traduis : « avant de partir ».",
+      "back": "before leaving"
+    },
+    {
+      "id": "after-ing",
+      "kind": "grammaire",
+      "front": "Traduis : « après avoir mangé ».",
+      "back": "after eating"
+    },
+    {
+      "id": "stop-ing",
+      "kind": "grammaire",
+      "front": "Traduis : « Arrête de parler. »",
+      "back": "Stop talking."
+    },
+    {
+      "id": "go-ing",
+      "kind": "grammaire",
+      "front": "Complète : Let's go ___. (swim)",
+      "back": "Let's go swimming."
+    }
+  ]
+}

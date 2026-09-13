@@ -1,0 +1,85 @@
+{
+  "id": "anglais-2de-oral-territoires",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Compréhension orale · Ville et territoires",
+  "description": "Même liste que « Ville et territoires », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "suburb",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une banlieue résidentielle",
+      "audio_text": "a suburb"
+    },
+    {
+      "id": "inner-city",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le centre-ville défavorisé",
+      "audio_text": "the inner city"
+    },
+    {
+      "id": "neighbourhood",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un quartier",
+      "audio_text": "a neighbourhood"
+    },
+    {
+      "id": "housing",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le logement",
+      "audio_text": "housing"
+    },
+    {
+      "id": "public-space",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un espace public",
+      "audio_text": "a public space"
+    },
+    {
+      "id": "commuter",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un navetteur",
+      "audio_text": "a commuter"
+    },
+    {
+      "id": "urban-sprawl",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'étalement urbain",
+      "audio_text": "urban sprawl"
+    },
+    {
+      "id": "regenerate",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "réhabiliter",
+      "audio_text": "to regenerate"
+    },
+    {
+      "id": "settle-area",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "s'installer dans une région",
+      "audio_text": "to settle in an area"
+    },
+    {
+      "id": "sense-place",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le sentiment d'appartenance à un lieu",
+      "audio_text": "a sense of place"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "anglais-1re-oral-action-environnementale",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Compréhension orale · Action environnementale",
+  "description": "Même liste que « Action environnementale », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "campaigner",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un militant",
+      "audio_text": "a campaigner"
+    },
+    {
+      "id": "conservation",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la protection de la nature",
+      "audio_text": "conservation"
+    },
+    {
+      "id": "emission",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une émission de gaz",
+      "audio_text": "an emission"
+    },
+    {
+      "id": "net-zero",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la neutralité carbone",
+      "audio_text": "net zero"
+    },
+    {
+      "id": "greenwashing",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'écoblanchiment",
+      "audio_text": "greenwashing"
+    },
+    {
+      "id": "policy-change",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un changement de politique",
+      "audio_text": "a policy change"
+    },
+    {
+      "id": "phase-out",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "supprimer progressivement",
+      "audio_text": "to phase out"
+    },
+    {
+      "id": "curb",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "freiner",
+      "audio_text": "to curb"
+    },
+    {
+      "id": "hold-accountable",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "demander des comptes à",
+      "audio_text": "to hold accountable"
+    },
+    {
+      "id": "environmental-impact",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'impact environnemental",
+      "audio_text": "the environmental impact"
+    }
+  ]
+}

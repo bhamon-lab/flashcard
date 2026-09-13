@@ -1,0 +1,85 @@
+{
+  "id": "anglais-5e-oral-saisons",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Compréhension orale · Saisons et météo",
+  "description": "Même liste que « Saisons et météo », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "spring",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le printemps",
+      "audio_text": "spring"
+    },
+    {
+      "id": "summer",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'été",
+      "audio_text": "summer"
+    },
+    {
+      "id": "autumn",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'automne",
+      "audio_text": "autumn"
+    },
+    {
+      "id": "winter",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'hiver",
+      "audio_text": "winter"
+    },
+    {
+      "id": "hot",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "chaud",
+      "audio_text": "hot"
+    },
+    {
+      "id": "cold",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "froid",
+      "audio_text": "cold"
+    },
+    {
+      "id": "rainy",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "pluvieux",
+      "audio_text": "rainy"
+    },
+    {
+      "id": "snowy",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "enneigé",
+      "audio_text": "snowy"
+    },
+    {
+      "id": "weather",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "Quel temps fait-il ?",
+      "audio_text": "What's the weather like?"
+    },
+    {
+      "id": "temperature",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la température",
+      "audio_text": "the temperature"
+    }
+  ]
+}

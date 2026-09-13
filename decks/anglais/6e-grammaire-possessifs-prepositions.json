@@ -1,0 +1,73 @@
+{
+  "id": "anglais-6e-grammaire-possessifs-prepositions",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Grammaire · Possessifs, prépositions et impératif",
+  "description": "Règles et automatismes — possessifs, prépositions et impératif.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "my",
+      "kind": "grammaire",
+      "front": "Complète : I have a bag. It is ___ bag.",
+      "back": "It is my bag."
+    },
+    {
+      "id": "your",
+      "kind": "grammaire",
+      "front": "Traduis : « Où est ton livre ? »",
+      "back": "Where is your book?"
+    },
+    {
+      "id": "his-her",
+      "kind": "grammaire",
+      "front": "Complète : Tom has a bike. Emma has a scooter. ___ bike and ___ scooter.",
+      "back": "his bike and her scooter"
+    },
+    {
+      "id": "our",
+      "kind": "grammaire",
+      "front": "Traduis : « Voici notre maison. »",
+      "back": "This is our house."
+    },
+    {
+      "id": "their",
+      "kind": "grammaire",
+      "front": "Traduis : « Leurs parents sont ici. »",
+      "back": "Their parents are here."
+    },
+    {
+      "id": "in",
+      "kind": "grammaire",
+      "front": "Traduis : « dans la boîte ».",
+      "back": "in the box"
+    },
+    {
+      "id": "on",
+      "kind": "grammaire",
+      "front": "Traduis : « sur la table ».",
+      "back": "on the table"
+    },
+    {
+      "id": "under",
+      "kind": "grammaire",
+      "front": "Traduis : « sous la chaise ».",
+      "back": "under the chair"
+    },
+    {
+      "id": "imperative",
+      "kind": "grammaire",
+      "front": "Donne l'ordre : « Ouvre ton livre. »",
+      "back": "Open your book."
+    },
+    {
+      "id": "negative-imperative",
+      "kind": "grammaire",
+      "front": "Donne l'interdiction : « Ne cours pas. »",
+      "back": "Don't run."
+    }
+  ]
+}

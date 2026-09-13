@@ -1,0 +1,85 @@
+{
+  "id": "anglais-5e-oral-animaux",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Compréhension orale · Animaux et nature",
+  "description": "Même liste que « Animaux et nature », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "pet",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un animal de compagnie",
+      "audio_text": "a pet"
+    },
+    {
+      "id": "dog",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un chien",
+      "audio_text": "a dog"
+    },
+    {
+      "id": "cat",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un chat",
+      "audio_text": "a cat"
+    },
+    {
+      "id": "horse",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un cheval",
+      "audio_text": "a horse"
+    },
+    {
+      "id": "bird",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un oiseau",
+      "audio_text": "a bird"
+    },
+    {
+      "id": "forest",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une forêt",
+      "audio_text": "a forest"
+    },
+    {
+      "id": "river",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une rivière",
+      "audio_text": "a river"
+    },
+    {
+      "id": "mountain",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une montagne",
+      "audio_text": "a mountain"
+    },
+    {
+      "id": "sea",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la mer",
+      "audio_text": "the sea"
+    },
+    {
+      "id": "countryside",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la campagne",
+      "audio_text": "the countryside"
+    }
+  ]
+}

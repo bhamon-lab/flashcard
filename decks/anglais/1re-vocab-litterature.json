@@ -1,0 +1,73 @@
+{
+  "id": "anglais-1re-vocab-litterature",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Vocabulaire · Analyse littéraire",
+  "description": "Liste de vocabulaire — analyse littéraire.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "plot",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'intrigue ».",
+      "back": "the plot"
+    },
+    {
+      "id": "setting",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le cadre spatio-temporel ».",
+      "back": "the setting"
+    },
+    {
+      "id": "narrator",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le narrateur ».",
+      "back": "the narrator"
+    },
+    {
+      "id": "character",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un personnage ».",
+      "back": "a character"
+    },
+    {
+      "id": "theme",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un thème ».",
+      "back": "a theme"
+    },
+    {
+      "id": "tone",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le ton ».",
+      "back": "the tone"
+    },
+    {
+      "id": "metaphor",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une métaphore ».",
+      "back": "a metaphor"
+    },
+    {
+      "id": "foreshadow",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « annoncer la suite ».",
+      "back": "to foreshadow"
+    },
+    {
+      "id": "portray-character",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « dépeindre un personnage ».",
+      "back": "to portray a character"
+    },
+    {
+      "id": "first-person",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un récit à la première personne ».",
+      "back": "a first-person narrative"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "anglais-3e-vocab-orientation",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Vocabulaire · Études et orientation",
+  "description": "Liste de vocabulaire — études et orientation.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "subject",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une matière ».",
+      "back": "a subject"
+    },
+    {
+      "id": "grade",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une note ».",
+      "back": "a grade"
+    },
+    {
+      "id": "exam",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un examen ».",
+      "back": "an exam"
+    },
+    {
+      "id": "skill",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une compétence ».",
+      "back": "a skill"
+    },
+    {
+      "id": "degree",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un diplôme universitaire ».",
+      "back": "a degree"
+    },
+    {
+      "id": "training",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une formation ».",
+      "back": "training"
+    },
+    {
+      "id": "career",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une carrière ».",
+      "back": "a career"
+    },
+    {
+      "id": "internship",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un stage ».",
+      "back": "an internship"
+    },
+    {
+      "id": "apply-course",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « s'inscrire à une formation ».",
+      "back": "to apply for a course"
+    },
+    {
+      "id": "graduate",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « obtenir son diplôme ».",
+      "back": "to graduate"
+    }
+  ]
+}

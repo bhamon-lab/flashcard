@@ -1,0 +1,85 @@
+{
+  "id": "anglais-2de-oral-mondes-virtuels",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Compréhension orale · Citoyenneté et mondes virtuels",
+  "description": "Même liste que « Citoyenneté et mondes virtuels », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "online-community",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une communauté en ligne",
+      "audio_text": "an online community"
+    },
+    {
+      "id": "digital-footprint",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une empreinte numérique",
+      "audio_text": "a digital footprint"
+    },
+    {
+      "id": "privacy-settings",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les paramètres de confidentialité",
+      "audio_text": "privacy settings"
+    },
+    {
+      "id": "user",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un utilisateur",
+      "audio_text": "a user"
+    },
+    {
+      "id": "content",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "du contenu",
+      "audio_text": "content"
+    },
+    {
+      "id": "moderate",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "modérer",
+      "audio_text": "to moderate"
+    },
+    {
+      "id": "report-content",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "signaler un contenu",
+      "audio_text": "to report content"
+    },
+    {
+      "id": "harassment",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le harcèlement",
+      "audio_text": "harassment"
+    },
+    {
+      "id": "access",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "avoir accès à",
+      "audio_text": "to have access to"
+    },
+    {
+      "id": "responsible-use",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un usage responsable",
+      "audio_text": "responsible use"
+    }
+  ]
+}

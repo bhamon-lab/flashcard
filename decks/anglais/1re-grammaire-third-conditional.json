@@ -1,0 +1,73 @@
+{
+  "id": "anglais-1re-grammaire-third-conditional",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Grammaire · Troisième conditionnel et souhaits",
+  "description": "Règles et automatismes — troisième conditionnel et souhaits.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "third",
+      "kind": "grammaire",
+      "front": "Complète : If they ___ earlier, they would have won. (act)",
+      "back": "If they had acted earlier, they would have won."
+    },
+    {
+      "id": "could-have",
+      "kind": "grammaire",
+      "front": "Traduis : « Si j'avais su, j'aurais pu aider. »",
+      "back": "If I had known, I could have helped."
+    },
+    {
+      "id": "might-have",
+      "kind": "grammaire",
+      "front": "Complète : If she had applied, she ___ accepted. (might)",
+      "back": "She might have been accepted."
+    },
+    {
+      "id": "wish-past",
+      "kind": "grammaire",
+      "front": "Traduis : « J'aurais aimé avoir étudié davantage. »",
+      "back": "I wish I had studied more."
+    },
+    {
+      "id": "regret",
+      "kind": "grammaire",
+      "front": "Traduis : « Je regrette de ne pas être venu. »",
+      "back": "I wish I had come. / I regret not coming."
+    },
+    {
+      "id": "should-have",
+      "kind": "grammaire",
+      "front": "Traduis : « Ils auraient dû vérifier la source. »",
+      "back": "They should have checked the source."
+    },
+    {
+      "id": "shouldnt-have",
+      "kind": "grammaire",
+      "front": "Traduis : « Elle n'aurait pas dû le publier. »",
+      "back": "She shouldn't have published it."
+    },
+    {
+      "id": "mixed",
+      "kind": "grammaire",
+      "front": "Complète : If I had listened, I ___ the answer now. (know)",
+      "back": "If I had listened, I would know the answer now."
+    },
+    {
+      "id": "otherwise",
+      "kind": "grammaire",
+      "front": "Relie avec otherwise : Hurry up. You will be late.",
+      "back": "Hurry up; otherwise, you will be late."
+    },
+    {
+      "id": "provided",
+      "kind": "grammaire",
+      "front": "Traduis : « à condition que chacun participe ».",
+      "back": "provided that everyone takes part"
+    }
+  ]
+}

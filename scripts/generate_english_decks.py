@@ -179,6 +179,274 @@ VOCAB = {
     ],
 }
 
+# Thèmes complémentaires. Les triplets donnent un ID stable, le libellé français
+# exact et la réponse anglaise.
+EXTRA_VOCAB = {
+    "6e": [
+        ("nombres-heure", "Nombres et heure", [
+            ("one", "un", "one"), ("two", "deux", "two"), ("ten", "dix", "ten"),
+            ("twenty", "vingt", "twenty"), ("one-hundred", "cent", "one hundred"),
+            ("what-time", "Quelle heure est-il ?", "What time is it?"),
+            ("oclock", "Il est huit heures.", "It's eight o'clock."),
+            ("half-past", "Il est huit heures et demie.", "It's half past eight."),
+            ("quarter-past", "Il est huit heures et quart.", "It's quarter past eight."),
+            ("quarter-to", "Il est neuf heures moins le quart.", "It's quarter to nine."),
+        ]),
+        ("corps", "Parties du corps", [
+            ("head", "la tête", "the head"), ("face", "le visage", "the face"),
+            ("eye", "un œil", "an eye"), ("ear", "une oreille", "an ear"),
+            ("nose", "le nez", "the nose"), ("mouth", "la bouche", "the mouth"),
+            ("arm", "un bras", "an arm"), ("hand", "une main", "a hand"),
+            ("leg", "une jambe", "a leg"), ("foot", "un pied", "a foot"),
+        ]),
+        ("vetements", "Vêtements", [
+            ("tshirt", "un tee-shirt", "a T-shirt"), ("shirt", "une chemise", "a shirt"),
+            ("jumper", "un pull", "a jumper"), ("trousers", "un pantalon", "trousers"),
+            ("dress", "une robe", "a dress"), ("skirt", "une jupe", "a skirt"),
+            ("coat", "un manteau", "a coat"), ("shoes", "des chaussures", "shoes"),
+            ("socks", "des chaussettes", "socks"), ("hat", "un chapeau", "a hat"),
+        ]),
+    ],
+    "5e": [
+        ("repas", "Aliments et repas", [
+            ("bread", "du pain", "bread"), ("milk", "du lait", "milk"), ("water", "de l'eau", "water"),
+            ("fruit", "des fruits", "fruit"), ("vegetables", "des légumes", "vegetables"),
+            ("breakfast", "le petit déjeuner", "breakfast"), ("lunch", "le déjeuner", "lunch"),
+            ("dinner", "le dîner", "dinner"), ("hungry", "avoir faim", "to be hungry"),
+            ("thirsty", "avoir soif", "to be thirsty"),
+        ]),
+        ("meubles", "Maison et meubles", [
+            ("table", "une table", "a table"), ("chair", "une chaise", "a chair"),
+            ("bed", "un lit", "a bed"), ("wardrobe", "une armoire", "a wardrobe"),
+            ("sofa", "un canapé", "a sofa"), ("shelf", "une étagère", "a shelf"),
+            ("lamp", "une lampe", "a lamp"), ("fridge", "un réfrigérateur", "a fridge"),
+            ("oven", "un four", "an oven"), ("washing-machine", "une machine à laver", "a washing machine"),
+        ]),
+        ("animaux", "Animaux et nature", [
+            ("pet", "un animal de compagnie", "a pet"), ("dog", "un chien", "a dog"),
+            ("cat", "un chat", "a cat"), ("horse", "un cheval", "a horse"),
+            ("bird", "un oiseau", "a bird"), ("forest", "une forêt", "a forest"),
+            ("river", "une rivière", "a river"), ("mountain", "une montagne", "a mountain"),
+            ("sea", "la mer", "the sea"), ("countryside", "la campagne", "the countryside"),
+        ]),
+        ("saisons", "Saisons et météo", [
+            ("spring", "le printemps", "spring"), ("summer", "l'été", "summer"),
+            ("autumn", "l'automne", "autumn"), ("winter", "l'hiver", "winter"),
+            ("hot", "chaud", "hot"), ("cold", "froid", "cold"), ("rainy", "pluvieux", "rainy"),
+            ("snowy", "enneigé", "snowy"), ("weather", "Quel temps fait-il ?", "What's the weather like?"),
+            ("temperature", "la température", "the temperature"),
+        ]),
+        ("matieres", "Matières scolaires", [
+            ("english", "l'anglais", "English"), ("maths", "les mathématiques", "maths"),
+            ("history", "l'histoire", "history"), ("geography", "la géographie", "geography"),
+            ("science", "les sciences", "science"), ("art", "les arts plastiques", "art"),
+            ("music", "la musique", "music"), ("pe", "l'éducation physique", "PE"),
+            ("timetable", "un emploi du temps", "a timetable"), ("break", "la récréation", "break time"),
+        ]),
+    ],
+    "4e": [
+        ("metiers", "Métiers", [
+            ("teacher", "un professeur", "a teacher"), ("doctor", "un médecin", "a doctor"),
+            ("nurse", "un infirmier", "a nurse"), ("engineer", "un ingénieur", "an engineer"),
+            ("journalist", "un journaliste", "a journalist"), ("lawyer", "un avocat", "a lawyer"),
+            ("shop-assistant", "un vendeur", "a shop assistant"), ("firefighter", "un pompier", "a firefighter"),
+            ("apply", "postuler", "to apply"), ("earn", "gagner un salaire", "to earn"),
+        ]),
+        ("achats", "Achats et argent", [
+            ("price", "le prix", "the price"), ("cash", "des espèces", "cash"),
+            ("credit-card", "une carte bancaire", "a credit card"), ("receipt", "un reçu", "a receipt"),
+            ("change", "la monnaie", "change"), ("cheap", "bon marché", "cheap"),
+            ("expensive", "cher", "expensive"), ("try-on", "essayer un vêtement", "to try on"),
+            ("size", "une taille", "a size"), ("how-much", "Combien cela coûte-t-il ?", "How much is it?"),
+        ]),
+        ("personnalite", "Personnalité", [
+            ("kind", "gentil", "kind"), ("funny", "drôle", "funny"), ("brave", "courageux", "brave"),
+            ("clever", "intelligent", "clever"), ("hardworking", "travailleur", "hard-working"),
+            ("lazy", "paresseux", "lazy"), ("selfish", "égoïste", "selfish"),
+            ("patient", "patient", "patient"), ("honest", "honnête", "honest"),
+            ("curious", "curieux", "curious"),
+        ]),
+        ("technologie", "Technologie", [
+            ("screen", "un écran", "a screen"), ("keyboard", "un clavier", "a keyboard"),
+            ("mouse", "une souris", "a mouse"), ("headphones", "un casque audio", "headphones"),
+            ("website", "un site web", "a website"), ("search-engine", "un moteur de recherche", "a search engine"),
+            ("log-in", "se connecter", "to log in"), ("upload", "téléverser", "to upload"),
+            ("save-file", "enregistrer un fichier", "to save a file"), ("device", "un appareil", "a device"),
+        ]),
+        ("hebergement", "Vacances et hébergement", [
+            ("hotel", "un hôtel", "a hotel"), ("youth-hostel", "une auberge de jeunesse", "a youth hostel"),
+            ("campsite", "un camping", "a campsite"), ("single-room", "une chambre simple", "a single room"),
+            ("double-room", "une chambre double", "a double room"), ("reception", "la réception", "reception"),
+            ("key", "une clé", "a key"), ("check-in", "s'enregistrer à l'arrivée", "to check in"),
+            ("check-out", "libérer la chambre", "to check out"), ("available", "disponible", "available"),
+        ]),
+    ],
+    "3e": [
+        ("orientation", "Études et orientation", [
+            ("subject", "une matière", "a subject"), ("grade", "une note", "a grade"),
+            ("exam", "un examen", "an exam"), ("skill", "une compétence", "a skill"),
+            ("degree", "un diplôme universitaire", "a degree"), ("training", "une formation", "training"),
+            ("career", "une carrière", "a career"), ("internship", "un stage", "an internship"),
+            ("apply-course", "s'inscrire à une formation", "to apply for a course"),
+            ("graduate", "obtenir son diplôme", "to graduate"),
+        ]),
+        ("climat", "Climat et écologie", [
+            ("global-warming", "le réchauffement climatique", "global warming"),
+            ("greenhouse-gas", "un gaz à effet de serre", "a greenhouse gas"),
+            ("sea-level", "le niveau de la mer", "sea level"), ("wildlife", "la faune sauvage", "wildlife"),
+            ("habitat", "un habitat naturel", "a habitat"), ("endangered", "menacé", "endangered"),
+            ("protect", "protéger", "to protect"), ("waste-energy", "gaspiller de l'énergie", "to waste energy"),
+            ("public-transport", "les transports en commun", "public transport"),
+            ("take-action", "agir", "to take action"),
+        ]),
+        ("travail", "Monde du travail", [
+            ("job", "un emploi", "a job"), ("employer", "un employeur", "an employer"),
+            ("employee", "un salarié", "an employee"), ("salary", "un salaire", "a salary"),
+            ("working-hours", "les horaires de travail", "working hours"), ("colleague", "un collègue", "a colleague"),
+            ("experience", "de l'expérience", "experience"), ("job-interview", "un entretien d'embauche", "a job interview"),
+            ("part-time", "à temps partiel", "part-time"), ("full-time", "à temps plein", "full-time"),
+        ]),
+        ("experiences", "Voyages et expériences", [
+            ("abroad", "à l'étranger", "abroad"), ("journey", "un trajet", "a journey"),
+            ("trip", "un voyage court", "a trip"), ("landmark", "un monument célèbre", "a landmark"),
+            ("guidebook", "un guide touristique", "a guidebook"), ("sightseeing", "faire du tourisme", "to go sightseeing"),
+            ("discover", "découvrir", "to discover"), ("experience-abroad", "vivre une expérience à l'étranger", "to experience life abroad"),
+            ("host-family", "une famille d'accueil", "a host family"), ("exchange", "un échange scolaire", "a school exchange"),
+        ]),
+        ("justice", "Justice et sécurité", [
+            ("crime", "un crime", "a crime"), ("criminal", "un criminel", "a criminal"),
+            ("victim", "une victime", "a victim"), ("witness", "un témoin", "a witness"),
+            ("evidence", "une preuve", "evidence"), ("police-officer", "un policier", "a police officer"),
+            ("court", "un tribunal", "a court"), ("judge", "un juge", "a judge"),
+            ("guilty", "coupable", "guilty"), ("innocent", "innocent", "innocent"),
+        ]),
+    ],
+    "2de": [
+        ("exploration", "Voyages et exploration", [
+            ("expedition", "une expédition", "an expedition"), ("settler", "un colon", "a settler"),
+            ("indigenous", "autochtone", "Indigenous"), ("remote", "isolé", "remote"),
+            ("wilderness", "une région sauvage", "the wilderness"), ("charted", "cartographié", "charted"),
+            ("set-off", "partir", "to set off"), ("reach", "atteindre", "to reach"),
+            ("overcome-obstacle", "surmonter un obstacle", "to overcome an obstacle"),
+            ("unknown", "l'inconnu", "the unknown"),
+        ]),
+        ("mondes-virtuels", "Citoyenneté et mondes virtuels", [
+            ("online-community", "une communauté en ligne", "an online community"),
+            ("digital-footprint", "une empreinte numérique", "a digital footprint"),
+            ("privacy-settings", "les paramètres de confidentialité", "privacy settings"),
+            ("user", "un utilisateur", "a user"), ("content", "du contenu", "content"),
+            ("moderate", "modérer", "to moderate"), ("report-content", "signaler un contenu", "to report content"),
+            ("harassment", "le harcèlement", "harassment"), ("access", "avoir accès à", "to have access to"),
+            ("responsible-use", "un usage responsable", "responsible use"),
+        ]),
+        ("memoire", "Mémoire et patrimoine", [
+            ("memorial", "un monument commémoratif", "a memorial"), ("archive", "des archives", "archives"),
+            ("testimony", "un témoignage", "a testimony"), ("ancestor", "un ancêtre", "an ancestor"),
+            ("generation", "une génération", "a generation"), ("collective-memory", "la mémoire collective", "collective memory"),
+            ("preserve", "préserver", "to preserve"), ("remember", "se souvenir", "to remember"),
+            ("honour", "rendre hommage à", "to honour"), ("pass-down", "transmettre", "to pass down"),
+        ]),
+        ("competition", "Sport et compétition", [
+            ("athlete", "un athlète", "an athlete"), ("coach", "un entraîneur", "a coach"),
+            ("opponent", "un adversaire", "an opponent"), ("referee", "un arbitre", "a referee"),
+            ("achievement", "une réussite", "an achievement"), ("fair-play", "le fair-play", "fair play"),
+            ("defeat", "une défaite", "a defeat"), ("draw-match", "un match nul", "a draw"),
+            ("compete", "concourir", "to compete"), ("break-record", "battre un record", "to break a record"),
+        ]),
+        ("territoires", "Ville et territoires", [
+            ("suburb", "une banlieue résidentielle", "a suburb"), ("inner-city", "le centre-ville défavorisé", "the inner city"),
+            ("neighbourhood", "un quartier", "a neighbourhood"), ("housing", "le logement", "housing"),
+            ("public-space", "un espace public", "a public space"), ("commuter", "un navetteur", "a commuter"),
+            ("urban-sprawl", "l'étalement urbain", "urban sprawl"), ("regenerate", "réhabiliter", "to regenerate"),
+            ("settle-area", "s'installer dans une région", "to settle in an area"),
+            ("sense-place", "le sentiment d'appartenance à un lieu", "a sense of place"),
+        ]),
+    ],
+    "1re": [
+        ("pouvoir-contestation", "Pouvoir et contestation", [
+            ("authority", "l'autorité", "authority"), ("protest", "une manifestation", "a protest"),
+            ("demonstrator", "un manifestant", "a demonstrator"), ("civil-disobedience", "la désobéissance civile", "civil disobedience"),
+            ("oppression", "l'oppression", "oppression"), ("resistance", "la résistance", "resistance"),
+            ("challenge-authority", "contester l'autorité", "to challenge authority"),
+            ("speak-out", "prendre publiquement position", "to speak out"), ("ban", "interdire", "to ban"),
+            ("grant-right", "accorder un droit", "to grant a right"),
+        ]),
+        ("litterature", "Analyse littéraire", [
+            ("plot", "l'intrigue", "the plot"), ("setting", "le cadre spatio-temporel", "the setting"),
+            ("narrator", "le narrateur", "the narrator"), ("character", "un personnage", "a character"),
+            ("theme", "un thème", "a theme"), ("tone", "le ton", "the tone"),
+            ("metaphor", "une métaphore", "a metaphor"), ("foreshadow", "annoncer la suite", "to foreshadow"),
+            ("portray-character", "dépeindre un personnage", "to portray a character"),
+            ("first-person", "un récit à la première personne", "a first-person narrative"),
+        ]),
+        ("science-progres", "Science et progrès", [
+            ("research", "la recherche", "research"), ("finding", "un résultat de recherche", "a finding"),
+            ("trial", "un essai", "a trial"), ("discovery", "une découverte", "a discovery"),
+            ("device", "un dispositif", "a device"), ("reliable", "fiable", "reliable"),
+            ("accurate", "précis", "accurate"), ("carry-out", "mener une expérience", "to carry out an experiment"),
+            ("raise-concern", "susciter une inquiétude", "to raise concern"),
+            ("scientific-evidence", "des preuves scientifiques", "scientific evidence"),
+        ]),
+        ("economie-travail", "Économie et travail", [
+            ("workforce", "la population active", "the workforce"), ("unemployment", "le chômage", "unemployment"),
+            ("income", "un revenu", "an income"), ("living-wage", "un salaire décent", "a living wage"),
+            ("working-condition", "une condition de travail", "a working condition"),
+            ("trade-union", "un syndicat", "a trade union"), ("strike-action", "une grève", "a strike"),
+            ("hire", "embaucher", "to hire"), ("dismiss", "licencier", "to dismiss"),
+            ("make-living", "gagner sa vie", "to make a living"),
+        ]),
+        ("action-environnementale", "Action environnementale", [
+            ("campaigner", "un militant", "a campaigner"), ("conservation", "la protection de la nature", "conservation"),
+            ("emission", "une émission de gaz", "an emission"), ("net-zero", "la neutralité carbone", "net zero"),
+            ("greenwashing", "l'écoblanchiment", "greenwashing"), ("policy-change", "un changement de politique", "a policy change"),
+            ("phase-out", "supprimer progressivement", "to phase out"), ("curb", "freiner", "to curb"),
+            ("hold-accountable", "demander des comptes à", "to hold accountable"),
+            ("environmental-impact", "l'impact environnemental", "the environmental impact"),
+        ]),
+    ],
+    "Terminale": [
+        ("democratie", "Démocratie et institutions", [
+            ("ballot", "un bulletin de vote", "a ballot"), ("turnout", "la participation électorale", "turnout"),
+            ("constituency", "une circonscription", "a constituency"), ("lawmaker", "un législateur", "a lawmaker"),
+            ("judiciary", "le pouvoir judiciaire", "the judiciary"), ("rule-of-law", "l'État de droit", "the rule of law"),
+            ("checks-balances", "la séparation et l'équilibre des pouvoirs", "checks and balances"),
+            ("pass-law", "adopter une loi", "to pass a law"), ("overturn", "annuler une décision", "to overturn"),
+            ("eligible-vote", "avoir le droit de vote", "to be eligible to vote"),
+        ]),
+        ("mondialisation", "Économie et mondialisation", [
+            ("supply-chain", "une chaîne d'approvisionnement", "a supply chain"), ("trade", "le commerce", "trade"),
+            ("tariff", "un droit de douane", "a tariff"), ("consumer", "un consommateur", "a consumer"),
+            ("shareholder", "un actionnaire", "a shareholder"), ("inequality-gap", "l'écart de richesse", "the wealth gap"),
+            ("outsource", "externaliser", "to outsource"), ("regulate-market", "réguler le marché", "to regulate the market"),
+            ("drive-growth", "stimuler la croissance", "to drive growth"),
+            ("economic-downturn", "un ralentissement économique", "an economic downturn"),
+        ]),
+        ("politique-climatique", "Politique climatique", [
+            ("carbon-tax", "une taxe carbone", "a carbon tax"), ("emission-target", "un objectif d'émissions", "an emissions target"),
+            ("climate-justice", "la justice climatique", "climate justice"), ("adaptation", "l'adaptation", "adaptation"),
+            ("mitigation", "l'atténuation", "mitigation"), ("loss-damage", "les pertes et préjudices", "loss and damage"),
+            ("binding", "contraignant", "binding"), ("pledge", "s'engager à", "to pledge"),
+            ("meet-target", "atteindre un objectif", "to meet a target"), ("bear-cost", "supporter le coût", "to bear the cost"),
+        ]),
+        ("diversite", "Identité et diversité", [
+            ("minority", "une minorité", "a minority"), ("representation", "la représentation", "representation"),
+            ("stereotype", "un stéréotype", "a stereotype"), ("intersectionality", "l'intersectionnalité", "intersectionality"),
+            ("discrimination", "la discrimination", "discrimination"), ("equal-opportunity", "l'égalité des chances", "equal opportunity"),
+            ("marginalise", "marginaliser", "to marginalise"), ("empower", "donner les moyens d'agir", "to empower"),
+            ("challenge-stereotype", "remettre en cause un stéréotype", "to challenge a stereotype"),
+            ("inclusive", "inclusif", "inclusive"),
+        ]),
+        ("verite-information", "Vérité et information", [
+            ("misinformation", "une information erronée", "misinformation"),
+            ("disinformation", "une désinformation volontaire", "disinformation"),
+            ("fact-checker", "un vérificateur de faits", "a fact-checker"), ("source-bias", "le biais d'une source", "source bias"),
+            ("echo-chamber", "une chambre d'écho", "an echo chamber"), ("deepfake", "un hypertrucage", "a deepfake"),
+            ("verify-claim", "vérifier une affirmation", "to verify a claim"), ("debunk", "démentir", "to debunk"),
+            ("distort", "déformer", "to distort"), ("media-literacy", "l'éducation aux médias", "media literacy"),
+        ]),
+    ],
+}
+
 CULTURE = {
     "6e": ("Pays anglophones et capitales", [
         ("Quelle est la capitale du Royaume-Uni ?", "London (Londres)."),
@@ -263,6 +531,93 @@ CULTURE = {
         ("Que célèbre Juneteenth aux États-Unis ?", "The end of slavery in the United States, commemorated on 19 June."),
         ("Quel est le rôle principal de la Cour suprême américaine ?", "To interpret the Constitution and federal law."),
         ("Que désigne Windrush au Royaume-Uni ?", "Post-war Caribbean migration to the UK and the generation associated with it."),
+    ]),
+}
+
+EXTRA_CULTURE = {
+    "6e": ("fetes-symboles", "Fêtes et symboles", [
+        ("Quand célèbre-t-on Christmas Day ?", "On 25 December."),
+        ("Quelle fête est associée aux œufs et au lapin ?", "Easter."),
+        ("Quelle fête célèbre-t-on le 14 février ?", "Valentine's Day."),
+        ("Quelle fête irlandaise a lieu le 17 mars ?", "Saint Patrick's Day."),
+        ("Quelle fête américaine a lieu le quatrième jeudi de novembre ?", "Thanksgiving."),
+        ("Quelle fête britannique a lieu le 5 novembre ?", "Bonfire Night / Guy Fawkes Night."),
+        ("Quel animal symbolise souvent les États-Unis ?", "The bald eagle."),
+        ("Quelle plante symbolise l'Angleterre ?", "The rose."),
+        ("Quelle plante symbolise l'Écosse ?", "The thistle."),
+        ("Quelle feuille symbolise le Canada ?", "The maple leaf."),
+    ]),
+    "5e": ("etats-unis", "États-Unis : géographie et monuments", [
+        ("Combien les États-Unis comptent-ils d'États ?", "Fifty states."),
+        ("New York est-elle la capitale fédérale ?", "No. The federal capital is Washington, D.C."),
+        ("Sur quelle île se trouve la Statue of Liberty ?", "Liberty Island, in New York Harbor."),
+        ("Dans quel État se trouve principalement le Grand Canyon ?", "Arizona."),
+        ("Quel grand fleuve traverse le centre des États-Unis ?", "The Mississippi River."),
+        ("Dans quelle ville se trouve Hollywood ?", "Los Angeles."),
+        ("Que reliait historiquement Route 66 ?", "Chicago and the Los Angeles area."),
+        ("Quel fut le premier parc national des États-Unis ?", "Yellowstone National Park."),
+        ("Quel est le plus grand État américain par sa superficie ?", "Alaska."),
+        ("Dans quel océan se trouve Hawaii ?", "The Pacific Ocean."),
+    ]),
+    "4e": ("peuples-paysages", "Peuples autochtones et paysages", [
+        ("Quels peuples autochtones vivent en Australie ?", "Aboriginal and Torres Strait Islander peoples."),
+        ("Quel peuple autochtone est associé à Aotearoa New Zealand ?", "The Māori."),
+        ("Quels sont les trois groupes autochtones reconnus au Canada ?", "First Nations, Inuit and Métis."),
+        ("Quel monolithe sacré se trouve au centre de l'Australie ?", "Uluru."),
+        ("Quel récif corallien se trouve au large du Queensland ?", "The Great Barrier Reef."),
+        ("Quelle chaîne de montagnes traverse l'ouest du Canada ?", "The Rocky Mountains."),
+        ("À la frontière de quels pays se trouvent les chutes du Niagara ?", "Canada and the United States."),
+        ("Qu'est-ce qu'un haka ?", "A Māori ceremonial performance."),
+        ("Quel traité fut signé à Waitangi en 1840 ?", "The Treaty of Waitangi."),
+        ("Que désigne the Dreaming dans les cultures aborigènes ?", "A complex system of beliefs, creation stories and connections to Country."),
+    ]),
+    "3e": ("migrations-mouvements", "Migrations et mouvements sociaux", [
+        ("À quoi servait Ellis Island ?", "It was a major immigration inspection station in New York Harbor."),
+        ("Qu'était the Underground Railroad ?", "A network that helped enslaved people escape to freedom."),
+        ("Quel mouvement suivit l'arrestation de Rosa Parks ?", "The Montgomery Bus Boycott."),
+        ("Quel amendement abolit l'esclavage aux États-Unis ?", "The Thirteenth Amendment."),
+        ("Quel amendement garantit le droit de vote des femmes aux États-Unis ?", "The Nineteenth Amendment."),
+        ("Quel événement de 1969 est un repère du mouvement LGBTQ+ ?", "The Stonewall uprising."),
+        ("Que désigne the Windrush generation ?", "Caribbean people who migrated to the UK after the Second World War."),
+        ("Qu'était apartheid en Afrique du Sud ?", "A system of institutionalised racial segregation."),
+        ("En quelle année Black Lives Matter a-t-il été fondé ?", "In 2013."),
+        ("Que réclamaient les suffragettes ?", "Voting rights for women."),
+    ]),
+    "2de": ("villes-territoires", "Villes et territoires anglophones", [
+        ("Quelle ville britannique est liée à la révolution industrielle et au textile ?", "Manchester."),
+        ("Dans quelle ville fut construit le Titanic ?", "Belfast."),
+        ("Où se trouve Silicon Valley ?", "In the San Francisco Bay Area, California."),
+        ("Que désigne the Rust Belt ?", "A formerly industrial region of the northeastern and midwestern United States."),
+        ("Que désigne the Sun Belt ?", "The southern and southwestern region of the United States."),
+        ("Quels sont les cinq boroughs de New York ?", "Manhattan, Brooklyn, Queens, the Bronx and Staten Island."),
+        ("Pourquoi Washington, D.C. n'appartient-elle à aucun État ?", "It is a federal district created to serve as the national capital."),
+        ("Combien le Canada compte-t-il de provinces et territoires ?", "Ten provinces and three territories."),
+        ("Combien l'Australie compte-t-elle d'États ?", "Six states, plus two main mainland territories."),
+        ("Quelles sont les deux îles principales de la Nouvelle-Zélande ?", "The North Island and the South Island."),
+    ]),
+    "1re": ("sciences-innovations", "Sciences et innovations", [
+        ("Quel naturaliste a développé la théorie de l'évolution par sélection naturelle ?", "Charles Darwin."),
+        ("Qui est souvent considérée comme la première programmeuse ?", "Ada Lovelace."),
+        ("Quel mathématicien britannique a contribué à décrypter Enigma ?", "Alan Turing."),
+        ("Qui a inventé le World Wide Web ?", "Tim Berners-Lee."),
+        ("Quelle scientifique a contribué à révéler la structure de l'ADN grâce aux rayons X ?", "Rosalind Franklin."),
+        ("Qui a découvert la pénicilline ?", "Alexander Fleming."),
+        ("À quel inventeur est associé le premier brevet américain du téléphone ?", "Alexander Graham Bell."),
+        ("Quels frères ont réalisé un vol motorisé contrôlé en 1903 ?", "Orville and Wilbur Wright."),
+        ("Quelle mathématicienne de la NASA a calculé des trajectoires spatiales ?", "Katherine Johnson."),
+        ("Quel physicien britannique a écrit A Brief History of Time ?", "Stephen Hawking."),
+    ]),
+    "Terminale": ("reperes-geopolitiques", "Repères historiques et géopolitiques", [
+        ("Quel texte anglais fut scellé en 1215 ?", "Magna Carta."),
+        ("Quel texte de 1689 limita les pouvoirs de la monarchie anglaise ?", "The English Bill of Rights."),
+        ("En quelle année la Constitution américaine fut-elle signée ?", "In 1787."),
+        ("En quelle année l'Organisation des Nations unies fut-elle fondée ?", "In 1945."),
+        ("En quelle année l'OTAN fut-elle créée ?", "In 1949."),
+        ("Quel texte de 1949 marque la naissance du Commonwealth moderne ?", "The London Declaration."),
+        ("Quand le Royaume-Uni a-t-il quitté l'Union européenne ?", "On 31 January 2020."),
+        ("Quel accord de 1998 concerne l'Irlande du Nord ?", "The Good Friday Agreement."),
+        ("En quelle année la Confédération canadienne fut-elle créée ?", "In 1867."),
+        ("En quelle année les colonies australiennes se fédérèrent-elles ?", "In 1901."),
     ]),
 }
 
@@ -568,6 +923,191 @@ GRAMMAR = {
     ],
 }
 
+EXTRA_GRAMMAR = {
+    "6e": [
+        ("articles-pluriels", "Articles, démonstratifs et pluriels", [
+            ("a-an", "Choisis : a / an orange.", "an orange"),
+            ("the", "Complète : Close ___ door, please.", "Close the door, please."),
+            ("no-article", "Complète si nécessaire : I like ___ chocolate.", "I like chocolate: pas d'article pour une généralité."),
+            ("this", "Complète pour un objet proche : ___ book.", "this book"),
+            ("that", "Complète pour un objet éloigné : ___ house.", "that house"),
+            ("these", "Donne le pluriel de this child.", "these children"),
+            ("those", "Donne le pluriel de that box.", "those boxes"),
+            ("plural-s", "Donne le pluriel de cat.", "cats"),
+            ("plural-es", "Donne le pluriel de watch.", "watches"),
+            ("plural-y", "Donne le pluriel de baby.", "babies"),
+        ]),
+        ("possessifs-prepositions", "Possessifs, prépositions et impératif", [
+            ("my", "Complète : I have a bag. It is ___ bag.", "It is my bag."),
+            ("your", "Traduis : « Où est ton livre ? »", "Where is your book?"),
+            ("his-her", "Complète : Tom has a bike. Emma has a scooter. ___ bike and ___ scooter.", "his bike and her scooter"),
+            ("our", "Traduis : « Voici notre maison. »", "This is our house."),
+            ("their", "Traduis : « Leurs parents sont ici. »", "Their parents are here."),
+            ("in", "Traduis : « dans la boîte ».", "in the box"),
+            ("on", "Traduis : « sur la table ».", "on the table"),
+            ("under", "Traduis : « sous la chaise ».", "under the chair"),
+            ("imperative", "Donne l'ordre : « Ouvre ton livre. »", "Open your book."),
+            ("negative-imperative", "Donne l'interdiction : « Ne cours pas. »", "Don't run."),
+        ]),
+    ],
+    "5e": [
+        ("preterit-introduction", "Introduction au prétérit", [
+            ("was", "Complète : I ___ at home yesterday.", "I was at home yesterday."),
+            ("were", "Complète : They ___ happy.", "They were happy."),
+            ("wasnt", "Mets à la forme négative : She was late.", "She wasn't late."),
+            ("were-question", "Transforme en question : You were tired.", "Were you tired?"),
+            ("regular-ed", "Mets au passé : We visit London.", "We visited London."),
+            ("regular-y", "Mets au passé : She studies English.", "She studied English."),
+            ("didnt", "Mets à la forme négative : He played tennis.", "He didn't play tennis."),
+            ("did-question", "Transforme en question : They watched the film.", "Did they watch the film?"),
+            ("yesterday", "Où place-t-on yesterday : I went to town ?", "I went to town yesterday."),
+            ("short-answer", "Réponds brièvement : Did you enjoy it? (oui)", "Yes, I did."),
+        ]),
+        ("possession-lieu", "Possession, pronoms et lieu", [
+            ("genitive", "Traduis : « le vélo de Tom ».", "Tom's bike"),
+            ("plural-genitive", "Traduis : « la salle des professeurs ».", "the teachers' room"),
+            ("mine", "Complète : This book is my book. It is ___.", "It is mine."),
+            ("yours", "Traduis : « Est-ce que ce sac est à toi ? »", "Is this bag yours?"),
+            ("object-him", "Remplace Tom : I can see Tom.", "I can see him."),
+            ("object-them", "Remplace my friends : I called my friends.", "I called them."),
+            ("there-is", "Traduis : « Il y a un parc. »", "There is a park."),
+            ("there-are", "Traduis : « Il y a deux magasins. »", "There are two shops."),
+            ("between", "Traduis : « entre la banque et la gare ».", "between the bank and the station"),
+            ("behind", "Traduis : « derrière la mairie ».", "behind the town hall"),
+        ]),
+    ],
+    "4e": [
+        ("present-perfect-introduction", "Introduction au present perfect", [
+            ("form-have", "Complète : I ___ finished.", "I have finished."),
+            ("form-has", "Complète : She ___ arrived.", "She has arrived."),
+            ("negative", "Mets à la forme négative : He has seen it.", "He hasn't seen it."),
+            ("question", "Transforme en question : You have visited London.", "Have you visited London?"),
+            ("ever", "Traduis : « As-tu déjà mangé cela ? »", "Have you ever eaten that?"),
+            ("never", "Traduis : « Je n'ai jamais pris l'avion. »", "I have never flown."),
+            ("just", "Traduis : « Nous venons d'arriver. »", "We have just arrived."),
+            ("already", "Traduis : « Elle a déjà fini. »", "She has already finished."),
+            ("yet", "Traduis : « Ils ne sont pas encore partis. »", "They haven't left yet."),
+            ("experience", "Choisis le temps : I went / have been to Ireland twice.", "I have been to Ireland twice."),
+        ]),
+        ("relatives-gerondif", "Relatives et formes en -ing", [
+            ("who", "Complète : The man ___ lives here is Irish.", "The man who lives here is Irish."),
+            ("which", "Complète : The bus ___ goes downtown is late.", "The bus which/that goes downtown is late."),
+            ("where", "Complète : This is the hotel ___ we stayed.", "This is the hotel where we stayed."),
+            ("whose", "Complète : The girl ___ bag is red is my friend.", "The girl whose bag is red is my friend."),
+            ("like-ing", "Complète : I enjoy ___. (read)", "I enjoy reading."),
+            ("good-at", "Traduis : « Elle est douée en dessin. »", "She is good at drawing."),
+            ("before-ing", "Traduis : « avant de partir ».", "before leaving"),
+            ("after-ing", "Traduis : « après avoir mangé ».", "after eating"),
+            ("stop-ing", "Traduis : « Arrête de parler. »", "Stop talking."),
+            ("go-ing", "Complète : Let's go ___. (swim)", "Let's go swimming."),
+        ]),
+    ],
+    "3e": [
+        ("passif-relatives", "Voix passive et relatives", [
+            ("passive-present", "Mets au passif : People speak English here.", "English is spoken here."),
+            ("passive-past", "Mets au passif : They built it in 1920.", "It was built in 1920."),
+            ("passive-agent", "Mets au passif : Shakespeare wrote Hamlet.", "Hamlet was written by Shakespeare."),
+            ("passive-negative", "Mets au passif : They do not allow phones.", "Phones are not allowed."),
+            ("passive-question", "Mets au passif : Do they grow tea here?", "Is tea grown here?"),
+            ("who", "Complète : The activist ___ spoke was convincing.", "The activist who spoke was convincing."),
+            ("which", "Complète : The film ___ won is British.", "The film which/that won is British."),
+            ("whose", "Complète : The author ___ book I read is Canadian.", "The author whose book I read is Canadian."),
+            ("where", "Complète : This is the city ___ she was born.", "This is the city where she was born."),
+            ("omit", "Peut-on omettre that : The book that I bought ?", "Oui : The book I bought. Le pronom est complément."),
+        ]),
+        ("past-perfect-discours", "Past perfect et discours indirect", [
+            ("past-perfect", "Complète : When I arrived, they ___. (leave)", "When I arrived, they had left."),
+            ("negative", "Traduis : « Je n'avais jamais vu la mer. »", "I had never seen the sea."),
+            ("question", "Traduis : « Avait-elle déjà terminé ? »", "Had she already finished?"),
+            ("before", "Relie : He ate. Then he left.", "After he had eaten, he left."),
+            ("reported-be", "Rapporte : She said, “I am ready.”", "She said that she was ready."),
+            ("reported-present", "Rapporte : He said, “I live here.”", "He said that he lived there."),
+            ("reported-will", "Rapporte : She said, “I will come.”", "She said that she would come."),
+            ("reported-can", "Rapporte : He said, “I can swim.”", "He said that he could swim."),
+            ("said-told", "Complète : She ___ me that she agreed.", "She told me that she agreed."),
+            ("time-change", "Dans un récit au passé, que devient tomorrow ?", "the next day / the following day"),
+        ]),
+    ],
+    "2de": [
+        ("conditionnels", "Conditionnels présent et irréel", [
+            ("zero", "Complète : If water reaches 0°C, it ___. (freeze)", "If water reaches 0°C, it freezes."),
+            ("first", "Complète : If we act now, emissions ___. (fall)", "If we act now, emissions will fall."),
+            ("first-modal", "Complète : If you finish, you ___ leave. (can)", "If you finish, you can leave."),
+            ("unless", "Reformule avec unless : If we don't act, it will worsen.", "Unless we act, it will worsen."),
+            ("second", "Complète : If I ___ you, I would wait. (be)", "If I were you, I would wait."),
+            ("second-result", "Complète : If she had time, she ___ more. (travel)", "If she had time, she would travel more."),
+            ("could", "Traduis : « Si nous avions plus d'argent, nous pourrions aider. »", "If we had more money, we could help."),
+            ("wish", "Traduis : « J'aimerais être plus sûr de moi. »", "I wish I were more confident."),
+            ("as-if", "Traduis : « Il parle comme s'il savait tout. »", "He talks as if he knew everything."),
+            ("difference", "Quelle différence entre le premier et le deuxième conditionnel ?", "Le premier envisage un possible réel ; le deuxième une hypothèse irréelle ou peu probable."),
+        ]),
+        ("infinitif-connecteurs", "Infinitif, gérondif et connecteurs", [
+            ("want-to", "Complète : They want ___ change things. (to)", "They want to change things."),
+            ("avoid-ing", "Complète : We should avoid ___ energy. (waste)", "We should avoid wasting energy."),
+            ("decide-to", "Complète : She decided ___ abroad. (study)", "She decided to study abroad."),
+            ("keep-ing", "Complète : They kept ___. (protest)", "They kept protesting."),
+            ("purpose", "Traduis : « afin de réduire les déchets ».", "in order to reduce waste"),
+            ("because-of", "Complète : The match was cancelled ___ the rain.", "The match was cancelled because of the rain."),
+            ("therefore", "Relie avec therefore : It was unsafe. They closed it.", "It was unsafe; therefore, they closed it."),
+            ("however", "Relie avec however : It is costly. It is effective.", "It is costly; however, it is effective."),
+            ("whereas", "Relie : One source agrees. The other disagrees.", "One source agrees, whereas the other disagrees."),
+            ("in-addition", "Ajoute un argument avec un connecteur.", "In addition, … / Furthermore, …"),
+        ]),
+    ],
+    "1re": [
+        ("third-conditional", "Troisième conditionnel et souhaits", [
+            ("third", "Complète : If they ___ earlier, they would have won. (act)", "If they had acted earlier, they would have won."),
+            ("could-have", "Traduis : « Si j'avais su, j'aurais pu aider. »", "If I had known, I could have helped."),
+            ("might-have", "Complète : If she had applied, she ___ accepted. (might)", "She might have been accepted."),
+            ("wish-past", "Traduis : « J'aurais aimé avoir étudié davantage. »", "I wish I had studied more."),
+            ("regret", "Traduis : « Je regrette de ne pas être venu. »", "I wish I had come. / I regret not coming."),
+            ("should-have", "Traduis : « Ils auraient dû vérifier la source. »", "They should have checked the source."),
+            ("shouldnt-have", "Traduis : « Elle n'aurait pas dû le publier. »", "She shouldn't have published it."),
+            ("mixed", "Complète : If I had listened, I ___ the answer now. (know)", "If I had listened, I would know the answer now."),
+            ("otherwise", "Relie avec otherwise : Hurry up. You will be late.", "Hurry up; otherwise, you will be late."),
+            ("provided", "Traduis : « à condition que chacun participe ».", "provided that everyone takes part"),
+        ]),
+        ("relatives-causatif", "Relatives avancées et causatif", [
+            ("non-defining", "Ajoute la ponctuation : London which is very diverse attracts millions.", "London, which is very diverse, attracts millions."),
+            ("whom", "Complète formellement : The person to ___ I spoke.", "The person to whom I spoke."),
+            ("whose", "Complète : A country ___ economy is growing.", "A country whose economy is growing."),
+            ("whereby", "Complète : A system ___ users vote directly.", "A system whereby users vote directly."),
+            ("have-done", "Traduis : « J'ai fait réparer mon téléphone. »", "I had my phone repaired."),
+            ("get-done", "Traduis : « Elle va se faire couper les cheveux. »", "She is going to get her hair cut."),
+            ("make", "Traduis : « Ils nous ont obligés à attendre. »", "They made us wait."),
+            ("let", "Traduis : « Ils nous ont laissé partir. »", "They let us leave."),
+            ("allow", "Mets au passif : They allowed us to enter.", "We were allowed to enter."),
+            ("reduced-relative", "Réduis : Students who live abroad…", "Students living abroad…"),
+        ]),
+    ],
+    "Terminale": [
+        ("passif-reporting", "Passif et structures de discours", [
+            ("reporting-passive", "Reformule : People say that the policy works.", "The policy is said to work."),
+            ("past-reporting", "Reformule : People believe that he lied.", "He is believed to have lied."),
+            ("get-passive", "Traduis : « Il s'est fait licencier. »", "He got fired."),
+            ("have-something-done", "Traduis : « Ils ont fait vérifier les données. »", "They had the data checked."),
+            ("passive-gerund", "Mets au passif : I dislike people interrupting me.", "I dislike being interrupted."),
+            ("report-verb", "Rapporte avec deny : “I didn't leak it,” she said.", "She denied leaking it."),
+            ("accuse", "Rapporte avec accuse : “You lied,” he said to her.", "He accused her of lying."),
+            ("urge", "Rapporte avec urge : “Act now,” they told the government.", "They urged the government to act."),
+            ("claim", "Traduis : « Il prétend avoir trouvé une solution. »", "He claims to have found a solution."),
+            ("seem", "Traduis : « La mesure semble avoir échoué. »", "The measure seems to have failed."),
+        ]),
+        ("discours-formel", "Discours formel et articulation", [
+            ("nominalise-decide", "Nominalise : The committee decided to intervene.", "The committee's decision to intervene…"),
+            ("nominalise-fail", "Nominalise : The policy failed.", "The failure of the policy…"),
+            ("owing-to", "Traduis : « en raison d'un manque de preuves ».", "owing to a lack of evidence"),
+            ("notwithstanding", "Traduis : « malgré ces limites » dans un registre formel.", "notwithstanding these limitations"),
+            ("insofar", "Traduis : « dans la mesure où cela protège les citoyens ».", "insofar as it protects citizens"),
+            ("thereby", "Relie : It reduced costs. It improved access.", "It reduced costs, thereby improving access."),
+            ("given-that", "Traduis : « étant donné que les preuves sont limitées ».", "given that the evidence is limited"),
+            ("on-balance", "Introduis une conclusion équilibrée.", "On balance, …"),
+            ("to-extent", "Nuance : « Cela est vrai dans une certaine mesure. »", "This is true to a certain extent."),
+            ("far-from", "Traduis : « Loin de résoudre le problème, cela l'aggrave. »", "Far from solving the problem, it makes it worse."),
+        ]),
+    ],
+}
+
 FRENCH_REPLACEMENTS = {
     "a": "à", "apres": "après", "benevolat": "bénévolat", "bibliotheque": "bibliothèque",
     "annule": "annulé", "biodiversite": "biodiversité", "cote": "côté", "dechets": "déchets",
@@ -641,6 +1181,14 @@ def french_label(key):
     return re.sub(r"\b([cdjlmnst]) (?=\w)", r"\1’", text)
 
 
+def vocab_parts(entry):
+    if len(entry) == 2:
+        french, english = entry
+        return slugify(english), french_label(french), english
+    card_id, french, english = entry
+    return card_id, french, english
+
+
 def write_deck(file_name, deck):
     path = OUTPUT / f"{file_name}.json"
     path.write_text(json.dumps(deck, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -665,7 +1213,7 @@ def generate():
     expected = set()
     for level, meta in LEVELS.items():
         prefix = meta["file"]
-        for topic_id, topic_title, entries in VOCAB[level]:
+        for topic_id, topic_title, entries in [*VOCAB[level], *EXTRA_VOCAB[level]]:
             vocab_name = f"{prefix}-vocab-{topic_id}"
             vocab_id = f"anglais-{vocab_name}"
             vocab = deck_base(
@@ -675,12 +1223,12 @@ def generate():
             vocab["category"] = "vocabulary"
             vocab["cards"] = [
                 {
-                    "id": slugify(english),
+                    "id": card_id,
                     "kind": "vocabulaire",
-                    "front": f"Traduis en anglais : « {french_label(french)} ».",
+                    "front": f"Traduis en anglais : « {french} ».",
                     "back": english,
                 }
-                for french, english in entries
+                for card_id, french, english in map(vocab_parts, entries)
             ]
             write_deck(vocab_name, vocab)
             expected.add(f"{vocab_name}.json")
@@ -694,13 +1242,13 @@ def generate():
             oral.update({"category": "listening", "mode": "listening", "audio_language": "en-GB"})
             oral["cards"] = [
                 {
-                    "id": slugify(english),
+                    "id": card_id,
                     "kind": "comprehension-orale",
                     "front": "Écoute, puis donne le sens en français.",
-                    "back": french_label(french),
+                    "back": french,
                     "audio_text": english,
                 }
-                for french, english in entries
+                for card_id, french, english in map(vocab_parts, entries)
             ]
             write_deck(oral_name, oral)
             expected.add(f"{oral_name}.json")
@@ -715,6 +1263,22 @@ def generate():
         ]
         write_deck(culture_name, culture)
         expected.add(f"{culture_name}.json")
+
+        extra_culture_id, extra_culture_title, extra_culture_cards = EXTRA_CULTURE[level]
+        extra_culture_name = f"{prefix}-culture-{extra_culture_id}"
+        extra_culture = deck_base(
+            level,
+            f"anglais-{extra_culture_name}",
+            f"Culture · {extra_culture_title}",
+            "Repères culturels du monde anglophone.",
+        )
+        extra_culture["category"] = "culture"
+        extra_culture["cards"] = [
+            {"id": f"repere-{index:02d}", "kind": "culture", "front": front, "back": back}
+            for index, (front, back) in enumerate(extra_culture_cards, start=1)
+        ]
+        write_deck(extra_culture_name, extra_culture)
+        expected.add(f"{extra_culture_name}.json")
 
         irregular_name = f"{prefix}-verbes-irreguliers"
         irregular = deck_base(level, f"anglais-{irregular_name}", "Verbes irréguliers", "Infinitif, prétérit, participe passé et sens français.")
@@ -731,7 +1295,7 @@ def generate():
         write_deck(irregular_name, irregular)
         expected.add(f"{irregular_name}.json")
 
-        for grammar_id, grammar_title, grammar_cards in GRAMMAR[level]:
+        for grammar_id, grammar_title, grammar_cards in [*GRAMMAR[level], *EXTRA_GRAMMAR[level]]:
             grammar_name = f"{prefix}-grammaire-{grammar_id}"
             grammar = deck_base(level, f"anglais-{grammar_name}", f"Grammaire · {grammar_title}", f"Règles et automatismes — {grammar_title.lower()}.")
             grammar["category"] = "grammar"

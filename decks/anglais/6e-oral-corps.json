@@ -1,0 +1,85 @@
+{
+  "id": "anglais-6e-oral-corps",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Compréhension orale · Parties du corps",
+  "description": "Même liste que « Parties du corps », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "head",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la tête",
+      "audio_text": "the head"
+    },
+    {
+      "id": "face",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le visage",
+      "audio_text": "the face"
+    },
+    {
+      "id": "eye",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un œil",
+      "audio_text": "an eye"
+    },
+    {
+      "id": "ear",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une oreille",
+      "audio_text": "an ear"
+    },
+    {
+      "id": "nose",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le nez",
+      "audio_text": "the nose"
+    },
+    {
+      "id": "mouth",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la bouche",
+      "audio_text": "the mouth"
+    },
+    {
+      "id": "arm",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un bras",
+      "audio_text": "an arm"
+    },
+    {
+      "id": "hand",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une main",
+      "audio_text": "a hand"
+    },
+    {
+      "id": "leg",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une jambe",
+      "audio_text": "a leg"
+    },
+    {
+      "id": "foot",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un pied",
+      "audio_text": "a foot"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "anglais-3e-oral-orientation",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Compréhension orale · Études et orientation",
+  "description": "Même liste que « Études et orientation », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "subject",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une matière",
+      "audio_text": "a subject"
+    },
+    {
+      "id": "grade",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une note",
+      "audio_text": "a grade"
+    },
+    {
+      "id": "exam",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un examen",
+      "audio_text": "an exam"
+    },
+    {
+      "id": "skill",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une compétence",
+      "audio_text": "a skill"
+    },
+    {
+      "id": "degree",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un diplôme universitaire",
+      "audio_text": "a degree"
+    },
+    {
+      "id": "training",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une formation",
+      "audio_text": "training"
+    },
+    {
+      "id": "career",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une carrière",
+      "audio_text": "a career"
+    },
+    {
+      "id": "internship",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un stage",
+      "audio_text": "an internship"
+    },
+    {
+      "id": "apply-course",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "s'inscrire à une formation",
+      "audio_text": "to apply for a course"
+    },
+    {
+      "id": "graduate",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "obtenir son diplôme",
+      "audio_text": "to graduate"
+    }
+  ]
+}

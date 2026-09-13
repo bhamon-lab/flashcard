@@ -1,0 +1,73 @@
+{
+  "id": "anglais-term-vocab-diversite",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Vocabulaire · Identité et diversité",
+  "description": "Liste de vocabulaire — identité et diversité.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "minority",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une minorité ».",
+      "back": "a minority"
+    },
+    {
+      "id": "representation",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la représentation ».",
+      "back": "representation"
+    },
+    {
+      "id": "stereotype",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un stéréotype ».",
+      "back": "a stereotype"
+    },
+    {
+      "id": "intersectionality",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'intersectionnalité ».",
+      "back": "intersectionality"
+    },
+    {
+      "id": "discrimination",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la discrimination ».",
+      "back": "discrimination"
+    },
+    {
+      "id": "equal-opportunity",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'égalité des chances ».",
+      "back": "equal opportunity"
+    },
+    {
+      "id": "marginalise",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « marginaliser ».",
+      "back": "to marginalise"
+    },
+    {
+      "id": "empower",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « donner les moyens d'agir ».",
+      "back": "to empower"
+    },
+    {
+      "id": "challenge-stereotype",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « remettre en cause un stéréotype ».",
+      "back": "to challenge a stereotype"
+    },
+    {
+      "id": "inclusive",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « inclusif ».",
+      "back": "inclusive"
+    }
+  ]
+}

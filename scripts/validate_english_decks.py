@@ -9,7 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DECKS = ROOT / "decks" / "anglais"
 SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
-EXPECTED_DECKS = {"6e": 14, "5e": 10, "4e": 10, "3e": 10, "2de": 10, "1re": 10, "Terminale": 10}
+EXPECTED_DECKS = {grade: 23 for grade in ("6e", "5e", "4e", "3e", "2de", "1re", "Terminale")}
+EXPECTED_CARDS = {"6e": 240, "5e": 245, "4e": 245, "3e": 250, "2de": 248, "1re": 247, "Terminale": 250}
 IRREGULAR_COUNTS = {"6e": 20, "5e": 25, "4e": 25, "3e": 30, "2de": 28, "1re": 27, "Terminale": 30}
 CATEGORIES = {"vocabulary", "listening", "culture", "irregular-verbs", "grammar"}
 
@@ -25,6 +26,7 @@ def main():
     decks = {}
     counts = Counter()
     card_counts = Counter()
+    category_counts = Counter()
     global_ids = set()
     irregular_ids = set()
 
@@ -57,6 +59,7 @@ def main():
         decks[path.stem] = deck
         counts[deck["grade"]] += 1
         card_counts[deck["grade"]] += len(deck["cards"])
+        category_counts[deck["category"]] += 1
 
     require(dict(counts) == EXPECTED_DECKS, f"Répartition par niveau incorrecte : {dict(counts)}")
 
@@ -75,10 +78,18 @@ def main():
         require([card.get("audio_text") for card in oral["cards"]] == [card["back"] for card in vocab["cards"]],
                 f"{stem}: le contenu audio ne correspond pas à la liste écrite")
 
-    require(listening == 23, "23 listes de compréhension orale attendues")
+    require(listening == 56, "56 listes de compréhension orale attendues")
+    require(dict(category_counts) == {
+        "vocabulary": 56,
+        "listening": 56,
+        "culture": 14,
+        "irregular-verbs": 7,
+        "grammar": 28,
+    }, f"Répartition par catégorie incorrecte : {dict(category_counts)}")
     total_cards = sum(card_counts.values())
     require(len(irregular_ids) == 185, f"185 verbes irréguliers attendus, {len(irregular_ids)} trouvés")
-    require(total_cards == 855, f"855 cartes attendues, {total_cards} trouvées")
+    require(dict(card_counts) == EXPECTED_CARDS, f"Répartition des cartes incorrecte : {dict(card_counts)}")
+    require(total_cards == 1725, f"1725 cartes attendues, {total_cards} trouvées")
     print(f"OK : {len(paths)} decks, {total_cards} cartes, {listening} paires vocabulaire/oral.")
     for grade in EXPECTED_DECKS:
         print(f"  {grade} : {counts[grade]} decks, {card_counts[grade]} cartes")

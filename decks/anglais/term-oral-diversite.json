@@ -1,0 +1,85 @@
+{
+  "id": "anglais-term-oral-diversite",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Compréhension orale · Identité et diversité",
+  "description": "Même liste que « Identité et diversité », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "minority",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une minorité",
+      "audio_text": "a minority"
+    },
+    {
+      "id": "representation",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la représentation",
+      "audio_text": "representation"
+    },
+    {
+      "id": "stereotype",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un stéréotype",
+      "audio_text": "a stereotype"
+    },
+    {
+      "id": "intersectionality",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'intersectionnalité",
+      "audio_text": "intersectionality"
+    },
+    {
+      "id": "discrimination",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la discrimination",
+      "audio_text": "discrimination"
+    },
+    {
+      "id": "equal-opportunity",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'égalité des chances",
+      "audio_text": "equal opportunity"
+    },
+    {
+      "id": "marginalise",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "marginaliser",
+      "audio_text": "to marginalise"
+    },
+    {
+      "id": "empower",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "donner les moyens d'agir",
+      "audio_text": "to empower"
+    },
+    {
+      "id": "challenge-stereotype",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "remettre en cause un stéréotype",
+      "audio_text": "to challenge a stereotype"
+    },
+    {
+      "id": "inclusive",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "inclusif",
+      "audio_text": "inclusive"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "anglais-2de-vocab-competition",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Vocabulaire · Sport et compétition",
+  "description": "Liste de vocabulaire — sport et compétition.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "athlete",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un athlète ».",
+      "back": "an athlete"
+    },
+    {
+      "id": "coach",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un entraîneur ».",
+      "back": "a coach"
+    },
+    {
+      "id": "opponent",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un adversaire ».",
+      "back": "an opponent"
+    },
+    {
+      "id": "referee",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un arbitre ».",
+      "back": "a referee"
+    },
+    {
+      "id": "achievement",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une réussite ».",
+      "back": "an achievement"
+    },
+    {
+      "id": "fair-play",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le fair-play ».",
+      "back": "fair play"
+    },
+    {
+      "id": "defeat",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une défaite ».",
+      "back": "a defeat"
+    },
+    {
+      "id": "draw-match",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un match nul ».",
+      "back": "a draw"
+    },
+    {
+      "id": "compete",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « concourir ».",
+      "back": "to compete"
+    },
+    {
+      "id": "break-record",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « battre un record ».",
+      "back": "to break a record"
+    }
+  ]
+}

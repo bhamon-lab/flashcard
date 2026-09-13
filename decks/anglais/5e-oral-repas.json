@@ -1,0 +1,85 @@
+{
+  "id": "anglais-5e-oral-repas",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Compréhension orale · Aliments et repas",
+  "description": "Même liste que « Aliments et repas », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "bread",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "du pain",
+      "audio_text": "bread"
+    },
+    {
+      "id": "milk",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "du lait",
+      "audio_text": "milk"
+    },
+    {
+      "id": "water",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "de l'eau",
+      "audio_text": "water"
+    },
+    {
+      "id": "fruit",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "des fruits",
+      "audio_text": "fruit"
+    },
+    {
+      "id": "vegetables",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "des légumes",
+      "audio_text": "vegetables"
+    },
+    {
+      "id": "breakfast",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le petit déjeuner",
+      "audio_text": "breakfast"
+    },
+    {
+      "id": "lunch",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le déjeuner",
+      "audio_text": "lunch"
+    },
+    {
+      "id": "dinner",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le dîner",
+      "audio_text": "dinner"
+    },
+    {
+      "id": "hungry",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "avoir faim",
+      "audio_text": "to be hungry"
+    },
+    {
+      "id": "thirsty",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "avoir soif",
+      "audio_text": "to be thirsty"
+    }
+  ]
+}

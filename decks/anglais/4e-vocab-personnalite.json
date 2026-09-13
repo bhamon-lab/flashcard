@@ -1,0 +1,73 @@
+{
+  "id": "anglais-4e-vocab-personnalite",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Vocabulaire · Personnalité",
+  "description": "Liste de vocabulaire — personnalité.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "kind",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « gentil ».",
+      "back": "kind"
+    },
+    {
+      "id": "funny",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « drôle ».",
+      "back": "funny"
+    },
+    {
+      "id": "brave",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « courageux ».",
+      "back": "brave"
+    },
+    {
+      "id": "clever",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « intelligent ».",
+      "back": "clever"
+    },
+    {
+      "id": "hardworking",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « travailleur ».",
+      "back": "hard-working"
+    },
+    {
+      "id": "lazy",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « paresseux ».",
+      "back": "lazy"
+    },
+    {
+      "id": "selfish",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « égoïste ».",
+      "back": "selfish"
+    },
+    {
+      "id": "patient",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « patient ».",
+      "back": "patient"
+    },
+    {
+      "id": "honest",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « honnête ».",
+      "back": "honest"
+    },
+    {
+      "id": "curious",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « curieux ».",
+      "back": "curious"
+    }
+  ]
+}

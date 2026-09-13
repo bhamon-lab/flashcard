@@ -1,0 +1,73 @@
+{
+  "id": "anglais-2de-vocab-territoires",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Vocabulaire · Ville et territoires",
+  "description": "Liste de vocabulaire — ville et territoires.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "suburb",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une banlieue résidentielle ».",
+      "back": "a suburb"
+    },
+    {
+      "id": "inner-city",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le centre-ville défavorisé ».",
+      "back": "the inner city"
+    },
+    {
+      "id": "neighbourhood",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un quartier ».",
+      "back": "a neighbourhood"
+    },
+    {
+      "id": "housing",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le logement ».",
+      "back": "housing"
+    },
+    {
+      "id": "public-space",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un espace public ».",
+      "back": "a public space"
+    },
+    {
+      "id": "commuter",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un navetteur ».",
+      "back": "a commuter"
+    },
+    {
+      "id": "urban-sprawl",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'étalement urbain ».",
+      "back": "urban sprawl"
+    },
+    {
+      "id": "regenerate",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « réhabiliter ».",
+      "back": "to regenerate"
+    },
+    {
+      "id": "settle-area",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « s'installer dans une région ».",
+      "back": "to settle in an area"
+    },
+    {
+      "id": "sense-place",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le sentiment d'appartenance à un lieu ».",
+      "back": "a sense of place"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "anglais-1re-oral-science-progres",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Compréhension orale · Science et progrès",
+  "description": "Même liste que « Science et progrès », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "research",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la recherche",
+      "audio_text": "research"
+    },
+    {
+      "id": "finding",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un résultat de recherche",
+      "audio_text": "a finding"
+    },
+    {
+      "id": "trial",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un essai",
+      "audio_text": "a trial"
+    },
+    {
+      "id": "discovery",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une découverte",
+      "audio_text": "a discovery"
+    },
+    {
+      "id": "device",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un dispositif",
+      "audio_text": "a device"
+    },
+    {
+      "id": "reliable",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "fiable",
+      "audio_text": "reliable"
+    },
+    {
+      "id": "accurate",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "précis",
+      "audio_text": "accurate"
+    },
+    {
+      "id": "carry-out",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "mener une expérience",
+      "audio_text": "to carry out an experiment"
+    },
+    {
+      "id": "raise-concern",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "susciter une inquiétude",
+      "audio_text": "to raise concern"
+    },
+    {
+      "id": "scientific-evidence",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "des preuves scientifiques",
+      "audio_text": "scientific evidence"
+    }
+  ]
+}

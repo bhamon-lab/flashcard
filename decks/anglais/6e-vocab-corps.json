@@ -1,0 +1,73 @@
+{
+  "id": "anglais-6e-vocab-corps",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Vocabulaire · Parties du corps",
+  "description": "Liste de vocabulaire — parties du corps.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "head",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la tête ».",
+      "back": "the head"
+    },
+    {
+      "id": "face",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le visage ».",
+      "back": "the face"
+    },
+    {
+      "id": "eye",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un œil ».",
+      "back": "an eye"
+    },
+    {
+      "id": "ear",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une oreille ».",
+      "back": "an ear"
+    },
+    {
+      "id": "nose",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le nez ».",
+      "back": "the nose"
+    },
+    {
+      "id": "mouth",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la bouche ».",
+      "back": "the mouth"
+    },
+    {
+      "id": "arm",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un bras ».",
+      "back": "an arm"
+    },
+    {
+      "id": "hand",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une main ».",
+      "back": "a hand"
+    },
+    {
+      "id": "leg",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une jambe ».",
+      "back": "a leg"
+    },
+    {
+      "id": "foot",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un pied ».",
+      "back": "a foot"
+    }
+  ]
+}

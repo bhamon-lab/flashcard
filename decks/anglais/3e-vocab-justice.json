@@ -1,0 +1,73 @@
+{
+  "id": "anglais-3e-vocab-justice",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Vocabulaire · Justice et sécurité",
+  "description": "Liste de vocabulaire — justice et sécurité.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "crime",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un crime ».",
+      "back": "a crime"
+    },
+    {
+      "id": "criminal",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un criminel ».",
+      "back": "a criminal"
+    },
+    {
+      "id": "victim",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une victime ».",
+      "back": "a victim"
+    },
+    {
+      "id": "witness",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un témoin ».",
+      "back": "a witness"
+    },
+    {
+      "id": "evidence",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une preuve ».",
+      "back": "evidence"
+    },
+    {
+      "id": "police-officer",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un policier ».",
+      "back": "a police officer"
+    },
+    {
+      "id": "court",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un tribunal ».",
+      "back": "a court"
+    },
+    {
+      "id": "judge",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un juge ».",
+      "back": "a judge"
+    },
+    {
+      "id": "guilty",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « coupable ».",
+      "back": "guilty"
+    },
+    {
+      "id": "innocent",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « innocent ».",
+      "back": "innocent"
+    }
+  ]
+}

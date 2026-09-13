@@ -1,0 +1,73 @@
+{
+  "id": "anglais-1re-culture-sciences-innovations",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Culture · Sciences et innovations",
+  "description": "Repères culturels du monde anglophone.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "culture",
+  "cards": [
+    {
+      "id": "repere-01",
+      "kind": "culture",
+      "front": "Quel naturaliste a développé la théorie de l'évolution par sélection naturelle ?",
+      "back": "Charles Darwin."
+    },
+    {
+      "id": "repere-02",
+      "kind": "culture",
+      "front": "Qui est souvent considérée comme la première programmeuse ?",
+      "back": "Ada Lovelace."
+    },
+    {
+      "id": "repere-03",
+      "kind": "culture",
+      "front": "Quel mathématicien britannique a contribué à décrypter Enigma ?",
+      "back": "Alan Turing."
+    },
+    {
+      "id": "repere-04",
+      "kind": "culture",
+      "front": "Qui a inventé le World Wide Web ?",
+      "back": "Tim Berners-Lee."
+    },
+    {
+      "id": "repere-05",
+      "kind": "culture",
+      "front": "Quelle scientifique a contribué à révéler la structure de l'ADN grâce aux rayons X ?",
+      "back": "Rosalind Franklin."
+    },
+    {
+      "id": "repere-06",
+      "kind": "culture",
+      "front": "Qui a découvert la pénicilline ?",
+      "back": "Alexander Fleming."
+    },
+    {
+      "id": "repere-07",
+      "kind": "culture",
+      "front": "À quel inventeur est associé le premier brevet américain du téléphone ?",
+      "back": "Alexander Graham Bell."
+    },
+    {
+      "id": "repere-08",
+      "kind": "culture",
+      "front": "Quels frères ont réalisé un vol motorisé contrôlé en 1903 ?",
+      "back": "Orville and Wilbur Wright."
+    },
+    {
+      "id": "repere-09",
+      "kind": "culture",
+      "front": "Quelle mathématicienne de la NASA a calculé des trajectoires spatiales ?",
+      "back": "Katherine Johnson."
+    },
+    {
+      "id": "repere-10",
+      "kind": "culture",
+      "front": "Quel physicien britannique a écrit A Brief History of Time ?",
+      "back": "Stephen Hawking."
+    }
+  ]
+}

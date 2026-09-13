@@ -1,0 +1,73 @@
+{
+  "id": "anglais-5e-culture-etats-unis",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Culture · États-Unis : géographie et monuments",
+  "description": "Repères culturels du monde anglophone.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "culture",
+  "cards": [
+    {
+      "id": "repere-01",
+      "kind": "culture",
+      "front": "Combien les États-Unis comptent-ils d'États ?",
+      "back": "Fifty states."
+    },
+    {
+      "id": "repere-02",
+      "kind": "culture",
+      "front": "New York est-elle la capitale fédérale ?",
+      "back": "No. The federal capital is Washington, D.C."
+    },
+    {
+      "id": "repere-03",
+      "kind": "culture",
+      "front": "Sur quelle île se trouve la Statue of Liberty ?",
+      "back": "Liberty Island, in New York Harbor."
+    },
+    {
+      "id": "repere-04",
+      "kind": "culture",
+      "front": "Dans quel État se trouve principalement le Grand Canyon ?",
+      "back": "Arizona."
+    },
+    {
+      "id": "repere-05",
+      "kind": "culture",
+      "front": "Quel grand fleuve traverse le centre des États-Unis ?",
+      "back": "The Mississippi River."
+    },
+    {
+      "id": "repere-06",
+      "kind": "culture",
+      "front": "Dans quelle ville se trouve Hollywood ?",
+      "back": "Los Angeles."
+    },
+    {
+      "id": "repere-07",
+      "kind": "culture",
+      "front": "Que reliait historiquement Route 66 ?",
+      "back": "Chicago and the Los Angeles area."
+    },
+    {
+      "id": "repere-08",
+      "kind": "culture",
+      "front": "Quel fut le premier parc national des États-Unis ?",
+      "back": "Yellowstone National Park."
+    },
+    {
+      "id": "repere-09",
+      "kind": "culture",
+      "front": "Quel est le plus grand État américain par sa superficie ?",
+      "back": "Alaska."
+    },
+    {
+      "id": "repere-10",
+      "kind": "culture",
+      "front": "Dans quel océan se trouve Hawaii ?",
+      "back": "The Pacific Ocean."
+    }
+  ]
+}

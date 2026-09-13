@@ -1,0 +1,73 @@
+{
+  "id": "anglais-3e-grammaire-passif-relatives",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Grammaire · Voix passive et relatives",
+  "description": "Règles et automatismes — voix passive et relatives.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "passive-present",
+      "kind": "grammaire",
+      "front": "Mets au passif : People speak English here.",
+      "back": "English is spoken here."
+    },
+    {
+      "id": "passive-past",
+      "kind": "grammaire",
+      "front": "Mets au passif : They built it in 1920.",
+      "back": "It was built in 1920."
+    },
+    {
+      "id": "passive-agent",
+      "kind": "grammaire",
+      "front": "Mets au passif : Shakespeare wrote Hamlet.",
+      "back": "Hamlet was written by Shakespeare."
+    },
+    {
+      "id": "passive-negative",
+      "kind": "grammaire",
+      "front": "Mets au passif : They do not allow phones.",
+      "back": "Phones are not allowed."
+    },
+    {
+      "id": "passive-question",
+      "kind": "grammaire",
+      "front": "Mets au passif : Do they grow tea here?",
+      "back": "Is tea grown here?"
+    },
+    {
+      "id": "who",
+      "kind": "grammaire",
+      "front": "Complète : The activist ___ spoke was convincing.",
+      "back": "The activist who spoke was convincing."
+    },
+    {
+      "id": "which",
+      "kind": "grammaire",
+      "front": "Complète : The film ___ won is British.",
+      "back": "The film which/that won is British."
+    },
+    {
+      "id": "whose",
+      "kind": "grammaire",
+      "front": "Complète : The author ___ book I read is Canadian.",
+      "back": "The author whose book I read is Canadian."
+    },
+    {
+      "id": "where",
+      "kind": "grammaire",
+      "front": "Complète : This is the city ___ she was born.",
+      "back": "This is the city where she was born."
+    },
+    {
+      "id": "omit",
+      "kind": "grammaire",
+      "front": "Peut-on omettre that : The book that I bought ?",
+      "back": "Oui : The book I bought. Le pronom est complément."
+    }
+  ]
+}

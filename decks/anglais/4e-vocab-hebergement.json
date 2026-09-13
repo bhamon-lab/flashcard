@@ -1,0 +1,73 @@
+{
+  "id": "anglais-4e-vocab-hebergement",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Vocabulaire · Vacances et hébergement",
+  "description": "Liste de vocabulaire — vacances et hébergement.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "hotel",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un hôtel ».",
+      "back": "a hotel"
+    },
+    {
+      "id": "youth-hostel",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une auberge de jeunesse ».",
+      "back": "a youth hostel"
+    },
+    {
+      "id": "campsite",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un camping ».",
+      "back": "a campsite"
+    },
+    {
+      "id": "single-room",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une chambre simple ».",
+      "back": "a single room"
+    },
+    {
+      "id": "double-room",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une chambre double ».",
+      "back": "a double room"
+    },
+    {
+      "id": "reception",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la réception ».",
+      "back": "reception"
+    },
+    {
+      "id": "key",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une clé ».",
+      "back": "a key"
+    },
+    {
+      "id": "check-in",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « s'enregistrer à l'arrivée ».",
+      "back": "to check in"
+    },
+    {
+      "id": "check-out",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « libérer la chambre ».",
+      "back": "to check out"
+    },
+    {
+      "id": "available",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « disponible ».",
+      "back": "available"
+    }
+  ]
+}

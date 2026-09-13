@@ -1,0 +1,73 @@
+{
+  "id": "anglais-2de-grammaire-conditionnels",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Grammaire · Conditionnels présent et irréel",
+  "description": "Règles et automatismes — conditionnels présent et irréel.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "zero",
+      "kind": "grammaire",
+      "front": "Complète : If water reaches 0°C, it ___. (freeze)",
+      "back": "If water reaches 0°C, it freezes."
+    },
+    {
+      "id": "first",
+      "kind": "grammaire",
+      "front": "Complète : If we act now, emissions ___. (fall)",
+      "back": "If we act now, emissions will fall."
+    },
+    {
+      "id": "first-modal",
+      "kind": "grammaire",
+      "front": "Complète : If you finish, you ___ leave. (can)",
+      "back": "If you finish, you can leave."
+    },
+    {
+      "id": "unless",
+      "kind": "grammaire",
+      "front": "Reformule avec unless : If we don't act, it will worsen.",
+      "back": "Unless we act, it will worsen."
+    },
+    {
+      "id": "second",
+      "kind": "grammaire",
+      "front": "Complète : If I ___ you, I would wait. (be)",
+      "back": "If I were you, I would wait."
+    },
+    {
+      "id": "second-result",
+      "kind": "grammaire",
+      "front": "Complète : If she had time, she ___ more. (travel)",
+      "back": "If she had time, she would travel more."
+    },
+    {
+      "id": "could",
+      "kind": "grammaire",
+      "front": "Traduis : « Si nous avions plus d'argent, nous pourrions aider. »",
+      "back": "If we had more money, we could help."
+    },
+    {
+      "id": "wish",
+      "kind": "grammaire",
+      "front": "Traduis : « J'aimerais être plus sûr de moi. »",
+      "back": "I wish I were more confident."
+    },
+    {
+      "id": "as-if",
+      "kind": "grammaire",
+      "front": "Traduis : « Il parle comme s'il savait tout. »",
+      "back": "He talks as if he knew everything."
+    },
+    {
+      "id": "difference",
+      "kind": "grammaire",
+      "front": "Quelle différence entre le premier et le deuxième conditionnel ?",
+      "back": "Le premier envisage un possible réel ; le deuxième une hypothèse irréelle ou peu probable."
+    }
+  ]
+}

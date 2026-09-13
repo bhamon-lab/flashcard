@@ -1,0 +1,73 @@
+{
+  "id": "anglais-5e-vocab-repas",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Vocabulaire · Aliments et repas",
+  "description": "Liste de vocabulaire — aliments et repas.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "bread",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « du pain ».",
+      "back": "bread"
+    },
+    {
+      "id": "milk",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « du lait ».",
+      "back": "milk"
+    },
+    {
+      "id": "water",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « de l'eau ».",
+      "back": "water"
+    },
+    {
+      "id": "fruit",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « des fruits ».",
+      "back": "fruit"
+    },
+    {
+      "id": "vegetables",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « des légumes ».",
+      "back": "vegetables"
+    },
+    {
+      "id": "breakfast",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le petit déjeuner ».",
+      "back": "breakfast"
+    },
+    {
+      "id": "lunch",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le déjeuner ».",
+      "back": "lunch"
+    },
+    {
+      "id": "dinner",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le dîner ».",
+      "back": "dinner"
+    },
+    {
+      "id": "hungry",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « avoir faim ».",
+      "back": "to be hungry"
+    },
+    {
+      "id": "thirsty",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « avoir soif ».",
+      "back": "to be thirsty"
+    }
+  ]
+}

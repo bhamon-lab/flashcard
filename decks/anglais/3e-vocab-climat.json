@@ -1,0 +1,73 @@
+{
+  "id": "anglais-3e-vocab-climat",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Vocabulaire · Climat et écologie",
+  "description": "Liste de vocabulaire — climat et écologie.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "global-warming",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le réchauffement climatique ».",
+      "back": "global warming"
+    },
+    {
+      "id": "greenhouse-gas",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un gaz à effet de serre ».",
+      "back": "a greenhouse gas"
+    },
+    {
+      "id": "sea-level",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le niveau de la mer ».",
+      "back": "sea level"
+    },
+    {
+      "id": "wildlife",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la faune sauvage ».",
+      "back": "wildlife"
+    },
+    {
+      "id": "habitat",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un habitat naturel ».",
+      "back": "a habitat"
+    },
+    {
+      "id": "endangered",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « menacé ».",
+      "back": "endangered"
+    },
+    {
+      "id": "protect",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « protéger ».",
+      "back": "to protect"
+    },
+    {
+      "id": "waste-energy",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « gaspiller de l'énergie ».",
+      "back": "to waste energy"
+    },
+    {
+      "id": "public-transport",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les transports en commun ».",
+      "back": "public transport"
+    },
+    {
+      "id": "take-action",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « agir ».",
+      "back": "to take action"
+    }
+  ]
+}

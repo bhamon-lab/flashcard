@@ -1,0 +1,73 @@
+{
+  "id": "anglais-1re-vocab-action-environnementale",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Vocabulaire · Action environnementale",
+  "description": "Liste de vocabulaire — action environnementale.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "campaigner",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un militant ».",
+      "back": "a campaigner"
+    },
+    {
+      "id": "conservation",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la protection de la nature ».",
+      "back": "conservation"
+    },
+    {
+      "id": "emission",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une émission de gaz ».",
+      "back": "an emission"
+    },
+    {
+      "id": "net-zero",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la neutralité carbone ».",
+      "back": "net zero"
+    },
+    {
+      "id": "greenwashing",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'écoblanchiment ».",
+      "back": "greenwashing"
+    },
+    {
+      "id": "policy-change",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un changement de politique ».",
+      "back": "a policy change"
+    },
+    {
+      "id": "phase-out",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « supprimer progressivement ».",
+      "back": "to phase out"
+    },
+    {
+      "id": "curb",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « freiner ».",
+      "back": "to curb"
+    },
+    {
+      "id": "hold-accountable",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « demander des comptes à ».",
+      "back": "to hold accountable"
+    },
+    {
+      "id": "environmental-impact",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'impact environnemental ».",
+      "back": "the environmental impact"
+    }
+  ]
+}

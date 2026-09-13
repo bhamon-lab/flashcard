@@ -1,0 +1,85 @@
+{
+  "id": "anglais-2de-oral-memoire",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Compréhension orale · Mémoire et patrimoine",
+  "description": "Même liste que « Mémoire et patrimoine », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "memorial",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un monument commémoratif",
+      "audio_text": "a memorial"
+    },
+    {
+      "id": "archive",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "des archives",
+      "audio_text": "archives"
+    },
+    {
+      "id": "testimony",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un témoignage",
+      "audio_text": "a testimony"
+    },
+    {
+      "id": "ancestor",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un ancêtre",
+      "audio_text": "an ancestor"
+    },
+    {
+      "id": "generation",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une génération",
+      "audio_text": "a generation"
+    },
+    {
+      "id": "collective-memory",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la mémoire collective",
+      "audio_text": "collective memory"
+    },
+    {
+      "id": "preserve",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "préserver",
+      "audio_text": "to preserve"
+    },
+    {
+      "id": "remember",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "se souvenir",
+      "audio_text": "to remember"
+    },
+    {
+      "id": "honour",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "rendre hommage à",
+      "audio_text": "to honour"
+    },
+    {
+      "id": "pass-down",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "transmettre",
+      "audio_text": "to pass down"
+    }
+  ]
+}

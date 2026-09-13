@@ -1,0 +1,73 @@
+{
+  "id": "anglais-6e-culture-fetes-symboles",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Culture · Fêtes et symboles",
+  "description": "Repères culturels du monde anglophone.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "culture",
+  "cards": [
+    {
+      "id": "repere-01",
+      "kind": "culture",
+      "front": "Quand célèbre-t-on Christmas Day ?",
+      "back": "On 25 December."
+    },
+    {
+      "id": "repere-02",
+      "kind": "culture",
+      "front": "Quelle fête est associée aux œufs et au lapin ?",
+      "back": "Easter."
+    },
+    {
+      "id": "repere-03",
+      "kind": "culture",
+      "front": "Quelle fête célèbre-t-on le 14 février ?",
+      "back": "Valentine's Day."
+    },
+    {
+      "id": "repere-04",
+      "kind": "culture",
+      "front": "Quelle fête irlandaise a lieu le 17 mars ?",
+      "back": "Saint Patrick's Day."
+    },
+    {
+      "id": "repere-05",
+      "kind": "culture",
+      "front": "Quelle fête américaine a lieu le quatrième jeudi de novembre ?",
+      "back": "Thanksgiving."
+    },
+    {
+      "id": "repere-06",
+      "kind": "culture",
+      "front": "Quelle fête britannique a lieu le 5 novembre ?",
+      "back": "Bonfire Night / Guy Fawkes Night."
+    },
+    {
+      "id": "repere-07",
+      "kind": "culture",
+      "front": "Quel animal symbolise souvent les États-Unis ?",
+      "back": "The bald eagle."
+    },
+    {
+      "id": "repere-08",
+      "kind": "culture",
+      "front": "Quelle plante symbolise l'Angleterre ?",
+      "back": "The rose."
+    },
+    {
+      "id": "repere-09",
+      "kind": "culture",
+      "front": "Quelle plante symbolise l'Écosse ?",
+      "back": "The thistle."
+    },
+    {
+      "id": "repere-10",
+      "kind": "culture",
+      "front": "Quelle feuille symbolise le Canada ?",
+      "back": "The maple leaf."
+    }
+  ]
+}

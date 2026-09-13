@@ -1,0 +1,85 @@
+{
+  "id": "anglais-3e-oral-justice",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Compréhension orale · Justice et sécurité",
+  "description": "Même liste que « Justice et sécurité », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "crime",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un crime",
+      "audio_text": "a crime"
+    },
+    {
+      "id": "criminal",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un criminel",
+      "audio_text": "a criminal"
+    },
+    {
+      "id": "victim",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une victime",
+      "audio_text": "a victim"
+    },
+    {
+      "id": "witness",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un témoin",
+      "audio_text": "a witness"
+    },
+    {
+      "id": "evidence",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une preuve",
+      "audio_text": "evidence"
+    },
+    {
+      "id": "police-officer",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un policier",
+      "audio_text": "a police officer"
+    },
+    {
+      "id": "court",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un tribunal",
+      "audio_text": "a court"
+    },
+    {
+      "id": "judge",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un juge",
+      "audio_text": "a judge"
+    },
+    {
+      "id": "guilty",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "coupable",
+      "audio_text": "guilty"
+    },
+    {
+      "id": "innocent",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "innocent",
+      "audio_text": "innocent"
+    }
+  ]
+}

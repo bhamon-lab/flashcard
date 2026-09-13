@@ -1,0 +1,85 @@
+{
+  "id": "anglais-1re-oral-pouvoir-contestation",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Compréhension orale · Pouvoir et contestation",
+  "description": "Même liste que « Pouvoir et contestation », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "authority",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'autorité",
+      "audio_text": "authority"
+    },
+    {
+      "id": "protest",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une manifestation",
+      "audio_text": "a protest"
+    },
+    {
+      "id": "demonstrator",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un manifestant",
+      "audio_text": "a demonstrator"
+    },
+    {
+      "id": "civil-disobedience",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la désobéissance civile",
+      "audio_text": "civil disobedience"
+    },
+    {
+      "id": "oppression",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'oppression",
+      "audio_text": "oppression"
+    },
+    {
+      "id": "resistance",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la résistance",
+      "audio_text": "resistance"
+    },
+    {
+      "id": "challenge-authority",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "contester l'autorité",
+      "audio_text": "to challenge authority"
+    },
+    {
+      "id": "speak-out",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "prendre publiquement position",
+      "audio_text": "to speak out"
+    },
+    {
+      "id": "ban",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "interdire",
+      "audio_text": "to ban"
+    },
+    {
+      "id": "grant-right",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "accorder un droit",
+      "audio_text": "to grant a right"
+    }
+  ]
+}
