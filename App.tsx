@@ -44,6 +44,7 @@ import {
 import { colors, mono, radius } from './src/theme';
 import { MathView, stripMathText } from './src/MathView';
 import { syncDecks } from './src/sync';
+import { buildMathProgression, type ProgressionBranch } from './src/progression';
 import { checkForAppUpdate } from './src/app-update';
 import { Card, Deck, ReviewDelay, ReviewDelays } from './src/types';
 import { insertLaterInQueue } from './src/sessionQueue';
@@ -489,6 +490,68 @@ function SubjectsEditorModal({ visible, subjects, hidden, custom, onClose, onCha
   );
 }
 
+function ProgressionDeckRow({ entry, onOpen, onToggleFavorite }: {
+  entry: { deck: Deck; title: string };
+  onOpen: (id: number) => void;
+  onToggleFavorite: (id: number) => void;
+}) {
+  const { deck, title } = entry;
+  const favorite = isFavorite(deck);
+  const progress = deck.total_count ? Math.round((Number(deck.learned_count) / Number(deck.total_count)) * 100) : 0;
+  return (
+    <Pressable onPress={() => onOpen(deck.id)} style={({ pressed }) => [styles.treeRow, pressed && styles.cardPressed]}>
+      <View style={[styles.treeRowMark, { backgroundColor: deck.color }]}><Text style={styles.treeRowGlyph}>{glyphFor(deck.id)}</Text></View>
+      <View style={styles.treeRowBody}>
+        <Text style={styles.treeRowTitle} numberOfLines={1}>{title}</Text>
+        <View style={styles.treeRowMeta}>
+          {Number(deck.due_count) > 0 ? (
+            <View style={styles.duePill}><Text style={styles.duePillText}>{deck.due_count} à revoir</Text></View>
+          ) : null}
+          {Number(deck.new_count) > 0 ? (
+            <View style={styles.treePillNew}><Text style={styles.treePillNewText}>{deck.new_count} nouvelles</Text></View>
+          ) : null}
+          {progress > 0 ? <Text style={styles.treeRowProgress}>{progress}% appris</Text> : null}
+        </View>
+      </View>
+      <Pressable
+        onPress={() => onToggleFavorite(deck.id)}
+        accessibilityLabel={favorite ? `Retirer ${title} des favoris` : `Ajouter ${title} aux favoris`}
+        style={({ pressed }) => [styles.starButton, pressed && styles.pressed]}
+      >
+        <Ionicons name={favorite ? 'star' : 'star-outline'} size={18} color={favorite ? '#D9A112' : colors.muted} />
+      </Pressable>
+    </Pressable>
+  );
+}
+
+function ProgressionBranchCard({ branch, onOpen, onToggleFavorite }: {
+  branch: ProgressionBranch;
+  onOpen: (id: number) => void;
+  onToggleFavorite: (id: number) => void;
+}) {
+  return (
+    <View style={styles.treeBranch}>
+      <View style={styles.treeBranchHeader}>
+        <Ionicons name="git-network-outline" size={16} color={colors.blue} />
+        <Text style={styles.treeBranchTitle}>{branch.title}</Text>
+      </View>
+      {branch.levels.map((level) => (
+        <View key={`${level.grade}-${level.label}`} style={styles.treeLevel}>
+          <Text style={styles.treeLevelLabel}>{level.label}</Text>
+          {level.tracks.map((track) => (
+            <View key={track.label || 'principal'} style={styles.treeTrack}>
+              {track.label ? <Text style={styles.treeTrackLabel}>{track.label}</Text> : null}
+              {track.decks.map((entry) => (
+                <ProgressionDeckRow key={entry.deck.id} entry={entry} onOpen={onOpen} onToggleFavorite={onToggleFavorite} />
+              ))}
+            </View>
+          ))}
+        </View>
+      ))}
+    </View>
+  );
+}
+
 function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
   subject: string;
   onBack: () => void;
@@ -499,9 +562,17 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
   const [decks, setDecks] = useState<Deck[]>([]);
   const [showAll, setShowAll] = useState(false);
   const [gradeFilter, setGradeFilter] = useState<string | null>(null);
+  const [viewMode, setViewMode] = useState<'classe' | 'progression'>('classe');
   useEffect(() => { void getDecks().then(setDecks); }, []);
   const group = groupBySubject(decks).find((entry) => entry.name.toLowerCase() === subject.toLowerCase())
     ?? { name: subject, decks: [] as Deck[] };
+
+  // La matière Maths propose aussi l'arbre de progression (docs/progression-mathematiques-2026-2027.md).
+  const isMath = /math/i.test(group.name);
+  const progression = useMemo(
+    () => (isMath ? buildMathProgression(group.decks) : [] as ProgressionBranch[]),
+    [isMath, group.decks],
+  );
 
   // Classes distinctes (6e, 5e…), triées naturellement, pour les paquets de la matière.
   const grades = useMemo(() => {
@@ -571,9 +642,28 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
           />
         </View>
 
+        {isMath && group.decks.length ? (
+          <View style={styles.viewSwitch}>
+            <Pressable onPress={() => setViewMode('classe')} style={({ pressed }) => [styles.viewSwitchButton, viewMode === 'classe' && styles.viewSwitchButtonOn, pressed && styles.pressed]} accessibilityRole="button" accessibilityLabel="Voir par classe">
+              <Ionicons name="albums-outline" size={15} color={viewMode === 'classe' ? colors.blue : colors.muted} />
+              <Text style={[styles.viewSwitchText, viewMode === 'classe' && styles.viewSwitchTextOn]}>Par classe</Text>
+            </Pressable>
+            <Pressable onPress={() => setViewMode('progression')} style={({ pressed }) => [styles.viewSwitchButton, viewMode === 'progression' && styles.viewSwitchButtonOn, pressed && styles.pressed]} accessibilityRole="button" accessibilityLabel="Voir l'arbre de progression">
+              <Ionicons name="git-network-outline" size={15} color={viewMode === 'progression' ? colors.blue : colors.muted} />
+              <Text style={[styles.viewSwitchText, viewMode === 'progression' && styles.viewSwitchTextOn]}>Progression</Text>
+            </Pressable>
+          </View>
+        ) : null}
+
+        {viewMode === 'progression' ? (
+          <Text style={styles.treeIntro}>
+            De la 6e à la terminale, thèmes puis classes dans l’ordre conseillé. L’arbre est documentaire : aucun paquet n’est verrouillé.
+          </Text>
+        ) : null}
+
         <View style={styles.sectionHeaderCompact}>
-          <Text style={styles.sectionTitle}>{showAll ? 'Tous les paquets' : 'Paquets favoris'}</Text>
-          {group.decks.length ? (
+          <Text style={styles.sectionTitle}>{viewMode === 'progression' ? 'Arbre de progression' : showAll ? 'Tous les paquets' : 'Paquets favoris'}</Text>
+          {viewMode === 'classe' && group.decks.length ? (
             <Pressable onPress={() => setShowAll((value) => !value)} style={({ pressed }) => [styles.filterToggle, pressed && styles.pressed]}>
               <Ionicons name={showAll ? 'star' : 'albums-outline'} size={15} color={colors.blue} />
               <Text style={styles.filterToggleText}>{showAll ? 'Favoris' : `Tous (${group.decks.length})`}</Text>
@@ -581,7 +671,7 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
           ) : null}
         </View>
 
-        {grades.length > 1 ? (
+        {viewMode === 'classe' && grades.length > 1 ? (
           <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.mixFilterRow} contentContainerStyle={styles.mixFilterContent}>
             <Pressable onPress={() => setGradeFilter(null)} style={({ pressed }) => [styles.mixFilterChip, !gradeKey && styles.mixFilterChipOn, pressed && styles.pressed]}>
               <Ionicons name="albums-outline" size={13} color={!gradeKey ? colors.white : colors.blue} />
@@ -602,16 +692,18 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
           </ScrollView>
         ) : null}
 
-        {visibleDecks.map((deck) => <DeckCard key={deck.id} deck={deck} onOpen={onOpenDeck} onToggleFavorite={toggleFavorite} />)}
+        {viewMode === 'progression'
+          ? progression.map((branch) => <ProgressionBranchCard key={branch.title} branch={branch} onOpen={onOpenDeck} onToggleFavorite={toggleFavorite} />)
+          : visibleDecks.map((deck) => <DeckCard key={deck.id} deck={deck} onOpen={onOpenDeck} onToggleFavorite={toggleFavorite} />)}
 
-        {!showAll && !favoriteDecks.length && group.decks.length ? (
+        {viewMode === 'classe' && !showAll && !favoriteDecks.length && group.decks.length ? (
           <Pressable onPress={() => setShowAll(true)} style={styles.newDeckCard}>
             <View style={styles.newDeckIcon}><Ionicons name="star-outline" size={24} color={colors.blue} /></View>
             <View><Text style={styles.newDeckTitle}>Aucun paquet favori</Text><Text style={styles.newDeckCaption}>Affiche tous les paquets pour en choisir</Text></View>
           </Pressable>
         ) : null}
 
-        {gradeKey && !gradeFiltered.length ? (
+        {viewMode === 'classe' && gradeKey && !gradeFiltered.length ? (
           <View style={styles.newDeckCard}>
             <View style={styles.newDeckIcon}><Ionicons name="funnel-outline" size={24} color={colors.muted} /></View>
             <View><Text style={styles.newDeckTitle}>Aucun paquet en {gradeFilter}</Text><Text style={styles.newDeckCaption}>Choisis une autre classe</Text></View>
@@ -1682,6 +1774,28 @@ const styles = StyleSheet.create({
   mixFilterChipOn: { backgroundColor: colors.blue },
   mixFilterChipText: { fontSize: 12, fontWeight: '800', color: colors.blue },
   mixFilterChipTextOn: { color: colors.white },
+  viewSwitch: { flexDirection: 'row', backgroundColor: colors.blueSoft, borderRadius: 14, padding: 3, marginTop: 18 },
+  viewSwitchButton: { flex: 1, height: 34, borderRadius: 11, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6 },
+  viewSwitchButtonOn: { backgroundColor: colors.paper, ...shadow },
+  viewSwitchText: { fontSize: 13, fontWeight: '800', color: colors.muted },
+  viewSwitchTextOn: { color: colors.blue },
+  treeIntro: { fontSize: 12, color: colors.muted, marginTop: 14, lineHeight: 18 },
+  treeBranch: { backgroundColor: colors.paper, borderRadius: radius.medium, borderWidth: 1, borderColor: '#ECECF0', padding: 16, marginBottom: 12, ...shadow },
+  treeBranchHeader: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 4 },
+  treeBranchTitle: { fontSize: 16, fontWeight: '800', color: colors.ink, flex: 1, letterSpacing: -0.3 },
+  treeLevel: { marginTop: 12 },
+  treeLevelLabel: { fontSize: 11, fontWeight: '900', letterSpacing: 1, color: colors.muted, textTransform: 'uppercase', marginBottom: 8 },
+  treeTrack: { marginBottom: 4 },
+  treeTrackLabel: { fontSize: 12, fontWeight: '800', color: colors.blue, marginBottom: 7, marginTop: 2 },
+  treeRow: { flexDirection: 'row', alignItems: 'center', backgroundColor: colors.canvas, borderRadius: 13, padding: 10, marginBottom: 7 },
+  treeRowMark: { width: 34, height: 40, borderRadius: 10, alignItems: 'center', justifyContent: 'center', marginRight: 11 },
+  treeRowGlyph: { fontSize: 13, fontWeight: '700', color: colors.blue, fontFamily: mono },
+  treeRowBody: { flex: 1, minWidth: 0 },
+  treeRowTitle: { fontSize: 14, fontWeight: '800', color: colors.ink },
+  treeRowMeta: { flexDirection: 'row', alignItems: 'center', gap: 7, marginTop: 4, flexWrap: 'wrap' },
+  treePillNew: { backgroundColor: colors.greenSoft, borderRadius: 20, paddingHorizontal: 8, paddingVertical: 4 },
+  treePillNewText: { color: colors.green, fontSize: 10, fontWeight: '800' },
+  treeRowProgress: { fontSize: 10, fontWeight: '700', color: colors.muted },
   mixGroup: { backgroundColor: colors.paper, borderRadius: 14, borderWidth: 1, borderColor: colors.line, paddingHorizontal: 14, marginBottom: 10, paddingVertical: 6 },
   mixGroupTitle: { fontSize: 11, fontWeight: '900', letterSpacing: 1, color: colors.muted, textTransform: 'uppercase', paddingVertical: 7 },
   mixRow: { minHeight: 64, flexDirection: 'row', alignItems: 'center', gap: 11 },
