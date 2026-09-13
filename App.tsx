@@ -719,7 +719,7 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
   );
 }
 
-function DeckScreen({ deckId, onBack, onStudy, onSettings }: { deckId: number; onBack: () => void; onStudy: (newCardAllowance: number) => void; onSettings: () => void }) {
+function DeckScreen({ deckId, onBack, onStudy, onSettings }: { deckId: number; onBack: (subject: string) => void; onStudy: (newCardAllowance: number) => void; onSettings: () => void }) {
   const [deck, setDeck] = useState<Deck | null>(null);
   const [cards, setCards] = useState<Card[]>([]);
   const [editorCard, setEditorCard] = useState<Card | null | undefined>(undefined);
@@ -751,7 +751,7 @@ function DeckScreen({ deckId, onBack, onStudy, onSettings }: { deckId: number; o
     <SafeAreaView style={styles.screen} edges={['top']}>
       <ScrollView contentContainerStyle={styles.page}>
         <View style={styles.topBar}>
-          <IconButton name="arrow-back" label="Retour" onPress={onBack} />
+          <IconButton name="arrow-back" label="Retour" onPress={() => onBack(deck.subject)} />
           <Text style={styles.topBarTitle}>Paquet</Text>
           <IconButton name="ellipsis-horizontal" label="Réglages du paquet" onPress={onSettings} />
         </View>
@@ -1492,7 +1492,9 @@ function AppContent() {
     const subscription = BackHandler.addEventListener('hardwareBackPress', () => {
       if (route.name === 'home') return false;
 
-      if (route.name === 'deck' || route.name === 'study' || route.name === 'subject' || route.name === 'stats') {
+      if (route.name === 'deck') {
+        void getDeck(route.deckId).then((deck) => setRoute(deck ? { name: 'subject', subject: deck.subject } : { name: 'home' }));
+      } else if (route.name === 'study' || route.name === 'subject' || route.name === 'stats') {
         setRoute({ name: 'home' });
       } else {
         setRoute({ name: 'deck', deckId: route.deckId });
@@ -1517,7 +1519,7 @@ function AppContent() {
       <StatusBar style="dark" />
       {route.name === 'home' ? <HomeScreen onOpenSubject={(subject) => setRoute({ name: 'subject', subject })} onStudy={(deckIds, newCardAllowance) => setRoute({ name: 'study', deckIds, newCardAllowance })} onOpenStats={() => setRoute({ name: 'stats' })} /> : null}
       {route.name === 'subject' ? <SubjectScreen subject={route.subject} onBack={() => setRoute({ name: 'home' })} onOpenDeck={(deckId) => setRoute({ name: 'deck', deckId })} onStudy={(deckIds, newCardAllowance) => setRoute({ name: 'study', deckIds, newCardAllowance })} onCreate={(subject) => void openCreate(subject)} /> : null}
-      {route.name === 'deck' ? <DeckScreen deckId={route.deckId} onBack={() => setRoute({ name: 'home' })} onStudy={(newCardAllowance) => setRoute({ name: 'study', deckIds: [route.deckId], newCardAllowance })} onSettings={() => setRoute({ name: 'settings', deckId: route.deckId })} /> : null}
+      {route.name === 'deck' ? <DeckScreen deckId={route.deckId} onBack={(subject) => setRoute({ name: 'subject', subject })} onStudy={(newCardAllowance) => setRoute({ name: 'study', deckIds: [route.deckId], newCardAllowance })} onSettings={() => setRoute({ name: 'settings', deckId: route.deckId })} /> : null}
       {route.name === 'settings' ? <DeckSettingsScreen deckId={route.deckId} onBack={() => setRoute({ name: 'deck', deckId: route.deckId })} /> : null}
       {route.name === 'stats' ? <StatsScreen onBack={() => setRoute({ name: 'home' })} /> : null}
       {route.name === 'study' ? <StudyScreen deckIds={route.deckIds} newCardAllowance={route.newCardAllowance} onClose={() => setRoute({ name: 'home' })} /> : null}
