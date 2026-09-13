@@ -1,0 +1,73 @@
+{
+  "id": "anglais-4e-vocab-sante",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Vocabulaire · Corps et santé",
+  "description": "Liste de vocabulaire — corps et santé.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "the-head",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la tête ».",
+      "back": "the head"
+    },
+    {
+      "id": "the-throat",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la gorge ».",
+      "back": "the throat"
+    },
+    {
+      "id": "the-back",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le dos ».",
+      "back": "the back"
+    },
+    {
+      "id": "to-have-a-headache",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « avoir mal à la tête ».",
+      "back": "to have a headache"
+    },
+    {
+      "id": "to-have-a-fever",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « avoir de la fièvre ».",
+      "back": "to have a fever"
+    },
+    {
+      "id": "to-cough",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « tousser ».",
+      "back": "to cough"
+    },
+    {
+      "id": "to-have-a-cold",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « être enrhumé ».",
+      "back": "to have a cold"
+    },
+    {
+      "id": "medicine",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un médicament ».",
+      "back": "medicine"
+    },
+    {
+      "id": "a-doctor",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un médecin ».",
+      "back": "a doctor"
+    },
+    {
+      "id": "to-rest",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « se reposer ».",
+      "back": "to rest"
+    }
+  ]
+}

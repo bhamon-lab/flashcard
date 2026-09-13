@@ -1,0 +1,85 @@
+{
+  "id": "anglais-1re-oral-migration-memoire",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Compréhension orale · Migration et mémoire",
+  "description": "Même liste que « Migration et mémoire », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "a-migrant",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un migrant",
+      "audio_text": "a migrant"
+    },
+    {
+      "id": "a-refugee",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un réfugié",
+      "audio_text": "a refugee"
+    },
+    {
+      "id": "exile",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l’exil",
+      "audio_text": "exile"
+    },
+    {
+      "id": "a-border",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une frontière",
+      "audio_text": "a border"
+    },
+    {
+      "id": "heritage",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le patrimoine",
+      "audio_text": "heritage"
+    },
+    {
+      "id": "a-legacy",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un héritage",
+      "audio_text": "a legacy"
+    },
+    {
+      "id": "a-memory",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un souvenir",
+      "audio_text": "a memory"
+    },
+    {
+      "id": "to-settle",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "s’installer",
+      "audio_text": "to settle"
+    },
+    {
+      "id": "to-flee",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "fuir",
+      "audio_text": "to flee"
+    },
+    {
+      "id": "to-commemorate",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "commémorer",
+      "audio_text": "to commemorate"
+    }
+  ]
+}

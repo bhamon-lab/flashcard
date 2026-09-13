@@ -1,0 +1,85 @@
+{
+  "id": "anglais-term-oral-politique-societe",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Compréhension orale · Politique et société",
+  "description": "Même liste que « Politique et société », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "a-stakeholder",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une partie prenante",
+      "audio_text": "a stakeholder"
+    },
+    {
+      "id": "a-policy",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une politique publique",
+      "audio_text": "a policy"
+    },
+    {
+      "id": "a-policymaker",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un décideur",
+      "audio_text": "a policymaker"
+    },
+    {
+      "id": "accountability",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la responsabilité",
+      "audio_text": "accountability"
+    },
+    {
+      "id": "inequalities",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les inégalités",
+      "audio_text": "inequalities"
+    },
+    {
+      "id": "inclusion",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l’inclusion",
+      "audio_text": "inclusion"
+    },
+    {
+      "id": "a-safeguard",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un dispositif de protection",
+      "audio_text": "a safeguard"
+    },
+    {
+      "id": "to-implement",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "mettre en œuvre",
+      "audio_text": "to implement"
+    },
+    {
+      "id": "to-enforce",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "faire respecter",
+      "audio_text": "to enforce"
+    },
+    {
+      "id": "to-foster",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "favoriser",
+      "audio_text": "to foster"
+    }
+  ]
+}

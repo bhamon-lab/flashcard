@@ -1,0 +1,85 @@
+{
+  "id": "anglais-term-oral-mondialisation",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Compréhension orale · Économie et mondialisation",
+  "description": "Même liste que « Économie et mondialisation », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "supply-chain",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une chaîne d'approvisionnement",
+      "audio_text": "a supply chain"
+    },
+    {
+      "id": "trade",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le commerce",
+      "audio_text": "trade"
+    },
+    {
+      "id": "tariff",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un droit de douane",
+      "audio_text": "a tariff"
+    },
+    {
+      "id": "consumer",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un consommateur",
+      "audio_text": "a consumer"
+    },
+    {
+      "id": "shareholder",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un actionnaire",
+      "audio_text": "a shareholder"
+    },
+    {
+      "id": "inequality-gap",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'écart de richesse",
+      "audio_text": "the wealth gap"
+    },
+    {
+      "id": "outsource",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "externaliser",
+      "audio_text": "to outsource"
+    },
+    {
+      "id": "regulate-market",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "réguler le marché",
+      "audio_text": "to regulate the market"
+    },
+    {
+      "id": "drive-growth",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "stimuler la croissance",
+      "audio_text": "to drive growth"
+    },
+    {
+      "id": "economic-downturn",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un ralentissement économique",
+      "audio_text": "an economic downturn"
+    }
+  ]
+}

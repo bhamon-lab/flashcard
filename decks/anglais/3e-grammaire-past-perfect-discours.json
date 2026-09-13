@@ -1,0 +1,73 @@
+{
+  "id": "anglais-3e-grammaire-past-perfect-discours",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Grammaire · Past perfect et discours indirect",
+  "description": "Règles et automatismes — past perfect et discours indirect.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "past-perfect",
+      "kind": "grammaire",
+      "front": "Complète : When I arrived, they ___. (leave)",
+      "back": "When I arrived, they had left."
+    },
+    {
+      "id": "negative",
+      "kind": "grammaire",
+      "front": "Traduis : « Je n'avais jamais vu la mer. »",
+      "back": "I had never seen the sea."
+    },
+    {
+      "id": "question",
+      "kind": "grammaire",
+      "front": "Traduis : « Avait-elle déjà terminé ? »",
+      "back": "Had she already finished?"
+    },
+    {
+      "id": "before",
+      "kind": "grammaire",
+      "front": "Relie : He ate. Then he left.",
+      "back": "After he had eaten, he left."
+    },
+    {
+      "id": "reported-be",
+      "kind": "grammaire",
+      "front": "Rapporte : She said, “I am ready.”",
+      "back": "She said that she was ready."
+    },
+    {
+      "id": "reported-present",
+      "kind": "grammaire",
+      "front": "Rapporte : He said, “I live here.”",
+      "back": "He said that he lived there."
+    },
+    {
+      "id": "reported-will",
+      "kind": "grammaire",
+      "front": "Rapporte : She said, “I will come.”",
+      "back": "She said that she would come."
+    },
+    {
+      "id": "reported-can",
+      "kind": "grammaire",
+      "front": "Rapporte : He said, “I can swim.”",
+      "back": "He said that he could swim."
+    },
+    {
+      "id": "said-told",
+      "kind": "grammaire",
+      "front": "Complète : She ___ me that she agreed.",
+      "back": "She told me that she agreed."
+    },
+    {
+      "id": "time-change",
+      "kind": "grammaire",
+      "front": "Dans un récit au passé, que devient tomorrow ?",
+      "back": "the next day / the following day"
+    }
+  ]
+}

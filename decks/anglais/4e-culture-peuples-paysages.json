@@ -1,0 +1,73 @@
+{
+  "id": "anglais-4e-culture-peuples-paysages",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Culture · Peuples autochtones et paysages",
+  "description": "Repères culturels du monde anglophone.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "culture",
+  "cards": [
+    {
+      "id": "repere-01",
+      "kind": "culture",
+      "front": "Quels peuples autochtones vivent en Australie ?",
+      "back": "Aboriginal and Torres Strait Islander peoples."
+    },
+    {
+      "id": "repere-02",
+      "kind": "culture",
+      "front": "Quel peuple autochtone est associé à Aotearoa New Zealand ?",
+      "back": "The Māori."
+    },
+    {
+      "id": "repere-03",
+      "kind": "culture",
+      "front": "Quels sont les trois groupes autochtones reconnus au Canada ?",
+      "back": "First Nations, Inuit and Métis."
+    },
+    {
+      "id": "repere-04",
+      "kind": "culture",
+      "front": "Quel monolithe sacré se trouve au centre de l'Australie ?",
+      "back": "Uluru."
+    },
+    {
+      "id": "repere-05",
+      "kind": "culture",
+      "front": "Quel récif corallien se trouve au large du Queensland ?",
+      "back": "The Great Barrier Reef."
+    },
+    {
+      "id": "repere-06",
+      "kind": "culture",
+      "front": "Quelle chaîne de montagnes traverse l'ouest du Canada ?",
+      "back": "The Rocky Mountains."
+    },
+    {
+      "id": "repere-07",
+      "kind": "culture",
+      "front": "À la frontière de quels pays se trouvent les chutes du Niagara ?",
+      "back": "Canada and the United States."
+    },
+    {
+      "id": "repere-08",
+      "kind": "culture",
+      "front": "Qu'est-ce qu'un haka ?",
+      "back": "A Māori ceremonial performance."
+    },
+    {
+      "id": "repere-09",
+      "kind": "culture",
+      "front": "Quel traité fut signé à Waitangi en 1840 ?",
+      "back": "The Treaty of Waitangi."
+    },
+    {
+      "id": "repere-10",
+      "kind": "culture",
+      "front": "Que désigne the Dreaming dans les cultures aborigènes ?",
+      "back": "A complex system of beliefs, creation stories and connections to Country."
+    }
+  ]
+}

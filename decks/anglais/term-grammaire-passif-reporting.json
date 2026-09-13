@@ -1,0 +1,73 @@
+{
+  "id": "anglais-term-grammaire-passif-reporting",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Grammaire · Passif et structures de discours",
+  "description": "Règles et automatismes — passif et structures de discours.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "reporting-passive",
+      "kind": "grammaire",
+      "front": "Reformule : People say that the policy works.",
+      "back": "The policy is said to work."
+    },
+    {
+      "id": "past-reporting",
+      "kind": "grammaire",
+      "front": "Reformule : People believe that he lied.",
+      "back": "He is believed to have lied."
+    },
+    {
+      "id": "get-passive",
+      "kind": "grammaire",
+      "front": "Traduis : « Il s'est fait licencier. »",
+      "back": "He got fired."
+    },
+    {
+      "id": "have-something-done",
+      "kind": "grammaire",
+      "front": "Traduis : « Ils ont fait vérifier les données. »",
+      "back": "They had the data checked."
+    },
+    {
+      "id": "passive-gerund",
+      "kind": "grammaire",
+      "front": "Mets au passif : I dislike people interrupting me.",
+      "back": "I dislike being interrupted."
+    },
+    {
+      "id": "report-verb",
+      "kind": "grammaire",
+      "front": "Rapporte avec deny : “I didn't leak it,” she said.",
+      "back": "She denied leaking it."
+    },
+    {
+      "id": "accuse",
+      "kind": "grammaire",
+      "front": "Rapporte avec accuse : “You lied,” he said to her.",
+      "back": "He accused her of lying."
+    },
+    {
+      "id": "urge",
+      "kind": "grammaire",
+      "front": "Rapporte avec urge : “Act now,” they told the government.",
+      "back": "They urged the government to act."
+    },
+    {
+      "id": "claim",
+      "kind": "grammaire",
+      "front": "Traduis : « Il prétend avoir trouvé une solution. »",
+      "back": "He claims to have found a solution."
+    },
+    {
+      "id": "seem",
+      "kind": "grammaire",
+      "front": "Traduis : « La mesure semble avoir échoué. »",
+      "back": "The measure seems to have failed."
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "anglais-4e-oral-achats",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Compréhension orale · Achats et argent",
+  "description": "Même liste que « Achats et argent », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "price",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le prix",
+      "audio_text": "the price"
+    },
+    {
+      "id": "cash",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "des espèces",
+      "audio_text": "cash"
+    },
+    {
+      "id": "credit-card",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une carte bancaire",
+      "audio_text": "a credit card"
+    },
+    {
+      "id": "receipt",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un reçu",
+      "audio_text": "a receipt"
+    },
+    {
+      "id": "change",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la monnaie",
+      "audio_text": "change"
+    },
+    {
+      "id": "cheap",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "bon marché",
+      "audio_text": "cheap"
+    },
+    {
+      "id": "expensive",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "cher",
+      "audio_text": "expensive"
+    },
+    {
+      "id": "try-on",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "essayer un vêtement",
+      "audio_text": "to try on"
+    },
+    {
+      "id": "size",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une taille",
+      "audio_text": "a size"
+    },
+    {
+      "id": "how-much",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "Combien cela coûte-t-il ?",
+      "audio_text": "How much is it?"
+    }
+  ]
+}

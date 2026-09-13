@@ -1,0 +1,73 @@
+{
+  "id": "anglais-term-grammaire-emphase-synthese",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Grammaire · Emphase et synthèse",
+  "description": "Règles et automatismes — emphase et synthèse.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "cleft",
+      "kind": "grammaire",
+      "front": "Mets en relief le moment : They acted in 2020.",
+      "back": "It was in 2020 that they acted."
+    },
+    {
+      "id": "what-cleft",
+      "kind": "grammaire",
+      "front": "Mets en relief le besoin : We need a long-term solution.",
+      "back": "What we need is a long-term solution."
+    },
+    {
+      "id": "negative-inversion",
+      "kind": "grammaire",
+      "front": "Reformule avec rarely : Governments rarely agree so quickly.",
+      "back": "Rarely do governments agree so quickly."
+    },
+    {
+      "id": "not-only",
+      "kind": "grammaire",
+      "front": "Complète : Not only ___ costly, but it is also ineffective.",
+      "back": "Not only is it costly, but it is also ineffective."
+    },
+    {
+      "id": "participle-clause",
+      "kind": "grammaire",
+      "front": "Réduis : Because it was designed carefully, the policy succeeded.",
+      "back": "Designed carefully, the policy succeeded."
+    },
+    {
+      "id": "nominalisation",
+      "kind": "grammaire",
+      "front": "Nominalise : The government decided to intervene.",
+      "back": "The government's decision to intervene…"
+    },
+    {
+      "id": "hedging-likely",
+      "kind": "grammaire",
+      "front": "Traduis : « Cette mesure est susceptible d'échouer. »",
+      "back": "This measure is likely to fail."
+    },
+    {
+      "id": "hedging-appears",
+      "kind": "grammaire",
+      "front": "Atténue : The policy is effective.",
+      "back": "The policy appears to be effective."
+    },
+    {
+      "id": "concession",
+      "kind": "grammaire",
+      "front": "Traduis : « Aussi utile soit-elle, la mesure reste coûteuse. »",
+      "back": "Useful though it may be, the measure remains costly."
+    },
+    {
+      "id": "synthesis",
+      "kind": "grammaire",
+      "front": "Relie deux documents convergents mais différents.",
+      "back": "Both documents highlight…, although they approach it from different perspectives."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "anglais-term-vocab-mondialisation",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Vocabulaire · Économie et mondialisation",
+  "description": "Liste de vocabulaire — économie et mondialisation.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "supply-chain",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une chaîne d'approvisionnement ».",
+      "back": "a supply chain"
+    },
+    {
+      "id": "trade",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le commerce ».",
+      "back": "trade"
+    },
+    {
+      "id": "tariff",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un droit de douane ».",
+      "back": "a tariff"
+    },
+    {
+      "id": "consumer",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un consommateur ».",
+      "back": "a consumer"
+    },
+    {
+      "id": "shareholder",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un actionnaire ».",
+      "back": "a shareholder"
+    },
+    {
+      "id": "inequality-gap",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'écart de richesse ».",
+      "back": "the wealth gap"
+    },
+    {
+      "id": "outsource",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « externaliser ».",
+      "back": "to outsource"
+    },
+    {
+      "id": "regulate-market",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « réguler le marché ».",
+      "back": "to regulate the market"
+    },
+    {
+      "id": "drive-growth",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « stimuler la croissance ».",
+      "back": "to drive growth"
+    },
+    {
+      "id": "economic-downturn",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un ralentissement économique ».",
+      "back": "an economic downturn"
+    }
+  ]
+}

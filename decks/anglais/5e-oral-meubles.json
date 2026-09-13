@@ -1,0 +1,85 @@
+{
+  "id": "anglais-5e-oral-meubles",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Compréhension orale · Maison et meubles",
+  "description": "Même liste que « Maison et meubles », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "table",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une table",
+      "audio_text": "a table"
+    },
+    {
+      "id": "chair",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une chaise",
+      "audio_text": "a chair"
+    },
+    {
+      "id": "bed",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un lit",
+      "audio_text": "a bed"
+    },
+    {
+      "id": "wardrobe",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une armoire",
+      "audio_text": "a wardrobe"
+    },
+    {
+      "id": "sofa",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un canapé",
+      "audio_text": "a sofa"
+    },
+    {
+      "id": "shelf",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une étagère",
+      "audio_text": "a shelf"
+    },
+    {
+      "id": "lamp",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une lampe",
+      "audio_text": "a lamp"
+    },
+    {
+      "id": "fridge",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un réfrigérateur",
+      "audio_text": "a fridge"
+    },
+    {
+      "id": "oven",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un four",
+      "audio_text": "an oven"
+    },
+    {
+      "id": "washing-machine",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une machine à laver",
+      "audio_text": "a washing machine"
+    }
+  ]
+}

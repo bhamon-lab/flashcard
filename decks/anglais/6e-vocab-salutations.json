@@ -1,0 +1,73 @@
+{
+  "id": "anglais-6e-vocab-salutations",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Vocabulaire · Salutations et politesse",
+  "description": "Liste de vocabulaire — salutations et politesse.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "hello",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « bonjour ».",
+      "back": "hello"
+    },
+    {
+      "id": "hi",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « salut ».",
+      "back": "hi"
+    },
+    {
+      "id": "good-morning",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « bonjour (le matin) ».",
+      "back": "good morning"
+    },
+    {
+      "id": "good-afternoon",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « bon après-midi ».",
+      "back": "good afternoon"
+    },
+    {
+      "id": "good-evening",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « bonsoir ».",
+      "back": "good evening"
+    },
+    {
+      "id": "goodbye",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « au revoir ».",
+      "back": "goodbye"
+    },
+    {
+      "id": "see-you-soon",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « à bientôt ».",
+      "back": "see you soon"
+    },
+    {
+      "id": "please",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « s’il vous plaît ».",
+      "back": "please"
+    },
+    {
+      "id": "thank-you",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « merci ».",
+      "back": "thank you"
+    },
+    {
+      "id": "sorry",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « désolé ».",
+      "back": "sorry"
+    }
+  ]
+}

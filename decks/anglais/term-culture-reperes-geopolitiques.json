@@ -1,0 +1,73 @@
+{
+  "id": "anglais-term-culture-reperes-geopolitiques",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Culture · Repères historiques et géopolitiques",
+  "description": "Repères culturels du monde anglophone.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "culture",
+  "cards": [
+    {
+      "id": "repere-01",
+      "kind": "culture",
+      "front": "Quel texte anglais fut scellé en 1215 ?",
+      "back": "Magna Carta."
+    },
+    {
+      "id": "repere-02",
+      "kind": "culture",
+      "front": "Quel texte de 1689 limita les pouvoirs de la monarchie anglaise ?",
+      "back": "The English Bill of Rights."
+    },
+    {
+      "id": "repere-03",
+      "kind": "culture",
+      "front": "En quelle année la Constitution américaine fut-elle signée ?",
+      "back": "In 1787."
+    },
+    {
+      "id": "repere-04",
+      "kind": "culture",
+      "front": "En quelle année l'Organisation des Nations unies fut-elle fondée ?",
+      "back": "In 1945."
+    },
+    {
+      "id": "repere-05",
+      "kind": "culture",
+      "front": "En quelle année l'OTAN fut-elle créée ?",
+      "back": "In 1949."
+    },
+    {
+      "id": "repere-06",
+      "kind": "culture",
+      "front": "Quel texte de 1949 marque la naissance du Commonwealth moderne ?",
+      "back": "The London Declaration."
+    },
+    {
+      "id": "repere-07",
+      "kind": "culture",
+      "front": "Quand le Royaume-Uni a-t-il quitté l'Union européenne ?",
+      "back": "On 31 January 2020."
+    },
+    {
+      "id": "repere-08",
+      "kind": "culture",
+      "front": "Quel accord de 1998 concerne l'Irlande du Nord ?",
+      "back": "The Good Friday Agreement."
+    },
+    {
+      "id": "repere-09",
+      "kind": "culture",
+      "front": "En quelle année la Confédération canadienne fut-elle créée ?",
+      "back": "In 1867."
+    },
+    {
+      "id": "repere-10",
+      "kind": "culture",
+      "front": "En quelle année les colonies australiennes se fédérèrent-elles ?",
+      "back": "In 1901."
+    }
+  ]
+}

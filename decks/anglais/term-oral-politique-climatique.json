@@ -1,0 +1,85 @@
+{
+  "id": "anglais-term-oral-politique-climatique",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Compréhension orale · Politique climatique",
+  "description": "Même liste que « Politique climatique », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "carbon-tax",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une taxe carbone",
+      "audio_text": "a carbon tax"
+    },
+    {
+      "id": "emission-target",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un objectif d'émissions",
+      "audio_text": "an emissions target"
+    },
+    {
+      "id": "climate-justice",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la justice climatique",
+      "audio_text": "climate justice"
+    },
+    {
+      "id": "adaptation",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'adaptation",
+      "audio_text": "adaptation"
+    },
+    {
+      "id": "mitigation",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'atténuation",
+      "audio_text": "mitigation"
+    },
+    {
+      "id": "loss-damage",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les pertes et préjudices",
+      "audio_text": "loss and damage"
+    },
+    {
+      "id": "binding",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "contraignant",
+      "audio_text": "binding"
+    },
+    {
+      "id": "pledge",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "s'engager à",
+      "audio_text": "to pledge"
+    },
+    {
+      "id": "meet-target",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "atteindre un objectif",
+      "audio_text": "to meet a target"
+    },
+    {
+      "id": "bear-cost",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "supporter le coût",
+      "audio_text": "to bear the cost"
+    }
+  ]
+}

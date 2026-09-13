@@ -1,0 +1,153 @@
+{
+  "id": "anglais-6e-verbes-irreguliers",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Verbes irréguliers",
+  "description": "Infinitif, prétérit, participe passé et sens français.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "irregular-verbs",
+  "cards": [
+    {
+      "id": "be",
+      "kind": "verbe-irregulier",
+      "front": "be —",
+      "indice": "être",
+      "back": "be · was/were · been"
+    },
+    {
+      "id": "have",
+      "kind": "verbe-irregulier",
+      "front": "have —",
+      "indice": "avoir",
+      "back": "have · had · had"
+    },
+    {
+      "id": "do",
+      "kind": "verbe-irregulier",
+      "front": "do —",
+      "indice": "faire",
+      "back": "do · did · done"
+    },
+    {
+      "id": "go",
+      "kind": "verbe-irregulier",
+      "front": "go —",
+      "indice": "aller",
+      "back": "go · went · gone"
+    },
+    {
+      "id": "come",
+      "kind": "verbe-irregulier",
+      "front": "come —",
+      "indice": "venir",
+      "back": "come · came · come"
+    },
+    {
+      "id": "get",
+      "kind": "verbe-irregulier",
+      "front": "get —",
+      "indice": "obtenir",
+      "back": "get · got · got/gotten"
+    },
+    {
+      "id": "make",
+      "kind": "verbe-irregulier",
+      "front": "make —",
+      "indice": "faire, fabriquer",
+      "back": "make · made · made"
+    },
+    {
+      "id": "say",
+      "kind": "verbe-irregulier",
+      "front": "say —",
+      "indice": "dire",
+      "back": "say · said · said"
+    },
+    {
+      "id": "see",
+      "kind": "verbe-irregulier",
+      "front": "see —",
+      "indice": "voir",
+      "back": "see · saw · seen"
+    },
+    {
+      "id": "take",
+      "kind": "verbe-irregulier",
+      "front": "take —",
+      "indice": "prendre",
+      "back": "take · took · taken"
+    },
+    {
+      "id": "eat",
+      "kind": "verbe-irregulier",
+      "front": "eat —",
+      "indice": "manger",
+      "back": "eat · ate · eaten"
+    },
+    {
+      "id": "drink",
+      "kind": "verbe-irregulier",
+      "front": "drink —",
+      "indice": "boire",
+      "back": "drink · drank · drunk"
+    },
+    {
+      "id": "give",
+      "kind": "verbe-irregulier",
+      "front": "give —",
+      "indice": "donner",
+      "back": "give · gave · given"
+    },
+    {
+      "id": "know",
+      "kind": "verbe-irregulier",
+      "front": "know —",
+      "indice": "savoir, connaître",
+      "back": "know · knew · known"
+    },
+    {
+      "id": "read",
+      "kind": "verbe-irregulier",
+      "front": "read —",
+      "indice": "lire",
+      "back": "read · read · read"
+    },
+    {
+      "id": "write",
+      "kind": "verbe-irregulier",
+      "front": "write —",
+      "indice": "écrire",
+      "back": "write · wrote · written"
+    },
+    {
+      "id": "find",
+      "kind": "verbe-irregulier",
+      "front": "find —",
+      "indice": "trouver",
+      "back": "find · found · found"
+    },
+    {
+      "id": "think",
+      "kind": "verbe-irregulier",
+      "front": "think —",
+      "indice": "penser",
+      "back": "think · thought · thought"
+    },
+    {
+      "id": "buy",
+      "kind": "verbe-irregulier",
+      "front": "buy —",
+      "indice": "acheter",
+      "back": "buy · bought · bought"
+    },
+    {
+      "id": "bring",
+      "kind": "verbe-irregulier",
+      "front": "bring —",
+      "indice": "apporter",
+      "back": "bring · brought · brought"
+    }
+  ]
+}

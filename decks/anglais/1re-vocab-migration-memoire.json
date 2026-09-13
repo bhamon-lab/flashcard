@@ -1,0 +1,73 @@
+{
+  "id": "anglais-1re-vocab-migration-memoire",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Vocabulaire · Migration et mémoire",
+  "description": "Liste de vocabulaire — migration et mémoire.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "a-migrant",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un migrant ».",
+      "back": "a migrant"
+    },
+    {
+      "id": "a-refugee",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un réfugié ».",
+      "back": "a refugee"
+    },
+    {
+      "id": "exile",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l’exil ».",
+      "back": "exile"
+    },
+    {
+      "id": "a-border",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une frontière ».",
+      "back": "a border"
+    },
+    {
+      "id": "heritage",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le patrimoine ».",
+      "back": "heritage"
+    },
+    {
+      "id": "a-legacy",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un héritage ».",
+      "back": "a legacy"
+    },
+    {
+      "id": "a-memory",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un souvenir ».",
+      "back": "a memory"
+    },
+    {
+      "id": "to-settle",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « s’installer ».",
+      "back": "to settle"
+    },
+    {
+      "id": "to-flee",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « fuir ».",
+      "back": "to flee"
+    },
+    {
+      "id": "to-commemorate",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « commémorer ».",
+      "back": "to commemorate"
+    }
+  ]
+}

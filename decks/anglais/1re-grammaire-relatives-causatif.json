@@ -1,0 +1,73 @@
+{
+  "id": "anglais-1re-grammaire-relatives-causatif",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Grammaire · Relatives avancées et causatif",
+  "description": "Règles et automatismes — relatives avancées et causatif.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "non-defining",
+      "kind": "grammaire",
+      "front": "Ajoute la ponctuation : London which is very diverse attracts millions.",
+      "back": "London, which is very diverse, attracts millions."
+    },
+    {
+      "id": "whom",
+      "kind": "grammaire",
+      "front": "Complète formellement : The person to ___ I spoke.",
+      "back": "The person to whom I spoke."
+    },
+    {
+      "id": "whose",
+      "kind": "grammaire",
+      "front": "Complète : A country ___ economy is growing.",
+      "back": "A country whose economy is growing."
+    },
+    {
+      "id": "whereby",
+      "kind": "grammaire",
+      "front": "Complète : A system ___ users vote directly.",
+      "back": "A system whereby users vote directly."
+    },
+    {
+      "id": "have-done",
+      "kind": "grammaire",
+      "front": "Traduis : « J'ai fait réparer mon téléphone. »",
+      "back": "I had my phone repaired."
+    },
+    {
+      "id": "get-done",
+      "kind": "grammaire",
+      "front": "Traduis : « Elle va se faire couper les cheveux. »",
+      "back": "She is going to get her hair cut."
+    },
+    {
+      "id": "make",
+      "kind": "grammaire",
+      "front": "Traduis : « Ils nous ont obligés à attendre. »",
+      "back": "They made us wait."
+    },
+    {
+      "id": "let",
+      "kind": "grammaire",
+      "front": "Traduis : « Ils nous ont laissé partir. »",
+      "back": "They let us leave."
+    },
+    {
+      "id": "allow",
+      "kind": "grammaire",
+      "front": "Mets au passif : They allowed us to enter.",
+      "back": "We were allowed to enter."
+    },
+    {
+      "id": "reduced-relative",
+      "kind": "grammaire",
+      "front": "Réduis : Students who live abroad…",
+      "back": "Students living abroad…"
+    }
+  ]
+}

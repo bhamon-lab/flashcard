@@ -1,0 +1,73 @@
+{
+  "id": "anglais-3e-vocab-travail",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Vocabulaire · Monde du travail",
+  "description": "Liste de vocabulaire — monde du travail.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "job",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un emploi ».",
+      "back": "a job"
+    },
+    {
+      "id": "employer",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un employeur ».",
+      "back": "an employer"
+    },
+    {
+      "id": "employee",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un salarié ».",
+      "back": "an employee"
+    },
+    {
+      "id": "salary",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un salaire ».",
+      "back": "a salary"
+    },
+    {
+      "id": "working-hours",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les horaires de travail ».",
+      "back": "working hours"
+    },
+    {
+      "id": "colleague",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un collègue ».",
+      "back": "a colleague"
+    },
+    {
+      "id": "experience",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « de l'expérience ».",
+      "back": "experience"
+    },
+    {
+      "id": "job-interview",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un entretien d'embauche ».",
+      "back": "a job interview"
+    },
+    {
+      "id": "part-time",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « à temps partiel ».",
+      "back": "part-time"
+    },
+    {
+      "id": "full-time",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « à temps plein ».",
+      "back": "full-time"
+    }
+  ]
+}

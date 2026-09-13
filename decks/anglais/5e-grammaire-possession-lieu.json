@@ -1,0 +1,73 @@
+{
+  "id": "anglais-5e-grammaire-possession-lieu",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Grammaire · Possession, pronoms et lieu",
+  "description": "Règles et automatismes — possession, pronoms et lieu.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "genitive",
+      "kind": "grammaire",
+      "front": "Traduis : « le vélo de Tom ».",
+      "back": "Tom's bike"
+    },
+    {
+      "id": "plural-genitive",
+      "kind": "grammaire",
+      "front": "Traduis : « la salle des professeurs ».",
+      "back": "the teachers' room"
+    },
+    {
+      "id": "mine",
+      "kind": "grammaire",
+      "front": "Complète : This book is my book. It is ___.",
+      "back": "It is mine."
+    },
+    {
+      "id": "yours",
+      "kind": "grammaire",
+      "front": "Traduis : « Est-ce que ce sac est à toi ? »",
+      "back": "Is this bag yours?"
+    },
+    {
+      "id": "object-him",
+      "kind": "grammaire",
+      "front": "Remplace Tom : I can see Tom.",
+      "back": "I can see him."
+    },
+    {
+      "id": "object-them",
+      "kind": "grammaire",
+      "front": "Remplace my friends : I called my friends.",
+      "back": "I called them."
+    },
+    {
+      "id": "there-is",
+      "kind": "grammaire",
+      "front": "Traduis : « Il y a un parc. »",
+      "back": "There is a park."
+    },
+    {
+      "id": "there-are",
+      "kind": "grammaire",
+      "front": "Traduis : « Il y a deux magasins. »",
+      "back": "There are two shops."
+    },
+    {
+      "id": "between",
+      "kind": "grammaire",
+      "front": "Traduis : « entre la banque et la gare ».",
+      "back": "between the bank and the station"
+    },
+    {
+      "id": "behind",
+      "kind": "grammaire",
+      "front": "Traduis : « derrière la mairie ».",
+      "back": "behind the town hall"
+    }
+  ]
+}

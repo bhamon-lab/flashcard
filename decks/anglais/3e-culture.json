@@ -1,0 +1,73 @@
+{
+  "id": "anglais-3e-culture",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Culture · Figures historiques et droits civiques",
+  "description": "Repères culturels du monde anglophone.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "culture",
+  "cards": [
+    {
+      "id": "repere-01",
+      "kind": "culture",
+      "front": "Qui a refusé de céder sa place dans un bus en 1955 ?",
+      "back": "Rosa Parks."
+    },
+    {
+      "id": "repere-02",
+      "kind": "culture",
+      "front": "Qui a prononcé le discours “I Have a Dream” en 1963 ?",
+      "back": "Martin Luther King Jr."
+    },
+    {
+      "id": "repere-03",
+      "kind": "culture",
+      "front": "Quel président américain a signé l'Emancipation Proclamation ?",
+      "back": "Abraham Lincoln."
+    },
+    {
+      "id": "repere-04",
+      "kind": "culture",
+      "front": "Qui fut le premier président noir d'Afrique du Sud ?",
+      "back": "Nelson Mandela."
+    },
+    {
+      "id": "repere-05",
+      "kind": "culture",
+      "front": "Quelle militante pakistanaise défend l'éducation des filles ?",
+      "back": "Malala Yousafzai."
+    },
+    {
+      "id": "repere-06",
+      "kind": "culture",
+      "front": "Qui fut la première femme Première ministre du Royaume-Uni ?",
+      "back": "Margaret Thatcher."
+    },
+    {
+      "id": "repere-07",
+      "kind": "culture",
+      "front": "Quel mouvement britannique a revendiqué le droit de vote des femmes ?",
+      "back": "The suffragette movement."
+    },
+    {
+      "id": "repere-08",
+      "kind": "culture",
+      "front": "Qui était Emmeline Pankhurst ?",
+      "back": "A leading British suffragette."
+    },
+    {
+      "id": "repere-09",
+      "kind": "culture",
+      "front": "Que commémore Martin Luther King Jr. Day ?",
+      "back": "The life and achievements of Martin Luther King Jr."
+    },
+    {
+      "id": "repere-10",
+      "kind": "culture",
+      "front": "Que désigne the Civil Rights Movement ?",
+      "back": "The movement for equal rights, especially for Black Americans."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "anglais-3e-vocab-experiences",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Vocabulaire · Voyages et expériences",
+  "description": "Liste de vocabulaire — voyages et expériences.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "abroad",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « à l'étranger ».",
+      "back": "abroad"
+    },
+    {
+      "id": "journey",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un trajet ».",
+      "back": "a journey"
+    },
+    {
+      "id": "trip",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un voyage court ».",
+      "back": "a trip"
+    },
+    {
+      "id": "landmark",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un monument célèbre ».",
+      "back": "a landmark"
+    },
+    {
+      "id": "guidebook",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un guide touristique ».",
+      "back": "a guidebook"
+    },
+    {
+      "id": "sightseeing",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « faire du tourisme ».",
+      "back": "to go sightseeing"
+    },
+    {
+      "id": "discover",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « découvrir ».",
+      "back": "to discover"
+    },
+    {
+      "id": "experience-abroad",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « vivre une expérience à l'étranger ».",
+      "back": "to experience life abroad"
+    },
+    {
+      "id": "host-family",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une famille d'accueil ».",
+      "back": "a host family"
+    },
+    {
+      "id": "exchange",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un échange scolaire ».",
+      "back": "a school exchange"
+    }
+  ]
+}

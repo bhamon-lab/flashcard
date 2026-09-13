@@ -1,0 +1,85 @@
+{
+  "id": "anglais-1re-oral-litterature",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Compréhension orale · Analyse littéraire",
+  "description": "Même liste que « Analyse littéraire », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "plot",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'intrigue",
+      "audio_text": "the plot"
+    },
+    {
+      "id": "setting",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le cadre spatio-temporel",
+      "audio_text": "the setting"
+    },
+    {
+      "id": "narrator",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le narrateur",
+      "audio_text": "the narrator"
+    },
+    {
+      "id": "character",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un personnage",
+      "audio_text": "a character"
+    },
+    {
+      "id": "theme",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un thème",
+      "audio_text": "a theme"
+    },
+    {
+      "id": "tone",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le ton",
+      "audio_text": "the tone"
+    },
+    {
+      "id": "metaphor",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une métaphore",
+      "audio_text": "a metaphor"
+    },
+    {
+      "id": "foreshadow",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "annoncer la suite",
+      "audio_text": "to foreshadow"
+    },
+    {
+      "id": "portray-character",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "dépeindre un personnage",
+      "audio_text": "to portray a character"
+    },
+    {
+      "id": "first-person",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un récit à la première personne",
+      "audio_text": "a first-person narrative"
+    }
+  ]
+}

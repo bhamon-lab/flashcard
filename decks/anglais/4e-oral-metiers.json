@@ -1,0 +1,85 @@
+{
+  "id": "anglais-4e-oral-metiers",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Compréhension orale · Métiers",
+  "description": "Même liste que « Métiers », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "teacher",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un professeur",
+      "audio_text": "a teacher"
+    },
+    {
+      "id": "doctor",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un médecin",
+      "audio_text": "a doctor"
+    },
+    {
+      "id": "nurse",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un infirmier",
+      "audio_text": "a nurse"
+    },
+    {
+      "id": "engineer",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un ingénieur",
+      "audio_text": "an engineer"
+    },
+    {
+      "id": "journalist",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un journaliste",
+      "audio_text": "a journalist"
+    },
+    {
+      "id": "lawyer",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un avocat",
+      "audio_text": "a lawyer"
+    },
+    {
+      "id": "shop-assistant",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un vendeur",
+      "audio_text": "a shop assistant"
+    },
+    {
+      "id": "firefighter",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un pompier",
+      "audio_text": "a firefighter"
+    },
+    {
+      "id": "apply",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "postuler",
+      "audio_text": "to apply"
+    },
+    {
+      "id": "earn",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "gagner un salaire",
+      "audio_text": "to earn"
+    }
+  ]
+}

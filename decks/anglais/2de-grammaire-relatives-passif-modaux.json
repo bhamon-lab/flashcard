@@ -1,0 +1,73 @@
+{
+  "id": "anglais-2de-grammaire-relatives-passif-modaux",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Grammaire · Relatives, passif et modaux",
+  "description": "Règles et automatismes — relatives, passif et modaux.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "who",
+      "kind": "grammaire",
+      "front": "Complète : The activist ___ spoke was convincing.",
+      "back": "The activist who spoke was convincing."
+    },
+    {
+      "id": "whose",
+      "kind": "grammaire",
+      "front": "Complète : The writer ___ novel won the prize is Irish.",
+      "back": "The writer whose novel won the prize is Irish."
+    },
+    {
+      "id": "where",
+      "kind": "grammaire",
+      "front": "Complète : This is the town ___ she grew up.",
+      "back": "This is the town where she grew up."
+    },
+    {
+      "id": "passive-past",
+      "kind": "grammaire",
+      "front": "Mets au passif : They built the bridge in 1890.",
+      "back": "The bridge was built in 1890."
+    },
+    {
+      "id": "passive-modal",
+      "kind": "grammaire",
+      "front": "Mets au passif : We must protect wildlife.",
+      "back": "Wildlife must be protected."
+    },
+    {
+      "id": "might",
+      "kind": "grammaire",
+      "front": "Traduis : « Cette solution pourrait fonctionner. »",
+      "back": "This solution might work."
+    },
+    {
+      "id": "must-deduction",
+      "kind": "grammaire",
+      "front": "Traduis cette déduction : « Il doit être chez lui. »",
+      "back": "He must be at home."
+    },
+    {
+      "id": "cant-deduction",
+      "kind": "grammaire",
+      "front": "Traduis cette déduction : « Cela ne peut pas être vrai. »",
+      "back": "It can't be true."
+    },
+    {
+      "id": "although",
+      "kind": "grammaire",
+      "front": "Relie avec although : It is useful. It is expensive.",
+      "back": "Although it is useful, it is expensive."
+    },
+    {
+      "id": "despite",
+      "kind": "grammaire",
+      "front": "Complète : ___ the rain, they continued.",
+      "back": "Despite the rain, they continued."
+    }
+  ]
+}

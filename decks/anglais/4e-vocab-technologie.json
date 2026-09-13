@@ -1,0 +1,73 @@
+{
+  "id": "anglais-4e-vocab-technologie",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Vocabulaire · Technologie",
+  "description": "Liste de vocabulaire — technologie.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "screen",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un écran ».",
+      "back": "a screen"
+    },
+    {
+      "id": "keyboard",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un clavier ».",
+      "back": "a keyboard"
+    },
+    {
+      "id": "mouse",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une souris ».",
+      "back": "a mouse"
+    },
+    {
+      "id": "headphones",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un casque audio ».",
+      "back": "headphones"
+    },
+    {
+      "id": "website",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un site web ».",
+      "back": "a website"
+    },
+    {
+      "id": "search-engine",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un moteur de recherche ».",
+      "back": "a search engine"
+    },
+    {
+      "id": "log-in",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « se connecter ».",
+      "back": "to log in"
+    },
+    {
+      "id": "upload",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « téléverser ».",
+      "back": "to upload"
+    },
+    {
+      "id": "save-file",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « enregistrer un fichier ».",
+      "back": "to save a file"
+    },
+    {
+      "id": "device",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un appareil ».",
+      "back": "a device"
+    }
+  ]
+}

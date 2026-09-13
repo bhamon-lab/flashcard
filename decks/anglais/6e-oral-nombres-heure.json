@@ -1,0 +1,85 @@
+{
+  "id": "anglais-6e-oral-nombres-heure",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Compréhension orale · Nombres et heure",
+  "description": "Même liste que « Nombres et heure », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "one",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un",
+      "audio_text": "one"
+    },
+    {
+      "id": "two",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "deux",
+      "audio_text": "two"
+    },
+    {
+      "id": "ten",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "dix",
+      "audio_text": "ten"
+    },
+    {
+      "id": "twenty",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "vingt",
+      "audio_text": "twenty"
+    },
+    {
+      "id": "one-hundred",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "cent",
+      "audio_text": "one hundred"
+    },
+    {
+      "id": "what-time",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "Quelle heure est-il ?",
+      "audio_text": "What time is it?"
+    },
+    {
+      "id": "oclock",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "Il est huit heures.",
+      "audio_text": "It's eight o'clock."
+    },
+    {
+      "id": "half-past",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "Il est huit heures et demie.",
+      "audio_text": "It's half past eight."
+    },
+    {
+      "id": "quarter-past",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "Il est huit heures et quart.",
+      "audio_text": "It's quarter past eight."
+    },
+    {
+      "id": "quarter-to",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "Il est neuf heures moins le quart.",
+      "audio_text": "It's quarter to nine."
+    }
+  ]
+}

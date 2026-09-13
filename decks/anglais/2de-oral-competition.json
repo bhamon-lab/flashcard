@@ -1,0 +1,85 @@
+{
+  "id": "anglais-2de-oral-competition",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Compréhension orale · Sport et compétition",
+  "description": "Même liste que « Sport et compétition », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "athlete",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un athlète",
+      "audio_text": "an athlete"
+    },
+    {
+      "id": "coach",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un entraîneur",
+      "audio_text": "a coach"
+    },
+    {
+      "id": "opponent",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un adversaire",
+      "audio_text": "an opponent"
+    },
+    {
+      "id": "referee",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un arbitre",
+      "audio_text": "a referee"
+    },
+    {
+      "id": "achievement",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une réussite",
+      "audio_text": "an achievement"
+    },
+    {
+      "id": "fair-play",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le fair-play",
+      "audio_text": "fair play"
+    },
+    {
+      "id": "defeat",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une défaite",
+      "audio_text": "a defeat"
+    },
+    {
+      "id": "draw-match",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un match nul",
+      "audio_text": "a draw"
+    },
+    {
+      "id": "compete",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "concourir",
+      "audio_text": "to compete"
+    },
+    {
+      "id": "break-record",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "battre un record",
+      "audio_text": "to break a record"
+    }
+  ]
+}

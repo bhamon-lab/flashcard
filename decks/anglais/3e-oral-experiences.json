@@ -1,0 +1,85 @@
+{
+  "id": "anglais-3e-oral-experiences",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Compréhension orale · Voyages et expériences",
+  "description": "Même liste que « Voyages et expériences », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "abroad",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "à l'étranger",
+      "audio_text": "abroad"
+    },
+    {
+      "id": "journey",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un trajet",
+      "audio_text": "a journey"
+    },
+    {
+      "id": "trip",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un voyage court",
+      "audio_text": "a trip"
+    },
+    {
+      "id": "landmark",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un monument célèbre",
+      "audio_text": "a landmark"
+    },
+    {
+      "id": "guidebook",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un guide touristique",
+      "audio_text": "a guidebook"
+    },
+    {
+      "id": "sightseeing",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "faire du tourisme",
+      "audio_text": "to go sightseeing"
+    },
+    {
+      "id": "discover",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "découvrir",
+      "audio_text": "to discover"
+    },
+    {
+      "id": "experience-abroad",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "vivre une expérience à l'étranger",
+      "audio_text": "to experience life abroad"
+    },
+    {
+      "id": "host-family",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une famille d'accueil",
+      "audio_text": "a host family"
+    },
+    {
+      "id": "exchange",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un échange scolaire",
+      "audio_text": "a school exchange"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "anglais-2de-vocab-exploration",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Vocabulaire · Voyages et exploration",
+  "description": "Liste de vocabulaire — voyages et exploration.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "expedition",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une expédition ».",
+      "back": "an expedition"
+    },
+    {
+      "id": "settler",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un colon ».",
+      "back": "a settler"
+    },
+    {
+      "id": "indigenous",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « autochtone ».",
+      "back": "Indigenous"
+    },
+    {
+      "id": "remote",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « isolé ».",
+      "back": "remote"
+    },
+    {
+      "id": "wilderness",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une région sauvage ».",
+      "back": "the wilderness"
+    },
+    {
+      "id": "charted",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « cartographié ».",
+      "back": "charted"
+    },
+    {
+      "id": "set-off",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « partir ».",
+      "back": "to set off"
+    },
+    {
+      "id": "reach",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « atteindre ».",
+      "back": "to reach"
+    },
+    {
+      "id": "overcome-obstacle",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « surmonter un obstacle ».",
+      "back": "to overcome an obstacle"
+    },
+    {
+      "id": "unknown",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'inconnu ».",
+      "back": "the unknown"
+    }
+  ]
+}

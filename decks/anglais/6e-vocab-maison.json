@@ -1,0 +1,73 @@
+{
+  "id": "anglais-6e-vocab-maison",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Vocabulaire · Pièces de la maison",
+  "description": "Liste de vocabulaire — pièces de la maison.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "the-kitchen",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la cuisine ».",
+      "back": "the kitchen"
+    },
+    {
+      "id": "the-living-room",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le salon ».",
+      "back": "the living room"
+    },
+    {
+      "id": "the-dining-room",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la salle à manger ».",
+      "back": "the dining room"
+    },
+    {
+      "id": "the-bedroom",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la chambre ».",
+      "back": "the bedroom"
+    },
+    {
+      "id": "the-bathroom",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la salle de bains ».",
+      "back": "the bathroom"
+    },
+    {
+      "id": "the-toilet",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les toilettes ».",
+      "back": "the toilet"
+    },
+    {
+      "id": "the-garden",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le jardin ».",
+      "back": "the garden"
+    },
+    {
+      "id": "the-garage",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le garage ».",
+      "back": "the garage"
+    },
+    {
+      "id": "the-attic",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le grenier ».",
+      "back": "the attic"
+    },
+    {
+      "id": "the-hallway",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le couloir ».",
+      "back": "the hallway"
+    }
+  ]
+}

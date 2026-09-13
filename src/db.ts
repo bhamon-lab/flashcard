@@ -498,6 +498,7 @@ export type SyncedCard = {
   id: string;
   front: string;
   back?: string;
+  indice?: string;
 };
 
 export type SyncedDeck = {
@@ -546,21 +547,22 @@ export async function upsertSyncedDeck(deck: SyncedDeck): Promise<'created' | 'u
     for (const card of deck.cards) {
       const front = card.front.trim();
       const back = card.back?.trim() ?? '';
+      const indice = card.indice?.trim() ?? '';
       const externalId = `${deck.id}:${card.id}`;
       const existingCard = await db.getFirstAsync<{ id: number }>(
         'SELECT id FROM cards WHERE deck_id = ? AND external_id = ?', deckId, externalId,
       );
       if (existingCard) {
         await db.runAsync(
-          "UPDATE cards SET first_name = ?, last_name = ?, context = '', photo_uri = '' WHERE id = ?",
-          front, back, existingCard.id,
+          'UPDATE cards SET first_name = ?, last_name = ?, context = ?, photo_uri = \'\' WHERE id = ?',
+          front, back, indice, existingCard.id,
         );
         continue;
       }
       const insertedCard = await db.runAsync(
         `INSERT INTO cards (deck_id, first_name, last_name, context, photo_uri, external_id, created_at)
-         VALUES (?, ?, ?, '', '', ?, ?)`,
-        deckId, front, back, externalId, Date.now(),
+         VALUES (?, ?, ?, ?, '', ?, ?)`,
+        deckId, front, back, indice, externalId, Date.now(),
       );
       await db.runAsync('INSERT INTO progress (card_id) VALUES (?)', insertedCard.lastInsertRowId);
     }

@@ -1,0 +1,73 @@
+{
+  "id": "anglais-4e-grammaire-present-perfect-introduction",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Grammaire · Introduction au present perfect",
+  "description": "Règles et automatismes — introduction au present perfect.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "form-have",
+      "kind": "grammaire",
+      "front": "Complète : I ___ finished.",
+      "back": "I have finished."
+    },
+    {
+      "id": "form-has",
+      "kind": "grammaire",
+      "front": "Complète : She ___ arrived.",
+      "back": "She has arrived."
+    },
+    {
+      "id": "negative",
+      "kind": "grammaire",
+      "front": "Mets à la forme négative : He has seen it.",
+      "back": "He hasn't seen it."
+    },
+    {
+      "id": "question",
+      "kind": "grammaire",
+      "front": "Transforme en question : You have visited London.",
+      "back": "Have you visited London?"
+    },
+    {
+      "id": "ever",
+      "kind": "grammaire",
+      "front": "Traduis : « As-tu déjà mangé cela ? »",
+      "back": "Have you ever eaten that?"
+    },
+    {
+      "id": "never",
+      "kind": "grammaire",
+      "front": "Traduis : « Je n'ai jamais pris l'avion. »",
+      "back": "I have never flown."
+    },
+    {
+      "id": "just",
+      "kind": "grammaire",
+      "front": "Traduis : « Nous venons d'arriver. »",
+      "back": "We have just arrived."
+    },
+    {
+      "id": "already",
+      "kind": "grammaire",
+      "front": "Traduis : « Elle a déjà fini. »",
+      "back": "She has already finished."
+    },
+    {
+      "id": "yet",
+      "kind": "grammaire",
+      "front": "Traduis : « Ils ne sont pas encore partis. »",
+      "back": "They haven't left yet."
+    },
+    {
+      "id": "experience",
+      "kind": "grammaire",
+      "front": "Choisis le temps : I went / have been to Ireland twice.",
+      "back": "I have been to Ireland twice."
+    }
+  ]
+}

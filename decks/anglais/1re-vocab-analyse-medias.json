@@ -1,0 +1,73 @@
+{
+  "id": "anglais-1re-vocab-analyse-medias",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Vocabulaire · Analyse des médias",
+  "description": "Liste de vocabulaire — analyse des médias.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "the-target-audience",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le public cible ».",
+      "back": "the target audience"
+    },
+    {
+      "id": "a-bias",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un parti pris ».",
+      "back": "a bias"
+    },
+    {
+      "id": "a-reliable-source",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une source fiable ».",
+      "back": "a reliable source"
+    },
+    {
+      "id": "an-account",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un témoignage ».",
+      "back": "an account"
+    },
+    {
+      "id": "evidence",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une preuve ».",
+      "back": "evidence"
+    },
+    {
+      "id": "a-claim",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une affirmation ».",
+      "back": "a claim"
+    },
+    {
+      "id": "to-mislead",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « induire en erreur ».",
+      "back": "to mislead"
+    },
+    {
+      "id": "to-fact-check",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « vérifier les faits ».",
+      "back": "to fact-check"
+    },
+    {
+      "id": "to-shape-opinion",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « façonner l’opinion ».",
+      "back": "to shape opinion"
+    },
+    {
+      "id": "to-challenge",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « remettre en question ».",
+      "back": "to challenge"
+    }
+  ]
+}

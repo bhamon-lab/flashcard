@@ -1,0 +1,85 @@
+{
+  "id": "anglais-1re-oral-analyse-medias",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Compréhension orale · Analyse des médias",
+  "description": "Même liste que « Analyse des médias », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "the-target-audience",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le public cible",
+      "audio_text": "the target audience"
+    },
+    {
+      "id": "a-bias",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un parti pris",
+      "audio_text": "a bias"
+    },
+    {
+      "id": "a-reliable-source",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une source fiable",
+      "audio_text": "a reliable source"
+    },
+    {
+      "id": "an-account",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un témoignage",
+      "audio_text": "an account"
+    },
+    {
+      "id": "evidence",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une preuve",
+      "audio_text": "evidence"
+    },
+    {
+      "id": "a-claim",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une affirmation",
+      "audio_text": "a claim"
+    },
+    {
+      "id": "to-mislead",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "induire en erreur",
+      "audio_text": "to mislead"
+    },
+    {
+      "id": "to-fact-check",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "vérifier les faits",
+      "audio_text": "to fact-check"
+    },
+    {
+      "id": "to-shape-opinion",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "façonner l’opinion",
+      "audio_text": "to shape opinion"
+    },
+    {
+      "id": "to-challenge",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "remettre en question",
+      "audio_text": "to challenge"
+    }
+  ]
+}

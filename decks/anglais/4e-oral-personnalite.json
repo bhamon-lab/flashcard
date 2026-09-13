@@ -1,0 +1,85 @@
+{
+  "id": "anglais-4e-oral-personnalite",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Compréhension orale · Personnalité",
+  "description": "Même liste que « Personnalité », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "kind",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "gentil",
+      "audio_text": "kind"
+    },
+    {
+      "id": "funny",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "drôle",
+      "audio_text": "funny"
+    },
+    {
+      "id": "brave",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "courageux",
+      "audio_text": "brave"
+    },
+    {
+      "id": "clever",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "intelligent",
+      "audio_text": "clever"
+    },
+    {
+      "id": "hardworking",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "travailleur",
+      "audio_text": "hard-working"
+    },
+    {
+      "id": "lazy",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "paresseux",
+      "audio_text": "lazy"
+    },
+    {
+      "id": "selfish",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "égoïste",
+      "audio_text": "selfish"
+    },
+    {
+      "id": "patient",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "patient",
+      "audio_text": "patient"
+    },
+    {
+      "id": "honest",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "honnête",
+      "audio_text": "honest"
+    },
+    {
+      "id": "curious",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "curieux",
+      "audio_text": "curious"
+    }
+  ]
+}

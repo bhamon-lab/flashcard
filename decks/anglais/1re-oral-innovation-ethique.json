@@ -1,0 +1,85 @@
+{
+  "id": "anglais-1re-oral-innovation-ethique",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Compréhension orale · Innovation et éthique",
+  "description": "Même liste que « Innovation et éthique », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "a-breakthrough",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une percée",
+      "audio_text": "a breakthrough"
+    },
+    {
+      "id": "a-drawback",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un inconvénient",
+      "audio_text": "a drawback"
+    },
+    {
+      "id": "an-ethical-issue",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un enjeu éthique",
+      "audio_text": "an ethical issue"
+    },
+    {
+      "id": "privacy",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la vie privée",
+      "audio_text": "privacy"
+    },
+    {
+      "id": "surveillance",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la surveillance",
+      "audio_text": "surveillance"
+    },
+    {
+      "id": "an-algorithm",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un algorithme",
+      "audio_text": "an algorithm"
+    },
+    {
+      "id": "a-bias",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un biais",
+      "audio_text": "a bias"
+    },
+    {
+      "id": "to-regulate",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "réglementer",
+      "audio_text": "to regulate"
+    },
+    {
+      "id": "to-be-accountable",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "rendre des comptes",
+      "audio_text": "to be accountable"
+    },
+    {
+      "id": "to-weigh-the-pros-and-cons",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "peser le pour et le contre",
+      "audio_text": "to weigh the pros and cons"
+    }
+  ]
+}

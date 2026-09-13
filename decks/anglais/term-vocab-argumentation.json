@@ -1,0 +1,73 @@
+{
+  "id": "anglais-term-vocab-argumentation",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Vocabulaire · Débat et argumentation",
+  "description": "Liste de vocabulaire — débat et argumentation.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "an-assumption",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une hypothèse ».",
+      "back": "an assumption"
+    },
+    {
+      "id": "an-objection",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une objection ».",
+      "back": "an objection"
+    },
+    {
+      "id": "a-counterargument",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un contre-argument ».",
+      "back": "a counterargument"
+    },
+    {
+      "id": "a-qualification",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une nuance ».",
+      "back": "a qualification"
+    },
+    {
+      "id": "a-compromise",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un compromis ».",
+      "back": "a compromise"
+    },
+    {
+      "id": "compelling",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « convaincant ».",
+      "back": "compelling"
+    },
+    {
+      "id": "questionable",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « contestable ».",
+      "back": "questionable"
+    },
+    {
+      "id": "to-refute",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « réfuter ».",
+      "back": "to refute"
+    },
+    {
+      "id": "to-outweigh",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l’emporter sur ».",
+      "back": "to outweigh"
+    },
+    {
+      "id": "to-some-extent",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « dans une certaine mesure ».",
+      "back": "to some extent"
+    }
+  ]
+}

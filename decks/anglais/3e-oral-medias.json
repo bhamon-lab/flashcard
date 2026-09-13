@@ -1,0 +1,85 @@
+{
+  "id": "anglais-3e-oral-medias",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Compréhension orale · Médias et numérique",
+  "description": "Même liste que « Médias et numérique », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "a-headline",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un titre de presse",
+      "audio_text": "a headline"
+    },
+    {
+      "id": "a-source",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une source",
+      "audio_text": "a source"
+    },
+    {
+      "id": "a-news-report",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un reportage",
+      "audio_text": "a news report"
+    },
+    {
+      "id": "social-media",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les réseaux sociaux",
+      "audio_text": "social media"
+    },
+    {
+      "id": "fake-news",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les fausses informations",
+      "audio_text": "fake news"
+    },
+    {
+      "id": "to-share",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "partager",
+      "audio_text": "to share"
+    },
+    {
+      "id": "to-download",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "télécharger",
+      "audio_text": "to download"
+    },
+    {
+      "id": "a-password",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un mot de passe",
+      "audio_text": "a password"
+    },
+    {
+      "id": "personal-data",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les données personnelles",
+      "audio_text": "personal data"
+    },
+    {
+      "id": "cyberbullying",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le cyberharcèlement",
+      "audio_text": "cyberbullying"
+    }
+  ]
+}

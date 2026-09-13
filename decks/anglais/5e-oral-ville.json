@@ -1,0 +1,85 @@
+{
+  "id": "anglais-5e-oral-ville",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Compréhension orale · Ville et directions",
+  "description": "Même liste que « Ville et directions », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "the-station",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la gare",
+      "audio_text": "the station"
+    },
+    {
+      "id": "the-town-hall",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la mairie",
+      "audio_text": "the town hall"
+    },
+    {
+      "id": "the-library",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la bibliothèque",
+      "audio_text": "the library"
+    },
+    {
+      "id": "the-crossroads",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le carrefour",
+      "audio_text": "the crossroads"
+    },
+    {
+      "id": "the-traffic-light",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le feu de circulation",
+      "audio_text": "the traffic light"
+    },
+    {
+      "id": "to-turn-left",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "tourner à gauche",
+      "audio_text": "to turn left"
+    },
+    {
+      "id": "to-turn-right",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "tourner à droite",
+      "audio_text": "to turn right"
+    },
+    {
+      "id": "to-go-straight-on",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "aller tout droit",
+      "audio_text": "to go straight on"
+    },
+    {
+      "id": "opposite",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "en face de",
+      "audio_text": "opposite"
+    },
+    {
+      "id": "next-to",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "à côté de",
+      "audio_text": "next to"
+    }
+  ]
+}

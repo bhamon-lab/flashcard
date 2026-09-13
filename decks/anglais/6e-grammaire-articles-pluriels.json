@@ -1,0 +1,73 @@
+{
+  "id": "anglais-6e-grammaire-articles-pluriels",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Grammaire · Articles, démonstratifs et pluriels",
+  "description": "Règles et automatismes — articles, démonstratifs et pluriels.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "a-an",
+      "kind": "grammaire",
+      "front": "Choisis : a / an orange.",
+      "back": "an orange"
+    },
+    {
+      "id": "the",
+      "kind": "grammaire",
+      "front": "Complète : Close ___ door, please.",
+      "back": "Close the door, please."
+    },
+    {
+      "id": "no-article",
+      "kind": "grammaire",
+      "front": "Complète si nécessaire : I like ___ chocolate.",
+      "back": "I like chocolate: pas d'article pour une généralité."
+    },
+    {
+      "id": "this",
+      "kind": "grammaire",
+      "front": "Complète pour un objet proche : ___ book.",
+      "back": "this book"
+    },
+    {
+      "id": "that",
+      "kind": "grammaire",
+      "front": "Complète pour un objet éloigné : ___ house.",
+      "back": "that house"
+    },
+    {
+      "id": "these",
+      "kind": "grammaire",
+      "front": "Donne le pluriel de this child.",
+      "back": "these children"
+    },
+    {
+      "id": "those",
+      "kind": "grammaire",
+      "front": "Donne le pluriel de that box.",
+      "back": "those boxes"
+    },
+    {
+      "id": "plural-s",
+      "kind": "grammaire",
+      "front": "Donne le pluriel de cat.",
+      "back": "cats"
+    },
+    {
+      "id": "plural-es",
+      "kind": "grammaire",
+      "front": "Donne le pluriel de watch.",
+      "back": "watches"
+    },
+    {
+      "id": "plural-y",
+      "kind": "grammaire",
+      "front": "Donne le pluriel de baby.",
+      "back": "babies"
+    }
+  ]
+}

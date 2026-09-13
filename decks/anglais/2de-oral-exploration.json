@@ -1,0 +1,85 @@
+{
+  "id": "anglais-2de-oral-exploration",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Compréhension orale · Voyages et exploration",
+  "description": "Même liste que « Voyages et exploration », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "expedition",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une expédition",
+      "audio_text": "an expedition"
+    },
+    {
+      "id": "settler",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un colon",
+      "audio_text": "a settler"
+    },
+    {
+      "id": "indigenous",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "autochtone",
+      "audio_text": "Indigenous"
+    },
+    {
+      "id": "remote",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "isolé",
+      "audio_text": "remote"
+    },
+    {
+      "id": "wilderness",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une région sauvage",
+      "audio_text": "the wilderness"
+    },
+    {
+      "id": "charted",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "cartographié",
+      "audio_text": "charted"
+    },
+    {
+      "id": "set-off",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "partir",
+      "audio_text": "to set off"
+    },
+    {
+      "id": "reach",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "atteindre",
+      "audio_text": "to reach"
+    },
+    {
+      "id": "overcome-obstacle",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "surmonter un obstacle",
+      "audio_text": "to overcome an obstacle"
+    },
+    {
+      "id": "unknown",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'inconnu",
+      "audio_text": "the unknown"
+    }
+  ]
+}

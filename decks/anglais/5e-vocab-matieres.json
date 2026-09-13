@@ -1,0 +1,73 @@
+{
+  "id": "anglais-5e-vocab-matieres",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Vocabulaire · Matières scolaires",
+  "description": "Liste de vocabulaire — matières scolaires.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "english",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'anglais ».",
+      "back": "English"
+    },
+    {
+      "id": "maths",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les mathématiques ».",
+      "back": "maths"
+    },
+    {
+      "id": "history",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'histoire ».",
+      "back": "history"
+    },
+    {
+      "id": "geography",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la géographie ».",
+      "back": "geography"
+    },
+    {
+      "id": "science",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les sciences ».",
+      "back": "science"
+    },
+    {
+      "id": "art",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les arts plastiques ».",
+      "back": "art"
+    },
+    {
+      "id": "music",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la musique ».",
+      "back": "music"
+    },
+    {
+      "id": "pe",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'éducation physique ».",
+      "back": "PE"
+    },
+    {
+      "id": "timetable",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un emploi du temps ».",
+      "back": "a timetable"
+    },
+    {
+      "id": "break",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la récréation ».",
+      "back": "break time"
+    }
+  ]
+}

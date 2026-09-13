@@ -1,0 +1,73 @@
+{
+  "id": "anglais-5e-grammaire-comparatifs-quantites",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Grammaire · Comparatifs et quantités",
+  "description": "Règles et automatismes — comparatifs et quantités.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "comparative-short",
+      "kind": "grammaire",
+      "front": "Complète : York is ___ than London. (small)",
+      "back": "York is smaller than London."
+    },
+    {
+      "id": "comparative-big",
+      "kind": "grammaire",
+      "front": "Complète : A lion is ___ than a cat. (big)",
+      "back": "A lion is bigger than a cat."
+    },
+    {
+      "id": "comparative-long",
+      "kind": "grammaire",
+      "front": "Complète : Trains are ___ than buses. (comfortable)",
+      "back": "Trains are more comfortable than buses."
+    },
+    {
+      "id": "comparative-good",
+      "kind": "grammaire",
+      "front": "Donne le comparatif de good.",
+      "back": "better"
+    },
+    {
+      "id": "superlative",
+      "kind": "grammaire",
+      "front": "Traduis : « le plus haut bâtiment ».",
+      "back": "the tallest building"
+    },
+    {
+      "id": "superlative-good",
+      "kind": "grammaire",
+      "front": "Donne le superlatif de good.",
+      "back": "the best"
+    },
+    {
+      "id": "some",
+      "kind": "grammaire",
+      "front": "Complète : There are ___ apples on the table.",
+      "back": "There are some apples on the table."
+    },
+    {
+      "id": "any",
+      "kind": "grammaire",
+      "front": "Complète : Are there ___ shops nearby?",
+      "back": "Are there any shops nearby?"
+    },
+    {
+      "id": "much-many",
+      "kind": "grammaire",
+      "front": "Complète : How ___ water? How ___ bottles?",
+      "back": "How much water? How many bottles?"
+    },
+    {
+      "id": "few-little",
+      "kind": "grammaire",
+      "front": "Complète : a ___ friends / a ___ time.",
+      "back": "a few friends / a little time"
+    }
+  ]
+}

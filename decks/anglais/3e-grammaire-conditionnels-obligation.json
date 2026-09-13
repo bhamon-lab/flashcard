@@ -1,0 +1,73 @@
+{
+  "id": "anglais-3e-grammaire-conditionnels-obligation",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Grammaire · Conditionnels et obligation",
+  "description": "Règles et automatismes — conditionnels et obligation.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "zero",
+      "kind": "grammaire",
+      "front": "Complète : If you heat ice, it ___. (melt)",
+      "back": "If you heat ice, it melts."
+    },
+    {
+      "id": "first",
+      "kind": "grammaire",
+      "front": "Complète : If it rains, we ___ home. (stay)",
+      "back": "If it rains, we will stay home."
+    },
+    {
+      "id": "unless",
+      "kind": "grammaire",
+      "front": "Reformule : If you don't hurry, you will miss the bus.",
+      "back": "Unless you hurry, you will miss the bus."
+    },
+    {
+      "id": "must",
+      "kind": "grammaire",
+      "front": "Traduis : « Les élèves doivent respecter les règles. »",
+      "back": "Students must follow the rules."
+    },
+    {
+      "id": "have-to",
+      "kind": "grammaire",
+      "front": "Traduis : « Elle doit se lever tôt. »",
+      "back": "She has to get up early."
+    },
+    {
+      "id": "no-obligation",
+      "kind": "grammaire",
+      "front": "Traduis : « Tu n'es pas obligé de venir. »",
+      "back": "You don't have to come."
+    },
+    {
+      "id": "prohibition",
+      "kind": "grammaire",
+      "front": "Traduis : « Vous ne devez pas utiliser votre téléphone. »",
+      "back": "You mustn't use your phone."
+    },
+    {
+      "id": "passive-present",
+      "kind": "grammaire",
+      "front": "Mets au passif : Millions of people speak English.",
+      "back": "English is spoken by millions of people."
+    },
+    {
+      "id": "relative-who",
+      "kind": "grammaire",
+      "front": "Relie : The woman is a journalist. She interviewed me.",
+      "back": "The woman who interviewed me is a journalist."
+    },
+    {
+      "id": "relative-which",
+      "kind": "grammaire",
+      "front": "Relie : I read a book. It changed my mind.",
+      "back": "I read a book which/that changed my mind."
+    }
+  ]
+}

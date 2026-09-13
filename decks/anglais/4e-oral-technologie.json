@@ -1,0 +1,85 @@
+{
+  "id": "anglais-4e-oral-technologie",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Compréhension orale · Technologie",
+  "description": "Même liste que « Technologie », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "screen",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un écran",
+      "audio_text": "a screen"
+    },
+    {
+      "id": "keyboard",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un clavier",
+      "audio_text": "a keyboard"
+    },
+    {
+      "id": "mouse",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une souris",
+      "audio_text": "a mouse"
+    },
+    {
+      "id": "headphones",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un casque audio",
+      "audio_text": "headphones"
+    },
+    {
+      "id": "website",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un site web",
+      "audio_text": "a website"
+    },
+    {
+      "id": "search-engine",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un moteur de recherche",
+      "audio_text": "a search engine"
+    },
+    {
+      "id": "log-in",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "se connecter",
+      "audio_text": "to log in"
+    },
+    {
+      "id": "upload",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "téléverser",
+      "audio_text": "to upload"
+    },
+    {
+      "id": "save-file",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "enregistrer un fichier",
+      "audio_text": "to save a file"
+    },
+    {
+      "id": "device",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un appareil",
+      "audio_text": "a device"
+    }
+  ]
+}

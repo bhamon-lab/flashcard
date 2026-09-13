@@ -1,0 +1,85 @@
+{
+  "id": "anglais-5e-oral-routine",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Compréhension orale · Routine quotidienne",
+  "description": "Même liste que « Routine quotidienne », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "to-wake-up",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "se réveiller",
+      "audio_text": "to wake up"
+    },
+    {
+      "id": "to-get-up",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "se lever",
+      "audio_text": "to get up"
+    },
+    {
+      "id": "to-get-dressed",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "s’habiller",
+      "audio_text": "to get dressed"
+    },
+    {
+      "id": "to-have-breakfast",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "prendre le petit déjeuner",
+      "audio_text": "to have breakfast"
+    },
+    {
+      "id": "to-go-to-school",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "aller au collège",
+      "audio_text": "to go to school"
+    },
+    {
+      "id": "to-have-lunch",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "déjeuner",
+      "audio_text": "to have lunch"
+    },
+    {
+      "id": "to-go-home",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "rentrer à la maison",
+      "audio_text": "to go home"
+    },
+    {
+      "id": "to-do-one-s-homework",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "faire ses devoirs",
+      "audio_text": "to do one's homework"
+    },
+    {
+      "id": "to-have-dinner",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "dîner",
+      "audio_text": "to have dinner"
+    },
+    {
+      "id": "to-go-to-bed",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "aller se coucher",
+      "audio_text": "to go to bed"
+    }
+  ]
+}

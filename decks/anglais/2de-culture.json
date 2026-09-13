@@ -1,0 +1,73 @@
+{
+  "id": "anglais-2de-culture",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Culture · Institutions américaines et britanniques",
+  "description": "Repères culturels du monde anglophone.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "culture",
+  "cards": [
+    {
+      "id": "repere-01",
+      "kind": "culture",
+      "front": "Où siège le Parlement britannique ?",
+      "back": "At the Palace of Westminster in London."
+    },
+    {
+      "id": "repere-02",
+      "kind": "culture",
+      "front": "Quelles sont les deux chambres du Parlement britannique ?",
+      "back": "The House of Commons and the House of Lords."
+    },
+    {
+      "id": "repere-03",
+      "kind": "culture",
+      "front": "Qui dirige le gouvernement britannique ?",
+      "back": "The Prime Minister."
+    },
+    {
+      "id": "repere-04",
+      "kind": "culture",
+      "front": "Quel texte américain commence par “We the People” ?",
+      "back": "The Constitution of the United States."
+    },
+    {
+      "id": "repere-05",
+      "kind": "culture",
+      "front": "Quelles sont les trois branches du pouvoir fédéral américain ?",
+      "back": "Legislative, executive and judicial."
+    },
+    {
+      "id": "repere-06",
+      "kind": "culture",
+      "front": "Où siège le président des États-Unis ?",
+      "back": "At the White House in Washington, D.C."
+    },
+    {
+      "id": "repere-07",
+      "kind": "culture",
+      "front": "Quelles sont les deux chambres du Congrès américain ?",
+      "back": "The Senate and the House of Representatives."
+    },
+    {
+      "id": "repere-08",
+      "kind": "culture",
+      "front": "Que célèbre Independence Day le 4 juillet ?",
+      "back": "The adoption of the Declaration of Independence in 1776."
+    },
+    {
+      "id": "repere-09",
+      "kind": "culture",
+      "front": "Qu'est-ce que Thanksgiving aux États-Unis ?",
+      "back": "A national holiday celebrated on the fourth Thursday of November."
+    },
+    {
+      "id": "repere-10",
+      "kind": "culture",
+      "front": "Quel tribunal interprète la Constitution américaine au plus haut niveau ?",
+      "back": "The Supreme Court."
+    }
+  ]
+}

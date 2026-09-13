@@ -1,0 +1,73 @@
+{
+  "id": "anglais-5e-vocab-ville",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Vocabulaire · Ville et directions",
+  "description": "Liste de vocabulaire — ville et directions.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "the-station",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la gare ».",
+      "back": "the station"
+    },
+    {
+      "id": "the-town-hall",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la mairie ».",
+      "back": "the town hall"
+    },
+    {
+      "id": "the-library",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la bibliothèque ».",
+      "back": "the library"
+    },
+    {
+      "id": "the-crossroads",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le carrefour ».",
+      "back": "the crossroads"
+    },
+    {
+      "id": "the-traffic-light",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le feu de circulation ».",
+      "back": "the traffic light"
+    },
+    {
+      "id": "to-turn-left",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « tourner à gauche ».",
+      "back": "to turn left"
+    },
+    {
+      "id": "to-turn-right",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « tourner à droite ».",
+      "back": "to turn right"
+    },
+    {
+      "id": "to-go-straight-on",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « aller tout droit ».",
+      "back": "to go straight on"
+    },
+    {
+      "id": "opposite",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « en face de ».",
+      "back": "opposite"
+    },
+    {
+      "id": "next-to",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « à côté de ».",
+      "back": "next to"
+    }
+  ]
+}

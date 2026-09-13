@@ -1,0 +1,73 @@
+{
+  "id": "anglais-1re-vocab-economie-travail",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Vocabulaire · Économie et travail",
+  "description": "Liste de vocabulaire — économie et travail.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "workforce",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la population active ».",
+      "back": "the workforce"
+    },
+    {
+      "id": "unemployment",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le chômage ».",
+      "back": "unemployment"
+    },
+    {
+      "id": "income",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un revenu ».",
+      "back": "an income"
+    },
+    {
+      "id": "living-wage",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un salaire décent ».",
+      "back": "a living wage"
+    },
+    {
+      "id": "working-condition",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une condition de travail ».",
+      "back": "a working condition"
+    },
+    {
+      "id": "trade-union",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un syndicat ».",
+      "back": "a trade union"
+    },
+    {
+      "id": "strike-action",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une grève ».",
+      "back": "a strike"
+    },
+    {
+      "id": "hire",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « embaucher ».",
+      "back": "to hire"
+    },
+    {
+      "id": "dismiss",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « licencier ».",
+      "back": "to dismiss"
+    },
+    {
+      "id": "make-living",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « gagner sa vie ».",
+      "back": "to make a living"
+    }
+  ]
+}

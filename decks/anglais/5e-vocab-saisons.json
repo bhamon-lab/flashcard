@@ -1,0 +1,73 @@
+{
+  "id": "anglais-5e-vocab-saisons",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Vocabulaire · Saisons et météo",
+  "description": "Liste de vocabulaire — saisons et météo.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "spring",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le printemps ».",
+      "back": "spring"
+    },
+    {
+      "id": "summer",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'été ».",
+      "back": "summer"
+    },
+    {
+      "id": "autumn",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'automne ».",
+      "back": "autumn"
+    },
+    {
+      "id": "winter",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'hiver ».",
+      "back": "winter"
+    },
+    {
+      "id": "hot",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « chaud ».",
+      "back": "hot"
+    },
+    {
+      "id": "cold",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « froid ».",
+      "back": "cold"
+    },
+    {
+      "id": "rainy",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « pluvieux ».",
+      "back": "rainy"
+    },
+    {
+      "id": "snowy",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « enneigé ».",
+      "back": "snowy"
+    },
+    {
+      "id": "weather",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « Quel temps fait-il ? ».",
+      "back": "What's the weather like?"
+    },
+    {
+      "id": "temperature",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la température ».",
+      "back": "the temperature"
+    }
+  ]
+}

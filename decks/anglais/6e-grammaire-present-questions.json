@@ -1,0 +1,73 @@
+{
+  "id": "anglais-6e-grammaire-present-questions",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Grammaire · Présent simple et questions",
+  "description": "Règles et automatismes — présent simple et questions.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "present-i",
+      "kind": "grammaire",
+      "front": "Complète : I ___ football on Saturdays. (play)",
+      "back": "I play football on Saturdays."
+    },
+    {
+      "id": "present-he",
+      "kind": "grammaire",
+      "front": "Complète : He ___ football on Saturdays. (play)",
+      "back": "He plays football on Saturdays."
+    },
+    {
+      "id": "present-negative",
+      "kind": "grammaire",
+      "front": "Traduis : « Je n'aime pas le lait. »",
+      "back": "I don't like milk."
+    },
+    {
+      "id": "present-negative-he",
+      "kind": "grammaire",
+      "front": "Traduis : « Elle ne regarde pas la télévision. »",
+      "back": "She doesn't watch television."
+    },
+    {
+      "id": "do-question",
+      "kind": "grammaire",
+      "front": "Traduis : « Est-ce que tu habites ici ? »",
+      "back": "Do you live here?"
+    },
+    {
+      "id": "does-question",
+      "kind": "grammaire",
+      "front": "Traduis : « Est-ce qu'il aime l'école ? »",
+      "back": "Does he like school?"
+    },
+    {
+      "id": "question-word",
+      "kind": "grammaire",
+      "front": "Complète : ___ do you live? — In Lyon.",
+      "back": "Where do you live?"
+    },
+    {
+      "id": "articles",
+      "kind": "grammaire",
+      "front": "Complète : ___ cat and ___ elephant.",
+      "back": "A cat and an elephant."
+    },
+    {
+      "id": "plural",
+      "kind": "grammaire",
+      "front": "Donne le pluriel de child, box et foot.",
+      "back": "children, boxes, feet"
+    },
+    {
+      "id": "can",
+      "kind": "grammaire",
+      "front": "Traduis : « Je sais nager mais je ne sais pas voler. »",
+      "back": "I can swim, but I can't fly."
+    }
+  ]
+}

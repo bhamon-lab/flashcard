@@ -1,0 +1,73 @@
+{
+  "id": "anglais-2de-grammaire-temps-du-recit",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Grammaire · Temps du récit",
+  "description": "Règles et automatismes — temps du récit.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "past-perfect",
+      "kind": "grammaire",
+      "front": "Complète : When we arrived, the film ___. (start)",
+      "back": "When we arrived, the film had started."
+    },
+    {
+      "id": "past-perfect-negative",
+      "kind": "grammaire",
+      "front": "Traduis : « Elle n'avait jamais voyagé seule. »",
+      "back": "She had never travelled alone."
+    },
+    {
+      "id": "three-times",
+      "kind": "grammaire",
+      "front": "Complète : He ___ while I ___ dinner. (call/cook)",
+      "back": "He called while I was cooking dinner."
+    },
+    {
+      "id": "used-to",
+      "kind": "grammaire",
+      "front": "Traduis : « Avant, il habitait à Manchester. »",
+      "back": "He used to live in Manchester."
+    },
+    {
+      "id": "would-habit",
+      "kind": "grammaire",
+      "front": "Traduis cette habitude passée : « Chaque été, nous allions à la mer. »",
+      "back": "Every summer, we would go to the seaside."
+    },
+    {
+      "id": "since-for",
+      "kind": "grammaire",
+      "front": "Complète : She has worked here ___ March / ___ six months.",
+      "back": "since March / for six months"
+    },
+    {
+      "id": "present-perfect-continuous",
+      "kind": "grammaire",
+      "front": "Complète : It ___ all morning. (rain)",
+      "back": "It has been raining all morning."
+    },
+    {
+      "id": "narrative-sequence",
+      "kind": "grammaire",
+      "front": "Ordonne un récit avec trois connecteurs.",
+      "back": "First, … Then, … Eventually, …"
+    },
+    {
+      "id": "suddenly",
+      "kind": "grammaire",
+      "front": "Que signifie suddenly dans un récit ?",
+      "back": "soudain / tout à coup"
+    },
+    {
+      "id": "by-the-time",
+      "kind": "grammaire",
+      "front": "Complète : By the time I arrived, they ___. (leave)",
+      "back": "By the time I arrived, they had left."
+    }
+  ]
+}

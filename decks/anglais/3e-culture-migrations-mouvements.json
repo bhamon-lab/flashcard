@@ -1,0 +1,73 @@
+{
+  "id": "anglais-3e-culture-migrations-mouvements",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Culture · Migrations et mouvements sociaux",
+  "description": "Repères culturels du monde anglophone.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "culture",
+  "cards": [
+    {
+      "id": "repere-01",
+      "kind": "culture",
+      "front": "À quoi servait Ellis Island ?",
+      "back": "It was a major immigration inspection station in New York Harbor."
+    },
+    {
+      "id": "repere-02",
+      "kind": "culture",
+      "front": "Qu'était the Underground Railroad ?",
+      "back": "A network that helped enslaved people escape to freedom."
+    },
+    {
+      "id": "repere-03",
+      "kind": "culture",
+      "front": "Quel mouvement suivit l'arrestation de Rosa Parks ?",
+      "back": "The Montgomery Bus Boycott."
+    },
+    {
+      "id": "repere-04",
+      "kind": "culture",
+      "front": "Quel amendement abolit l'esclavage aux États-Unis ?",
+      "back": "The Thirteenth Amendment."
+    },
+    {
+      "id": "repere-05",
+      "kind": "culture",
+      "front": "Quel amendement garantit le droit de vote des femmes aux États-Unis ?",
+      "back": "The Nineteenth Amendment."
+    },
+    {
+      "id": "repere-06",
+      "kind": "culture",
+      "front": "Quel événement de 1969 est un repère du mouvement LGBTQ+ ?",
+      "back": "The Stonewall uprising."
+    },
+    {
+      "id": "repere-07",
+      "kind": "culture",
+      "front": "Que désigne the Windrush generation ?",
+      "back": "Caribbean people who migrated to the UK after the Second World War."
+    },
+    {
+      "id": "repere-08",
+      "kind": "culture",
+      "front": "Qu'était apartheid en Afrique du Sud ?",
+      "back": "A system of institutionalised racial segregation."
+    },
+    {
+      "id": "repere-09",
+      "kind": "culture",
+      "front": "En quelle année Black Lives Matter a-t-il été fondé ?",
+      "back": "In 2013."
+    },
+    {
+      "id": "repere-10",
+      "kind": "culture",
+      "front": "Que réclamaient les suffragettes ?",
+      "back": "Voting rights for women."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "anglais-6e-vocab-vetements",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Vocabulaire · Vêtements",
+  "description": "Liste de vocabulaire — vêtements.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "tshirt",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un tee-shirt ».",
+      "back": "a T-shirt"
+    },
+    {
+      "id": "shirt",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une chemise ».",
+      "back": "a shirt"
+    },
+    {
+      "id": "jumper",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un pull ».",
+      "back": "a jumper"
+    },
+    {
+      "id": "trousers",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un pantalon ».",
+      "back": "trousers"
+    },
+    {
+      "id": "dress",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une robe ».",
+      "back": "a dress"
+    },
+    {
+      "id": "skirt",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une jupe ».",
+      "back": "a skirt"
+    },
+    {
+      "id": "coat",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un manteau ».",
+      "back": "a coat"
+    },
+    {
+      "id": "shoes",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « des chaussures ».",
+      "back": "shoes"
+    },
+    {
+      "id": "socks",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « des chaussettes ».",
+      "back": "socks"
+    },
+    {
+      "id": "hat",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un chapeau ».",
+      "back": "a hat"
+    }
+  ]
+}

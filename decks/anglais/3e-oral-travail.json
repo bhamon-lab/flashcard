@@ -1,0 +1,85 @@
+{
+  "id": "anglais-3e-oral-travail",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Compréhension orale · Monde du travail",
+  "description": "Même liste que « Monde du travail », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "job",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un emploi",
+      "audio_text": "a job"
+    },
+    {
+      "id": "employer",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un employeur",
+      "audio_text": "an employer"
+    },
+    {
+      "id": "employee",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un salarié",
+      "audio_text": "an employee"
+    },
+    {
+      "id": "salary",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un salaire",
+      "audio_text": "a salary"
+    },
+    {
+      "id": "working-hours",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les horaires de travail",
+      "audio_text": "working hours"
+    },
+    {
+      "id": "colleague",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un collègue",
+      "audio_text": "a colleague"
+    },
+    {
+      "id": "experience",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "de l'expérience",
+      "audio_text": "experience"
+    },
+    {
+      "id": "job-interview",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un entretien d'embauche",
+      "audio_text": "a job interview"
+    },
+    {
+      "id": "part-time",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "à temps partiel",
+      "audio_text": "part-time"
+    },
+    {
+      "id": "full-time",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "à temps plein",
+      "audio_text": "full-time"
+    }
+  ]
+}

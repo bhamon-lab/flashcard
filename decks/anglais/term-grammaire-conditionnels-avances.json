@@ -1,0 +1,73 @@
+{
+  "id": "anglais-term-grammaire-conditionnels-avances",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Grammaire · Conditionnels avancés",
+  "description": "Règles et automatismes — conditionnels avancés.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "third",
+      "kind": "grammaire",
+      "front": "Complète : If they ___ earlier, they ___ the crisis. (act/avoid)",
+      "back": "If they had acted earlier, they might have avoided the crisis."
+    },
+    {
+      "id": "mixed",
+      "kind": "grammaire",
+      "front": "Complète : If we had invested earlier, the system ___ safer now. (be)",
+      "back": "If we had invested earlier, the system would be safer now."
+    },
+    {
+      "id": "inversion-had",
+      "kind": "grammaire",
+      "front": "Reformule sans if : If they had known, they would have acted.",
+      "back": "Had they known, they would have acted."
+    },
+    {
+      "id": "inversion-were",
+      "kind": "grammaire",
+      "front": "Reformule sans if : If I were you, I would wait.",
+      "back": "Were I you, I would wait."
+    },
+    {
+      "id": "provided",
+      "kind": "grammaire",
+      "front": "Traduis : « à condition que des garanties soient ajoutées ».",
+      "back": "provided that safeguards are added"
+    },
+    {
+      "id": "otherwise",
+      "kind": "grammaire",
+      "front": "Relie avec otherwise : Act now. The problem will worsen.",
+      "back": "Act now; otherwise, the problem will worsen."
+    },
+    {
+      "id": "should-have",
+      "kind": "grammaire",
+      "front": "Traduis : « Ils auraient dû anticiper le risque. »",
+      "back": "They should have anticipated the risk."
+    },
+    {
+      "id": "neednt-have",
+      "kind": "grammaire",
+      "front": "Traduis : « Tu n'avais pas besoin de venir, mais tu es venu. »",
+      "back": "You needn't have come."
+    },
+    {
+      "id": "might-have",
+      "kind": "grammaire",
+      "front": "Traduis : « La mesure a peut-être échoué. »",
+      "back": "The measure might have failed."
+    },
+    {
+      "id": "would-rather",
+      "kind": "grammaire",
+      "front": "Traduis : « Je préférerais qu'ils agissent maintenant. »",
+      "back": "I would rather they acted now."
+    }
+  ]
+}

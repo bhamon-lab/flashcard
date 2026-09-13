@@ -1,0 +1,73 @@
+{
+  "id": "anglais-term-grammaire-discours-formel",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Grammaire · Discours formel et articulation",
+  "description": "Règles et automatismes — discours formel et articulation.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "nominalise-decide",
+      "kind": "grammaire",
+      "front": "Nominalise : The committee decided to intervene.",
+      "back": "The committee's decision to intervene…"
+    },
+    {
+      "id": "nominalise-fail",
+      "kind": "grammaire",
+      "front": "Nominalise : The policy failed.",
+      "back": "The failure of the policy…"
+    },
+    {
+      "id": "owing-to",
+      "kind": "grammaire",
+      "front": "Traduis : « en raison d'un manque de preuves ».",
+      "back": "owing to a lack of evidence"
+    },
+    {
+      "id": "notwithstanding",
+      "kind": "grammaire",
+      "front": "Traduis : « malgré ces limites » dans un registre formel.",
+      "back": "notwithstanding these limitations"
+    },
+    {
+      "id": "insofar",
+      "kind": "grammaire",
+      "front": "Traduis : « dans la mesure où cela protège les citoyens ».",
+      "back": "insofar as it protects citizens"
+    },
+    {
+      "id": "thereby",
+      "kind": "grammaire",
+      "front": "Relie : It reduced costs. It improved access.",
+      "back": "It reduced costs, thereby improving access."
+    },
+    {
+      "id": "given-that",
+      "kind": "grammaire",
+      "front": "Traduis : « étant donné que les preuves sont limitées ».",
+      "back": "given that the evidence is limited"
+    },
+    {
+      "id": "on-balance",
+      "kind": "grammaire",
+      "front": "Introduis une conclusion équilibrée.",
+      "back": "On balance, …"
+    },
+    {
+      "id": "to-extent",
+      "kind": "grammaire",
+      "front": "Nuance : « Cela est vrai dans une certaine mesure. »",
+      "back": "This is true to a certain extent."
+    },
+    {
+      "id": "far-from",
+      "kind": "grammaire",
+      "front": "Traduis : « Loin de résoudre le problème, cela l'aggrave. »",
+      "back": "Far from solving the problem, it makes it worse."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "anglais-6e-vocab-nombres-heure",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Vocabulaire · Nombres et heure",
+  "description": "Liste de vocabulaire — nombres et heure.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "one",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un ».",
+      "back": "one"
+    },
+    {
+      "id": "two",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « deux ».",
+      "back": "two"
+    },
+    {
+      "id": "ten",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « dix ».",
+      "back": "ten"
+    },
+    {
+      "id": "twenty",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « vingt ».",
+      "back": "twenty"
+    },
+    {
+      "id": "one-hundred",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « cent ».",
+      "back": "one hundred"
+    },
+    {
+      "id": "what-time",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « Quelle heure est-il ? ».",
+      "back": "What time is it?"
+    },
+    {
+      "id": "oclock",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « Il est huit heures. ».",
+      "back": "It's eight o'clock."
+    },
+    {
+      "id": "half-past",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « Il est huit heures et demie. ».",
+      "back": "It's half past eight."
+    },
+    {
+      "id": "quarter-past",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « Il est huit heures et quart. ».",
+      "back": "It's quarter past eight."
+    },
+    {
+      "id": "quarter-to",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « Il est neuf heures moins le quart. ».",
+      "back": "It's quarter to nine."
+    }
+  ]
+}

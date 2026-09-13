@@ -1,0 +1,85 @@
+{
+  "id": "anglais-6e-oral-salutations",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Compréhension orale · Salutations et politesse",
+  "description": "Même liste que « Salutations et politesse », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "hello",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "bonjour",
+      "audio_text": "hello"
+    },
+    {
+      "id": "hi",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "salut",
+      "audio_text": "hi"
+    },
+    {
+      "id": "good-morning",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "bonjour (le matin)",
+      "audio_text": "good morning"
+    },
+    {
+      "id": "good-afternoon",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "bon après-midi",
+      "audio_text": "good afternoon"
+    },
+    {
+      "id": "good-evening",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "bonsoir",
+      "audio_text": "good evening"
+    },
+    {
+      "id": "goodbye",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "au revoir",
+      "audio_text": "goodbye"
+    },
+    {
+      "id": "see-you-soon",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "à bientôt",
+      "audio_text": "see you soon"
+    },
+    {
+      "id": "please",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "s’il vous plaît",
+      "audio_text": "please"
+    },
+    {
+      "id": "thank-you",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "merci",
+      "audio_text": "thank you"
+    },
+    {
+      "id": "sorry",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "désolé",
+      "audio_text": "sorry"
+    }
+  ]
+}

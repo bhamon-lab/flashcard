@@ -57,6 +57,7 @@ function asDeck(raw: unknown, fileName: string, fallbackSubject: string): Synced
       id: cardId,
       front,
       back: typeof card.back === 'string' ? card.back.trim() : '',
+      indice: typeof card.indice === 'string' ? card.indice.trim() : '',
     });
   });
   if (!normalized.length) return null;

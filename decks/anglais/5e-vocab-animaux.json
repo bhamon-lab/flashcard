@@ -1,0 +1,73 @@
+{
+  "id": "anglais-5e-vocab-animaux",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Vocabulaire · Animaux et nature",
+  "description": "Liste de vocabulaire — animaux et nature.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "pet",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un animal de compagnie ».",
+      "back": "a pet"
+    },
+    {
+      "id": "dog",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un chien ».",
+      "back": "a dog"
+    },
+    {
+      "id": "cat",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un chat ».",
+      "back": "a cat"
+    },
+    {
+      "id": "horse",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un cheval ».",
+      "back": "a horse"
+    },
+    {
+      "id": "bird",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un oiseau ».",
+      "back": "a bird"
+    },
+    {
+      "id": "forest",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une forêt ».",
+      "back": "a forest"
+    },
+    {
+      "id": "river",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une rivière ».",
+      "back": "a river"
+    },
+    {
+      "id": "mountain",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une montagne ».",
+      "back": "a mountain"
+    },
+    {
+      "id": "sea",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la mer ».",
+      "back": "the sea"
+    },
+    {
+      "id": "countryside",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la campagne ».",
+      "back": "the countryside"
+    }
+  ]
+}

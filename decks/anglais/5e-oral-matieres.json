@@ -1,0 +1,85 @@
+{
+  "id": "anglais-5e-oral-matieres",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Compréhension orale · Matières scolaires",
+  "description": "Même liste que « Matières scolaires », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "english",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'anglais",
+      "audio_text": "English"
+    },
+    {
+      "id": "maths",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les mathématiques",
+      "audio_text": "maths"
+    },
+    {
+      "id": "history",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'histoire",
+      "audio_text": "history"
+    },
+    {
+      "id": "geography",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la géographie",
+      "audio_text": "geography"
+    },
+    {
+      "id": "science",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les sciences",
+      "audio_text": "science"
+    },
+    {
+      "id": "art",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les arts plastiques",
+      "audio_text": "art"
+    },
+    {
+      "id": "music",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la musique",
+      "audio_text": "music"
+    },
+    {
+      "id": "pe",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'éducation physique",
+      "audio_text": "PE"
+    },
+    {
+      "id": "timetable",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un emploi du temps",
+      "audio_text": "a timetable"
+    },
+    {
+      "id": "break",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la récréation",
+      "audio_text": "break time"
+    }
+  ]
+}

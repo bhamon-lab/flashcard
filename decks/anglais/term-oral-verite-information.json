@@ -1,0 +1,85 @@
+{
+  "id": "anglais-term-oral-verite-information",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Compréhension orale · Vérité et information",
+  "description": "Même liste que « Vérité et information », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "misinformation",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une information erronée",
+      "audio_text": "misinformation"
+    },
+    {
+      "id": "disinformation",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une désinformation volontaire",
+      "audio_text": "disinformation"
+    },
+    {
+      "id": "fact-checker",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un vérificateur de faits",
+      "audio_text": "a fact-checker"
+    },
+    {
+      "id": "source-bias",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le biais d'une source",
+      "audio_text": "source bias"
+    },
+    {
+      "id": "echo-chamber",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une chambre d'écho",
+      "audio_text": "an echo chamber"
+    },
+    {
+      "id": "deepfake",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un hypertrucage",
+      "audio_text": "a deepfake"
+    },
+    {
+      "id": "verify-claim",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "vérifier une affirmation",
+      "audio_text": "to verify a claim"
+    },
+    {
+      "id": "debunk",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "démentir",
+      "audio_text": "to debunk"
+    },
+    {
+      "id": "distort",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "déformer",
+      "audio_text": "to distort"
+    },
+    {
+      "id": "media-literacy",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'éducation aux médias",
+      "audio_text": "media literacy"
+    }
+  ]
+}

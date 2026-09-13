@@ -1,0 +1,73 @@
+{
+  "id": "anglais-term-vocab-democratie",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Vocabulaire · Démocratie et institutions",
+  "description": "Liste de vocabulaire — démocratie et institutions.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "ballot",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un bulletin de vote ».",
+      "back": "a ballot"
+    },
+    {
+      "id": "turnout",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la participation électorale ».",
+      "back": "turnout"
+    },
+    {
+      "id": "constituency",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une circonscription ».",
+      "back": "a constituency"
+    },
+    {
+      "id": "lawmaker",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un législateur ».",
+      "back": "a lawmaker"
+    },
+    {
+      "id": "judiciary",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le pouvoir judiciaire ».",
+      "back": "the judiciary"
+    },
+    {
+      "id": "rule-of-law",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'État de droit ».",
+      "back": "the rule of law"
+    },
+    {
+      "id": "checks-balances",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la séparation et l'équilibre des pouvoirs ».",
+      "back": "checks and balances"
+    },
+    {
+      "id": "pass-law",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « adopter une loi ».",
+      "back": "to pass a law"
+    },
+    {
+      "id": "overturn",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « annuler une décision ».",
+      "back": "to overturn"
+    },
+    {
+      "id": "eligible-vote",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « avoir le droit de vote ».",
+      "back": "to be eligible to vote"
+    }
+  ]
+}

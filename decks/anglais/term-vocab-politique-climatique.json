@@ -1,0 +1,73 @@
+{
+  "id": "anglais-term-vocab-politique-climatique",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Vocabulaire · Politique climatique",
+  "description": "Liste de vocabulaire — politique climatique.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "carbon-tax",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une taxe carbone ».",
+      "back": "a carbon tax"
+    },
+    {
+      "id": "emission-target",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un objectif d'émissions ».",
+      "back": "an emissions target"
+    },
+    {
+      "id": "climate-justice",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la justice climatique ».",
+      "back": "climate justice"
+    },
+    {
+      "id": "adaptation",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'adaptation ».",
+      "back": "adaptation"
+    },
+    {
+      "id": "mitigation",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'atténuation ».",
+      "back": "mitigation"
+    },
+    {
+      "id": "loss-damage",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les pertes et préjudices ».",
+      "back": "loss and damage"
+    },
+    {
+      "id": "binding",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « contraignant ».",
+      "back": "binding"
+    },
+    {
+      "id": "pledge",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « s'engager à ».",
+      "back": "to pledge"
+    },
+    {
+      "id": "meet-target",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « atteindre un objectif ».",
+      "back": "to meet a target"
+    },
+    {
+      "id": "bear-cost",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « supporter le coût ».",
+      "back": "to bear the cost"
+    }
+  ]
+}

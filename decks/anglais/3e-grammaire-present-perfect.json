@@ -1,0 +1,73 @@
+{
+  "id": "anglais-3e-grammaire-present-perfect",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Grammaire · Present perfect",
+  "description": "Règles et automatismes — present perfect.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "form",
+      "kind": "grammaire",
+      "front": "Complète : I ___ London twice. (visit)",
+      "back": "I have visited London twice."
+    },
+    {
+      "id": "never",
+      "kind": "grammaire",
+      "front": "Traduis : « Je n'ai jamais vu ce film. »",
+      "back": "I have never seen this film."
+    },
+    {
+      "id": "ever",
+      "kind": "grammaire",
+      "front": "Traduis : « Es-tu déjà allé au Canada ? »",
+      "back": "Have you ever been to Canada?"
+    },
+    {
+      "id": "just",
+      "kind": "grammaire",
+      "front": "Traduis : « Elle vient de finir. »",
+      "back": "She has just finished."
+    },
+    {
+      "id": "already",
+      "kind": "grammaire",
+      "front": "Traduis : « Ils ont déjà mangé. »",
+      "back": "They have already eaten."
+    },
+    {
+      "id": "yet-question",
+      "kind": "grammaire",
+      "front": "Traduis : « As-tu déjà terminé ? »",
+      "back": "Have you finished yet?"
+    },
+    {
+      "id": "yet-negative",
+      "kind": "grammaire",
+      "front": "Traduis : « Je n'ai pas encore terminé. »",
+      "back": "I haven't finished yet."
+    },
+    {
+      "id": "since",
+      "kind": "grammaire",
+      "front": "Complète : We have lived here ___ 2022.",
+      "back": "We have lived here since 2022."
+    },
+    {
+      "id": "for",
+      "kind": "grammaire",
+      "front": "Complète : She has studied English ___ five years.",
+      "back": "She has studied English for five years."
+    },
+    {
+      "id": "past-difference",
+      "kind": "grammaire",
+      "front": "Choisis : I have seen / saw him yesterday.",
+      "back": "I saw him yesterday: yesterday situe un passé terminé."
+    }
+  ]
+}

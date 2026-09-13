@@ -1,0 +1,73 @@
+{
+  "id": "anglais-1re-vocab-pouvoir-contestation",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Vocabulaire · Pouvoir et contestation",
+  "description": "Liste de vocabulaire — pouvoir et contestation.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "authority",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'autorité ».",
+      "back": "authority"
+    },
+    {
+      "id": "protest",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une manifestation ».",
+      "back": "a protest"
+    },
+    {
+      "id": "demonstrator",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un manifestant ».",
+      "back": "a demonstrator"
+    },
+    {
+      "id": "civil-disobedience",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la désobéissance civile ».",
+      "back": "civil disobedience"
+    },
+    {
+      "id": "oppression",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'oppression ».",
+      "back": "oppression"
+    },
+    {
+      "id": "resistance",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la résistance ».",
+      "back": "resistance"
+    },
+    {
+      "id": "challenge-authority",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « contester l'autorité ».",
+      "back": "to challenge authority"
+    },
+    {
+      "id": "speak-out",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « prendre publiquement position ».",
+      "back": "to speak out"
+    },
+    {
+      "id": "ban",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « interdire ».",
+      "back": "to ban"
+    },
+    {
+      "id": "grant-right",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « accorder un droit ».",
+      "back": "to grant a right"
+    }
+  ]
+}

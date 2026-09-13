@@ -1,0 +1,73 @@
+{
+  "id": "anglais-1re-vocab-science-progres",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Vocabulaire · Science et progrès",
+  "description": "Liste de vocabulaire — science et progrès.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "research",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la recherche ».",
+      "back": "research"
+    },
+    {
+      "id": "finding",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un résultat de recherche ».",
+      "back": "a finding"
+    },
+    {
+      "id": "trial",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un essai ».",
+      "back": "a trial"
+    },
+    {
+      "id": "discovery",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une découverte ».",
+      "back": "a discovery"
+    },
+    {
+      "id": "device",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un dispositif ».",
+      "back": "a device"
+    },
+    {
+      "id": "reliable",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « fiable ».",
+      "back": "reliable"
+    },
+    {
+      "id": "accurate",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « précis ».",
+      "back": "accurate"
+    },
+    {
+      "id": "carry-out",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « mener une expérience ».",
+      "back": "to carry out an experiment"
+    },
+    {
+      "id": "raise-concern",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « susciter une inquiétude ».",
+      "back": "to raise concern"
+    },
+    {
+      "id": "scientific-evidence",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « des preuves scientifiques ».",
+      "back": "scientific evidence"
+    }
+  ]
+}

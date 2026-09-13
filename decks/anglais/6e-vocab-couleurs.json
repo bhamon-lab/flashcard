@@ -1,0 +1,73 @@
+{
+  "id": "anglais-6e-vocab-couleurs",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Vocabulaire · Couleurs",
+  "description": "Liste de vocabulaire — couleurs.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "red",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « rouge ».",
+      "back": "red"
+    },
+    {
+      "id": "blue",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « bleu ».",
+      "back": "blue"
+    },
+    {
+      "id": "green",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « vert ».",
+      "back": "green"
+    },
+    {
+      "id": "yellow",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « jaune ».",
+      "back": "yellow"
+    },
+    {
+      "id": "orange",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « orange ».",
+      "back": "orange"
+    },
+    {
+      "id": "pink",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « rose ».",
+      "back": "pink"
+    },
+    {
+      "id": "purple",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « violet ».",
+      "back": "purple"
+    },
+    {
+      "id": "brown",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « marron ».",
+      "back": "brown"
+    },
+    {
+      "id": "black",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « noir ».",
+      "back": "black"
+    },
+    {
+      "id": "white",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « blanc ».",
+      "back": "white"
+    }
+  ]
+}

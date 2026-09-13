@@ -1,0 +1,73 @@
+{
+  "id": "anglais-6e-vocab-famille",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Vocabulaire · Famille",
+  "description": "Liste de vocabulaire — famille.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "the-mother",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la mère ».",
+      "back": "the mother"
+    },
+    {
+      "id": "the-father",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le père ».",
+      "back": "the father"
+    },
+    {
+      "id": "the-parents",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les parents ».",
+      "back": "the parents"
+    },
+    {
+      "id": "the-sister",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la sœur ».",
+      "back": "the sister"
+    },
+    {
+      "id": "the-brother",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le frère ».",
+      "back": "the brother"
+    },
+    {
+      "id": "the-grandmother",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la grand-mère ».",
+      "back": "the grandmother"
+    },
+    {
+      "id": "the-grandfather",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le grand-père ».",
+      "back": "the grandfather"
+    },
+    {
+      "id": "the-aunt",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la tante ».",
+      "back": "the aunt"
+    },
+    {
+      "id": "the-uncle",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l’oncle ».",
+      "back": "the uncle"
+    },
+    {
+      "id": "the-cousin",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le cousin / la cousine ».",
+      "back": "the cousin"
+    }
+  ]
+}

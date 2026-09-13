@@ -1,0 +1,85 @@
+{
+  "id": "anglais-term-oral-democratie",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Compréhension orale · Démocratie et institutions",
+  "description": "Même liste que « Démocratie et institutions », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "ballot",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un bulletin de vote",
+      "audio_text": "a ballot"
+    },
+    {
+      "id": "turnout",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la participation électorale",
+      "audio_text": "turnout"
+    },
+    {
+      "id": "constituency",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une circonscription",
+      "audio_text": "a constituency"
+    },
+    {
+      "id": "lawmaker",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un législateur",
+      "audio_text": "a lawmaker"
+    },
+    {
+      "id": "judiciary",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le pouvoir judiciaire",
+      "audio_text": "the judiciary"
+    },
+    {
+      "id": "rule-of-law",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l'État de droit",
+      "audio_text": "the rule of law"
+    },
+    {
+      "id": "checks-balances",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la séparation et l'équilibre des pouvoirs",
+      "audio_text": "checks and balances"
+    },
+    {
+      "id": "pass-law",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "adopter une loi",
+      "audio_text": "to pass a law"
+    },
+    {
+      "id": "overturn",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "annuler une décision",
+      "audio_text": "to overturn"
+    },
+    {
+      "id": "eligible-vote",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "avoir le droit de vote",
+      "audio_text": "to be eligible to vote"
+    }
+  ]
+}

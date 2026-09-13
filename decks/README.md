@@ -10,6 +10,8 @@ liste vers le bas).
 decks/
   maths/
     6e-nombres.json … 3e-trigonometrie.json   (catalogue collège)
+  anglais/
+    6e-vocab-salutations.json … term-grammaire-emphase-synthese.json
   francais/
     orthographe.json
   histoire/
@@ -52,6 +54,19 @@ deux branches distinctes en terminale, sans verrouillage dans l’application.
 Consulter le [guide du lycée et les sources officielles](../docs/lycee-2026-2027.md)
 et le [graphe de progression](../curriculum/maths.json).
 Vérifier avec `python3 scripts/validate_lycee_decks.py`.
+
+## Anglais du collège au lycée
+
+Le catalogue contient **161 decks et 1 725 cartes**, classés par niveau de la 6e
+à la terminale : 56 listes de vocabulaire, leurs 56 copies en compréhension
+orale, 14 listes de culture, 185 verbes irréguliers et 28 listes de grammaire. Les champs
+éditoriaux `category`, `mode`, `audio_language`, `cards[].kind` et
+`cards[].audio_text` sont conservés dans les fichiers mais actuellement ignorés
+par le synchroniseur.
+
+Consulter l'[arbre de progression en anglais](../docs/progression-anglais.md)
+pour les parcours conseillés, les prérequis et les principes de conception.
+Vérifier avec `python3 scripts/validate_english_decks.py`.
 
 ## Format
 

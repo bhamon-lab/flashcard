@@ -1,0 +1,85 @@
+{
+  "id": "anglais-3e-oral-citoyennete",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Compréhension orale · Société et citoyenneté",
+  "description": "Même liste que « Société et citoyenneté », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "a-citizen",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un citoyen",
+      "audio_text": "a citizen"
+    },
+    {
+      "id": "a-right",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un droit",
+      "audio_text": "a right"
+    },
+    {
+      "id": "a-duty",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un devoir",
+      "audio_text": "a duty"
+    },
+    {
+      "id": "a-law",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une loi",
+      "audio_text": "a law"
+    },
+    {
+      "id": "an-election",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une élection",
+      "audio_text": "an election"
+    },
+    {
+      "id": "to-vote",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "voter",
+      "audio_text": "to vote"
+    },
+    {
+      "id": "equality",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l’égalité",
+      "audio_text": "equality"
+    },
+    {
+      "id": "freedom",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la liberté",
+      "audio_text": "freedom"
+    },
+    {
+      "id": "discrimination",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la discrimination",
+      "audio_text": "discrimination"
+    },
+    {
+      "id": "to-volunteer",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "faire du bénévolat",
+      "audio_text": "to volunteer"
+    }
+  ]
+}

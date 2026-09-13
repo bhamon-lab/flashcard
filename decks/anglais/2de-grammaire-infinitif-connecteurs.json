@@ -1,0 +1,73 @@
+{
+  "id": "anglais-2de-grammaire-infinitif-connecteurs",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Grammaire · Infinitif, gérondif et connecteurs",
+  "description": "Règles et automatismes — infinitif, gérondif et connecteurs.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "want-to",
+      "kind": "grammaire",
+      "front": "Complète : They want ___ change things. (to)",
+      "back": "They want to change things."
+    },
+    {
+      "id": "avoid-ing",
+      "kind": "grammaire",
+      "front": "Complète : We should avoid ___ energy. (waste)",
+      "back": "We should avoid wasting energy."
+    },
+    {
+      "id": "decide-to",
+      "kind": "grammaire",
+      "front": "Complète : She decided ___ abroad. (study)",
+      "back": "She decided to study abroad."
+    },
+    {
+      "id": "keep-ing",
+      "kind": "grammaire",
+      "front": "Complète : They kept ___. (protest)",
+      "back": "They kept protesting."
+    },
+    {
+      "id": "purpose",
+      "kind": "grammaire",
+      "front": "Traduis : « afin de réduire les déchets ».",
+      "back": "in order to reduce waste"
+    },
+    {
+      "id": "because-of",
+      "kind": "grammaire",
+      "front": "Complète : The match was cancelled ___ the rain.",
+      "back": "The match was cancelled because of the rain."
+    },
+    {
+      "id": "therefore",
+      "kind": "grammaire",
+      "front": "Relie avec therefore : It was unsafe. They closed it.",
+      "back": "It was unsafe; therefore, they closed it."
+    },
+    {
+      "id": "however",
+      "kind": "grammaire",
+      "front": "Relie avec however : It is costly. It is effective.",
+      "back": "It is costly; however, it is effective."
+    },
+    {
+      "id": "whereas",
+      "kind": "grammaire",
+      "front": "Relie : One source agrees. The other disagrees.",
+      "back": "One source agrees, whereas the other disagrees."
+    },
+    {
+      "id": "in-addition",
+      "kind": "grammaire",
+      "front": "Ajoute un argument avec un connecteur.",
+      "back": "In addition, … / Furthermore, …"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "anglais-term-vocab-verite-information",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Vocabulaire · Vérité et information",
+  "description": "Liste de vocabulaire — vérité et information.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "misinformation",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une information erronée ».",
+      "back": "misinformation"
+    },
+    {
+      "id": "disinformation",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une désinformation volontaire ».",
+      "back": "disinformation"
+    },
+    {
+      "id": "fact-checker",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un vérificateur de faits ».",
+      "back": "a fact-checker"
+    },
+    {
+      "id": "source-bias",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le biais d'une source ».",
+      "back": "source bias"
+    },
+    {
+      "id": "echo-chamber",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une chambre d'écho ».",
+      "back": "an echo chamber"
+    },
+    {
+      "id": "deepfake",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un hypertrucage ».",
+      "back": "a deepfake"
+    },
+    {
+      "id": "verify-claim",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « vérifier une affirmation ».",
+      "back": "to verify a claim"
+    },
+    {
+      "id": "debunk",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « démentir ».",
+      "back": "to debunk"
+    },
+    {
+      "id": "distort",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « déformer ».",
+      "back": "to distort"
+    },
+    {
+      "id": "media-literacy",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l'éducation aux médias ».",
+      "back": "media literacy"
+    }
+  ]
+}
