@@ -1,9 +1,92 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
+  "subject": "Maths",
   "school_year": "2026-2027",
   "country": "FR",
-  "description": "Progression pédagogique indicative. Les deux parcours de terminale sont des branches alternatives ; les prérequis ne verrouillent pas les decks.",
+  "description": "Un fichier par matière, commun collège et lycée. Progression pédagogique indicative par decks ; les prérequis sont des recommandations, sans verrouillage.",
+  "grade_order": [
+    "6e",
+    "5e",
+    "4e",
+    "3e",
+    "2de",
+    "1re-spe",
+    "term-spe",
+    "term-complementaires"
+  ],
+  "grade_labels": {
+    "6e": "6e",
+    "5e": "5e",
+    "4e": "4e",
+    "3e": "3e",
+    "2de": "2de",
+    "1re-spe": "1re spécialité",
+    "term-spe": "Terminale",
+    "term-complementaires": "Terminale"
+  },
+  "tracks": {
+    "term-spe": "Spécialité",
+    "term-complementaires": "Maths complémentaires"
+  },
+  "branches": [
+    {
+      "title": "Nombres et calcul littéral",
+      "domains": [
+        "nombres",
+        "algebre"
+      ]
+    },
+    {
+      "title": "Proportionnalité, fonctions et analyse",
+      "domains": [
+        "proportionnalite",
+        "fonctions",
+        "analyse",
+        "suites"
+      ]
+    },
+    {
+      "title": "Géométrie, grandeurs et espace",
+      "domains": [
+        "geometrie",
+        "mesures"
+      ]
+    },
+    {
+      "title": "Statistiques et probabilités",
+      "domains": [
+        "donnees",
+        "probabilites"
+      ]
+    },
+    {
+      "title": "Logique et algorithmique",
+      "domains": [
+        "algorithmique"
+      ]
+    }
+  ],
   "sources": [
+    {
+      "id": "cycle3-2025",
+      "url": "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf",
+      "label": "Programme cycle 3, BO du 17 avril 2025 — sixième"
+    },
+    {
+      "id": "cycle4-2026-5e",
+      "url": "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20pour%20le%20cycle%204-480716.pdf",
+      "label": "Programme cycle 4, BO du 5 mars 2026 — cinquième"
+    },
+    {
+      "id": "attendus-4e-2020",
+      "url": "https://eduscol.education.gouv.fr/sites/default/files/document/16-maths-4e-attendus-eduscol1114746pdf-74682.pdf",
+      "label": "Attendus annuels de quatrième, programme 2020"
+    },
+    {
+      "id": "attendus-3e-2020",
+      "url": "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf",
+      "label": "Attendus annuels de troisième, programme 2020"
+    },
     {
       "id": "seconde-2026",
       "label": "Seconde générale et technologique — BO du 2 avril 2026",
@@ -26,6 +109,526 @@
     }
   ],
   "nodes": [
+    {
+      "id": "math-6e-nombres",
+      "deck_id": "math-6e-nombres",
+      "grade": "6e",
+      "title": "Entiers et décimaux",
+      "domain": "nombres",
+      "source_id": "cycle3-2025",
+      "source_section": "Nombres entiers et décimaux, p. 13-14",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "math-6e-operations",
+      "deck_id": "math-6e-operations",
+      "grade": "6e",
+      "title": "Opérations et vocabulaire",
+      "domain": "nombres",
+      "source_id": "cycle3-2025",
+      "source_section": "Nombres entiers et décimaux, p. 13-14",
+      "prerequisites": [
+        "math-6e-nombres"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-6e-fractions",
+      "deck_id": "math-6e-fractions",
+      "grade": "6e",
+      "title": "Fractions et quotients",
+      "domain": "nombres",
+      "source_id": "cycle3-2025",
+      "source_section": "Fractions, p. 14-15",
+      "prerequisites": [
+        "math-6e-operations"
+      ],
+      "card_count": 12
+    },
+    {
+      "id": "math-6e-proportionnalite",
+      "deck_id": "math-6e-proportionnalite",
+      "grade": "6e",
+      "title": "Proportionnalité et pourcentages",
+      "domain": "proportionnalite",
+      "source_id": "cycle3-2025",
+      "source_section": "Fractions : pourcentages ; Proportionnalité, p. 15 et 27",
+      "prerequisites": [
+        "math-6e-fractions"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-6e-geometrie",
+      "deck_id": "math-6e-geometrie",
+      "grade": "6e",
+      "title": "Distances, angles et triangles",
+      "domain": "geometrie",
+      "source_id": "cycle3-2025",
+      "source_section": "Configurations planes, p. 22-23",
+      "prerequisites": [
+        "math-6e-operations"
+      ],
+      "card_count": 13
+    },
+    {
+      "id": "math-6e-mesures-espace",
+      "deck_id": "math-6e-mesures-espace",
+      "grade": "6e",
+      "title": "Mesures, symétrie et espace",
+      "domain": "mesures",
+      "source_id": "cycle3-2025",
+      "source_section": "Grandeurs et mesures ; symétrie axiale ; vision dans l’espace",
+      "prerequisites": [
+        "math-6e-geometrie"
+      ],
+      "card_count": 12
+    },
+    {
+      "id": "math-6e-donnees-hasard",
+      "deck_id": "math-6e-donnees-hasard",
+      "grade": "6e",
+      "title": "Données et hasard",
+      "domain": "donnees",
+      "source_id": "cycle3-2025",
+      "source_section": "Organisation et gestion de données et probabilités, p. 25-26",
+      "prerequisites": [
+        "math-6e-proportionnalite"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-6e-algebre-algorithmes",
+      "deck_id": "math-6e-algebre-algorithmes",
+      "grade": "6e",
+      "title": "Égalités, motifs et instructions",
+      "domain": "algorithmique",
+      "source_id": "cycle3-2025",
+      "source_section": "Algèbre ; Initiation à la pensée informatique",
+      "prerequisites": [
+        "math-6e-operations",
+        "math-6e-geometrie"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-5e-operations-puissances",
+      "deck_id": "math-5e-operations-puissances",
+      "grade": "5e",
+      "title": "Priorités, divisibilité et puissances",
+      "domain": "nombres",
+      "source_id": "cycle4-2026-5e",
+      "source_section": "Opérations ; Puissances, p. 7-8",
+      "prerequisites": [
+        "math-6e-operations"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-5e-relatifs",
+      "deck_id": "math-5e-relatifs",
+      "grade": "5e",
+      "title": "Nombres relatifs et repérage",
+      "domain": "nombres",
+      "source_id": "cycle4-2026-5e",
+      "source_section": "Nombres relatifs ; repérage dans le plan, p. 7 et 12",
+      "prerequisites": [
+        "math-6e-nombres"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-5e-fractions",
+      "deck_id": "math-5e-fractions",
+      "grade": "5e",
+      "title": "Comparer et additionner les fractions",
+      "domain": "nombres",
+      "source_id": "cycle4-2026-5e",
+      "source_section": "Nombres rationnels, p. 8",
+      "prerequisites": [
+        "math-6e-fractions",
+        "math-5e-operations-puissances"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-5e-calcul-litteral",
+      "deck_id": "math-5e-calcul-litteral",
+      "grade": "5e",
+      "title": "Lettres, formules et premières équations",
+      "domain": "algebre",
+      "source_id": "cycle4-2026-5e",
+      "source_section": "Calcul littéral et algébrique, p. 8-9",
+      "prerequisites": [
+        "math-6e-algebre-algorithmes",
+        "math-5e-operations-puissances"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-5e-proportionnalite",
+      "deck_id": "math-5e-proportionnalite",
+      "grade": "5e",
+      "title": "Proportions, échelles et dépendances",
+      "domain": "proportionnalite",
+      "source_id": "cycle4-2026-5e",
+      "source_section": "Proportionnalité et fonctions, p. 18-19",
+      "prerequisites": [
+        "math-6e-proportionnalite",
+        "math-5e-calcul-litteral",
+        "math-5e-relatifs"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-5e-triangles-angles",
+      "deck_id": "math-5e-triangles-angles",
+      "grade": "5e",
+      "title": "Triangles et droites remarquables",
+      "domain": "geometrie",
+      "source_id": "cycle4-2026-5e",
+      "source_section": "Angles et triangles, p. 13",
+      "prerequisites": [
+        "math-6e-geometrie",
+        "math-5e-relatifs"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-5e-parallelogrammes",
+      "deck_id": "math-5e-parallelogrammes",
+      "grade": "5e",
+      "title": "Parallélogrammes et symétrie centrale",
+      "domain": "geometrie",
+      "source_id": "cycle4-2026-5e",
+      "source_section": "Transformations ; parallélogrammes, p. 12-13",
+      "prerequisites": [
+        "math-6e-mesures-espace",
+        "math-5e-triangles-angles"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-5e-solides",
+      "deck_id": "math-5e-solides",
+      "grade": "5e",
+      "title": "Disques, prismes et cylindres",
+      "domain": "mesures",
+      "source_id": "cycle4-2026-5e",
+      "source_section": "Représentation de l’espace, p. 12",
+      "prerequisites": [
+        "math-6e-mesures-espace",
+        "math-5e-operations-puissances"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-5e-statistiques-probabilites",
+      "deck_id": "math-5e-statistiques-probabilites",
+      "grade": "5e",
+      "title": "Statistiques et probabilités",
+      "domain": "donnees",
+      "source_id": "cycle4-2026-5e",
+      "source_section": "Statistiques et probabilités, p. 16-17",
+      "prerequisites": [
+        "math-6e-donnees-hasard",
+        "math-5e-fractions"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-5e-algorithmique",
+      "deck_id": "math-5e-algorithmique",
+      "grade": "5e",
+      "title": "Entrées, sorties et répétitions",
+      "domain": "algorithmique",
+      "source_id": "cycle4-2026-5e",
+      "source_section": "Pensée informatique, p. 20",
+      "prerequisites": [
+        "math-6e-algebre-algorithmes",
+        "math-5e-calcul-litteral"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-4e-relatifs-fractions",
+      "deck_id": "math-4e-relatifs-fractions",
+      "grade": "4e",
+      "title": "Calcul avec les relatifs et les fractions",
+      "domain": "nombres",
+      "source_id": "attendus-4e-2020",
+      "source_section": "Nombres et calcul exact, p. 2-3",
+      "prerequisites": [
+        "math-5e-relatifs",
+        "math-5e-fractions"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-4e-puissances-racines",
+      "deck_id": "math-4e-puissances-racines",
+      "grade": "4e",
+      "title": "Puissances, écriture scientifique et racines",
+      "domain": "nombres",
+      "source_id": "attendus-4e-2020",
+      "source_section": "Nombres et comparaison, p. 2",
+      "prerequisites": [
+        "math-5e-operations-puissances",
+        "math-4e-relatifs-fractions"
+      ],
+      "card_count": 12
+    },
+    {
+      "id": "math-4e-arithmetique",
+      "deck_id": "math-4e-arithmetique",
+      "grade": "4e",
+      "title": "Nombres premiers et décomposition",
+      "domain": "nombres",
+      "source_id": "attendus-4e-2020",
+      "source_section": "Divisibilité et nombres premiers, p. 3-4",
+      "prerequisites": [
+        "math-5e-operations-puissances",
+        "math-5e-fractions"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-4e-equations",
+      "deck_id": "math-4e-equations",
+      "grade": "4e",
+      "title": "Développement, factorisation et équations",
+      "domain": "algebre",
+      "source_id": "attendus-4e-2020",
+      "source_section": "Calcul littéral, p. 4",
+      "prerequisites": [
+        "math-5e-calcul-litteral",
+        "math-4e-relatifs-fractions"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-4e-pythagore-cosinus",
+      "deck_id": "math-4e-pythagore-cosinus",
+      "grade": "4e",
+      "title": "Pythagore et cosinus",
+      "domain": "geometrie",
+      "source_id": "attendus-4e-2020",
+      "source_section": "Géométrie plane, p. 9-10",
+      "prerequisites": [
+        "math-5e-triangles-angles",
+        "math-4e-puissances-racines"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-4e-thales-translations",
+      "deck_id": "math-4e-thales-translations",
+      "grade": "4e",
+      "title": "Thalès, triangles égaux et translations",
+      "domain": "geometrie",
+      "source_id": "attendus-4e-2020",
+      "source_section": "Géométrie plane et transformations, p. 8-10",
+      "prerequisites": [
+        "math-5e-proportionnalite",
+        "math-5e-parallelogrammes"
+      ],
+      "card_count": 9
+    },
+    {
+      "id": "math-4e-grandeurs-espace",
+      "deck_id": "math-4e-grandeurs-espace",
+      "grade": "4e",
+      "title": "Volumes, vitesses et agrandissements",
+      "domain": "mesures",
+      "source_id": "attendus-4e-2020",
+      "source_section": "Grandeurs et espace, p. 8-9",
+      "prerequisites": [
+        "math-5e-solides",
+        "math-5e-proportionnalite"
+      ],
+      "card_count": 12
+    },
+    {
+      "id": "math-4e-proportionnalite",
+      "deck_id": "math-4e-proportionnalite",
+      "grade": "4e",
+      "title": "Proportionnalité et relations entre grandeurs",
+      "domain": "proportionnalite",
+      "source_id": "attendus-4e-2020",
+      "source_section": "Proportionnalité et notion de fonction, p. 6-7",
+      "prerequisites": [
+        "math-5e-proportionnalite",
+        "math-4e-equations"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-4e-statistiques-probabilites",
+      "deck_id": "math-4e-statistiques-probabilites",
+      "grade": "4e",
+      "title": "Médiane et événements contraires",
+      "domain": "donnees",
+      "source_id": "attendus-4e-2020",
+      "source_section": "Statistiques et probabilités, p. 5-6",
+      "prerequisites": [
+        "math-5e-statistiques-probabilites",
+        "math-4e-relatifs-fractions"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-4e-algorithmique",
+      "deck_id": "math-4e-algorithmique",
+      "grade": "4e",
+      "title": "Variables, conditions et boucles",
+      "domain": "algorithmique",
+      "source_id": "attendus-4e-2020",
+      "source_section": "Algorithmique et programmation, p. 11-12",
+      "prerequisites": [
+        "math-5e-algorithmique",
+        "math-4e-equations"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-3e-arithmetique",
+      "deck_id": "math-3e-arithmetique",
+      "grade": "3e",
+      "title": "Arithmétique et nombres rationnels",
+      "domain": "nombres",
+      "source_id": "attendus-3e-2020",
+      "source_section": "Nombres, calcul et divisibilité, p. 2-3",
+      "prerequisites": [
+        "math-4e-arithmetique",
+        "math-4e-puissances-racines"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-3e-calcul-litteral",
+      "deck_id": "math-3e-calcul-litteral",
+      "grade": "3e",
+      "title": "Calcul littéral et factorisation",
+      "domain": "algebre",
+      "source_id": "attendus-3e-2020",
+      "source_section": "Calcul littéral, p. 3",
+      "prerequisites": [
+        "math-4e-equations",
+        "math-4e-puissances-racines"
+      ],
+      "card_count": 9
+    },
+    {
+      "id": "math-3e-equations",
+      "deck_id": "math-3e-equations",
+      "grade": "3e",
+      "title": "Équations : règles générales",
+      "domain": "algebre",
+      "source_id": "attendus-3e-2020",
+      "source_section": "Équations, p. 3",
+      "prerequisites": [
+        "math-3e-calcul-litteral"
+      ],
+      "card_count": 9
+    },
+    {
+      "id": "math-3e-fonctions",
+      "deck_id": "math-3e-fonctions",
+      "grade": "3e",
+      "title": "Fonctions, images et antécédents",
+      "domain": "fonctions",
+      "source_id": "attendus-3e-2020",
+      "source_section": "Notion de fonction, p. 5-6",
+      "prerequisites": [
+        "math-4e-proportionnalite",
+        "math-3e-equations"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-3e-affines-pourcentages",
+      "deck_id": "math-3e-affines-pourcentages",
+      "grade": "3e",
+      "title": "Fonctions affines et pourcentages",
+      "domain": "fonctions",
+      "source_id": "attendus-3e-2020",
+      "source_section": "Fonctions linéaires et affines ; proportionnalité, p. 5-6",
+      "prerequisites": [
+        "math-3e-fonctions",
+        "math-5e-proportionnalite"
+      ],
+      "card_count": 12
+    },
+    {
+      "id": "math-3e-thales-similitude",
+      "deck_id": "math-3e-thales-similitude",
+      "grade": "3e",
+      "title": "Thalès et triangles semblables",
+      "domain": "geometrie",
+      "source_id": "attendus-3e-2020",
+      "source_section": "Thalès et triangles semblables, p. 8",
+      "prerequisites": [
+        "math-4e-thales-translations",
+        "math-3e-equations"
+      ],
+      "card_count": 9
+    },
+    {
+      "id": "math-3e-trigonometrie",
+      "deck_id": "math-3e-trigonometrie",
+      "grade": "3e",
+      "title": "Trigonométrie dans le triangle rectangle",
+      "domain": "geometrie",
+      "source_id": "attendus-3e-2020",
+      "source_section": "Cosinus, sinus et tangente, p. 8",
+      "prerequisites": [
+        "math-4e-pythagore-cosinus",
+        "math-3e-equations"
+      ],
+      "card_count": 9
+    },
+    {
+      "id": "math-3e-transformations-espace",
+      "deck_id": "math-3e-transformations-espace",
+      "grade": "3e",
+      "title": "Transformations, sphères et volumes",
+      "domain": "mesures",
+      "source_id": "attendus-3e-2020",
+      "source_section": "Grandeurs, transformations et espace, p. 7-8",
+      "prerequisites": [
+        "math-4e-grandeurs-espace",
+        "math-4e-thales-translations"
+      ],
+      "card_count": 11
+    },
+    {
+      "id": "math-3e-statistiques-probabilites",
+      "deck_id": "math-3e-statistiques-probabilites",
+      "grade": "3e",
+      "title": "Statistiques et expériences à deux étapes",
+      "domain": "donnees",
+      "source_id": "attendus-3e-2020",
+      "source_section": "Statistiques et probabilités, p. 4-5",
+      "prerequisites": [
+        "math-4e-statistiques-probabilites"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-3e-algorithmique",
+      "deck_id": "math-3e-algorithmique",
+      "grade": "3e",
+      "title": "Programmes, boucles et simulations",
+      "domain": "algorithmique",
+      "source_id": "attendus-3e-2020",
+      "source_section": "Algorithmique et programmation, p. 9-11",
+      "prerequisites": [
+        "math-4e-algorithmique",
+        "math-3e-statistiques-probabilites"
+      ],
+      "card_count": 10
+    },
     {
       "id": "math-2de-nombres",
       "deck_id": "math-2de-nombres",

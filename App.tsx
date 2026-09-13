@@ -44,7 +44,7 @@ import {
 import { colors, mono, radius } from './src/theme';
 import { MathView, stripMathText } from './src/MathView';
 import { syncDecks } from './src/sync';
-import { buildMathProgression, type ProgressionBranch } from './src/progression';
+import { buildProgression, type ProgressionBranch } from './src/progression';
 import { checkForAppUpdate } from './src/app-update';
 import { Card, Deck, ReviewDelay, ReviewDelays } from './src/types';
 import { insertLaterInQueue } from './src/sessionQueue';
@@ -567,11 +567,10 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
   const group = groupBySubject(decks).find((entry) => entry.name.toLowerCase() === subject.toLowerCase())
     ?? { name: subject, decks: [] as Deck[] };
 
-  // La matière Maths propose aussi l'arbre de progression (docs/progression-mathematiques-2026-2027.md).
-  const isMath = /math/i.test(group.name);
+  // L'arbre de progression existe pour les matières référencées dans curriculum/ (un JSON par matière).
   const progression = useMemo(
-    () => (isMath ? buildMathProgression(group.decks) : [] as ProgressionBranch[]),
-    [isMath, group.decks],
+    () => buildProgression(group.name, group.decks),
+    [group.name, group.decks],
   );
 
   // Classes distinctes (6e, 5e…), triées naturellement, pour les paquets de la matière.
@@ -642,7 +641,7 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
           />
         </View>
 
-        {isMath && group.decks.length ? (
+        {progression && group.decks.length ? (
           <View style={styles.viewSwitch}>
             <Pressable onPress={() => setViewMode('classe')} style={({ pressed }) => [styles.viewSwitchButton, viewMode === 'classe' && styles.viewSwitchButtonOn, pressed && styles.pressed]} accessibilityRole="button" accessibilityLabel="Voir par classe">
               <Ionicons name="albums-outline" size={15} color={viewMode === 'classe' ? colors.blue : colors.muted} />
@@ -693,7 +692,7 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
         ) : null}
 
         {viewMode === 'progression'
-          ? progression.map((branch) => <ProgressionBranchCard key={branch.title} branch={branch} onOpen={onOpenDeck} onToggleFavorite={toggleFavorite} />)
+          ? (progression ?? []).map((branch) => <ProgressionBranchCard key={branch.title} branch={branch} onOpen={onOpenDeck} onToggleFavorite={toggleFavorite} />)
           : visibleDecks.map((deck) => <DeckCard key={deck.id} deck={deck} onOpen={onOpenDeck} onToggleFavorite={toggleFavorite} />)}
 
         {viewMode === 'classe' && !showAll && !favoriteDecks.length && group.decks.length ? (

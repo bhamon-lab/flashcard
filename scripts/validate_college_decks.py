@@ -32,10 +32,12 @@ def validate_text(value, location):
         require(depth == 0, f"{location}: accolades déséquilibrées")
 
 
-def main():
-    manifest = json.loads((ROOT / "curriculum/college-2026-2027.json").read_text())
-    require(manifest["schema_version"] == 1, "Version de schéma inconnue")
+def load_curriculum():
+    """Charge curriculum/maths.json (un fichier par matière, commun collège et lycée) et valide sa structure."""
+    manifest = json.loads((ROOT / "curriculum/maths.json").read_text())
+    require(manifest["schema_version"] == 2, "Version de schéma inconnue")
     require(manifest["school_year"] == "2026-2027", "Année scolaire incorrecte")
+    require(manifest["subject"] == "Maths", "Matière incorrecte")
     sources = {s["id"]: s for s in manifest["sources"]}
     require(len(sources) == len(manifest["sources"]), "Source dupliquée")
     for source in sources.values():
@@ -45,7 +47,27 @@ def main():
 
     nodes = {n["id"]: n for n in manifest["nodes"]}
     require(len(nodes) == len(manifest["nodes"]), "Nœud dupliqué")
-    require({n["grade"] for n in nodes.values()} == GRADES, "Classe manquante")
+    require({n["deck_id"] for n in manifest["nodes"]} == set(nodes),
+            "deck_id différent de l'ID de nœud")
+    grades = set(manifest["grade_order"])
+    require(set(manifest["grade_labels"]) == grades, "Libellés de classe incomplets")
+    require({n["grade"] for n in nodes.values()} == grades, "Classe absente de grade_order")
+    domain_branches = {}
+    for branch in manifest["branches"]:
+        require(branch["title"].strip(), "Branche sans titre")
+        for domain in branch["domains"]:
+            require(domain not in domain_branches, f"Rubrique dupliquée : {domain}")
+            domain_branches[domain] = branch["title"]
+    require(set(domain_branches) >= {n["domain"] for n in nodes.values()},
+            "Rubrique de nœud sans branche thématique")
+    return manifest, nodes
+
+
+def main():
+    manifest, nodes = load_curriculum()
+    sources = {s["id"]: s for s in manifest["sources"]}
+    college = {nid: n for nid, n in nodes.items() if n["grade"] in GRADES}
+    require({n["grade"] for n in college.values()} == GRADES, "Classe manquante")
     deck_ids = set()
     # Check global ID collisions, including the pre-existing non-college decks.
     for path in (ROOT / "decks").glob("*/*.json"):
@@ -54,10 +76,10 @@ def main():
         deck_ids.add(deck["id"])
 
     catalog_files = {p.stem for p in (ROOT / "decks" / "maths").glob("[3456]e-*.json")}
-    require(catalog_files == {node_id.removeprefix("math-") for node_id in nodes},
+    require(catalog_files == {node_id.removeprefix("math-") for node_id in college},
             "Les fichiers et le catalogue ne correspondent pas")
     stats = Counter()
-    for node_id, node in nodes.items():
+    for node_id, node in college.items():
         require(node["deck_id"] == node_id and SLUG.fullmatch(node_id), f"ID incorrect : {node_id}")
         require(node["source_id"] in sources, f"{node_id}: source absente")
         validate_text(node["source_section"], f"{node_id}: référence au programme")
@@ -103,7 +125,7 @@ def main():
 
     for node_id in nodes:
         visit(node_id)
-    print(f"OK : {len(nodes)} decks, {sum(stats.values())} cartes, graphe sans cycle.")
+    print(f"OK : {len(college)} decks, {sum(stats.values())} cartes, graphe sans cycle.")
     for grade in ("6e", "5e", "4e", "3e"):
         print(f"  {grade} : {stats[grade]} cartes")
 

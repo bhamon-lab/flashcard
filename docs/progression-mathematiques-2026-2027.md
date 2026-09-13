@@ -162,5 +162,5 @@ Ces liens de révision prolongent la progression à travers les classes :
 
 Ces passerelles sont des recommandations pédagogiques pour cette vue d’ensemble. Aucun deck de terminale spécialité n’est un passage obligé vers les maths complémentaires, ni l’inverse.
 
-Les titres et niveaux proviennent des [données de progression de la 6e à la 3e](../curriculum/college-2026-2027.json) et des [données de progression de la 2de à la terminale](../curriculum/lycee-2026-2027.json), qui détaillent les sources officielles et les prérequis de chaque deck. L’arbre est documentaire : il ne verrouille pas l’accès aux cartes dans l’application.
+Les titres, branches et niveaux proviennent du [catalogue de progression de la matière](../curriculum/maths.json) (un fichier JSON par matière, commun collège et lycée), qui détaille les sources officielles et les prérequis de chaque deck. L’arbre est documentaire : il ne verrouille pas l’accès aux cartes dans l’application.
 

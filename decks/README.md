@@ -29,7 +29,7 @@ Le catalogue 2026-2027 contient **38 decks et 373 cartes** : 85 en 6e,
 Chaque carte demande une formule, une définition, une propriété ou une méthode
 générale. Les réponses sont courtes, sans problème chiffré à résoudre.
 Consulter le [guide des contenus, sources et prérequis](../docs/college-2026-2027.md)
-et le [graphe de progression](../curriculum/college-2026-2027.json).
+et le [graphe de progression](../curriculum/maths.json).
 
 Le champ `grade` (ex. `"6e"`) est synchronisé et permet de filtrer les paquets
 par classe dans l'application. Les champs `school_year`, `curriculum_reference`
@@ -50,7 +50,7 @@ Les fichiers commencent par `2de-`, `1re-spe-`, `term-spe-` ou
 deux branches distinctes en terminale, sans verrouillage dans l’application.
 
 Consulter le [guide du lycée et les sources officielles](../docs/lycee-2026-2027.md)
-et le [graphe de progression](../curriculum/lycee-2026-2027.json).
+et le [graphe de progression](../curriculum/maths.json).
 Vérifier avec `python3 scripts/validate_lycee_decks.py`.
 
 ## Format

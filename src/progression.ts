@@ -1,8 +1,7 @@
-import collegeCurriculum from '../curriculum/college-2026-2027.json';
-import lyceeCurriculum from '../curriculum/lycee-2026-2027.json';
+import { CURRICULUMS } from '../curriculum';
 import type { Deck } from './types';
 
-type CurriculumNode = {
+export type CurriculumNode = {
   id: string;
   deck_id: string;
   grade: string;
@@ -12,6 +11,28 @@ type CurriculumNode = {
   source_section: string;
   prerequisites: string[];
   card_count: number;
+};
+
+export type CurriculumBranch = { title: string; domains: string[] };
+
+export type CurriculumSource = { id: string; url: string; label: string };
+
+/** Un fichier JSON par matière dans curriculum/ (commun collège et lycée). */
+export type CurriculumData = {
+  schema_version: number;
+  subject: string;
+  school_year: string;
+  country: string;
+  description: string;
+  /** Ordre de lecture des classes, de la 6e à la terminale. */
+  grade_order: string[];
+  grade_labels: Record<string, string>;
+  /** Libellé du parcours pour les classes qui se déclinent (ex. spécialité / complémentaires). */
+  tracks: Record<string, string>;
+  /** Branches thématiques : chaque rubrique du programme (domain) est rattachée à une branche. */
+  branches: CurriculumBranch[];
+  sources: CurriculumSource[];
+  nodes: CurriculumNode[];
 };
 
 /** Feuille de l'arbre : un deck local avec son titre court du curriculum. */
@@ -26,77 +47,44 @@ export type ProgressionLevel = { grade: string; label: string; tracks: Progressi
 /** Branche thématique de l'arbre de progression. */
 export type ProgressionBranch = { title: string; levels: ProgressionLevel[] };
 
-const GRADE_LABELS: Record<string, string> = {
-  '6e': '6e',
-  '5e': '5e',
-  '4e': '4e',
-  '3e': '3e',
-  '2de': '2de',
-  '1re-spe': '1re spécialité',
-  'term-spe': 'Terminale',
-  'term-complementaires': 'Terminale',
-};
+/** Renvoie le curriculum de la matière (recherche insensible à la casse), ou null. */
+export function getCurriculumForSubject(subject: string): CurriculumData | null {
+  const needle = subject.trim().toLowerCase();
+  return CURRICULUMS.find((entry) => entry.subject.trim().toLowerCase() === needle) ?? null;
+}
 
-const TRACK_LABELS: Record<string, string> = {
-  'term-spe': 'Spécialité',
-  'term-complementaires': 'Maths complémentaires',
-};
+/** Construit l'arbre de progression (thèmes → classes → paquets) d'une matière à partir de son curriculum et des decks locaux. */
+export function buildProgression(subject: string, decks: Deck[]): ProgressionBranch[] | null {
+  const curriculum = getCurriculumForSubject(subject);
+  if (!curriculum) return null;
 
-// Ordre de lecture de la 6e à la terminale, comme dans l'arbre documentaire.
-const GRADE_ORDER = ['6e', '5e', '4e', '3e', '2de', '1re-spe', 'term-spe', 'term-complementaires'];
-
-// Branche thématique de chaque rubrique du programme (cf. docs/progression-mathematiques-2026-2027.md).
-const DOMAIN_BRANCH: Record<string, number> = {
-  nombres: 0,
-  algebre: 0,
-  proportionnalite: 1,
-  fonctions: 1,
-  analyse: 1,
-  suites: 1,
-  geometrie: 2,
-  mesures: 2,
-  donnees: 3,
-  probabilites: 3,
-  algorithmique: 4,
-};
-
-const BRANCH_TITLES = [
-  'Nombres et calcul littéral',
-  'Proportionnalité, fonctions et analyse',
-  'Géométrie, grandeurs et espace',
-  'Statistiques et probabilités',
-  'Logique et algorithmique',
-];
-
-const NODES: CurriculumNode[] = [
-  ...(collegeCurriculum.nodes as CurriculumNode[]),
-  ...(lyceeCurriculum.nodes as CurriculumNode[]),
-];
-
-/** Construit l'arbre de progression (thèmes → classes → paquets) à partir des decks locaux. */
-export function buildMathProgression(decks: Deck[]): ProgressionBranch[] {
   const bySyncId = new Map<string, Deck>();
   for (const deck of decks) {
     if (deck.sync_id) bySyncId.set(deck.sync_id, deck);
   }
 
-  const branches: ProgressionBranch[] = BRANCH_TITLES.map((title) => ({ title, levels: [] }));
+  const branchIndexByDomain = new Map<string, number>();
+  curriculum.branches.forEach((branch, index) => {
+    for (const domain of branch.domains) branchIndexByDomain.set(domain, index);
+  });
+
+  const branches: ProgressionBranch[] = curriculum.branches.map(({ title }) => ({ title, levels: [] }));
   const matched = new Set<number>();
 
-  for (const grade of GRADE_ORDER) {
-    const nodes = NODES.filter((node) => node.grade === grade);
+  for (const grade of curriculum.grade_order) {
+    const nodes = curriculum.nodes.filter((node) => node.grade === grade);
     for (const node of nodes) {
       const deck = bySyncId.get(node.deck_id);
       if (!deck) continue;
+      const branch = branches[branchIndexByDomain.get(node.domain) ?? -1];
+      if (!branch) continue;
       matched.add(deck.id);
-      const branchIndex = DOMAIN_BRANCH[node.domain];
-      const branch = branches[branchIndex];
       let level = branch.levels.find((entry) => entry.grade === grade);
       if (!level) {
-        level = { grade, label: GRADE_LABELS[grade] ?? grade, tracks: [] };
+        level = { grade, label: curriculum.grade_labels[grade] ?? grade, tracks: [] };
         branch.levels.push(level);
       }
-      const trackLabel = TRACK_LABELS[grade] ?? '';
+      const trackLabel = curriculum.tracks[grade] ?? '';
       let track = level.tracks.find((entry) => entry.label === trackLabel);
       if (!track) {
         track = { label: trackLabel, decks: [] };
@@ -106,7 +94,7 @@ export function buildMathProgression(decks: Deck[]): ProgressionBranch[] {
     }
   }
 
-  // Paquets de maths hors curriculum (créés par l'utilisateur ou non référencés).
+  // Paquets hors curriculum (créés par l'utilisateur, non référencés, ou rubrique inconnue).
   const extras = decks.filter((deck) => !matched.has(deck.id));
   if (extras.length) {
     branches[0].levels.push({
