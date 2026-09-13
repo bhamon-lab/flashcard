@@ -22,6 +22,18 @@ const startOfToday = () => {
   return date.getTime();
 };
 
+/** Début du « jour de révision » à 4 h du matin : une carte notée pour
+ * le lendemain redevient due à 4 h, pas exactement 24 h plus tard. */
+const REVIEW_DAY_START_HOUR = 4;
+const MINUTES_PER_DAY = 1440;
+
+function startOfReviewDay(timestamp: number) {
+  const date = new Date(timestamp);
+  date.setHours(REVIEW_DAY_START_HOUR, 0, 0, 0);
+  if (date.getTime() > timestamp) date.setDate(date.getDate() - 1);
+  return date.getTime();
+}
+
 export async function initializeDatabase() {
   const db = await getDatabase();
   await db.execAsync(`
@@ -280,7 +292,10 @@ export async function getNewCards(deckIds: number[], limit: number, excludedIds:
 export async function recordReview(cardId: number, delayMinutes: number) {
   const db = await getDatabase();
   const now = Date.now();
-  const nextDue = now + delayMinutes * 60_000;
+  const days = delayMinutes >= MINUTES_PER_DAY ? Math.round(delayMinutes / MINUTES_PER_DAY) : 0;
+  const nextDue = days
+    ? startOfReviewDay(now) + days * 86_400_000
+    : now + delayMinutes * 60_000;
   await db.withTransactionAsync(async () => {
     await db.runAsync(
       `UPDATE progress SET first_seen_at = COALESCE(first_seen_at, ?), next_due_at = ? WHERE card_id = ?`,
