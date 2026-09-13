@@ -1,0 +1,73 @@
+{
+  "id": "anglais-3e-vocab-citoyennete",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Vocabulaire · Société et citoyenneté",
+  "description": "Liste de vocabulaire — société et citoyenneté.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "a-citizen",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un citoyen ».",
+      "back": "a citizen"
+    },
+    {
+      "id": "a-right",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un droit ».",
+      "back": "a right"
+    },
+    {
+      "id": "a-duty",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un devoir ».",
+      "back": "a duty"
+    },
+    {
+      "id": "a-law",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une loi ».",
+      "back": "a law"
+    },
+    {
+      "id": "an-election",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une élection ».",
+      "back": "an election"
+    },
+    {
+      "id": "to-vote",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « voter ».",
+      "back": "to vote"
+    },
+    {
+      "id": "equality",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l’égalité ».",
+      "back": "equality"
+    },
+    {
+      "id": "freedom",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la liberté ».",
+      "back": "freedom"
+    },
+    {
+      "id": "discrimination",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la discrimination ».",
+      "back": "discrimination"
+    },
+    {
+      "id": "to-volunteer",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « faire du bénévolat ».",
+      "back": "to volunteer"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "anglais-1re-verbes-irreguliers",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Verbes irréguliers",
+  "description": "Infinitif, prétérit, participe passé et sens français.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "irregular-verbs",
+  "cards": [
+    {
+      "id": "arise",
+      "kind": "verbe-irregulier",
+      "front": "arise — survenir",
+      "back": "arise · arose · arisen"
+    },
+    {
+      "id": "bear",
+      "kind": "verbe-irregulier",
+      "front": "bear — supporter",
+      "back": "bear · bore · borne"
+    },
+    {
+      "id": "beat",
+      "kind": "verbe-irregulier",
+      "front": "beat — battre",
+      "back": "beat · beat · beaten"
+    },
+    {
+      "id": "bind",
+      "kind": "verbe-irregulier",
+      "front": "bind — lier",
+      "back": "bind · bound · bound"
+    },
+    {
+      "id": "seek",
+      "kind": "verbe-irregulier",
+      "front": "seek — chercher",
+      "back": "seek · sought · sought"
+    },
+    {
+      "id": "shoot",
+      "kind": "verbe-irregulier",
+      "front": "shoot — tirer",
+      "back": "shoot · shot · shot"
+    },
+    {
+      "id": "spread",
+      "kind": "verbe-irregulier",
+      "front": "spread — répandre",
+      "back": "spread · spread · spread"
+    },
+    {
+      "id": "steal",
+      "kind": "verbe-irregulier",
+      "front": "steal — voler",
+      "back": "steal · stole · stolen"
+    },
+    {
+      "id": "strike",
+      "kind": "verbe-irregulier",
+      "front": "strike — frapper",
+      "back": "strike · struck · struck"
+    },
+    {
+      "id": "tear",
+      "kind": "verbe-irregulier",
+      "front": "tear — déchirer",
+      "back": "tear · tore · torn"
+    }
+  ]
+}

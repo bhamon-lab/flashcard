@@ -1,0 +1,73 @@
+{
+  "id": "anglais-2de-vocab-environnement",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Vocabulaire · Environnement et solutions",
+  "description": "Liste de vocabulaire — environnement et solutions.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "climate-change",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le changement climatique ».",
+      "back": "climate change"
+    },
+    {
+      "id": "the-carbon-footprint",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l’empreinte carbone ».",
+      "back": "the carbon footprint"
+    },
+    {
+      "id": "fossil-fuels",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les combustibles fossiles ».",
+      "back": "fossil fuels"
+    },
+    {
+      "id": "renewable-energy",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les énergies renouvelables ».",
+      "back": "renewable energy"
+    },
+    {
+      "id": "biodiversity",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la biodiversité ».",
+      "back": "biodiversity"
+    },
+    {
+      "id": "an-endangered-species",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une espèce menacée ».",
+      "back": "an endangered species"
+    },
+    {
+      "id": "to-reduce",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « réduire ».",
+      "back": "to reduce"
+    },
+    {
+      "id": "to-reuse",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « réutiliser ».",
+      "back": "to reuse"
+    },
+    {
+      "id": "to-raise-awareness",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « sensibiliser ».",
+      "back": "to raise awareness"
+    },
+    {
+      "id": "sustainable-development",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le développement durable ».",
+      "back": "sustainable development"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "anglais-4e-vocab-meteo-environnement",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Vocabulaire · Météo et environnement",
+  "description": "Liste de vocabulaire — météo et environnement.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "sunny",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « ensoleillé ».",
+      "back": "sunny"
+    },
+    {
+      "id": "cloudy",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « nuageux ».",
+      "back": "cloudy"
+    },
+    {
+      "id": "windy",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « venteux ».",
+      "back": "windy"
+    },
+    {
+      "id": "a-thunderstorm",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un orage ».",
+      "back": "a thunderstorm"
+    },
+    {
+      "id": "a-drought",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une sécheresse ».",
+      "back": "a drought"
+    },
+    {
+      "id": "a-flood",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une inondation ».",
+      "back": "a flood"
+    },
+    {
+      "id": "pollution",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la pollution ».",
+      "back": "pollution"
+    },
+    {
+      "id": "to-recycle",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « recycler ».",
+      "back": "to recycle"
+    },
+    {
+      "id": "to-save-water",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « économiser l’eau ».",
+      "back": "to save water"
+    },
+    {
+      "id": "waste",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les déchets ».",
+      "back": "waste"
+    }
+  ]
+}

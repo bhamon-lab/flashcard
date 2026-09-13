@@ -1,0 +1,85 @@
+{
+  "id": "anglais-4e-oral-sante",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Compréhension orale · Corps et santé",
+  "description": "Même liste que « Corps et santé », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "the-head",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la tête",
+      "audio_text": "the head"
+    },
+    {
+      "id": "the-throat",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la gorge",
+      "audio_text": "the throat"
+    },
+    {
+      "id": "the-back",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le dos",
+      "audio_text": "the back"
+    },
+    {
+      "id": "to-have-a-headache",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "avoir mal à la tête",
+      "audio_text": "to have a headache"
+    },
+    {
+      "id": "to-have-a-fever",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "avoir de la fièvre",
+      "audio_text": "to have a fever"
+    },
+    {
+      "id": "to-cough",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "tousser",
+      "audio_text": "to cough"
+    },
+    {
+      "id": "to-have-a-cold",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "être enrhumé",
+      "audio_text": "to have a cold"
+    },
+    {
+      "id": "medicine",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un médicament",
+      "audio_text": "medicine"
+    },
+    {
+      "id": "a-doctor",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un médecin",
+      "audio_text": "a doctor"
+    },
+    {
+      "id": "to-rest",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "se reposer",
+      "audio_text": "to rest"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "anglais-4e-verbes-irreguliers",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Verbes irréguliers",
+  "description": "Infinitif, prétérit, participe passé et sens français.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "irregular-verbs",
+  "cards": [
+    {
+      "id": "break",
+      "kind": "verbe-irregulier",
+      "front": "break — casser",
+      "back": "break · broke · broken"
+    },
+    {
+      "id": "choose",
+      "kind": "verbe-irregulier",
+      "front": "choose — choisir",
+      "back": "choose · chose · chosen"
+    },
+    {
+      "id": "drive",
+      "kind": "verbe-irregulier",
+      "front": "drive — conduire",
+      "back": "drive · drove · driven"
+    },
+    {
+      "id": "fall",
+      "kind": "verbe-irregulier",
+      "front": "fall — tomber",
+      "back": "fall · fell · fallen"
+    },
+    {
+      "id": "feel",
+      "kind": "verbe-irregulier",
+      "front": "feel — ressentir",
+      "back": "feel · felt · felt"
+    },
+    {
+      "id": "forget",
+      "kind": "verbe-irregulier",
+      "front": "forget — oublier",
+      "back": "forget · forgot · forgotten"
+    },
+    {
+      "id": "leave",
+      "kind": "verbe-irregulier",
+      "front": "leave — quitter",
+      "back": "leave · left · left"
+    },
+    {
+      "id": "meet",
+      "kind": "verbe-irregulier",
+      "front": "meet — rencontrer",
+      "back": "meet · met · met"
+    },
+    {
+      "id": "run",
+      "kind": "verbe-irregulier",
+      "front": "run — courir",
+      "back": "run · ran · run"
+    },
+    {
+      "id": "speak",
+      "kind": "verbe-irregulier",
+      "front": "speak — parler",
+      "back": "speak · spoke · spoken"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "anglais-term-oral-argumentation",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Compréhension orale · Débat et argumentation",
+  "description": "Même liste que « Débat et argumentation », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "an-assumption",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une hypothèse",
+      "audio_text": "an assumption"
+    },
+    {
+      "id": "an-objection",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une objection",
+      "audio_text": "an objection"
+    },
+    {
+      "id": "a-counterargument",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un contre-argument",
+      "audio_text": "a counterargument"
+    },
+    {
+      "id": "a-qualification",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une nuance",
+      "audio_text": "a qualification"
+    },
+    {
+      "id": "a-compromise",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un compromis",
+      "audio_text": "a compromise"
+    },
+    {
+      "id": "compelling",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "convaincant",
+      "audio_text": "compelling"
+    },
+    {
+      "id": "questionable",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "contestable",
+      "audio_text": "questionable"
+    },
+    {
+      "id": "to-refute",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "réfuter",
+      "audio_text": "to refute"
+    },
+    {
+      "id": "to-outweigh",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l’emporter sur",
+      "audio_text": "to outweigh"
+    },
+    {
+      "id": "to-some-extent",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "dans une certaine mesure",
+      "audio_text": "to some extent"
+    }
+  ]
+}

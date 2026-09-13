@@ -1,0 +1,73 @@
+{
+  "id": "anglais-1re-grammaire-hypotheses-nuances",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Grammaire · Hypothèses et nuances",
+  "description": "Règles et automatismes — hypothèses et nuances.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "second",
+      "kind": "grammaire",
+      "front": "Complète : If I ___ more time, I ___ abroad. (have/travel)",
+      "back": "If I had more time, I would travel abroad."
+    },
+    {
+      "id": "wish-present",
+      "kind": "grammaire",
+      "front": "Traduis : « J'aimerais avoir plus de temps. »",
+      "back": "I wish I had more time."
+    },
+    {
+      "id": "wish-ability",
+      "kind": "grammaire",
+      "front": "Traduis : « J'aimerais savoir mieux parler anglais. »",
+      "back": "I wish I could speak English better."
+    },
+    {
+      "id": "might-deduction",
+      "kind": "grammaire",
+      "front": "Traduis : « Il se pourrait qu'elle ait raison. »",
+      "back": "She might be right."
+    },
+    {
+      "id": "must-have",
+      "kind": "grammaire",
+      "front": "Traduis : « Il a dû oublier. »",
+      "back": "He must have forgotten."
+    },
+    {
+      "id": "cant-have",
+      "kind": "grammaire",
+      "front": "Traduis : « Elle ne peut pas avoir écrit cela. »",
+      "back": "She can't have written that."
+    },
+    {
+      "id": "despite",
+      "kind": "grammaire",
+      "front": "Reformule avec despite : Although it was difficult, they succeeded.",
+      "back": "Despite the difficulty, they succeeded."
+    },
+    {
+      "id": "whereas",
+      "kind": "grammaire",
+      "front": "Relie : One source is optimistic. The other is critical.",
+      "back": "One source is optimistic, whereas the other is critical."
+    },
+    {
+      "id": "participle",
+      "kind": "grammaire",
+      "front": "Réduis : Because she was inspired, she took action.",
+      "back": "Inspired, she took action."
+    },
+    {
+      "id": "hedge",
+      "kind": "grammaire",
+      "front": "Atténue l'affirmation : This proves that…",
+      "back": "This suggests that… / This may indicate that…"
+    }
+  ]
+}

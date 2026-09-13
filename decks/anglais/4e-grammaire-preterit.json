@@ -1,0 +1,73 @@
+{
+  "id": "anglais-4e-grammaire-preterit",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Grammaire · Prétérit simple",
+  "description": "Règles et automatismes — prétérit simple.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "regular",
+      "kind": "grammaire",
+      "front": "Mets au prétérit : We visit Dublin.",
+      "back": "We visited Dublin."
+    },
+    {
+      "id": "irregular",
+      "kind": "grammaire",
+      "front": "Mets au prétérit : She goes home.",
+      "back": "She went home."
+    },
+    {
+      "id": "be-past",
+      "kind": "grammaire",
+      "front": "Complète : I ___ tired and they ___ hungry.",
+      "back": "I was tired and they were hungry."
+    },
+    {
+      "id": "negative",
+      "kind": "grammaire",
+      "front": "Mets à la forme négative : He enjoyed the trip.",
+      "back": "He didn't enjoy the trip."
+    },
+    {
+      "id": "question",
+      "kind": "grammaire",
+      "front": "Traduis : « Où es-tu allé hier ? »",
+      "back": "Where did you go yesterday?"
+    },
+    {
+      "id": "short-answer",
+      "kind": "grammaire",
+      "front": "Réponds brièvement : Did she call you? (oui)",
+      "back": "Yes, she did."
+    },
+    {
+      "id": "ago",
+      "kind": "grammaire",
+      "front": "Traduis : « il y a trois jours ».",
+      "back": "three days ago"
+    },
+    {
+      "id": "last",
+      "kind": "grammaire",
+      "front": "Traduis : « la semaine dernière ».",
+      "back": "last week"
+    },
+    {
+      "id": "ed-t",
+      "kind": "grammaire",
+      "front": "Quelle prononciation finale pour worked ?",
+      "back": "/t/"
+    },
+    {
+      "id": "ed-id",
+      "kind": "grammaire",
+      "front": "Quelle prononciation finale pour wanted ?",
+      "back": "/ɪd/"
+    }
+  ]
+}

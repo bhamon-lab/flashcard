@@ -1,0 +1,73 @@
+{
+  "id": "anglais-3e-vocab-medias",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Vocabulaire · Médias et numérique",
+  "description": "Liste de vocabulaire — médias et numérique.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "a-headline",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un titre de presse ».",
+      "back": "a headline"
+    },
+    {
+      "id": "a-source",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une source ».",
+      "back": "a source"
+    },
+    {
+      "id": "a-news-report",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un reportage ».",
+      "back": "a news report"
+    },
+    {
+      "id": "social-media",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les réseaux sociaux ».",
+      "back": "social media"
+    },
+    {
+      "id": "fake-news",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les fausses informations ».",
+      "back": "fake news"
+    },
+    {
+      "id": "to-share",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « partager ».",
+      "back": "to share"
+    },
+    {
+      "id": "to-download",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « télécharger ».",
+      "back": "to download"
+    },
+    {
+      "id": "a-password",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un mot de passe ».",
+      "back": "a password"
+    },
+    {
+      "id": "personal-data",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les données personnelles ».",
+      "back": "personal data"
+    },
+    {
+      "id": "cyberbullying",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le cyberharcèlement ».",
+      "back": "cyberbullying"
+    }
+  ]
+}

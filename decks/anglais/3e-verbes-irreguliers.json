@@ -1,0 +1,73 @@
+{
+  "id": "anglais-3e-verbes-irreguliers",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Verbes irréguliers",
+  "description": "Infinitif, prétérit, participe passé et sens français.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "irregular-verbs",
+  "cards": [
+    {
+      "id": "become",
+      "kind": "verbe-irregulier",
+      "front": "become — devenir",
+      "back": "become · became · become"
+    },
+    {
+      "id": "build",
+      "kind": "verbe-irregulier",
+      "front": "build — construire",
+      "back": "build · built · built"
+    },
+    {
+      "id": "catch",
+      "kind": "verbe-irregulier",
+      "front": "catch — attraper",
+      "back": "catch · caught · caught"
+    },
+    {
+      "id": "fight",
+      "kind": "verbe-irregulier",
+      "front": "fight — se battre",
+      "back": "fight · fought · fought"
+    },
+    {
+      "id": "grow",
+      "kind": "verbe-irregulier",
+      "front": "grow — grandir",
+      "back": "grow · grew · grown"
+    },
+    {
+      "id": "hear",
+      "kind": "verbe-irregulier",
+      "front": "hear — entendre",
+      "back": "hear · heard · heard"
+    },
+    {
+      "id": "hold",
+      "kind": "verbe-irregulier",
+      "front": "hold — tenir",
+      "back": "hold · held · held"
+    },
+    {
+      "id": "lose",
+      "kind": "verbe-irregulier",
+      "front": "lose — perdre",
+      "back": "lose · lost · lost"
+    },
+    {
+      "id": "send",
+      "kind": "verbe-irregulier",
+      "front": "send — envoyer",
+      "back": "send · sent · sent"
+    },
+    {
+      "id": "win",
+      "kind": "verbe-irregulier",
+      "front": "win — gagner",
+      "back": "win · won · won"
+    }
+  ]
+}

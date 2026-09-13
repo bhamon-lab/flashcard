@@ -1,0 +1,73 @@
+{
+  "id": "anglais-5e-grammaire-present-continuous",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Grammaire · Présent continu et fréquence",
+  "description": "Règles et automatismes — présent continu et fréquence.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "continuous-form",
+      "kind": "grammaire",
+      "front": "Complète : They ___ football now. (play)",
+      "back": "They are playing football now."
+    },
+    {
+      "id": "continuous-negative",
+      "kind": "grammaire",
+      "front": "Mets à la forme négative : She is sleeping.",
+      "back": "She isn't sleeping."
+    },
+    {
+      "id": "continuous-question",
+      "kind": "grammaire",
+      "front": "Transforme en question : You are listening.",
+      "back": "Are you listening?"
+    },
+    {
+      "id": "simple-or-continuous-now",
+      "kind": "grammaire",
+      "front": "Choisis : Look! It rains / is raining.",
+      "back": "Look! It is raining."
+    },
+    {
+      "id": "simple-or-continuous-usually",
+      "kind": "grammaire",
+      "front": "Choisis : He walks / is walking to school every day.",
+      "back": "He walks to school every day."
+    },
+    {
+      "id": "frequency-before",
+      "kind": "grammaire",
+      "front": "Place often : I play tennis.",
+      "back": "I often play tennis."
+    },
+    {
+      "id": "frequency-be",
+      "kind": "grammaire",
+      "front": "Place always : She is friendly.",
+      "back": "She is always friendly."
+    },
+    {
+      "id": "never",
+      "kind": "grammaire",
+      "front": "Traduis : « Nous ne sommes jamais en retard. »",
+      "back": "We are never late."
+    },
+    {
+      "id": "how-often",
+      "kind": "grammaire",
+      "front": "Demande : « À quelle fréquence lis-tu ? »",
+      "back": "How often do you read?"
+    },
+    {
+      "id": "once-twice",
+      "kind": "grammaire",
+      "front": "Traduis : « deux fois par semaine ».",
+      "back": "twice a week"
+    }
+  ]
+}

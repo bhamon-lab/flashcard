@@ -1,0 +1,73 @@
+{
+  "id": "anglais-1re-grammaire-passif-discours-indirect",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Grammaire · Passif et discours indirect",
+  "description": "Règles et automatismes — passif et discours indirect.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "passive-perfect",
+      "kind": "grammaire",
+      "front": "Mets au passif : They have changed the law.",
+      "back": "The law has been changed."
+    },
+    {
+      "id": "passive-future",
+      "kind": "grammaire",
+      "front": "Mets au passif : They will announce the results tomorrow.",
+      "back": "The results will be announced tomorrow."
+    },
+    {
+      "id": "passive-agent",
+      "kind": "grammaire",
+      "front": "Quand utilise-t-on by dans une phrase passive ?",
+      "back": "Quand l'agent est utile ou important : The novel was written by Orwell."
+    },
+    {
+      "id": "report-statement",
+      "kind": "grammaire",
+      "front": "Rapporte : She said, “I am tired.”",
+      "back": "She said (that) she was tired."
+    },
+    {
+      "id": "report-present-perfect",
+      "kind": "grammaire",
+      "front": "Rapporte : He said, “I have finished.”",
+      "back": "He said (that) he had finished."
+    },
+    {
+      "id": "report-question",
+      "kind": "grammaire",
+      "front": "Rapporte : He asked, “Where do you live?”",
+      "back": "He asked me where I lived."
+    },
+    {
+      "id": "report-yes-no",
+      "kind": "grammaire",
+      "front": "Rapporte : She asked, “Are you ready?”",
+      "back": "She asked me if/whether I was ready."
+    },
+    {
+      "id": "report-command",
+      "kind": "grammaire",
+      "front": "Rapporte : He said, “Close the door.”",
+      "back": "He told me to close the door."
+    },
+    {
+      "id": "say-tell",
+      "kind": "grammaire",
+      "front": "Complète : She ___ me that she agreed.",
+      "back": "She told me that she agreed."
+    },
+    {
+      "id": "report-time",
+      "kind": "grammaire",
+      "front": "Dans un récit au passé, que devient today ?",
+      "back": "that day"
+    }
+  ]
+}

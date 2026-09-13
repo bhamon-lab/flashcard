@@ -1,0 +1,73 @@
+{
+  "id": "anglais-1re-culture",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Culture · Littérature, arts et figures anglophones",
+  "description": "Repères culturels du monde anglophone.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "culture",
+  "cards": [
+    {
+      "id": "repere-01",
+      "kind": "culture",
+      "front": "Qui a écrit Romeo and Juliet ?",
+      "back": "William Shakespeare."
+    },
+    {
+      "id": "repere-02",
+      "kind": "culture",
+      "front": "Qui a écrit Pride and Prejudice ?",
+      "back": "Jane Austen."
+    },
+    {
+      "id": "repere-03",
+      "kind": "culture",
+      "front": "Qui a écrit 1984 ?",
+      "back": "George Orwell."
+    },
+    {
+      "id": "repere-04",
+      "kind": "culture",
+      "front": "Qui a écrit Beloved ?",
+      "back": "Toni Morrison."
+    },
+    {
+      "id": "repere-05",
+      "kind": "culture",
+      "front": "Qui a écrit The Great Gatsby ?",
+      "back": "F. Scott Fitzgerald."
+    },
+    {
+      "id": "repere-06",
+      "kind": "culture",
+      "front": "Quel mouvement culturel noir s'est développé à New York dans les années 1920 ?",
+      "back": "The Harlem Renaissance."
+    },
+    {
+      "id": "repere-07",
+      "kind": "culture",
+      "front": "Qui était Maya Angelou ?",
+      "back": "An American poet, memoirist and civil-rights activist."
+    },
+    {
+      "id": "repere-08",
+      "kind": "culture",
+      "front": "Quel artiste est associé au Pop Art et aux Campbell's Soup Cans ?",
+      "back": "Andy Warhol."
+    },
+    {
+      "id": "repere-09",
+      "kind": "culture",
+      "front": "Qui a réalisé le film Psycho ?",
+      "back": "Alfred Hitchcock."
+    },
+    {
+      "id": "repere-10",
+      "kind": "culture",
+      "front": "Quel groupe originaire de Liverpool a marqué la musique populaire ?",
+      "back": "The Beatles."
+    }
+  ]
+}

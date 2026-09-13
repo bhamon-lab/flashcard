@@ -1,0 +1,73 @@
+{
+  "id": "anglais-term-vocab-politique-societe",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Vocabulaire · Politique et société",
+  "description": "Liste de vocabulaire — politique et société.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "a-stakeholder",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une partie prenante ».",
+      "back": "a stakeholder"
+    },
+    {
+      "id": "a-policy",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une politique publique ».",
+      "back": "a policy"
+    },
+    {
+      "id": "a-policymaker",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un décideur ».",
+      "back": "a policymaker"
+    },
+    {
+      "id": "accountability",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la responsabilité ».",
+      "back": "accountability"
+    },
+    {
+      "id": "inequalities",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les inégalités ».",
+      "back": "inequalities"
+    },
+    {
+      "id": "inclusion",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l’inclusion ».",
+      "back": "inclusion"
+    },
+    {
+      "id": "a-safeguard",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un dispositif de protection ».",
+      "back": "a safeguard"
+    },
+    {
+      "id": "to-implement",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « mettre en œuvre ».",
+      "back": "to implement"
+    },
+    {
+      "id": "to-enforce",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « faire respecter ».",
+      "back": "to enforce"
+    },
+    {
+      "id": "to-foster",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « favoriser ».",
+      "back": "to foster"
+    }
+  ]
+}

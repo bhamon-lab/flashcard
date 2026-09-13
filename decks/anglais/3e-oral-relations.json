@@ -1,0 +1,85 @@
+{
+  "id": "anglais-3e-oral-relations",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Compréhension orale · Émotions et relations",
+  "description": "Même liste que « Émotions et relations », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "proud",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "fier",
+      "audio_text": "proud"
+    },
+    {
+      "id": "worried",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "inquiet",
+      "audio_text": "worried"
+    },
+    {
+      "id": "disappointed",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "déçu",
+      "audio_text": "disappointed"
+    },
+    {
+      "id": "grateful",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "reconnaissant",
+      "audio_text": "grateful"
+    },
+    {
+      "id": "trustworthy",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "digne de confiance",
+      "audio_text": "trustworthy"
+    },
+    {
+      "id": "generous",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "généreux",
+      "audio_text": "generous"
+    },
+    {
+      "id": "shy",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "timide",
+      "audio_text": "shy"
+    },
+    {
+      "id": "to-get-along-with",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "s’entendre avec",
+      "audio_text": "to get along with"
+    },
+    {
+      "id": "to-argue",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "se disputer",
+      "audio_text": "to argue"
+    },
+    {
+      "id": "to-support",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "soutenir",
+      "audio_text": "to support"
+    }
+  ]
+}

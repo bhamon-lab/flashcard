@@ -1,0 +1,73 @@
+{
+  "id": "anglais-5e-verbes-irreguliers",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Verbes irréguliers",
+  "description": "Infinitif, prétérit, participe passé et sens français.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "irregular-verbs",
+  "cards": [
+    {
+      "id": "begin",
+      "kind": "verbe-irregulier",
+      "front": "begin — commencer",
+      "back": "begin · began · begun"
+    },
+    {
+      "id": "bring",
+      "kind": "verbe-irregulier",
+      "front": "bring — apporter",
+      "back": "bring · brought · brought"
+    },
+    {
+      "id": "buy",
+      "kind": "verbe-irregulier",
+      "front": "buy — acheter",
+      "back": "buy · bought · bought"
+    },
+    {
+      "id": "drink",
+      "kind": "verbe-irregulier",
+      "front": "drink — boire",
+      "back": "drink · drank · drunk"
+    },
+    {
+      "id": "eat",
+      "kind": "verbe-irregulier",
+      "front": "eat — manger",
+      "back": "eat · ate · eaten"
+    },
+    {
+      "id": "find",
+      "kind": "verbe-irregulier",
+      "front": "find — trouver",
+      "back": "find · found · found"
+    },
+    {
+      "id": "give",
+      "kind": "verbe-irregulier",
+      "front": "give — donner",
+      "back": "give · gave · given"
+    },
+    {
+      "id": "know",
+      "kind": "verbe-irregulier",
+      "front": "know — savoir",
+      "back": "know · knew · known"
+    },
+    {
+      "id": "read",
+      "kind": "verbe-irregulier",
+      "front": "read — lire",
+      "back": "read · read · read"
+    },
+    {
+      "id": "write",
+      "kind": "verbe-irregulier",
+      "front": "write — écrire",
+      "back": "write · wrote · written"
+    }
+  ]
+}

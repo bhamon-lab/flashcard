@@ -1,0 +1,73 @@
+{
+  "id": "anglais-2de-verbes-irreguliers",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Verbes irréguliers",
+  "description": "Infinitif, prétérit, participe passé et sens français.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "irregular-verbs",
+  "cards": [
+    {
+      "id": "deal",
+      "kind": "verbe-irregulier",
+      "front": "deal — traiter",
+      "back": "deal · dealt · dealt"
+    },
+    {
+      "id": "draw",
+      "kind": "verbe-irregulier",
+      "front": "draw — dessiner",
+      "back": "draw · drew · drawn"
+    },
+    {
+      "id": "fly",
+      "kind": "verbe-irregulier",
+      "front": "fly — voler",
+      "back": "fly · flew · flown"
+    },
+    {
+      "id": "lead",
+      "kind": "verbe-irregulier",
+      "front": "lead — mener",
+      "back": "lead · led · led"
+    },
+    {
+      "id": "lie",
+      "kind": "verbe-irregulier",
+      "front": "lie — être allongé",
+      "back": "lie · lay · lain"
+    },
+    {
+      "id": "rise",
+      "kind": "verbe-irregulier",
+      "front": "rise — s'élever",
+      "back": "rise · rose · risen"
+    },
+    {
+      "id": "shake",
+      "kind": "verbe-irregulier",
+      "front": "shake — secouer",
+      "back": "shake · shook · shaken"
+    },
+    {
+      "id": "show",
+      "kind": "verbe-irregulier",
+      "front": "show — montrer",
+      "back": "show · showed · shown"
+    },
+    {
+      "id": "throw",
+      "kind": "verbe-irregulier",
+      "front": "throw — jeter",
+      "back": "throw · threw · thrown"
+    },
+    {
+      "id": "wear",
+      "kind": "verbe-irregulier",
+      "front": "wear — porter",
+      "back": "wear · wore · worn"
+    }
+  ]
+}

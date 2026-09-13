@@ -1,0 +1,85 @@
+{
+  "id": "anglais-6e-oral-maison",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Compréhension orale · Pièces de la maison",
+  "description": "Même liste que « Pièces de la maison », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "the-kitchen",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la cuisine",
+      "audio_text": "the kitchen"
+    },
+    {
+      "id": "the-living-room",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le salon",
+      "audio_text": "the living room"
+    },
+    {
+      "id": "the-dining-room",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la salle à manger",
+      "audio_text": "the dining room"
+    },
+    {
+      "id": "the-bedroom",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la chambre",
+      "audio_text": "the bedroom"
+    },
+    {
+      "id": "the-bathroom",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la salle de bains",
+      "audio_text": "the bathroom"
+    },
+    {
+      "id": "the-toilet",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les toilettes",
+      "audio_text": "the toilet"
+    },
+    {
+      "id": "the-garden",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le jardin",
+      "audio_text": "the garden"
+    },
+    {
+      "id": "the-garage",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le garage",
+      "audio_text": "the garage"
+    },
+    {
+      "id": "the-attic",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le grenier",
+      "audio_text": "the attic"
+    },
+    {
+      "id": "the-hallway",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le couloir",
+      "audio_text": "the hallway"
+    }
+  ]
+}

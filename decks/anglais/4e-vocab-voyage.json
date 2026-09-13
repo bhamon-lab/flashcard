@@ -1,0 +1,73 @@
+{
+  "id": "anglais-4e-vocab-voyage",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Vocabulaire · Voyage et transports",
+  "description": "Liste de vocabulaire — voyage et transports.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "a-single-ticket",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un billet aller simple ».",
+      "back": "a single ticket"
+    },
+    {
+      "id": "a-return-ticket",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un billet aller-retour ».",
+      "back": "a return ticket"
+    },
+    {
+      "id": "the-platform",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « le quai ».",
+      "back": "the platform"
+    },
+    {
+      "id": "the-boarding-pass",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la carte d’embarquement ».",
+      "back": "the boarding pass"
+    },
+    {
+      "id": "luggage",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les bagages ».",
+      "back": "luggage"
+    },
+    {
+      "id": "a-flight",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un vol ».",
+      "back": "a flight"
+    },
+    {
+      "id": "delayed",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « retardé ».",
+      "back": "delayed"
+    },
+    {
+      "id": "cancelled",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « annulé ».",
+      "back": "cancelled"
+    },
+    {
+      "id": "to-book",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « réserver ».",
+      "back": "to book"
+    },
+    {
+      "id": "to-miss-the-train",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « rater le train ».",
+      "back": "to miss the train"
+    }
+  ]
+}

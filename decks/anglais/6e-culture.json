@@ -1,0 +1,73 @@
+{
+  "id": "anglais-6e-culture",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Culture · Pays anglophones et capitales",
+  "description": "Repères culturels du monde anglophone.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "culture",
+  "cards": [
+    {
+      "id": "repere-01",
+      "kind": "culture",
+      "front": "Quelle est la capitale du Royaume-Uni ?",
+      "back": "London (Londres)."
+    },
+    {
+      "id": "repere-02",
+      "kind": "culture",
+      "front": "Quelle est la capitale de l'Irlande ?",
+      "back": "Dublin."
+    },
+    {
+      "id": "repere-03",
+      "kind": "culture",
+      "front": "Quelle est la capitale des États-Unis ?",
+      "back": "Washington, D.C."
+    },
+    {
+      "id": "repere-04",
+      "kind": "culture",
+      "front": "Quelle est la capitale du Canada ?",
+      "back": "Ottawa."
+    },
+    {
+      "id": "repere-05",
+      "kind": "culture",
+      "front": "Quelle est la capitale de l'Australie ?",
+      "back": "Canberra."
+    },
+    {
+      "id": "repere-06",
+      "kind": "culture",
+      "front": "Quelle est la capitale de la Nouvelle-Zélande ?",
+      "back": "Wellington."
+    },
+    {
+      "id": "repere-07",
+      "kind": "culture",
+      "front": "Quelles sont les quatre nations du Royaume-Uni ?",
+      "back": "England, Scotland, Wales and Northern Ireland."
+    },
+    {
+      "id": "repere-08",
+      "kind": "culture",
+      "front": "Quelle monnaie utilise-t-on au Royaume-Uni ?",
+      "back": "The pound sterling (£)."
+    },
+    {
+      "id": "repere-09",
+      "kind": "culture",
+      "front": "Quel symbole végétal représente l'Irlande ?",
+      "back": "The shamrock (le trèfle)."
+    },
+    {
+      "id": "repere-10",
+      "kind": "culture",
+      "front": "Comment appelle-t-on le drapeau du Royaume-Uni ?",
+      "back": "The Union Jack / the Union Flag."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "anglais-6e-vocab-ecole",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Vocabulaire · École et classe",
+  "description": "Liste de vocabulaire — école et classe.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "an-exercise-book",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un cahier ».",
+      "back": "an exercise book"
+    },
+    {
+      "id": "a-book",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un livre ».",
+      "back": "a book"
+    },
+    {
+      "id": "a-pen",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un stylo ».",
+      "back": "a pen"
+    },
+    {
+      "id": "a-pencil",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un crayon ».",
+      "back": "a pencil"
+    },
+    {
+      "id": "a-rubber",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une gomme ».",
+      "back": "a rubber"
+    },
+    {
+      "id": "a-ruler",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une règle ».",
+      "back": "a ruler"
+    },
+    {
+      "id": "a-schoolbag",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un cartable ».",
+      "back": "a schoolbag"
+    },
+    {
+      "id": "a-desk",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un bureau ».",
+      "back": "a desk"
+    },
+    {
+      "id": "a-board",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un tableau ».",
+      "back": "a board"
+    },
+    {
+      "id": "homework",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les devoirs ».",
+      "back": "homework"
+    }
+  ]
+}

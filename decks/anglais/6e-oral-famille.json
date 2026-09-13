@@ -1,0 +1,85 @@
+{
+  "id": "anglais-6e-oral-famille",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Compréhension orale · Famille",
+  "description": "Même liste que « Famille », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "the-mother",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la mère",
+      "audio_text": "the mother"
+    },
+    {
+      "id": "the-father",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le père",
+      "audio_text": "the father"
+    },
+    {
+      "id": "the-parents",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les parents",
+      "audio_text": "the parents"
+    },
+    {
+      "id": "the-sister",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la sœur",
+      "audio_text": "the sister"
+    },
+    {
+      "id": "the-brother",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le frère",
+      "audio_text": "the brother"
+    },
+    {
+      "id": "the-grandmother",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la grand-mère",
+      "audio_text": "the grandmother"
+    },
+    {
+      "id": "the-grandfather",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le grand-père",
+      "audio_text": "the grandfather"
+    },
+    {
+      "id": "the-aunt",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la tante",
+      "audio_text": "the aunt"
+    },
+    {
+      "id": "the-uncle",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l’oncle",
+      "audio_text": "the uncle"
+    },
+    {
+      "id": "the-cousin",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le cousin / la cousine",
+      "audio_text": "the cousin"
+    }
+  ]
+}

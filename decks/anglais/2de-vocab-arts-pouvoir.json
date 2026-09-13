@@ -1,0 +1,73 @@
+{
+  "id": "anglais-2de-vocab-arts-pouvoir",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Vocabulaire · Arts et pouvoir",
+  "description": "Liste de vocabulaire — arts et pouvoir.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "a-work-of-art",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une œuvre d’art ».",
+      "back": "a work of art"
+    },
+    {
+      "id": "a-masterpiece",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un chef-d’œuvre ».",
+      "back": "a masterpiece"
+    },
+    {
+      "id": "a-portrayal",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un portrait ».",
+      "back": "a portrayal"
+    },
+    {
+      "id": "a-symbol",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un symbole ».",
+      "back": "a symbol"
+    },
+    {
+      "id": "a-message",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un message ».",
+      "back": "a message"
+    },
+    {
+      "id": "to-depict",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « représenter ».",
+      "back": "to depict"
+    },
+    {
+      "id": "to-highlight",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « souligner ».",
+      "back": "to highlight"
+    },
+    {
+      "id": "to-denounce",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « dénoncer ».",
+      "back": "to denounce"
+    },
+    {
+      "id": "to-censor",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « censurer ».",
+      "back": "to censor"
+    },
+    {
+      "id": "to-convey",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « transmettre ».",
+      "back": "to convey"
+    }
+  ]
+}

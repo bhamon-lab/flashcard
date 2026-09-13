@@ -1,0 +1,85 @@
+{
+  "id": "anglais-term-oral-enjeux-mondiaux",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Compréhension orale · Enjeux mondiaux et technologie",
+  "description": "Même liste que « Enjeux mondiaux et technologie », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "an-unintended-consequence",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une conséquence imprévue",
+      "audio_text": "an unintended consequence"
+    },
+    {
+      "id": "a-threat",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une menace",
+      "audio_text": "a threat"
+    },
+    {
+      "id": "resilience",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la résilience",
+      "audio_text": "resilience"
+    },
+    {
+      "id": "scarcity",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la pénurie",
+      "audio_text": "scarcity"
+    },
+    {
+      "id": "sustainability",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la durabilité",
+      "audio_text": "sustainability"
+    },
+    {
+      "id": "artificial-intelligence",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l’intelligence artificielle",
+      "audio_text": "artificial intelligence"
+    },
+    {
+      "id": "the-digital-divide",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la fracture numérique",
+      "audio_text": "the digital divide"
+    },
+    {
+      "id": "on-a-large-scale",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "à grande échelle",
+      "audio_text": "on a large scale"
+    },
+    {
+      "id": "in-the-long-run",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "à long terme",
+      "audio_text": "in the long run"
+    },
+    {
+      "id": "evidence-based",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "fondé sur des preuves",
+      "audio_text": "evidence-based"
+    }
+  ]
+}

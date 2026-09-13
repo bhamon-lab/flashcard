@@ -1,0 +1,73 @@
+{
+  "id": "anglais-5e-vocab-routine",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Vocabulaire · Routine quotidienne",
+  "description": "Liste de vocabulaire — routine quotidienne.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "to-wake-up",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « se réveiller ».",
+      "back": "to wake up"
+    },
+    {
+      "id": "to-get-up",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « se lever ».",
+      "back": "to get up"
+    },
+    {
+      "id": "to-get-dressed",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « s’habiller ».",
+      "back": "to get dressed"
+    },
+    {
+      "id": "to-have-breakfast",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « prendre le petit déjeuner ».",
+      "back": "to have breakfast"
+    },
+    {
+      "id": "to-go-to-school",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « aller au collège ».",
+      "back": "to go to school"
+    },
+    {
+      "id": "to-have-lunch",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « déjeuner ».",
+      "back": "to have lunch"
+    },
+    {
+      "id": "to-go-home",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « rentrer à la maison ».",
+      "back": "to go home"
+    },
+    {
+      "id": "to-do-one-s-homework",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « faire ses devoirs ».",
+      "back": "to do one's homework"
+    },
+    {
+      "id": "to-have-dinner",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « dîner ».",
+      "back": "to have dinner"
+    },
+    {
+      "id": "to-go-to-bed",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « aller se coucher ».",
+      "back": "to go to bed"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "anglais-4e-culture",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Culture · Irlande, Canada, Australie et Nouvelle-Zélande",
+  "description": "Repères culturels du monde anglophone.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "culture",
+  "cards": [
+    {
+      "id": "repere-01",
+      "kind": "culture",
+      "front": "Quelle ville est la capitale de l'Irlande ?",
+      "back": "Dublin."
+    },
+    {
+      "id": "repere-02",
+      "kind": "culture",
+      "front": "Quel saint est célébré le 17 mars ?",
+      "back": "Saint Patrick."
+    },
+    {
+      "id": "repere-03",
+      "kind": "culture",
+      "front": "Quelles sont les deux langues officielles du Canada ?",
+      "back": "English and French."
+    },
+    {
+      "id": "repere-04",
+      "kind": "culture",
+      "front": "Quelle feuille figure sur le drapeau canadien ?",
+      "back": "A maple leaf."
+    },
+    {
+      "id": "repere-05",
+      "kind": "culture",
+      "front": "Quelle est la capitale de l'Australie ?",
+      "back": "Canberra, not Sydney."
+    },
+    {
+      "id": "repere-06",
+      "kind": "culture",
+      "front": "Comment s'appelle le célèbre opéra de Sydney ?",
+      "back": "The Sydney Opera House."
+    },
+    {
+      "id": "repere-07",
+      "kind": "culture",
+      "front": "Qui sont les peuples autochtones d'Australie ?",
+      "back": "Aboriginal and Torres Strait Islander peoples."
+    },
+    {
+      "id": "repere-08",
+      "kind": "culture",
+      "front": "Quelle est la capitale de la Nouvelle-Zélande ?",
+      "back": "Wellington."
+    },
+    {
+      "id": "repere-09",
+      "kind": "culture",
+      "front": "Quel nom māori désigne la Nouvelle-Zélande ?",
+      "back": "Aotearoa."
+    },
+    {
+      "id": "repere-10",
+      "kind": "culture",
+      "front": "Quel oiseau incapable de voler symbolise la Nouvelle-Zélande ?",
+      "back": "The kiwi."
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "anglais-2de-oral-identite",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Compréhension orale · Identité et relations",
+  "description": "Même liste que « Identité et relations », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "belonging",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l’appartenance",
+      "audio_text": "belonging"
+    },
+    {
+      "id": "background",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les origines",
+      "audio_text": "background"
+    },
+    {
+      "id": "a-role-model",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un modèle",
+      "audio_text": "a role model"
+    },
+    {
+      "id": "peers",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les pairs",
+      "audio_text": "peers"
+    },
+    {
+      "id": "self-confidence",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la confiance en soi",
+      "audio_text": "self-confidence"
+    },
+    {
+      "id": "a-value",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une valeur",
+      "audio_text": "a value"
+    },
+    {
+      "id": "a-prejudice",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un préjugé",
+      "audio_text": "a prejudice"
+    },
+    {
+      "id": "to-fit-in",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "s’intégrer",
+      "audio_text": "to fit in"
+    },
+    {
+      "id": "to-stand-out",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "se démarquer",
+      "audio_text": "to stand out"
+    },
+    {
+      "id": "to-embrace-one-s-identity",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "assumer son identité",
+      "audio_text": "to embrace one's identity"
+    }
+  ]
+}

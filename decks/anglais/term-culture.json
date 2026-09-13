@@ -1,0 +1,73 @@
+{
+  "id": "anglais-term-culture",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Culture · Commonwealth et institutions contemporaines",
+  "description": "Repères culturels du monde anglophone.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "culture",
+  "cards": [
+    {
+      "id": "repere-01",
+      "kind": "culture",
+      "front": "Qu'est-ce que le Commonwealth ?",
+      "back": "A voluntary association of independent countries, many with historical links to the British Empire."
+    },
+    {
+      "id": "repere-02",
+      "kind": "culture",
+      "front": "Où se trouve le siège des Nations unies ?",
+      "back": "In New York City."
+    },
+    {
+      "id": "repere-03",
+      "kind": "culture",
+      "front": "Que signifie l'abréviation NATO ?",
+      "back": "North Atlantic Treaty Organization."
+    },
+    {
+      "id": "repere-04",
+      "kind": "culture",
+      "front": "Quel accord de 1998 a contribué à la paix en Irlande du Nord ?",
+      "back": "The Good Friday Agreement."
+    },
+    {
+      "id": "repere-05",
+      "kind": "culture",
+      "front": "Qu'est-ce que devolution au Royaume-Uni ?",
+      "back": "The transfer of some powers from Westminster to Scotland, Wales and Northern Ireland."
+    },
+    {
+      "id": "repere-06",
+      "kind": "culture",
+      "front": "Quel jour célèbre-t-on l'Australia Day ?",
+      "back": "On 26 January; the date is also contested and called Invasion Day by many Indigenous people."
+    },
+    {
+      "id": "repere-07",
+      "kind": "culture",
+      "front": "Quel traité de 1840 est fondateur en Nouvelle-Zélande ?",
+      "back": "The Treaty of Waitangi."
+    },
+    {
+      "id": "repere-08",
+      "kind": "culture",
+      "front": "Que célèbre Juneteenth aux États-Unis ?",
+      "back": "The end of slavery in the United States, commemorated on 19 June."
+    },
+    {
+      "id": "repere-09",
+      "kind": "culture",
+      "front": "Quel est le rôle principal de la Cour suprême américaine ?",
+      "back": "To interpret the Constitution and federal law."
+    },
+    {
+      "id": "repere-10",
+      "kind": "culture",
+      "front": "Que désigne Windrush au Royaume-Uni ?",
+      "back": "Post-war Caribbean migration to the UK and the generation associated with it."
+    }
+  ]
+}

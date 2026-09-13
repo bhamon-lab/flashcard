@@ -1,0 +1,73 @@
+{
+  "id": "anglais-1re-vocab-innovation-ethique",
+  "subject": "Anglais",
+  "title": "Anglais · 1re · Vocabulaire · Innovation et éthique",
+  "description": "Liste de vocabulaire — innovation et éthique.",
+  "format": "people",
+  "color": "#D9E4F2",
+  "daily_new_limit": 5,
+  "grade": "1re",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "a-breakthrough",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une percée ».",
+      "back": "a breakthrough"
+    },
+    {
+      "id": "a-drawback",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un inconvénient ».",
+      "back": "a drawback"
+    },
+    {
+      "id": "an-ethical-issue",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un enjeu éthique ».",
+      "back": "an ethical issue"
+    },
+    {
+      "id": "privacy",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la vie privée ».",
+      "back": "privacy"
+    },
+    {
+      "id": "surveillance",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la surveillance ».",
+      "back": "surveillance"
+    },
+    {
+      "id": "an-algorithm",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un algorithme ».",
+      "back": "an algorithm"
+    },
+    {
+      "id": "a-bias",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un biais ».",
+      "back": "a bias"
+    },
+    {
+      "id": "to-regulate",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « réglementer ».",
+      "back": "to regulate"
+    },
+    {
+      "id": "to-be-accountable",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « rendre des comptes ».",
+      "back": "to be accountable"
+    },
+    {
+      "id": "to-weigh-the-pros-and-cons",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « peser le pour et le contre ».",
+      "back": "to weigh the pros and cons"
+    }
+  ]
+}

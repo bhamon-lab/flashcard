@@ -1,0 +1,85 @@
+{
+  "id": "anglais-2de-oral-environnement",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Compréhension orale · Environnement et solutions",
+  "description": "Même liste que « Environnement et solutions », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "climate-change",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le changement climatique",
+      "audio_text": "climate change"
+    },
+    {
+      "id": "the-carbon-footprint",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "l’empreinte carbone",
+      "audio_text": "the carbon footprint"
+    },
+    {
+      "id": "fossil-fuels",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les combustibles fossiles",
+      "audio_text": "fossil fuels"
+    },
+    {
+      "id": "renewable-energy",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les énergies renouvelables",
+      "audio_text": "renewable energy"
+    },
+    {
+      "id": "biodiversity",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la biodiversité",
+      "audio_text": "biodiversity"
+    },
+    {
+      "id": "an-endangered-species",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une espèce menacée",
+      "audio_text": "an endangered species"
+    },
+    {
+      "id": "to-reduce",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "réduire",
+      "audio_text": "to reduce"
+    },
+    {
+      "id": "to-reuse",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "réutiliser",
+      "audio_text": "to reuse"
+    },
+    {
+      "id": "to-raise-awareness",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "sensibiliser",
+      "audio_text": "to raise awareness"
+    },
+    {
+      "id": "sustainable-development",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "le développement durable",
+      "audio_text": "sustainable development"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "anglais-6e-grammaire-be-have-pronoms",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Grammaire · Be, have got et pronoms",
+  "description": "Règles et automatismes — be, have got et pronoms.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "be-i",
+      "kind": "grammaire",
+      "front": "Complète : I ___ eleven.",
+      "back": "I am eleven. / I'm eleven."
+    },
+    {
+      "id": "be-he",
+      "kind": "grammaire",
+      "front": "Complète : He ___ English.",
+      "back": "He is English. / He's English."
+    },
+    {
+      "id": "be-we",
+      "kind": "grammaire",
+      "front": "Complète : We ___ ready.",
+      "back": "We are ready. / We're ready."
+    },
+    {
+      "id": "be-negative",
+      "kind": "grammaire",
+      "front": "Mets à la forme négative : She is tired.",
+      "back": "She isn't tired. / She is not tired."
+    },
+    {
+      "id": "be-question",
+      "kind": "grammaire",
+      "front": "Transforme en question : You are French.",
+      "back": "Are you French?"
+    },
+    {
+      "id": "have-got",
+      "kind": "grammaire",
+      "front": "Traduis : « J'ai un frère. »",
+      "back": "I have got a brother. / I've got a brother."
+    },
+    {
+      "id": "have-negative",
+      "kind": "grammaire",
+      "front": "Traduis : « Elle n'a pas de sœur. »",
+      "back": "She hasn't got a sister."
+    },
+    {
+      "id": "subject-pronouns",
+      "kind": "grammaire",
+      "front": "Quels pronoms remplacent Emma, Tom et Emma and Tom ?",
+      "back": "she, he, they"
+    },
+    {
+      "id": "object-pronouns",
+      "kind": "grammaire",
+      "front": "Complète : I like Emma. I often call ___.",
+      "back": "I often call her."
+    },
+    {
+      "id": "possessive",
+      "kind": "grammaire",
+      "front": "Complète : This is Tom. ___ bag is blue.",
+      "back": "His bag is blue."
+    }
+  ]
+}

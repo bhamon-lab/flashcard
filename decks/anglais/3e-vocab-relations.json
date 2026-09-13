@@ -1,0 +1,73 @@
+{
+  "id": "anglais-3e-vocab-relations",
+  "subject": "Anglais",
+  "title": "Anglais · 3e · Vocabulaire · Émotions et relations",
+  "description": "Liste de vocabulaire — émotions et relations.",
+  "format": "people",
+  "color": "#F4D9D5",
+  "daily_new_limit": 5,
+  "grade": "3e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "proud",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « fier ».",
+      "back": "proud"
+    },
+    {
+      "id": "worried",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « inquiet ».",
+      "back": "worried"
+    },
+    {
+      "id": "disappointed",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « déçu ».",
+      "back": "disappointed"
+    },
+    {
+      "id": "grateful",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « reconnaissant ».",
+      "back": "grateful"
+    },
+    {
+      "id": "trustworthy",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « digne de confiance ».",
+      "back": "trustworthy"
+    },
+    {
+      "id": "generous",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « généreux ».",
+      "back": "generous"
+    },
+    {
+      "id": "shy",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « timide ».",
+      "back": "shy"
+    },
+    {
+      "id": "to-get-along-with",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « s’entendre avec ».",
+      "back": "to get along with"
+    },
+    {
+      "id": "to-argue",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « se disputer ».",
+      "back": "to argue"
+    },
+    {
+      "id": "to-support",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « soutenir ».",
+      "back": "to support"
+    }
+  ]
+}

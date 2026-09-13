@@ -1,0 +1,85 @@
+{
+  "id": "anglais-4e-oral-meteo-environnement",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Compréhension orale · Météo et environnement",
+  "description": "Même liste que « Météo et environnement », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "sunny",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "ensoleillé",
+      "audio_text": "sunny"
+    },
+    {
+      "id": "cloudy",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "nuageux",
+      "audio_text": "cloudy"
+    },
+    {
+      "id": "windy",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "venteux",
+      "audio_text": "windy"
+    },
+    {
+      "id": "a-thunderstorm",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un orage",
+      "audio_text": "a thunderstorm"
+    },
+    {
+      "id": "a-drought",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une sécheresse",
+      "audio_text": "a drought"
+    },
+    {
+      "id": "a-flood",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une inondation",
+      "audio_text": "a flood"
+    },
+    {
+      "id": "pollution",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "la pollution",
+      "audio_text": "pollution"
+    },
+    {
+      "id": "to-recycle",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "recycler",
+      "audio_text": "to recycle"
+    },
+    {
+      "id": "to-save-water",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "économiser l’eau",
+      "audio_text": "to save water"
+    },
+    {
+      "id": "waste",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les déchets",
+      "audio_text": "waste"
+    }
+  ]
+}

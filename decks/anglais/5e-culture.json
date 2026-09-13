@@ -1,0 +1,73 @@
+{
+  "id": "anglais-5e-culture",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Culture · Royaume-Uni : repères et fêtes",
+  "description": "Repères culturels du monde anglophone.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "culture",
+  "cards": [
+    {
+      "id": "repere-01",
+      "kind": "culture",
+      "front": "Quel fleuve traverse Londres ?",
+      "back": "The River Thames."
+    },
+    {
+      "id": "repere-02",
+      "kind": "culture",
+      "front": "Dans quelle ville se trouve Big Ben ?",
+      "back": "London."
+    },
+    {
+      "id": "repere-03",
+      "kind": "culture",
+      "front": "Quelle capitale écossaise possède un célèbre château ?",
+      "back": "Edinburgh."
+    },
+    {
+      "id": "repere-04",
+      "kind": "culture",
+      "front": "Quelle est la capitale du pays de Galles ?",
+      "back": "Cardiff."
+    },
+    {
+      "id": "repere-05",
+      "kind": "culture",
+      "front": "Quelle est la capitale de l'Irlande du Nord ?",
+      "back": "Belfast."
+    },
+    {
+      "id": "repere-06",
+      "kind": "culture",
+      "front": "Quand célèbre-t-on Halloween ?",
+      "back": "On 31 October."
+    },
+    {
+      "id": "repere-07",
+      "kind": "culture",
+      "front": "Que célèbre Bonfire Night au Royaume-Uni ?",
+      "back": "The failure of the Gunpowder Plot of 1605, on 5 November."
+    },
+    {
+      "id": "repere-08",
+      "kind": "culture",
+      "front": "Quel repas britannique associe poisson frit et frites ?",
+      "back": "Fish and chips."
+    },
+    {
+      "id": "repere-09",
+      "kind": "culture",
+      "front": "Quel sport est associé au tournoi de Wimbledon ?",
+      "back": "Tennis."
+    },
+    {
+      "id": "repere-10",
+      "kind": "culture",
+      "front": "À quoi servent les red double-decker buses ?",
+      "back": "They are iconic double-decker buses used for public transport."
+    }
+  ]
+}

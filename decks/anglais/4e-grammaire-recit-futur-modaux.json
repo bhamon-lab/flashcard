@@ -1,0 +1,73 @@
+{
+  "id": "anglais-4e-grammaire-recit-futur-modaux",
+  "subject": "Anglais",
+  "title": "Anglais · 4e · Grammaire · Récit, futur et modaux",
+  "description": "Règles et automatismes — récit, futur et modaux.",
+  "format": "people",
+  "color": "#F8E8C8",
+  "daily_new_limit": 5,
+  "grade": "4e",
+  "category": "grammar",
+  "cards": [
+    {
+      "id": "past-continuous",
+      "kind": "grammaire",
+      "front": "Complète : I ___ when you called. (sleep)",
+      "back": "I was sleeping when you called."
+    },
+    {
+      "id": "past-interruption",
+      "kind": "grammaire",
+      "front": "Complète : We ___ when it ___ to rain. (walk/start)",
+      "back": "We were walking when it started to rain."
+    },
+    {
+      "id": "will",
+      "kind": "grammaire",
+      "front": "Traduis cette prédiction : « Il pleuvra demain. »",
+      "back": "It will rain tomorrow."
+    },
+    {
+      "id": "going-to",
+      "kind": "grammaire",
+      "front": "Traduis ce projet : « Nous allons visiter Dublin. »",
+      "back": "We are going to visit Dublin."
+    },
+    {
+      "id": "present-future",
+      "kind": "grammaire",
+      "front": "Traduis cet arrangement : « Je vois Sam demain. »",
+      "back": "I'm seeing Sam tomorrow."
+    },
+    {
+      "id": "should",
+      "kind": "grammaire",
+      "front": "Traduis : « Tu devrais te reposer. »",
+      "back": "You should rest."
+    },
+    {
+      "id": "must",
+      "kind": "grammaire",
+      "front": "Traduis : « Tu dois être prudent. »",
+      "back": "You must be careful."
+    },
+    {
+      "id": "mustnt",
+      "kind": "grammaire",
+      "front": "Traduis : « Vous ne devez pas entrer. »",
+      "back": "You mustn't enter."
+    },
+    {
+      "id": "have-to",
+      "kind": "grammaire",
+      "front": "Traduis : « Je dois porter un uniforme. »",
+      "back": "I have to wear a uniform."
+    },
+    {
+      "id": "could",
+      "kind": "grammaire",
+      "front": "Traduis : « Quand j'avais six ans, je savais nager. »",
+      "back": "When I was six, I could swim."
+    }
+  ]
+}

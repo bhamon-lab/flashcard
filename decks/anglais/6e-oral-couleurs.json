@@ -1,0 +1,85 @@
+{
+  "id": "anglais-6e-oral-couleurs",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Compréhension orale · Couleurs",
+  "description": "Même liste que « Couleurs », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "red",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "rouge",
+      "audio_text": "red"
+    },
+    {
+      "id": "blue",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "bleu",
+      "audio_text": "blue"
+    },
+    {
+      "id": "green",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "vert",
+      "audio_text": "green"
+    },
+    {
+      "id": "yellow",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "jaune",
+      "audio_text": "yellow"
+    },
+    {
+      "id": "orange",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "orange",
+      "audio_text": "orange"
+    },
+    {
+      "id": "pink",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "rose",
+      "audio_text": "pink"
+    },
+    {
+      "id": "purple",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "violet",
+      "audio_text": "purple"
+    },
+    {
+      "id": "brown",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "marron",
+      "audio_text": "brown"
+    },
+    {
+      "id": "black",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "noir",
+      "audio_text": "black"
+    },
+    {
+      "id": "white",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "blanc",
+      "audio_text": "white"
+    }
+  ]
+}

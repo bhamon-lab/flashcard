@@ -1,0 +1,85 @@
+{
+  "id": "anglais-2de-oral-arts-pouvoir",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Compréhension orale · Arts et pouvoir",
+  "description": "Même liste que « Arts et pouvoir », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "a-work-of-art",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une œuvre d’art",
+      "audio_text": "a work of art"
+    },
+    {
+      "id": "a-masterpiece",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un chef-d’œuvre",
+      "audio_text": "a masterpiece"
+    },
+    {
+      "id": "a-portrayal",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un portrait",
+      "audio_text": "a portrayal"
+    },
+    {
+      "id": "a-symbol",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un symbole",
+      "audio_text": "a symbol"
+    },
+    {
+      "id": "a-message",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un message",
+      "audio_text": "a message"
+    },
+    {
+      "id": "to-depict",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "représenter",
+      "audio_text": "to depict"
+    },
+    {
+      "id": "to-highlight",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "souligner",
+      "audio_text": "to highlight"
+    },
+    {
+      "id": "to-denounce",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "dénoncer",
+      "audio_text": "to denounce"
+    },
+    {
+      "id": "to-censor",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "censurer",
+      "audio_text": "to censor"
+    },
+    {
+      "id": "to-convey",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "transmettre",
+      "audio_text": "to convey"
+    }
+  ]
+}

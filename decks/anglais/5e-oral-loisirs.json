@@ -1,0 +1,85 @@
+{
+  "id": "anglais-5e-oral-loisirs",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Compréhension orale · Loisirs et sports",
+  "description": "Même liste que « Loisirs et sports », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "to-play-football",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "jouer au football",
+      "audio_text": "to play football"
+    },
+    {
+      "id": "to-go-swimming",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "faire de la natation",
+      "audio_text": "to go swimming"
+    },
+    {
+      "id": "to-go-cycling",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "faire du vélo",
+      "audio_text": "to go cycling"
+    },
+    {
+      "id": "to-draw",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "dessiner",
+      "audio_text": "to draw"
+    },
+    {
+      "id": "to-read",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "lire",
+      "audio_text": "to read"
+    },
+    {
+      "id": "to-listen-to-music",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "écouter de la musique",
+      "audio_text": "to listen to music"
+    },
+    {
+      "id": "to-watch-a-film",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "regarder un film",
+      "audio_text": "to watch a film"
+    },
+    {
+      "id": "to-play-video-games",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "jouer aux jeux vidéo",
+      "audio_text": "to play video games"
+    },
+    {
+      "id": "to-cook",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "cuisiner",
+      "audio_text": "to cook"
+    },
+    {
+      "id": "to-meet-friends",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "retrouver ses amis",
+      "audio_text": "to meet friends"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "anglais-term-vocab-enjeux-mondiaux",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Vocabulaire · Enjeux mondiaux et technologie",
+  "description": "Liste de vocabulaire — enjeux mondiaux et technologie.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "an-unintended-consequence",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une conséquence imprévue ».",
+      "back": "an unintended consequence"
+    },
+    {
+      "id": "a-threat",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une menace ».",
+      "back": "a threat"
+    },
+    {
+      "id": "resilience",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la résilience ».",
+      "back": "resilience"
+    },
+    {
+      "id": "scarcity",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la pénurie ».",
+      "back": "scarcity"
+    },
+    {
+      "id": "sustainability",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la durabilité ».",
+      "back": "sustainability"
+    },
+    {
+      "id": "artificial-intelligence",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l’intelligence artificielle ».",
+      "back": "artificial intelligence"
+    },
+    {
+      "id": "the-digital-divide",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la fracture numérique ».",
+      "back": "the digital divide"
+    },
+    {
+      "id": "on-a-large-scale",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « à grande échelle ».",
+      "back": "on a large scale"
+    },
+    {
+      "id": "in-the-long-run",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « à long terme ».",
+      "back": "in the long run"
+    },
+    {
+      "id": "evidence-based",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « fondé sur des preuves ».",
+      "back": "evidence-based"
+    }
+  ]
+}

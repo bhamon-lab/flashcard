@@ -1,0 +1,85 @@
+{
+  "id": "anglais-6e-oral-ecole",
+  "subject": "Anglais",
+  "title": "Anglais · 6e · Compréhension orale · École et classe",
+  "description": "Même liste que « École et classe », à reconnaître à l'oral.",
+  "format": "people",
+  "color": "#D8EAF8",
+  "daily_new_limit": 5,
+  "grade": "6e",
+  "category": "listening",
+  "mode": "listening",
+  "audio_language": "en-GB",
+  "cards": [
+    {
+      "id": "an-exercise-book",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un cahier",
+      "audio_text": "an exercise book"
+    },
+    {
+      "id": "a-book",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un livre",
+      "audio_text": "a book"
+    },
+    {
+      "id": "a-pen",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un stylo",
+      "audio_text": "a pen"
+    },
+    {
+      "id": "a-pencil",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un crayon",
+      "audio_text": "a pencil"
+    },
+    {
+      "id": "a-rubber",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une gomme",
+      "audio_text": "a rubber"
+    },
+    {
+      "id": "a-ruler",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "une règle",
+      "audio_text": "a ruler"
+    },
+    {
+      "id": "a-schoolbag",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un cartable",
+      "audio_text": "a schoolbag"
+    },
+    {
+      "id": "a-desk",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un bureau",
+      "audio_text": "a desk"
+    },
+    {
+      "id": "a-board",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "un tableau",
+      "audio_text": "a board"
+    },
+    {
+      "id": "homework",
+      "kind": "comprehension-orale",
+      "front": "Écoute, puis donne le sens en français.",
+      "back": "les devoirs",
+      "audio_text": "homework"
+    }
+  ]
+}

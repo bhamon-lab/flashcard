@@ -1,0 +1,73 @@
+{
+  "id": "anglais-5e-vocab-loisirs",
+  "subject": "Anglais",
+  "title": "Anglais · 5e · Vocabulaire · Loisirs et sports",
+  "description": "Liste de vocabulaire — loisirs et sports.",
+  "format": "people",
+  "color": "#DDEEDB",
+  "daily_new_limit": 5,
+  "grade": "5e",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "to-play-football",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « jouer au football ».",
+      "back": "to play football"
+    },
+    {
+      "id": "to-go-swimming",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « faire de la natation ».",
+      "back": "to go swimming"
+    },
+    {
+      "id": "to-go-cycling",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « faire du vélo ».",
+      "back": "to go cycling"
+    },
+    {
+      "id": "to-draw",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « dessiner ».",
+      "back": "to draw"
+    },
+    {
+      "id": "to-read",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « lire ».",
+      "back": "to read"
+    },
+    {
+      "id": "to-listen-to-music",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « écouter de la musique ».",
+      "back": "to listen to music"
+    },
+    {
+      "id": "to-watch-a-film",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « regarder un film ».",
+      "back": "to watch a film"
+    },
+    {
+      "id": "to-play-video-games",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « jouer aux jeux vidéo ».",
+      "back": "to play video games"
+    },
+    {
+      "id": "to-cook",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « cuisiner ».",
+      "back": "to cook"
+    },
+    {
+      "id": "to-meet-friends",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « retrouver ses amis ».",
+      "back": "to meet friends"
+    }
+  ]
+}

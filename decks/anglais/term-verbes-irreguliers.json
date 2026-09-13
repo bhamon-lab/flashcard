@@ -1,0 +1,73 @@
+{
+  "id": "anglais-term-verbes-irreguliers",
+  "subject": "Anglais",
+  "title": "Anglais · Terminale · Verbes irréguliers",
+  "description": "Infinitif, prétérit, participe passé et sens français.",
+  "format": "people",
+  "color": "#E7D7E9",
+  "daily_new_limit": 5,
+  "grade": "Terminale",
+  "category": "irregular-verbs",
+  "cards": [
+    {
+      "id": "broadcast",
+      "kind": "verbe-irregulier",
+      "front": "broadcast — diffuser",
+      "back": "broadcast · broadcast · broadcast"
+    },
+    {
+      "id": "forbid",
+      "kind": "verbe-irregulier",
+      "front": "forbid — interdire",
+      "back": "forbid · forbade · forbidden"
+    },
+    {
+      "id": "foresee",
+      "kind": "verbe-irregulier",
+      "front": "foresee — prévoir",
+      "back": "foresee · foresaw · foreseen"
+    },
+    {
+      "id": "overcome",
+      "kind": "verbe-irregulier",
+      "front": "overcome — surmonter",
+      "back": "overcome · overcame · overcome"
+    },
+    {
+      "id": "prove",
+      "kind": "verbe-irregulier",
+      "front": "prove — prouver",
+      "back": "prove · proved · proven/proved"
+    },
+    {
+      "id": "withdraw",
+      "kind": "verbe-irregulier",
+      "front": "withdraw — retirer",
+      "back": "withdraw · withdrew · withdrawn"
+    },
+    {
+      "id": "withstand",
+      "kind": "verbe-irregulier",
+      "front": "withstand — résister à",
+      "back": "withstand · withstood · withstood"
+    },
+    {
+      "id": "undertake",
+      "kind": "verbe-irregulier",
+      "front": "undertake — entreprendre",
+      "back": "undertake · undertook · undertaken"
+    },
+    {
+      "id": "mislead",
+      "kind": "verbe-irregulier",
+      "front": "mislead — induire en erreur",
+      "back": "mislead · misled · misled"
+    },
+    {
+      "id": "uphold",
+      "kind": "verbe-irregulier",
+      "front": "uphold — maintenir",
+      "back": "uphold · upheld · upheld"
+    }
+  ]
+}

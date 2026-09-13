@@ -1,0 +1,73 @@
+{
+  "id": "anglais-2de-vocab-identite",
+  "subject": "Anglais",
+  "title": "Anglais · 2de · Vocabulaire · Identité et relations",
+  "description": "Liste de vocabulaire — identité et relations.",
+  "format": "people",
+  "color": "#E5DDF5",
+  "daily_new_limit": 5,
+  "grade": "2de",
+  "category": "vocabulary",
+  "cards": [
+    {
+      "id": "belonging",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « l’appartenance ».",
+      "back": "belonging"
+    },
+    {
+      "id": "background",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les origines ».",
+      "back": "background"
+    },
+    {
+      "id": "a-role-model",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un modèle ».",
+      "back": "a role model"
+    },
+    {
+      "id": "peers",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « les pairs ».",
+      "back": "peers"
+    },
+    {
+      "id": "self-confidence",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « la confiance en soi ».",
+      "back": "self-confidence"
+    },
+    {
+      "id": "a-value",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « une valeur ».",
+      "back": "a value"
+    },
+    {
+      "id": "a-prejudice",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « un préjugé ».",
+      "back": "a prejudice"
+    },
+    {
+      "id": "to-fit-in",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « s’intégrer ».",
+      "back": "to fit in"
+    },
+    {
+      "id": "to-stand-out",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « se démarquer ».",
+      "back": "to stand out"
+    },
+    {
+      "id": "to-embrace-one-s-identity",
+      "kind": "vocabulaire",
+      "front": "Traduis en anglais : « assumer son identité ».",
+      "back": "to embrace one's identity"
+    }
+  ]
+}
