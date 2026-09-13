@@ -1,0 +1,98 @@
+{
+  "id": "math-1re-spe-trigonometrie",
+  "subject": "Maths",
+  "title": "Maths · 1re spé · Cercle trigonométrique",
+  "description": "1re spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 3,
+  "grade": "1re-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "premiere-spe-2026",
+  "cards": [
+    {
+      "id": "radian",
+      "kind": "formule",
+      "front": "Quelle conversion relie degrés et radians ?",
+      "back": "$180^\\circ=\\pi$ radians."
+    },
+    {
+      "id": "arc",
+      "kind": "formule",
+      "front": "Quelle est la longueur d’un arc de rayon $R$ et d’angle $\\theta\\ge0$ en radians ?",
+      "back": "$L=R\\theta$."
+    },
+    {
+      "id": "coordonnees",
+      "kind": "formule",
+      "front": "Quelles sont les coordonnées du point d’angle $x$ sur le cercle trigonométrique ?",
+      "back": "$(\\cos x;\\sin x)$."
+    },
+    {
+      "id": "identite",
+      "kind": "formule",
+      "front": "Quelle identité relie le carré du cosinus et celui du sinus ?",
+      "back": "$\\cos^2x+\\sin^2x=1$."
+    },
+    {
+      "id": "bornes",
+      "kind": "propriete",
+      "front": "Entre quelles valeurs sont compris le sinus et le cosinus ?",
+      "back": "Entre $-1$ et $1$, bornes incluses."
+    },
+    {
+      "id": "periodicite",
+      "kind": "propriete",
+      "front": "Que changent $2\\pi$ radians ajoutés à un angle ?",
+      "back": "$\\cos(x+2\\pi)=\\cos x$ et $\\sin(x+2\\pi)=\\sin x$."
+    },
+    {
+      "id": "oppose-cos",
+      "kind": "formule",
+      "front": "Que vaut $\\cos(-x)$ ?",
+      "back": "$\\cos(-x)=\\cos x$."
+    },
+    {
+      "id": "oppose-sin",
+      "kind": "formule",
+      "front": "Que vaut $\\sin(-x)$ ?",
+      "back": "$\\sin(-x)=-\\sin x$."
+    },
+    {
+      "id": "supplementaire",
+      "kind": "formule",
+      "front": "Quels sont le cosinus et le sinus de $\\pi-x$ ?",
+      "back": "$\\cos(\\pi-x)=-\\cos x$ et $\\sin(\\pi-x)=\\sin x$."
+    },
+    {
+      "id": "valeur-zero",
+      "kind": "formule",
+      "front": "Quels sont $\\cos0$ et $\\sin0$ ?",
+      "back": "$\\cos0=1$ et $\\sin0=0$."
+    },
+    {
+      "id": "valeur-six",
+      "kind": "formule",
+      "front": "Quels sont le cosinus et le sinus de $\\frac\\pi6$ ?",
+      "back": "$\\cos\\frac\\pi6=\\frac{\\sqrt3}{2}$ et $\\sin\\frac\\pi6=\\frac12$."
+    },
+    {
+      "id": "valeur-quatre",
+      "kind": "formule",
+      "front": "Quels sont le cosinus et le sinus de $\\frac\\pi4$ ?",
+      "back": "$\\cos\\frac\\pi4=\\sin\\frac\\pi4=\\frac{\\sqrt2}{2}$."
+    },
+    {
+      "id": "valeur-trois",
+      "kind": "formule",
+      "front": "Quels sont le cosinus et le sinus de $\\frac\\pi3$ ?",
+      "back": "$\\cos\\frac\\pi3=\\frac12$ et $\\sin\\frac\\pi3=\\frac{\\sqrt3}{2}$."
+    },
+    {
+      "id": "valeur-demi",
+      "kind": "formule",
+      "front": "Quels sont le cosinus et le sinus de $\\frac\\pi2$ ?",
+      "back": "$\\cos\\frac\\pi2=0$ et $\\sin\\frac\\pi2=1$."
+    }
+  ]
+}

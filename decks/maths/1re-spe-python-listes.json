@@ -1,0 +1,62 @@
+{
+  "id": "math-1re-spe-python-listes",
+  "subject": "Maths",
+  "title": "Maths · 1re spé · Python : listes et suites",
+  "description": "1re spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 3,
+  "grade": "1re-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "premiere-spe-2026",
+  "cards": [
+    {
+      "id": "liste",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’une liste Python ?",
+      "back": "Une collection ordonnée d’éléments, modifiable."
+    },
+    {
+      "id": "indice",
+      "kind": "propriete",
+      "front": "Quel est l’indice du premier élément d’une liste Python ?",
+      "back": "$0$."
+    },
+    {
+      "id": "longueur",
+      "kind": "definition",
+      "front": "Que renvoie « len(L) » pour une liste L ?",
+      "back": "Le nombre d’éléments de L."
+    },
+    {
+      "id": "ajout",
+      "kind": "definition",
+      "front": "Que fait « L.append(x) » ?",
+      "back": "Ajoute x à la fin de la liste L."
+    },
+    {
+      "id": "range",
+      "kind": "propriete",
+      "front": "Quelles valeurs parcourt « range(n) », pour un entier $n\\ge0$ ?",
+      "back": "Les entiers de $0$ à $n-1$ ; aucune valeur si $n=0$."
+    },
+    {
+      "id": "comprehension",
+      "kind": "definition",
+      "front": "Que construit « [f(k) for k in range(n)] » ?",
+      "back": "La liste des valeurs de f(k) pour les entiers k de $0$ à $n-1$."
+    },
+    {
+      "id": "suite-boucle",
+      "kind": "methode",
+      "front": "Comment calculer le terme $u_n$ d’une suite définie par $u_{k+1}=f(u_k)$ ?",
+      "back": "Initialiser u à $u_0$, puis appliquer n fois l’affectation « u = f(u) »."
+    },
+    {
+      "id": "accumulation",
+      "kind": "methode",
+      "front": "Comment calculer une somme dans une boucle ?",
+      "back": "Initialiser un accumulateur à zéro, puis lui ajouter chaque terme."
+    }
+  ]
+}

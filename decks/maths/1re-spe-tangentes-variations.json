@@ -1,0 +1,86 @@
+{
+  "id": "math-1re-spe-tangentes-variations",
+  "subject": "Maths",
+  "title": "Maths · 1re spé · Tangentes, variations et symétries",
+  "description": "1re spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 3,
+  "grade": "1re-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "premiere-spe-2026",
+  "cards": [
+    {
+      "id": "taux-variation",
+      "kind": "formule",
+      "front": "Quel est le taux de variation de $f$ entre $a$ et $a+h$, pour $h\\ne0$ ?",
+      "back": "$\\frac{f(a+h)-f(a)}{h}$."
+    },
+    {
+      "id": "nombre-derive",
+      "kind": "definition",
+      "front": "Quelle limite définit le nombre dérivé $f'(a)$ ?",
+      "back": "$f'(a)=\\lim_{h\\to0}\\frac{f(a+h)-f(a)}h$, si cette limite existe et est finie."
+    },
+    {
+      "id": "pente-tangente",
+      "kind": "propriete",
+      "front": "Que représente graphiquement $f'(a)$ ?",
+      "back": "Le coefficient directeur de la tangente à la courbe en abscisse $a$."
+    },
+    {
+      "id": "tangente",
+      "kind": "formule",
+      "front": "Quelle est l’équation de la tangente à la courbe de $f$ en $a$ ?",
+      "back": "$y=f'(a)(x-a)+f(a)$, si $f$ est dérivable en $a$."
+    },
+    {
+      "id": "approximation",
+      "kind": "formule",
+      "front": "Quelle approximation affine utilise-t-on près de $a$ ?",
+      "back": "$f(a+h)\\approx f(a)+hf'(a)$, pour $h$ petit et $f$ dérivable en $a$."
+    },
+    {
+      "id": "derivee-positive",
+      "kind": "propriete",
+      "front": "Si $f'\\ge0$ sur un intervalle, que dire de $f$ ?",
+      "back": "$f$ est croissante sur cet intervalle."
+    },
+    {
+      "id": "derivee-negative",
+      "kind": "propriete",
+      "front": "Si $f'\\le0$ sur un intervalle, que dire de $f$ ?",
+      "back": "$f$ est décroissante sur cet intervalle."
+    },
+    {
+      "id": "derivee-nulle",
+      "kind": "propriete",
+      "front": "Si $f'=0$ sur tout un intervalle, que dire de $f$ ?",
+      "back": "$f$ est constante sur cet intervalle."
+    },
+    {
+      "id": "minimum",
+      "kind": "propriete",
+      "front": "Si $f'$ passe de négative à positive en $a$, que présente $f$ ?",
+      "back": "Un minimum local en $a$, si $f$ est dérivable autour de $a$."
+    },
+    {
+      "id": "maximum",
+      "kind": "propriete",
+      "front": "Si $f'$ passe de positive à négative en $a$, que présente $f$ ?",
+      "back": "Un maximum local en $a$, si $f$ est dérivable autour de $a$."
+    },
+    {
+      "id": "paire",
+      "kind": "definition",
+      "front": "Quelle relation caractérise une fonction paire sur un domaine symétrique par rapport à $0$ ?",
+      "back": "$f(-x)=f(x)$ ; sa courbe est symétrique par rapport à l’axe des ordonnées."
+    },
+    {
+      "id": "impaire",
+      "kind": "definition",
+      "front": "Quelle relation caractérise une fonction impaire sur un domaine symétrique par rapport à $0$ ?",
+      "back": "$f(-x)=-f(x)$ ; sa courbe est symétrique par rapport à l’origine."
+    }
+  ]
+}

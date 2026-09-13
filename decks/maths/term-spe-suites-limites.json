@@ -1,0 +1,98 @@
+{
+  "id": "math-term-spe-suites-limites",
+  "subject": "Maths",
+  "title": "Maths · Terminale spé · Limites de suites et récurrence",
+  "description": "Terminale spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#DDD3F2",
+  "daily_new_limit": 3,
+  "grade": "term-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-spe-2019",
+  "cards": [
+    {
+      "id": "recurrence",
+      "kind": "methode",
+      "front": "Quelles sont les étapes d’une démonstration par récurrence ?",
+      "back": "Initialiser au premier rang ; prouver l’hérédité ; conclure pour tous les rangs concernés."
+    },
+    {
+      "id": "heredite",
+      "kind": "definition",
+      "front": "Que prouve l’hérédité d’une propriété $P(n)$ ?",
+      "back": "Pour un entier $n$ quelconque à partir du rang initial, $P(n)$ implique $P(n+1)$."
+    },
+    {
+      "id": "majoree",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’une suite majorée ?",
+      "back": "Une suite pour laquelle il existe un réel $M$ tel que $u_n\\le M$ pour tout $n$."
+    },
+    {
+      "id": "minoree",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’une suite minorée ?",
+      "back": "Une suite pour laquelle il existe un réel $m$ tel que $u_n\\ge m$ pour tout $n$."
+    },
+    {
+      "id": "convergence",
+      "kind": "definition",
+      "front": "Que signifie $u_n\\to\\ell$ avec $\\ell$ réel ?",
+      "back": "Tout intervalle ouvert contenant $\\ell$ contient tous les $u_n$ à partir d’un certain rang."
+    },
+    {
+      "id": "infini",
+      "kind": "definition",
+      "front": "Que signifie $u_n\\to+\\infty$ ?",
+      "back": "Pour tout réel $A$, on a $u_n\\ge A$ à partir d’un certain rang."
+    },
+    {
+      "id": "monotone",
+      "kind": "propriete",
+      "front": "Que garantit une suite croissante et majorée ?",
+      "back": "Elle converge vers une limite finie."
+    },
+    {
+      "id": "decroissante-minoree",
+      "kind": "propriete",
+      "front": "Que garantit une suite décroissante et minorée ?",
+      "back": "Elle converge vers une limite finie."
+    },
+    {
+      "id": "non-majoree",
+      "kind": "propriete",
+      "front": "Quelle est la limite d’une suite croissante non majorée ?",
+      "back": "$+\\infty$."
+    },
+    {
+      "id": "geometrique-zero",
+      "kind": "propriete",
+      "front": "Quelle est la limite de $q^n$ si $-1<q<1$ ?",
+      "back": "$0$."
+    },
+    {
+      "id": "geometrique-infini",
+      "kind": "propriete",
+      "front": "Quelle est la limite de $q^n$ si $q>1$ ?",
+      "back": "$+\\infty$."
+    },
+    {
+      "id": "geometrique-negative",
+      "kind": "propriete",
+      "front": "La suite $q^n$ a-t-elle une limite si $q\\le-1$ ?",
+      "back": "Non : ses termes alternent de signe sans se rapprocher d’une même limite."
+    },
+    {
+      "id": "gendarmes",
+      "kind": "propriete",
+      "front": "Que donne le théorème des gendarmes pour des suites ?",
+      "back": "Si $a_n\\le u_n\\le b_n$ à partir d’un rang et $a_n,b_n\\to\\ell$, alors $u_n\\to\\ell$."
+    },
+    {
+      "id": "point-fixe",
+      "kind": "propriete",
+      "front": "Si $u_{n+1}=f(u_n)$ et $u_n\\to\\ell$, que vérifie $\\ell$ lorsque $f$ est continue en $\\ell$ ?",
+      "back": "$\\ell=f(\\ell)$. Cette équation seule ne prouve pas la convergence."
+    }
+  ]
+}

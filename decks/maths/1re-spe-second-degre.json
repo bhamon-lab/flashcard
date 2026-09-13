@@ -1,0 +1,92 @@
+{
+  "id": "math-1re-spe-second-degre",
+  "subject": "Maths",
+  "title": "Maths · 1re spé · Second degré",
+  "description": "1re spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 3,
+  "grade": "1re-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "premiere-spe-2026",
+  "cards": [
+    {
+      "id": "trinome",
+      "kind": "definition",
+      "front": "Quelle est la forme développée d’un trinôme du second degré ?",
+      "back": "$f(x)=ax^2+bx+c$, avec $a\\ne0$."
+    },
+    {
+      "id": "discriminant",
+      "kind": "formule",
+      "front": "Quel est le discriminant de $ax^2+bx+c$ ?",
+      "back": "$\\Delta=b^2-4ac$."
+    },
+    {
+      "id": "deux-racines",
+      "kind": "formule",
+      "front": "Quelles sont les racines d’un trinôme si $\\Delta>0$ ?",
+      "back": "$x_1=\\frac{-b-\\sqrt\\Delta}{2a}$ et $x_2=\\frac{-b+\\sqrt\\Delta}{2a}$."
+    },
+    {
+      "id": "racine-double",
+      "kind": "formule",
+      "front": "Quelle est la racine d’un trinôme si $\\Delta=0$ ?",
+      "back": "$x_0=-\\frac{b}{2a}$."
+    },
+    {
+      "id": "sans-racine",
+      "kind": "propriete",
+      "front": "Combien un trinôme a-t-il de racines réelles si $\\Delta<0$ ?",
+      "back": "Aucune."
+    },
+    {
+      "id": "factorisation",
+      "kind": "formule",
+      "front": "Comment factoriser un trinôme de coefficient dominant $a$ et de racines $x_1,x_2$ ?",
+      "back": "$f(x)=a(x-x_1)(x-x_2)$, y compris si les deux racines sont égales."
+    },
+    {
+      "id": "somme-racines",
+      "kind": "formule",
+      "front": "Quelle est la somme des racines réelles de $ax^2+bx+c$ ?",
+      "back": "$x_1+x_2=-\\frac ba$ ; une racine double est comptée deux fois."
+    },
+    {
+      "id": "produit-racines",
+      "kind": "formule",
+      "front": "Quel est le produit des racines réelles de $ax^2+bx+c$ ?",
+      "back": "$x_1x_2=\\frac ca$ ; une racine double est comptée deux fois."
+    },
+    {
+      "id": "canonique",
+      "kind": "definition",
+      "front": "Quelle est la forme canonique d’un trinôme ?",
+      "back": "$f(x)=a(x-\\alpha)^2+\\beta$, avec $a\\ne0$ ; le sommet est $(\\alpha;\\beta)$."
+    },
+    {
+      "id": "completion",
+      "kind": "formule",
+      "front": "Quelle identité utilise-t-on pour compléter un carré ?",
+      "back": "$x^2+2ux=(x+u)^2-u^2$."
+    },
+    {
+      "id": "signe-deux-racines",
+      "kind": "propriete",
+      "front": "Quel est le signe d’un trinôme de coefficient dominant $a$ entre deux racines distinctes ?",
+      "back": "Le signe opposé à celui de $a$ ; à l’extérieur, le signe de $a$ ; aux racines, zéro."
+    },
+    {
+      "id": "signe-sans-racine",
+      "kind": "propriete",
+      "front": "Quel est le signe d’un trinôme si $\\Delta<0$ ?",
+      "back": "Toujours le signe de son coefficient dominant $a$."
+    },
+    {
+      "id": "sommet",
+      "kind": "propriete",
+      "front": "Pour $a(x-\\alpha)^2+\\beta$, quel est l’extrémum ?",
+      "back": "$\\beta$, atteint en $\\alpha$ : minimum si $a>0$, maximum si $a<0$."
+    }
+  ]
+}

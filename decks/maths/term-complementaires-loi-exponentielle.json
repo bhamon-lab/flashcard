@@ -1,0 +1,62 @@
+{
+  "id": "math-term-complementaires-loi-exponentielle",
+  "subject": "Maths",
+  "title": "Maths · Terminale complémentaires · Loi exponentielle",
+  "description": "Terminale complémentaires · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#F5DDC8",
+  "daily_new_limit": 3,
+  "grade": "term-complementaires",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-complementaires-2019",
+  "cards": [
+    {
+      "id": "parametre",
+      "kind": "definition",
+      "front": "Quel paramètre définit une loi exponentielle ?",
+      "back": "Un réel $\\lambda>0$ ; la variable prend ses valeurs dans $[0;+\\infty[$."
+    },
+    {
+      "id": "densite",
+      "kind": "formule",
+      "front": "Quelle est la densité de la loi exponentielle de paramètre $\\lambda>0$ ?",
+      "back": "$f(x)=\\lambda e^{-\\lambda x}$ si $x\\ge0$, et $0$ sinon."
+    },
+    {
+      "id": "repartition",
+      "kind": "formule",
+      "front": "Pour $X$ de loi exponentielle de paramètre $\\lambda$, que vaut $P(X\\le t)$ si $t\\ge0$ ?",
+      "back": "$1-e^{-\\lambda t}$."
+    },
+    {
+      "id": "survie",
+      "kind": "formule",
+      "front": "Pour $X$ de loi exponentielle de paramètre $\\lambda$, que vaut $P(X>t)$ si $t\\ge0$ ?",
+      "back": "$e^{-\\lambda t}$."
+    },
+    {
+      "id": "intervalle",
+      "kind": "formule",
+      "front": "Pour $X$ de loi exponentielle de paramètre $\\lambda$, que vaut $P(a\\le X\\le b)$ pour $0\\le a\\le b$ ?",
+      "back": "$e^{-\\lambda a}-e^{-\\lambda b}$."
+    },
+    {
+      "id": "esperance",
+      "kind": "formule",
+      "front": "Quelle est l’espérance de la loi exponentielle de paramètre $\\lambda>0$ ?",
+      "back": "$E(X)=\\frac1\\lambda$."
+    },
+    {
+      "id": "memoire",
+      "kind": "propriete",
+      "front": "Quelle égalité exprime l’absence de mémoire de la loi exponentielle ?",
+      "back": "$P_{X>s}(X>s+t)=P(X>t)$ pour $s,t\\ge0$."
+    },
+    {
+      "id": "mediane",
+      "kind": "formule",
+      "front": "Quelle est la médiane de la loi exponentielle de paramètre $\\lambda>0$ ?",
+      "back": "$m=\\frac{\\ln2}{\\lambda}$."
+    }
+  ]
+}

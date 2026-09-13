@@ -1,0 +1,80 @@
+{
+  "id": "math-term-spe-concentration",
+  "subject": "Maths",
+  "title": "Maths · Terminale spé · Sommes, concentration et grands nombres",
+  "description": "Terminale spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#DDD3F2",
+  "daily_new_limit": 3,
+  "grade": "term-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-spe-2019",
+  "cards": [
+    {
+      "id": "esperance-somme",
+      "kind": "formule",
+      "front": "Quelle est l’espérance de $X+Y$ pour deux variables aléatoires finies ?",
+      "back": "$E(X+Y)=E(X)+E(Y)$, même sans indépendance."
+    },
+    {
+      "id": "esperance-affine",
+      "kind": "formule",
+      "front": "Quelle est l’espérance de $aX+b$ ?",
+      "back": "$E(aX+b)=aE(X)+b$."
+    },
+    {
+      "id": "variance-affine",
+      "kind": "formule",
+      "front": "Quelle est la variance de $aX+b$ ?",
+      "back": "$V(aX+b)=a^2V(X)$."
+    },
+    {
+      "id": "variance-somme",
+      "kind": "formule",
+      "front": "Quelle est la variance de $X+Y$ si $X$ et $Y$ sont indépendantes ?",
+      "back": "$V(X+Y)=V(X)+V(Y)$."
+    },
+    {
+      "id": "echantillon",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’un échantillon aléatoire de taille $n$ d’une loi ?",
+      "back": "$n$ variables aléatoires indépendantes suivant toutes cette loi."
+    },
+    {
+      "id": "moyenne-esperance",
+      "kind": "formule",
+      "front": "Quelle est l’espérance de la moyenne $M_n$ d’un échantillon de taille $n$ d’espérance $\\mu$ ?",
+      "back": "$E(M_n)=\\mu$."
+    },
+    {
+      "id": "moyenne-variance",
+      "kind": "formule",
+      "front": "Quelle est la variance de la moyenne $M_n$ d’un échantillon de taille $n$ de variance $V$ ?",
+      "back": "$V(M_n)=\\frac Vn$."
+    },
+    {
+      "id": "moyenne-ecart-type",
+      "kind": "formule",
+      "front": "Quel est l’écart type de la moyenne d’un échantillon de taille $n$ d’écart type $\\sigma$ ?",
+      "back": "$\\frac{\\sigma}{\\sqrt n}$."
+    },
+    {
+      "id": "tchebychev",
+      "kind": "formule",
+      "front": "Quelle est l’inégalité de Bienaymé-Tchebychev pour $X$ d’espérance $\\mu$ et de variance finie $V$ ?",
+      "back": "Pour $\\delta>0$, $P(\\lvert X-\\mu\\rvert\\ge\\delta)\\le\\frac{V}{\\delta^2}$."
+    },
+    {
+      "id": "concentration",
+      "kind": "formule",
+      "front": "Quelle borne donne la concentration de la moyenne d’un échantillon de taille $n$, d’espérance $\\mu$ et de variance $V$ ?",
+      "back": "Pour $\\delta>0$, $P(\\lvert M_n-\\mu\\rvert\\ge\\delta)\\le\\frac{V}{n\\delta^2}$."
+    },
+    {
+      "id": "grands-nombres",
+      "kind": "propriete",
+      "front": "Que dit la loi des grands nombres pour une moyenne d’échantillon d’espérance $\\mu$ et de variance finie ?",
+      "back": "Pour tout $\\delta>0$, $P(\\lvert M_n-\\mu\\rvert\\ge\\delta)\\to0$ quand $n\\to+\\infty$."
+    }
+  ]
+}

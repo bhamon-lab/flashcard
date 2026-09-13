@@ -1,0 +1,62 @@
+{
+  "id": "math-term-complementaires-conditionnement",
+  "subject": "Maths",
+  "title": "Maths · Terminale complémentaires · Conditionnement et probabilités inverses",
+  "description": "Terminale complémentaires · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#F5DDC8",
+  "daily_new_limit": 3,
+  "grade": "term-complementaires",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-complementaires-2019",
+  "cards": [
+    {
+      "id": "conditionnelle",
+      "kind": "formule",
+      "front": "Quelle est la probabilité de $B$ sachant $A$, pour $P(A)>0$ ?",
+      "back": "$P_A(B)=\\frac{P(A\\cap B)}{P(A)}$."
+    },
+    {
+      "id": "intersection",
+      "kind": "formule",
+      "front": "Comment calculer la probabilité de $A\\cap B$ par conditionnement ?",
+      "back": "$P(A\\cap B)=P(A)P_A(B)$, si $P(A)>0$."
+    },
+    {
+      "id": "independance",
+      "kind": "propriete",
+      "front": "Quelle égalité caractérise deux événements indépendants ?",
+      "back": "$P(A\\cap B)=P(A)P(B)$."
+    },
+    {
+      "id": "totales",
+      "kind": "formule",
+      "front": "Quelle est la formule des probabilités totales avec $A$ et $\\overline A$ ?",
+      "back": "$P(B)=P(A)P_A(B)+P(\\overline A)P_{\\overline A}(B)$, si $0<P(A)<1$."
+    },
+    {
+      "id": "bayes",
+      "kind": "formule",
+      "front": "Comment inverser un conditionnement lorsque $P(A)>0$ et $P(B)>0$ ?",
+      "back": "$P_B(A)=\\frac{P(A)P_A(B)}{P(B)}$."
+    },
+    {
+      "id": "priori",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’une probabilité a priori dans une actualisation bayésienne ?",
+      "back": "La probabilité attribuée à une hypothèse avant la nouvelle information."
+    },
+    {
+      "id": "posteriori",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’une probabilité a posteriori ?",
+      "back": "La probabilité de l’hypothèse après conditionnement par la nouvelle information."
+    },
+    {
+      "id": "contraire-conditionnel",
+      "kind": "formule",
+      "front": "Que vaut $P_A(\\overline B)$ si $P(A)>0$ ?",
+      "back": "$1-P_A(B)$."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "math-term-spe-equations-differentielles",
+  "subject": "Maths",
+  "title": "Maths · Terminale spé · Équations différentielles",
+  "description": "Terminale spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#DDD3F2",
+  "daily_new_limit": 3,
+  "grade": "term-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-spe-2019",
+  "cards": [
+    {
+      "id": "inconnue",
+      "kind": "definition",
+      "front": "Quelle est l’inconnue d’une équation différentielle ?",
+      "back": "Une fonction ; l’équation relie cette fonction et ses dérivées."
+    },
+    {
+      "id": "verification",
+      "kind": "methode",
+      "front": "Comment vérifier qu’une fonction est solution d’une équation différentielle ?",
+      "back": "Calculer sa dérivée puis remplacer la fonction et sa dérivée dans l’équation."
+    },
+    {
+      "id": "homogene",
+      "kind": "formule",
+      "front": "Quelles sont les solutions de $y'=ay$, avec $a$ constant ?",
+      "back": "$y(x)=Ce^{ax}$, avec $C\\in\\mathbb{R}$."
+    },
+    {
+      "id": "initiale",
+      "kind": "formule",
+      "front": "Quelle solution de $y'=ay$ vérifie $y(0)=y_0$ ?",
+      "back": "$y(x)=y_0e^{ax}$."
+    },
+    {
+      "id": "equilibre",
+      "kind": "formule",
+      "front": "Quelle solution constante vérifie $y'=ay+b$ si $a\\ne0$ ?",
+      "back": "$y=-\\frac ba$."
+    },
+    {
+      "id": "generale",
+      "kind": "formule",
+      "front": "Quelles sont les solutions de $y'=ay+b$ si $a\\ne0$ ?",
+      "back": "$y(x)=Ce^{ax}-\\frac ba$, avec $C\\in\\mathbb{R}$."
+    },
+    {
+      "id": "a-nul",
+      "kind": "formule",
+      "front": "Quelles sont les solutions de $y'=b$, avec $b$ constant ?",
+      "back": "$y(x)=bx+C$, avec $C\\in\\mathbb{R}$."
+    },
+    {
+      "id": "particuliere",
+      "kind": "propriete",
+      "front": "Si $g$ est une solution particulière de $y'=ay+f(x)$, quelles sont toutes les solutions ?",
+      "back": "$y(x)=g(x)+Ce^{ax}$, avec $C\\in\\mathbb{R}$, sur le même intervalle."
+    }
+  ]
+}

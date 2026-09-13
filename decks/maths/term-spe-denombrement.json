@@ -1,0 +1,74 @@
+{
+  "id": "math-term-spe-denombrement",
+  "subject": "Maths",
+  "title": "Maths · Terminale spé · Dénombrement",
+  "description": "Terminale spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#DDD3F2",
+  "daily_new_limit": 3,
+  "grade": "term-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-spe-2019",
+  "cards": [
+    {
+      "id": "addition",
+      "kind": "propriete",
+      "front": "Comment compter les éléments d’une réunion d’ensembles finis disjoints ?",
+      "back": "Additionner leurs nombres d’éléments."
+    },
+    {
+      "id": "produit",
+      "kind": "formule",
+      "front": "Combien de couples contient $A\\times B$ si $A$ a $n$ éléments et $B$ en a $m$ ?",
+      "back": "$nm$."
+    },
+    {
+      "id": "listes",
+      "kind": "formule",
+      "front": "Combien de listes de longueur $k$ peut-on former avec $n$ éléments, avec répétition autorisée ?",
+      "back": "$n^k$, pour $n\\ge1$."
+    },
+    {
+      "id": "factorielle",
+      "kind": "definition",
+      "front": "Que signifie $n!$ pour un entier $n\\ge1$ ?",
+      "back": "$n!=1\\times2\\times\\cdots\\times n$ ; par convention, $0!=1$."
+    },
+    {
+      "id": "permutations",
+      "kind": "formule",
+      "front": "Combien de permutations possède un ensemble à $n$ éléments ?",
+      "back": "$n!$."
+    },
+    {
+      "id": "listes-distinctes",
+      "kind": "formule",
+      "front": "Combien de listes ordonnées de $k$ éléments distincts peut-on extraire de $n$ éléments ?",
+      "back": "$\\frac{n!}{(n-k)!}$, pour $0\\le k\\le n$."
+    },
+    {
+      "id": "combinaisons",
+      "kind": "formule",
+      "front": "Combien de sous-ensembles de $k$ éléments possède un ensemble à $n$ éléments ?",
+      "back": "$\\binom nk=\\frac{n!}{k!(n-k)!}$, pour $0\\le k\\le n$."
+    },
+    {
+      "id": "symetrie",
+      "kind": "formule",
+      "front": "Quelle est la symétrie des coefficients binomiaux ?",
+      "back": "$\\binom nk=\\binom n{n-k}$."
+    },
+    {
+      "id": "pascal",
+      "kind": "formule",
+      "front": "Quelle est la relation de Pascal ?",
+      "back": "$\\binom{n+1}k=\\binom n{k-1}+\\binom nk$, pour $1\\le k\\le n$."
+    },
+    {
+      "id": "parties",
+      "kind": "formule",
+      "front": "Combien de sous-ensembles possède un ensemble à $n$ éléments ?",
+      "back": "$2^n$."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "math-term-complementaires-integrales",
+  "subject": "Maths",
+  "title": "Maths · Terminale complémentaires · Intégrales et valeur moyenne",
+  "description": "Terminale complémentaires · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#F5DDC8",
+  "daily_new_limit": 3,
+  "grade": "term-complementaires",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-complementaires-2019",
+  "cards": [
+    {
+      "id": "aire",
+      "kind": "definition",
+      "front": "Que représente $\\int_a^b f(x)\\,dx$ si $a<b$ et $f$ est continue et positive ou nulle ?",
+      "back": "L’aire entre la courbe, l’axe des abscisses et les droites $x=a$, $x=b$, en unités d’aire."
+    },
+    {
+      "id": "primitive",
+      "kind": "formule",
+      "front": "Comment calculer $\\int_a^b f(x)\\,dx$ à l’aide d’une primitive $F$ de la fonction continue $f$ ?",
+      "back": "$F(b)-F(a)$."
+    },
+    {
+      "id": "bornes-inversees",
+      "kind": "formule",
+      "front": "Que devient une intégrale si on échange ses bornes ?",
+      "back": "$\\int_b^a f(x)\\,dx=-\\int_a^b f(x)\\,dx$."
+    },
+    {
+      "id": "chasles",
+      "kind": "formule",
+      "front": "Quelle est la relation de Chasles pour des intégrales d’une fonction continue ?",
+      "back": "$\\int_a^c f=\\int_a^b f+\\int_b^c f$."
+    },
+    {
+      "id": "linearite",
+      "kind": "formule",
+      "front": "Quelle est la linéarité de l’intégrale pour des fonctions continues $f,g$ ?",
+      "back": "$\\int_a^b(\\alpha f+\\beta g)=\\alpha\\int_a^b f+\\beta\\int_a^b g$."
+    },
+    {
+      "id": "comparaison",
+      "kind": "propriete",
+      "front": "Si $f\\le g$ sur $[a;b]$ avec $a<b$ et $f,g$ continues, comment comparer leurs intégrales ?",
+      "back": "$\\int_a^b f\\le\\int_a^b g$."
+    },
+    {
+      "id": "moyenne",
+      "kind": "formule",
+      "front": "Quelle est la valeur moyenne d’une fonction continue sur $[a;b]$, avec $a<b$ ?",
+      "back": "$\\frac1{b-a}\\int_a^b f(x)\\,dx$."
+    },
+    {
+      "id": "entre-courbes",
+      "kind": "formule",
+      "front": "Quelle est l’aire entre les courbes de $f$ et $g$ continues, avec $f\\ge g$ sur $[a;b]$, $a<b$ ?",
+      "back": "$\\int_a^b(f(x)-g(x))\\,dx$."
+    },
+    {
+      "id": "derivee-integrale",
+      "kind": "propriete",
+      "front": "Si $f$ est continue, quelle est la dérivée de $F(x)=\\int_a^x f(t)\\,dt$ ?",
+      "back": "$F'(x)=f(x)$."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "math-term-spe-trigonometrie",
+  "subject": "Maths",
+  "title": "Maths · Terminale spé · Fonctions sinus et cosinus",
+  "description": "Terminale spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#DDD3F2",
+  "daily_new_limit": 3,
+  "grade": "term-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-spe-2019",
+  "cards": [
+    {
+      "id": "derivee-sin",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $\\sin x$ ?",
+      "back": "$\\cos x$."
+    },
+    {
+      "id": "derivee-cos",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $\\cos x$ ?",
+      "back": "$-\\sin x$."
+    },
+    {
+      "id": "derivee-sin-compose",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $\\sin u$ pour $u$ dérivable ?",
+      "back": "$u'\\cos u$."
+    },
+    {
+      "id": "derivee-cos-compose",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $\\cos u$ pour $u$ dérivable ?",
+      "back": "$-u'\\sin u$."
+    },
+    {
+      "id": "variation-sin",
+      "kind": "propriete",
+      "front": "Sur quel intervalle central le sinus est-il croissant ?",
+      "back": "Sur $[-\\frac\\pi2;\\frac\\pi2]$."
+    },
+    {
+      "id": "variation-cos",
+      "kind": "propriete",
+      "front": "Quelles sont les variations du cosinus sur $[-\\pi;\\pi]$ ?",
+      "back": "Croissant sur $[-\\pi;0]$, décroissant sur $[0;\\pi]$."
+    },
+    {
+      "id": "equation-cos",
+      "kind": "formule",
+      "front": "Quelles sont les solutions réelles de $\\cos x=\\cos a$ ?",
+      "back": "$x=a+2k\\pi$ ou $x=-a+2k\\pi$, avec $k\\in\\mathbb{Z}$."
+    },
+    {
+      "id": "equation-sin",
+      "kind": "formule",
+      "front": "Quelles sont les solutions réelles de $\\sin x=\\sin a$ ?",
+      "back": "$x=a+2k\\pi$ ou $x=\\pi-a+2k\\pi$, avec $k\\in\\mathbb{Z}$."
+    }
+  ]
+}

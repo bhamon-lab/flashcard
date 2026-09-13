@@ -1,0 +1,62 @@
+{
+  "id": "math-2de-droites",
+  "subject": "Maths",
+  "title": "Maths · 2de · Droites du plan",
+  "description": "2de · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CDEAE0",
+  "daily_new_limit": 3,
+  "grade": "2de",
+  "school_year": "2026-2027",
+  "curriculum_reference": "seconde-2026",
+  "cards": [
+    {
+      "id": "cartesienne",
+      "kind": "formule",
+      "front": "Quelle est la forme d’une équation cartésienne de droite ?",
+      "back": "$ax+by+c=0$, avec $(a;b)\\ne(0;0)$."
+    },
+    {
+      "id": "directeur",
+      "kind": "formule",
+      "front": "Quel vecteur dirige la droite $ax+by+c=0$ ?",
+      "back": "$(-b;a)$, avec $(a;b)\\ne(0;0)$."
+    },
+    {
+      "id": "reduite",
+      "kind": "formule",
+      "front": "Quelle est l’équation réduite d’une droite non verticale ?",
+      "back": "$y=mx+p$."
+    },
+    {
+      "id": "pente",
+      "kind": "formule",
+      "front": "Quelle est la pente de $(AB)$ si $x_A\\ne x_B$ ?",
+      "back": "$m=\\frac{y_B-y_A}{x_B-x_A}$."
+    },
+    {
+      "id": "point-pente",
+      "kind": "formule",
+      "front": "Quelle équation décrit la droite de pente $m$ passant par $A(x_A;y_A)$ ?",
+      "back": "$y=m(x-x_A)+y_A$."
+    },
+    {
+      "id": "verticale",
+      "kind": "formule",
+      "front": "Quelle est l’équation d’une droite verticale passant par $A$ ?",
+      "back": "$x=x_A$."
+    },
+    {
+      "id": "paralleles",
+      "kind": "propriete",
+      "front": "Quand deux droites non verticales sont-elles parallèles ?",
+      "back": "Quand elles ont le même coefficient directeur."
+    },
+    {
+      "id": "intersection",
+      "kind": "methode",
+      "front": "Comment trouver l’intersection de deux droites sécantes ?",
+      "back": "Résoudre le système formé par leurs deux équations."
+    }
+  ]
+}

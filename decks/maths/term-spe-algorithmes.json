@@ -1,0 +1,62 @@
+{
+  "id": "math-term-spe-algorithmes",
+  "subject": "Maths",
+  "title": "Maths · Terminale spé · Méthodes algorithmiques",
+  "description": "Terminale spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#DDD3F2",
+  "daily_new_limit": 3,
+  "grade": "term-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-spe-2019",
+  "cards": [
+    {
+      "id": "seuil",
+      "kind": "methode",
+      "front": "Quel type de boucle convient à une recherche de seuil ?",
+      "back": "Une boucle « while » qui avance tant que le seuil n’est pas atteint."
+    },
+    {
+      "id": "terminaison",
+      "kind": "propriete",
+      "front": "Que faut-il vérifier pour garantir l’arrêt d’une boucle « while » ?",
+      "back": "Que sa condition deviendra fausse après un nombre fini d’itérations."
+    },
+    {
+      "id": "dichotomie",
+      "kind": "methode",
+      "front": "Quel test d’arrêt utilise-t-on pour obtenir un encadrement de largeur au plus $\\varepsilon>0$ ?",
+      "back": "Arrêter quand $b-a\\le\\varepsilon$."
+    },
+    {
+      "id": "newton",
+      "kind": "formule",
+      "front": "Quelle est l’itération de Newton pour chercher un zéro de $f$ ?",
+      "back": "$x_{n+1}=x_n-\\frac{f(x_n)}{f'(x_n)}$, si $f'(x_n)\\ne0$ ; la convergence doit être vérifiée."
+    },
+    {
+      "id": "rectangles",
+      "kind": "formule",
+      "front": "Quelle somme de rectangles à gauche approche $\\int_a^b f(x)\\,dx$ pour $f$ continue et $a<b$ ?",
+      "back": "$h\\sum_{k=0}^{n-1}f(a+kh)$, avec $h=\\frac{b-a}{n}$ et $n\\ge1$."
+    },
+    {
+      "id": "euler",
+      "kind": "formule",
+      "front": "Quelle est l’étape d’Euler pour $y'=ay+b$ avec un pas $h$ ?",
+      "back": "$y_{k+1}=y_k+h(ay_k+b)$."
+    },
+    {
+      "id": "simulation",
+      "kind": "methode",
+      "front": "Comment simuler une épreuve de Bernoulli de paramètre $p$ à partir d’un tirage uniforme $U$ sur $[0;1]$ ?",
+      "back": "Compter un succès si $U<p$, un échec sinon."
+    },
+    {
+      "id": "frequence",
+      "kind": "formule",
+      "front": "Quelle fréquence calcule-t-on après $N>0$ simulations donnant $S$ succès ?",
+      "back": "$f=\\frac SN$ ; elle sert à estimer la probabilité du succès."
+    }
+  ]
+}

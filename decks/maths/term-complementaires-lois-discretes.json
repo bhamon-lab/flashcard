@@ -1,0 +1,68 @@
+{
+  "id": "math-term-complementaires-lois-discretes",
+  "subject": "Maths",
+  "title": "Maths · Terminale complémentaires · Lois uniforme discrète et géométrique",
+  "description": "Terminale complémentaires · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#F5DDC8",
+  "daily_new_limit": 3,
+  "grade": "term-complementaires",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-complementaires-2019",
+  "cards": [
+    {
+      "id": "uniforme",
+      "kind": "formule",
+      "front": "Pour $X$ uniforme sur $\\{1,\\ldots,n\\}$, que vaut $P(X=k)$ ?",
+      "back": "$\\frac1n$ pour $k\\in\\{1,\\ldots,n\\}$."
+    },
+    {
+      "id": "uniforme-esperance",
+      "kind": "formule",
+      "front": "Quelle est l’espérance de la loi uniforme sur $\\{1,\\ldots,n\\}$ ?",
+      "back": "$\\frac{n+1}{2}$."
+    },
+    {
+      "id": "geometrique",
+      "kind": "definition",
+      "front": "Que compte une variable de loi géométrique de paramètre $p$ ?",
+      "back": "Le rang du premier succès dans des épreuves de Bernoulli indépendantes de même paramètre $p>0$."
+    },
+    {
+      "id": "valeurs",
+      "kind": "propriete",
+      "front": "Quelles valeurs peut prendre le rang du premier succès ?",
+      "back": "$1,2,3,\\ldots$ ; le comptage commence à $1$."
+    },
+    {
+      "id": "probabilite",
+      "kind": "formule",
+      "front": "Si $X$ suit une loi géométrique de paramètre $0<p<1$, que vaut $P(X=k)$ ?",
+      "back": "$P(X=k)=(1-p)^{k-1}p$, pour un entier $k\\ge1$."
+    },
+    {
+      "id": "survie",
+      "kind": "formule",
+      "front": "Si $X$ suit une loi géométrique de paramètre $p$, que vaut $P(X>k)$ pour un entier $k\\ge1$ ?",
+      "back": "$(1-p)^k$."
+    },
+    {
+      "id": "repartition",
+      "kind": "formule",
+      "front": "Si $X$ suit une loi géométrique de paramètre $p$, que vaut $P(X\\le k)$ pour un entier $k\\ge1$ ?",
+      "back": "$1-(1-p)^k$."
+    },
+    {
+      "id": "esperance",
+      "kind": "formule",
+      "front": "Quelle est l’espérance de la loi géométrique de paramètre $p>0$ ?",
+      "back": "$E(X)=\\frac1p$."
+    },
+    {
+      "id": "sans-memoire",
+      "kind": "propriete",
+      "front": "Quelle égalité exprime l’absence de mémoire d’une loi géométrique de paramètre $0<p<1$ ?",
+      "back": "$P_{X>m}(X>m+n)=P(X>n)$ pour $m,n\\in\\mathbb{N}$."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "math-1re-spe-variables-aleatoires",
+  "subject": "Maths",
+  "title": "Maths · 1re spé · Variables aléatoires",
+  "description": "1re spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 3,
+  "grade": "1re-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "premiere-spe-2026",
+  "cards": [
+    {
+      "id": "variable",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’une variable aléatoire réelle ?",
+      "back": "Une fonction qui associe un nombre réel à chaque issue d’une expérience aléatoire."
+    },
+    {
+      "id": "loi",
+      "kind": "definition",
+      "front": "Que donne la loi d’une variable aléatoire discrète $X$ ?",
+      "back": "Ses valeurs possibles $x_i$ et les probabilités $p_i=P(X=x_i)$ associées."
+    },
+    {
+      "id": "somme",
+      "kind": "propriete",
+      "front": "Quelle est la somme des probabilités d’une loi discrète ?",
+      "back": "$\\sum_i p_i=1$."
+    },
+    {
+      "id": "esperance",
+      "kind": "formule",
+      "front": "Quelle est l’espérance d’une variable aléatoire finie ?",
+      "back": "$E(X)=\\sum_i x_iP(X=x_i)$."
+    },
+    {
+      "id": "sens-esperance",
+      "kind": "definition",
+      "front": "Comment interpréter l’espérance ?",
+      "back": "Comme la moyenne théorique des valeurs de la variable sur un grand nombre de répétitions."
+    },
+    {
+      "id": "variance",
+      "kind": "formule",
+      "front": "Quelle est la variance d’une variable aléatoire finie d’espérance $\\mu$ ?",
+      "back": "$V(X)=\\sum_i (x_i-\\mu)^2P(X=x_i)$."
+    },
+    {
+      "id": "ecart-type",
+      "kind": "formule",
+      "front": "Quel est l’écart type d’une variable aléatoire ?",
+      "back": "$\\sigma(X)=\\sqrt{V(X)}$."
+    },
+    {
+      "id": "jeu-equitable",
+      "kind": "propriete",
+      "front": "Quand un jeu est-il équitable pour le joueur, si $X$ est son gain net ?",
+      "back": "Quand $E(X)=0$."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "math-term-spe-derivees-composees",
+  "subject": "Maths",
+  "title": "Maths · Terminale spé · Dérivées de fonctions composées",
+  "description": "Terminale spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#DDD3F2",
+  "daily_new_limit": 3,
+  "grade": "term-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-spe-2019",
+  "cards": [
+    {
+      "id": "composition",
+      "kind": "definition",
+      "front": "Que signifie $(v\\circ u)(x)$ ?",
+      "back": "$v(u(x))$, lorsque cette expression est définie."
+    },
+    {
+      "id": "chaine",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $v\\circ u$ lorsque les fonctions sont dérivables aux points concernés ?",
+      "back": "$(v\\circ u)'=(v'\\circ u)u'$."
+    },
+    {
+      "id": "affine",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $x\\mapsto f(ax+b)$ ?",
+      "back": "$x\\mapsto af'(ax+b)$, là où $f$ est dérivable."
+    },
+    {
+      "id": "puissance",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $u^n$ pour $u$ dérivable et un entier $n\\ge1$ ?",
+      "back": "$(u^n)'=nu'u^{n-1}$."
+    },
+    {
+      "id": "carre",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $u^2$ pour $u$ dérivable ?",
+      "back": "$(u^2)'=2uu'$."
+    },
+    {
+      "id": "exponentielle",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $e^u$ pour $u$ dérivable ?",
+      "back": "$(e^u)'=u'e^u$."
+    },
+    {
+      "id": "logarithme",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $\\ln u$ pour $u$ dérivable et strictement positive ?",
+      "back": "$(\\ln u)'=\\frac{u'}u$."
+    },
+    {
+      "id": "racine",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $\\sqrt u$ pour $u$ dérivable et strictement positive ?",
+      "back": "$(\\sqrt u)'=\\frac{u'}{2\\sqrt u}$."
+    }
+  ]
+}

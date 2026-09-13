@@ -1,0 +1,86 @@
+{
+  "id": "math-term-complementaires-suites",
+  "subject": "Maths",
+  "title": "Maths · Terminale complémentaires · Suites et modèles discrets",
+  "description": "Terminale complémentaires · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#F5DDC8",
+  "daily_new_limit": 3,
+  "grade": "term-complementaires",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-complementaires-2019",
+  "cards": [
+    {
+      "id": "arithmetique",
+      "kind": "formule",
+      "front": "Quel est le terme général d’une suite arithmétique de premier terme $u_0$ et de raison $r$ ?",
+      "back": "$u_n=u_0+nr$."
+    },
+    {
+      "id": "geometrique",
+      "kind": "formule",
+      "front": "Quel est le terme général d’une suite géométrique de premier terme $u_0$ et de raison $q>0$ ?",
+      "back": "$u_n=u_0q^n$."
+    },
+    {
+      "id": "limite-zero",
+      "kind": "propriete",
+      "front": "Quelle est la limite de $q^n$ pour $0<q<1$ ?",
+      "back": "$0$."
+    },
+    {
+      "id": "limite-infini",
+      "kind": "propriete",
+      "front": "Quelle est la limite de $q^n$ pour $q>1$ ?",
+      "back": "$+\\infty$."
+    },
+    {
+      "id": "somme",
+      "kind": "formule",
+      "front": "Que vaut $1+q+\\cdots+q^n$ pour $q\\ne1$ ?",
+      "back": "$\\frac{1-q^{n+1}}{1-q}$."
+    },
+    {
+      "id": "somme-limite",
+      "kind": "formule",
+      "front": "Quelle est la limite de $1+q+\\cdots+q^n$ pour $0<q<1$ ?",
+      "back": "$\\frac1{1-q}$."
+    },
+    {
+      "id": "arithmetico-geometrique",
+      "kind": "definition",
+      "front": "Quelle relation définit une suite arithmético-géométrique ?",
+      "back": "$u_{n+1}=au_n+b$, où $a$ et $b$ sont constants."
+    },
+    {
+      "id": "equilibre",
+      "kind": "formule",
+      "front": "Quel est le point fixe de $u_{n+1}=au_n+b$ si $a\\ne1$ ?",
+      "back": "$\\ell=\\frac{b}{1-a}$."
+    },
+    {
+      "id": "auxiliaire",
+      "kind": "methode",
+      "front": "Comment ramener $u_{n+1}=au_n+b$, avec $a\\ne1$, à une suite géométrique ?",
+      "back": "Poser $v_n=u_n-\\ell$, où $\\ell=\\frac{b}{1-a}$ ; alors $v_{n+1}=av_n$."
+    },
+    {
+      "id": "terme-general",
+      "kind": "formule",
+      "front": "Quel est le terme général de $u_{n+1}=au_n+b$ pour $a>0$, $a\\ne1$ ?",
+      "back": "$u_n=\\ell+(u_0-\\ell)a^n$, avec $\\ell=\\frac b{1-a}$."
+    },
+    {
+      "id": "limite-equilibre",
+      "kind": "propriete",
+      "front": "Quelle est la limite de $u_{n+1}=au_n+b$ si $0<a<1$ ?",
+      "back": "$\\frac b{1-a}$."
+    },
+    {
+      "id": "taux-moyen",
+      "kind": "formule",
+      "front": "Quel taux moyen correspond à un coefficient global $C>0$ sur $n\\ge1$ périodes ?",
+      "back": "$t=C^{1/n}-1$."
+    }
+  ]
+}

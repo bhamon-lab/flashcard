@@ -1,0 +1,86 @@
+{
+  "id": "math-term-spe-primitives",
+  "subject": "Maths",
+  "title": "Maths · Terminale spé · Primitives usuelles",
+  "description": "Terminale spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#DDD3F2",
+  "daily_new_limit": 3,
+  "grade": "term-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-spe-2019",
+  "cards": [
+    {
+      "id": "definition",
+      "kind": "definition",
+      "front": "Quand $F$ est-elle une primitive de $f$ sur un intervalle ?",
+      "back": "Quand $F$ est dérivable et $F'=f$ sur cet intervalle."
+    },
+    {
+      "id": "constante-integration",
+      "kind": "propriete",
+      "front": "Comment obtenir toutes les primitives à partir d’une primitive $F$ ?",
+      "back": "Elles sont de la forme $F+C$, où $C$ est une constante réelle."
+    },
+    {
+      "id": "constante",
+      "kind": "formule",
+      "front": "Quelle est une primitive de la constante $k$ ?",
+      "back": "$x\\mapsto kx$."
+    },
+    {
+      "id": "puissance",
+      "kind": "formule",
+      "front": "Quelle est une primitive de $x^n$ pour un entier $n\\ge0$ ?",
+      "back": "$\\frac{x^{n+1}}{n+1}$."
+    },
+    {
+      "id": "puissance-negative",
+      "kind": "formule",
+      "front": "Quelle est une primitive de $x^n$ pour un entier $n\\le-2$ ?",
+      "back": "$\\frac{x^{n+1}}{n+1}$, sur un intervalle ne contenant pas $0$."
+    },
+    {
+      "id": "inverse",
+      "kind": "formule",
+      "front": "Quelle est une primitive de $\\frac1x$ sur $]0;+\\infty[$ ?",
+      "back": "$\\ln x$."
+    },
+    {
+      "id": "exponentielle",
+      "kind": "formule",
+      "front": "Quelle est une primitive de $e^x$ ?",
+      "back": "$e^x$."
+    },
+    {
+      "id": "cosinus",
+      "kind": "formule",
+      "front": "Quelle est une primitive de $\\cos x$ ?",
+      "back": "$\\sin x$."
+    },
+    {
+      "id": "sinus",
+      "kind": "formule",
+      "front": "Quelle est une primitive de $\\sin x$ ?",
+      "back": "$-\\cos x$."
+    },
+    {
+      "id": "produit-derivee",
+      "kind": "formule",
+      "front": "Quelle est une primitive de $u'u^n$ pour $u$ dérivable et un entier $n\\ge0$ ?",
+      "back": "$\\frac{u^{n+1}}{n+1}$."
+    },
+    {
+      "id": "exp-composee",
+      "kind": "formule",
+      "front": "Quelle est une primitive de $u'e^u$ pour $u$ dérivable ?",
+      "back": "$e^u$."
+    },
+    {
+      "id": "ln-compose",
+      "kind": "formule",
+      "front": "Quelle est une primitive de $\\frac{u'}u$ pour $u$ dérivable et strictement positive ?",
+      "back": "$\\ln u$."
+    }
+  ]
+}

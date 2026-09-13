@@ -1,0 +1,86 @@
+{
+  "id": "math-2de-probabilites",
+  "subject": "Maths",
+  "title": "Maths · 2de · Probabilités et arbres",
+  "description": "2de · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CDEAE0",
+  "daily_new_limit": 3,
+  "grade": "2de",
+  "school_year": "2026-2027",
+  "curriculum_reference": "seconde-2026",
+  "cards": [
+    {
+      "id": "univers",
+      "kind": "definition",
+      "front": "Qu’est-ce que l’univers d’une expérience aléatoire ?",
+      "back": "L’ensemble $\\Omega$ de toutes ses issues possibles."
+    },
+    {
+      "id": "loi",
+      "kind": "propriete",
+      "front": "Quelles conditions vérifie une loi de probabilité sur un univers fini ?",
+      "back": "Chaque probabilité est positive ou nulle et leur somme vaut $1$."
+    },
+    {
+      "id": "equiprobabilite",
+      "kind": "formule",
+      "front": "Comment calculer $P(A)$ en situation d’équiprobabilité ?",
+      "back": "$P(A)=\\frac{\\operatorname{Card}(A)}{\\operatorname{Card}(\\Omega)}$."
+    },
+    {
+      "id": "contraire",
+      "kind": "formule",
+      "front": "Quelle est la probabilité de l’événement contraire de $A$ ?",
+      "back": "$P(\\overline A)=1-P(A)$."
+    },
+    {
+      "id": "union",
+      "kind": "formule",
+      "front": "Quelle est la probabilité de $A\\cup B$ ?",
+      "back": "$P(A\\cup B)=P(A)+P(B)-P(A\\cap B)$."
+    },
+    {
+      "id": "conditionnelle",
+      "kind": "formule",
+      "front": "Quelle est la probabilité de $B$ sachant $A$, si $P(A)>0$ ?",
+      "back": "$P_A(B)=\\frac{P(A\\cap B)}{P(A)}$."
+    },
+    {
+      "id": "intersection",
+      "kind": "formule",
+      "front": "Comment calculer $P(A\\cap B)$ avec une probabilité conditionnelle ?",
+      "back": "$P(A\\cap B)=P(A)P_A(B)$, si $P(A)>0$."
+    },
+    {
+      "id": "branches",
+      "kind": "propriete",
+      "front": "Quelle est la somme des probabilités des branches issues d’un même nœud ?",
+      "back": "$1$."
+    },
+    {
+      "id": "chemin",
+      "kind": "methode",
+      "front": "Comment calculer la probabilité d’un chemin dans un arbre pondéré ?",
+      "back": "Multiplier les probabilités inscrites sur ses branches."
+    },
+    {
+      "id": "reunion-chemins",
+      "kind": "methode",
+      "front": "Comment calculer la probabilité d’un événement décrit par plusieurs chemins distincts ?",
+      "back": "Additionner les probabilités de ces chemins."
+    },
+    {
+      "id": "conditionnement-inverse",
+      "kind": "propriete",
+      "front": "Peut-on échanger $P_A(B)$ et $P_B(A)$ ?",
+      "back": "Non : le groupe de référence change et ces probabilités peuvent être différentes."
+    },
+    {
+      "id": "fluctuation",
+      "kind": "definition",
+      "front": "Qu’est-ce que la fluctuation d’échantillonnage ?",
+      "back": "La variation des fréquences observées d’un échantillon à l’autre."
+    }
+  ]
+}

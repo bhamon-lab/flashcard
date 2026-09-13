@@ -1,0 +1,74 @@
+{
+  "id": "math-2de-intervalles",
+  "subject": "Maths",
+  "title": "Maths · 2de · Intervalles et valeur absolue",
+  "description": "2de · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CDEAE0",
+  "daily_new_limit": 3,
+  "grade": "2de",
+  "school_year": "2026-2027",
+  "curriculum_reference": "seconde-2026",
+  "cards": [
+    {
+      "id": "ferme",
+      "kind": "definition",
+      "front": "Que signifie $x\\in[a;b]$ ?",
+      "back": "$a\\le x\\le b$ : les deux bornes sont incluses."
+    },
+    {
+      "id": "ouvert",
+      "kind": "definition",
+      "front": "Que signifie $x\\in]a;b[$ ?",
+      "back": "$a<x<b$ : les deux bornes sont exclues."
+    },
+    {
+      "id": "demi-ouvert",
+      "kind": "definition",
+      "front": "Que signifie $x\\in[a;b[$ ?",
+      "back": "$a\\le x<b$."
+    },
+    {
+      "id": "infini",
+      "kind": "propriete",
+      "front": "Quel crochet utilise-t-on du côté de l’infini ?",
+      "back": "Toujours un crochet ouvert : l’infini n’est pas un réel."
+    },
+    {
+      "id": "intersection",
+      "kind": "definition",
+      "front": "Que contient $A\\cap B$ ?",
+      "back": "Les éléments qui appartiennent à la fois à $A$ et à $B$."
+    },
+    {
+      "id": "union",
+      "kind": "definition",
+      "front": "Que contient $A\\cup B$ ?",
+      "back": "Les éléments qui appartiennent à $A$ ou à $B$, éventuellement aux deux."
+    },
+    {
+      "id": "valeur-absolue",
+      "kind": "definition",
+      "front": "Que représente $\\lvert x\\rvert$ ?",
+      "back": "La distance entre $x$ et $0$ sur la droite numérique."
+    },
+    {
+      "id": "distance",
+      "kind": "formule",
+      "front": "Quelle est la distance entre deux réels $a$ et $b$ ?",
+      "back": "$\\lvert b-a\\rvert$."
+    },
+    {
+      "id": "centre-rayon",
+      "kind": "propriete",
+      "front": "Pour $r\\ge0$, quel intervalle décrit $\\lvert x-a\\rvert\\le r$ ?",
+      "back": "$[a-r;a+r]$."
+    },
+    {
+      "id": "amplitude",
+      "kind": "formule",
+      "front": "Quelle est l’amplitude d’un encadrement $a\\le x\\le b$ ?",
+      "back": "$b-a$."
+    }
+  ]
+}

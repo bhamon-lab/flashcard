@@ -1,0 +1,80 @@
+{
+  "id": "math-term-complementaires-densites-uniforme",
+  "subject": "Maths",
+  "title": "Maths · Terminale complémentaires · Densités et loi uniforme continue",
+  "description": "Terminale complémentaires · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#F5DDC8",
+  "daily_new_limit": 3,
+  "grade": "term-complementaires",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-complementaires-2019",
+  "cards": [
+    {
+      "id": "densite",
+      "kind": "definition",
+      "front": "Quelles sont les deux conditions essentielles d’une densité $f$ sur $\\mathbb{R}$ ?",
+      "back": "$f\\ge0$ et $\\int_{-\\infty}^{+\\infty}f(x)\\,dx=1$."
+    },
+    {
+      "id": "intervalle",
+      "kind": "formule",
+      "front": "Pour une variable de densité $f$, comment calculer $P(a\\le X\\le b)$ ?",
+      "back": "$\\int_a^b f(x)\\,dx$, pour $a\\le b$."
+    },
+    {
+      "id": "point",
+      "kind": "propriete",
+      "front": "Pour une variable à densité, que vaut $P(X=a)$ ?",
+      "back": "$0$."
+    },
+    {
+      "id": "repartition",
+      "kind": "definition",
+      "front": "Qu’est-ce que la fonction de répartition de $X$ ?",
+      "back": "$F(x)=P(X\\le x)$."
+    },
+    {
+      "id": "esperance",
+      "kind": "formule",
+      "front": "Quelle est l’espérance d’une variable de densité $f$, si l’intégrale converge absolument ?",
+      "back": "$E(X)=\\int_{-\\infty}^{+\\infty}x f(x)\\,dx$."
+    },
+    {
+      "id": "variance",
+      "kind": "formule",
+      "front": "Quelle est la variance d’une variable de densité $f$ et d’espérance $\\mu$, si elle est finie ?",
+      "back": "$V(X)=\\int_{-\\infty}^{+\\infty}(x-\\mu)^2 f(x)\\,dx$."
+    },
+    {
+      "id": "uniforme-densite",
+      "kind": "formule",
+      "front": "Quelle est la densité de la loi uniforme sur $[a;b]$, avec $a<b$ ?",
+      "back": "$f(x)=\\frac1{b-a}$ sur $[a;b]$ et $0$ ailleurs."
+    },
+    {
+      "id": "uniforme-proba",
+      "kind": "formule",
+      "front": "Si $X$ est uniforme sur $[a;b]$, que vaut $P(c\\le X\\le d)$ pour $a\\le c\\le d\\le b$ ?",
+      "back": "$\\frac{d-c}{b-a}$."
+    },
+    {
+      "id": "uniforme-esperance",
+      "kind": "formule",
+      "front": "Quelle est l’espérance de la loi uniforme sur $[a;b]$, avec $a<b$ ?",
+      "back": "$\\frac{a+b}{2}$."
+    },
+    {
+      "id": "uniforme-variance",
+      "kind": "formule",
+      "front": "Quelle est la variance de la loi uniforme sur $[a;b]$, avec $a<b$ ?",
+      "back": "$\\frac{(b-a)^2}{12}$."
+    },
+    {
+      "id": "uniforme-repartition",
+      "kind": "formule",
+      "front": "Quelle est la fonction de répartition de la loi uniforme sur $[a;b]$ ?",
+      "back": "$F(x)=0$ si $x<a$ ; $F(x)=\\frac{x-a}{b-a}$ si $a\\le x\\le b$ ; $F(x)=1$ si $x>b$."
+    }
+  ]
+}

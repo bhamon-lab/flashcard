@@ -1,0 +1,62 @@
+{
+  "id": "math-1re-spe-geometrie-reperee",
+  "subject": "Maths",
+  "title": "Maths · 1re spé · Droites, cercles et projections",
+  "description": "1re spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 3,
+  "grade": "1re-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "premiere-spe-2026",
+  "cards": [
+    {
+      "id": "normal",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’un vecteur normal à une droite ?",
+      "back": "Un vecteur non nul orthogonal à un vecteur directeur de cette droite."
+    },
+    {
+      "id": "normal-cartesien",
+      "kind": "formule",
+      "front": "Quel vecteur est normal à $ax+by+c=0$ dans un repère orthonormé ?",
+      "back": "$(a;b)$, avec $(a;b)\\ne(0;0)$."
+    },
+    {
+      "id": "point-normal",
+      "kind": "formule",
+      "front": "Quelle est l’équation de la droite passant par $A(x_A;y_A)$ et de normale $(a;b)\\ne(0;0)$ ?",
+      "back": "$a(x-x_A)+b(y-y_A)=0$, dans un repère orthonormé."
+    },
+    {
+      "id": "perpendiculaires",
+      "kind": "propriete",
+      "front": "Comment reconnaître deux droites perpendiculaires avec leurs vecteurs directeurs ?",
+      "back": "Le produit scalaire de leurs vecteurs directeurs est nul."
+    },
+    {
+      "id": "cercle",
+      "kind": "formule",
+      "front": "Quelle est l’équation d’un cercle de centre $(a;b)$ et de rayon $r>0$ ?",
+      "back": "$(x-a)^2+(y-b)^2=r^2$, dans un repère orthonormé."
+    },
+    {
+      "id": "diametre",
+      "kind": "propriete",
+      "front": "Quel produit scalaire caractérise le cercle de diamètre $[AB]$, avec $A\\ne B$ ?",
+      "back": "$\\overrightarrow{MA}\\cdot\\overrightarrow{MB}=0$."
+    },
+    {
+      "id": "projection",
+      "kind": "methode",
+      "front": "Quelles conditions définissent le projeté orthogonal $H$ d’un point $M$ sur une droite $d$ ?",
+      "back": "$H\\in d$ et $\\overrightarrow{MH}$ est orthogonal à un vecteur directeur de $d$."
+    },
+    {
+      "id": "distance-droite",
+      "kind": "propriete",
+      "front": "Si $H$ est le projeté orthogonal de $M$ sur $d$, quelle est la distance de $M$ à $d$ ?",
+      "back": "La longueur $MH$."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "math-term-complementaires-limites-continuite",
+  "subject": "Maths",
+  "title": "Maths · Terminale complémentaires · Limites et continuité",
+  "description": "Terminale complémentaires · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#F5DDC8",
+  "daily_new_limit": 3,
+  "grade": "term-complementaires",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-complementaires-2019",
+  "cards": [
+    {
+      "id": "continue",
+      "kind": "definition",
+      "front": "Comment reconnaître intuitivement une fonction continue sur un intervalle ?",
+      "back": "Sa courbe ne présente pas de saut ni de trou sur cet intervalle."
+    },
+    {
+      "id": "derivable",
+      "kind": "propriete",
+      "front": "Que garantit la dérivabilité d’une fonction en un point ?",
+      "back": "Sa continuité en ce point."
+    },
+    {
+      "id": "tvi",
+      "kind": "propriete",
+      "front": "Que garantit le théorème des valeurs intermédiaires ?",
+      "back": "Une fonction continue sur $[a;b]$ atteint toute valeur située entre $f(a)$ et $f(b)$."
+    },
+    {
+      "id": "unicite",
+      "kind": "propriete",
+      "front": "Si $f$ est continue et strictement monotone sur $[a;b]$, combien d’antécédents possède une valeur entre $f(a)$ et $f(b)$ ?",
+      "back": "Exactement un dans $[a;b]$."
+    },
+    {
+      "id": "horizontale",
+      "kind": "propriete",
+      "front": "Quelle asymptote correspond à une limite finie $\\ell$ en $+\\infty$ ou $-\\infty$ ?",
+      "back": "La droite horizontale $y=\\ell$."
+    },
+    {
+      "id": "verticale",
+      "kind": "propriete",
+      "front": "Quelle asymptote correspond à une limite infinie lorsque $x\\to a$ d’un côté ?",
+      "back": "La droite verticale $x=a$."
+    },
+    {
+      "id": "inverse-infini",
+      "kind": "formule",
+      "front": "Quelle est la limite de $\\frac1x$ quand $x\\to+\\infty$ ?",
+      "back": "$0$."
+    },
+    {
+      "id": "exp-infini",
+      "kind": "formule",
+      "front": "Quelle est la limite de $e^x$ quand $x\\to+\\infty$ ?",
+      "back": "$+\\infty$."
+    },
+    {
+      "id": "exp-moins-infini",
+      "kind": "formule",
+      "front": "Quelle est la limite de $e^x$ quand $x\\to-\\infty$ ?",
+      "back": "$0$."
+    },
+    {
+      "id": "quotient",
+      "kind": "propriete",
+      "front": "Si $f\\to\\ell$ et $g\\to m\\ne0$, quelle est la limite de $\\frac fg$ ?",
+      "back": "$\\frac\\ell m$."
+    }
+  ]
+}

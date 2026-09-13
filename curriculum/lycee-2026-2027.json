@@ -1,0 +1,764 @@
+{
+  "schema_version": 1,
+  "school_year": "2026-2027",
+  "country": "FR",
+  "description": "Progression pédagogique indicative. Les deux parcours de terminale sont des branches alternatives ; les prérequis ne verrouillent pas les decks.",
+  "sources": [
+    {
+      "id": "seconde-2026",
+      "label": "Seconde générale et technologique — BO du 2 avril 2026",
+      "url": "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%93%20Programme%20d%26%23039%3Benseignement%20de%20math%C3%A9matiques%20de%20la%20classe%20de%20seconde%20g%C3%A9n%C3%A9rale%20et%20technologique-515402.pdf"
+    },
+    {
+      "id": "premiere-spe-2026",
+      "label": "Première spécialité — BO du 2 avril 2026",
+      "url": "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%93%20Programme%20d%26%23039%3Benseignement%20de%20sp%C3%A9cialit%C3%A9%20de%20math%C3%A9matiques%20de%20la%20classe%20de%20premi%C3%A8re%20de%20la%20voie%20g%C3%A9n%C3%A9rale-515408.pdf"
+    },
+    {
+      "id": "terminale-spe-2019",
+      "label": "Terminale spécialité — BO spécial du 25 juillet 2019",
+      "url": "https://eduscol.education.gouv.fr/sites/default/files/document/spe246annexe1158907pdf-84159.pdf"
+    },
+    {
+      "id": "terminale-complementaires-2019",
+      "label": "Terminale mathématiques complémentaires — BO spécial du 25 juillet 2019",
+      "url": "https://eduscol.education.gouv.fr/sites/default/files/document/spe265annexe1159134pdf-84162.pdf"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "math-2de-nombres",
+      "deck_id": "math-2de-nombres",
+      "grade": "2de",
+      "title": "Nombres et arithmétique",
+      "domain": "nombres",
+      "source_id": "seconde-2026",
+      "source_section": "Arithmétique ; Nombres réels",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "math-2de-intervalles",
+      "deck_id": "math-2de-intervalles",
+      "grade": "2de",
+      "title": "Intervalles et valeur absolue",
+      "domain": "nombres",
+      "source_id": "seconde-2026",
+      "source_section": "Nombres réels",
+      "prerequisites": [
+        "math-2de-nombres"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-2de-calcul-litteral",
+      "deck_id": "math-2de-calcul-litteral",
+      "grade": "2de",
+      "title": "Calcul littéral",
+      "domain": "algebre",
+      "source_id": "seconde-2026",
+      "source_section": "Algèbre ; Automatismes",
+      "prerequisites": [
+        "math-2de-nombres"
+      ],
+      "card_count": 12
+    },
+    {
+      "id": "math-2de-equations",
+      "deck_id": "math-2de-equations",
+      "grade": "2de",
+      "title": "Équations, inéquations et signes",
+      "domain": "algebre",
+      "source_id": "seconde-2026",
+      "source_section": "Algèbre ; Représentation algébrique et graphique des fonctions",
+      "prerequisites": [
+        "math-2de-calcul-litteral",
+        "math-2de-intervalles"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-2de-fonctions",
+      "deck_id": "math-2de-fonctions",
+      "grade": "2de",
+      "title": "Fonctions et variations",
+      "domain": "fonctions",
+      "source_id": "seconde-2026",
+      "source_section": "Représentation algébrique et graphique des fonctions ; Variations et extrémums",
+      "prerequisites": [
+        "math-2de-intervalles",
+        "math-2de-equations"
+      ],
+      "card_count": 11
+    },
+    {
+      "id": "math-2de-fonctions-reference",
+      "deck_id": "math-2de-fonctions-reference",
+      "grade": "2de",
+      "title": "Fonctions de référence",
+      "domain": "fonctions",
+      "source_id": "seconde-2026",
+      "source_section": "Représentation algébrique et graphique des fonctions ; Variations et extrémums",
+      "prerequisites": [
+        "math-2de-fonctions"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-2de-vecteurs",
+      "deck_id": "math-2de-vecteurs",
+      "grade": "2de",
+      "title": "Vecteurs du plan",
+      "domain": "geometrie",
+      "source_id": "seconde-2026",
+      "source_section": "Vecteurs et problèmes de géométrie",
+      "prerequisites": [
+        "math-2de-calcul-litteral"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-2de-droites",
+      "deck_id": "math-2de-droites",
+      "grade": "2de",
+      "title": "Droites du plan",
+      "domain": "geometrie",
+      "source_id": "seconde-2026",
+      "source_section": "Droites du plan",
+      "prerequisites": [
+        "math-2de-vecteurs",
+        "math-2de-equations"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-2de-pourcentages",
+      "deck_id": "math-2de-pourcentages",
+      "grade": "2de",
+      "title": "Proportions et évolutions",
+      "domain": "donnees",
+      "source_id": "seconde-2026",
+      "source_section": "Information chiffrée et statistique descriptive",
+      "prerequisites": [
+        "math-2de-calcul-litteral"
+      ],
+      "card_count": 9
+    },
+    {
+      "id": "math-2de-statistiques",
+      "deck_id": "math-2de-statistiques",
+      "grade": "2de",
+      "title": "Statistiques et tableaux croisés",
+      "domain": "donnees",
+      "source_id": "seconde-2026",
+      "source_section": "Information chiffrée et statistique descriptive ; Croisement de deux variables qualitatives",
+      "prerequisites": [
+        "math-2de-pourcentages"
+      ],
+      "card_count": 11
+    },
+    {
+      "id": "math-2de-probabilites",
+      "deck_id": "math-2de-probabilites",
+      "grade": "2de",
+      "title": "Probabilités et arbres",
+      "domain": "probabilites",
+      "source_id": "seconde-2026",
+      "source_section": "Probabilités",
+      "prerequisites": [
+        "math-2de-intervalles",
+        "math-2de-statistiques"
+      ],
+      "card_count": 12
+    },
+    {
+      "id": "math-2de-logique-python",
+      "deck_id": "math-2de-logique-python",
+      "grade": "2de",
+      "title": "Logique et bases de Python",
+      "domain": "algorithmique",
+      "source_id": "seconde-2026",
+      "source_section": "Vocabulaire ensembliste et logique ; Algorithmique et programmation",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "math-1re-spe-second-degre",
+      "deck_id": "math-1re-spe-second-degre",
+      "grade": "1re-spe",
+      "title": "Second degré",
+      "domain": "algebre",
+      "source_id": "premiere-spe-2026",
+      "source_section": "Équations, fonctions polynômes du second degré",
+      "prerequisites": [
+        "math-2de-equations",
+        "math-2de-fonctions-reference"
+      ],
+      "card_count": 13
+    },
+    {
+      "id": "math-1re-spe-suites",
+      "deck_id": "math-1re-spe-suites",
+      "grade": "1re-spe",
+      "title": "Suites arithmétiques et géométriques",
+      "domain": "suites",
+      "source_id": "premiere-spe-2026",
+      "source_section": "Suites numériques, modèles discrets",
+      "prerequisites": [
+        "math-2de-pourcentages",
+        "math-2de-fonctions"
+      ],
+      "card_count": 13
+    },
+    {
+      "id": "math-1re-spe-derivees",
+      "deck_id": "math-1re-spe-derivees",
+      "grade": "1re-spe",
+      "title": "Formules de dérivation",
+      "domain": "analyse",
+      "source_id": "premiere-spe-2026",
+      "source_section": "Dérivation",
+      "prerequisites": [
+        "math-2de-fonctions-reference",
+        "math-2de-calcul-litteral"
+      ],
+      "card_count": 12
+    },
+    {
+      "id": "math-1re-spe-tangentes-variations",
+      "deck_id": "math-1re-spe-tangentes-variations",
+      "grade": "1re-spe",
+      "title": "Tangentes, variations et symétries",
+      "domain": "analyse",
+      "source_id": "premiere-spe-2026",
+      "source_section": "Dérivation ; Variations et courbes représentatives des fonctions",
+      "prerequisites": [
+        "math-1re-spe-derivees"
+      ],
+      "card_count": 12
+    },
+    {
+      "id": "math-1re-spe-exponentielle",
+      "deck_id": "math-1re-spe-exponentielle",
+      "grade": "1re-spe",
+      "title": "Fonction exponentielle",
+      "domain": "analyse",
+      "source_id": "premiere-spe-2026",
+      "source_section": "Fonction exponentielle",
+      "prerequisites": [
+        "math-1re-spe-derivees",
+        "math-1re-spe-suites"
+      ],
+      "card_count": 11
+    },
+    {
+      "id": "math-1re-spe-trigonometrie",
+      "deck_id": "math-1re-spe-trigonometrie",
+      "grade": "1re-spe",
+      "title": "Cercle trigonométrique",
+      "domain": "geometrie",
+      "source_id": "premiere-spe-2026",
+      "source_section": "Trigonométrie",
+      "prerequisites": [
+        "math-2de-vecteurs"
+      ],
+      "card_count": 14
+    },
+    {
+      "id": "math-1re-spe-produit-scalaire",
+      "deck_id": "math-1re-spe-produit-scalaire",
+      "grade": "1re-spe",
+      "title": "Produit scalaire",
+      "domain": "geometrie",
+      "source_id": "premiere-spe-2026",
+      "source_section": "Calcul vectoriel et produit scalaire",
+      "prerequisites": [
+        "math-1re-spe-trigonometrie",
+        "math-2de-vecteurs"
+      ],
+      "card_count": 11
+    },
+    {
+      "id": "math-1re-spe-geometrie-reperee",
+      "deck_id": "math-1re-spe-geometrie-reperee",
+      "grade": "1re-spe",
+      "title": "Droites, cercles et projections",
+      "domain": "geometrie",
+      "source_id": "premiere-spe-2026",
+      "source_section": "Géométrie repérée",
+      "prerequisites": [
+        "math-1re-spe-produit-scalaire",
+        "math-2de-droites"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-1re-spe-probabilites",
+      "deck_id": "math-1re-spe-probabilites",
+      "grade": "1re-spe",
+      "title": "Conditionnement et indépendance",
+      "domain": "probabilites",
+      "source_id": "premiere-spe-2026",
+      "source_section": "Probabilités conditionnelles et indépendance",
+      "prerequisites": [
+        "math-2de-probabilites"
+      ],
+      "card_count": 9
+    },
+    {
+      "id": "math-1re-spe-variables-aleatoires",
+      "deck_id": "math-1re-spe-variables-aleatoires",
+      "grade": "1re-spe",
+      "title": "Variables aléatoires",
+      "domain": "probabilites",
+      "source_id": "premiere-spe-2026",
+      "source_section": "Variables aléatoires réelles",
+      "prerequisites": [
+        "math-1re-spe-probabilites",
+        "math-2de-statistiques"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-1re-spe-python-listes",
+      "deck_id": "math-1re-spe-python-listes",
+      "grade": "1re-spe",
+      "title": "Python : listes et suites",
+      "domain": "algorithmique",
+      "source_id": "premiere-spe-2026",
+      "source_section": "Algorithmique et programmation ; Suites numériques, modèles discrets",
+      "prerequisites": [
+        "math-2de-logique-python",
+        "math-1re-spe-suites"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-term-spe-suites-limites",
+      "deck_id": "math-term-spe-suites-limites",
+      "grade": "term-spe",
+      "title": "Limites de suites et récurrence",
+      "domain": "suites",
+      "source_id": "terminale-spe-2019",
+      "source_section": "Suites ; Vocabulaire ensembliste et logique",
+      "prerequisites": [
+        "math-1re-spe-suites"
+      ],
+      "card_count": 14
+    },
+    {
+      "id": "math-term-spe-limites-fonctions",
+      "deck_id": "math-term-spe-limites-fonctions",
+      "grade": "term-spe",
+      "title": "Limites et asymptotes",
+      "domain": "analyse",
+      "source_id": "terminale-spe-2019",
+      "source_section": "Limites des fonctions",
+      "prerequisites": [
+        "math-1re-spe-exponentielle",
+        "math-2de-fonctions-reference"
+      ],
+      "card_count": 12
+    },
+    {
+      "id": "math-term-spe-continuite",
+      "deck_id": "math-term-spe-continuite",
+      "grade": "term-spe",
+      "title": "Continuité et valeurs intermédiaires",
+      "domain": "analyse",
+      "source_id": "terminale-spe-2019",
+      "source_section": "Continuité des fonctions d’une variable réelle",
+      "prerequisites": [
+        "math-term-spe-limites-fonctions",
+        "math-1re-spe-tangentes-variations"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-term-spe-logarithme",
+      "deck_id": "math-term-spe-logarithme",
+      "grade": "term-spe",
+      "title": "Logarithme népérien",
+      "domain": "analyse",
+      "source_id": "terminale-spe-2019",
+      "source_section": "Fonction logarithme",
+      "prerequisites": [
+        "math-term-spe-limites-fonctions",
+        "math-1re-spe-exponentielle"
+      ],
+      "card_count": 14
+    },
+    {
+      "id": "math-term-spe-derivees-composees",
+      "deck_id": "math-term-spe-derivees-composees",
+      "grade": "term-spe",
+      "title": "Dérivées de fonctions composées",
+      "domain": "analyse",
+      "source_id": "terminale-spe-2019",
+      "source_section": "Compléments sur la dérivation",
+      "prerequisites": [
+        "math-1re-spe-derivees",
+        "math-term-spe-logarithme"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-term-spe-convexite",
+      "deck_id": "math-term-spe-convexite",
+      "grade": "term-spe",
+      "title": "Convexité",
+      "domain": "analyse",
+      "source_id": "terminale-spe-2019",
+      "source_section": "Compléments sur la dérivation",
+      "prerequisites": [
+        "math-term-spe-derivees-composees",
+        "math-1re-spe-tangentes-variations"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-term-spe-trigonometrie",
+      "deck_id": "math-term-spe-trigonometrie",
+      "grade": "term-spe",
+      "title": "Fonctions sinus et cosinus",
+      "domain": "analyse",
+      "source_id": "terminale-spe-2019",
+      "source_section": "Fonctions sinus et cosinus",
+      "prerequisites": [
+        "math-1re-spe-trigonometrie",
+        "math-term-spe-derivees-composees"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-term-spe-primitives",
+      "deck_id": "math-term-spe-primitives",
+      "grade": "term-spe",
+      "title": "Primitives usuelles",
+      "domain": "analyse",
+      "source_id": "terminale-spe-2019",
+      "source_section": "Primitives, équations différentielles",
+      "prerequisites": [
+        "math-term-spe-derivees-composees",
+        "math-term-spe-trigonometrie"
+      ],
+      "card_count": 12
+    },
+    {
+      "id": "math-term-spe-equations-differentielles",
+      "deck_id": "math-term-spe-equations-differentielles",
+      "grade": "term-spe",
+      "title": "Équations différentielles",
+      "domain": "analyse",
+      "source_id": "terminale-spe-2019",
+      "source_section": "Primitives, équations différentielles",
+      "prerequisites": [
+        "math-term-spe-primitives",
+        "math-1re-spe-exponentielle"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-term-spe-integrales",
+      "deck_id": "math-term-spe-integrales",
+      "grade": "term-spe",
+      "title": "Intégrales",
+      "domain": "analyse",
+      "source_id": "terminale-spe-2019",
+      "source_section": "Calcul intégral",
+      "prerequisites": [
+        "math-term-spe-primitives",
+        "math-term-spe-continuite"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-term-spe-denombrement",
+      "deck_id": "math-term-spe-denombrement",
+      "grade": "term-spe",
+      "title": "Dénombrement",
+      "domain": "probabilites",
+      "source_id": "terminale-spe-2019",
+      "source_section": "Combinatoire et dénombrement",
+      "prerequisites": [
+        "math-2de-intervalles",
+        "math-1re-spe-probabilites"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-term-spe-espace-vecteurs",
+      "deck_id": "math-term-spe-espace-vecteurs",
+      "grade": "term-spe",
+      "title": "Vecteurs et repères de l’espace",
+      "domain": "geometrie",
+      "source_id": "terminale-spe-2019",
+      "source_section": "Manipulation des vecteurs, des droites et des plans de l’espace ; Orthogonalité et distances dans l’espace",
+      "prerequisites": [
+        "math-1re-spe-produit-scalaire"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-term-spe-espace-droites-plans",
+      "deck_id": "math-term-spe-espace-droites-plans",
+      "grade": "term-spe",
+      "title": "Droites et plans de l’espace",
+      "domain": "geometrie",
+      "source_id": "terminale-spe-2019",
+      "source_section": "Orthogonalité et distances dans l’espace ; Représentations paramétriques et équations cartésiennes",
+      "prerequisites": [
+        "math-term-spe-espace-vecteurs",
+        "math-1re-spe-geometrie-reperee"
+      ],
+      "card_count": 12
+    },
+    {
+      "id": "math-term-spe-binomiale",
+      "deck_id": "math-term-spe-binomiale",
+      "grade": "term-spe",
+      "title": "Loi binomiale",
+      "domain": "probabilites",
+      "source_id": "terminale-spe-2019",
+      "source_section": "Succession d’épreuves indépendantes, schéma de Bernoulli ; Sommes de variables aléatoires",
+      "prerequisites": [
+        "math-term-spe-denombrement",
+        "math-1re-spe-variables-aleatoires"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-term-spe-concentration",
+      "deck_id": "math-term-spe-concentration",
+      "grade": "term-spe",
+      "title": "Sommes, concentration et grands nombres",
+      "domain": "probabilites",
+      "source_id": "terminale-spe-2019",
+      "source_section": "Sommes de variables aléatoires ; Concentration, loi des grands nombres",
+      "prerequisites": [
+        "math-term-spe-binomiale",
+        "math-term-spe-suites-limites"
+      ],
+      "card_count": 11
+    },
+    {
+      "id": "math-term-spe-algorithmes",
+      "deck_id": "math-term-spe-algorithmes",
+      "grade": "term-spe",
+      "title": "Méthodes algorithmiques",
+      "domain": "algorithmique",
+      "source_id": "terminale-spe-2019",
+      "source_section": "Algorithmique et programmation ; Suites ; Continuité ; Calcul intégral",
+      "prerequisites": [
+        "math-1re-spe-python-listes",
+        "math-term-spe-integrales",
+        "math-term-spe-suites-limites"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-term-complementaires-suites",
+      "deck_id": "math-term-complementaires-suites",
+      "grade": "term-complementaires",
+      "title": "Suites et modèles discrets",
+      "domain": "suites",
+      "source_id": "terminale-complementaires-2019",
+      "source_section": "Suites numériques, modèles discrets",
+      "prerequisites": [
+        "math-1re-spe-suites"
+      ],
+      "card_count": 12
+    },
+    {
+      "id": "math-term-complementaires-logarithme",
+      "deck_id": "math-term-complementaires-logarithme",
+      "grade": "term-complementaires",
+      "title": "Logarithme népérien",
+      "domain": "analyse",
+      "source_id": "terminale-complementaires-2019",
+      "source_section": "Fonctions : continuité, dérivabilité, limites, représentation graphique",
+      "prerequisites": [
+        "math-1re-spe-exponentielle"
+      ],
+      "card_count": 12
+    },
+    {
+      "id": "math-term-complementaires-limites-continuite",
+      "deck_id": "math-term-complementaires-limites-continuite",
+      "grade": "term-complementaires",
+      "title": "Limites et continuité",
+      "domain": "analyse",
+      "source_id": "terminale-complementaires-2019",
+      "source_section": "Fonctions : continuité, dérivabilité, limites, représentation graphique",
+      "prerequisites": [
+        "math-term-complementaires-logarithme",
+        "math-1re-spe-tangentes-variations"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-term-complementaires-derivees",
+      "deck_id": "math-term-complementaires-derivees",
+      "grade": "term-complementaires",
+      "title": "Dérivation et variations",
+      "domain": "analyse",
+      "source_id": "terminale-complementaires-2019",
+      "source_section": "Fonctions : continuité, dérivabilité, limites, représentation graphique",
+      "prerequisites": [
+        "math-term-complementaires-logarithme",
+        "math-1re-spe-derivees"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-term-complementaires-convexite",
+      "deck_id": "math-term-complementaires-convexite",
+      "grade": "term-complementaires",
+      "title": "Convexité",
+      "domain": "analyse",
+      "source_id": "terminale-complementaires-2019",
+      "source_section": "Fonctions convexes",
+      "prerequisites": [
+        "math-term-complementaires-derivees"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-term-complementaires-primitives",
+      "deck_id": "math-term-complementaires-primitives",
+      "grade": "term-complementaires",
+      "title": "Primitives",
+      "domain": "analyse",
+      "source_id": "terminale-complementaires-2019",
+      "source_section": "Primitives et équations différentielles",
+      "prerequisites": [
+        "math-term-complementaires-derivees"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-term-complementaires-equations-differentielles",
+      "deck_id": "math-term-complementaires-equations-differentielles",
+      "grade": "term-complementaires",
+      "title": "Équations différentielles",
+      "domain": "analyse",
+      "source_id": "terminale-complementaires-2019",
+      "source_section": "Primitives et équations différentielles",
+      "prerequisites": [
+        "math-term-complementaires-primitives"
+      ],
+      "card_count": 7
+    },
+    {
+      "id": "math-term-complementaires-integrales",
+      "deck_id": "math-term-complementaires-integrales",
+      "grade": "term-complementaires",
+      "title": "Intégrales et valeur moyenne",
+      "domain": "analyse",
+      "source_id": "terminale-complementaires-2019",
+      "source_section": "Intégration",
+      "prerequisites": [
+        "math-term-complementaires-primitives",
+        "math-term-complementaires-limites-continuite"
+      ],
+      "card_count": 9
+    },
+    {
+      "id": "math-term-complementaires-conditionnement",
+      "deck_id": "math-term-complementaires-conditionnement",
+      "grade": "term-complementaires",
+      "title": "Conditionnement et probabilités inverses",
+      "domain": "probabilites",
+      "source_id": "terminale-complementaires-2019",
+      "source_section": "Lois discrètes ; Thème : inférence bayésienne",
+      "prerequisites": [
+        "math-1re-spe-probabilites"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-term-complementaires-binomiale",
+      "deck_id": "math-term-complementaires-binomiale",
+      "grade": "term-complementaires",
+      "title": "Bernoulli et loi binomiale",
+      "domain": "probabilites",
+      "source_id": "terminale-complementaires-2019",
+      "source_section": "Lois discrètes",
+      "prerequisites": [
+        "math-term-complementaires-conditionnement",
+        "math-1re-spe-variables-aleatoires"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "math-term-complementaires-lois-discretes",
+      "deck_id": "math-term-complementaires-lois-discretes",
+      "grade": "term-complementaires",
+      "title": "Lois uniforme discrète et géométrique",
+      "domain": "probabilites",
+      "source_id": "terminale-complementaires-2019",
+      "source_section": "Lois discrètes",
+      "prerequisites": [
+        "math-term-complementaires-binomiale"
+      ],
+      "card_count": 9
+    },
+    {
+      "id": "math-term-complementaires-densites-uniforme",
+      "deck_id": "math-term-complementaires-densites-uniforme",
+      "grade": "term-complementaires",
+      "title": "Densités et loi uniforme continue",
+      "domain": "probabilites",
+      "source_id": "terminale-complementaires-2019",
+      "source_section": "Lois à densité",
+      "prerequisites": [
+        "math-term-complementaires-integrales",
+        "math-term-complementaires-conditionnement"
+      ],
+      "card_count": 11
+    },
+    {
+      "id": "math-term-complementaires-loi-exponentielle",
+      "deck_id": "math-term-complementaires-loi-exponentielle",
+      "grade": "term-complementaires",
+      "title": "Loi exponentielle",
+      "domain": "probabilites",
+      "source_id": "terminale-complementaires-2019",
+      "source_section": "Lois à densité ; Thème : temps d’attente",
+      "prerequisites": [
+        "math-term-complementaires-densites-uniforme",
+        "math-term-complementaires-logarithme"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "math-term-complementaires-statistiques",
+      "deck_id": "math-term-complementaires-statistiques",
+      "grade": "term-complementaires",
+      "title": "Corrélation et ajustements",
+      "domain": "donnees",
+      "source_id": "terminale-complementaires-2019",
+      "source_section": "Statistique à deux variables quantitatives ; Thème : corrélation et causalité",
+      "prerequisites": [
+        "math-2de-statistiques",
+        "math-term-complementaires-logarithme"
+      ],
+      "card_count": 11
+    },
+    {
+      "id": "math-term-complementaires-algorithmes",
+      "deck_id": "math-term-complementaires-algorithmes",
+      "grade": "term-complementaires",
+      "title": "Méthodes algorithmiques",
+      "domain": "algorithmique",
+      "source_id": "terminale-complementaires-2019",
+      "source_section": "Algorithmique et programmation ; Intégration ; Primitives et équations différentielles",
+      "prerequisites": [
+        "math-1re-spe-python-listes",
+        "math-term-complementaires-integrales",
+        "math-term-complementaires-equations-differentielles"
+      ],
+      "card_count": 8
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "math-1re-spe-exponentielle",
+  "subject": "Maths",
+  "title": "Maths · 1re spé · Fonction exponentielle",
+  "description": "1re spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 3,
+  "grade": "1re-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "premiere-spe-2026",
+  "cards": [
+    {
+      "id": "definition",
+      "kind": "definition",
+      "front": "Quelles conditions définissent la fonction exponentielle sur $\\mathbb{R}$ ?",
+      "back": "$\\exp'=\\exp$ et $\\exp(0)=1$."
+    },
+    {
+      "id": "derivee",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $e^x$ ?",
+      "back": "$e^x$."
+    },
+    {
+      "id": "zero",
+      "kind": "formule",
+      "front": "Que vaut $e^0$ ?",
+      "back": "$1$."
+    },
+    {
+      "id": "somme",
+      "kind": "formule",
+      "front": "Que vaut $e^{a+b}$ pour des réels $a,b$ ?",
+      "back": "$e^{a+b}=e^ae^b$."
+    },
+    {
+      "id": "oppose",
+      "kind": "formule",
+      "front": "Que vaut $e^{-a}$ ?",
+      "back": "$e^{-a}=\\frac1{e^a}$."
+    },
+    {
+      "id": "difference",
+      "kind": "formule",
+      "front": "Que vaut $e^{a-b}$ ?",
+      "back": "$e^{a-b}=\\frac{e^a}{e^b}$."
+    },
+    {
+      "id": "puissance",
+      "kind": "formule",
+      "front": "Que vaut $(e^a)^n$ pour un entier $n$ ?",
+      "back": "$(e^a)^n=e^{na}$."
+    },
+    {
+      "id": "signe",
+      "kind": "propriete",
+      "front": "Quel est le signe de $e^x$ sur $\\mathbb{R}$ ?",
+      "back": "$e^x>0$ pour tout réel $x$."
+    },
+    {
+      "id": "variation",
+      "kind": "propriete",
+      "front": "Quelles sont les variations de l’exponentielle ?",
+      "back": "Elle est strictement croissante sur $\\mathbb{R}$."
+    },
+    {
+      "id": "egalite",
+      "kind": "propriete",
+      "front": "À quelle condition a-t-on $e^a=e^b$ ?",
+      "back": "Si et seulement si $a=b$."
+    },
+    {
+      "id": "derivee-at",
+      "kind": "formule",
+      "front": "Quelle est la dérivée de $t\\mapsto e^{at}$, avec $a$ constant ?",
+      "back": "$t\\mapsto ae^{at}$."
+    }
+  ]
+}

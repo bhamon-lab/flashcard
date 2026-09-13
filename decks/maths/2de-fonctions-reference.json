@@ -1,0 +1,74 @@
+{
+  "id": "math-2de-fonctions-reference",
+  "subject": "Maths",
+  "title": "Maths · 2de · Fonctions de référence",
+  "description": "2de · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CDEAE0",
+  "daily_new_limit": 3,
+  "grade": "2de",
+  "school_year": "2026-2027",
+  "curriculum_reference": "seconde-2026",
+  "cards": [
+    {
+      "id": "affine",
+      "kind": "definition",
+      "front": "Quelle est l’expression d’une fonction affine ?",
+      "back": "$f(x)=mx+p$, où $m$ et $p$ sont des constantes réelles."
+    },
+    {
+      "id": "affine-variation",
+      "kind": "propriete",
+      "front": "Comment le signe de $m$ donne-t-il les variations de $mx+p$ ?",
+      "back": "Croissante si $m>0$, décroissante si $m<0$, constante si $m=0$."
+    },
+    {
+      "id": "carre",
+      "kind": "propriete",
+      "front": "Quelles sont les variations de $x\\mapsto x^2$ ?",
+      "back": "Décroissante sur $]-\\infty;0]$, croissante sur $[0;+\\infty[$."
+    },
+    {
+      "id": "carre-equation",
+      "kind": "propriete",
+      "front": "Pour $k>0$, quelles sont les solutions de $x^2=k$ ?",
+      "back": "$x=-\\sqrt k$ ou $x=\\sqrt k$."
+    },
+    {
+      "id": "carre-negatif",
+      "kind": "propriete",
+      "front": "L’équation $x^2=k$ a-t-elle une solution réelle si $k<0$ ?",
+      "back": "Non : un carré réel est toujours positif ou nul."
+    },
+    {
+      "id": "inverse",
+      "kind": "propriete",
+      "front": "Quels sont le domaine et les variations de $x\\mapsto\\frac1x$ ?",
+      "back": "Définie sur $\\mathbb{R}\\setminus\\{0\\}$ ; décroissante sur chacun des intervalles $]-\\infty;0[$ et $]0;+\\infty[$."
+    },
+    {
+      "id": "racine",
+      "kind": "propriete",
+      "front": "Quels sont le domaine et les variations de $x\\mapsto\\sqrt x$ ?",
+      "back": "Définie et croissante sur $[0;+\\infty[$."
+    },
+    {
+      "id": "cube",
+      "kind": "propriete",
+      "front": "Quels sont le domaine et les variations de $x\\mapsto x^3$ ?",
+      "back": "Définie et strictement croissante sur $\\mathbb{R}$."
+    },
+    {
+      "id": "absolue-expression",
+      "kind": "formule",
+      "front": "Comment écrire $\\lvert x\\rvert$ selon le signe de $x$ ?",
+      "back": "$\\lvert x\\rvert=x$ si $x\\ge0$ ; $\\lvert x\\rvert=-x$ si $x<0$."
+    },
+    {
+      "id": "absolue-variation",
+      "kind": "propriete",
+      "front": "Quelles sont les variations de $x\\mapsto\\lvert x\\rvert$ ?",
+      "back": "Décroissante sur $]-\\infty;0]$, croissante sur $[0;+\\infty[$."
+    }
+  ]
+}

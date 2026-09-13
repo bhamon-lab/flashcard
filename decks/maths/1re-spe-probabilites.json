@@ -1,0 +1,68 @@
+{
+  "id": "math-1re-spe-probabilites",
+  "subject": "Maths",
+  "title": "Maths · 1re spé · Conditionnement et indépendance",
+  "description": "1re spé · 2026-2027 · Formules, définitions et règles essentielles.",
+  "format": "math",
+  "color": "#CBDDF5",
+  "daily_new_limit": 3,
+  "grade": "1re-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "premiere-spe-2026",
+  "cards": [
+    {
+      "id": "conditionnelle",
+      "kind": "formule",
+      "front": "Quelle formule définit $P_A(B)$ lorsque $P(A)>0$ ?",
+      "back": "$P_A(B)=\\frac{P(A\\cap B)}{P(A)}$."
+    },
+    {
+      "id": "independance",
+      "kind": "definition",
+      "front": "Quelle égalité caractérise l’indépendance de $A$ et $B$ ?",
+      "back": "$P(A\\cap B)=P(A)P(B)$."
+    },
+    {
+      "id": "conditionnelle-independance",
+      "kind": "propriete",
+      "front": "Si $A$ et $B$ sont indépendants et $P(A)>0$, que vaut $P_A(B)$ ?",
+      "back": "$P_A(B)=P(B)$."
+    },
+    {
+      "id": "incompatibles",
+      "kind": "definition",
+      "front": "Que signifie « $A$ et $B$ sont incompatibles » ?",
+      "back": "$A\\cap B=\\varnothing$ : ils ne peuvent pas se produire ensemble."
+    },
+    {
+      "id": "partition",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’une partition de l’univers ?",
+      "back": "Des événements non vides, deux à deux disjoints, dont la réunion est tout l’univers."
+    },
+    {
+      "id": "totales-deux",
+      "kind": "formule",
+      "front": "Quelle est la formule des probabilités totales avec $A$ et son contraire ?",
+      "back": "$P(B)=P(A)P_A(B)+P(\\overline A)P_{\\overline A}(B)$, si $0<P(A)<1$."
+    },
+    {
+      "id": "totales-partition",
+      "kind": "formule",
+      "front": "Quelle est la formule des probabilités totales pour une partition $(A_i)$ de probabilités non nulles ?",
+      "back": "$P(B)=\\sum_i P(A_i)P_{A_i}(B)$."
+    },
+    {
+      "id": "bernoulli",
+      "kind": "definition",
+      "front": "Qu’est-ce qu’une épreuve de Bernoulli de paramètre $p$ ?",
+      "back": "Une épreuve à deux issues : succès de probabilité $p$, échec de probabilité $1-p$."
+    },
+    {
+      "id": "chemin-bernoulli",
+      "kind": "formule",
+      "front": "Pour $n\\le4$ épreuves de Bernoulli indépendantes de paramètre $p$, quelle est la probabilité d’un chemin avec $k$ succès ?",
+      "back": "$p^k(1-p)^{n-k}$, pour $0<p<1$."
+    }
+  ]
+}
