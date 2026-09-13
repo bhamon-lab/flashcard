@@ -10,8 +10,6 @@ liste vers le bas).
 decks/
   maths/
     6e-nombres.json … 3e-trigonometrie.json   (catalogue collège)
-    derivees.json
-    trigonometrie.json
   francais/
     orthographe.json
   histoire/
