@@ -19,6 +19,9 @@ decks/
 Les fichiers `.json` posés directement à la racine de `decks/` restent acceptés
 (rétro-compatibilité) et sont rangés dans la matière « Divers ».
 
+Voir l’[arbre textuel de progression de la 6e à la terminale](../docs/progression-mathematiques-2026-2027.md),
+qui regroupe tous les niveaux dans des branches thématiques communes.
+
 ## Mathématiques du collège
 
 Le catalogue 2026-2027 contient **38 decks et 373 cartes** : 85 en 6e,
