@@ -494,6 +494,17 @@ export async function setProgressionFolds(folds: ProgressionFolds) {
   await setMetadata(PROGRESSION_FOLDS_KEY, JSON.stringify({ folded: folds.folded }));
 }
 
+/** État sauvegardé du filtre « Masquer les terminés » (partagé entre les matières). */
+const HIDE_LEARNED_KEY = 'hide-learned';
+
+export async function getHideLearnedPref(): Promise<boolean> {
+  return (await getMetadata(HIDE_LEARNED_KEY)) === '1';
+}
+
+export async function setHideLearnedPref(value: boolean) {
+  await setMetadata(HIDE_LEARNED_KEY, value ? '1' : '0');
+}
+
 export type SyncedCard = {
   id: string;
   front: string;
