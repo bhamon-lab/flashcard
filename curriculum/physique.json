@@ -1,0 +1,105 @@
+{
+  "schema_version": 2,
+  "subject": "Physique",
+  "school_year": "2026-2027",
+  "country": "FR",
+  "description": "Répertoire initial des formules de physique à mémoriser, du cycle 4 à la terminale spécialité. Les contenus de chimie, définitions et méthodes sont volontairement hors périmètre.",
+  "grade_order": [
+    "cycle4",
+    "2de",
+    "1re-spe",
+    "term-spe"
+  ],
+  "grade_labels": {
+    "cycle4": "Collège",
+    "2de": "2de",
+    "1re-spe": "1re spécialité",
+    "term-spe": "Terminale spécialité"
+  },
+  "tracks": {
+    "1re-spe": "Spécialité physique-chimie",
+    "term-spe": "Spécialité physique-chimie"
+  },
+  "branches": [
+    {
+      "title": "Formules essentielles",
+      "domains": [
+        "formules"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "cycle4-physique-2020",
+      "url": "https://www.education.gouv.fr/bo/20/Hebdo31/MENE2018714A.htm",
+      "label": "Programme de physique-chimie du cycle 4, BO n° 31 du 30 juillet 2020"
+    },
+    {
+      "id": "seconde-physique-2019",
+      "url": "https://eduscol.education.gouv.fr/sites/default/files/document/spe634annexe1062989pdf-82263.pdf",
+      "label": "Physique-chimie de seconde générale et technologique, BO spécial n° 1 du 22 janvier 2019"
+    },
+    {
+      "id": "premiere-spe-physique-2019",
+      "url": "https://eduscol.education.gouv.fr/sites/default/files/document/spe635annexe1063432pdf-82266.pdf",
+      "label": "Spécialité physique-chimie de première générale, BO spécial n° 1 du 22 janvier 2019"
+    },
+    {
+      "id": "terminale-spe-physique-2019",
+      "url": "https://eduscol.education.gouv.fr/sites/default/files/document/spe249annexe1158929pdf-82269.pdf",
+      "label": "Spécialité physique-chimie de terminale générale, BO spécial n° 8 du 25 juillet 2019"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "physique-cycle4-formules-essentielles",
+      "deck_id": "physique-cycle4-formules-essentielles",
+      "grade": "cycle4",
+      "title": "Formules essentielles",
+      "domain": "formules",
+      "source_id": "cycle4-physique-2020",
+      "source_section": "Mouvement et interactions ; énergie, conversions et transferts ; signaux",
+      "prerequisites": [],
+      "card_count": 17
+    },
+    {
+      "id": "physique-2de-formules-essentielles",
+      "deck_id": "physique-2de-formules-essentielles",
+      "grade": "2de",
+      "title": "Formules essentielles",
+      "domain": "formules",
+      "source_id": "seconde-physique-2019",
+      "source_section": "Mouvement et interactions ; ondes et signaux ; transferts d’énergie",
+      "prerequisites": [
+        "physique-cycle4-formules-essentielles"
+      ],
+      "card_count": 19
+    },
+    {
+      "id": "physique-1re-spe-formules-essentielles",
+      "deck_id": "physique-1re-spe-formules-essentielles",
+      "grade": "1re-spe",
+      "title": "Formules essentielles",
+      "domain": "formules",
+      "source_id": "premiere-spe-physique-2019",
+      "source_section": "Mouvement et interactions ; énergie, conversions et transferts ; ondes et signaux",
+      "prerequisites": [
+        "physique-2de-formules-essentielles"
+      ],
+      "card_count": 25
+    },
+    {
+      "id": "physique-term-spe-formules-essentielles",
+      "deck_id": "physique-term-spe-formules-essentielles",
+      "grade": "term-spe",
+      "title": "Formules essentielles",
+      "domain": "formules",
+      "source_id": "terminale-spe-physique-2019",
+      "source_section": "Mouvement et interactions ; énergie, conversions et transferts ; ondes et signaux",
+      "prerequisites": [
+        "physique-1re-spe-formules-essentielles"
+      ],
+      "card_count": 33
+    }
+  ]
+}

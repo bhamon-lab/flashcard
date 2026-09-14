@@ -1,0 +1,212 @@
+{
+  "id": "physique-term-spe-formules-essentielles",
+  "subject": "Physique",
+  "title": "Physique · Terminale spécialité · Formules essentielles",
+  "description": "Terminale spécialité physique-chimie · 2026-2027 · Uniquement les relations de physique à mémoriser.",
+  "format": "math",
+  "color": "#ACD8CD",
+  "daily_new_limit": 4,
+  "grade": "term-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "terminale-spe-physique-2019",
+  "cards": [
+    {
+      "id": "vecteur-vitesse-derivee",
+      "kind": "formule",
+      "front": "Vecteur vitesse instantanée à partir du vecteur position ?",
+      "back": "$\\vec v=\\frac{d\\vec r}{dt}$."
+    },
+    {
+      "id": "vecteur-acceleration",
+      "kind": "formule",
+      "front": "Vecteur accélération instantanée ?",
+      "back": "$\\vec a=\\frac{d\\vec v}{dt}=\\frac{d^2\\vec r}{dt^2}$."
+    },
+    {
+      "id": "deuxieme-loi-newton",
+      "kind": "formule",
+      "front": "Deuxième loi de Newton pour un système de masse constante dans un référentiel galiléen ?",
+      "back": "$\\sum\\vec F_{\\text{ext}}=m\\vec a_G$."
+    },
+    {
+      "id": "force-champ-electrique",
+      "kind": "formule",
+      "front": "Force exercée sur une particule de charge $q$ dans un champ électrique $\\vec E$ ?",
+      "back": "$\\vec F=q\\vec E$."
+    },
+    {
+      "id": "champ-condensateur-plan",
+      "kind": "formule",
+      "front": "Valeur du champ électrique uniforme entre deux armatures séparées de $d$ sous la tension $U$ ?",
+      "back": "$E=\\frac{|U|}{d}$."
+    },
+    {
+      "id": "acceleration-centripete",
+      "kind": "formule",
+      "front": "Valeur de l’accélération d’un mouvement circulaire uniforme de rayon $r$ ?",
+      "back": "$a=\\frac{v^2}{r}$."
+    },
+    {
+      "id": "vitesse-orbitale",
+      "kind": "formule",
+      "front": "Vitesse d’un satellite en orbite circulaire de rayon $r$ autour d’un astre de masse $M$ ?",
+      "back": "$v=\\sqrt{\\frac{GM}{r}}$."
+    },
+    {
+      "id": "troisieme-loi-kepler",
+      "kind": "formule",
+      "front": "Troisième loi de Kepler pour une orbite de demi-grand axe $a$ autour d’un astre de masse $M$ ?",
+      "back": "$\\frac{T^2}{a^3}=\\frac{4\\pi^2}{GM}$."
+    },
+    {
+      "id": "poussee-archimede",
+      "kind": "formule",
+      "front": "Valeur de la poussée d’Archimède sur un volume immergé $V$ ?",
+      "back": "$F_A=\\rho_{\\text{fluide}}Vg$."
+    },
+    {
+      "id": "debit-volumique",
+      "kind": "formule",
+      "front": "Débit volumique $Q_v$ d’un fluide ?",
+      "back": "$Q_v=\\frac{\\Delta V}{\\Delta t}=Sv$."
+    },
+    {
+      "id": "continuite-debit",
+      "kind": "formule",
+      "front": "Conservation du débit d’un fluide incompressible en régime permanent ?",
+      "back": "$S_1v_1=S_2v_2$."
+    },
+    {
+      "id": "bernoulli",
+      "kind": "formule",
+      "front": "Relation de Bernoulli le long d’une ligne de courant d’un fluide parfait en régime permanent ?",
+      "back": "$p+\\frac{1}{2}\\rho v^2+\\rho gz=\\text{constante}$."
+    },
+    {
+      "id": "gaz-parfait",
+      "kind": "formule",
+      "front": "Équation d’état du gaz parfait ?",
+      "back": "$pV=nRT$."
+    },
+    {
+      "id": "premier-principe",
+      "kind": "formule",
+      "front": "Premier principe de la thermodynamique avec les transferts reçus par le système ?",
+      "back": "$\\Delta U=W+Q$."
+    },
+    {
+      "id": "variation-energie-interne",
+      "kind": "formule",
+      "front": "Variation d’énergie interne d’un système incompressible de capacité thermique $C$ ?",
+      "back": "$\\Delta U=C\\,\\Delta T$."
+    },
+    {
+      "id": "capacite-thermique-massique",
+      "kind": "formule",
+      "front": "Capacité thermique $C$ d’un corps de masse $m$ et de capacité thermique massique $c$ ?",
+      "back": "$C=mc$."
+    },
+    {
+      "id": "flux-thermique",
+      "kind": "formule",
+      "front": "Flux thermique moyen $\\Phi$ associé à une énergie transférée $Q$ pendant $\\Delta t$ ?",
+      "back": "$\\Phi=\\frac{Q}{\\Delta t}$."
+    },
+    {
+      "id": "resistance-thermique",
+      "kind": "formule",
+      "front": "Flux thermique à travers une paroi de résistance thermique $R_{th}$ ?",
+      "back": "$\\Phi=\\frac{T_{\\text{chaud}}-T_{\\text{froid}}}{R_{th}}$."
+    },
+    {
+      "id": "niveau-intensite-sonore",
+      "kind": "formule",
+      "front": "Niveau d’intensité sonore $L$ associé à l’intensité $I$ ?",
+      "back": "$L=10\\log\\left(\\frac{I}{I_0}\\right)$, avec $I_0=10^{-12}\\ \\mathrm{W\\,m^{-2}}$."
+    },
+    {
+      "id": "attenuation-sonore",
+      "kind": "formule",
+      "front": "Atténuation sonore entre un niveau incident $L_i$ et un niveau transmis $L_t$ ?",
+      "back": "$A=L_i-L_t$."
+    },
+    {
+      "id": "diffraction",
+      "kind": "formule",
+      "front": "Angle caractéristique de diffraction par une ouverture de taille $a$ ?",
+      "back": "$\\theta\\simeq\\frac{\\lambda}{a}$, pour les petits angles."
+    },
+    {
+      "id": "interferences-constructives",
+      "kind": "formule",
+      "front": "Condition d’interférences constructives pour deux sources en phase ?",
+      "back": "$\\delta=k\\lambda$, avec $k\\in\\mathbb Z$."
+    },
+    {
+      "id": "interferences-destructives",
+      "kind": "formule",
+      "front": "Condition d’interférences destructives pour deux sources en phase ?",
+      "back": "$\\delta=\\left(k+\\frac{1}{2}\\right)\\lambda$, avec $k\\in\\mathbb Z$."
+    },
+    {
+      "id": "interfrange-young",
+      "kind": "formule",
+      "front": "Interfrange $i$ des trous d’Young séparés de $a$, écran à la distance $D$ ?",
+      "back": "$i=\\frac{\\lambda D}{a}$."
+    },
+    {
+      "id": "doppler-source-approche",
+      "kind": "formule",
+      "front": "Fréquence reçue par un observateur fixe lorsqu’une source s’approche à la vitesse $v_s$ ?",
+      "back": "$f_R=f_E\\frac{c}{c-v_s}$."
+    },
+    {
+      "id": "grossissement-lunette",
+      "kind": "formule",
+      "front": "Grossissement d’une lunette astronomique afocale ?",
+      "back": "$G=\\frac{\\theta'}{\\theta}=-\\frac{f'_{\\text{objectif}}}{f'_{\\text{oculaire}}}$."
+    },
+    {
+      "id": "effet-photoelectrique",
+      "kind": "formule",
+      "front": "Énergie cinétique maximale d’un électron arraché par effet photoélectrique ?",
+      "back": "$E_{c,\\max}=h\\nu-W_{\\text{extraction}}$."
+    },
+    {
+      "id": "charge-condensateur",
+      "kind": "formule",
+      "front": "Charge $q$ d’un condensateur de capacité $C$ soumis à la tension $u_C$ ?",
+      "back": "$q=Cu_C$."
+    },
+    {
+      "id": "courant-condensateur",
+      "kind": "formule",
+      "front": "Intensité du courant traversant un condensateur en convention récepteur ?",
+      "back": "$i=C\\frac{du_C}{dt}$."
+    },
+    {
+      "id": "energie-condensateur",
+      "kind": "formule",
+      "front": "Énergie stockée dans un condensateur ?",
+      "back": "$E_C=\\frac{1}{2}Cu_C^2=\\frac{q^2}{2C}$."
+    },
+    {
+      "id": "temps-caracteristique-rc",
+      "kind": "formule",
+      "front": "Temps caractéristique d’un circuit RC série ?",
+      "back": "$\\tau=RC$."
+    },
+    {
+      "id": "charge-rc",
+      "kind": "formule",
+      "front": "Tension du condensateur initialement déchargé pendant sa charge par une source idéale $E$ ?",
+      "back": "$u_C(t)=E\\left(1-e^{-t/(RC)}\\right)$."
+    },
+    {
+      "id": "decharge-rc",
+      "kind": "formule",
+      "front": "Tension d’un condensateur de tension initiale $U_0$ pendant sa décharge dans une résistance ?",
+      "back": "$u_C(t)=U_0e^{-t/(RC)}$."
+    }
+  ]
+}
