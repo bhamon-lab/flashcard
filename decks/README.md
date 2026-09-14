@@ -60,12 +60,14 @@ Vérifier avec `python3 scripts/validate_lycee_decks.py`.
 Le catalogue contient **161 decks et 3 265 cartes**, classés par niveau de la 6e
 à la terminale : 56 listes de vocabulaire, leurs 56 copies en compréhension
 orale, 14 listes de culture, 185 verbes irréguliers et 28 listes de grammaire. Les champs
-éditoriaux `category`, `mode`, `audio_language`, `cards[].kind` et
-`cards[].audio_text` sont conservés dans les fichiers mais actuellement ignorés
-par le synchroniseur. Chaque deck hors verbes irréguliers contient 20 cartes :
-les listes de vocabulaire travaillent les deux sens de traduction, les listes
-orales alternent reconnaissance et dictée, et les decks de culture et de
-grammaire ajoutent un rappel de consolidation à chaque carte principale.
+`category` et `cards[].kind` restent purement éditoriaux. Chaque deck hors verbes
+irréguliers contient 20 cartes : les listes de vocabulaire travaillent les deux
+sens de traduction, les listes orales alternent reconnaissance et dictée, et les
+decks de culture et de grammaire ajoutent un rappel de consolidation à chaque
+carte principale. Les champs `mode: "listening"` et `audio_language` (deck) et
+`cards[].audio_text` sont synchronisés : l’app prononce le texte avec la synthèse
+vocale dans la langue indiquée et marque ces paquets d’une icône casque dans les
+listes.
 
 Consulter l'[arbre de progression en anglais](../docs/progression-anglais.md)
 pour les parcours conseillés, les prérequis et les principes de conception.

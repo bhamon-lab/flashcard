@@ -11,7 +11,9 @@ import {
 const DEFAULT_REPO = 'bhamon-lab/flashcard';
 const DECKS_PATH = 'decks';
 const LAST_SYNC_KEY = 'decks-last-sync';
-const FILE_STATE_KEY = 'decks-file-state';
+// Clé versionnée : le passage à v2 (champs audio de compréhension orale) force
+// un re-téléchargement complet une seule fois, y compris des fichiers inchangés.
+const FILE_STATE_KEY = 'decks-file-state-v2';
 const BUNDLE_NAME = '_bundle.json';
 
 export type SyncResult = {
@@ -76,16 +78,21 @@ function asDeck(raw: unknown, fileName: string, fallbackSubject: string): Synced
       front,
       back: typeof card.back === 'string' ? card.back.trim() : '',
       indice: typeof card.indice === 'string' ? card.indice.trim() : '',
+      audio_text: typeof card.audio_text === 'string' ? card.audio_text.trim() : '',
     });
   });
   if (!normalized.length) return null;
   const subject = typeof candidate.subject === 'string' && candidate.subject.trim() ? candidate.subject.trim() : fallbackSubject;
   const grade = typeof candidate.grade === 'string' && candidate.grade.trim() ? candidate.grade.trim() : undefined;
+  const mode = typeof candidate.mode === 'string' ? candidate.mode.trim() : undefined;
+  const audioLanguage = typeof candidate.audio_language === 'string' ? candidate.audio_language.trim() : undefined;
   return {
     id,
     title,
     subject,
     grade,
+    mode,
+    audio_language: audioLanguage || undefined,
     description: typeof candidate.description === 'string' ? candidate.description.trim() : '',
     color: typeof candidate.color === 'string' ? candidate.color : undefined,
     format: candidate.format === 'math' ? 'math' : 'people',
