@@ -199,14 +199,54 @@ export async function updateDailyLimit(deckId: number, limit: number) {
   await db.runAsync('UPDATE decks SET daily_new_limit = ? WHERE id = ?', Math.max(0, limit), deckId);
 }
 
-export async function updateReviewDelays(deckId: number, delays: ReviewDelays) {
+/** Délais de révision partagés par tous les paquets d'une matière. */
+export const DEFAULT_REVIEW_DELAYS: ReviewDelays = { again: 0, soon: 10, later: 60, tomorrow: 1440 };
+
+const SUBJECT_DELAYS_KEY = 'subject-delays';
+
+type StoredSubjectDelays = Record<string, Partial<ReviewDelays>>;
+
+const normaliseDelays = (delays: ReviewDelays): ReviewDelays => ({
+  again: Math.max(0, Math.round(delays.again)),
+  soon: Math.max(0, Math.round(delays.soon)),
+  later: Math.max(0, Math.round(delays.later)),
+  tomorrow: Math.max(0, Math.round(delays.tomorrow)),
+});
+
+const parseSubjectDelays = (raw: string | null): StoredSubjectDelays => {
+  if (!raw) return {};
+  try {
+    const parsed = JSON.parse(raw) as StoredSubjectDelays;
+    return parsed && typeof parsed === 'object' ? parsed : {};
+  } catch {
+    return {};
+  }
+};
+
+export async function getSubjectDelays(subject: string): Promise<ReviewDelays> {
+  const stored = parseSubjectDelays(await getMetadata(SUBJECT_DELAYS_KEY))[subject.trim().toLowerCase()];
+  if (!stored) return { ...DEFAULT_REVIEW_DELAYS };
+  return {
+    again: Number.isFinite(Number(stored.again)) ? Number(stored.again) : DEFAULT_REVIEW_DELAYS.again,
+    soon: Number.isFinite(Number(stored.soon)) ? Number(stored.soon) : DEFAULT_REVIEW_DELAYS.soon,
+    later: Number.isFinite(Number(stored.later)) ? Number(stored.later) : DEFAULT_REVIEW_DELAYS.later,
+    tomorrow: Number.isFinite(Number(stored.tomorrow)) ? Number(stored.tomorrow) : DEFAULT_REVIEW_DELAYS.tomorrow,
+  };
+}
+
+export async function setSubjectDelays(subject: string, delays: ReviewDelays) {
+  const next = normaliseDelays(delays);
+  const map = parseSubjectDelays(await getMetadata(SUBJECT_DELAYS_KEY));
+  map[subject.trim().toLowerCase()] = next;
+  await setMetadata(SUBJECT_DELAYS_KEY, JSON.stringify(map));
+  // Réplique les délais sur les paquets de la matière : les statistiques
+  // classent les réponses via les colonnes de délai des paquets.
   const db = await getDatabase();
-  const normalise = (value: number) => Math.max(0, Math.round(value));
   await db.runAsync(
     `UPDATE decks
      SET again_delay_minutes = ?, soon_delay_minutes = ?, later_delay_minutes = ?, tomorrow_delay_minutes = ?
-     WHERE id = ?`,
-    normalise(delays.again), normalise(delays.soon), normalise(delays.later), normalise(delays.tomorrow), deckId,
+     WHERE lower(subject) = lower(?)`,
+    next.again, next.soon, next.later, next.tomorrow, subject.trim(),
   );
 }
 
