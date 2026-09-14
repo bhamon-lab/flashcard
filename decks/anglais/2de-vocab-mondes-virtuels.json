@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « un usage responsable ».",
       "back": "responsible use"
+    },
+    {
+      "id": "online-community-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an online community ».",
+      "back": "une communauté en ligne"
+    },
+    {
+      "id": "digital-footprint-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a digital footprint ».",
+      "back": "une empreinte numérique"
+    },
+    {
+      "id": "privacy-settings-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « privacy settings ».",
+      "back": "les paramètres de confidentialité"
+    },
+    {
+      "id": "user-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a user ».",
+      "back": "un utilisateur"
+    },
+    {
+      "id": "content-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « content ».",
+      "back": "du contenu"
+    },
+    {
+      "id": "moderate-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to moderate ».",
+      "back": "modérer"
+    },
+    {
+      "id": "report-content-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to report content ».",
+      "back": "signaler un contenu"
+    },
+    {
+      "id": "harassment-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « harassment ».",
+      "back": "le harcèlement"
+    },
+    {
+      "id": "access-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to have access to ».",
+      "back": "avoir accès à"
+    },
+    {
+      "id": "responsible-use-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « responsible use ».",
+      "back": "un usage responsable"
     }
   ]
 }

@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « curieux ».",
       "back": "curious"
+    },
+    {
+      "id": "kind-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « kind ».",
+      "back": "gentil"
+    },
+    {
+      "id": "funny-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « funny ».",
+      "back": "drôle"
+    },
+    {
+      "id": "brave-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « brave ».",
+      "back": "courageux"
+    },
+    {
+      "id": "clever-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « clever ».",
+      "back": "intelligent"
+    },
+    {
+      "id": "hardworking-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « hard-working ».",
+      "back": "travailleur"
+    },
+    {
+      "id": "lazy-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « lazy ».",
+      "back": "paresseux"
+    },
+    {
+      "id": "selfish-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « selfish ».",
+      "back": "égoïste"
+    },
+    {
+      "id": "patient-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « patient ».",
+      "back": "patient"
+    },
+    {
+      "id": "honest-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « honest ».",
+      "back": "honnête"
+    },
+    {
+      "id": "curious-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « curious ».",
+      "back": "curieux"
     }
   ]
 }

@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Réduis : Students who live abroad…",
       "back": "Students living abroad…"
+    },
+    {
+      "id": "non-defining-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « London, which is very diverse, attracts millions. » ?",
+      "back": "Ajoute la ponctuation : London which is very diverse attracts millions."
+    },
+    {
+      "id": "whom-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The person to whom I spoke. » ?",
+      "back": "Complète formellement : The person to ___ I spoke."
+    },
+    {
+      "id": "whose-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « A country whose economy is growing. » ?",
+      "back": "Complète : A country ___ economy is growing."
+    },
+    {
+      "id": "whereby-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « A system whereby users vote directly. » ?",
+      "back": "Complète : A system ___ users vote directly."
+    },
+    {
+      "id": "have-done-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I had my phone repaired. » ?",
+      "back": "Traduis : « J'ai fait réparer mon téléphone. »"
+    },
+    {
+      "id": "get-done-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She is going to get her hair cut. » ?",
+      "back": "Traduis : « Elle va se faire couper les cheveux. »"
+    },
+    {
+      "id": "make-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « They made us wait. » ?",
+      "back": "Traduis : « Ils nous ont obligés à attendre. »"
+    },
+    {
+      "id": "let-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « They let us leave. » ?",
+      "back": "Traduis : « Ils nous ont laissé partir. »"
+    },
+    {
+      "id": "allow-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « We were allowed to enter. » ?",
+      "back": "Mets au passif : They allowed us to enter."
+    },
+    {
+      "id": "reduced-relative-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Students living abroad… » ?",
+      "back": "Réduis : Students who live abroad…"
     }
   ]
 }

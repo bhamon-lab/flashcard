@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « le cousin / la cousine ».",
       "back": "the cousin"
+    },
+    {
+      "id": "the-mother-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the mother ».",
+      "back": "la mère"
+    },
+    {
+      "id": "the-father-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the father ».",
+      "back": "le père"
+    },
+    {
+      "id": "the-parents-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the parents ».",
+      "back": "les parents"
+    },
+    {
+      "id": "the-sister-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the sister ».",
+      "back": "la sœur"
+    },
+    {
+      "id": "the-brother-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the brother ».",
+      "back": "le frère"
+    },
+    {
+      "id": "the-grandmother-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the grandmother ».",
+      "back": "la grand-mère"
+    },
+    {
+      "id": "the-grandfather-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the grandfather ».",
+      "back": "le grand-père"
+    },
+    {
+      "id": "the-aunt-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the aunt ».",
+      "back": "la tante"
+    },
+    {
+      "id": "the-uncle-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the uncle ».",
+      "back": "l’oncle"
+    },
+    {
+      "id": "the-cousin-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the cousin ».",
+      "back": "le cousin / la cousine"
     }
   ]
 }

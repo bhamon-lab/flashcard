@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « innocent ».",
       "back": "innocent"
+    },
+    {
+      "id": "crime-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a crime ».",
+      "back": "un crime"
+    },
+    {
+      "id": "criminal-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a criminal ».",
+      "back": "un criminel"
+    },
+    {
+      "id": "victim-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a victim ».",
+      "back": "une victime"
+    },
+    {
+      "id": "witness-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a witness ».",
+      "back": "un témoin"
+    },
+    {
+      "id": "evidence-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « evidence ».",
+      "back": "une preuve"
+    },
+    {
+      "id": "police-officer-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a police officer ».",
+      "back": "un policier"
+    },
+    {
+      "id": "court-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a court ».",
+      "back": "un tribunal"
+    },
+    {
+      "id": "judge-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a judge ».",
+      "back": "un juge"
+    },
+    {
+      "id": "guilty-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « guilty ».",
+      "back": "coupable"
+    },
+    {
+      "id": "innocent-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « innocent ».",
+      "back": "innocent"
     }
   ]
 }

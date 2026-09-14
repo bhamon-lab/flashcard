@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « l'inconnu ».",
       "back": "the unknown"
+    },
+    {
+      "id": "expedition-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an expedition ».",
+      "back": "une expédition"
+    },
+    {
+      "id": "settler-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a settler ».",
+      "back": "un colon"
+    },
+    {
+      "id": "indigenous-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « Indigenous ».",
+      "back": "autochtone"
+    },
+    {
+      "id": "remote-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « remote ».",
+      "back": "isolé"
+    },
+    {
+      "id": "wilderness-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the wilderness ».",
+      "back": "une région sauvage"
+    },
+    {
+      "id": "charted-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « charted ».",
+      "back": "cartographié"
+    },
+    {
+      "id": "set-off-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to set off ».",
+      "back": "partir"
+    },
+    {
+      "id": "reach-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to reach ».",
+      "back": "atteindre"
+    },
+    {
+      "id": "overcome-obstacle-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to overcome an obstacle ».",
+      "back": "surmonter un obstacle"
+    },
+    {
+      "id": "unknown-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the unknown ».",
+      "back": "l'inconnu"
     }
   ]
 }

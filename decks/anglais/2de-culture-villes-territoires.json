@@ -68,6 +68,66 @@
       "kind": "culture",
       "front": "Quelles sont les deux îles principales de la Nouvelle-Zélande ?",
       "back": "The North Island and the South Island."
+    },
+    {
+      "id": "repere-01-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Manchester. » ?",
+      "back": "Quelle ville britannique est liée à la révolution industrielle et au textile ?"
+    },
+    {
+      "id": "repere-02-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Belfast. » ?",
+      "back": "Dans quelle ville fut construit le Titanic ?"
+    },
+    {
+      "id": "repere-03-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « In the San Francisco Bay Area, California. » ?",
+      "back": "Où se trouve Silicon Valley ?"
+    },
+    {
+      "id": "repere-04-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « A formerly industrial region of the northeastern and midwestern United States. » ?",
+      "back": "Que désigne the Rust Belt ?"
+    },
+    {
+      "id": "repere-05-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The southern and southwestern region of the United States. » ?",
+      "back": "Que désigne the Sun Belt ?"
+    },
+    {
+      "id": "repere-06-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Manhattan, Brooklyn, Queens, the Bronx and Staten Island. » ?",
+      "back": "Quels sont les cinq boroughs de New York ?"
+    },
+    {
+      "id": "repere-07-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « It is a federal district created to serve as the national capital. » ?",
+      "back": "Pourquoi Washington, D.C. n'appartient-elle à aucun État ?"
+    },
+    {
+      "id": "repere-08-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Ten provinces and three territories. » ?",
+      "back": "Combien le Canada compte-t-il de provinces et territoires ?"
+    },
+    {
+      "id": "repere-09-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Six states, plus two main mainland territories. » ?",
+      "back": "Combien l'Australie compte-t-elle d'États ?"
+    },
+    {
+      "id": "repere-10-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The North Island and the South Island. » ?",
+      "back": "Quelles sont les deux îles principales de la Nouvelle-Zélande ?"
     }
   ]
 }

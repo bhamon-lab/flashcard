@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « battre un record ».",
       "back": "to break a record"
+    },
+    {
+      "id": "athlete-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an athlete ».",
+      "back": "un athlète"
+    },
+    {
+      "id": "coach-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a coach ».",
+      "back": "un entraîneur"
+    },
+    {
+      "id": "opponent-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an opponent ».",
+      "back": "un adversaire"
+    },
+    {
+      "id": "referee-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a referee ».",
+      "back": "un arbitre"
+    },
+    {
+      "id": "achievement-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an achievement ».",
+      "back": "une réussite"
+    },
+    {
+      "id": "fair-play-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « fair play ».",
+      "back": "le fair-play"
+    },
+    {
+      "id": "defeat-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a defeat ».",
+      "back": "une défaite"
+    },
+    {
+      "id": "draw-match-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a draw ».",
+      "back": "un match nul"
+    },
+    {
+      "id": "compete-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to compete ».",
+      "back": "concourir"
+    },
+    {
+      "id": "break-record-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to break a record ».",
+      "back": "battre un record"
     }
   ]
 }

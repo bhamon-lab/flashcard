@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "supporter le coût",
       "audio_text": "to bear the cost"
+    },
+    {
+      "id": "carbon-tax-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a carbon tax",
+      "audio_text": "a carbon tax"
+    },
+    {
+      "id": "emission-target-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an emissions target",
+      "audio_text": "an emissions target"
+    },
+    {
+      "id": "climate-justice-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "climate justice",
+      "audio_text": "climate justice"
+    },
+    {
+      "id": "adaptation-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "adaptation",
+      "audio_text": "adaptation"
+    },
+    {
+      "id": "mitigation-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "mitigation",
+      "audio_text": "mitigation"
+    },
+    {
+      "id": "loss-damage-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "loss and damage",
+      "audio_text": "loss and damage"
+    },
+    {
+      "id": "binding-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "binding",
+      "audio_text": "binding"
+    },
+    {
+      "id": "pledge-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to pledge",
+      "audio_text": "to pledge"
+    },
+    {
+      "id": "meet-target-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to meet a target",
+      "audio_text": "to meet a target"
+    },
+    {
+      "id": "bear-cost-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to bear the cost",
+      "audio_text": "to bear the cost"
     }
   ]
 }

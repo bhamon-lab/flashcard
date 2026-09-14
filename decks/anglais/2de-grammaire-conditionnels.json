@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Quelle différence entre le premier et le deuxième conditionnel ?",
       "back": "Le premier envisage un possible réel ; le deuxième une hypothèse irréelle ou peu probable."
+    },
+    {
+      "id": "zero-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « If water reaches 0°C, it freezes. » ?",
+      "back": "Complète : If water reaches 0°C, it ___. (freeze)"
+    },
+    {
+      "id": "first-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « If we act now, emissions will fall. » ?",
+      "back": "Complète : If we act now, emissions ___. (fall)"
+    },
+    {
+      "id": "first-modal-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « If you finish, you can leave. » ?",
+      "back": "Complète : If you finish, you ___ leave. (can)"
+    },
+    {
+      "id": "unless-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Unless we act, it will worsen. » ?",
+      "back": "Reformule avec unless : If we don't act, it will worsen."
+    },
+    {
+      "id": "second-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « If I were you, I would wait. » ?",
+      "back": "Complète : If I ___ you, I would wait. (be)"
+    },
+    {
+      "id": "second-result-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « If she had time, she would travel more. » ?",
+      "back": "Complète : If she had time, she ___ more. (travel)"
+    },
+    {
+      "id": "could-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « If we had more money, we could help. » ?",
+      "back": "Traduis : « Si nous avions plus d'argent, nous pourrions aider. »"
+    },
+    {
+      "id": "wish-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I wish I were more confident. » ?",
+      "back": "Traduis : « J'aimerais être plus sûr de moi. »"
+    },
+    {
+      "id": "as-if-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « He talks as if he knew everything. » ?",
+      "back": "Traduis : « Il parle comme s'il savait tout. »"
+    },
+    {
+      "id": "difference-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Le premier envisage un possible réel ; le deuxième une hypothèse irréelle ou peu probable. » ?",
+      "back": "Quelle différence entre le premier et le deuxième conditionnel ?"
     }
   ]
 }

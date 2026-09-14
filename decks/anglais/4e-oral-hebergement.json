@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "disponible",
       "audio_text": "available"
+    },
+    {
+      "id": "hotel-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a hotel",
+      "audio_text": "a hotel"
+    },
+    {
+      "id": "youth-hostel-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a youth hostel",
+      "audio_text": "a youth hostel"
+    },
+    {
+      "id": "campsite-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a campsite",
+      "audio_text": "a campsite"
+    },
+    {
+      "id": "single-room-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a single room",
+      "audio_text": "a single room"
+    },
+    {
+      "id": "double-room-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a double room",
+      "audio_text": "a double room"
+    },
+    {
+      "id": "reception-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "reception",
+      "audio_text": "reception"
+    },
+    {
+      "id": "key-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a key",
+      "audio_text": "a key"
+    },
+    {
+      "id": "check-in-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to check in",
+      "audio_text": "to check in"
+    },
+    {
+      "id": "check-out-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to check out",
+      "audio_text": "to check out"
+    },
+    {
+      "id": "available-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "available",
+      "audio_text": "available"
     }
   ]
 }

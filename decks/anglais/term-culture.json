@@ -68,6 +68,66 @@
       "kind": "culture",
       "front": "Que désigne Windrush au Royaume-Uni ?",
       "back": "Post-war Caribbean migration to the UK and the generation associated with it."
+    },
+    {
+      "id": "repere-01-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « A voluntary association of independent countries, many with historical links to the British Empire. » ?",
+      "back": "Qu'est-ce que le Commonwealth ?"
+    },
+    {
+      "id": "repere-02-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « In New York City. » ?",
+      "back": "Où se trouve le siège des Nations unies ?"
+    },
+    {
+      "id": "repere-03-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « North Atlantic Treaty Organization. » ?",
+      "back": "Que signifie l'abréviation NATO ?"
+    },
+    {
+      "id": "repere-04-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Good Friday Agreement. » ?",
+      "back": "Quel accord de 1998 a contribué à la paix en Irlande du Nord ?"
+    },
+    {
+      "id": "repere-05-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The transfer of some powers from Westminster to Scotland, Wales and Northern Ireland. » ?",
+      "back": "Qu'est-ce que devolution au Royaume-Uni ?"
+    },
+    {
+      "id": "repere-06-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « On 26 January; the date is also contested and called Invasion Day by many Indigenous people. » ?",
+      "back": "Quel jour célèbre-t-on l'Australia Day ?"
+    },
+    {
+      "id": "repere-07-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Treaty of Waitangi. » ?",
+      "back": "Quel traité de 1840 est fondateur en Nouvelle-Zélande ?"
+    },
+    {
+      "id": "repere-08-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The end of slavery in the United States, commemorated on 19 June. » ?",
+      "back": "Que célèbre Juneteenth aux États-Unis ?"
+    },
+    {
+      "id": "repere-09-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « To interpret the Constitution and federal law. » ?",
+      "back": "Quel est le rôle principal de la Cour suprême américaine ?"
+    },
+    {
+      "id": "repere-10-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Post-war Caribbean migration to the UK and the generation associated with it. » ?",
+      "back": "Que désigne Windrush au Royaume-Uni ?"
     }
   ]
 }

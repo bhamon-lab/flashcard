@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "les déchets",
       "audio_text": "waste"
+    },
+    {
+      "id": "sunny-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "sunny",
+      "audio_text": "sunny"
+    },
+    {
+      "id": "cloudy-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "cloudy",
+      "audio_text": "cloudy"
+    },
+    {
+      "id": "windy-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "windy",
+      "audio_text": "windy"
+    },
+    {
+      "id": "a-thunderstorm-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a thunderstorm",
+      "audio_text": "a thunderstorm"
+    },
+    {
+      "id": "a-drought-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a drought",
+      "audio_text": "a drought"
+    },
+    {
+      "id": "a-flood-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a flood",
+      "audio_text": "a flood"
+    },
+    {
+      "id": "pollution-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "pollution",
+      "audio_text": "pollution"
+    },
+    {
+      "id": "to-recycle-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to recycle",
+      "audio_text": "to recycle"
+    },
+    {
+      "id": "to-save-water-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to save water",
+      "audio_text": "to save water"
+    },
+    {
+      "id": "waste-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "waste",
+      "audio_text": "waste"
     }
   ]
 }

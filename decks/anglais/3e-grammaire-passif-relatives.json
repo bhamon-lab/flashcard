@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Peut-on omettre that : The book that I bought ?",
       "back": "Oui : The book I bought. Le pronom est complément."
+    },
+    {
+      "id": "passive-present-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « English is spoken here. » ?",
+      "back": "Mets au passif : People speak English here."
+    },
+    {
+      "id": "passive-past-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « It was built in 1920. » ?",
+      "back": "Mets au passif : They built it in 1920."
+    },
+    {
+      "id": "passive-agent-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Hamlet was written by Shakespeare. » ?",
+      "back": "Mets au passif : Shakespeare wrote Hamlet."
+    },
+    {
+      "id": "passive-negative-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Phones are not allowed. » ?",
+      "back": "Mets au passif : They do not allow phones."
+    },
+    {
+      "id": "passive-question-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Is tea grown here? » ?",
+      "back": "Mets au passif : Do they grow tea here?"
+    },
+    {
+      "id": "who-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The activist who spoke was convincing. » ?",
+      "back": "Complète : The activist ___ spoke was convincing."
+    },
+    {
+      "id": "which-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The film which/that won is British. » ?",
+      "back": "Complète : The film ___ won is British."
+    },
+    {
+      "id": "whose-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The author whose book I read is Canadian. » ?",
+      "back": "Complète : The author ___ book I read is Canadian."
+    },
+    {
+      "id": "where-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « This is the city where she was born. » ?",
+      "back": "Complète : This is the city ___ she was born."
+    },
+    {
+      "id": "omit-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Oui : The book I bought. Le pronom est complément. » ?",
+      "back": "Peut-on omettre that : The book that I bought ?"
     }
   ]
 }

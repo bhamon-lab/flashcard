@@ -68,6 +68,66 @@
       "kind": "culture",
       "front": "Comment appelle-t-on le drapeau du Royaume-Uni ?",
       "back": "The Union Jack / the Union Flag."
+    },
+    {
+      "id": "repere-01-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « London (Londres). » ?",
+      "back": "Quelle est la capitale du Royaume-Uni ?"
+    },
+    {
+      "id": "repere-02-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Dublin. » ?",
+      "back": "Quelle est la capitale de l'Irlande ?"
+    },
+    {
+      "id": "repere-03-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Washington, D.C. » ?",
+      "back": "Quelle est la capitale des États-Unis ?"
+    },
+    {
+      "id": "repere-04-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Ottawa. » ?",
+      "back": "Quelle est la capitale du Canada ?"
+    },
+    {
+      "id": "repere-05-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Canberra. » ?",
+      "back": "Quelle est la capitale de l'Australie ?"
+    },
+    {
+      "id": "repere-06-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Wellington. » ?",
+      "back": "Quelle est la capitale de la Nouvelle-Zélande ?"
+    },
+    {
+      "id": "repere-07-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « England, Scotland, Wales and Northern Ireland. » ?",
+      "back": "Quelles sont les quatre nations du Royaume-Uni ?"
+    },
+    {
+      "id": "repere-08-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The pound sterling (£). » ?",
+      "back": "Quelle monnaie utilise-t-on au Royaume-Uni ?"
+    },
+    {
+      "id": "repere-09-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The shamrock (le trèfle). » ?",
+      "back": "Quel symbole végétal représente l'Irlande ?"
+    },
+    {
+      "id": "repere-10-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Union Jack / the Union Flag. » ?",
+      "back": "Comment appelle-t-on le drapeau du Royaume-Uni ?"
     }
   ]
 }

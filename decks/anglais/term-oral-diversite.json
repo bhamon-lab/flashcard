@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "inclusif",
       "audio_text": "inclusive"
+    },
+    {
+      "id": "minority-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a minority",
+      "audio_text": "a minority"
+    },
+    {
+      "id": "representation-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "representation",
+      "audio_text": "representation"
+    },
+    {
+      "id": "stereotype-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a stereotype",
+      "audio_text": "a stereotype"
+    },
+    {
+      "id": "intersectionality-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "intersectionality",
+      "audio_text": "intersectionality"
+    },
+    {
+      "id": "discrimination-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "discrimination",
+      "audio_text": "discrimination"
+    },
+    {
+      "id": "equal-opportunity-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "equal opportunity",
+      "audio_text": "equal opportunity"
+    },
+    {
+      "id": "marginalise-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to marginalise",
+      "audio_text": "to marginalise"
+    },
+    {
+      "id": "empower-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to empower",
+      "audio_text": "to empower"
+    },
+    {
+      "id": "challenge-stereotype-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to challenge a stereotype",
+      "audio_text": "to challenge a stereotype"
+    },
+    {
+      "id": "inclusive-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "inclusive",
+      "audio_text": "inclusive"
     }
   ]
 }

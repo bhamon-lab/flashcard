@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « dans une certaine mesure ».",
       "back": "to some extent"
+    },
+    {
+      "id": "an-assumption-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an assumption ».",
+      "back": "une hypothèse"
+    },
+    {
+      "id": "an-objection-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an objection ».",
+      "back": "une objection"
+    },
+    {
+      "id": "a-counterargument-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a counterargument ».",
+      "back": "un contre-argument"
+    },
+    {
+      "id": "a-qualification-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a qualification ».",
+      "back": "une nuance"
+    },
+    {
+      "id": "a-compromise-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a compromise ».",
+      "back": "un compromis"
+    },
+    {
+      "id": "compelling-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « compelling ».",
+      "back": "convaincant"
+    },
+    {
+      "id": "questionable-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « questionable ».",
+      "back": "contestable"
+    },
+    {
+      "id": "to-refute-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to refute ».",
+      "back": "réfuter"
+    },
+    {
+      "id": "to-outweigh-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to outweigh ».",
+      "back": "l’emporter sur"
+    },
+    {
+      "id": "to-some-extent-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to some extent ».",
+      "back": "dans une certaine mesure"
     }
   ]
 }

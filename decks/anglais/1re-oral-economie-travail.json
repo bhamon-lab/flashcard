@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "gagner sa vie",
       "audio_text": "to make a living"
+    },
+    {
+      "id": "workforce-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the workforce",
+      "audio_text": "the workforce"
+    },
+    {
+      "id": "unemployment-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "unemployment",
+      "audio_text": "unemployment"
+    },
+    {
+      "id": "income-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an income",
+      "audio_text": "an income"
+    },
+    {
+      "id": "living-wage-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a living wage",
+      "audio_text": "a living wage"
+    },
+    {
+      "id": "working-condition-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a working condition",
+      "audio_text": "a working condition"
+    },
+    {
+      "id": "trade-union-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a trade union",
+      "audio_text": "a trade union"
+    },
+    {
+      "id": "strike-action-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a strike",
+      "audio_text": "a strike"
+    },
+    {
+      "id": "hire-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to hire",
+      "audio_text": "to hire"
+    },
+    {
+      "id": "dismiss-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to dismiss",
+      "audio_text": "to dismiss"
+    },
+    {
+      "id": "make-living-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to make a living",
+      "audio_text": "to make a living"
     }
   ]
 }

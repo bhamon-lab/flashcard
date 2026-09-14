@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « se reposer ».",
       "back": "to rest"
+    },
+    {
+      "id": "the-head-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the head ».",
+      "back": "la tête"
+    },
+    {
+      "id": "the-throat-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the throat ».",
+      "back": "la gorge"
+    },
+    {
+      "id": "the-back-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the back ».",
+      "back": "le dos"
+    },
+    {
+      "id": "to-have-a-headache-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to have a headache ».",
+      "back": "avoir mal à la tête"
+    },
+    {
+      "id": "to-have-a-fever-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to have a fever ».",
+      "back": "avoir de la fièvre"
+    },
+    {
+      "id": "to-cough-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to cough ».",
+      "back": "tousser"
+    },
+    {
+      "id": "to-have-a-cold-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to have a cold ».",
+      "back": "être enrhumé"
+    },
+    {
+      "id": "medicine-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « medicine ».",
+      "back": "un médicament"
+    },
+    {
+      "id": "a-doctor-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a doctor ».",
+      "back": "un médecin"
+    },
+    {
+      "id": "to-rest-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to rest ».",
+      "back": "se reposer"
     }
   ]
 }

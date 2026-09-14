@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "un pied",
       "audio_text": "a foot"
+    },
+    {
+      "id": "head-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the head",
+      "audio_text": "the head"
+    },
+    {
+      "id": "face-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the face",
+      "audio_text": "the face"
+    },
+    {
+      "id": "eye-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an eye",
+      "audio_text": "an eye"
+    },
+    {
+      "id": "ear-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an ear",
+      "audio_text": "an ear"
+    },
+    {
+      "id": "nose-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the nose",
+      "audio_text": "the nose"
+    },
+    {
+      "id": "mouth-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the mouth",
+      "audio_text": "the mouth"
+    },
+    {
+      "id": "arm-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an arm",
+      "audio_text": "an arm"
+    },
+    {
+      "id": "hand-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a hand",
+      "audio_text": "a hand"
+    },
+    {
+      "id": "leg-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a leg",
+      "audio_text": "a leg"
+    },
+    {
+      "id": "foot-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a foot",
+      "audio_text": "a foot"
     }
   ]
 }

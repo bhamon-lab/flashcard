@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "retrouver ses amis",
       "audio_text": "to meet friends"
+    },
+    {
+      "id": "to-play-football-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to play football",
+      "audio_text": "to play football"
+    },
+    {
+      "id": "to-go-swimming-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to go swimming",
+      "audio_text": "to go swimming"
+    },
+    {
+      "id": "to-go-cycling-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to go cycling",
+      "audio_text": "to go cycling"
+    },
+    {
+      "id": "to-draw-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to draw",
+      "audio_text": "to draw"
+    },
+    {
+      "id": "to-read-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to read",
+      "audio_text": "to read"
+    },
+    {
+      "id": "to-listen-to-music-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to listen to music",
+      "audio_text": "to listen to music"
+    },
+    {
+      "id": "to-watch-a-film-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to watch a film",
+      "audio_text": "to watch a film"
+    },
+    {
+      "id": "to-play-video-games-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to play video games",
+      "audio_text": "to play video games"
+    },
+    {
+      "id": "to-cook-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to cook",
+      "audio_text": "to cook"
+    },
+    {
+      "id": "to-meet-friends-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to meet friends",
+      "audio_text": "to meet friends"
     }
   ]
 }

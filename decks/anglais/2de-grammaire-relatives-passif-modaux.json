@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Complète : ___ the rain, they continued.",
       "back": "Despite the rain, they continued."
+    },
+    {
+      "id": "who-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The activist who spoke was convincing. » ?",
+      "back": "Complète : The activist ___ spoke was convincing."
+    },
+    {
+      "id": "whose-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The writer whose novel won the prize is Irish. » ?",
+      "back": "Complète : The writer ___ novel won the prize is Irish."
+    },
+    {
+      "id": "where-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « This is the town where she grew up. » ?",
+      "back": "Complète : This is the town ___ she grew up."
+    },
+    {
+      "id": "passive-past-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The bridge was built in 1890. » ?",
+      "back": "Mets au passif : They built the bridge in 1890."
+    },
+    {
+      "id": "passive-modal-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Wildlife must be protected. » ?",
+      "back": "Mets au passif : We must protect wildlife."
+    },
+    {
+      "id": "might-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « This solution might work. » ?",
+      "back": "Traduis : « Cette solution pourrait fonctionner. »"
+    },
+    {
+      "id": "must-deduction-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « He must be at home. » ?",
+      "back": "Traduis cette déduction : « Il doit être chez lui. »"
+    },
+    {
+      "id": "cant-deduction-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « It can't be true. » ?",
+      "back": "Traduis cette déduction : « Cela ne peut pas être vrai. »"
+    },
+    {
+      "id": "although-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Although it is useful, it is expensive. » ?",
+      "back": "Relie avec although : It is useful. It is expensive."
+    },
+    {
+      "id": "despite-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Despite the rain, they continued. » ?",
+      "back": "Complète : ___ the rain, they continued."
     }
   ]
 }

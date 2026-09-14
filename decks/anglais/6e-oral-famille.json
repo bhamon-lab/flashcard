@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "le cousin / la cousine",
       "audio_text": "the cousin"
+    },
+    {
+      "id": "the-mother-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the mother",
+      "audio_text": "the mother"
+    },
+    {
+      "id": "the-father-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the father",
+      "audio_text": "the father"
+    },
+    {
+      "id": "the-parents-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the parents",
+      "audio_text": "the parents"
+    },
+    {
+      "id": "the-sister-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the sister",
+      "audio_text": "the sister"
+    },
+    {
+      "id": "the-brother-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the brother",
+      "audio_text": "the brother"
+    },
+    {
+      "id": "the-grandmother-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the grandmother",
+      "audio_text": "the grandmother"
+    },
+    {
+      "id": "the-grandfather-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the grandfather",
+      "audio_text": "the grandfather"
+    },
+    {
+      "id": "the-aunt-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the aunt",
+      "audio_text": "the aunt"
+    },
+    {
+      "id": "the-uncle-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the uncle",
+      "audio_text": "the uncle"
+    },
+    {
+      "id": "the-cousin-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the cousin",
+      "audio_text": "the cousin"
     }
   ]
 }

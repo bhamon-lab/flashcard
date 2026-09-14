@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "remettre en question",
       "audio_text": "to challenge"
+    },
+    {
+      "id": "the-target-audience-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the target audience",
+      "audio_text": "the target audience"
+    },
+    {
+      "id": "a-bias-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a bias",
+      "audio_text": "a bias"
+    },
+    {
+      "id": "a-reliable-source-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a reliable source",
+      "audio_text": "a reliable source"
+    },
+    {
+      "id": "an-account-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an account",
+      "audio_text": "an account"
+    },
+    {
+      "id": "evidence-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "evidence",
+      "audio_text": "evidence"
+    },
+    {
+      "id": "a-claim-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a claim",
+      "audio_text": "a claim"
+    },
+    {
+      "id": "to-mislead-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to mislead",
+      "audio_text": "to mislead"
+    },
+    {
+      "id": "to-fact-check-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to fact-check",
+      "audio_text": "to fact-check"
+    },
+    {
+      "id": "to-shape-opinion-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to shape opinion",
+      "audio_text": "to shape opinion"
+    },
+    {
+      "id": "to-challenge-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to challenge",
+      "audio_text": "to challenge"
     }
   ]
 }

@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Traduis : « Loin de résoudre le problème, cela l'aggrave. »",
       "back": "Far from solving the problem, it makes it worse."
+    },
+    {
+      "id": "nominalise-decide-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The committee's decision to intervene… » ?",
+      "back": "Nominalise : The committee decided to intervene."
+    },
+    {
+      "id": "nominalise-fail-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The failure of the policy… » ?",
+      "back": "Nominalise : The policy failed."
+    },
+    {
+      "id": "owing-to-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « owing to a lack of evidence » ?",
+      "back": "Traduis : « en raison d'un manque de preuves »."
+    },
+    {
+      "id": "notwithstanding-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « notwithstanding these limitations » ?",
+      "back": "Traduis : « malgré ces limites » dans un registre formel."
+    },
+    {
+      "id": "insofar-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « insofar as it protects citizens » ?",
+      "back": "Traduis : « dans la mesure où cela protège les citoyens »."
+    },
+    {
+      "id": "thereby-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « It reduced costs, thereby improving access. » ?",
+      "back": "Relie : It reduced costs. It improved access."
+    },
+    {
+      "id": "given-that-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « given that the evidence is limited » ?",
+      "back": "Traduis : « étant donné que les preuves sont limitées »."
+    },
+    {
+      "id": "on-balance-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « On balance, … » ?",
+      "back": "Introduis une conclusion équilibrée."
+    },
+    {
+      "id": "to-extent-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « This is true to a certain extent. » ?",
+      "back": "Nuance : « Cela est vrai dans une certaine mesure. »"
+    },
+    {
+      "id": "far-from-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Far from solving the problem, it makes it worse. » ?",
+      "back": "Traduis : « Loin de résoudre le problème, cela l'aggrave. »"
     }
   ]
 }

@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "un chapeau",
       "audio_text": "a hat"
+    },
+    {
+      "id": "tshirt-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a T-shirt",
+      "audio_text": "a T-shirt"
+    },
+    {
+      "id": "shirt-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a shirt",
+      "audio_text": "a shirt"
+    },
+    {
+      "id": "jumper-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a jumper",
+      "audio_text": "a jumper"
+    },
+    {
+      "id": "trousers-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "trousers",
+      "audio_text": "trousers"
+    },
+    {
+      "id": "dress-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a dress",
+      "audio_text": "a dress"
+    },
+    {
+      "id": "skirt-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a skirt",
+      "audio_text": "a skirt"
+    },
+    {
+      "id": "coat-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a coat",
+      "audio_text": "a coat"
+    },
+    {
+      "id": "shoes-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "shoes",
+      "audio_text": "shoes"
+    },
+    {
+      "id": "socks-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "socks",
+      "audio_text": "socks"
+    },
+    {
+      "id": "hat-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a hat",
+      "audio_text": "a hat"
     }
   ]
 }

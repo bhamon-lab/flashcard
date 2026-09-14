@@ -68,6 +68,66 @@
       "kind": "culture",
       "front": "Quelle feuille symbolise le Canada ?",
       "back": "The maple leaf."
+    },
+    {
+      "id": "repere-01-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « On 25 December. » ?",
+      "back": "Quand célèbre-t-on Christmas Day ?"
+    },
+    {
+      "id": "repere-02-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Easter. » ?",
+      "back": "Quelle fête est associée aux œufs et au lapin ?"
+    },
+    {
+      "id": "repere-03-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Valentine's Day. » ?",
+      "back": "Quelle fête célèbre-t-on le 14 février ?"
+    },
+    {
+      "id": "repere-04-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Saint Patrick's Day. » ?",
+      "back": "Quelle fête irlandaise a lieu le 17 mars ?"
+    },
+    {
+      "id": "repere-05-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Thanksgiving. » ?",
+      "back": "Quelle fête américaine a lieu le quatrième jeudi de novembre ?"
+    },
+    {
+      "id": "repere-06-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Bonfire Night / Guy Fawkes Night. » ?",
+      "back": "Quelle fête britannique a lieu le 5 novembre ?"
+    },
+    {
+      "id": "repere-07-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The bald eagle. » ?",
+      "back": "Quel animal symbolise souvent les États-Unis ?"
+    },
+    {
+      "id": "repere-08-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The rose. » ?",
+      "back": "Quelle plante symbolise l'Angleterre ?"
+    },
+    {
+      "id": "repere-09-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The thistle. » ?",
+      "back": "Quelle plante symbolise l'Écosse ?"
+    },
+    {
+      "id": "repere-10-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The maple leaf. » ?",
+      "back": "Quelle feuille symbolise le Canada ?"
     }
   ]
 }

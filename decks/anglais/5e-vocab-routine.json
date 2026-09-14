@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « aller se coucher ».",
       "back": "to go to bed"
+    },
+    {
+      "id": "to-wake-up-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to wake up ».",
+      "back": "se réveiller"
+    },
+    {
+      "id": "to-get-up-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to get up ».",
+      "back": "se lever"
+    },
+    {
+      "id": "to-get-dressed-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to get dressed ».",
+      "back": "s’habiller"
+    },
+    {
+      "id": "to-have-breakfast-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to have breakfast ».",
+      "back": "prendre le petit déjeuner"
+    },
+    {
+      "id": "to-go-to-school-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to go to school ».",
+      "back": "aller au collège"
+    },
+    {
+      "id": "to-have-lunch-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to have lunch ».",
+      "back": "déjeuner"
+    },
+    {
+      "id": "to-go-home-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to go home ».",
+      "back": "rentrer à la maison"
+    },
+    {
+      "id": "to-do-one-s-homework-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to do one's homework ».",
+      "back": "faire ses devoirs"
+    },
+    {
+      "id": "to-have-dinner-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to have dinner ».",
+      "back": "dîner"
+    },
+    {
+      "id": "to-go-to-bed-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to go to bed ».",
+      "back": "aller se coucher"
     }
   ]
 }

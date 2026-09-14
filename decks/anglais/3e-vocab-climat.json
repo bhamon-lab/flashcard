@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « agir ».",
       "back": "to take action"
+    },
+    {
+      "id": "global-warming-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « global warming ».",
+      "back": "le réchauffement climatique"
+    },
+    {
+      "id": "greenhouse-gas-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a greenhouse gas ».",
+      "back": "un gaz à effet de serre"
+    },
+    {
+      "id": "sea-level-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « sea level ».",
+      "back": "le niveau de la mer"
+    },
+    {
+      "id": "wildlife-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « wildlife ».",
+      "back": "la faune sauvage"
+    },
+    {
+      "id": "habitat-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a habitat ».",
+      "back": "un habitat naturel"
+    },
+    {
+      "id": "endangered-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « endangered ».",
+      "back": "menacé"
+    },
+    {
+      "id": "protect-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to protect ».",
+      "back": "protéger"
+    },
+    {
+      "id": "waste-energy-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to waste energy ».",
+      "back": "gaspiller de l'énergie"
+    },
+    {
+      "id": "public-transport-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « public transport ».",
+      "back": "les transports en commun"
+    },
+    {
+      "id": "take-action-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to take action ».",
+      "back": "agir"
     }
   ]
 }

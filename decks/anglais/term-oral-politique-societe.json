@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "favoriser",
       "audio_text": "to foster"
+    },
+    {
+      "id": "a-stakeholder-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a stakeholder",
+      "audio_text": "a stakeholder"
+    },
+    {
+      "id": "a-policy-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a policy",
+      "audio_text": "a policy"
+    },
+    {
+      "id": "a-policymaker-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a policymaker",
+      "audio_text": "a policymaker"
+    },
+    {
+      "id": "accountability-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "accountability",
+      "audio_text": "accountability"
+    },
+    {
+      "id": "inequalities-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "inequalities",
+      "audio_text": "inequalities"
+    },
+    {
+      "id": "inclusion-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "inclusion",
+      "audio_text": "inclusion"
+    },
+    {
+      "id": "a-safeguard-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a safeguard",
+      "audio_text": "a safeguard"
+    },
+    {
+      "id": "to-implement-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to implement",
+      "audio_text": "to implement"
+    },
+    {
+      "id": "to-enforce-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to enforce",
+      "audio_text": "to enforce"
+    },
+    {
+      "id": "to-foster-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to foster",
+      "audio_text": "to foster"
     }
   ]
 }

@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « la campagne ».",
       "back": "the countryside"
+    },
+    {
+      "id": "pet-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a pet ».",
+      "back": "un animal de compagnie"
+    },
+    {
+      "id": "dog-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a dog ».",
+      "back": "un chien"
+    },
+    {
+      "id": "cat-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a cat ».",
+      "back": "un chat"
+    },
+    {
+      "id": "horse-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a horse ».",
+      "back": "un cheval"
+    },
+    {
+      "id": "bird-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a bird ».",
+      "back": "un oiseau"
+    },
+    {
+      "id": "forest-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a forest ».",
+      "back": "une forêt"
+    },
+    {
+      "id": "river-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a river ».",
+      "back": "une rivière"
+    },
+    {
+      "id": "mountain-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a mountain ».",
+      "back": "une montagne"
+    },
+    {
+      "id": "sea-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the sea ».",
+      "back": "la mer"
+    },
+    {
+      "id": "countryside-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the countryside ».",
+      "back": "la campagne"
     }
   ]
 }

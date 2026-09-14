@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « désolé ».",
       "back": "sorry"
+    },
+    {
+      "id": "hello-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « hello ».",
+      "back": "bonjour"
+    },
+    {
+      "id": "hi-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « hi ».",
+      "back": "salut"
+    },
+    {
+      "id": "good-morning-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « good morning ».",
+      "back": "bonjour (le matin)"
+    },
+    {
+      "id": "good-afternoon-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « good afternoon ».",
+      "back": "bon après-midi"
+    },
+    {
+      "id": "good-evening-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « good evening ».",
+      "back": "bonsoir"
+    },
+    {
+      "id": "goodbye-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « goodbye ».",
+      "back": "au revoir"
+    },
+    {
+      "id": "see-you-soon-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « see you soon ».",
+      "back": "à bientôt"
+    },
+    {
+      "id": "please-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « please ».",
+      "back": "s’il vous plaît"
+    },
+    {
+      "id": "thank-you-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « thank you ».",
+      "back": "merci"
+    },
+    {
+      "id": "sorry-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « sorry ».",
+      "back": "désolé"
     }
   ]
 }

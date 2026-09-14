@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "Il est neuf heures moins le quart.",
       "audio_text": "It's quarter to nine."
+    },
+    {
+      "id": "one-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "one",
+      "audio_text": "one"
+    },
+    {
+      "id": "two-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "two",
+      "audio_text": "two"
+    },
+    {
+      "id": "ten-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "ten",
+      "audio_text": "ten"
+    },
+    {
+      "id": "twenty-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "twenty",
+      "audio_text": "twenty"
+    },
+    {
+      "id": "one-hundred-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "one hundred",
+      "audio_text": "one hundred"
+    },
+    {
+      "id": "what-time-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "What time is it?",
+      "audio_text": "What time is it?"
+    },
+    {
+      "id": "oclock-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "It's eight o'clock.",
+      "audio_text": "It's eight o'clock."
+    },
+    {
+      "id": "half-past-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "It's half past eight.",
+      "audio_text": "It's half past eight."
+    },
+    {
+      "id": "quarter-past-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "It's quarter past eight.",
+      "audio_text": "It's quarter past eight."
+    },
+    {
+      "id": "quarter-to-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "It's quarter to nine.",
+      "audio_text": "It's quarter to nine."
     }
   ]
 }

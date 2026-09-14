@@ -68,6 +68,66 @@
       "kind": "culture",
       "front": "Que désigne the Civil Rights Movement ?",
       "back": "The movement for equal rights, especially for Black Americans."
+    },
+    {
+      "id": "repere-01-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Rosa Parks. » ?",
+      "back": "Qui a refusé de céder sa place dans un bus en 1955 ?"
+    },
+    {
+      "id": "repere-02-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Martin Luther King Jr. » ?",
+      "back": "Qui a prononcé le discours “I Have a Dream” en 1963 ?"
+    },
+    {
+      "id": "repere-03-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Abraham Lincoln. » ?",
+      "back": "Quel président américain a signé l'Emancipation Proclamation ?"
+    },
+    {
+      "id": "repere-04-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Nelson Mandela. » ?",
+      "back": "Qui fut le premier président noir d'Afrique du Sud ?"
+    },
+    {
+      "id": "repere-05-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Malala Yousafzai. » ?",
+      "back": "Quelle militante pakistanaise défend l'éducation des filles ?"
+    },
+    {
+      "id": "repere-06-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Margaret Thatcher. » ?",
+      "back": "Qui fut la première femme Première ministre du Royaume-Uni ?"
+    },
+    {
+      "id": "repere-07-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The suffragette movement. » ?",
+      "back": "Quel mouvement britannique a revendiqué le droit de vote des femmes ?"
+    },
+    {
+      "id": "repere-08-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « A leading British suffragette. » ?",
+      "back": "Qui était Emmeline Pankhurst ?"
+    },
+    {
+      "id": "repere-09-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The life and achievements of Martin Luther King Jr. » ?",
+      "back": "Que commémore Martin Luther King Jr. Day ?"
+    },
+    {
+      "id": "repere-10-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The movement for equal rights, especially for Black Americans. » ?",
+      "back": "Que désigne the Civil Rights Movement ?"
     }
   ]
 }

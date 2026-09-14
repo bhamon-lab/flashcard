@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "la température",
       "audio_text": "the temperature"
+    },
+    {
+      "id": "spring-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "spring",
+      "audio_text": "spring"
+    },
+    {
+      "id": "summer-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "summer",
+      "audio_text": "summer"
+    },
+    {
+      "id": "autumn-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "autumn",
+      "audio_text": "autumn"
+    },
+    {
+      "id": "winter-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "winter",
+      "audio_text": "winter"
+    },
+    {
+      "id": "hot-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "hot",
+      "audio_text": "hot"
+    },
+    {
+      "id": "cold-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "cold",
+      "audio_text": "cold"
+    },
+    {
+      "id": "rainy-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "rainy",
+      "audio_text": "rainy"
+    },
+    {
+      "id": "snowy-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "snowy",
+      "audio_text": "snowy"
+    },
+    {
+      "id": "weather-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "What's the weather like?",
+      "audio_text": "What's the weather like?"
+    },
+    {
+      "id": "temperature-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the temperature",
+      "audio_text": "the temperature"
     }
   ]
 }

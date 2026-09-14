@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "obtenir son diplôme",
       "audio_text": "to graduate"
+    },
+    {
+      "id": "subject-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a subject",
+      "audio_text": "a subject"
+    },
+    {
+      "id": "grade-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a grade",
+      "audio_text": "a grade"
+    },
+    {
+      "id": "exam-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an exam",
+      "audio_text": "an exam"
+    },
+    {
+      "id": "skill-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a skill",
+      "audio_text": "a skill"
+    },
+    {
+      "id": "degree-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a degree",
+      "audio_text": "a degree"
+    },
+    {
+      "id": "training-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "training",
+      "audio_text": "training"
+    },
+    {
+      "id": "career-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a career",
+      "audio_text": "a career"
+    },
+    {
+      "id": "internship-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an internship",
+      "audio_text": "an internship"
+    },
+    {
+      "id": "apply-course-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to apply for a course",
+      "audio_text": "to apply for a course"
+    },
+    {
+      "id": "graduate-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to graduate",
+      "audio_text": "to graduate"
     }
   ]
 }

@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "Combien cela coûte-t-il ?",
       "audio_text": "How much is it?"
+    },
+    {
+      "id": "price-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the price",
+      "audio_text": "the price"
+    },
+    {
+      "id": "cash-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "cash",
+      "audio_text": "cash"
+    },
+    {
+      "id": "credit-card-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a credit card",
+      "audio_text": "a credit card"
+    },
+    {
+      "id": "receipt-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a receipt",
+      "audio_text": "a receipt"
+    },
+    {
+      "id": "change-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "change",
+      "audio_text": "change"
+    },
+    {
+      "id": "cheap-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "cheap",
+      "audio_text": "cheap"
+    },
+    {
+      "id": "expensive-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "expensive",
+      "audio_text": "expensive"
+    },
+    {
+      "id": "try-on-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to try on",
+      "audio_text": "to try on"
+    },
+    {
+      "id": "size-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a size",
+      "audio_text": "a size"
+    },
+    {
+      "id": "how-much-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "How much is it?",
+      "audio_text": "How much is it?"
     }
   ]
 }

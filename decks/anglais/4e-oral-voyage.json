@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "rater le train",
       "audio_text": "to miss the train"
+    },
+    {
+      "id": "a-single-ticket-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a single ticket",
+      "audio_text": "a single ticket"
+    },
+    {
+      "id": "a-return-ticket-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a return ticket",
+      "audio_text": "a return ticket"
+    },
+    {
+      "id": "the-platform-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the platform",
+      "audio_text": "the platform"
+    },
+    {
+      "id": "the-boarding-pass-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the boarding pass",
+      "audio_text": "the boarding pass"
+    },
+    {
+      "id": "luggage-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "luggage",
+      "audio_text": "luggage"
+    },
+    {
+      "id": "a-flight-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a flight",
+      "audio_text": "a flight"
+    },
+    {
+      "id": "delayed-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "delayed",
+      "audio_text": "delayed"
+    },
+    {
+      "id": "cancelled-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "cancelled",
+      "audio_text": "cancelled"
+    },
+    {
+      "id": "to-book-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to book",
+      "audio_text": "to book"
+    },
+    {
+      "id": "to-miss-the-train-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to miss the train",
+      "audio_text": "to miss the train"
     }
   ]
 }

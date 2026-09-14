@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « gagner sa vie ».",
       "back": "to make a living"
+    },
+    {
+      "id": "workforce-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the workforce ».",
+      "back": "la population active"
+    },
+    {
+      "id": "unemployment-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « unemployment ».",
+      "back": "le chômage"
+    },
+    {
+      "id": "income-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an income ».",
+      "back": "un revenu"
+    },
+    {
+      "id": "living-wage-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a living wage ».",
+      "back": "un salaire décent"
+    },
+    {
+      "id": "working-condition-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a working condition ».",
+      "back": "une condition de travail"
+    },
+    {
+      "id": "trade-union-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a trade union ».",
+      "back": "un syndicat"
+    },
+    {
+      "id": "strike-action-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a strike ».",
+      "back": "une grève"
+    },
+    {
+      "id": "hire-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to hire ».",
+      "back": "embaucher"
+    },
+    {
+      "id": "dismiss-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to dismiss ».",
+      "back": "licencier"
+    },
+    {
+      "id": "make-living-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to make a living ».",
+      "back": "gagner sa vie"
     }
   ]
 }

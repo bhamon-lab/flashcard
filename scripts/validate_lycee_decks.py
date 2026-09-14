@@ -25,6 +25,8 @@ def main():
     # Include legacy files at decks/ as well as all subject folders.
     all_decks = {}
     for path in (ROOT / "decks").rglob("*.json"):
+        if path.name.startswith("_"):
+            continue
         deck = json.loads(path.read_text())
         require(deck["id"] not in all_decks, f"ID de deck dupliqué : {deck['id']}")
         all_decks[deck["id"]] = (path, deck)

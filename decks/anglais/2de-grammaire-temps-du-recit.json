@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Complète : By the time I arrived, they ___. (leave)",
       "back": "By the time I arrived, they had left."
+    },
+    {
+      "id": "past-perfect-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « When we arrived, the film had started. » ?",
+      "back": "Complète : When we arrived, the film ___. (start)"
+    },
+    {
+      "id": "past-perfect-negative-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She had never travelled alone. » ?",
+      "back": "Traduis : « Elle n'avait jamais voyagé seule. »"
+    },
+    {
+      "id": "three-times-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « He called while I was cooking dinner. » ?",
+      "back": "Complète : He ___ while I ___ dinner. (call/cook)"
+    },
+    {
+      "id": "used-to-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « He used to live in Manchester. » ?",
+      "back": "Traduis : « Avant, il habitait à Manchester. »"
+    },
+    {
+      "id": "would-habit-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Every summer, we would go to the seaside. » ?",
+      "back": "Traduis cette habitude passée : « Chaque été, nous allions à la mer. »"
+    },
+    {
+      "id": "since-for-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « since March / for six months » ?",
+      "back": "Complète : She has worked here ___ March / ___ six months."
+    },
+    {
+      "id": "present-perfect-continuous-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « It has been raining all morning. » ?",
+      "back": "Complète : It ___ all morning. (rain)"
+    },
+    {
+      "id": "narrative-sequence-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « First, … Then, … Eventually, … » ?",
+      "back": "Ordonne un récit avec trois connecteurs."
+    },
+    {
+      "id": "suddenly-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « soudain / tout à coup » ?",
+      "back": "Que signifie suddenly dans un récit ?"
+    },
+    {
+      "id": "by-the-time-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « By the time I arrived, they had left. » ?",
+      "back": "Complète : By the time I arrived, they ___. (leave)"
     }
   ]
 }

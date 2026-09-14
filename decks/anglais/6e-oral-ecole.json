@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "les devoirs",
       "audio_text": "homework"
+    },
+    {
+      "id": "an-exercise-book-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an exercise book",
+      "audio_text": "an exercise book"
+    },
+    {
+      "id": "a-book-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a book",
+      "audio_text": "a book"
+    },
+    {
+      "id": "a-pen-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a pen",
+      "audio_text": "a pen"
+    },
+    {
+      "id": "a-pencil-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a pencil",
+      "audio_text": "a pencil"
+    },
+    {
+      "id": "a-rubber-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a rubber",
+      "audio_text": "a rubber"
+    },
+    {
+      "id": "a-ruler-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a ruler",
+      "audio_text": "a ruler"
+    },
+    {
+      "id": "a-schoolbag-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a schoolbag",
+      "audio_text": "a schoolbag"
+    },
+    {
+      "id": "a-desk-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a desk",
+      "audio_text": "a desk"
+    },
+    {
+      "id": "a-board-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a board",
+      "audio_text": "a board"
+    },
+    {
+      "id": "homework-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "homework",
+      "audio_text": "homework"
     }
   ]
 }

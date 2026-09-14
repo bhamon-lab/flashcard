@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « transmettre ».",
       "back": "to convey"
+    },
+    {
+      "id": "a-work-of-art-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a work of art ».",
+      "back": "une œuvre d’art"
+    },
+    {
+      "id": "a-masterpiece-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a masterpiece ».",
+      "back": "un chef-d’œuvre"
+    },
+    {
+      "id": "a-portrayal-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a portrayal ».",
+      "back": "un portrait"
+    },
+    {
+      "id": "a-symbol-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a symbol ».",
+      "back": "un symbole"
+    },
+    {
+      "id": "a-message-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a message ».",
+      "back": "un message"
+    },
+    {
+      "id": "to-depict-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to depict ».",
+      "back": "représenter"
+    },
+    {
+      "id": "to-highlight-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to highlight ».",
+      "back": "souligner"
+    },
+    {
+      "id": "to-denounce-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to denounce ».",
+      "back": "dénoncer"
+    },
+    {
+      "id": "to-censor-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to censor ».",
+      "back": "censurer"
+    },
+    {
+      "id": "to-convey-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to convey ».",
+      "back": "transmettre"
     }
   ]
 }

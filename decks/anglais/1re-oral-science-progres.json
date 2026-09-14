@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "des preuves scientifiques",
       "audio_text": "scientific evidence"
+    },
+    {
+      "id": "research-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "research",
+      "audio_text": "research"
+    },
+    {
+      "id": "finding-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a finding",
+      "audio_text": "a finding"
+    },
+    {
+      "id": "trial-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a trial",
+      "audio_text": "a trial"
+    },
+    {
+      "id": "discovery-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a discovery",
+      "audio_text": "a discovery"
+    },
+    {
+      "id": "device-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a device",
+      "audio_text": "a device"
+    },
+    {
+      "id": "reliable-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "reliable",
+      "audio_text": "reliable"
+    },
+    {
+      "id": "accurate-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "accurate",
+      "audio_text": "accurate"
+    },
+    {
+      "id": "carry-out-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to carry out an experiment",
+      "audio_text": "to carry out an experiment"
+    },
+    {
+      "id": "raise-concern-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to raise concern",
+      "audio_text": "to raise concern"
+    },
+    {
+      "id": "scientific-evidence-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "scientific evidence",
+      "audio_text": "scientific evidence"
     }
   ]
 }

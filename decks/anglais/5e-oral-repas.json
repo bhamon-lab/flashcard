@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "avoir soif",
       "audio_text": "to be thirsty"
+    },
+    {
+      "id": "bread-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "bread",
+      "audio_text": "bread"
+    },
+    {
+      "id": "milk-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "milk",
+      "audio_text": "milk"
+    },
+    {
+      "id": "water-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "water",
+      "audio_text": "water"
+    },
+    {
+      "id": "fruit-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "fruit",
+      "audio_text": "fruit"
+    },
+    {
+      "id": "vegetables-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "vegetables",
+      "audio_text": "vegetables"
+    },
+    {
+      "id": "breakfast-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "breakfast",
+      "audio_text": "breakfast"
+    },
+    {
+      "id": "lunch-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "lunch",
+      "audio_text": "lunch"
+    },
+    {
+      "id": "dinner-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "dinner",
+      "audio_text": "dinner"
+    },
+    {
+      "id": "hungry-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to be hungry",
+      "audio_text": "to be hungry"
+    },
+    {
+      "id": "thirsty-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to be thirsty",
+      "audio_text": "to be thirsty"
     }
   ]
 }

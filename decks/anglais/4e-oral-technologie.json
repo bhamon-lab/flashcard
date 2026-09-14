@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "un appareil",
       "audio_text": "a device"
+    },
+    {
+      "id": "screen-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a screen",
+      "audio_text": "a screen"
+    },
+    {
+      "id": "keyboard-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a keyboard",
+      "audio_text": "a keyboard"
+    },
+    {
+      "id": "mouse-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a mouse",
+      "audio_text": "a mouse"
+    },
+    {
+      "id": "headphones-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "headphones",
+      "audio_text": "headphones"
+    },
+    {
+      "id": "website-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a website",
+      "audio_text": "a website"
+    },
+    {
+      "id": "search-engine-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a search engine",
+      "audio_text": "a search engine"
+    },
+    {
+      "id": "log-in-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to log in",
+      "audio_text": "to log in"
+    },
+    {
+      "id": "upload-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to upload",
+      "audio_text": "to upload"
+    },
+    {
+      "id": "save-file-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to save a file",
+      "audio_text": "to save a file"
+    },
+    {
+      "id": "device-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a device",
+      "audio_text": "a device"
     }
   ]
 }

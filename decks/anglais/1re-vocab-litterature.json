@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « un récit à la première personne ».",
       "back": "a first-person narrative"
+    },
+    {
+      "id": "plot-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the plot ».",
+      "back": "l'intrigue"
+    },
+    {
+      "id": "setting-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the setting ».",
+      "back": "le cadre spatio-temporel"
+    },
+    {
+      "id": "narrator-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the narrator ».",
+      "back": "le narrateur"
+    },
+    {
+      "id": "character-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a character ».",
+      "back": "un personnage"
+    },
+    {
+      "id": "theme-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a theme ».",
+      "back": "un thème"
+    },
+    {
+      "id": "tone-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the tone ».",
+      "back": "le ton"
+    },
+    {
+      "id": "metaphor-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a metaphor ».",
+      "back": "une métaphore"
+    },
+    {
+      "id": "foreshadow-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to foreshadow ».",
+      "back": "annoncer la suite"
+    },
+    {
+      "id": "portray-character-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to portray a character ».",
+      "back": "dépeindre un personnage"
+    },
+    {
+      "id": "first-person-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a first-person narrative ».",
+      "back": "un récit à la première personne"
     }
   ]
 }

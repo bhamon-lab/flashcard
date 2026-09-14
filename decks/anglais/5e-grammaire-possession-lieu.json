@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Traduis : « derrière la mairie ».",
       "back": "behind the town hall"
+    },
+    {
+      "id": "genitive-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Tom's bike » ?",
+      "back": "Traduis : « le vélo de Tom »."
+    },
+    {
+      "id": "plural-genitive-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « the teachers' room » ?",
+      "back": "Traduis : « la salle des professeurs »."
+    },
+    {
+      "id": "mine-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « It is mine. » ?",
+      "back": "Complète : This book is my book. It is ___."
+    },
+    {
+      "id": "yours-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Is this bag yours? » ?",
+      "back": "Traduis : « Est-ce que ce sac est à toi ? »"
+    },
+    {
+      "id": "object-him-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I can see him. » ?",
+      "back": "Remplace Tom : I can see Tom."
+    },
+    {
+      "id": "object-them-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I called them. » ?",
+      "back": "Remplace my friends : I called my friends."
+    },
+    {
+      "id": "there-is-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « There is a park. » ?",
+      "back": "Traduis : « Il y a un parc. »"
+    },
+    {
+      "id": "there-are-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « There are two shops. » ?",
+      "back": "Traduis : « Il y a deux magasins. »"
+    },
+    {
+      "id": "between-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « between the bank and the station » ?",
+      "back": "Traduis : « entre la banque et la gare »."
+    },
+    {
+      "id": "behind-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « behind the town hall » ?",
+      "back": "Traduis : « derrière la mairie »."
     }
   ]
 }

@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Complète : a ___ friends / a ___ time.",
       "back": "a few friends / a little time"
+    },
+    {
+      "id": "comparative-short-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « York is smaller than London. » ?",
+      "back": "Complète : York is ___ than London. (small)"
+    },
+    {
+      "id": "comparative-big-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « A lion is bigger than a cat. » ?",
+      "back": "Complète : A lion is ___ than a cat. (big)"
+    },
+    {
+      "id": "comparative-long-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Trains are more comfortable than buses. » ?",
+      "back": "Complète : Trains are ___ than buses. (comfortable)"
+    },
+    {
+      "id": "comparative-good-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « better » ?",
+      "back": "Donne le comparatif de good."
+    },
+    {
+      "id": "superlative-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « the tallest building » ?",
+      "back": "Traduis : « le plus haut bâtiment »."
+    },
+    {
+      "id": "superlative-good-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « the best » ?",
+      "back": "Donne le superlatif de good."
+    },
+    {
+      "id": "some-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « There are some apples on the table. » ?",
+      "back": "Complète : There are ___ apples on the table."
+    },
+    {
+      "id": "any-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Are there any shops nearby? » ?",
+      "back": "Complète : Are there ___ shops nearby?"
+    },
+    {
+      "id": "much-many-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « How much water? How many bottles? » ?",
+      "back": "Complète : How ___ water? How ___ bottles?"
+    },
+    {
+      "id": "few-little-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « a few friends / a little time » ?",
+      "back": "Complète : a ___ friends / a ___ time."
     }
   ]
 }

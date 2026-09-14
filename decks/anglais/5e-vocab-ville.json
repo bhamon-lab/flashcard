@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « à côté de ».",
       "back": "next to"
+    },
+    {
+      "id": "the-station-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the station ».",
+      "back": "la gare"
+    },
+    {
+      "id": "the-town-hall-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the town hall ».",
+      "back": "la mairie"
+    },
+    {
+      "id": "the-library-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the library ».",
+      "back": "la bibliothèque"
+    },
+    {
+      "id": "the-crossroads-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the crossroads ».",
+      "back": "le carrefour"
+    },
+    {
+      "id": "the-traffic-light-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the traffic light ».",
+      "back": "le feu de circulation"
+    },
+    {
+      "id": "to-turn-left-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to turn left ».",
+      "back": "tourner à gauche"
+    },
+    {
+      "id": "to-turn-right-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to turn right ».",
+      "back": "tourner à droite"
+    },
+    {
+      "id": "to-go-straight-on-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to go straight on ».",
+      "back": "aller tout droit"
+    },
+    {
+      "id": "opposite-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « opposite ».",
+      "back": "en face de"
+    },
+    {
+      "id": "next-to-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « next to ».",
+      "back": "à côté de"
     }
   ]
 }

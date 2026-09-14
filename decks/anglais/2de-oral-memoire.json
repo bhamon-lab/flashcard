@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "transmettre",
       "audio_text": "to pass down"
+    },
+    {
+      "id": "memorial-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a memorial",
+      "audio_text": "a memorial"
+    },
+    {
+      "id": "archive-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "archives",
+      "audio_text": "archives"
+    },
+    {
+      "id": "testimony-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a testimony",
+      "audio_text": "a testimony"
+    },
+    {
+      "id": "ancestor-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an ancestor",
+      "audio_text": "an ancestor"
+    },
+    {
+      "id": "generation-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a generation",
+      "audio_text": "a generation"
+    },
+    {
+      "id": "collective-memory-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "collective memory",
+      "audio_text": "collective memory"
+    },
+    {
+      "id": "preserve-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to preserve",
+      "audio_text": "to preserve"
+    },
+    {
+      "id": "remember-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to remember",
+      "audio_text": "to remember"
+    },
+    {
+      "id": "honour-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to honour",
+      "audio_text": "to honour"
+    },
+    {
+      "id": "pass-down-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to pass down",
+      "audio_text": "to pass down"
     }
   ]
 }

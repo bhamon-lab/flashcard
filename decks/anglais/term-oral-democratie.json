@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "avoir le droit de vote",
       "audio_text": "to be eligible to vote"
+    },
+    {
+      "id": "ballot-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a ballot",
+      "audio_text": "a ballot"
+    },
+    {
+      "id": "turnout-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "turnout",
+      "audio_text": "turnout"
+    },
+    {
+      "id": "constituency-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a constituency",
+      "audio_text": "a constituency"
+    },
+    {
+      "id": "lawmaker-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a lawmaker",
+      "audio_text": "a lawmaker"
+    },
+    {
+      "id": "judiciary-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the judiciary",
+      "audio_text": "the judiciary"
+    },
+    {
+      "id": "rule-of-law-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the rule of law",
+      "audio_text": "the rule of law"
+    },
+    {
+      "id": "checks-balances-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "checks and balances",
+      "audio_text": "checks and balances"
+    },
+    {
+      "id": "pass-law-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to pass a law",
+      "audio_text": "to pass a law"
+    },
+    {
+      "id": "overturn-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to overturn",
+      "audio_text": "to overturn"
+    },
+    {
+      "id": "eligible-vote-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to be eligible to vote",
+      "audio_text": "to be eligible to vote"
     }
   ]
 }

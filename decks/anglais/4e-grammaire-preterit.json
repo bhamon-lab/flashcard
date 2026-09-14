@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Quelle prononciation finale pour wanted ?",
       "back": "/ɪd/"
+    },
+    {
+      "id": "regular-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « We visited Dublin. » ?",
+      "back": "Mets au prétérit : We visit Dublin."
+    },
+    {
+      "id": "irregular-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She went home. » ?",
+      "back": "Mets au prétérit : She goes home."
+    },
+    {
+      "id": "be-past-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I was tired and they were hungry. » ?",
+      "back": "Complète : I ___ tired and they ___ hungry."
+    },
+    {
+      "id": "negative-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « He didn't enjoy the trip. » ?",
+      "back": "Mets à la forme négative : He enjoyed the trip."
+    },
+    {
+      "id": "question-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Where did you go yesterday? » ?",
+      "back": "Traduis : « Où es-tu allé hier ? »"
+    },
+    {
+      "id": "short-answer-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Yes, she did. » ?",
+      "back": "Réponds brièvement : Did she call you? (oui)"
+    },
+    {
+      "id": "ago-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « three days ago » ?",
+      "back": "Traduis : « il y a trois jours »."
+    },
+    {
+      "id": "last-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « last week » ?",
+      "back": "Traduis : « la semaine dernière »."
+    },
+    {
+      "id": "ed-t-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « /t/ » ?",
+      "back": "Quelle prononciation finale pour worked ?"
+    },
+    {
+      "id": "ed-id-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « /ɪd/ » ?",
+      "back": "Quelle prononciation finale pour wanted ?"
     }
   ]
 }

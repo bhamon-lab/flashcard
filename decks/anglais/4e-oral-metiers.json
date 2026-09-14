@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "gagner un salaire",
       "audio_text": "to earn"
+    },
+    {
+      "id": "teacher-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a teacher",
+      "audio_text": "a teacher"
+    },
+    {
+      "id": "doctor-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a doctor",
+      "audio_text": "a doctor"
+    },
+    {
+      "id": "nurse-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a nurse",
+      "audio_text": "a nurse"
+    },
+    {
+      "id": "engineer-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an engineer",
+      "audio_text": "an engineer"
+    },
+    {
+      "id": "journalist-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a journalist",
+      "audio_text": "a journalist"
+    },
+    {
+      "id": "lawyer-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a lawyer",
+      "audio_text": "a lawyer"
+    },
+    {
+      "id": "shop-assistant-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a shop assistant",
+      "audio_text": "a shop assistant"
+    },
+    {
+      "id": "firefighter-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a firefighter",
+      "audio_text": "a firefighter"
+    },
+    {
+      "id": "apply-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to apply",
+      "audio_text": "to apply"
+    },
+    {
+      "id": "earn-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to earn",
+      "audio_text": "to earn"
     }
   ]
 }

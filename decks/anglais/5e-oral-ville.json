@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "à côté de",
       "audio_text": "next to"
+    },
+    {
+      "id": "the-station-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the station",
+      "audio_text": "the station"
+    },
+    {
+      "id": "the-town-hall-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the town hall",
+      "audio_text": "the town hall"
+    },
+    {
+      "id": "the-library-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the library",
+      "audio_text": "the library"
+    },
+    {
+      "id": "the-crossroads-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the crossroads",
+      "audio_text": "the crossroads"
+    },
+    {
+      "id": "the-traffic-light-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the traffic light",
+      "audio_text": "the traffic light"
+    },
+    {
+      "id": "to-turn-left-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to turn left",
+      "audio_text": "to turn left"
+    },
+    {
+      "id": "to-turn-right-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to turn right",
+      "audio_text": "to turn right"
+    },
+    {
+      "id": "to-go-straight-on-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to go straight on",
+      "audio_text": "to go straight on"
+    },
+    {
+      "id": "opposite-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "opposite",
+      "audio_text": "opposite"
+    },
+    {
+      "id": "next-to-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "next to",
+      "audio_text": "next to"
     }
   ]
 }

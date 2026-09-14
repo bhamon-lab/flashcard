@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « inclusif ».",
       "back": "inclusive"
+    },
+    {
+      "id": "minority-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a minority ».",
+      "back": "une minorité"
+    },
+    {
+      "id": "representation-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « representation ».",
+      "back": "la représentation"
+    },
+    {
+      "id": "stereotype-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a stereotype ».",
+      "back": "un stéréotype"
+    },
+    {
+      "id": "intersectionality-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « intersectionality ».",
+      "back": "l'intersectionnalité"
+    },
+    {
+      "id": "discrimination-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « discrimination ».",
+      "back": "la discrimination"
+    },
+    {
+      "id": "equal-opportunity-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « equal opportunity ».",
+      "back": "l'égalité des chances"
+    },
+    {
+      "id": "marginalise-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to marginalise ».",
+      "back": "marginaliser"
+    },
+    {
+      "id": "empower-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to empower ».",
+      "back": "donner les moyens d'agir"
+    },
+    {
+      "id": "challenge-stereotype-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to challenge a stereotype ».",
+      "back": "remettre en cause un stéréotype"
+    },
+    {
+      "id": "inclusive-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « inclusive ».",
+      "back": "inclusif"
     }
   ]
 }

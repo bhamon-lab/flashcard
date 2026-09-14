@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "désolé",
       "audio_text": "sorry"
+    },
+    {
+      "id": "hello-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "hello",
+      "audio_text": "hello"
+    },
+    {
+      "id": "hi-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "hi",
+      "audio_text": "hi"
+    },
+    {
+      "id": "good-morning-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "good morning",
+      "audio_text": "good morning"
+    },
+    {
+      "id": "good-afternoon-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "good afternoon",
+      "audio_text": "good afternoon"
+    },
+    {
+      "id": "good-evening-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "good evening",
+      "audio_text": "good evening"
+    },
+    {
+      "id": "goodbye-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "goodbye",
+      "audio_text": "goodbye"
+    },
+    {
+      "id": "see-you-soon-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "see you soon",
+      "audio_text": "see you soon"
+    },
+    {
+      "id": "please-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "please",
+      "audio_text": "please"
+    },
+    {
+      "id": "thank-you-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "thank you",
+      "audio_text": "thank you"
+    },
+    {
+      "id": "sorry-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "sorry",
+      "audio_text": "sorry"
     }
   ]
 }

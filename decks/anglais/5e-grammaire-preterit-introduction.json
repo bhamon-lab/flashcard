@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Réponds brièvement : Did you enjoy it? (oui)",
       "back": "Yes, I did."
+    },
+    {
+      "id": "was-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I was at home yesterday. » ?",
+      "back": "Complète : I ___ at home yesterday."
+    },
+    {
+      "id": "were-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « They were happy. » ?",
+      "back": "Complète : They ___ happy."
+    },
+    {
+      "id": "wasnt-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She wasn't late. » ?",
+      "back": "Mets à la forme négative : She was late."
+    },
+    {
+      "id": "were-question-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Were you tired? » ?",
+      "back": "Transforme en question : You were tired."
+    },
+    {
+      "id": "regular-ed-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « We visited London. » ?",
+      "back": "Mets au passé : We visit London."
+    },
+    {
+      "id": "regular-y-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She studied English. » ?",
+      "back": "Mets au passé : She studies English."
+    },
+    {
+      "id": "didnt-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « He didn't play tennis. » ?",
+      "back": "Mets à la forme négative : He played tennis."
+    },
+    {
+      "id": "did-question-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Did they watch the film? » ?",
+      "back": "Transforme en question : They watched the film."
+    },
+    {
+      "id": "yesterday-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I went to town yesterday. » ?",
+      "back": "Où place-t-on yesterday : I went to town ?"
+    },
+    {
+      "id": "short-answer-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Yes, I did. » ?",
+      "back": "Réponds brièvement : Did you enjoy it? (oui)"
     }
   ]
 }

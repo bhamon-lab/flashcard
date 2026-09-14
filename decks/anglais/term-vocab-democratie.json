@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « avoir le droit de vote ».",
       "back": "to be eligible to vote"
+    },
+    {
+      "id": "ballot-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a ballot ».",
+      "back": "un bulletin de vote"
+    },
+    {
+      "id": "turnout-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « turnout ».",
+      "back": "la participation électorale"
+    },
+    {
+      "id": "constituency-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a constituency ».",
+      "back": "une circonscription"
+    },
+    {
+      "id": "lawmaker-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a lawmaker ».",
+      "back": "un législateur"
+    },
+    {
+      "id": "judiciary-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the judiciary ».",
+      "back": "le pouvoir judiciaire"
+    },
+    {
+      "id": "rule-of-law-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the rule of law ».",
+      "back": "l'État de droit"
+    },
+    {
+      "id": "checks-balances-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « checks and balances ».",
+      "back": "la séparation et l'équilibre des pouvoirs"
+    },
+    {
+      "id": "pass-law-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to pass a law ».",
+      "back": "adopter une loi"
+    },
+    {
+      "id": "overturn-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to overturn ».",
+      "back": "annuler une décision"
+    },
+    {
+      "id": "eligible-vote-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to be eligible to vote ».",
+      "back": "avoir le droit de vote"
     }
   ]
 }

@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "battre un record",
       "audio_text": "to break a record"
+    },
+    {
+      "id": "athlete-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an athlete",
+      "audio_text": "an athlete"
+    },
+    {
+      "id": "coach-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a coach",
+      "audio_text": "a coach"
+    },
+    {
+      "id": "opponent-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an opponent",
+      "audio_text": "an opponent"
+    },
+    {
+      "id": "referee-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a referee",
+      "audio_text": "a referee"
+    },
+    {
+      "id": "achievement-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an achievement",
+      "audio_text": "an achievement"
+    },
+    {
+      "id": "fair-play-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "fair play",
+      "audio_text": "fair play"
+    },
+    {
+      "id": "defeat-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a defeat",
+      "audio_text": "a defeat"
+    },
+    {
+      "id": "draw-match-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a draw",
+      "audio_text": "a draw"
+    },
+    {
+      "id": "compete-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to compete",
+      "audio_text": "to compete"
+    },
+    {
+      "id": "break-record-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to break a record",
+      "audio_text": "to break a record"
     }
   ]
 }

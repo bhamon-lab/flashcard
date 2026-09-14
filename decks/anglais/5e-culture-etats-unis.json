@@ -68,6 +68,66 @@
       "kind": "culture",
       "front": "Dans quel océan se trouve Hawaii ?",
       "back": "The Pacific Ocean."
+    },
+    {
+      "id": "repere-01-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Fifty states. » ?",
+      "back": "Combien les États-Unis comptent-ils d'États ?"
+    },
+    {
+      "id": "repere-02-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « No. The federal capital is Washington, D.C. » ?",
+      "back": "New York est-elle la capitale fédérale ?"
+    },
+    {
+      "id": "repere-03-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Liberty Island, in New York Harbor. » ?",
+      "back": "Sur quelle île se trouve la Statue of Liberty ?"
+    },
+    {
+      "id": "repere-04-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Arizona. » ?",
+      "back": "Dans quel État se trouve principalement le Grand Canyon ?"
+    },
+    {
+      "id": "repere-05-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Mississippi River. » ?",
+      "back": "Quel grand fleuve traverse le centre des États-Unis ?"
+    },
+    {
+      "id": "repere-06-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Los Angeles. » ?",
+      "back": "Dans quelle ville se trouve Hollywood ?"
+    },
+    {
+      "id": "repere-07-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Chicago and the Los Angeles area. » ?",
+      "back": "Que reliait historiquement Route 66 ?"
+    },
+    {
+      "id": "repere-08-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Yellowstone National Park. » ?",
+      "back": "Quel fut le premier parc national des États-Unis ?"
+    },
+    {
+      "id": "repere-09-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Alaska. » ?",
+      "back": "Quel est le plus grand État américain par sa superficie ?"
+    },
+    {
+      "id": "repere-10-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Pacific Ocean. » ?",
+      "back": "Dans quel océan se trouve Hawaii ?"
     }
   ]
 }

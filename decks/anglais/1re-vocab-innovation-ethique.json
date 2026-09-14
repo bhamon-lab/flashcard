@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « peser le pour et le contre ».",
       "back": "to weigh the pros and cons"
+    },
+    {
+      "id": "a-breakthrough-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a breakthrough ».",
+      "back": "une percée"
+    },
+    {
+      "id": "a-drawback-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a drawback ».",
+      "back": "un inconvénient"
+    },
+    {
+      "id": "an-ethical-issue-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an ethical issue ».",
+      "back": "un enjeu éthique"
+    },
+    {
+      "id": "privacy-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « privacy ».",
+      "back": "la vie privée"
+    },
+    {
+      "id": "surveillance-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « surveillance ».",
+      "back": "la surveillance"
+    },
+    {
+      "id": "an-algorithm-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an algorithm ».",
+      "back": "un algorithme"
+    },
+    {
+      "id": "a-bias-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a bias ».",
+      "back": "un biais"
+    },
+    {
+      "id": "to-regulate-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to regulate ».",
+      "back": "réglementer"
+    },
+    {
+      "id": "to-be-accountable-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to be accountable ».",
+      "back": "rendre des comptes"
+    },
+    {
+      "id": "to-weigh-the-pros-and-cons-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to weigh the pros and cons ».",
+      "back": "peser le pour et le contre"
     }
   ]
 }

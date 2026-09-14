@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "soutenir",
       "audio_text": "to support"
+    },
+    {
+      "id": "proud-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "proud",
+      "audio_text": "proud"
+    },
+    {
+      "id": "worried-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "worried",
+      "audio_text": "worried"
+    },
+    {
+      "id": "disappointed-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "disappointed",
+      "audio_text": "disappointed"
+    },
+    {
+      "id": "grateful-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "grateful",
+      "audio_text": "grateful"
+    },
+    {
+      "id": "trustworthy-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "trustworthy",
+      "audio_text": "trustworthy"
+    },
+    {
+      "id": "generous-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "generous",
+      "audio_text": "generous"
+    },
+    {
+      "id": "shy-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "shy",
+      "audio_text": "shy"
+    },
+    {
+      "id": "to-get-along-with-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to get along with",
+      "audio_text": "to get along with"
+    },
+    {
+      "id": "to-argue-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to argue",
+      "audio_text": "to argue"
+    },
+    {
+      "id": "to-support-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to support",
+      "audio_text": "to support"
     }
   ]
 }

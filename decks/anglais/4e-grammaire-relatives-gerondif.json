@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Complète : Let's go ___. (swim)",
       "back": "Let's go swimming."
+    },
+    {
+      "id": "who-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The man who lives here is Irish. » ?",
+      "back": "Complète : The man ___ lives here is Irish."
+    },
+    {
+      "id": "which-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The bus which/that goes downtown is late. » ?",
+      "back": "Complète : The bus ___ goes downtown is late."
+    },
+    {
+      "id": "where-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « This is the hotel where we stayed. » ?",
+      "back": "Complète : This is the hotel ___ we stayed."
+    },
+    {
+      "id": "whose-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The girl whose bag is red is my friend. » ?",
+      "back": "Complète : The girl ___ bag is red is my friend."
+    },
+    {
+      "id": "like-ing-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I enjoy reading. » ?",
+      "back": "Complète : I enjoy ___. (read)"
+    },
+    {
+      "id": "good-at-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She is good at drawing. » ?",
+      "back": "Traduis : « Elle est douée en dessin. »"
+    },
+    {
+      "id": "before-ing-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « before leaving » ?",
+      "back": "Traduis : « avant de partir »."
+    },
+    {
+      "id": "after-ing-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « after eating » ?",
+      "back": "Traduis : « après avoir mangé »."
+    },
+    {
+      "id": "stop-ing-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Stop talking. » ?",
+      "back": "Traduis : « Arrête de parler. »"
+    },
+    {
+      "id": "go-ing-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Let's go swimming. » ?",
+      "back": "Complète : Let's go ___. (swim)"
     }
   ]
 }

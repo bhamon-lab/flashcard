@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « Combien cela coûte-t-il ? ».",
       "back": "How much is it?"
+    },
+    {
+      "id": "price-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the price ».",
+      "back": "le prix"
+    },
+    {
+      "id": "cash-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « cash ».",
+      "back": "des espèces"
+    },
+    {
+      "id": "credit-card-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a credit card ».",
+      "back": "une carte bancaire"
+    },
+    {
+      "id": "receipt-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a receipt ».",
+      "back": "un reçu"
+    },
+    {
+      "id": "change-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « change ».",
+      "back": "la monnaie"
+    },
+    {
+      "id": "cheap-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « cheap ».",
+      "back": "bon marché"
+    },
+    {
+      "id": "expensive-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « expensive ».",
+      "back": "cher"
+    },
+    {
+      "id": "try-on-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to try on ».",
+      "back": "essayer un vêtement"
+    },
+    {
+      "id": "size-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a size ».",
+      "back": "une taille"
+    },
+    {
+      "id": "how-much-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « How much is it? ».",
+      "back": "Combien cela coûte-t-il ?"
     }
   ]
 }

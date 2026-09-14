@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "l'éducation aux médias",
       "audio_text": "media literacy"
+    },
+    {
+      "id": "misinformation-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "misinformation",
+      "audio_text": "misinformation"
+    },
+    {
+      "id": "disinformation-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "disinformation",
+      "audio_text": "disinformation"
+    },
+    {
+      "id": "fact-checker-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a fact-checker",
+      "audio_text": "a fact-checker"
+    },
+    {
+      "id": "source-bias-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "source bias",
+      "audio_text": "source bias"
+    },
+    {
+      "id": "echo-chamber-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an echo chamber",
+      "audio_text": "an echo chamber"
+    },
+    {
+      "id": "deepfake-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a deepfake",
+      "audio_text": "a deepfake"
+    },
+    {
+      "id": "verify-claim-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to verify a claim",
+      "audio_text": "to verify a claim"
+    },
+    {
+      "id": "debunk-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to debunk",
+      "audio_text": "to debunk"
+    },
+    {
+      "id": "distort-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to distort",
+      "audio_text": "to distort"
+    },
+    {
+      "id": "media-literacy-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "media literacy",
+      "audio_text": "media literacy"
     }
   ]
 }

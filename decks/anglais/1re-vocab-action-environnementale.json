@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « l'impact environnemental ».",
       "back": "the environmental impact"
+    },
+    {
+      "id": "campaigner-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a campaigner ».",
+      "back": "un militant"
+    },
+    {
+      "id": "conservation-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « conservation ».",
+      "back": "la protection de la nature"
+    },
+    {
+      "id": "emission-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an emission ».",
+      "back": "une émission de gaz"
+    },
+    {
+      "id": "net-zero-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « net zero ».",
+      "back": "la neutralité carbone"
+    },
+    {
+      "id": "greenwashing-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « greenwashing ».",
+      "back": "l'écoblanchiment"
+    },
+    {
+      "id": "policy-change-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a policy change ».",
+      "back": "un changement de politique"
+    },
+    {
+      "id": "phase-out-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to phase out ».",
+      "back": "supprimer progressivement"
+    },
+    {
+      "id": "curb-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to curb ».",
+      "back": "freiner"
+    },
+    {
+      "id": "hold-accountable-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to hold accountable ».",
+      "back": "demander des comptes à"
+    },
+    {
+      "id": "environmental-impact-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the environmental impact ».",
+      "back": "l'impact environnemental"
     }
   ]
 }

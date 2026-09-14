@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « Il est neuf heures moins le quart. ».",
       "back": "It's quarter to nine."
+    },
+    {
+      "id": "one-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « one ».",
+      "back": "un"
+    },
+    {
+      "id": "two-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « two ».",
+      "back": "deux"
+    },
+    {
+      "id": "ten-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « ten ».",
+      "back": "dix"
+    },
+    {
+      "id": "twenty-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « twenty ».",
+      "back": "vingt"
+    },
+    {
+      "id": "one-hundred-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « one hundred ».",
+      "back": "cent"
+    },
+    {
+      "id": "what-time-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « What time is it? ».",
+      "back": "Quelle heure est-il ?"
+    },
+    {
+      "id": "oclock-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « It's eight o'clock. ».",
+      "back": "Il est huit heures."
+    },
+    {
+      "id": "half-past-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « It's half past eight. ».",
+      "back": "Il est huit heures et demie."
+    },
+    {
+      "id": "quarter-past-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « It's quarter past eight. ».",
+      "back": "Il est huit heures et quart."
+    },
+    {
+      "id": "quarter-to-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « It's quarter to nine. ».",
+      "back": "Il est neuf heures moins le quart."
     }
   ]
 }

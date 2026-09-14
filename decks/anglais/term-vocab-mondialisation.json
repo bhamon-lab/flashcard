@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « un ralentissement économique ».",
       "back": "an economic downturn"
+    },
+    {
+      "id": "supply-chain-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a supply chain ».",
+      "back": "une chaîne d'approvisionnement"
+    },
+    {
+      "id": "trade-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « trade ».",
+      "back": "le commerce"
+    },
+    {
+      "id": "tariff-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a tariff ».",
+      "back": "un droit de douane"
+    },
+    {
+      "id": "consumer-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a consumer ».",
+      "back": "un consommateur"
+    },
+    {
+      "id": "shareholder-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a shareholder ».",
+      "back": "un actionnaire"
+    },
+    {
+      "id": "inequality-gap-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the wealth gap ».",
+      "back": "l'écart de richesse"
+    },
+    {
+      "id": "outsource-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to outsource ».",
+      "back": "externaliser"
+    },
+    {
+      "id": "regulate-market-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to regulate the market ».",
+      "back": "réguler le marché"
+    },
+    {
+      "id": "drive-growth-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to drive growth ».",
+      "back": "stimuler la croissance"
+    },
+    {
+      "id": "economic-downturn-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an economic downturn ».",
+      "back": "un ralentissement économique"
     }
   ]
 }

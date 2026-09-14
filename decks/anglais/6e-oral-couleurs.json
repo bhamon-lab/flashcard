@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "blanc",
       "audio_text": "white"
+    },
+    {
+      "id": "red-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "red",
+      "audio_text": "red"
+    },
+    {
+      "id": "blue-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "blue",
+      "audio_text": "blue"
+    },
+    {
+      "id": "green-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "green",
+      "audio_text": "green"
+    },
+    {
+      "id": "yellow-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "yellow",
+      "audio_text": "yellow"
+    },
+    {
+      "id": "orange-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "orange",
+      "audio_text": "orange"
+    },
+    {
+      "id": "pink-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "pink",
+      "audio_text": "pink"
+    },
+    {
+      "id": "purple-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "purple",
+      "audio_text": "purple"
+    },
+    {
+      "id": "brown-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "brown",
+      "audio_text": "brown"
+    },
+    {
+      "id": "black-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "black",
+      "audio_text": "black"
+    },
+    {
+      "id": "white-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "white",
+      "audio_text": "white"
     }
   ]
 }

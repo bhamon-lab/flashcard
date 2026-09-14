@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « assumer son identité ».",
       "back": "to embrace one's identity"
+    },
+    {
+      "id": "belonging-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « belonging ».",
+      "back": "l’appartenance"
+    },
+    {
+      "id": "background-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « background ».",
+      "back": "les origines"
+    },
+    {
+      "id": "a-role-model-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a role model ».",
+      "back": "un modèle"
+    },
+    {
+      "id": "peers-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « peers ».",
+      "back": "les pairs"
+    },
+    {
+      "id": "self-confidence-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « self-confidence ».",
+      "back": "la confiance en soi"
+    },
+    {
+      "id": "a-value-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a value ».",
+      "back": "une valeur"
+    },
+    {
+      "id": "a-prejudice-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a prejudice ».",
+      "back": "un préjugé"
+    },
+    {
+      "id": "to-fit-in-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to fit in ».",
+      "back": "s’intégrer"
+    },
+    {
+      "id": "to-stand-out-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to stand out ».",
+      "back": "se démarquer"
+    },
+    {
+      "id": "to-embrace-one-s-identity-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to embrace one's identity ».",
+      "back": "assumer son identité"
     }
   ]
 }

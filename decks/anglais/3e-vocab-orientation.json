@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « obtenir son diplôme ».",
       "back": "to graduate"
+    },
+    {
+      "id": "subject-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a subject ».",
+      "back": "une matière"
+    },
+    {
+      "id": "grade-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a grade ».",
+      "back": "une note"
+    },
+    {
+      "id": "exam-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an exam ».",
+      "back": "un examen"
+    },
+    {
+      "id": "skill-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a skill ».",
+      "back": "une compétence"
+    },
+    {
+      "id": "degree-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a degree ».",
+      "back": "un diplôme universitaire"
+    },
+    {
+      "id": "training-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « training ».",
+      "back": "une formation"
+    },
+    {
+      "id": "career-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a career ».",
+      "back": "une carrière"
+    },
+    {
+      "id": "internship-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an internship ».",
+      "back": "un stage"
+    },
+    {
+      "id": "apply-course-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to apply for a course ».",
+      "back": "s'inscrire à une formation"
+    },
+    {
+      "id": "graduate-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to graduate ».",
+      "back": "obtenir son diplôme"
     }
   ]
 }

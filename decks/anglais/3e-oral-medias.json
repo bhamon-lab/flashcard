@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "le cyberharcèlement",
       "audio_text": "cyberbullying"
+    },
+    {
+      "id": "a-headline-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a headline",
+      "audio_text": "a headline"
+    },
+    {
+      "id": "a-source-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a source",
+      "audio_text": "a source"
+    },
+    {
+      "id": "a-news-report-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a news report",
+      "audio_text": "a news report"
+    },
+    {
+      "id": "social-media-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "social media",
+      "audio_text": "social media"
+    },
+    {
+      "id": "fake-news-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "fake news",
+      "audio_text": "fake news"
+    },
+    {
+      "id": "to-share-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to share",
+      "audio_text": "to share"
+    },
+    {
+      "id": "to-download-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to download",
+      "audio_text": "to download"
+    },
+    {
+      "id": "a-password-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a password",
+      "audio_text": "a password"
+    },
+    {
+      "id": "personal-data-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "personal data",
+      "audio_text": "personal data"
+    },
+    {
+      "id": "cyberbullying-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "cyberbullying",
+      "audio_text": "cyberbullying"
     }
   ]
 }

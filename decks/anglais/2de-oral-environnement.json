@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "le développement durable",
       "audio_text": "sustainable development"
+    },
+    {
+      "id": "climate-change-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "climate change",
+      "audio_text": "climate change"
+    },
+    {
+      "id": "the-carbon-footprint-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the carbon footprint",
+      "audio_text": "the carbon footprint"
+    },
+    {
+      "id": "fossil-fuels-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "fossil fuels",
+      "audio_text": "fossil fuels"
+    },
+    {
+      "id": "renewable-energy-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "renewable energy",
+      "audio_text": "renewable energy"
+    },
+    {
+      "id": "biodiversity-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "biodiversity",
+      "audio_text": "biodiversity"
+    },
+    {
+      "id": "an-endangered-species-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an endangered species",
+      "audio_text": "an endangered species"
+    },
+    {
+      "id": "to-reduce-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to reduce",
+      "audio_text": "to reduce"
+    },
+    {
+      "id": "to-reuse-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to reuse",
+      "audio_text": "to reuse"
+    },
+    {
+      "id": "to-raise-awareness-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to raise awareness",
+      "audio_text": "to raise awareness"
+    },
+    {
+      "id": "sustainable-development-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "sustainable development",
+      "audio_text": "sustainable development"
     }
   ]
 }

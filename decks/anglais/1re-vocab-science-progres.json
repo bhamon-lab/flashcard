@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « des preuves scientifiques ».",
       "back": "scientific evidence"
+    },
+    {
+      "id": "research-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « research ».",
+      "back": "la recherche"
+    },
+    {
+      "id": "finding-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a finding ».",
+      "back": "un résultat de recherche"
+    },
+    {
+      "id": "trial-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a trial ».",
+      "back": "un essai"
+    },
+    {
+      "id": "discovery-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a discovery ».",
+      "back": "une découverte"
+    },
+    {
+      "id": "device-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a device ».",
+      "back": "un dispositif"
+    },
+    {
+      "id": "reliable-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « reliable ».",
+      "back": "fiable"
+    },
+    {
+      "id": "accurate-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « accurate ».",
+      "back": "précis"
+    },
+    {
+      "id": "carry-out-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to carry out an experiment ».",
+      "back": "mener une expérience"
+    },
+    {
+      "id": "raise-concern-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to raise concern ».",
+      "back": "susciter une inquiétude"
+    },
+    {
+      "id": "scientific-evidence-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « scientific evidence ».",
+      "back": "des preuves scientifiques"
     }
   ]
 }

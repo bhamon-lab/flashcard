@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "curieux",
       "audio_text": "curious"
+    },
+    {
+      "id": "kind-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "kind",
+      "audio_text": "kind"
+    },
+    {
+      "id": "funny-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "funny",
+      "audio_text": "funny"
+    },
+    {
+      "id": "brave-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "brave",
+      "audio_text": "brave"
+    },
+    {
+      "id": "clever-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "clever",
+      "audio_text": "clever"
+    },
+    {
+      "id": "hardworking-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "hard-working",
+      "audio_text": "hard-working"
+    },
+    {
+      "id": "lazy-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "lazy",
+      "audio_text": "lazy"
+    },
+    {
+      "id": "selfish-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "selfish",
+      "audio_text": "selfish"
+    },
+    {
+      "id": "patient-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "patient",
+      "audio_text": "patient"
+    },
+    {
+      "id": "honest-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "honest",
+      "audio_text": "honest"
+    },
+    {
+      "id": "curious-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "curious",
+      "audio_text": "curious"
     }
   ]
 }

@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « la récréation ».",
       "back": "break time"
+    },
+    {
+      "id": "english-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « English ».",
+      "back": "l'anglais"
+    },
+    {
+      "id": "maths-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « maths ».",
+      "back": "les mathématiques"
+    },
+    {
+      "id": "history-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « history ».",
+      "back": "l'histoire"
+    },
+    {
+      "id": "geography-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « geography ».",
+      "back": "la géographie"
+    },
+    {
+      "id": "science-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « science ».",
+      "back": "les sciences"
+    },
+    {
+      "id": "art-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « art ».",
+      "back": "les arts plastiques"
+    },
+    {
+      "id": "music-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « music ».",
+      "back": "la musique"
+    },
+    {
+      "id": "pe-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « PE ».",
+      "back": "l'éducation physique"
+    },
+    {
+      "id": "timetable-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a timetable ».",
+      "back": "un emploi du temps"
+    },
+    {
+      "id": "break-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « break time ».",
+      "back": "la récréation"
     }
   ]
 }

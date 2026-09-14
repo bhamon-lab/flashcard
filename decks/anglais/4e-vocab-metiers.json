@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « gagner un salaire ».",
       "back": "to earn"
+    },
+    {
+      "id": "teacher-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a teacher ».",
+      "back": "un professeur"
+    },
+    {
+      "id": "doctor-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a doctor ».",
+      "back": "un médecin"
+    },
+    {
+      "id": "nurse-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a nurse ».",
+      "back": "un infirmier"
+    },
+    {
+      "id": "engineer-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an engineer ».",
+      "back": "un ingénieur"
+    },
+    {
+      "id": "journalist-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a journalist ».",
+      "back": "un journaliste"
+    },
+    {
+      "id": "lawyer-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a lawyer ».",
+      "back": "un avocat"
+    },
+    {
+      "id": "shop-assistant-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a shop assistant ».",
+      "back": "un vendeur"
+    },
+    {
+      "id": "firefighter-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a firefighter ».",
+      "back": "un pompier"
+    },
+    {
+      "id": "apply-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to apply ».",
+      "back": "postuler"
+    },
+    {
+      "id": "earn-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to earn ».",
+      "back": "gagner un salaire"
     }
   ]
 }

@@ -1221,7 +1221,7 @@ def generate():
                 f"Liste de vocabulaire — {topic_title.lower()}.",
             )
             vocab["category"] = "vocabulary"
-            vocab["cards"] = [
+            production_cards = [
                 {
                     "id": card_id,
                     "kind": "vocabulaire",
@@ -1230,6 +1230,16 @@ def generate():
                 }
                 for card_id, french, english in map(vocab_parts, entries)
             ]
+            reception_cards = [
+                {
+                    "id": f"{card_id}-reception",
+                    "kind": "vocabulaire-reception",
+                    "front": f"Traduis en français : « {english} ».",
+                    "back": french,
+                }
+                for card_id, french, english in map(vocab_parts, entries)
+            ]
+            vocab["cards"] = production_cards + reception_cards
             write_deck(vocab_name, vocab)
             expected.add(f"{vocab_name}.json")
 
@@ -1240,7 +1250,7 @@ def generate():
                 f"Même liste que « {topic_title} », à reconnaître à l'oral.",
             )
             oral.update({"category": "listening", "mode": "listening", "audio_language": "en-GB"})
-            oral["cards"] = [
+            recognition_cards = [
                 {
                     "id": card_id,
                     "kind": "comprehension-orale",
@@ -1250,6 +1260,17 @@ def generate():
                 }
                 for card_id, french, english in map(vocab_parts, entries)
             ]
+            dictation_cards = [
+                {
+                    "id": f"{card_id}-dictee",
+                    "kind": "dictee",
+                    "front": "Écoute, puis écris ce que tu entends en anglais.",
+                    "back": english,
+                    "audio_text": english,
+                }
+                for card_id, french, english in map(vocab_parts, entries)
+            ]
+            oral["cards"] = recognition_cards + dictation_cards
             write_deck(oral_name, oral)
             expected.add(f"{oral_name}.json")
 
@@ -1257,10 +1278,20 @@ def generate():
         culture_name = f"{prefix}-culture"
         culture = deck_base(level, f"anglais-{culture_name}", f"Culture · {culture_title}", "Repères culturels du monde anglophone.")
         culture["category"] = "culture"
-        culture["cards"] = [
+        culture_recall_cards = [
             {"id": f"repere-{index:02d}", "kind": "culture", "front": front, "back": back}
             for index, (front, back) in enumerate(culture_cards, start=1)
         ]
+        culture_consolidation_cards = [
+            {
+                "id": f"repere-{index:02d}-consolidation",
+                "kind": "culture-consolidation",
+                "front": f"À quelle question de culture correspond ce repère : « {back} » ?",
+                "back": front,
+            }
+            for index, (front, back) in enumerate(culture_cards, start=1)
+        ]
+        culture["cards"] = culture_recall_cards + culture_consolidation_cards
         write_deck(culture_name, culture)
         expected.add(f"{culture_name}.json")
 
@@ -1273,10 +1304,20 @@ def generate():
             "Repères culturels du monde anglophone.",
         )
         extra_culture["category"] = "culture"
-        extra_culture["cards"] = [
+        extra_culture_recall_cards = [
             {"id": f"repere-{index:02d}", "kind": "culture", "front": front, "back": back}
             for index, (front, back) in enumerate(extra_culture_cards, start=1)
         ]
+        extra_culture_consolidation_cards = [
+            {
+                "id": f"repere-{index:02d}-consolidation",
+                "kind": "culture-consolidation",
+                "front": f"À quelle question de culture correspond ce repère : « {back} » ?",
+                "back": front,
+            }
+            for index, (front, back) in enumerate(extra_culture_cards, start=1)
+        ]
+        extra_culture["cards"] = extra_culture_recall_cards + extra_culture_consolidation_cards
         write_deck(extra_culture_name, extra_culture)
         expected.add(f"{extra_culture_name}.json")
 
@@ -1300,14 +1341,27 @@ def generate():
             grammar_name = f"{prefix}-grammaire-{grammar_id}"
             grammar = deck_base(level, f"anglais-{grammar_name}", f"Grammaire · {grammar_title}", f"Règles et automatismes — {grammar_title.lower()}.")
             grammar["category"] = "grammar"
-            grammar["cards"] = [
+            practice_cards = [
                 {"id": card_id, "kind": "grammaire", "front": front, "back": back}
                 for card_id, front, back in grammar_cards
             ]
+            consolidation_cards = [
+                {
+                    "id": f"{card_id}-consolidation",
+                    "kind": "grammaire-consolidation",
+                    "front": f"Quelle consigne grammaticale conduit à cette réponse correcte : « {back} » ?",
+                    "back": front,
+                }
+                for card_id, front, back in grammar_cards
+            ]
+            grammar["cards"] = practice_cards + consolidation_cards
             write_deck(grammar_name, grammar)
             expected.add(f"{grammar_name}.json")
 
-    unexpected = sorted(path.name for path in OUTPUT.glob("*.json") if path.name not in expected)
+    unexpected = sorted(
+        path.name for path in OUTPUT.glob("*.json")
+        if path.name != "_bundle.json" and path.name not in expected
+    )
     if unexpected:
         raise RuntimeError(f"Fichiers anglais non générés à retirer explicitement : {', '.join(unexpected)}")
     print(f"OK : {len(expected)} decks générés dans {OUTPUT.relative_to(ROOT)}")

@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "aller se coucher",
       "audio_text": "to go to bed"
+    },
+    {
+      "id": "to-wake-up-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to wake up",
+      "audio_text": "to wake up"
+    },
+    {
+      "id": "to-get-up-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to get up",
+      "audio_text": "to get up"
+    },
+    {
+      "id": "to-get-dressed-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to get dressed",
+      "audio_text": "to get dressed"
+    },
+    {
+      "id": "to-have-breakfast-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to have breakfast",
+      "audio_text": "to have breakfast"
+    },
+    {
+      "id": "to-go-to-school-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to go to school",
+      "audio_text": "to go to school"
+    },
+    {
+      "id": "to-have-lunch-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to have lunch",
+      "audio_text": "to have lunch"
+    },
+    {
+      "id": "to-go-home-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to go home",
+      "audio_text": "to go home"
+    },
+    {
+      "id": "to-do-one-s-homework-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to do one's homework",
+      "audio_text": "to do one's homework"
+    },
+    {
+      "id": "to-have-dinner-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to have dinner",
+      "audio_text": "to have dinner"
+    },
+    {
+      "id": "to-go-to-bed-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to go to bed",
+      "audio_text": "to go to bed"
     }
   ]
 }

@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "à temps plein",
       "audio_text": "full-time"
+    },
+    {
+      "id": "job-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a job",
+      "audio_text": "a job"
+    },
+    {
+      "id": "employer-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an employer",
+      "audio_text": "an employer"
+    },
+    {
+      "id": "employee-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an employee",
+      "audio_text": "an employee"
+    },
+    {
+      "id": "salary-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a salary",
+      "audio_text": "a salary"
+    },
+    {
+      "id": "working-hours-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "working hours",
+      "audio_text": "working hours"
+    },
+    {
+      "id": "colleague-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a colleague",
+      "audio_text": "a colleague"
+    },
+    {
+      "id": "experience-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "experience",
+      "audio_text": "experience"
+    },
+    {
+      "id": "job-interview-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a job interview",
+      "audio_text": "a job interview"
+    },
+    {
+      "id": "part-time-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "part-time",
+      "audio_text": "part-time"
+    },
+    {
+      "id": "full-time-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "full-time",
+      "audio_text": "full-time"
     }
   ]
 }
