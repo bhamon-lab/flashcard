@@ -1250,9 +1250,7 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
         </View>
         <ManualNewModal
           visible={manualOpen}
-          dailyLimit={isMixed ? undefined : Number(decks[0].daily_new_limit)}
           onClose={() => setManualOpen(false)}
-          onLimitChange={isMixed ? undefined : async (limit) => { await updateDailyLimit(deckIds[0], limit); setDecks((value) => value.map((deck, index) => index === 0 ? { ...deck, daily_new_limit: limit } : deck)); }}
           onSelect={addFresh}
         />
       </SafeAreaView>
