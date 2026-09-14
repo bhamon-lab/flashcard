@@ -460,7 +460,14 @@ function ProgressionDeckRow({ entry, onOpen, onStudy }: {
   const progress = deck.total_count ? Math.round((Number(deck.learned_count) / Number(deck.total_count)) * 100) : 0;
   return (
     <Pressable onPress={() => onOpen(deck.id)} style={({ pressed }) => [styles.treeRow, pressed && styles.cardPressed]}>
-      <View style={[styles.treeRowMark, { backgroundColor: deck.color }]}><Text style={styles.treeRowGlyph}>{glyphFor(deck.id)}</Text></View>
+      <Pressable
+        onPress={() => onStudy(deck)}
+        accessibilityRole="button"
+        accessibilityLabel={`Lancer une session sur ${title}`}
+        style={({ pressed }) => [styles.treeRowMark, { backgroundColor: deck.color }, pressed && styles.pressed]}
+      >
+        <Ionicons name="play" size={16} color={colors.white} />
+      </Pressable>
       <View style={styles.treeRowBody}>
         <Text style={styles.treeRowTitle} numberOfLines={1}>{title}</Text>
         <View style={styles.treeRowMeta}>
@@ -476,14 +483,6 @@ function ProgressionDeckRow({ entry, onOpen, onStudy }: {
       {isDeckLearned(deck) ? (
         <View style={styles.treeRowDone}><Ionicons name="checkmark" size={15} color={colors.green} /></View>
       ) : null}
-      <Pressable
-        onPress={() => onStudy(deck)}
-        accessibilityRole="button"
-        accessibilityLabel={`Lancer une session sur ${title}`}
-        style={({ pressed }) => [styles.treeRowPlay, pressed && styles.pressed]}
-      >
-        <Ionicons name="play" size={15} color={colors.blue} />
-      </Pressable>
     </Pressable>
   );
 }
@@ -1786,7 +1785,6 @@ const styles = StyleSheet.create({
   treeTrackLabel: { fontSize: 12, fontWeight: '800', color: colors.blue, marginBottom: 7, marginTop: 2 },
   treeRow: { flexDirection: 'row', alignItems: 'center', backgroundColor: colors.canvas, borderRadius: 13, padding: 10, marginBottom: 7 },
   treeRowMark: { width: 34, height: 40, borderRadius: 10, alignItems: 'center', justifyContent: 'center', marginRight: 11 },
-  treeRowGlyph: { fontSize: 13, fontWeight: '700', color: colors.blue, fontFamily: mono },
   treeRowBody: { flex: 1, minWidth: 0 },
   treeRowTitle: { fontSize: 14, fontWeight: '800', color: colors.ink },
   treeRowMeta: { flexDirection: 'row', alignItems: 'center', gap: 7, marginTop: 4, flexWrap: 'wrap' },
@@ -1794,7 +1792,6 @@ const styles = StyleSheet.create({
   treePillNewText: { color: colors.green, fontSize: 10, fontWeight: '800' },
   treeRowProgress: { fontSize: 10, fontWeight: '700', color: colors.muted },
   treeRowDone: { width: 28, height: 28, borderRadius: 10, backgroundColor: '#DCEDE2', alignItems: 'center', justifyContent: 'center' },
-  treeRowPlay: { width: 28, height: 28, borderRadius: 10, backgroundColor: colors.blueSoft, alignItems: 'center', justifyContent: 'center', marginLeft: 8 },
   homeHeaderActions: { flexDirection: 'row', alignItems: 'center', gap: 10 },
   statsBoard: { backgroundColor: colors.board, borderRadius: radius.large, padding: 22, overflow: 'hidden', ...shadow },
   statsBoardRow: { flexDirection: 'row', zIndex: 2 },
