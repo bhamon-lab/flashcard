@@ -3,6 +3,8 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Platform, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
 import { colors } from './theme';
 
+export { stripMathText } from './mathText';
+
 const KATEX_VERSION = '0.16.22';
 const CDN = `https://cdn.jsdelivr.net/npm/katex@${KATEX_VERSION}/dist`;
 
@@ -16,8 +18,8 @@ function buildMathHtml(text: string, fontSize: number, color: string, instanceId
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="${CDN}/katex.min.css">
-<script src="${CDN}/katex.min.js"></script>
-<script src="${CDN}/contrib/auto-render.min.js"></script>
+<script defer src="${CDN}/katex.min.js"></script>
+<script defer src="${CDN}/contrib/auto-render.min.js"></script>
 <style>
   html, body { margin: 0; padding: 0; background: transparent; width: 100%; overflow: hidden; }
   #content {
@@ -62,6 +64,7 @@ function buildMathHtml(text: string, fontSize: number, color: string, instanceId
       requestAnimationFrame(function () { setTimeout(report, 20); });
     }
     window.addEventListener('load', function () { setTimeout(render, 10); });
+    requestAnimationFrame(report);
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(function () { setTimeout(report, 40); });
     }
@@ -149,44 +152,6 @@ function WebMathView({ text, fontSize = 18, color = colors.ink, style }: MathVie
 
 export function MathView(props: MathViewProps) {
   return Platform.OS === 'web' ? <WebMathView {...props} /> : <NativeMathView {...props} />;
-}
-
-const GREEK: Record<string, string> = {
-  alpha: 'α', beta: 'β', gamma: 'γ', delta: 'δ', epsilon: 'ε', theta: 'θ', lambda: 'λ',
-  mu: 'μ', pi: 'π', sigma: 'σ', phi: 'φ', omega: 'ω', Delta: 'Δ', Omega: 'Ω', Pi: 'π',
-};
-
-/** Version texte brut d'une chaîne contenant du LaTeX, pour les listes compactes. */
-export function stripMathText(input: string): string {
-  if (!input) return '';
-  const group = '\\{((?:[^{}]|\\{[^{}]*\\})*)\\}';
-  const fracRegex = new RegExp(`\\\\[dt]?frac${group}${group}`, 'g');
-  const compact = (value: string) => (value.length <= 1 || /^[A-Za-z0-9√π]+$/.test(value) ? value : `(${value})`);
-  let text = input
-    .replace(/\$\$([\s\S]*?)\$\$/g, '$1')
-    .replace(/\$([^$]*?)\$/g, '$1')
-    .replace(/\\left|\\right/g, '')
-    .replace(/\\[bB]igg?[lr]/g, '')
-    .replace(/\\sqrt/g, '√')
-    .replace(/\\,|\\;|\\:|\\!/g, ' ');
-  for (let previous = ''; previous !== text;) {
-    previous = text;
-    text = text.replace(fracRegex, (_, numerator: string, denominator: string) => `${compact(numerator)}/${compact(denominator)}`);
-  }
-  return text
-    .replace(/\\cdot|\\times/g, '×')
-    .replace(/\\neq|\\ne/g, '≠')
-    .replace(/\\leq/g, '≤')
-    .replace(/\\geq/g, '≥')
-    .replace(/\\approx/g, '≈')
-    .replace(/\\pm/g, '±')
-    .replace(/\\infty/g, '∞')
-    .replace(/\\([a-zA-Z]+)/g, (match, name: string) => GREEK[name] ?? name)
-    .replace(/\^\{([^{}]*)\}/g, (_, value: string) => (/^[A-Za-z0-9]+$/.test(value) ? `^${value}` : `^(${value})`))
-    .replace(/_\{([^{}]*)\}/g, (_, value: string) => (/^[A-Za-z0-9]+$/.test(value) ? `_${value}` : `_(${value})`))
-    .replace(/[{}]/g, '')
-    .replace(/\s+/g, ' ')
-    .trim();
 }
 
 const styles = StyleSheet.create({
