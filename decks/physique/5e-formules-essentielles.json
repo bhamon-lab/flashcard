@@ -1,0 +1,38 @@
+{
+  "id": "physique-5e-formules-essentielles",
+  "subject": "Physique",
+  "title": "Physique · 5e · Formules essentielles",
+  "description": "5e · 2026-2027 · Matière et mouvement.",
+  "format": "math",
+  "color": "#D7EEE8",
+  "daily_new_limit": 2,
+  "grade": "5e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "cycle4-physique-2020",
+  "cards": [
+    {
+      "id": "masse-volumique",
+      "kind": "formule",
+      "front": "Relation entre masse volumique $\\rho$, masse $m$ et volume $V$ ?",
+      "back": "$\\rho=\\frac{m}{V}$."
+    },
+    {
+      "id": "masse-depuis-volume",
+      "kind": "formule",
+      "front": "Masse $m$ d’un corps de masse volumique $\\rho$ et de volume $V$ ?",
+      "back": "$m=\\rho V$."
+    },
+    {
+      "id": "vitesse-moyenne",
+      "kind": "formule",
+      "front": "Vitesse moyenne pour une distance $d$ parcourue pendant $\\Delta t$ ?",
+      "back": "$v=\\frac{d}{\\Delta t}$."
+    },
+    {
+      "id": "distance-mouvement-uniforme",
+      "kind": "formule",
+      "front": "Distance parcourue à vitesse constante $v$ pendant $\\Delta t$ ?",
+      "back": "$d=v\\,\\Delta t$."
+    }
+  ]
+}

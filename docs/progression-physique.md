@@ -6,17 +6,21 @@ ajoutées dans des lots séparés.
 
 ```text
 Formules essentielles
-└── Collège · Cycle 4 — 17 cartes
-    └── 2de générale et technologique — 19 cartes
-        └── 1re spécialité physique-chimie — 25 cartes
-            └── Terminale spécialité physique-chimie — 33 cartes
+└── 5e — 4 cartes · matière et mouvement
+    └── 4e — 8 cartes · électricité et énergie
+        └── 3e — 5 cartes · forces, énergie cinétique et signaux
+            └── 2de générale et technologique — 19 cartes
+                └── 1re spécialité physique-chimie — 25 cartes
+                    └── Terminale spécialité physique-chimie — 33 cartes
 ```
 
-Le collège est regroupé en un niveau « Cycle 4 » : le programme officiel
-définit les attendus communs aux classes de 5e, 4e et 3e, sans imposer leur
-répartition année par année. Les niveaux du lycée suivent les programmes en
-vigueur de seconde générale et technologique, puis de la spécialité
-physique-chimie de première et terminale générales.
+Le programme officiel définit les attendus du collège à l’échelle du cycle 4,
+sans imposer leur répartition année par année. Les 17 formules sont donc
+organisées ici selon une progression pédagogique indicative : matière et
+mouvement en 5e, électricité et énergie en 4e, puis forces, énergie cinétique et
+signaux en 3e. Les niveaux du lycée suivent les programmes en vigueur de
+seconde générale et technologique, puis de la spécialité physique-chimie de
+première et terminale générales.
 
 ## Sources officielles
 

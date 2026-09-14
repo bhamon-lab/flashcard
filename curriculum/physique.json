@@ -5,13 +5,17 @@
   "country": "FR",
   "description": "Répertoire initial des formules de physique à mémoriser, du cycle 4 à la terminale spécialité. Les contenus de chimie, définitions et méthodes sont volontairement hors périmètre.",
   "grade_order": [
-    "cycle4",
+    "5e",
+    "4e",
+    "3e",
     "2de",
     "1re-spe",
     "term-spe"
   ],
   "grade_labels": {
-    "cycle4": "Collège",
+    "5e": "5e",
+    "4e": "4e",
+    "3e": "3e",
     "2de": "2de",
     "1re-spe": "1re spécialité",
     "term-spe": "Terminale spécialité"
@@ -52,15 +56,41 @@
   ],
   "nodes": [
     {
-      "id": "physique-cycle4-formules-essentielles",
-      "deck_id": "physique-cycle4-formules-essentielles",
-      "grade": "cycle4",
+      "id": "physique-5e-formules-essentielles",
+      "deck_id": "physique-5e-formules-essentielles",
+      "grade": "5e",
       "title": "Formules essentielles",
       "domain": "formules",
       "source_id": "cycle4-physique-2020",
-      "source_section": "Mouvement et interactions ; énergie, conversions et transferts ; signaux",
+      "source_section": "Organisation et transformations de la matière ; mouvement et interactions",
       "prerequisites": [],
-      "card_count": 17
+      "card_count": 4
+    },
+    {
+      "id": "physique-4e-formules-essentielles",
+      "deck_id": "physique-4e-formules-essentielles",
+      "grade": "4e",
+      "title": "Formules essentielles",
+      "domain": "formules",
+      "source_id": "cycle4-physique-2020",
+      "source_section": "L’énergie et ses conversions ; circuits électriques",
+      "prerequisites": [
+        "physique-5e-formules-essentielles"
+      ],
+      "card_count": 8
+    },
+    {
+      "id": "physique-3e-formules-essentielles",
+      "deck_id": "physique-3e-formules-essentielles",
+      "grade": "3e",
+      "title": "Formules essentielles",
+      "domain": "formules",
+      "source_id": "cycle4-physique-2020",
+      "source_section": "Mouvement et interactions ; des signaux pour observer et communiquer",
+      "prerequisites": [
+        "physique-4e-formules-essentielles"
+      ],
+      "card_count": 5
     },
     {
       "id": "physique-2de-formules-essentielles",
@@ -71,7 +101,7 @@
       "source_id": "seconde-physique-2019",
       "source_section": "Mouvement et interactions ; ondes et signaux ; transferts d’énergie",
       "prerequisites": [
-        "physique-cycle4-formules-essentielles"
+        "physique-3e-formules-essentielles"
       ],
       "card_count": 19
     },
