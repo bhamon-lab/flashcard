@@ -58,7 +58,7 @@ type Route =
   | { name: 'deck'; deckId: number }
   | { name: 'settings'; deckId: number }
   | { name: 'stats' }
-  | { name: 'study'; deckIds: number[]; newCardAllowance: number };
+  | { name: 'study'; deckIds: number[]; newCardAllowance: number; subject?: string };
 
 /** True si la chaîne contient du LaTeX à rendre ($…$ ou $$…$$). */
 const hasMath = (text: string) => text.includes('$');
@@ -771,7 +771,7 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
   );
 }
 
-function DeckScreen({ deckId, onBack, onStudy, onSettings }: { deckId: number; onBack: (subject: string) => void; onStudy: (newCardAllowance: number) => void; onSettings: () => void }) {
+function DeckScreen({ deckId, onBack, onStudy, onSettings }: { deckId: number; onBack: (subject: string) => void; onStudy: (newCardAllowance: number, subject: string) => void; onSettings: () => void }) {
   const [deck, setDeck] = useState<Deck | null>(null);
   const [cards, setCards] = useState<Card[]>([]);
   const [editorCard, setEditorCard] = useState<Card | null | undefined>(undefined);
@@ -830,7 +830,7 @@ function DeckScreen({ deckId, onBack, onStudy, onSettings }: { deckId: number; o
               <Pressable onPress={() => changeLimit(1)} style={styles.stepperButton}><Ionicons name="add" size={18} color={colors.ink} /></Pressable>
             </View>
           </View>
-          <PrimaryButton label={sessionCount ? `Commencer · ${sessionCount} carte${sessionCount > 1 ? 's' : ''}` : 'Lancer une session'} icon="play" onPress={() => onStudy(newCardsToAdd)} />
+          <PrimaryButton label={sessionCount ? `Commencer · ${sessionCount} carte${sessionCount > 1 ? 's' : ''}` : 'Lancer une session'} icon="play" onPress={() => onStudy(newCardsToAdd, deck.subject)} />
         </View>
 
         <View style={styles.sectionHeaderCompact}>
@@ -1245,7 +1245,7 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
           <View style={styles.completeActions}>
             <PrimaryButton label="Ajouter de nouvelles cartes" icon="add" onPress={() => setManualOpen(true)} />
             {!isMixed ? <Pressable onPress={restartAllCards} style={styles.resetButton}><Ionicons name="refresh-outline" size={18} color={colors.blue} /><Text style={styles.resetButtonText}>Réinitialiser toutes les cartes</Text></Pressable> : null}
-            <Pressable onPress={onClose} style={styles.secondaryButton}><Text style={styles.secondaryButtonText}>Retour à l’accueil</Text></Pressable>
+            <Pressable onPress={onClose} style={styles.secondaryButton}><Text style={styles.secondaryButtonText}>Retour à la matière</Text></Pressable>
           </View>
         </View>
         <ManualNewModal
@@ -1466,7 +1466,7 @@ function AppContent() {
       if (route.name === 'deck') {
         void getDeck(route.deckId).then((deck) => setRoute(deck ? { name: 'subject', subject: deck.subject } : { name: 'home' }));
       } else if (route.name === 'study' || route.name === 'subject' || route.name === 'stats') {
-        setRoute({ name: 'home' });
+        setRoute(route.name === 'study' && route.subject ? { name: 'subject', subject: route.subject } : { name: 'home' });
       } else {
         setRoute({ name: 'deck', deckId: route.deckId });
       }
@@ -1489,11 +1489,11 @@ function AppContent() {
     <View style={styles.app}>
       <StatusBar style="dark" />
       {route.name === 'home' ? <HomeScreen onOpenSubject={(subject) => setRoute({ name: 'subject', subject })} onOpenStats={() => setRoute({ name: 'stats' })} /> : null}
-      {route.name === 'subject' ? <SubjectScreen subject={route.subject} onBack={() => setRoute({ name: 'home' })} onOpenDeck={(deckId) => setRoute({ name: 'deck', deckId })} onStudy={(deckIds, newCardAllowance) => setRoute({ name: 'study', deckIds, newCardAllowance })} onCreate={(subject) => void openCreate(subject)} /> : null}
-      {route.name === 'deck' ? <DeckScreen deckId={route.deckId} onBack={(subject) => setRoute({ name: 'subject', subject })} onStudy={(newCardAllowance) => setRoute({ name: 'study', deckIds: [route.deckId], newCardAllowance })} onSettings={() => setRoute({ name: 'settings', deckId: route.deckId })} /> : null}
+      {route.name === 'subject' ? <SubjectScreen subject={route.subject} onBack={() => setRoute({ name: 'home' })} onOpenDeck={(deckId) => setRoute({ name: 'deck', deckId })} onStudy={(deckIds, newCardAllowance) => setRoute({ name: 'study', deckIds, newCardAllowance, subject: route.subject })} onCreate={(subject) => void openCreate(subject)} /> : null}
+      {route.name === 'deck' ? <DeckScreen deckId={route.deckId} onBack={(subject) => setRoute({ name: 'subject', subject })} onStudy={(newCardAllowance, subject) => setRoute({ name: 'study', deckIds: [route.deckId], newCardAllowance, subject })} onSettings={() => setRoute({ name: 'settings', deckId: route.deckId })} /> : null}
       {route.name === 'settings' ? <DeckSettingsScreen deckId={route.deckId} onBack={() => setRoute({ name: 'deck', deckId: route.deckId })} /> : null}
       {route.name === 'stats' ? <StatsScreen onBack={() => setRoute({ name: 'home' })} /> : null}
-      {route.name === 'study' ? <StudyScreen deckIds={route.deckIds} newCardAllowance={route.newCardAllowance} onClose={() => setRoute({ name: 'home' })} /> : null}
+      {route.name === 'study' ? <StudyScreen deckIds={route.deckIds} newCardAllowance={route.newCardAllowance} onClose={() => setRoute(route.subject ? { name: 'subject', subject: route.subject } : { name: 'home' })} /> : null}
       <CreateDeckModal visible={createOpen} defaultSubject={createSubject} subjects={subjects} onClose={() => setCreateOpen(false)} onCreated={(deckId) => { setCreateOpen(false); setRoute({ name: 'deck', deckId }); }} />
     </View>
   );
