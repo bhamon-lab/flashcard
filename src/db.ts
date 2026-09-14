@@ -588,6 +588,33 @@ export async function setHideLearnedPref(value: boolean) {
   await setMetadata(HIDE_LEARNED_KEY, value ? '1' : '0');
 }
 
+/** Fourchette de niveaux du curseur de l'arbre de progression, par matière (indices d'étape). */
+type StoredLevelRanges = Record<string, { min: number; max: number }>;
+
+const LEVEL_RANGE_KEY = 'level-range';
+
+const parseLevelRanges = (raw: string | null): StoredLevelRanges => {
+  if (!raw) return {};
+  try {
+    const parsed = JSON.parse(raw) as StoredLevelRanges;
+    return parsed && typeof parsed === 'object' ? parsed : {};
+  } catch {
+    return {};
+  }
+};
+
+export async function getLevelRange(subject: string): Promise<{ min: number; max: number } | null> {
+  const range = parseLevelRanges(await getMetadata(LEVEL_RANGE_KEY))[subject.trim().toLowerCase()];
+  if (!range || !Number.isInteger(range.min) || !Number.isInteger(range.max)) return null;
+  return { min: range.min, max: range.max };
+}
+
+export async function setLevelRange(subject: string, min: number, max: number) {
+  const map = parseLevelRanges(await getMetadata(LEVEL_RANGE_KEY));
+  map[subject.trim().toLowerCase()] = { min, max };
+  await setMetadata(LEVEL_RANGE_KEY, JSON.stringify(map));
+}
+
 export type SyncedCard = {
   id: string;
   front: string;
