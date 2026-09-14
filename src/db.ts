@@ -589,6 +589,37 @@ export async function setHideLearnedPref(value: boolean) {
   await setMetadata(HIDE_LEARNED_KEY, value ? '1' : '0');
 }
 
+/** Option « Inverser question et réponse » d'un paquet : la réponse s'affiche en question. */
+const REVERSED_DECKS_KEY = 'reversed-decks';
+
+type StoredReversedDecks = Record<string, boolean>;
+
+const parseReversedDecks = (raw: string | null): StoredReversedDecks => {
+  if (!raw) return {};
+  try {
+    const parsed = JSON.parse(raw) as StoredReversedDecks;
+    return parsed && typeof parsed === 'object' ? parsed : {};
+  } catch {
+    return {};
+  }
+};
+
+export async function getDeckReversedPref(deckId: number): Promise<boolean> {
+  return Boolean(parseReversedDecks(await getMetadata(REVERSED_DECKS_KEY))[String(deckId)]);
+}
+
+export async function setDeckReversedPref(deckId: number, value: boolean) {
+  const map = parseReversedDecks(await getMetadata(REVERSED_DECKS_KEY));
+  map[String(deckId)] = value;
+  await setMetadata(REVERSED_DECKS_KEY, JSON.stringify(map));
+}
+
+/** Paquets dont les sessions inversent question et réponse. */
+export async function getReversedDeckIds(): Promise<Set<number>> {
+  const map = parseReversedDecks(await getMetadata(REVERSED_DECKS_KEY));
+  return new Set(Object.entries(map).filter(([, value]) => value).map(([key]) => Number(key)));
+}
+
 /** Fourchette de niveaux du curseur de l'arbre de progression, par matière (indices d'étape). */
 type StoredLevelRanges = Record<string, { min: number; max: number }>;
 
