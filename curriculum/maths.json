@@ -110,6 +110,17 @@
   ],
   "nodes": [
     {
+      "id": "math-6e-tables-multiplication",
+      "deck_id": "math-6e-tables-multiplication",
+      "grade": "6e",
+      "title": "Tables de multiplication",
+      "domain": "nombres",
+      "source_id": "cycle3-2025",
+      "source_section": "Automatismes calculatoires : tables de multiplication, p. 13",
+      "prerequisites": [],
+      "card_count": 112
+    },
+    {
       "id": "math-6e-nombres",
       "deck_id": "math-6e-nombres",
       "grade": "6e",
