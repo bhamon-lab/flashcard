@@ -1,0 +1,1966 @@
+{
+  "schema_version": 2,
+  "subject": "Anglais",
+  "school_year": "2026-2027",
+  "country": "FR",
+  "description": "Progression de l'anglais de la 6e à la terminale, organisée en quatre parcours transversaux (vocabulaire et compréhension orale, culture, verbes irréguliers, grammaire). Les prérequis sont des recommandations, sans verrouillage.",
+  "grade_order": [
+    "6e",
+    "5e",
+    "4e",
+    "3e",
+    "2de",
+    "1re",
+    "Terminale"
+  ],
+  "grade_labels": {
+    "6e": "6e",
+    "5e": "5e",
+    "4e": "4e",
+    "3e": "3e",
+    "2de": "2de",
+    "1re": "1re",
+    "Terminale": "Terminale"
+  },
+  "tracks": {},
+  "branches": [
+    {
+      "title": "Vocabulaire et compréhension orale",
+      "domains": [
+        "vocabulary",
+        "listening"
+      ]
+    },
+    {
+      "title": "Culture du monde anglophone",
+      "domains": [
+        "culture"
+      ]
+    },
+    {
+      "title": "Verbes irréguliers",
+      "domains": [
+        "irregular-verbs"
+      ]
+    },
+    {
+      "title": "Grammaire et conjugaison",
+      "domains": [
+        "grammar"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "cecrl",
+      "url": "https://www.coe.int/fr/web/common-european-framework-reference-languages",
+      "label": "CECRL — Cadre européen commun de référence pour les langues (Conseil de l’Europe)"
+    },
+    {
+      "id": "eduscol-lv",
+      "url": "https://eduscol.education.fr/1021/programmes-et-ressources-en-langues-vivantes",
+      "label": "Programmes et ressources en langues vivantes — Éduscol"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "anglais-6e-vocab-couleurs",
+      "deck_id": "anglais-6e-vocab-couleurs",
+      "grade": "6e",
+      "title": "Couleurs",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-vocab-corps",
+      "deck_id": "anglais-6e-vocab-corps",
+      "grade": "6e",
+      "title": "Parties du corps",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-vocab-nombres-heure",
+      "deck_id": "anglais-6e-vocab-nombres-heure",
+      "grade": "6e",
+      "title": "Nombres et heure",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-vocab-famille",
+      "deck_id": "anglais-6e-vocab-famille",
+      "grade": "6e",
+      "title": "Famille",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-vocab-vetements",
+      "deck_id": "anglais-6e-vocab-vetements",
+      "grade": "6e",
+      "title": "Vêtements",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-vocab-maison",
+      "deck_id": "anglais-6e-vocab-maison",
+      "grade": "6e",
+      "title": "Pièces de la maison",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-vocab-salutations",
+      "deck_id": "anglais-6e-vocab-salutations",
+      "grade": "6e",
+      "title": "Salutations et politesse",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-vocab-ecole",
+      "deck_id": "anglais-6e-vocab-ecole",
+      "grade": "6e",
+      "title": "École et classe",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-oral-ecole",
+      "deck_id": "anglais-6e-oral-ecole",
+      "grade": "6e",
+      "title": "École et classe",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [
+        "anglais-6e-vocab-ecole"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-oral-vetements",
+      "deck_id": "anglais-6e-oral-vetements",
+      "grade": "6e",
+      "title": "Vêtements",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [
+        "anglais-6e-vocab-vetements"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-oral-corps",
+      "deck_id": "anglais-6e-oral-corps",
+      "grade": "6e",
+      "title": "Parties du corps",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [
+        "anglais-6e-vocab-corps"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-oral-couleurs",
+      "deck_id": "anglais-6e-oral-couleurs",
+      "grade": "6e",
+      "title": "Couleurs",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [
+        "anglais-6e-vocab-couleurs"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-oral-maison",
+      "deck_id": "anglais-6e-oral-maison",
+      "grade": "6e",
+      "title": "Pièces de la maison",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [
+        "anglais-6e-vocab-maison"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-oral-nombres-heure",
+      "deck_id": "anglais-6e-oral-nombres-heure",
+      "grade": "6e",
+      "title": "Nombres et heure",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [
+        "anglais-6e-vocab-nombres-heure"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-oral-salutations",
+      "deck_id": "anglais-6e-oral-salutations",
+      "grade": "6e",
+      "title": "Salutations et politesse",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [
+        "anglais-6e-vocab-salutations"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-oral-famille",
+      "deck_id": "anglais-6e-oral-famille",
+      "grade": "6e",
+      "title": "Famille",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [
+        "anglais-6e-vocab-famille"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-culture-fetes-symboles",
+      "deck_id": "anglais-6e-culture-fetes-symboles",
+      "grade": "6e",
+      "title": "Fêtes et symboles",
+      "domain": "culture",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-culture",
+      "deck_id": "anglais-6e-culture",
+      "grade": "6e",
+      "title": "Pays anglophones et capitales",
+      "domain": "culture",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-verbes-irreguliers",
+      "deck_id": "anglais-6e-verbes-irreguliers",
+      "grade": "6e",
+      "title": "Verbes irréguliers · série 1",
+      "domain": "irregular-verbs",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [],
+      "card_count": 20
+    },
+    {
+      "id": "anglais-6e-grammaire-present-questions",
+      "deck_id": "anglais-6e-grammaire-present-questions",
+      "grade": "6e",
+      "title": "Présent simple et questions",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-grammaire-be-have-pronoms",
+      "deck_id": "anglais-6e-grammaire-be-have-pronoms",
+      "grade": "6e",
+      "title": "Be, have got et pronoms",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-grammaire-possessifs-prepositions",
+      "deck_id": "anglais-6e-grammaire-possessifs-prepositions",
+      "grade": "6e",
+      "title": "Possessifs, prépositions et impératif",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-6e-grammaire-articles-pluriels",
+      "deck_id": "anglais-6e-grammaire-articles-pluriels",
+      "grade": "6e",
+      "title": "Articles, démonstratifs et pluriels",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 (6e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-vocab-repas",
+      "deck_id": "anglais-5e-vocab-repas",
+      "grade": "5e",
+      "title": "Aliments et repas",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-vocab-ville",
+      "deck_id": "anglais-5e-vocab-ville",
+      "grade": "5e",
+      "title": "Ville et directions",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-vocab-matieres",
+      "deck_id": "anglais-5e-vocab-matieres",
+      "grade": "5e",
+      "title": "Matières scolaires",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-vocab-meubles",
+      "deck_id": "anglais-5e-vocab-meubles",
+      "grade": "5e",
+      "title": "Maison et meubles",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-vocab-routine",
+      "deck_id": "anglais-5e-vocab-routine",
+      "grade": "5e",
+      "title": "Routine quotidienne",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-vocab-animaux",
+      "deck_id": "anglais-5e-vocab-animaux",
+      "grade": "5e",
+      "title": "Animaux et nature",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-vocab-saisons",
+      "deck_id": "anglais-5e-vocab-saisons",
+      "grade": "5e",
+      "title": "Saisons et météo",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-vocab-loisirs",
+      "deck_id": "anglais-5e-vocab-loisirs",
+      "grade": "5e",
+      "title": "Loisirs et sports",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-oral-repas",
+      "deck_id": "anglais-5e-oral-repas",
+      "grade": "5e",
+      "title": "Aliments et repas",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [
+        "anglais-5e-vocab-repas"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-oral-ville",
+      "deck_id": "anglais-5e-oral-ville",
+      "grade": "5e",
+      "title": "Ville et directions",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [
+        "anglais-5e-vocab-ville"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-oral-saisons",
+      "deck_id": "anglais-5e-oral-saisons",
+      "grade": "5e",
+      "title": "Saisons et météo",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [
+        "anglais-5e-vocab-saisons"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-oral-matieres",
+      "deck_id": "anglais-5e-oral-matieres",
+      "grade": "5e",
+      "title": "Matières scolaires",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [
+        "anglais-5e-vocab-matieres"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-oral-animaux",
+      "deck_id": "anglais-5e-oral-animaux",
+      "grade": "5e",
+      "title": "Animaux et nature",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [
+        "anglais-5e-vocab-animaux"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-oral-loisirs",
+      "deck_id": "anglais-5e-oral-loisirs",
+      "grade": "5e",
+      "title": "Loisirs et sports",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [
+        "anglais-5e-vocab-loisirs"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-oral-meubles",
+      "deck_id": "anglais-5e-oral-meubles",
+      "grade": "5e",
+      "title": "Maison et meubles",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [
+        "anglais-5e-vocab-meubles"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-oral-routine",
+      "deck_id": "anglais-5e-oral-routine",
+      "grade": "5e",
+      "title": "Routine quotidienne",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [
+        "anglais-5e-vocab-routine"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-culture-etats-unis",
+      "deck_id": "anglais-5e-culture-etats-unis",
+      "grade": "5e",
+      "title": "États-Unis : géographie et monuments",
+      "domain": "culture",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-culture",
+      "deck_id": "anglais-5e-culture",
+      "grade": "5e",
+      "title": "Royaume-Uni : repères et fêtes",
+      "domain": "culture",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-verbes-irreguliers",
+      "deck_id": "anglais-5e-verbes-irreguliers",
+      "grade": "5e",
+      "title": "Verbes irréguliers · série 2",
+      "domain": "irregular-verbs",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [
+        "anglais-6e-verbes-irreguliers"
+      ],
+      "card_count": 25
+    },
+    {
+      "id": "anglais-5e-grammaire-possession-lieu",
+      "deck_id": "anglais-5e-grammaire-possession-lieu",
+      "grade": "5e",
+      "title": "Possession, pronoms et lieu",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-grammaire-comparatifs-quantites",
+      "deck_id": "anglais-5e-grammaire-comparatifs-quantites",
+      "grade": "5e",
+      "title": "Comparatifs et quantités",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-grammaire-present-continuous",
+      "deck_id": "anglais-5e-grammaire-present-continuous",
+      "grade": "5e",
+      "title": "Présent continu et fréquence",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-5e-grammaire-preterit-introduction",
+      "deck_id": "anglais-5e-grammaire-preterit-introduction",
+      "grade": "5e",
+      "title": "Introduction au prétérit",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A1 – A2 (5e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-vocab-technologie",
+      "deck_id": "anglais-4e-vocab-technologie",
+      "grade": "4e",
+      "title": "Technologie",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-vocab-metiers",
+      "deck_id": "anglais-4e-vocab-metiers",
+      "grade": "4e",
+      "title": "Métiers",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-vocab-achats",
+      "deck_id": "anglais-4e-vocab-achats",
+      "grade": "4e",
+      "title": "Achats et argent",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-vocab-voyage",
+      "deck_id": "anglais-4e-vocab-voyage",
+      "grade": "4e",
+      "title": "Voyage et transports",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-vocab-personnalite",
+      "deck_id": "anglais-4e-vocab-personnalite",
+      "grade": "4e",
+      "title": "Personnalité",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-vocab-meteo-environnement",
+      "deck_id": "anglais-4e-vocab-meteo-environnement",
+      "grade": "4e",
+      "title": "Météo et environnement",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-vocab-sante",
+      "deck_id": "anglais-4e-vocab-sante",
+      "grade": "4e",
+      "title": "Corps et santé",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-vocab-hebergement",
+      "deck_id": "anglais-4e-vocab-hebergement",
+      "grade": "4e",
+      "title": "Vacances et hébergement",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-oral-personnalite",
+      "deck_id": "anglais-4e-oral-personnalite",
+      "grade": "4e",
+      "title": "Personnalité",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [
+        "anglais-4e-vocab-personnalite"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-oral-hebergement",
+      "deck_id": "anglais-4e-oral-hebergement",
+      "grade": "4e",
+      "title": "Vacances et hébergement",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [
+        "anglais-4e-vocab-hebergement"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-oral-metiers",
+      "deck_id": "anglais-4e-oral-metiers",
+      "grade": "4e",
+      "title": "Métiers",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [
+        "anglais-4e-vocab-metiers"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-oral-meteo-environnement",
+      "deck_id": "anglais-4e-oral-meteo-environnement",
+      "grade": "4e",
+      "title": "Météo et environnement",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [
+        "anglais-4e-vocab-meteo-environnement"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-oral-technologie",
+      "deck_id": "anglais-4e-oral-technologie",
+      "grade": "4e",
+      "title": "Technologie",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [
+        "anglais-4e-vocab-technologie"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-oral-sante",
+      "deck_id": "anglais-4e-oral-sante",
+      "grade": "4e",
+      "title": "Corps et santé",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [
+        "anglais-4e-vocab-sante"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-oral-achats",
+      "deck_id": "anglais-4e-oral-achats",
+      "grade": "4e",
+      "title": "Achats et argent",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [
+        "anglais-4e-vocab-achats"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-oral-voyage",
+      "deck_id": "anglais-4e-oral-voyage",
+      "grade": "4e",
+      "title": "Voyage et transports",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [
+        "anglais-4e-vocab-voyage"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-culture-peuples-paysages",
+      "deck_id": "anglais-4e-culture-peuples-paysages",
+      "grade": "4e",
+      "title": "Peuples autochtones et paysages",
+      "domain": "culture",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-culture",
+      "deck_id": "anglais-4e-culture",
+      "grade": "4e",
+      "title": "Irlande, Canada, Australie et Nouvelle-Zélande",
+      "domain": "culture",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-verbes-irreguliers",
+      "deck_id": "anglais-4e-verbes-irreguliers",
+      "grade": "4e",
+      "title": "Verbes irréguliers · série 3",
+      "domain": "irregular-verbs",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [
+        "anglais-5e-verbes-irreguliers"
+      ],
+      "card_count": 25
+    },
+    {
+      "id": "anglais-4e-grammaire-recit-futur-modaux",
+      "deck_id": "anglais-4e-grammaire-recit-futur-modaux",
+      "grade": "4e",
+      "title": "Récit, futur et modaux",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-grammaire-present-perfect-introduction",
+      "deck_id": "anglais-4e-grammaire-present-perfect-introduction",
+      "grade": "4e",
+      "title": "Introduction au present perfect",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-grammaire-relatives-gerondif",
+      "deck_id": "anglais-4e-grammaire-relatives-gerondif",
+      "grade": "4e",
+      "title": "Relatives et formes en -ing",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-4e-grammaire-preterit",
+      "deck_id": "anglais-4e-grammaire-preterit",
+      "grade": "4e",
+      "title": "Prétérit simple",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 (4e)",
+      "prerequisites": [
+        "anglais-5e-grammaire-preterit-introduction"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-vocab-experiences",
+      "deck_id": "anglais-3e-vocab-experiences",
+      "grade": "3e",
+      "title": "Voyages et expériences",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-vocab-climat",
+      "deck_id": "anglais-3e-vocab-climat",
+      "grade": "3e",
+      "title": "Climat et écologie",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-vocab-citoyennete",
+      "deck_id": "anglais-3e-vocab-citoyennete",
+      "grade": "3e",
+      "title": "Société et citoyenneté",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-vocab-medias",
+      "deck_id": "anglais-3e-vocab-medias",
+      "grade": "3e",
+      "title": "Médias et numérique",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-vocab-relations",
+      "deck_id": "anglais-3e-vocab-relations",
+      "grade": "3e",
+      "title": "Émotions et relations",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-vocab-travail",
+      "deck_id": "anglais-3e-vocab-travail",
+      "grade": "3e",
+      "title": "Monde du travail",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-vocab-orientation",
+      "deck_id": "anglais-3e-vocab-orientation",
+      "grade": "3e",
+      "title": "Études et orientation",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-vocab-justice",
+      "deck_id": "anglais-3e-vocab-justice",
+      "grade": "3e",
+      "title": "Justice et sécurité",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-oral-orientation",
+      "deck_id": "anglais-3e-oral-orientation",
+      "grade": "3e",
+      "title": "Études et orientation",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [
+        "anglais-3e-vocab-orientation"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-oral-justice",
+      "deck_id": "anglais-3e-oral-justice",
+      "grade": "3e",
+      "title": "Justice et sécurité",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [
+        "anglais-3e-vocab-justice"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-oral-climat",
+      "deck_id": "anglais-3e-oral-climat",
+      "grade": "3e",
+      "title": "Climat et écologie",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [
+        "anglais-3e-vocab-climat"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-oral-relations",
+      "deck_id": "anglais-3e-oral-relations",
+      "grade": "3e",
+      "title": "Émotions et relations",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [
+        "anglais-3e-vocab-relations"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-oral-travail",
+      "deck_id": "anglais-3e-oral-travail",
+      "grade": "3e",
+      "title": "Monde du travail",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [
+        "anglais-3e-vocab-travail"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-oral-citoyennete",
+      "deck_id": "anglais-3e-oral-citoyennete",
+      "grade": "3e",
+      "title": "Société et citoyenneté",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [
+        "anglais-3e-vocab-citoyennete"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-oral-medias",
+      "deck_id": "anglais-3e-oral-medias",
+      "grade": "3e",
+      "title": "Médias et numérique",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [
+        "anglais-3e-vocab-medias"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-oral-experiences",
+      "deck_id": "anglais-3e-oral-experiences",
+      "grade": "3e",
+      "title": "Voyages et expériences",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [
+        "anglais-3e-vocab-experiences"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-culture",
+      "deck_id": "anglais-3e-culture",
+      "grade": "3e",
+      "title": "Figures historiques et droits civiques",
+      "domain": "culture",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-culture-migrations-mouvements",
+      "deck_id": "anglais-3e-culture-migrations-mouvements",
+      "grade": "3e",
+      "title": "Migrations et mouvements sociaux",
+      "domain": "culture",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-verbes-irreguliers",
+      "deck_id": "anglais-3e-verbes-irreguliers",
+      "grade": "3e",
+      "title": "Verbes irréguliers · série 4",
+      "domain": "irregular-verbs",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [
+        "anglais-4e-verbes-irreguliers"
+      ],
+      "card_count": 30
+    },
+    {
+      "id": "anglais-3e-grammaire-past-perfect-discours",
+      "deck_id": "anglais-3e-grammaire-past-perfect-discours",
+      "grade": "3e",
+      "title": "Past perfect et discours indirect",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-grammaire-conditionnels-obligation",
+      "deck_id": "anglais-3e-grammaire-conditionnels-obligation",
+      "grade": "3e",
+      "title": "Conditionnels et obligation",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-grammaire-passif-relatives",
+      "deck_id": "anglais-3e-grammaire-passif-relatives",
+      "grade": "3e",
+      "title": "Voix passive et relatives",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-3e-grammaire-present-perfect",
+      "deck_id": "anglais-3e-grammaire-present-perfect",
+      "grade": "3e",
+      "title": "Present perfect",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau A2 – B1 (3e)",
+      "prerequisites": [
+        "anglais-4e-grammaire-present-perfect-introduction"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-vocab-memoire",
+      "deck_id": "anglais-2de-vocab-memoire",
+      "grade": "2de",
+      "title": "Mémoire et patrimoine",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-vocab-environnement",
+      "deck_id": "anglais-2de-vocab-environnement",
+      "grade": "2de",
+      "title": "Environnement et solutions",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-vocab-exploration",
+      "deck_id": "anglais-2de-vocab-exploration",
+      "grade": "2de",
+      "title": "Voyages et exploration",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-vocab-mondes-virtuels",
+      "deck_id": "anglais-2de-vocab-mondes-virtuels",
+      "grade": "2de",
+      "title": "Citoyenneté et mondes virtuels",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-vocab-identite",
+      "deck_id": "anglais-2de-vocab-identite",
+      "grade": "2de",
+      "title": "Identité et relations",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-vocab-competition",
+      "deck_id": "anglais-2de-vocab-competition",
+      "grade": "2de",
+      "title": "Sport et compétition",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-vocab-arts-pouvoir",
+      "deck_id": "anglais-2de-vocab-arts-pouvoir",
+      "grade": "2de",
+      "title": "Arts et pouvoir",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-vocab-territoires",
+      "deck_id": "anglais-2de-vocab-territoires",
+      "grade": "2de",
+      "title": "Ville et territoires",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-oral-identite",
+      "deck_id": "anglais-2de-oral-identite",
+      "grade": "2de",
+      "title": "Identité et relations",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [
+        "anglais-2de-vocab-identite"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-oral-mondes-virtuels",
+      "deck_id": "anglais-2de-oral-mondes-virtuels",
+      "grade": "2de",
+      "title": "Citoyenneté et mondes virtuels",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [
+        "anglais-2de-vocab-mondes-virtuels"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-oral-territoires",
+      "deck_id": "anglais-2de-oral-territoires",
+      "grade": "2de",
+      "title": "Ville et territoires",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [
+        "anglais-2de-vocab-territoires"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-oral-competition",
+      "deck_id": "anglais-2de-oral-competition",
+      "grade": "2de",
+      "title": "Sport et compétition",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [
+        "anglais-2de-vocab-competition"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-oral-environnement",
+      "deck_id": "anglais-2de-oral-environnement",
+      "grade": "2de",
+      "title": "Environnement et solutions",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [
+        "anglais-2de-vocab-environnement"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-oral-exploration",
+      "deck_id": "anglais-2de-oral-exploration",
+      "grade": "2de",
+      "title": "Voyages et exploration",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [
+        "anglais-2de-vocab-exploration"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-oral-memoire",
+      "deck_id": "anglais-2de-oral-memoire",
+      "grade": "2de",
+      "title": "Mémoire et patrimoine",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [
+        "anglais-2de-vocab-memoire"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-oral-arts-pouvoir",
+      "deck_id": "anglais-2de-oral-arts-pouvoir",
+      "grade": "2de",
+      "title": "Arts et pouvoir",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [
+        "anglais-2de-vocab-arts-pouvoir"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-culture",
+      "deck_id": "anglais-2de-culture",
+      "grade": "2de",
+      "title": "Institutions américaines et britanniques",
+      "domain": "culture",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-culture-villes-territoires",
+      "deck_id": "anglais-2de-culture-villes-territoires",
+      "grade": "2de",
+      "title": "Villes et territoires anglophones",
+      "domain": "culture",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-verbes-irreguliers",
+      "deck_id": "anglais-2de-verbes-irreguliers",
+      "grade": "2de",
+      "title": "Verbes irréguliers · série 5",
+      "domain": "irregular-verbs",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [
+        "anglais-3e-verbes-irreguliers"
+      ],
+      "card_count": 28
+    },
+    {
+      "id": "anglais-2de-grammaire-infinitif-connecteurs",
+      "deck_id": "anglais-2de-grammaire-infinitif-connecteurs",
+      "grade": "2de",
+      "title": "Infinitif, gérondif et connecteurs",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-grammaire-conditionnels",
+      "deck_id": "anglais-2de-grammaire-conditionnels",
+      "grade": "2de",
+      "title": "Conditionnels présent et irréel",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-grammaire-relatives-passif-modaux",
+      "deck_id": "anglais-2de-grammaire-relatives-passif-modaux",
+      "grade": "2de",
+      "title": "Relatives, passif et modaux",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-2de-grammaire-temps-du-recit",
+      "deck_id": "anglais-2de-grammaire-temps-du-recit",
+      "grade": "2de",
+      "title": "Temps du récit",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 (2de)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-vocab-pouvoir-contestation",
+      "deck_id": "anglais-1re-vocab-pouvoir-contestation",
+      "grade": "1re",
+      "title": "Pouvoir et contestation",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-vocab-economie-travail",
+      "deck_id": "anglais-1re-vocab-economie-travail",
+      "grade": "1re",
+      "title": "Économie et travail",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-vocab-science-progres",
+      "deck_id": "anglais-1re-vocab-science-progres",
+      "grade": "1re",
+      "title": "Science et progrès",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-vocab-action-environnementale",
+      "deck_id": "anglais-1re-vocab-action-environnementale",
+      "grade": "1re",
+      "title": "Action environnementale",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-vocab-innovation-ethique",
+      "deck_id": "anglais-1re-vocab-innovation-ethique",
+      "grade": "1re",
+      "title": "Innovation et éthique",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-vocab-litterature",
+      "deck_id": "anglais-1re-vocab-litterature",
+      "grade": "1re",
+      "title": "Analyse littéraire",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-vocab-migration-memoire",
+      "deck_id": "anglais-1re-vocab-migration-memoire",
+      "grade": "1re",
+      "title": "Migration et mémoire",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-vocab-analyse-medias",
+      "deck_id": "anglais-1re-vocab-analyse-medias",
+      "grade": "1re",
+      "title": "Analyse des médias",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-oral-action-environnementale",
+      "deck_id": "anglais-1re-oral-action-environnementale",
+      "grade": "1re",
+      "title": "Action environnementale",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [
+        "anglais-1re-vocab-action-environnementale"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-oral-pouvoir-contestation",
+      "deck_id": "anglais-1re-oral-pouvoir-contestation",
+      "grade": "1re",
+      "title": "Pouvoir et contestation",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [
+        "anglais-1re-vocab-pouvoir-contestation"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-oral-litterature",
+      "deck_id": "anglais-1re-oral-litterature",
+      "grade": "1re",
+      "title": "Analyse littéraire",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [
+        "anglais-1re-vocab-litterature"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-oral-analyse-medias",
+      "deck_id": "anglais-1re-oral-analyse-medias",
+      "grade": "1re",
+      "title": "Analyse des médias",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [
+        "anglais-1re-vocab-analyse-medias"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-oral-innovation-ethique",
+      "deck_id": "anglais-1re-oral-innovation-ethique",
+      "grade": "1re",
+      "title": "Innovation et éthique",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [
+        "anglais-1re-vocab-innovation-ethique"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-oral-migration-memoire",
+      "deck_id": "anglais-1re-oral-migration-memoire",
+      "grade": "1re",
+      "title": "Migration et mémoire",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [
+        "anglais-1re-vocab-migration-memoire"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-oral-economie-travail",
+      "deck_id": "anglais-1re-oral-economie-travail",
+      "grade": "1re",
+      "title": "Économie et travail",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [
+        "anglais-1re-vocab-economie-travail"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-oral-science-progres",
+      "deck_id": "anglais-1re-oral-science-progres",
+      "grade": "1re",
+      "title": "Science et progrès",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [
+        "anglais-1re-vocab-science-progres"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-culture-sciences-innovations",
+      "deck_id": "anglais-1re-culture-sciences-innovations",
+      "grade": "1re",
+      "title": "Sciences et innovations",
+      "domain": "culture",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-culture",
+      "deck_id": "anglais-1re-culture",
+      "grade": "1re",
+      "title": "Littérature, arts et figures anglophones",
+      "domain": "culture",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-verbes-irreguliers",
+      "deck_id": "anglais-1re-verbes-irreguliers",
+      "grade": "1re",
+      "title": "Verbes irréguliers · série 6",
+      "domain": "irregular-verbs",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [
+        "anglais-2de-verbes-irreguliers"
+      ],
+      "card_count": 27
+    },
+    {
+      "id": "anglais-1re-grammaire-passif-discours-indirect",
+      "deck_id": "anglais-1re-grammaire-passif-discours-indirect",
+      "grade": "1re",
+      "title": "Passif et discours indirect",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-grammaire-third-conditional",
+      "deck_id": "anglais-1re-grammaire-third-conditional",
+      "grade": "1re",
+      "title": "Troisième conditionnel et souhaits",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-grammaire-hypotheses-nuances",
+      "deck_id": "anglais-1re-grammaire-hypotheses-nuances",
+      "grade": "1re",
+      "title": "Hypothèses et nuances",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-1re-grammaire-relatives-causatif",
+      "deck_id": "anglais-1re-grammaire-relatives-causatif",
+      "grade": "1re",
+      "title": "Relatives avancées et causatif",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B1 – B2 (1re)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-vocab-enjeux-mondiaux",
+      "deck_id": "anglais-term-vocab-enjeux-mondiaux",
+      "grade": "Terminale",
+      "title": "Enjeux mondiaux et technologie",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-vocab-politique-societe",
+      "deck_id": "anglais-term-vocab-politique-societe",
+      "grade": "Terminale",
+      "title": "Politique et société",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-vocab-democratie",
+      "deck_id": "anglais-term-vocab-democratie",
+      "grade": "Terminale",
+      "title": "Démocratie et institutions",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-vocab-argumentation",
+      "deck_id": "anglais-term-vocab-argumentation",
+      "grade": "Terminale",
+      "title": "Débat et argumentation",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-vocab-mondialisation",
+      "deck_id": "anglais-term-vocab-mondialisation",
+      "grade": "Terminale",
+      "title": "Économie et mondialisation",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-vocab-verite-information",
+      "deck_id": "anglais-term-vocab-verite-information",
+      "grade": "Terminale",
+      "title": "Vérité et information",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-vocab-diversite",
+      "deck_id": "anglais-term-vocab-diversite",
+      "grade": "Terminale",
+      "title": "Identité et diversité",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-vocab-politique-climatique",
+      "deck_id": "anglais-term-vocab-politique-climatique",
+      "grade": "Terminale",
+      "title": "Politique climatique",
+      "domain": "vocabulary",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-oral-diversite",
+      "deck_id": "anglais-term-oral-diversite",
+      "grade": "Terminale",
+      "title": "Identité et diversité",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [
+        "anglais-term-vocab-diversite"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-oral-democratie",
+      "deck_id": "anglais-term-oral-democratie",
+      "grade": "Terminale",
+      "title": "Démocratie et institutions",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [
+        "anglais-term-vocab-democratie"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-oral-politique-societe",
+      "deck_id": "anglais-term-oral-politique-societe",
+      "grade": "Terminale",
+      "title": "Politique et société",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [
+        "anglais-term-vocab-politique-societe"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-oral-mondialisation",
+      "deck_id": "anglais-term-oral-mondialisation",
+      "grade": "Terminale",
+      "title": "Économie et mondialisation",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [
+        "anglais-term-vocab-mondialisation"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-oral-argumentation",
+      "deck_id": "anglais-term-oral-argumentation",
+      "grade": "Terminale",
+      "title": "Débat et argumentation",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [
+        "anglais-term-vocab-argumentation"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-oral-politique-climatique",
+      "deck_id": "anglais-term-oral-politique-climatique",
+      "grade": "Terminale",
+      "title": "Politique climatique",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [
+        "anglais-term-vocab-politique-climatique"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-oral-verite-information",
+      "deck_id": "anglais-term-oral-verite-information",
+      "grade": "Terminale",
+      "title": "Vérité et information",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [
+        "anglais-term-vocab-verite-information"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-oral-enjeux-mondiaux",
+      "deck_id": "anglais-term-oral-enjeux-mondiaux",
+      "grade": "Terminale",
+      "title": "Enjeux mondiaux et technologie",
+      "domain": "listening",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [
+        "anglais-term-vocab-enjeux-mondiaux"
+      ],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-culture",
+      "deck_id": "anglais-term-culture",
+      "grade": "Terminale",
+      "title": "Commonwealth et institutions contemporaines",
+      "domain": "culture",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-culture-reperes-geopolitiques",
+      "deck_id": "anglais-term-culture-reperes-geopolitiques",
+      "grade": "Terminale",
+      "title": "Repères historiques et géopolitiques",
+      "domain": "culture",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-verbes-irreguliers",
+      "deck_id": "anglais-term-verbes-irreguliers",
+      "grade": "Terminale",
+      "title": "Verbes irréguliers · série 7",
+      "domain": "irregular-verbs",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [
+        "anglais-1re-verbes-irreguliers"
+      ],
+      "card_count": 30
+    },
+    {
+      "id": "anglais-term-grammaire-discours-formel",
+      "deck_id": "anglais-term-grammaire-discours-formel",
+      "grade": "Terminale",
+      "title": "Discours formel et articulation",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-grammaire-emphase-synthese",
+      "deck_id": "anglais-term-grammaire-emphase-synthese",
+      "grade": "Terminale",
+      "title": "Emphase et synthèse",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-grammaire-passif-reporting",
+      "deck_id": "anglais-term-grammaire-passif-reporting",
+      "grade": "Terminale",
+      "title": "Passif et structures de discours",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [],
+      "card_count": 10
+    },
+    {
+      "id": "anglais-term-grammaire-conditionnels-avances",
+      "deck_id": "anglais-term-grammaire-conditionnels-avances",
+      "grade": "Terminale",
+      "title": "Conditionnels avancés",
+      "domain": "grammar",
+      "source_id": "cecrl",
+      "source_section": "Échelle globale — niveau B2 (Terminale)",
+      "prerequisites": [],
+      "card_count": 10
+    }
+  ]
+}
