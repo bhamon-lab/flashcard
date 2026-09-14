@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « accorder un droit ».",
       "back": "to grant a right"
+    },
+    {
+      "id": "authority-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « authority ».",
+      "back": "l'autorité"
+    },
+    {
+      "id": "protest-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a protest ».",
+      "back": "une manifestation"
+    },
+    {
+      "id": "demonstrator-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a demonstrator ».",
+      "back": "un manifestant"
+    },
+    {
+      "id": "civil-disobedience-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « civil disobedience ».",
+      "back": "la désobéissance civile"
+    },
+    {
+      "id": "oppression-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « oppression ».",
+      "back": "l'oppression"
+    },
+    {
+      "id": "resistance-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « resistance ».",
+      "back": "la résistance"
+    },
+    {
+      "id": "challenge-authority-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to challenge authority ».",
+      "back": "contester l'autorité"
+    },
+    {
+      "id": "speak-out-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to speak out ».",
+      "back": "prendre publiquement position"
+    },
+    {
+      "id": "ban-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to ban ».",
+      "back": "interdire"
+    },
+    {
+      "id": "grant-right-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to grant a right ».",
+      "back": "accorder un droit"
     }
   ]
 }

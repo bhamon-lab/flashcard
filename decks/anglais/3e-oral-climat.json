@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "agir",
       "audio_text": "to take action"
+    },
+    {
+      "id": "global-warming-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "global warming",
+      "audio_text": "global warming"
+    },
+    {
+      "id": "greenhouse-gas-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a greenhouse gas",
+      "audio_text": "a greenhouse gas"
+    },
+    {
+      "id": "sea-level-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "sea level",
+      "audio_text": "sea level"
+    },
+    {
+      "id": "wildlife-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "wildlife",
+      "audio_text": "wildlife"
+    },
+    {
+      "id": "habitat-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a habitat",
+      "audio_text": "a habitat"
+    },
+    {
+      "id": "endangered-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "endangered",
+      "audio_text": "endangered"
+    },
+    {
+      "id": "protect-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to protect",
+      "audio_text": "to protect"
+    },
+    {
+      "id": "waste-energy-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to waste energy",
+      "audio_text": "to waste energy"
+    },
+    {
+      "id": "public-transport-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "public transport",
+      "audio_text": "public transport"
+    },
+    {
+      "id": "take-action-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to take action",
+      "audio_text": "to take action"
     }
   ]
 }

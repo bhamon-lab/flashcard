@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « un appareil ».",
       "back": "a device"
+    },
+    {
+      "id": "screen-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a screen ».",
+      "back": "un écran"
+    },
+    {
+      "id": "keyboard-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a keyboard ».",
+      "back": "un clavier"
+    },
+    {
+      "id": "mouse-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a mouse ».",
+      "back": "une souris"
+    },
+    {
+      "id": "headphones-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « headphones ».",
+      "back": "un casque audio"
+    },
+    {
+      "id": "website-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a website ».",
+      "back": "un site web"
+    },
+    {
+      "id": "search-engine-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a search engine ».",
+      "back": "un moteur de recherche"
+    },
+    {
+      "id": "log-in-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to log in ».",
+      "back": "se connecter"
+    },
+    {
+      "id": "upload-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to upload ».",
+      "back": "téléverser"
+    },
+    {
+      "id": "save-file-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to save a file ».",
+      "back": "enregistrer un fichier"
+    },
+    {
+      "id": "device-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a device ».",
+      "back": "un appareil"
     }
   ]
 }

@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « favoriser ».",
       "back": "to foster"
+    },
+    {
+      "id": "a-stakeholder-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a stakeholder ».",
+      "back": "une partie prenante"
+    },
+    {
+      "id": "a-policy-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a policy ».",
+      "back": "une politique publique"
+    },
+    {
+      "id": "a-policymaker-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a policymaker ».",
+      "back": "un décideur"
+    },
+    {
+      "id": "accountability-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « accountability ».",
+      "back": "la responsabilité"
+    },
+    {
+      "id": "inequalities-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « inequalities ».",
+      "back": "les inégalités"
+    },
+    {
+      "id": "inclusion-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « inclusion ».",
+      "back": "l’inclusion"
+    },
+    {
+      "id": "a-safeguard-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a safeguard ».",
+      "back": "un dispositif de protection"
+    },
+    {
+      "id": "to-implement-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to implement ».",
+      "back": "mettre en œuvre"
+    },
+    {
+      "id": "to-enforce-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to enforce ».",
+      "back": "faire respecter"
+    },
+    {
+      "id": "to-foster-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to foster ».",
+      "back": "favoriser"
     }
   ]
 }

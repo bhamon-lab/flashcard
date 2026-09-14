@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "un échange scolaire",
       "audio_text": "a school exchange"
+    },
+    {
+      "id": "abroad-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "abroad",
+      "audio_text": "abroad"
+    },
+    {
+      "id": "journey-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a journey",
+      "audio_text": "a journey"
+    },
+    {
+      "id": "trip-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a trip",
+      "audio_text": "a trip"
+    },
+    {
+      "id": "landmark-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a landmark",
+      "audio_text": "a landmark"
+    },
+    {
+      "id": "guidebook-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a guidebook",
+      "audio_text": "a guidebook"
+    },
+    {
+      "id": "sightseeing-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to go sightseeing",
+      "audio_text": "to go sightseeing"
+    },
+    {
+      "id": "discover-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to discover",
+      "audio_text": "to discover"
+    },
+    {
+      "id": "experience-abroad-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to experience life abroad",
+      "audio_text": "to experience life abroad"
+    },
+    {
+      "id": "host-family-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a host family",
+      "audio_text": "a host family"
+    },
+    {
+      "id": "exchange-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a school exchange",
+      "audio_text": "a school exchange"
     }
   ]
 }

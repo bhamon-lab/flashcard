@@ -1,6 +1,6 @@
 # Arbre de progression en anglais — de la 6e à la terminale
 
-Le catalogue contient **161 decks et 1 725 cartes**, organisés par classe et par
+Le catalogue contient **161 decks et 3 265 cartes**, organisés par classe et par
 type d'apprentissage. Chaque niveau dispose de 23 paquets :
 
 - 8 listes de vocabulaire écrit ;
@@ -16,13 +16,13 @@ une branche d'un niveau antérieur sans recommencer tout le parcours.
 
 | Niveau | Decks | Cartes | Repère indicatif |
 | --- | ---: | ---: | --- |
-| 6e | 23 | 240 | A1 |
-| 5e | 23 | 245 | A1–A2 |
-| 4e | 23 | 245 | A2 |
-| 3e | 23 | 250 | A2–B1 |
-| 2de | 23 | 248 | B1 |
-| 1re | 23 | 247 | B1–B2 |
-| Terminale | 23 | 250 | B2 |
+| 6e | 23 | 460 | A1 |
+| 5e | 23 | 465 | A1–A2 |
+| 4e | 23 | 465 | A2 |
+| 3e | 23 | 470 | A2–B1 |
+| 2de | 23 | 468 | B1 |
+| 1re | 23 | 467 | B1–B2 |
+| Terminale | 23 | 470 | B2 |
 
 ## Arbre détaillé par niveau
 
@@ -200,8 +200,10 @@ Phrase simple, pronoms, déterminants et présent
 
 ## Structure des cartes audio
 
-Chaque liste de vocabulaire possède un deck oral parallèle. Les deux decks ont
-les mêmes identifiants de cartes et les mêmes dix entrées. Dans la version orale :
+Chaque liste de vocabulaire possède un deck oral parallèle. Une liste écrite
+contient dix cartes français → anglais et dix cartes anglais → français. Sa
+version orale reprend les dix entrées en reconnaissance et en dictée, soit vingt
+cartes par deck. Exemple de carte de reconnaissance :
 
 ```json
 {
@@ -218,13 +220,16 @@ les mêmes identifiants de cartes et les mêmes dix entrées. Dans la version or
 }
 ```
 
+Une carte de dictée conserve le même `audio_text`, mais demande de saisir le mot
+ou l'expression en anglais. Son identifiant se termine par `-dictee`.
+
 Ces champs sont prêts pour le futur support audio mais restent actuellement
 ignorés par le synchroniseur de l'application.
 
 ## Organisation et maintenance
 
-- `{niveau}-vocab-{theme}.json` : français → anglais ;
-- `{niveau}-oral-{theme}.json` : écoute anglais → français ;
+- `{niveau}-vocab-{theme}.json` : français ↔ anglais ;
+- `{niveau}-oral-{theme}.json` : écoute anglais → français et dictée ;
 - `{niveau}-culture*.json` : repères du monde anglophone ;
 - `{niveau}-verbes-irreguliers.json` : infinitif, prétérit et participe passé ;
 - `{niveau}-grammaire-{theme}.json` : règles et automatismes.

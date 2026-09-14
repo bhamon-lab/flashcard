@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « faire du bénévolat ».",
       "back": "to volunteer"
+    },
+    {
+      "id": "a-citizen-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a citizen ».",
+      "back": "un citoyen"
+    },
+    {
+      "id": "a-right-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a right ».",
+      "back": "un droit"
+    },
+    {
+      "id": "a-duty-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a duty ».",
+      "back": "un devoir"
+    },
+    {
+      "id": "a-law-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a law ».",
+      "back": "une loi"
+    },
+    {
+      "id": "an-election-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an election ».",
+      "back": "une élection"
+    },
+    {
+      "id": "to-vote-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to vote ».",
+      "back": "voter"
+    },
+    {
+      "id": "equality-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « equality ».",
+      "back": "l’égalité"
+    },
+    {
+      "id": "freedom-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « freedom ».",
+      "back": "la liberté"
+    },
+    {
+      "id": "discrimination-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « discrimination ».",
+      "back": "la discrimination"
+    },
+    {
+      "id": "to-volunteer-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to volunteer ».",
+      "back": "faire du bénévolat"
     }
   ]
 }

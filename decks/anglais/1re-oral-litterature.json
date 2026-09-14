@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "un récit à la première personne",
       "audio_text": "a first-person narrative"
+    },
+    {
+      "id": "plot-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the plot",
+      "audio_text": "the plot"
+    },
+    {
+      "id": "setting-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the setting",
+      "audio_text": "the setting"
+    },
+    {
+      "id": "narrator-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the narrator",
+      "audio_text": "the narrator"
+    },
+    {
+      "id": "character-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a character",
+      "audio_text": "a character"
+    },
+    {
+      "id": "theme-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a theme",
+      "audio_text": "a theme"
+    },
+    {
+      "id": "tone-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the tone",
+      "audio_text": "the tone"
+    },
+    {
+      "id": "metaphor-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a metaphor",
+      "audio_text": "a metaphor"
+    },
+    {
+      "id": "foreshadow-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to foreshadow",
+      "audio_text": "to foreshadow"
+    },
+    {
+      "id": "portray-character-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to portray a character",
+      "audio_text": "to portray a character"
+    },
+    {
+      "id": "first-person-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a first-person narrative",
+      "audio_text": "a first-person narrative"
     }
   ]
 }

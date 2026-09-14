@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « les déchets ».",
       "back": "waste"
+    },
+    {
+      "id": "sunny-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « sunny ».",
+      "back": "ensoleillé"
+    },
+    {
+      "id": "cloudy-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « cloudy ».",
+      "back": "nuageux"
+    },
+    {
+      "id": "windy-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « windy ».",
+      "back": "venteux"
+    },
+    {
+      "id": "a-thunderstorm-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a thunderstorm ».",
+      "back": "un orage"
+    },
+    {
+      "id": "a-drought-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a drought ».",
+      "back": "une sécheresse"
+    },
+    {
+      "id": "a-flood-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a flood ».",
+      "back": "une inondation"
+    },
+    {
+      "id": "pollution-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « pollution ».",
+      "back": "la pollution"
+    },
+    {
+      "id": "to-recycle-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to recycle ».",
+      "back": "recycler"
+    },
+    {
+      "id": "to-save-water-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to save water ».",
+      "back": "économiser l’eau"
+    },
+    {
+      "id": "waste-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « waste ».",
+      "back": "les déchets"
     }
   ]
 }

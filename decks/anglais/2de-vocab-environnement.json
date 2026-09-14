@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « le développement durable ».",
       "back": "sustainable development"
+    },
+    {
+      "id": "climate-change-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « climate change ».",
+      "back": "le changement climatique"
+    },
+    {
+      "id": "the-carbon-footprint-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the carbon footprint ».",
+      "back": "l’empreinte carbone"
+    },
+    {
+      "id": "fossil-fuels-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « fossil fuels ».",
+      "back": "les combustibles fossiles"
+    },
+    {
+      "id": "renewable-energy-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « renewable energy ».",
+      "back": "les énergies renouvelables"
+    },
+    {
+      "id": "biodiversity-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « biodiversity ».",
+      "back": "la biodiversité"
+    },
+    {
+      "id": "an-endangered-species-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an endangered species ».",
+      "back": "une espèce menacée"
+    },
+    {
+      "id": "to-reduce-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to reduce ».",
+      "back": "réduire"
+    },
+    {
+      "id": "to-reuse-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to reuse ».",
+      "back": "réutiliser"
+    },
+    {
+      "id": "to-raise-awareness-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to raise awareness ».",
+      "back": "sensibiliser"
+    },
+    {
+      "id": "sustainable-development-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « sustainable development ».",
+      "back": "le développement durable"
     }
   ]
 }

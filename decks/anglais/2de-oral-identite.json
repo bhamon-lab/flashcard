@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "assumer son identité",
       "audio_text": "to embrace one's identity"
+    },
+    {
+      "id": "belonging-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "belonging",
+      "audio_text": "belonging"
+    },
+    {
+      "id": "background-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "background",
+      "audio_text": "background"
+    },
+    {
+      "id": "a-role-model-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a role model",
+      "audio_text": "a role model"
+    },
+    {
+      "id": "peers-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "peers",
+      "audio_text": "peers"
+    },
+    {
+      "id": "self-confidence-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "self-confidence",
+      "audio_text": "self-confidence"
+    },
+    {
+      "id": "a-value-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a value",
+      "audio_text": "a value"
+    },
+    {
+      "id": "a-prejudice-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a prejudice",
+      "audio_text": "a prejudice"
+    },
+    {
+      "id": "to-fit-in-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to fit in",
+      "audio_text": "to fit in"
+    },
+    {
+      "id": "to-stand-out-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to stand out",
+      "audio_text": "to stand out"
+    },
+    {
+      "id": "to-embrace-one-s-identity-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to embrace one's identity",
+      "audio_text": "to embrace one's identity"
     }
   ]
 }

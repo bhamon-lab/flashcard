@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "un usage responsable",
       "audio_text": "responsible use"
+    },
+    {
+      "id": "online-community-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an online community",
+      "audio_text": "an online community"
+    },
+    {
+      "id": "digital-footprint-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a digital footprint",
+      "audio_text": "a digital footprint"
+    },
+    {
+      "id": "privacy-settings-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "privacy settings",
+      "audio_text": "privacy settings"
+    },
+    {
+      "id": "user-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a user",
+      "audio_text": "a user"
+    },
+    {
+      "id": "content-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "content",
+      "audio_text": "content"
+    },
+    {
+      "id": "moderate-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to moderate",
+      "audio_text": "to moderate"
+    },
+    {
+      "id": "report-content-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to report content",
+      "audio_text": "to report content"
+    },
+    {
+      "id": "harassment-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "harassment",
+      "audio_text": "harassment"
+    },
+    {
+      "id": "access-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to have access to",
+      "audio_text": "to have access to"
+    },
+    {
+      "id": "responsible-use-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "responsible use",
+      "audio_text": "responsible use"
     }
   ]
 }

@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « le cyberharcèlement ».",
       "back": "cyberbullying"
+    },
+    {
+      "id": "a-headline-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a headline ».",
+      "back": "un titre de presse"
+    },
+    {
+      "id": "a-source-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a source ».",
+      "back": "une source"
+    },
+    {
+      "id": "a-news-report-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a news report ».",
+      "back": "un reportage"
+    },
+    {
+      "id": "social-media-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « social media ».",
+      "back": "les réseaux sociaux"
+    },
+    {
+      "id": "fake-news-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « fake news ».",
+      "back": "les fausses informations"
+    },
+    {
+      "id": "to-share-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to share ».",
+      "back": "partager"
+    },
+    {
+      "id": "to-download-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to download ».",
+      "back": "télécharger"
+    },
+    {
+      "id": "a-password-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a password ».",
+      "back": "un mot de passe"
+    },
+    {
+      "id": "personal-data-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « personal data ».",
+      "back": "les données personnelles"
+    },
+    {
+      "id": "cyberbullying-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « cyberbullying ».",
+      "back": "le cyberharcèlement"
     }
   ]
 }

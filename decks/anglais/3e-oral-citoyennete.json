@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "faire du bénévolat",
       "audio_text": "to volunteer"
+    },
+    {
+      "id": "a-citizen-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a citizen",
+      "audio_text": "a citizen"
+    },
+    {
+      "id": "a-right-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a right",
+      "audio_text": "a right"
+    },
+    {
+      "id": "a-duty-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a duty",
+      "audio_text": "a duty"
+    },
+    {
+      "id": "a-law-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a law",
+      "audio_text": "a law"
+    },
+    {
+      "id": "an-election-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an election",
+      "audio_text": "an election"
+    },
+    {
+      "id": "to-vote-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to vote",
+      "audio_text": "to vote"
+    },
+    {
+      "id": "equality-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "equality",
+      "audio_text": "equality"
+    },
+    {
+      "id": "freedom-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "freedom",
+      "audio_text": "freedom"
+    },
+    {
+      "id": "discrimination-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "discrimination",
+      "audio_text": "discrimination"
+    },
+    {
+      "id": "to-volunteer-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to volunteer",
+      "audio_text": "to volunteer"
     }
   ]
 }

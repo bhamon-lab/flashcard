@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Atténue l'affirmation : This proves that…",
       "back": "This suggests that… / This may indicate that…"
+    },
+    {
+      "id": "second-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « If I had more time, I would travel abroad. » ?",
+      "back": "Complète : If I ___ more time, I ___ abroad. (have/travel)"
+    },
+    {
+      "id": "wish-present-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I wish I had more time. » ?",
+      "back": "Traduis : « J'aimerais avoir plus de temps. »"
+    },
+    {
+      "id": "wish-ability-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I wish I could speak English better. » ?",
+      "back": "Traduis : « J'aimerais savoir mieux parler anglais. »"
+    },
+    {
+      "id": "might-deduction-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She might be right. » ?",
+      "back": "Traduis : « Il se pourrait qu'elle ait raison. »"
+    },
+    {
+      "id": "must-have-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « He must have forgotten. » ?",
+      "back": "Traduis : « Il a dû oublier. »"
+    },
+    {
+      "id": "cant-have-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She can't have written that. » ?",
+      "back": "Traduis : « Elle ne peut pas avoir écrit cela. »"
+    },
+    {
+      "id": "despite-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Despite the difficulty, they succeeded. » ?",
+      "back": "Reformule avec despite : Although it was difficult, they succeeded."
+    },
+    {
+      "id": "whereas-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « One source is optimistic, whereas the other is critical. » ?",
+      "back": "Relie : One source is optimistic. The other is critical."
+    },
+    {
+      "id": "participle-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Inspired, she took action. » ?",
+      "back": "Réduis : Because she was inspired, she took action."
+    },
+    {
+      "id": "hedge-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « This suggests that… / This may indicate that… » ?",
+      "back": "Atténue l'affirmation : This proves that…"
     }
   ]
 }

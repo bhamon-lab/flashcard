@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « un pied ».",
       "back": "a foot"
+    },
+    {
+      "id": "head-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the head ».",
+      "back": "la tête"
+    },
+    {
+      "id": "face-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the face ».",
+      "back": "le visage"
+    },
+    {
+      "id": "eye-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an eye ».",
+      "back": "un œil"
+    },
+    {
+      "id": "ear-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an ear ».",
+      "back": "une oreille"
+    },
+    {
+      "id": "nose-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the nose ».",
+      "back": "le nez"
+    },
+    {
+      "id": "mouth-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the mouth ».",
+      "back": "la bouche"
+    },
+    {
+      "id": "arm-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an arm ».",
+      "back": "un bras"
+    },
+    {
+      "id": "hand-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a hand ».",
+      "back": "une main"
+    },
+    {
+      "id": "leg-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a leg ».",
+      "back": "une jambe"
+    },
+    {
+      "id": "foot-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a foot ».",
+      "back": "un pied"
     }
   ]
 }

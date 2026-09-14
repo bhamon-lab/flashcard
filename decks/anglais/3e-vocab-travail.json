@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « à temps plein ».",
       "back": "full-time"
+    },
+    {
+      "id": "job-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a job ».",
+      "back": "un emploi"
+    },
+    {
+      "id": "employer-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an employer ».",
+      "back": "un employeur"
+    },
+    {
+      "id": "employee-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an employee ».",
+      "back": "un salarié"
+    },
+    {
+      "id": "salary-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a salary ».",
+      "back": "un salaire"
+    },
+    {
+      "id": "working-hours-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « working hours ».",
+      "back": "les horaires de travail"
+    },
+    {
+      "id": "colleague-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a colleague ».",
+      "back": "un collègue"
+    },
+    {
+      "id": "experience-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « experience ».",
+      "back": "de l'expérience"
+    },
+    {
+      "id": "job-interview-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a job interview ».",
+      "back": "un entretien d'embauche"
+    },
+    {
+      "id": "part-time-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « part-time ».",
+      "back": "à temps partiel"
+    },
+    {
+      "id": "full-time-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « full-time ».",
+      "back": "à temps plein"
     }
   ]
 }

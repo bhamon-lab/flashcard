@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "le sentiment d'appartenance à un lieu",
       "audio_text": "a sense of place"
+    },
+    {
+      "id": "suburb-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a suburb",
+      "audio_text": "a suburb"
+    },
+    {
+      "id": "inner-city-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the inner city",
+      "audio_text": "the inner city"
+    },
+    {
+      "id": "neighbourhood-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a neighbourhood",
+      "audio_text": "a neighbourhood"
+    },
+    {
+      "id": "housing-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "housing",
+      "audio_text": "housing"
+    },
+    {
+      "id": "public-space-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a public space",
+      "audio_text": "a public space"
+    },
+    {
+      "id": "commuter-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a commuter",
+      "audio_text": "a commuter"
+    },
+    {
+      "id": "urban-sprawl-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "urban sprawl",
+      "audio_text": "urban sprawl"
+    },
+    {
+      "id": "regenerate-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to regenerate",
+      "audio_text": "to regenerate"
+    },
+    {
+      "id": "settle-area-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to settle in an area",
+      "audio_text": "to settle in an area"
+    },
+    {
+      "id": "sense-place-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a sense of place",
+      "audio_text": "a sense of place"
     }
   ]
 }

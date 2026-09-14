@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Dans un récit au passé, que devient today ?",
       "back": "that day"
+    },
+    {
+      "id": "passive-perfect-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The law has been changed. » ?",
+      "back": "Mets au passif : They have changed the law."
+    },
+    {
+      "id": "passive-future-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The results will be announced tomorrow. » ?",
+      "back": "Mets au passif : They will announce the results tomorrow."
+    },
+    {
+      "id": "passive-agent-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Quand l'agent est utile ou important : The novel was written by Orwell. » ?",
+      "back": "Quand utilise-t-on by dans une phrase passive ?"
+    },
+    {
+      "id": "report-statement-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She said (that) she was tired. » ?",
+      "back": "Rapporte : She said, “I am tired.”"
+    },
+    {
+      "id": "report-present-perfect-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « He said (that) he had finished. » ?",
+      "back": "Rapporte : He said, “I have finished.”"
+    },
+    {
+      "id": "report-question-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « He asked me where I lived. » ?",
+      "back": "Rapporte : He asked, “Where do you live?”"
+    },
+    {
+      "id": "report-yes-no-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She asked me if/whether I was ready. » ?",
+      "back": "Rapporte : She asked, “Are you ready?”"
+    },
+    {
+      "id": "report-command-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « He told me to close the door. » ?",
+      "back": "Rapporte : He said, “Close the door.”"
+    },
+    {
+      "id": "say-tell-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She told me that she agreed. » ?",
+      "back": "Complète : She ___ me that she agreed."
+    },
+    {
+      "id": "report-time-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « that day » ?",
+      "back": "Dans un récit au passé, que devient today ?"
     }
   ]
 }

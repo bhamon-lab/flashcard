@@ -68,6 +68,66 @@
       "kind": "culture",
       "front": "Quel tribunal interprète la Constitution américaine au plus haut niveau ?",
       "back": "The Supreme Court."
+    },
+    {
+      "id": "repere-01-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « At the Palace of Westminster in London. » ?",
+      "back": "Où siège le Parlement britannique ?"
+    },
+    {
+      "id": "repere-02-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The House of Commons and the House of Lords. » ?",
+      "back": "Quelles sont les deux chambres du Parlement britannique ?"
+    },
+    {
+      "id": "repere-03-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Prime Minister. » ?",
+      "back": "Qui dirige le gouvernement britannique ?"
+    },
+    {
+      "id": "repere-04-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Constitution of the United States. » ?",
+      "back": "Quel texte américain commence par “We the People” ?"
+    },
+    {
+      "id": "repere-05-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Legislative, executive and judicial. » ?",
+      "back": "Quelles sont les trois branches du pouvoir fédéral américain ?"
+    },
+    {
+      "id": "repere-06-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « At the White House in Washington, D.C. » ?",
+      "back": "Où siège le président des États-Unis ?"
+    },
+    {
+      "id": "repere-07-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Senate and the House of Representatives. » ?",
+      "back": "Quelles sont les deux chambres du Congrès américain ?"
+    },
+    {
+      "id": "repere-08-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The adoption of the Declaration of Independence in 1776. » ?",
+      "back": "Que célèbre Independence Day le 4 juillet ?"
+    },
+    {
+      "id": "repere-09-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « A national holiday celebrated on the fourth Thursday of November. » ?",
+      "back": "Qu'est-ce que Thanksgiving aux États-Unis ?"
+    },
+    {
+      "id": "repere-10-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Supreme Court. » ?",
+      "back": "Quel tribunal interprète la Constitution américaine au plus haut niveau ?"
     }
   ]
 }

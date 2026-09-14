@@ -68,6 +68,66 @@
       "kind": "culture",
       "front": "Quel physicien britannique a écrit A Brief History of Time ?",
       "back": "Stephen Hawking."
+    },
+    {
+      "id": "repere-01-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Charles Darwin. » ?",
+      "back": "Quel naturaliste a développé la théorie de l'évolution par sélection naturelle ?"
+    },
+    {
+      "id": "repere-02-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Ada Lovelace. » ?",
+      "back": "Qui est souvent considérée comme la première programmeuse ?"
+    },
+    {
+      "id": "repere-03-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Alan Turing. » ?",
+      "back": "Quel mathématicien britannique a contribué à décrypter Enigma ?"
+    },
+    {
+      "id": "repere-04-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Tim Berners-Lee. » ?",
+      "back": "Qui a inventé le World Wide Web ?"
+    },
+    {
+      "id": "repere-05-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Rosalind Franklin. » ?",
+      "back": "Quelle scientifique a contribué à révéler la structure de l'ADN grâce aux rayons X ?"
+    },
+    {
+      "id": "repere-06-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Alexander Fleming. » ?",
+      "back": "Qui a découvert la pénicilline ?"
+    },
+    {
+      "id": "repere-07-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Alexander Graham Bell. » ?",
+      "back": "À quel inventeur est associé le premier brevet américain du téléphone ?"
+    },
+    {
+      "id": "repere-08-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Orville and Wilbur Wright. » ?",
+      "back": "Quels frères ont réalisé un vol motorisé contrôlé en 1903 ?"
+    },
+    {
+      "id": "repere-09-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Katherine Johnson. » ?",
+      "back": "Quelle mathématicienne de la NASA a calculé des trajectoires spatiales ?"
+    },
+    {
+      "id": "repere-10-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Stephen Hawking. » ?",
+      "back": "Quel physicien britannique a écrit A Brief History of Time ?"
     }
   ]
 }

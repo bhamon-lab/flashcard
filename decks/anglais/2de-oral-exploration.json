@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "l'inconnu",
       "audio_text": "the unknown"
+    },
+    {
+      "id": "expedition-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an expedition",
+      "audio_text": "an expedition"
+    },
+    {
+      "id": "settler-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a settler",
+      "audio_text": "a settler"
+    },
+    {
+      "id": "indigenous-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "Indigenous",
+      "audio_text": "Indigenous"
+    },
+    {
+      "id": "remote-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "remote",
+      "audio_text": "remote"
+    },
+    {
+      "id": "wilderness-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the wilderness",
+      "audio_text": "the wilderness"
+    },
+    {
+      "id": "charted-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "charted",
+      "audio_text": "charted"
+    },
+    {
+      "id": "set-off-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to set off",
+      "audio_text": "to set off"
+    },
+    {
+      "id": "reach-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to reach",
+      "audio_text": "to reach"
+    },
+    {
+      "id": "overcome-obstacle-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to overcome an obstacle",
+      "audio_text": "to overcome an obstacle"
+    },
+    {
+      "id": "unknown-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the unknown",
+      "audio_text": "the unknown"
     }
   ]
 }

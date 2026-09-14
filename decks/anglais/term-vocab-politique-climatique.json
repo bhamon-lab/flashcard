@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « supporter le coût ».",
       "back": "to bear the cost"
+    },
+    {
+      "id": "carbon-tax-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a carbon tax ».",
+      "back": "une taxe carbone"
+    },
+    {
+      "id": "emission-target-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an emissions target ».",
+      "back": "un objectif d'émissions"
+    },
+    {
+      "id": "climate-justice-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « climate justice ».",
+      "back": "la justice climatique"
+    },
+    {
+      "id": "adaptation-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « adaptation ».",
+      "back": "l'adaptation"
+    },
+    {
+      "id": "mitigation-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « mitigation ».",
+      "back": "l'atténuation"
+    },
+    {
+      "id": "loss-damage-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « loss and damage ».",
+      "back": "les pertes et préjudices"
+    },
+    {
+      "id": "binding-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « binding ».",
+      "back": "contraignant"
+    },
+    {
+      "id": "pledge-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to pledge ».",
+      "back": "s'engager à"
+    },
+    {
+      "id": "meet-target-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to meet a target ».",
+      "back": "atteindre un objectif"
+    },
+    {
+      "id": "bear-cost-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to bear the cost ».",
+      "back": "supporter le coût"
     }
   ]
 }

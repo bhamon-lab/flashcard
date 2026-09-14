@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "le couloir",
       "audio_text": "the hallway"
+    },
+    {
+      "id": "the-kitchen-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the kitchen",
+      "audio_text": "the kitchen"
+    },
+    {
+      "id": "the-living-room-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the living room",
+      "audio_text": "the living room"
+    },
+    {
+      "id": "the-dining-room-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the dining room",
+      "audio_text": "the dining room"
+    },
+    {
+      "id": "the-bedroom-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the bedroom",
+      "audio_text": "the bedroom"
+    },
+    {
+      "id": "the-bathroom-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the bathroom",
+      "audio_text": "the bathroom"
+    },
+    {
+      "id": "the-toilet-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the toilet",
+      "audio_text": "the toilet"
+    },
+    {
+      "id": "the-garden-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the garden",
+      "audio_text": "the garden"
+    },
+    {
+      "id": "the-garage-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the garage",
+      "audio_text": "the garage"
+    },
+    {
+      "id": "the-attic-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the attic",
+      "audio_text": "the attic"
+    },
+    {
+      "id": "the-hallway-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the hallway",
+      "audio_text": "the hallway"
     }
   ]
 }

@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "dans une certaine mesure",
       "audio_text": "to some extent"
+    },
+    {
+      "id": "an-assumption-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an assumption",
+      "audio_text": "an assumption"
+    },
+    {
+      "id": "an-objection-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an objection",
+      "audio_text": "an objection"
+    },
+    {
+      "id": "a-counterargument-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a counterargument",
+      "audio_text": "a counterargument"
+    },
+    {
+      "id": "a-qualification-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a qualification",
+      "audio_text": "a qualification"
+    },
+    {
+      "id": "a-compromise-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a compromise",
+      "audio_text": "a compromise"
+    },
+    {
+      "id": "compelling-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "compelling",
+      "audio_text": "compelling"
+    },
+    {
+      "id": "questionable-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "questionable",
+      "audio_text": "questionable"
+    },
+    {
+      "id": "to-refute-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to refute",
+      "audio_text": "to refute"
+    },
+    {
+      "id": "to-outweigh-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to outweigh",
+      "audio_text": "to outweigh"
+    },
+    {
+      "id": "to-some-extent-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to some extent",
+      "audio_text": "to some extent"
     }
   ]
 }

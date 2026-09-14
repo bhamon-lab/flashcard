@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « retrouver ses amis ».",
       "back": "to meet friends"
+    },
+    {
+      "id": "to-play-football-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to play football ».",
+      "back": "jouer au football"
+    },
+    {
+      "id": "to-go-swimming-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to go swimming ».",
+      "back": "faire de la natation"
+    },
+    {
+      "id": "to-go-cycling-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to go cycling ».",
+      "back": "faire du vélo"
+    },
+    {
+      "id": "to-draw-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to draw ».",
+      "back": "dessiner"
+    },
+    {
+      "id": "to-read-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to read ».",
+      "back": "lire"
+    },
+    {
+      "id": "to-listen-to-music-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to listen to music ».",
+      "back": "écouter de la musique"
+    },
+    {
+      "id": "to-watch-a-film-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to watch a film ».",
+      "back": "regarder un film"
+    },
+    {
+      "id": "to-play-video-games-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to play video games ».",
+      "back": "jouer aux jeux vidéo"
+    },
+    {
+      "id": "to-cook-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to cook ».",
+      "back": "cuisiner"
+    },
+    {
+      "id": "to-meet-friends-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to meet friends ».",
+      "back": "retrouver ses amis"
     }
   ]
 }

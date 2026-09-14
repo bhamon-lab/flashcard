@@ -68,6 +68,66 @@
       "kind": "culture",
       "front": "Quel groupe originaire de Liverpool a marqué la musique populaire ?",
       "back": "The Beatles."
+    },
+    {
+      "id": "repere-01-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « William Shakespeare. » ?",
+      "back": "Qui a écrit Romeo and Juliet ?"
+    },
+    {
+      "id": "repere-02-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Jane Austen. » ?",
+      "back": "Qui a écrit Pride and Prejudice ?"
+    },
+    {
+      "id": "repere-03-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « George Orwell. » ?",
+      "back": "Qui a écrit 1984 ?"
+    },
+    {
+      "id": "repere-04-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Toni Morrison. » ?",
+      "back": "Qui a écrit Beloved ?"
+    },
+    {
+      "id": "repere-05-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « F. Scott Fitzgerald. » ?",
+      "back": "Qui a écrit The Great Gatsby ?"
+    },
+    {
+      "id": "repere-06-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Harlem Renaissance. » ?",
+      "back": "Quel mouvement culturel noir s'est développé à New York dans les années 1920 ?"
+    },
+    {
+      "id": "repere-07-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « An American poet, memoirist and civil-rights activist. » ?",
+      "back": "Qui était Maya Angelou ?"
+    },
+    {
+      "id": "repere-08-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Andy Warhol. » ?",
+      "back": "Quel artiste est associé au Pop Art et aux Campbell's Soup Cans ?"
+    },
+    {
+      "id": "repere-09-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Alfred Hitchcock. » ?",
+      "back": "Qui a réalisé le film Psycho ?"
+    },
+    {
+      "id": "repere-10-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Beatles. » ?",
+      "back": "Quel groupe originaire de Liverpool a marqué la musique populaire ?"
     }
   ]
 }

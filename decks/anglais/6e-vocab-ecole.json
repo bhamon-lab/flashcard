@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « les devoirs ».",
       "back": "homework"
+    },
+    {
+      "id": "an-exercise-book-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an exercise book ».",
+      "back": "un cahier"
+    },
+    {
+      "id": "a-book-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a book ».",
+      "back": "un livre"
+    },
+    {
+      "id": "a-pen-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a pen ».",
+      "back": "un stylo"
+    },
+    {
+      "id": "a-pencil-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a pencil ».",
+      "back": "un crayon"
+    },
+    {
+      "id": "a-rubber-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a rubber ».",
+      "back": "une gomme"
+    },
+    {
+      "id": "a-ruler-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a ruler ».",
+      "back": "une règle"
+    },
+    {
+      "id": "a-schoolbag-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a schoolbag ».",
+      "back": "un cartable"
+    },
+    {
+      "id": "a-desk-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a desk ».",
+      "back": "un bureau"
+    },
+    {
+      "id": "a-board-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a board ».",
+      "back": "un tableau"
+    },
+    {
+      "id": "homework-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « homework ».",
+      "back": "les devoirs"
     }
   ]
 }

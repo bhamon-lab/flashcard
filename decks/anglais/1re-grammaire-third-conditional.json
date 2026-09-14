@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Traduis : « à condition que chacun participe ».",
       "back": "provided that everyone takes part"
+    },
+    {
+      "id": "third-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « If they had acted earlier, they would have won. » ?",
+      "back": "Complète : If they ___ earlier, they would have won. (act)"
+    },
+    {
+      "id": "could-have-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « If I had known, I could have helped. » ?",
+      "back": "Traduis : « Si j'avais su, j'aurais pu aider. »"
+    },
+    {
+      "id": "might-have-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She might have been accepted. » ?",
+      "back": "Complète : If she had applied, she ___ accepted. (might)"
+    },
+    {
+      "id": "wish-past-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I wish I had studied more. » ?",
+      "back": "Traduis : « J'aurais aimé avoir étudié davantage. »"
+    },
+    {
+      "id": "regret-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I wish I had come. / I regret not coming. » ?",
+      "back": "Traduis : « Je regrette de ne pas être venu. »"
+    },
+    {
+      "id": "should-have-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « They should have checked the source. » ?",
+      "back": "Traduis : « Ils auraient dû vérifier la source. »"
+    },
+    {
+      "id": "shouldnt-have-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She shouldn't have published it. » ?",
+      "back": "Traduis : « Elle n'aurait pas dû le publier. »"
+    },
+    {
+      "id": "mixed-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « If I had listened, I would know the answer now. » ?",
+      "back": "Complète : If I had listened, I ___ the answer now. (know)"
+    },
+    {
+      "id": "otherwise-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Hurry up; otherwise, you will be late. » ?",
+      "back": "Relie avec otherwise : Hurry up. You will be late."
+    },
+    {
+      "id": "provided-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « provided that everyone takes part » ?",
+      "back": "Traduis : « à condition que chacun participe »."
     }
   ]
 }

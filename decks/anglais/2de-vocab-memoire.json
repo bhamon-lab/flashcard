@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « transmettre ».",
       "back": "to pass down"
+    },
+    {
+      "id": "memorial-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a memorial ».",
+      "back": "un monument commémoratif"
+    },
+    {
+      "id": "archive-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « archives ».",
+      "back": "des archives"
+    },
+    {
+      "id": "testimony-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a testimony ».",
+      "back": "un témoignage"
+    },
+    {
+      "id": "ancestor-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an ancestor ».",
+      "back": "un ancêtre"
+    },
+    {
+      "id": "generation-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a generation ».",
+      "back": "une génération"
+    },
+    {
+      "id": "collective-memory-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « collective memory ».",
+      "back": "la mémoire collective"
+    },
+    {
+      "id": "preserve-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to preserve ».",
+      "back": "préserver"
+    },
+    {
+      "id": "remember-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to remember ».",
+      "back": "se souvenir"
+    },
+    {
+      "id": "honour-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to honour ».",
+      "back": "rendre hommage à"
+    },
+    {
+      "id": "pass-down-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to pass down ».",
+      "back": "transmettre"
     }
   ]
 }

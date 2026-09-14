@@ -68,6 +68,66 @@
       "kind": "culture",
       "front": "Que désigne the Dreaming dans les cultures aborigènes ?",
       "back": "A complex system of beliefs, creation stories and connections to Country."
+    },
+    {
+      "id": "repere-01-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Aboriginal and Torres Strait Islander peoples. » ?",
+      "back": "Quels peuples autochtones vivent en Australie ?"
+    },
+    {
+      "id": "repere-02-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Māori. » ?",
+      "back": "Quel peuple autochtone est associé à Aotearoa New Zealand ?"
+    },
+    {
+      "id": "repere-03-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « First Nations, Inuit and Métis. » ?",
+      "back": "Quels sont les trois groupes autochtones reconnus au Canada ?"
+    },
+    {
+      "id": "repere-04-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Uluru. » ?",
+      "back": "Quel monolithe sacré se trouve au centre de l'Australie ?"
+    },
+    {
+      "id": "repere-05-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Great Barrier Reef. » ?",
+      "back": "Quel récif corallien se trouve au large du Queensland ?"
+    },
+    {
+      "id": "repere-06-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Rocky Mountains. » ?",
+      "back": "Quelle chaîne de montagnes traverse l'ouest du Canada ?"
+    },
+    {
+      "id": "repere-07-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Canada and the United States. » ?",
+      "back": "À la frontière de quels pays se trouvent les chutes du Niagara ?"
+    },
+    {
+      "id": "repere-08-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « A Māori ceremonial performance. » ?",
+      "back": "Qu'est-ce qu'un haka ?"
+    },
+    {
+      "id": "repere-09-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Treaty of Waitangi. » ?",
+      "back": "Quel traité fut signé à Waitangi en 1840 ?"
+    },
+    {
+      "id": "repere-10-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « A complex system of beliefs, creation stories and connections to Country. » ?",
+      "back": "Que désigne the Dreaming dans les cultures aborigènes ?"
     }
   ]
 }

@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "peser le pour et le contre",
       "audio_text": "to weigh the pros and cons"
+    },
+    {
+      "id": "a-breakthrough-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a breakthrough",
+      "audio_text": "a breakthrough"
+    },
+    {
+      "id": "a-drawback-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a drawback",
+      "audio_text": "a drawback"
+    },
+    {
+      "id": "an-ethical-issue-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an ethical issue",
+      "audio_text": "an ethical issue"
+    },
+    {
+      "id": "privacy-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "privacy",
+      "audio_text": "privacy"
+    },
+    {
+      "id": "surveillance-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "surveillance",
+      "audio_text": "surveillance"
+    },
+    {
+      "id": "an-algorithm-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an algorithm",
+      "audio_text": "an algorithm"
+    },
+    {
+      "id": "a-bias-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a bias",
+      "audio_text": "a bias"
+    },
+    {
+      "id": "to-regulate-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to regulate",
+      "audio_text": "to regulate"
+    },
+    {
+      "id": "to-be-accountable-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to be accountable",
+      "audio_text": "to be accountable"
+    },
+    {
+      "id": "to-weigh-the-pros-and-cons-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to weigh the pros and cons",
+      "audio_text": "to weigh the pros and cons"
     }
   ]
 }

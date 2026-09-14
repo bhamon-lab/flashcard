@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Traduis : « Quand j'avais six ans, je savais nager. »",
       "back": "When I was six, I could swim."
+    },
+    {
+      "id": "past-continuous-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I was sleeping when you called. » ?",
+      "back": "Complète : I ___ when you called. (sleep)"
+    },
+    {
+      "id": "past-interruption-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « We were walking when it started to rain. » ?",
+      "back": "Complète : We ___ when it ___ to rain. (walk/start)"
+    },
+    {
+      "id": "will-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « It will rain tomorrow. » ?",
+      "back": "Traduis cette prédiction : « Il pleuvra demain. »"
+    },
+    {
+      "id": "going-to-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « We are going to visit Dublin. » ?",
+      "back": "Traduis ce projet : « Nous allons visiter Dublin. »"
+    },
+    {
+      "id": "present-future-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I'm seeing Sam tomorrow. » ?",
+      "back": "Traduis cet arrangement : « Je vois Sam demain. »"
+    },
+    {
+      "id": "should-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « You should rest. » ?",
+      "back": "Traduis : « Tu devrais te reposer. »"
+    },
+    {
+      "id": "must-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « You must be careful. » ?",
+      "back": "Traduis : « Tu dois être prudent. »"
+    },
+    {
+      "id": "mustnt-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « You mustn't enter. » ?",
+      "back": "Traduis : « Vous ne devez pas entrer. »"
+    },
+    {
+      "id": "have-to-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I have to wear a uniform. » ?",
+      "back": "Traduis : « Je dois porter un uniforme. »"
+    },
+    {
+      "id": "could-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « When I was six, I could swim. » ?",
+      "back": "Traduis : « Quand j'avais six ans, je savais nager. »"
     }
   ]
 }

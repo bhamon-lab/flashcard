@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "transmettre",
       "audio_text": "to convey"
+    },
+    {
+      "id": "a-work-of-art-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a work of art",
+      "audio_text": "a work of art"
+    },
+    {
+      "id": "a-masterpiece-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a masterpiece",
+      "audio_text": "a masterpiece"
+    },
+    {
+      "id": "a-portrayal-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a portrayal",
+      "audio_text": "a portrayal"
+    },
+    {
+      "id": "a-symbol-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a symbol",
+      "audio_text": "a symbol"
+    },
+    {
+      "id": "a-message-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a message",
+      "audio_text": "a message"
+    },
+    {
+      "id": "to-depict-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to depict",
+      "audio_text": "to depict"
+    },
+    {
+      "id": "to-highlight-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to highlight",
+      "audio_text": "to highlight"
+    },
+    {
+      "id": "to-denounce-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to denounce",
+      "audio_text": "to denounce"
+    },
+    {
+      "id": "to-censor-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to censor",
+      "audio_text": "to censor"
+    },
+    {
+      "id": "to-convey-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to convey",
+      "audio_text": "to convey"
     }
   ]
 }

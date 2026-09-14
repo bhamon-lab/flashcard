@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "une machine à laver",
       "audio_text": "a washing machine"
+    },
+    {
+      "id": "table-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a table",
+      "audio_text": "a table"
+    },
+    {
+      "id": "chair-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a chair",
+      "audio_text": "a chair"
+    },
+    {
+      "id": "bed-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a bed",
+      "audio_text": "a bed"
+    },
+    {
+      "id": "wardrobe-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a wardrobe",
+      "audio_text": "a wardrobe"
+    },
+    {
+      "id": "sofa-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a sofa",
+      "audio_text": "a sofa"
+    },
+    {
+      "id": "shelf-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a shelf",
+      "audio_text": "a shelf"
+    },
+    {
+      "id": "lamp-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a lamp",
+      "audio_text": "a lamp"
+    },
+    {
+      "id": "fridge-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a fridge",
+      "audio_text": "a fridge"
+    },
+    {
+      "id": "oven-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an oven",
+      "audio_text": "an oven"
+    },
+    {
+      "id": "washing-machine-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a washing machine",
+      "audio_text": "a washing machine"
     }
   ]
 }

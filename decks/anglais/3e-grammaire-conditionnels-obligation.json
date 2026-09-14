@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Relie : I read a book. It changed my mind.",
       "back": "I read a book which/that changed my mind."
+    },
+    {
+      "id": "zero-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « If you heat ice, it melts. » ?",
+      "back": "Complète : If you heat ice, it ___. (melt)"
+    },
+    {
+      "id": "first-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « If it rains, we will stay home. » ?",
+      "back": "Complète : If it rains, we ___ home. (stay)"
+    },
+    {
+      "id": "unless-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Unless you hurry, you will miss the bus. » ?",
+      "back": "Reformule : If you don't hurry, you will miss the bus."
+    },
+    {
+      "id": "must-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Students must follow the rules. » ?",
+      "back": "Traduis : « Les élèves doivent respecter les règles. »"
+    },
+    {
+      "id": "have-to-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She has to get up early. » ?",
+      "back": "Traduis : « Elle doit se lever tôt. »"
+    },
+    {
+      "id": "no-obligation-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « You don't have to come. » ?",
+      "back": "Traduis : « Tu n'es pas obligé de venir. »"
+    },
+    {
+      "id": "prohibition-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « You mustn't use your phone. » ?",
+      "back": "Traduis : « Vous ne devez pas utiliser votre téléphone. »"
+    },
+    {
+      "id": "passive-present-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « English is spoken by millions of people. » ?",
+      "back": "Mets au passif : Millions of people speak English."
+    },
+    {
+      "id": "relative-who-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The woman who interviewed me is a journalist. » ?",
+      "back": "Relie : The woman is a journalist. She interviewed me."
+    },
+    {
+      "id": "relative-which-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I read a book which/that changed my mind. » ?",
+      "back": "Relie : I read a book. It changed my mind."
     }
   ]
 }

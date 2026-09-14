@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "la campagne",
       "audio_text": "the countryside"
+    },
+    {
+      "id": "pet-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a pet",
+      "audio_text": "a pet"
+    },
+    {
+      "id": "dog-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a dog",
+      "audio_text": "a dog"
+    },
+    {
+      "id": "cat-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a cat",
+      "audio_text": "a cat"
+    },
+    {
+      "id": "horse-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a horse",
+      "audio_text": "a horse"
+    },
+    {
+      "id": "bird-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a bird",
+      "audio_text": "a bird"
+    },
+    {
+      "id": "forest-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a forest",
+      "audio_text": "a forest"
+    },
+    {
+      "id": "river-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a river",
+      "audio_text": "a river"
+    },
+    {
+      "id": "mountain-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a mountain",
+      "audio_text": "a mountain"
+    },
+    {
+      "id": "sea-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the sea",
+      "audio_text": "the sea"
+    },
+    {
+      "id": "countryside-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the countryside",
+      "audio_text": "the countryside"
     }
   ]
 }

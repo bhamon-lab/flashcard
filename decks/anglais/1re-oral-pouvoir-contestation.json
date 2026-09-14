@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "accorder un droit",
       "audio_text": "to grant a right"
+    },
+    {
+      "id": "authority-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "authority",
+      "audio_text": "authority"
+    },
+    {
+      "id": "protest-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a protest",
+      "audio_text": "a protest"
+    },
+    {
+      "id": "demonstrator-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a demonstrator",
+      "audio_text": "a demonstrator"
+    },
+    {
+      "id": "civil-disobedience-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "civil disobedience",
+      "audio_text": "civil disobedience"
+    },
+    {
+      "id": "oppression-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "oppression",
+      "audio_text": "oppression"
+    },
+    {
+      "id": "resistance-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "resistance",
+      "audio_text": "resistance"
+    },
+    {
+      "id": "challenge-authority-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to challenge authority",
+      "audio_text": "to challenge authority"
+    },
+    {
+      "id": "speak-out-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to speak out",
+      "audio_text": "to speak out"
+    },
+    {
+      "id": "ban-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to ban",
+      "audio_text": "to ban"
+    },
+    {
+      "id": "grant-right-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to grant a right",
+      "audio_text": "to grant a right"
     }
   ]
 }

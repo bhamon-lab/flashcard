@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « disponible ».",
       "back": "available"
+    },
+    {
+      "id": "hotel-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a hotel ».",
+      "back": "un hôtel"
+    },
+    {
+      "id": "youth-hostel-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a youth hostel ».",
+      "back": "une auberge de jeunesse"
+    },
+    {
+      "id": "campsite-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a campsite ».",
+      "back": "un camping"
+    },
+    {
+      "id": "single-room-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a single room ».",
+      "back": "une chambre simple"
+    },
+    {
+      "id": "double-room-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a double room ».",
+      "back": "une chambre double"
+    },
+    {
+      "id": "reception-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « reception ».",
+      "back": "la réception"
+    },
+    {
+      "id": "key-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a key ».",
+      "back": "une clé"
+    },
+    {
+      "id": "check-in-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to check in ».",
+      "back": "s'enregistrer à l'arrivée"
+    },
+    {
+      "id": "check-out-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to check out ».",
+      "back": "libérer la chambre"
+    },
+    {
+      "id": "available-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « available ».",
+      "back": "disponible"
     }
   ]
 }

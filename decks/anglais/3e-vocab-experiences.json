@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « un échange scolaire ».",
       "back": "a school exchange"
+    },
+    {
+      "id": "abroad-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « abroad ».",
+      "back": "à l'étranger"
+    },
+    {
+      "id": "journey-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a journey ».",
+      "back": "un trajet"
+    },
+    {
+      "id": "trip-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a trip ».",
+      "back": "un voyage court"
+    },
+    {
+      "id": "landmark-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a landmark ».",
+      "back": "un monument célèbre"
+    },
+    {
+      "id": "guidebook-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a guidebook ».",
+      "back": "un guide touristique"
+    },
+    {
+      "id": "sightseeing-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to go sightseeing ».",
+      "back": "faire du tourisme"
+    },
+    {
+      "id": "discover-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to discover ».",
+      "back": "découvrir"
+    },
+    {
+      "id": "experience-abroad-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to experience life abroad ».",
+      "back": "vivre une expérience à l'étranger"
+    },
+    {
+      "id": "host-family-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a host family ».",
+      "back": "une famille d'accueil"
+    },
+    {
+      "id": "exchange-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a school exchange ».",
+      "back": "un échange scolaire"
     }
   ]
 }

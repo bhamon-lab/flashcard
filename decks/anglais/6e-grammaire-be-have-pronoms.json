@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Complète : This is Tom. ___ bag is blue.",
       "back": "His bag is blue."
+    },
+    {
+      "id": "be-i-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I am eleven. / I'm eleven. » ?",
+      "back": "Complète : I ___ eleven."
+    },
+    {
+      "id": "be-he-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « He is English. / He's English. » ?",
+      "back": "Complète : He ___ English."
+    },
+    {
+      "id": "be-we-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « We are ready. / We're ready. » ?",
+      "back": "Complète : We ___ ready."
+    },
+    {
+      "id": "be-negative-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She isn't tired. / She is not tired. » ?",
+      "back": "Mets à la forme négative : She is tired."
+    },
+    {
+      "id": "be-question-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Are you French? » ?",
+      "back": "Transforme en question : You are French."
+    },
+    {
+      "id": "have-got-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I have got a brother. / I've got a brother. » ?",
+      "back": "Traduis : « J'ai un frère. »"
+    },
+    {
+      "id": "have-negative-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She hasn't got a sister. » ?",
+      "back": "Traduis : « Elle n'a pas de sœur. »"
+    },
+    {
+      "id": "subject-pronouns-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « she, he, they » ?",
+      "back": "Quels pronoms remplacent Emma, Tom et Emma and Tom ?"
+    },
+    {
+      "id": "object-pronouns-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I often call her. » ?",
+      "back": "Complète : I like Emma. I often call ___."
+    },
+    {
+      "id": "possessive-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « His bag is blue. » ?",
+      "back": "Complète : This is Tom. ___ bag is blue."
     }
   ]
 }

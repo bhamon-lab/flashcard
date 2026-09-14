@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Ajoute un argument avec un connecteur.",
       "back": "In addition, … / Furthermore, …"
+    },
+    {
+      "id": "want-to-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « They want to change things. » ?",
+      "back": "Complète : They want ___ change things. (to)"
+    },
+    {
+      "id": "avoid-ing-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « We should avoid wasting energy. » ?",
+      "back": "Complète : We should avoid ___ energy. (waste)"
+    },
+    {
+      "id": "decide-to-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She decided to study abroad. » ?",
+      "back": "Complète : She decided ___ abroad. (study)"
+    },
+    {
+      "id": "keep-ing-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « They kept protesting. » ?",
+      "back": "Complète : They kept ___. (protest)"
+    },
+    {
+      "id": "purpose-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « in order to reduce waste » ?",
+      "back": "Traduis : « afin de réduire les déchets »."
+    },
+    {
+      "id": "because-of-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The match was cancelled because of the rain. » ?",
+      "back": "Complète : The match was cancelled ___ the rain."
+    },
+    {
+      "id": "therefore-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « It was unsafe; therefore, they closed it. » ?",
+      "back": "Relie avec therefore : It was unsafe. They closed it."
+    },
+    {
+      "id": "however-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « It is costly; however, it is effective. » ?",
+      "back": "Relie avec however : It is costly. It is effective."
+    },
+    {
+      "id": "whereas-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « One source agrees, whereas the other disagrees. » ?",
+      "back": "Relie : One source agrees. The other disagrees."
+    },
+    {
+      "id": "in-addition-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « In addition, … / Furthermore, … » ?",
+      "back": "Ajoute un argument avec un connecteur."
     }
   ]
 }

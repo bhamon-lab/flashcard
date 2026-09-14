@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "la récréation",
       "audio_text": "break time"
+    },
+    {
+      "id": "english-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "English",
+      "audio_text": "English"
+    },
+    {
+      "id": "maths-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "maths",
+      "audio_text": "maths"
+    },
+    {
+      "id": "history-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "history",
+      "audio_text": "history"
+    },
+    {
+      "id": "geography-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "geography",
+      "audio_text": "geography"
+    },
+    {
+      "id": "science-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "science",
+      "audio_text": "science"
+    },
+    {
+      "id": "art-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "art",
+      "audio_text": "art"
+    },
+    {
+      "id": "music-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "music",
+      "audio_text": "music"
+    },
+    {
+      "id": "pe-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "PE",
+      "audio_text": "PE"
+    },
+    {
+      "id": "timetable-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a timetable",
+      "audio_text": "a timetable"
+    },
+    {
+      "id": "break-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "break time",
+      "audio_text": "break time"
     }
   ]
 }

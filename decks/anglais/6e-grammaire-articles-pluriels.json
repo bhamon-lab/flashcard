@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Donne le pluriel de baby.",
       "back": "babies"
+    },
+    {
+      "id": "a-an-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « an orange » ?",
+      "back": "Choisis : a / an orange."
+    },
+    {
+      "id": "the-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Close the door, please. » ?",
+      "back": "Complète : Close ___ door, please."
+    },
+    {
+      "id": "no-article-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I like chocolate: pas d'article pour une généralité. » ?",
+      "back": "Complète si nécessaire : I like ___ chocolate."
+    },
+    {
+      "id": "this-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « this book » ?",
+      "back": "Complète pour un objet proche : ___ book."
+    },
+    {
+      "id": "that-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « that house » ?",
+      "back": "Complète pour un objet éloigné : ___ house."
+    },
+    {
+      "id": "these-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « these children » ?",
+      "back": "Donne le pluriel de this child."
+    },
+    {
+      "id": "those-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « those boxes » ?",
+      "back": "Donne le pluriel de that box."
+    },
+    {
+      "id": "plural-s-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « cats » ?",
+      "back": "Donne le pluriel de cat."
+    },
+    {
+      "id": "plural-es-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « watches » ?",
+      "back": "Donne le pluriel de watch."
+    },
+    {
+      "id": "plural-y-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « babies » ?",
+      "back": "Donne le pluriel de baby."
     }
   ]
 }

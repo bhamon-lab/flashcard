@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DECKS = ROOT / "decks" / "anglais"
 SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
 EXPECTED_DECKS = {grade: 23 for grade in ("6e", "5e", "4e", "3e", "2de", "1re", "Terminale")}
-EXPECTED_CARDS = {"6e": 240, "5e": 245, "4e": 245, "3e": 250, "2de": 248, "1re": 247, "Terminale": 250}
+EXPECTED_CARDS = {"6e": 460, "5e": 465, "4e": 465, "3e": 470, "2de": 468, "1re": 467, "Terminale": 470}
 IRREGULAR_COUNTS = {"6e": 20, "5e": 25, "4e": 25, "3e": 30, "2de": 28, "1re": 27, "Terminale": 30}
 CATEGORIES = {"vocabulary", "listening", "culture", "irregular-verbs", "grammar"}
 
@@ -21,7 +21,7 @@ def require(condition, message):
 
 
 def main():
-    paths = sorted(DECKS.glob("*.json"))
+    paths = sorted(path for path in DECKS.glob("*.json") if not path.name.startswith("_"))
     require(len(paths) == sum(EXPECTED_DECKS.values()), "Nombre total de decks incorrect")
     decks = {}
     counts = Counter()
@@ -40,7 +40,7 @@ def main():
         require(deck.get("grade") in EXPECTED_DECKS, f"{path.name}: niveau incorrect")
         require(deck.get("category") in CATEGORIES, f"{path.name}: catégorie incorrecte")
         require(deck.get("format") == "people", f"{path.name}: format incorrect")
-        expected_cards = IRREGULAR_COUNTS[deck["grade"]] if deck["category"] == "irregular-verbs" else 10
+        expected_cards = IRREGULAR_COUNTS[deck["grade"]] if deck["category"] == "irregular-verbs" else 20
         require(len(deck.get("cards", [])) == expected_cards,
                 f"{path.name}: {expected_cards} cartes attendues")
 
@@ -75,10 +75,20 @@ def main():
         vocab = decks[vocab_stem]
         require(oral.get("mode") == "listening", f"{stem}: mode audio absent")
         require(oral.get("audio_language") == "en-GB", f"{stem}: langue audio incorrecte")
-        require([card["id"] for card in oral["cards"]] == [card["id"] for card in vocab["cards"]],
-                f"{stem}: les identifiants ne correspondent pas à la liste écrite")
-        require([card.get("audio_text") for card in oral["cards"]] == [card["back"] for card in vocab["cards"]],
-                f"{stem}: le contenu audio ne correspond pas à la liste écrite")
+        vocab_production = [card for card in vocab["cards"] if card["kind"] == "vocabulaire"]
+        vocab_reception = [card for card in vocab["cards"] if card["kind"] == "vocabulaire-reception"]
+        oral_recognition = [card for card in oral["cards"] if card["kind"] == "comprehension-orale"]
+        oral_dictation = [card for card in oral["cards"] if card["kind"] == "dictee"]
+        require(len(vocab_production) == len(vocab_reception) == len(oral_recognition) == len(oral_dictation) == 10,
+                f"{stem}: 10 cartes attendues pour chaque mode d'entraînement")
+        require([card["id"] for card in oral_recognition] == [card["id"] for card in vocab_production],
+                f"{stem}: les identifiants de reconnaissance ne correspondent pas à la liste écrite")
+        require([card.get("audio_text") for card in oral_recognition] == [card["back"] for card in vocab_production],
+                f"{stem}: le contenu audio de reconnaissance ne correspond pas à la liste écrite")
+        require([card.get("audio_text") for card in oral_dictation] == [card["back"] for card in oral_dictation],
+                f"{stem}: le corrigé des dictées ne correspond pas au contenu audio")
+        require([card["back"] for card in vocab_reception] == [card["back"] for card in oral_recognition],
+                f"{stem}: les traductions françaises ne correspondent pas")
 
     require(listening == 56, "56 listes de compréhension orale attendues")
     require(dict(category_counts) == {
@@ -91,7 +101,7 @@ def main():
     total_cards = sum(card_counts.values())
     require(len(irregular_ids) == 185, f"185 verbes irréguliers attendus, {len(irregular_ids)} trouvés")
     require(dict(card_counts) == EXPECTED_CARDS, f"Répartition des cartes incorrecte : {dict(card_counts)}")
-    require(total_cards == 1725, f"1725 cartes attendues, {total_cards} trouvées")
+    require(total_cards == 3265, f"3265 cartes attendues, {total_cards} trouvées")
     print(f"OK : {len(paths)} decks, {total_cards} cartes, {listening} paires vocabulaire/oral.")
     for grade in EXPECTED_DECKS:
         print(f"  {grade} : {counts[grade]} decks, {card_counts[grade]} cartes")

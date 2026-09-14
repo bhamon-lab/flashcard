@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Traduis : « La mesure semble avoir échoué. »",
       "back": "The measure seems to have failed."
+    },
+    {
+      "id": "reporting-passive-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The policy is said to work. » ?",
+      "back": "Reformule : People say that the policy works."
+    },
+    {
+      "id": "past-reporting-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « He is believed to have lied. » ?",
+      "back": "Reformule : People believe that he lied."
+    },
+    {
+      "id": "get-passive-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « He got fired. » ?",
+      "back": "Traduis : « Il s'est fait licencier. »"
+    },
+    {
+      "id": "have-something-done-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « They had the data checked. » ?",
+      "back": "Traduis : « Ils ont fait vérifier les données. »"
+    },
+    {
+      "id": "passive-gerund-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I dislike being interrupted. » ?",
+      "back": "Mets au passif : I dislike people interrupting me."
+    },
+    {
+      "id": "report-verb-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She denied leaking it. » ?",
+      "back": "Rapporte avec deny : “I didn't leak it,” she said."
+    },
+    {
+      "id": "accuse-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « He accused her of lying. » ?",
+      "back": "Rapporte avec accuse : “You lied,” he said to her."
+    },
+    {
+      "id": "urge-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « They urged the government to act. » ?",
+      "back": "Rapporte avec urge : “Act now,” they told the government."
+    },
+    {
+      "id": "claim-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « He claims to have found a solution. » ?",
+      "back": "Traduis : « Il prétend avoir trouvé une solution. »"
+    },
+    {
+      "id": "seem-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The measure seems to have failed. » ?",
+      "back": "Traduis : « La mesure semble avoir échoué. »"
     }
   ]
 }

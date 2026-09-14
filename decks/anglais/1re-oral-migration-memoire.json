@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "commémorer",
       "audio_text": "to commemorate"
+    },
+    {
+      "id": "a-migrant-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a migrant",
+      "audio_text": "a migrant"
+    },
+    {
+      "id": "a-refugee-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a refugee",
+      "audio_text": "a refugee"
+    },
+    {
+      "id": "exile-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "exile",
+      "audio_text": "exile"
+    },
+    {
+      "id": "a-border-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a border",
+      "audio_text": "a border"
+    },
+    {
+      "id": "heritage-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "heritage",
+      "audio_text": "heritage"
+    },
+    {
+      "id": "a-legacy-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a legacy",
+      "audio_text": "a legacy"
+    },
+    {
+      "id": "a-memory-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a memory",
+      "audio_text": "a memory"
+    },
+    {
+      "id": "to-settle-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to settle",
+      "audio_text": "to settle"
+    },
+    {
+      "id": "to-flee-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to flee",
+      "audio_text": "to flee"
+    },
+    {
+      "id": "to-commemorate-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to commemorate",
+      "audio_text": "to commemorate"
     }
   ]
 }

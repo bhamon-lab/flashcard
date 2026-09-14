@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « le sentiment d'appartenance à un lieu ».",
       "back": "a sense of place"
+    },
+    {
+      "id": "suburb-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a suburb ».",
+      "back": "une banlieue résidentielle"
+    },
+    {
+      "id": "inner-city-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the inner city ».",
+      "back": "le centre-ville défavorisé"
+    },
+    {
+      "id": "neighbourhood-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a neighbourhood ».",
+      "back": "un quartier"
+    },
+    {
+      "id": "housing-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « housing ».",
+      "back": "le logement"
+    },
+    {
+      "id": "public-space-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a public space ».",
+      "back": "un espace public"
+    },
+    {
+      "id": "commuter-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a commuter ».",
+      "back": "un navetteur"
+    },
+    {
+      "id": "urban-sprawl-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « urban sprawl ».",
+      "back": "l'étalement urbain"
+    },
+    {
+      "id": "regenerate-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to regenerate ».",
+      "back": "réhabiliter"
+    },
+    {
+      "id": "settle-area-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to settle in an area ».",
+      "back": "s'installer dans une région"
+    },
+    {
+      "id": "sense-place-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a sense of place ».",
+      "back": "le sentiment d'appartenance à un lieu"
     }
   ]
 }

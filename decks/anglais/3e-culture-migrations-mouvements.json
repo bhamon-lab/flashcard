@@ -68,6 +68,66 @@
       "kind": "culture",
       "front": "Que réclamaient les suffragettes ?",
       "back": "Voting rights for women."
+    },
+    {
+      "id": "repere-01-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « It was a major immigration inspection station in New York Harbor. » ?",
+      "back": "À quoi servait Ellis Island ?"
+    },
+    {
+      "id": "repere-02-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « A network that helped enslaved people escape to freedom. » ?",
+      "back": "Qu'était the Underground Railroad ?"
+    },
+    {
+      "id": "repere-03-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Montgomery Bus Boycott. » ?",
+      "back": "Quel mouvement suivit l'arrestation de Rosa Parks ?"
+    },
+    {
+      "id": "repere-04-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Thirteenth Amendment. » ?",
+      "back": "Quel amendement abolit l'esclavage aux États-Unis ?"
+    },
+    {
+      "id": "repere-05-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Nineteenth Amendment. » ?",
+      "back": "Quel amendement garantit le droit de vote des femmes aux États-Unis ?"
+    },
+    {
+      "id": "repere-06-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Stonewall uprising. » ?",
+      "back": "Quel événement de 1969 est un repère du mouvement LGBTQ+ ?"
+    },
+    {
+      "id": "repere-07-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Caribbean people who migrated to the UK after the Second World War. » ?",
+      "back": "Que désigne the Windrush generation ?"
+    },
+    {
+      "id": "repere-08-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « A system of institutionalised racial segregation. » ?",
+      "back": "Qu'était apartheid en Afrique du Sud ?"
+    },
+    {
+      "id": "repere-09-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « In 2013. » ?",
+      "back": "En quelle année Black Lives Matter a-t-il été fondé ?"
+    },
+    {
+      "id": "repere-10-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Voting rights for women. » ?",
+      "back": "Que réclamaient les suffragettes ?"
     }
   ]
 }

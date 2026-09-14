@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « soutenir ».",
       "back": "to support"
+    },
+    {
+      "id": "proud-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « proud ».",
+      "back": "fier"
+    },
+    {
+      "id": "worried-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « worried ».",
+      "back": "inquiet"
+    },
+    {
+      "id": "disappointed-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « disappointed ».",
+      "back": "déçu"
+    },
+    {
+      "id": "grateful-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « grateful ».",
+      "back": "reconnaissant"
+    },
+    {
+      "id": "trustworthy-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « trustworthy ».",
+      "back": "digne de confiance"
+    },
+    {
+      "id": "generous-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « generous ».",
+      "back": "généreux"
+    },
+    {
+      "id": "shy-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « shy ».",
+      "back": "timide"
+    },
+    {
+      "id": "to-get-along-with-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to get along with ».",
+      "back": "s’entendre avec"
+    },
+    {
+      "id": "to-argue-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to argue ».",
+      "back": "se disputer"
+    },
+    {
+      "id": "to-support-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to support ».",
+      "back": "soutenir"
     }
   ]
 }

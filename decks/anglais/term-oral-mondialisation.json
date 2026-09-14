@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "un ralentissement économique",
       "audio_text": "an economic downturn"
+    },
+    {
+      "id": "supply-chain-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a supply chain",
+      "audio_text": "a supply chain"
+    },
+    {
+      "id": "trade-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "trade",
+      "audio_text": "trade"
+    },
+    {
+      "id": "tariff-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a tariff",
+      "audio_text": "a tariff"
+    },
+    {
+      "id": "consumer-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a consumer",
+      "audio_text": "a consumer"
+    },
+    {
+      "id": "shareholder-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a shareholder",
+      "audio_text": "a shareholder"
+    },
+    {
+      "id": "inequality-gap-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the wealth gap",
+      "audio_text": "the wealth gap"
+    },
+    {
+      "id": "outsource-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to outsource",
+      "audio_text": "to outsource"
+    },
+    {
+      "id": "regulate-market-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to regulate the market",
+      "audio_text": "to regulate the market"
+    },
+    {
+      "id": "drive-growth-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to drive growth",
+      "audio_text": "to drive growth"
+    },
+    {
+      "id": "economic-downturn-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an economic downturn",
+      "audio_text": "an economic downturn"
     }
   ]
 }

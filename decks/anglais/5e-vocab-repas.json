@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « avoir soif ».",
       "back": "to be thirsty"
+    },
+    {
+      "id": "bread-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « bread ».",
+      "back": "du pain"
+    },
+    {
+      "id": "milk-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « milk ».",
+      "back": "du lait"
+    },
+    {
+      "id": "water-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « water ».",
+      "back": "de l'eau"
+    },
+    {
+      "id": "fruit-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « fruit ».",
+      "back": "des fruits"
+    },
+    {
+      "id": "vegetables-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « vegetables ».",
+      "back": "des légumes"
+    },
+    {
+      "id": "breakfast-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « breakfast ».",
+      "back": "le petit déjeuner"
+    },
+    {
+      "id": "lunch-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « lunch ».",
+      "back": "le déjeuner"
+    },
+    {
+      "id": "dinner-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « dinner ».",
+      "back": "le dîner"
+    },
+    {
+      "id": "hungry-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to be hungry ».",
+      "back": "avoir faim"
+    },
+    {
+      "id": "thirsty-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to be thirsty ».",
+      "back": "avoir soif"
     }
   ]
 }

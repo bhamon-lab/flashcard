@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « un chapeau ».",
       "back": "a hat"
+    },
+    {
+      "id": "tshirt-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a T-shirt ».",
+      "back": "un tee-shirt"
+    },
+    {
+      "id": "shirt-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a shirt ».",
+      "back": "une chemise"
+    },
+    {
+      "id": "jumper-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a jumper ».",
+      "back": "un pull"
+    },
+    {
+      "id": "trousers-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « trousers ».",
+      "back": "un pantalon"
+    },
+    {
+      "id": "dress-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a dress ».",
+      "back": "une robe"
+    },
+    {
+      "id": "skirt-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a skirt ».",
+      "back": "une jupe"
+    },
+    {
+      "id": "coat-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a coat ».",
+      "back": "un manteau"
+    },
+    {
+      "id": "shoes-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « shoes ».",
+      "back": "des chaussures"
+    },
+    {
+      "id": "socks-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « socks ».",
+      "back": "des chaussettes"
+    },
+    {
+      "id": "hat-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a hat ».",
+      "back": "un chapeau"
     }
   ]
 }

@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « l'éducation aux médias ».",
       "back": "media literacy"
+    },
+    {
+      "id": "misinformation-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « misinformation ».",
+      "back": "une information erronée"
+    },
+    {
+      "id": "disinformation-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « disinformation ».",
+      "back": "une désinformation volontaire"
+    },
+    {
+      "id": "fact-checker-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a fact-checker ».",
+      "back": "un vérificateur de faits"
+    },
+    {
+      "id": "source-bias-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « source bias ».",
+      "back": "le biais d'une source"
+    },
+    {
+      "id": "echo-chamber-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an echo chamber ».",
+      "back": "une chambre d'écho"
+    },
+    {
+      "id": "deepfake-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a deepfake ».",
+      "back": "un hypertrucage"
+    },
+    {
+      "id": "verify-claim-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to verify a claim ».",
+      "back": "vérifier une affirmation"
+    },
+    {
+      "id": "debunk-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to debunk ».",
+      "back": "démentir"
+    },
+    {
+      "id": "distort-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to distort ».",
+      "back": "déformer"
+    },
+    {
+      "id": "media-literacy-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « media literacy ».",
+      "back": "l'éducation aux médias"
     }
   ]
 }

@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « remettre en question ».",
       "back": "to challenge"
+    },
+    {
+      "id": "the-target-audience-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the target audience ».",
+      "back": "le public cible"
+    },
+    {
+      "id": "a-bias-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a bias ».",
+      "back": "un parti pris"
+    },
+    {
+      "id": "a-reliable-source-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a reliable source ».",
+      "back": "une source fiable"
+    },
+    {
+      "id": "an-account-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an account ».",
+      "back": "un témoignage"
+    },
+    {
+      "id": "evidence-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « evidence ».",
+      "back": "une preuve"
+    },
+    {
+      "id": "a-claim-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a claim ».",
+      "back": "une affirmation"
+    },
+    {
+      "id": "to-mislead-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to mislead ».",
+      "back": "induire en erreur"
+    },
+    {
+      "id": "to-fact-check-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to fact-check ».",
+      "back": "vérifier les faits"
+    },
+    {
+      "id": "to-shape-opinion-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to shape opinion ».",
+      "back": "façonner l’opinion"
+    },
+    {
+      "id": "to-challenge-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to challenge ».",
+      "back": "remettre en question"
     }
   ]
 }

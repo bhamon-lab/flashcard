@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Traduis : « deux fois par semaine ».",
       "back": "twice a week"
+    },
+    {
+      "id": "continuous-form-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « They are playing football now. » ?",
+      "back": "Complète : They ___ football now. (play)"
+    },
+    {
+      "id": "continuous-negative-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She isn't sleeping. » ?",
+      "back": "Mets à la forme négative : She is sleeping."
+    },
+    {
+      "id": "continuous-question-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Are you listening? » ?",
+      "back": "Transforme en question : You are listening."
+    },
+    {
+      "id": "simple-or-continuous-now-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Look! It is raining. » ?",
+      "back": "Choisis : Look! It rains / is raining."
+    },
+    {
+      "id": "simple-or-continuous-usually-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « He walks to school every day. » ?",
+      "back": "Choisis : He walks / is walking to school every day."
+    },
+    {
+      "id": "frequency-before-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I often play tennis. » ?",
+      "back": "Place often : I play tennis."
+    },
+    {
+      "id": "frequency-be-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She is always friendly. » ?",
+      "back": "Place always : She is friendly."
+    },
+    {
+      "id": "never-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « We are never late. » ?",
+      "back": "Traduis : « Nous ne sommes jamais en retard. »"
+    },
+    {
+      "id": "how-often-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « How often do you read? » ?",
+      "back": "Demande : « À quelle fréquence lis-tu ? »"
+    },
+    {
+      "id": "once-twice-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « twice a week » ?",
+      "back": "Traduis : « deux fois par semaine »."
     }
   ]
 }

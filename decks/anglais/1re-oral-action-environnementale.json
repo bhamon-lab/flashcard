@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "l'impact environnemental",
       "audio_text": "the environmental impact"
+    },
+    {
+      "id": "campaigner-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a campaigner",
+      "audio_text": "a campaigner"
+    },
+    {
+      "id": "conservation-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "conservation",
+      "audio_text": "conservation"
+    },
+    {
+      "id": "emission-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an emission",
+      "audio_text": "an emission"
+    },
+    {
+      "id": "net-zero-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "net zero",
+      "audio_text": "net zero"
+    },
+    {
+      "id": "greenwashing-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "greenwashing",
+      "audio_text": "greenwashing"
+    },
+    {
+      "id": "policy-change-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a policy change",
+      "audio_text": "a policy change"
+    },
+    {
+      "id": "phase-out-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to phase out",
+      "audio_text": "to phase out"
+    },
+    {
+      "id": "curb-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to curb",
+      "audio_text": "to curb"
+    },
+    {
+      "id": "hold-accountable-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to hold accountable",
+      "audio_text": "to hold accountable"
+    },
+    {
+      "id": "environmental-impact-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the environmental impact",
+      "audio_text": "the environmental impact"
     }
   ]
 }

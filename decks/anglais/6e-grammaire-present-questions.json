@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Traduis : « Je sais nager mais je ne sais pas voler. »",
       "back": "I can swim, but I can't fly."
+    },
+    {
+      "id": "present-i-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I play football on Saturdays. » ?",
+      "back": "Complète : I ___ football on Saturdays. (play)"
+    },
+    {
+      "id": "present-he-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « He plays football on Saturdays. » ?",
+      "back": "Complète : He ___ football on Saturdays. (play)"
+    },
+    {
+      "id": "present-negative-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I don't like milk. » ?",
+      "back": "Traduis : « Je n'aime pas le lait. »"
+    },
+    {
+      "id": "present-negative-he-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She doesn't watch television. » ?",
+      "back": "Traduis : « Elle ne regarde pas la télévision. »"
+    },
+    {
+      "id": "do-question-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Do you live here? » ?",
+      "back": "Traduis : « Est-ce que tu habites ici ? »"
+    },
+    {
+      "id": "does-question-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Does he like school? » ?",
+      "back": "Traduis : « Est-ce qu'il aime l'école ? »"
+    },
+    {
+      "id": "question-word-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Where do you live? » ?",
+      "back": "Complète : ___ do you live? — In Lyon."
+    },
+    {
+      "id": "articles-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « A cat and an elephant. » ?",
+      "back": "Complète : ___ cat and ___ elephant."
+    },
+    {
+      "id": "plural-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « children, boxes, feet » ?",
+      "back": "Donne le pluriel de child, box et foot."
+    },
+    {
+      "id": "can-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I can swim, but I can't fly. » ?",
+      "back": "Traduis : « Je sais nager mais je ne sais pas voler. »"
     }
   ]
 }

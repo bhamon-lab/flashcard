@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "se reposer",
       "audio_text": "to rest"
+    },
+    {
+      "id": "the-head-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the head",
+      "audio_text": "the head"
+    },
+    {
+      "id": "the-throat-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the throat",
+      "audio_text": "the throat"
+    },
+    {
+      "id": "the-back-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the back",
+      "audio_text": "the back"
+    },
+    {
+      "id": "to-have-a-headache-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to have a headache",
+      "audio_text": "to have a headache"
+    },
+    {
+      "id": "to-have-a-fever-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to have a fever",
+      "audio_text": "to have a fever"
+    },
+    {
+      "id": "to-cough-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to cough",
+      "audio_text": "to cough"
+    },
+    {
+      "id": "to-have-a-cold-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to have a cold",
+      "audio_text": "to have a cold"
+    },
+    {
+      "id": "medicine-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "medicine",
+      "audio_text": "medicine"
+    },
+    {
+      "id": "a-doctor-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a doctor",
+      "audio_text": "a doctor"
+    },
+    {
+      "id": "to-rest-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "to rest",
+      "audio_text": "to rest"
     }
   ]
 }

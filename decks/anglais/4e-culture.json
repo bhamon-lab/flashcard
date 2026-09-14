@@ -68,6 +68,66 @@
       "kind": "culture",
       "front": "Quel oiseau incapable de voler symbolise la Nouvelle-Zélande ?",
       "back": "The kiwi."
+    },
+    {
+      "id": "repere-01-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Dublin. » ?",
+      "back": "Quelle ville est la capitale de l'Irlande ?"
+    },
+    {
+      "id": "repere-02-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Saint Patrick. » ?",
+      "back": "Quel saint est célébré le 17 mars ?"
+    },
+    {
+      "id": "repere-03-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « English and French. » ?",
+      "back": "Quelles sont les deux langues officielles du Canada ?"
+    },
+    {
+      "id": "repere-04-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « A maple leaf. » ?",
+      "back": "Quelle feuille figure sur le drapeau canadien ?"
+    },
+    {
+      "id": "repere-05-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Canberra, not Sydney. » ?",
+      "back": "Quelle est la capitale de l'Australie ?"
+    },
+    {
+      "id": "repere-06-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The Sydney Opera House. » ?",
+      "back": "Comment s'appelle le célèbre opéra de Sydney ?"
+    },
+    {
+      "id": "repere-07-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Aboriginal and Torres Strait Islander peoples. » ?",
+      "back": "Qui sont les peuples autochtones d'Australie ?"
+    },
+    {
+      "id": "repere-08-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Wellington. » ?",
+      "back": "Quelle est la capitale de la Nouvelle-Zélande ?"
+    },
+    {
+      "id": "repere-09-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Aotearoa. » ?",
+      "back": "Quel nom māori désigne la Nouvelle-Zélande ?"
+    },
+    {
+      "id": "repere-10-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The kiwi. » ?",
+      "back": "Quel oiseau incapable de voler symbolise la Nouvelle-Zélande ?"
     }
   ]
 }

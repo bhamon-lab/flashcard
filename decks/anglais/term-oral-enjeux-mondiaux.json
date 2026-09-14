@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "fondé sur des preuves",
       "audio_text": "evidence-based"
+    },
+    {
+      "id": "an-unintended-consequence-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "an unintended consequence",
+      "audio_text": "an unintended consequence"
+    },
+    {
+      "id": "a-threat-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a threat",
+      "audio_text": "a threat"
+    },
+    {
+      "id": "resilience-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "resilience",
+      "audio_text": "resilience"
+    },
+    {
+      "id": "scarcity-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "scarcity",
+      "audio_text": "scarcity"
+    },
+    {
+      "id": "sustainability-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "sustainability",
+      "audio_text": "sustainability"
+    },
+    {
+      "id": "artificial-intelligence-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "artificial intelligence",
+      "audio_text": "artificial intelligence"
+    },
+    {
+      "id": "the-digital-divide-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "the digital divide",
+      "audio_text": "the digital divide"
+    },
+    {
+      "id": "on-a-large-scale-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "on a large scale",
+      "audio_text": "on a large scale"
+    },
+    {
+      "id": "in-the-long-run-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "in the long run",
+      "audio_text": "in the long run"
+    },
+    {
+      "id": "evidence-based-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "evidence-based",
+      "audio_text": "evidence-based"
     }
   ]
 }

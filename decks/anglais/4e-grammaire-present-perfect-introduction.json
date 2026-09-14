@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Choisis le temps : I went / have been to Ireland twice.",
       "back": "I have been to Ireland twice."
+    },
+    {
+      "id": "form-have-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I have finished. » ?",
+      "back": "Complète : I ___ finished."
+    },
+    {
+      "id": "form-has-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She has arrived. » ?",
+      "back": "Complète : She ___ arrived."
+    },
+    {
+      "id": "negative-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « He hasn't seen it. » ?",
+      "back": "Mets à la forme négative : He has seen it."
+    },
+    {
+      "id": "question-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Have you visited London? » ?",
+      "back": "Transforme en question : You have visited London."
+    },
+    {
+      "id": "ever-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Have you ever eaten that? » ?",
+      "back": "Traduis : « As-tu déjà mangé cela ? »"
+    },
+    {
+      "id": "never-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I have never flown. » ?",
+      "back": "Traduis : « Je n'ai jamais pris l'avion. »"
+    },
+    {
+      "id": "just-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « We have just arrived. » ?",
+      "back": "Traduis : « Nous venons d'arriver. »"
+    },
+    {
+      "id": "already-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She has already finished. » ?",
+      "back": "Traduis : « Elle a déjà fini. »"
+    },
+    {
+      "id": "yet-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « They haven't left yet. » ?",
+      "back": "Traduis : « Ils ne sont pas encore partis. »"
+    },
+    {
+      "id": "experience-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I have been to Ireland twice. » ?",
+      "back": "Choisis le temps : I went / have been to Ireland twice."
     }
   ]
 }

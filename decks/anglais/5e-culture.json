@@ -68,6 +68,66 @@
       "kind": "culture",
       "front": "À quoi servent les red double-decker buses ?",
       "back": "They are iconic double-decker buses used for public transport."
+    },
+    {
+      "id": "repere-01-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The River Thames. » ?",
+      "back": "Quel fleuve traverse Londres ?"
+    },
+    {
+      "id": "repere-02-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « London. » ?",
+      "back": "Dans quelle ville se trouve Big Ben ?"
+    },
+    {
+      "id": "repere-03-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Edinburgh. » ?",
+      "back": "Quelle capitale écossaise possède un célèbre château ?"
+    },
+    {
+      "id": "repere-04-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Cardiff. » ?",
+      "back": "Quelle est la capitale du pays de Galles ?"
+    },
+    {
+      "id": "repere-05-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Belfast. » ?",
+      "back": "Quelle est la capitale de l'Irlande du Nord ?"
+    },
+    {
+      "id": "repere-06-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « On 31 October. » ?",
+      "back": "Quand célèbre-t-on Halloween ?"
+    },
+    {
+      "id": "repere-07-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « The failure of the Gunpowder Plot of 1605, on 5 November. » ?",
+      "back": "Que célèbre Bonfire Night au Royaume-Uni ?"
+    },
+    {
+      "id": "repere-08-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Fish and chips. » ?",
+      "back": "Quel repas britannique associe poisson frit et frites ?"
+    },
+    {
+      "id": "repere-09-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « Tennis. » ?",
+      "back": "Quel sport est associé au tournoi de Wimbledon ?"
+    },
+    {
+      "id": "repere-10-consolidation",
+      "kind": "culture-consolidation",
+      "front": "À quelle question de culture correspond ce repère : « They are iconic double-decker buses used for public transport. » ?",
+      "back": "À quoi servent les red double-decker buses ?"
     }
   ]
 }

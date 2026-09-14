@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Choisis : I have seen / saw him yesterday.",
       "back": "I saw him yesterday: yesterday situe un passé terminé."
+    },
+    {
+      "id": "form-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I have visited London twice. » ?",
+      "back": "Complète : I ___ London twice. (visit)"
+    },
+    {
+      "id": "never-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I have never seen this film. » ?",
+      "back": "Traduis : « Je n'ai jamais vu ce film. »"
+    },
+    {
+      "id": "ever-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Have you ever been to Canada? » ?",
+      "back": "Traduis : « Es-tu déjà allé au Canada ? »"
+    },
+    {
+      "id": "just-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She has just finished. » ?",
+      "back": "Traduis : « Elle vient de finir. »"
+    },
+    {
+      "id": "already-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « They have already eaten. » ?",
+      "back": "Traduis : « Ils ont déjà mangé. »"
+    },
+    {
+      "id": "yet-question-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Have you finished yet? » ?",
+      "back": "Traduis : « As-tu déjà terminé ? »"
+    },
+    {
+      "id": "yet-negative-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I haven't finished yet. » ?",
+      "back": "Traduis : « Je n'ai pas encore terminé. »"
+    },
+    {
+      "id": "since-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « We have lived here since 2022. » ?",
+      "back": "Complète : We have lived here ___ 2022."
+    },
+    {
+      "id": "for-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « She has studied English for five years. » ?",
+      "back": "Complète : She has studied English ___ five years."
+    },
+    {
+      "id": "past-difference-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I saw him yesterday: yesterday situe un passé terminé. » ?",
+      "back": "Choisis : I have seen / saw him yesterday."
     }
   ]
 }

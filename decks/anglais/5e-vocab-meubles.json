@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « une machine à laver ».",
       "back": "a washing machine"
+    },
+    {
+      "id": "table-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a table ».",
+      "back": "une table"
+    },
+    {
+      "id": "chair-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a chair ».",
+      "back": "une chaise"
+    },
+    {
+      "id": "bed-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a bed ».",
+      "back": "un lit"
+    },
+    {
+      "id": "wardrobe-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a wardrobe ».",
+      "back": "une armoire"
+    },
+    {
+      "id": "sofa-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a sofa ».",
+      "back": "un canapé"
+    },
+    {
+      "id": "shelf-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a shelf ».",
+      "back": "une étagère"
+    },
+    {
+      "id": "lamp-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a lamp ».",
+      "back": "une lampe"
+    },
+    {
+      "id": "fridge-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a fridge ».",
+      "back": "un réfrigérateur"
+    },
+    {
+      "id": "oven-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an oven ».",
+      "back": "un four"
+    },
+    {
+      "id": "washing-machine-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a washing machine ».",
+      "back": "une machine à laver"
     }
   ]
 }

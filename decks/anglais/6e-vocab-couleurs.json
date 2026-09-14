@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « blanc ».",
       "back": "white"
+    },
+    {
+      "id": "red-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « red ».",
+      "back": "rouge"
+    },
+    {
+      "id": "blue-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « blue ».",
+      "back": "bleu"
+    },
+    {
+      "id": "green-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « green ».",
+      "back": "vert"
+    },
+    {
+      "id": "yellow-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « yellow ».",
+      "back": "jaune"
+    },
+    {
+      "id": "orange-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « orange ».",
+      "back": "orange"
+    },
+    {
+      "id": "pink-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « pink ».",
+      "back": "rose"
+    },
+    {
+      "id": "purple-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « purple ».",
+      "back": "violet"
+    },
+    {
+      "id": "brown-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « brown ».",
+      "back": "marron"
+    },
+    {
+      "id": "black-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « black ».",
+      "back": "noir"
+    },
+    {
+      "id": "white-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « white ».",
+      "back": "blanc"
     }
   ]
 }

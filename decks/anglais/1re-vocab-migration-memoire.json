@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « commémorer ».",
       "back": "to commemorate"
+    },
+    {
+      "id": "a-migrant-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a migrant ».",
+      "back": "un migrant"
+    },
+    {
+      "id": "a-refugee-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a refugee ».",
+      "back": "un réfugié"
+    },
+    {
+      "id": "exile-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « exile ».",
+      "back": "l’exil"
+    },
+    {
+      "id": "a-border-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a border ».",
+      "back": "une frontière"
+    },
+    {
+      "id": "heritage-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « heritage ».",
+      "back": "le patrimoine"
+    },
+    {
+      "id": "a-legacy-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a legacy ».",
+      "back": "un héritage"
+    },
+    {
+      "id": "a-memory-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a memory ».",
+      "back": "un souvenir"
+    },
+    {
+      "id": "to-settle-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to settle ».",
+      "back": "s’installer"
+    },
+    {
+      "id": "to-flee-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to flee ».",
+      "back": "fuir"
+    },
+    {
+      "id": "to-commemorate-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to commemorate ».",
+      "back": "commémorer"
     }
   ]
 }

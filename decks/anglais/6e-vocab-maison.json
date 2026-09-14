@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « le couloir ».",
       "back": "the hallway"
+    },
+    {
+      "id": "the-kitchen-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the kitchen ».",
+      "back": "la cuisine"
+    },
+    {
+      "id": "the-living-room-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the living room ».",
+      "back": "le salon"
+    },
+    {
+      "id": "the-dining-room-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the dining room ».",
+      "back": "la salle à manger"
+    },
+    {
+      "id": "the-bedroom-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the bedroom ».",
+      "back": "la chambre"
+    },
+    {
+      "id": "the-bathroom-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the bathroom ».",
+      "back": "la salle de bains"
+    },
+    {
+      "id": "the-toilet-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the toilet ».",
+      "back": "les toilettes"
+    },
+    {
+      "id": "the-garden-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the garden ».",
+      "back": "le jardin"
+    },
+    {
+      "id": "the-garage-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the garage ».",
+      "back": "le garage"
+    },
+    {
+      "id": "the-attic-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the attic ».",
+      "back": "le grenier"
+    },
+    {
+      "id": "the-hallway-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the hallway ».",
+      "back": "le couloir"
     }
   ]
 }

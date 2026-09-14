@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Relie deux documents convergents mais différents.",
       "back": "Both documents highlight…, although they approach it from different perspectives."
+    },
+    {
+      "id": "cleft-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « It was in 2020 that they acted. » ?",
+      "back": "Mets en relief le moment : They acted in 2020."
+    },
+    {
+      "id": "what-cleft-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « What we need is a long-term solution. » ?",
+      "back": "Mets en relief le besoin : We need a long-term solution."
+    },
+    {
+      "id": "negative-inversion-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Rarely do governments agree so quickly. » ?",
+      "back": "Reformule avec rarely : Governments rarely agree so quickly."
+    },
+    {
+      "id": "not-only-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Not only is it costly, but it is also ineffective. » ?",
+      "back": "Complète : Not only ___ costly, but it is also ineffective."
+    },
+    {
+      "id": "participle-clause-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Designed carefully, the policy succeeded. » ?",
+      "back": "Réduis : Because it was designed carefully, the policy succeeded."
+    },
+    {
+      "id": "nominalisation-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The government's decision to intervene… » ?",
+      "back": "Nominalise : The government decided to intervene."
+    },
+    {
+      "id": "hedging-likely-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « This measure is likely to fail. » ?",
+      "back": "Traduis : « Cette mesure est susceptible d'échouer. »"
+    },
+    {
+      "id": "hedging-appears-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The policy appears to be effective. » ?",
+      "back": "Atténue : The policy is effective."
+    },
+    {
+      "id": "concession-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Useful though it may be, the measure remains costly. » ?",
+      "back": "Traduis : « Aussi utile soit-elle, la mesure reste coûteuse. »"
+    },
+    {
+      "id": "synthesis-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Both documents highlight…, although they approach it from different perspectives. » ?",
+      "back": "Relie deux documents convergents mais différents."
     }
   ]
 }

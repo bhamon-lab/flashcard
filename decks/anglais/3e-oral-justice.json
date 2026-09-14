@@ -80,6 +80,76 @@
       "front": "Écoute, puis donne le sens en français.",
       "back": "innocent",
       "audio_text": "innocent"
+    },
+    {
+      "id": "crime-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a crime",
+      "audio_text": "a crime"
+    },
+    {
+      "id": "criminal-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a criminal",
+      "audio_text": "a criminal"
+    },
+    {
+      "id": "victim-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a victim",
+      "audio_text": "a victim"
+    },
+    {
+      "id": "witness-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a witness",
+      "audio_text": "a witness"
+    },
+    {
+      "id": "evidence-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "evidence",
+      "audio_text": "evidence"
+    },
+    {
+      "id": "police-officer-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a police officer",
+      "audio_text": "a police officer"
+    },
+    {
+      "id": "court-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a court",
+      "audio_text": "a court"
+    },
+    {
+      "id": "judge-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "a judge",
+      "audio_text": "a judge"
+    },
+    {
+      "id": "guilty-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "guilty",
+      "audio_text": "guilty"
+    },
+    {
+      "id": "innocent-dictee",
+      "kind": "dictee",
+      "front": "Écoute, puis écris ce que tu entends en anglais.",
+      "back": "innocent",
+      "audio_text": "innocent"
     }
   ]
 }

@@ -68,6 +68,66 @@
       "kind": "grammaire",
       "front": "Traduis : « Je préférerais qu'ils agissent maintenant. »",
       "back": "I would rather they acted now."
+    },
+    {
+      "id": "third-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « If they had acted earlier, they might have avoided the crisis. » ?",
+      "back": "Complète : If they ___ earlier, they ___ the crisis. (act/avoid)"
+    },
+    {
+      "id": "mixed-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « If we had invested earlier, the system would be safer now. » ?",
+      "back": "Complète : If we had invested earlier, the system ___ safer now. (be)"
+    },
+    {
+      "id": "inversion-had-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Had they known, they would have acted. » ?",
+      "back": "Reformule sans if : If they had known, they would have acted."
+    },
+    {
+      "id": "inversion-were-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Were I you, I would wait. » ?",
+      "back": "Reformule sans if : If I were you, I would wait."
+    },
+    {
+      "id": "provided-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « provided that safeguards are added » ?",
+      "back": "Traduis : « à condition que des garanties soient ajoutées »."
+    },
+    {
+      "id": "otherwise-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « Act now; otherwise, the problem will worsen. » ?",
+      "back": "Relie avec otherwise : Act now. The problem will worsen."
+    },
+    {
+      "id": "should-have-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « They should have anticipated the risk. » ?",
+      "back": "Traduis : « Ils auraient dû anticiper le risque. »"
+    },
+    {
+      "id": "neednt-have-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « You needn't have come. » ?",
+      "back": "Traduis : « Tu n'avais pas besoin de venir, mais tu es venu. »"
+    },
+    {
+      "id": "might-have-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « The measure might have failed. » ?",
+      "back": "Traduis : « La mesure a peut-être échoué. »"
+    },
+    {
+      "id": "would-rather-consolidation",
+      "kind": "grammaire-consolidation",
+      "front": "Quelle consigne grammaticale conduit à cette réponse correcte : « I would rather they acted now. » ?",
+      "back": "Traduis : « Je préférerais qu'ils agissent maintenant. »"
     }
   ]
 }

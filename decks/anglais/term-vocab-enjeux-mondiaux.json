@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « fondé sur des preuves ».",
       "back": "evidence-based"
+    },
+    {
+      "id": "an-unintended-consequence-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « an unintended consequence ».",
+      "back": "une conséquence imprévue"
+    },
+    {
+      "id": "a-threat-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a threat ».",
+      "back": "une menace"
+    },
+    {
+      "id": "resilience-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « resilience ».",
+      "back": "la résilience"
+    },
+    {
+      "id": "scarcity-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « scarcity ».",
+      "back": "la pénurie"
+    },
+    {
+      "id": "sustainability-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « sustainability ».",
+      "back": "la durabilité"
+    },
+    {
+      "id": "artificial-intelligence-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « artificial intelligence ».",
+      "back": "l’intelligence artificielle"
+    },
+    {
+      "id": "the-digital-divide-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the digital divide ».",
+      "back": "la fracture numérique"
+    },
+    {
+      "id": "on-a-large-scale-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « on a large scale ».",
+      "back": "à grande échelle"
+    },
+    {
+      "id": "in-the-long-run-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « in the long run ».",
+      "back": "à long terme"
+    },
+    {
+      "id": "evidence-based-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « evidence-based ».",
+      "back": "fondé sur des preuves"
     }
   ]
 }

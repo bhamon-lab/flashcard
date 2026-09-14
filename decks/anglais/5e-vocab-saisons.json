@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « la température ».",
       "back": "the temperature"
+    },
+    {
+      "id": "spring-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « spring ».",
+      "back": "le printemps"
+    },
+    {
+      "id": "summer-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « summer ».",
+      "back": "l'été"
+    },
+    {
+      "id": "autumn-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « autumn ».",
+      "back": "l'automne"
+    },
+    {
+      "id": "winter-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « winter ».",
+      "back": "l'hiver"
+    },
+    {
+      "id": "hot-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « hot ».",
+      "back": "chaud"
+    },
+    {
+      "id": "cold-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « cold ».",
+      "back": "froid"
+    },
+    {
+      "id": "rainy-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « rainy ».",
+      "back": "pluvieux"
+    },
+    {
+      "id": "snowy-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « snowy ».",
+      "back": "enneigé"
+    },
+    {
+      "id": "weather-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « What's the weather like? ».",
+      "back": "Quel temps fait-il ?"
+    },
+    {
+      "id": "temperature-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the temperature ».",
+      "back": "la température"
     }
   ]
 }

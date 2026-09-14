@@ -68,6 +68,66 @@
       "kind": "vocabulaire",
       "front": "Traduis en anglais : « rater le train ».",
       "back": "to miss the train"
+    },
+    {
+      "id": "a-single-ticket-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a single ticket ».",
+      "back": "un billet aller simple"
+    },
+    {
+      "id": "a-return-ticket-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a return ticket ».",
+      "back": "un billet aller-retour"
+    },
+    {
+      "id": "the-platform-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the platform ».",
+      "back": "le quai"
+    },
+    {
+      "id": "the-boarding-pass-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « the boarding pass ».",
+      "back": "la carte d’embarquement"
+    },
+    {
+      "id": "luggage-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « luggage ».",
+      "back": "les bagages"
+    },
+    {
+      "id": "a-flight-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « a flight ».",
+      "back": "un vol"
+    },
+    {
+      "id": "delayed-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « delayed ».",
+      "back": "retardé"
+    },
+    {
+      "id": "cancelled-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « cancelled ».",
+      "back": "annulé"
+    },
+    {
+      "id": "to-book-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to book ».",
+      "back": "réserver"
+    },
+    {
+      "id": "to-miss-the-train-reception",
+      "kind": "vocabulaire-reception",
+      "front": "Traduis en français : « to miss the train ».",
+      "back": "rater le train"
     }
   ]
 }
