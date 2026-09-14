@@ -63,6 +63,18 @@ type Route =
 /** True si la chaîne contient du LaTeX à rendre ($…$ ou $$…$$). */
 const hasMath = (text: string) => text.includes('$');
 
+const VERB_FRONT_DASH = /^(.*\S)[\s\u00A0]*[—–-]\s*$/;
+
+const cardQuestion = (card: Card) => {
+  const verb = VERB_FRONT_DASH.exec(card.first_name);
+  return verb && card.context ? card.context : card.first_name;
+};
+
+const cardHint = (card: Card) => {
+  const verb = VERB_FRONT_DASH.exec(card.first_name);
+  return verb && card.context ? verb[1] : card.context;
+};
+
 const formatDelay = (minutes: number) => {
   if (minutes === 0) return 'Immédiatement';
   if (minutes < 60) return `${minutes} min`;
@@ -846,7 +858,7 @@ function DeckScreen({ deckId, onBack, onStudy, onSettings }: { deckId: number; o
             <Pressable key={card.id} onPress={() => setEditorCard(card)} style={[styles.cardRow, index < visibleCards.length - 1 && styles.cardRowBorder]}>
               <View style={styles.cardThumbWrap}><CardImage card={card} style={styles.cardThumb} /></View>
               <View style={styles.cardText}>
-                <Text style={styles.cardFront} numberOfLines={1}>{stripMathText(card.first_name)}</Text>
+                <Text style={styles.cardFront} numberOfLines={1}>{stripMathText(cardQuestion(card))}</Text>
                 <Text style={styles.cardBack} numberOfLines={1}>{stripMathText(card.last_name || card.context) || 'Pas encore de réponse'}</Text>
               </View>
               <View style={[styles.statusDot, { backgroundColor: card.first_seen_at ? colors.green : colors.yellow }]} />
@@ -1257,6 +1269,9 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
     );
   }
 
+  const question = cardQuestion(current);
+  const cardHintText = cardHint(current);
+
   return (
     <SafeAreaView style={styles.studyScreen} edges={['top', 'bottom']}>
       <View style={styles.studyTop}>
@@ -1293,30 +1308,33 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
           ) : (
             <View style={styles.questionStage}>
               <Text style={styles.questionEyebrow}>QUESTION</Text>
-              {hasMath(current.first_name)
-                ? <MathView text={current.first_name} fontSize={25} />
-                : <Text style={styles.questionBig}>{current.first_name}</Text>}
+              {hasMath(question)
+                ? <MathView text={question} fontSize={25} />
+                : <Text style={styles.questionBig}>{question}</Text>}
             </View>
           )}
           {!revealed && current.photo_uri ? <View style={styles.questionBadge}><Ionicons name="help" size={20} color={colors.blue} /></View> : null}
+          {!revealed && cardHintText ? (
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="Afficher l’indice"
+              onPress={() => setHintShown(true)}
+              style={({ pressed }) => [styles.hintCornerButton, pressed && styles.pressed]}
+            >
+              <Ionicons name="bulb-outline" size={20} color={colors.blue} />
+            </Pressable>
+          ) : null}
         </View>
         {!revealed ? (
           <View style={styles.revealArea}>
             <PrimaryButton label="Voir la réponse" icon="eye-outline" onPress={() => setRevealed(true)} />
-            {current.context ? (
-              hintShown ? (
-                <View style={styles.hintPaper}>
-                  <Text style={styles.hintEyebrow}>INDICE</Text>
-                  {hasMath(current.context)
-                    ? <MathView text={current.context} fontSize={17} />
-                    : <Text style={styles.hintText}>{current.context}</Text>}
-                </View>
-              ) : (
-                <Pressable accessibilityRole="button" accessibilityLabel="Afficher l’indice" onPress={() => setHintShown(true)} style={({ pressed }) => [styles.hintButton, pressed && styles.pressed]}>
-                  <Ionicons name="bulb-outline" size={18} color={colors.blue} />
-                  <Text style={styles.hintButtonText}>Indice</Text>
-                </Pressable>
-              )
+            {hintShown && cardHintText ? (
+              <View style={styles.hintPaper}>
+                <Text style={styles.hintEyebrow}>INDICE</Text>
+                {hasMath(cardHintText)
+                  ? <MathView text={cardHintText} fontSize={17} />
+                  : <Text style={styles.hintText}>{cardHintText}</Text>}
+              </View>
             ) : null}
             <Text style={styles.hint}>Prends le temps de calculer dans ta tête avant de révéler</Text>
           </View>
@@ -1668,8 +1686,7 @@ const styles = StyleSheet.create({
   answerText: { color: colors.ink, fontSize: 21, fontWeight: '700', letterSpacing: -0.3, textAlign: 'center', marginTop: 6, fontFamily: mono },
   answerNote: { color: colors.muted, fontSize: 13, marginTop: 5, fontWeight: '600' },
   revealArea: { paddingTop: 17 },
-  hintButton: { minHeight: 46, borderRadius: 15, borderWidth: 1, borderColor: colors.blue, alignSelf: 'center', paddingHorizontal: 20, marginTop: 10, alignItems: 'center', justifyContent: 'center', flexDirection: 'row', gap: 7, backgroundColor: colors.paper },
-  hintButtonText: { color: colors.blue, fontSize: 14, fontWeight: '800' },
+  hintCornerButton: { position: 'absolute', top: 14, right: 14, zIndex: 3, width: 38, height: 38, borderRadius: 19, backgroundColor: colors.blueSoft, borderWidth: 1, borderColor: 'rgba(47, 82, 218, 0.25)', alignItems: 'center', justifyContent: 'center' },
   hintPaper: { alignSelf: 'stretch', borderRadius: 15, backgroundColor: colors.yellowSoft, borderWidth: 1, borderColor: '#E8D9A0', paddingVertical: 13, paddingHorizontal: 16, marginTop: 10, alignItems: 'center' },
   hintEyebrow: { color: '#8A6D1B', fontSize: 10, fontWeight: '900', letterSpacing: 1.6 },
   hintText: { color: colors.ink, fontSize: 15, fontWeight: '700', marginTop: 3, textAlign: 'center' },
