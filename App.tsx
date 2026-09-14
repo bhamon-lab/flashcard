@@ -261,7 +261,7 @@ function HomeScreen({ onOpenSubject, onOpenStats }: { onOpenSubject: (subject: s
       >
         <View style={styles.homeHeader}>
           <View>
-            <Text style={styles.eyebrow}>MÉMENTO · MATIÈRES</Text>
+            <Text style={styles.eyebrow}>RÉVIZ’ · MATIÈRES</Text>
             <Text style={styles.heroTitle}>Tout ce qui{`\n`}reste en tête.</Text>
           </View>
           <View style={styles.homeHeaderActions}>
@@ -1478,7 +1478,7 @@ function AppContent() {
       setReady(true);
     } catch (error) {
       console.error(error);
-      setInitializationError('La base locale est déjà utilisée dans un autre onglet. Ferme les autres onglets de Mémento puis réessaie.');
+      setInitializationError('La base locale est déjà utilisée dans un autre onglet. Ferme les autres onglets de Réviz’ puis réessaie.');
     }
   }, []);
   useEffect(() => { void initialize(); }, [initialize]);
@@ -1517,12 +1517,12 @@ function AppContent() {
   if (initializationError) return (
     <View style={styles.splash}>
       <View style={styles.logoError}><Ionicons name="alert-circle-outline" size={30} color={colors.red} /></View>
-      <Text style={styles.splashTitle}>Mémento</Text>
+      <Text style={styles.splashTitle}>Réviz’</Text>
       <Text style={styles.initializationError}>{initializationError}</Text>
       <PrimaryButton label="Réessayer" icon="refresh" onPress={() => void initialize()} />
     </View>
   );
-  if (!ready) return <View style={styles.splash}><View style={styles.logo}><Text style={styles.logoGlyph}>π</Text></View><Text style={styles.splashTitle}>Mémento</Text><ActivityIndicator color={colors.blue} style={{ marginTop: 24 }} /></View>;
+  if (!ready) return <View style={styles.splash}><View style={styles.logo}><Text style={styles.logoGlyph}>π</Text></View><Text style={styles.splashTitle}>Réviz’</Text><ActivityIndicator color={colors.blue} style={{ marginTop: 24 }} /></View>;
 
   return (
     <View style={styles.app}>

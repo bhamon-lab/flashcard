@@ -104,7 +104,7 @@ export async function checkForAppUpdate() {
   const releaseName = release.name?.trim() || release.tag_name;
   Alert.alert(
     'Mise à jour disponible',
-    `Mémento ${releaseName} est disponible. Vous utilisez la version ${currentVersion}.`,
+    `Réviz’ ${releaseName} est disponible. Vous utilisez la version ${currentVersion}.`,
     [
       { text: 'Plus tard', style: 'cancel' },
       { text: 'Voir la mise à jour', onPress: () => void Linking.openURL(release.html_url) },

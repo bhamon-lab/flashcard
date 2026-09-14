@@ -1,76 +1,55 @@
-# Mémento
+# Réviz’
 
-**Retenez enfin les prénoms des personnes que vous croisez.**
+**Des fiches de révision pour le collège et le lycée, dans ta poche.**
 
-Mémento transforme les visages de votre équipe, de votre classe ou de votre association en courtes sessions de mémorisation. Ajoutez une photo, un prénom et un peu de contexte : l’application vous propose ensuite les bonnes personnes à revoir au bon moment.
+Réviz’ est une application de révision par cartes (flashcards) pour les élèves de la 6e à la Terminale. Les paquets couvrent les maths, l’anglais, le français et l’histoire : lance une courte session, réponds aux cartes du jour, et l’application te proposera de revoir chaque carte au bon moment.
 
 <p align="center">
-  <img src="docs/screenshots/home.png" alt="Accueil de Mémento" width="30%" />
+  <img src="docs/screenshots/home.png" alt="Accueil de Réviz’" width="30%" />
   &nbsp;
-  <img src="docs/screenshots/deck-list.png" alt="Un groupe de personnes dans Mémento" width="30%" />
+  <img src="docs/screenshots/deck-list.png" alt="L’arbre de progression dans Réviz’" width="30%" />
   &nbsp;
-  <img src="docs/screenshots/study.png" alt="Une session de mémorisation dans Mémento" width="30%" />
+  <img src="docs/screenshots/study.png" alt="Une session de révision dans Réviz’" width="30%" />
 </p>
-
-## À qui s’adresse Mémento ?
-
-- aux personnes qui rejoignent une nouvelle équipe ;
-- aux enseignants et élèves d’une classe ;
-- aux membres d’une association ou d’un club ;
-- à toutes celles et ceux qui reconnaissent un visage… mais oublient le prénom.
 
 ## Comment ça marche ?
 
-1. **Créez un groupe**, par exemple « Équipe produit » ou « Club de théâtre ».
-2. **Ajoutez les personnes** une par une, ou importez-les depuis un fichier CSV ou ZIP.
-3. **Lancez une courte session** et essayez de retrouver chaque prénom à partir de la photo.
-4. **Choisissez quand revoir la personne** selon votre niveau de certitude.
+1. **Choisis un paquet** dans l’arbre de progression (par matière et par niveau), ou lance une session mixte.
+2. **Réponds aux cartes du jour** : formule ta réponse, retourne la carte, compare.
+3. **Évalue-toi** : la carte revient immédiatement, demain ou plus tard selon ton niveau de certitude.
+4. **Reviens chaque jour** : les cartes se présentent au moment où tu risques de les oublier.
 
-Mémento espace automatiquement les révisions. Vous pouvez adapter leur rythme et limiter le nombre de nouvelles personnes découvertes chaque jour.
+## Ce que tu peux faire
 
-## Ce que vous pouvez faire
+- réviser par matière et par niveau (6e à Terminale) grâce à l’arbre de progression ;
+- lancer une session sur un paquet ou sur plusieurs paquets à la fois ;
+- lire les formules mathématiques en LaTeX, rendues avec KaTeX ;
+- créer, modifier et supprimer tes propres cartes ;
+- suivre ta progression globale et masquer les paquets déjà maîtrisés ;
+- synchroniser les paquets depuis le dépôt GitHub, ou réviser hors ligne ;
+- régler les délais de révision et le nombre de cartes par session.
 
-- mémoriser un prénom à partir d’une photo ;
-- ajouter un nom et un contexte pour mieux situer la personne ;
-- organiser vos contacts en plusieurs groupes ;
-- rechercher et modifier facilement une fiche ;
-- importer ou mettre à jour de nombreuses personnes en une fois ;
-- personnaliser les délais de révision ;
-- continuer à utiliser l’application sans compte et sans connexion.
+## Les paquets
 
-## Vos données restent sur votre appareil
+Les paquets sont des fichiers JSON versionnés dans le dossier [`decks/`](./decks), organisés par matière (`maths`, `anglais`, `francais`, `histoire`). L’application les télécharge depuis le dépôt GitHub : pas besoin de compte, ni de serveur dédié. Les scripts Python du dossier [`scripts/`](./scripts) permettent de générer et de valider les paquets.
 
-Les photos, les groupes et la progression sont enregistrés localement. Mémento ne nécessite pas de compte et n’envoie pas votre carnet de personnes vers un service distant.
+Pour contribuer un paquet, ajoute un fichier JSON au bon endroit, valide-le avec le script adapté, puis ouvre une pull request.
 
-Pensez à conserver votre fichier d’import d’origine : la version actuelle ne propose pas encore de sauvegarde synchronisée entre plusieurs appareils.
+## Tes données restent sur ton appareil
+
+Ta progression est enregistrée localement (SQLite). Réviz’ ne nécessite pas de compte et n’envoie aucune donnée personnelle vers un service distant : seule la synchronisation des paquets interroge GitHub, en lecture seule.
 
 ## Installation
 
 ### Android
 
-Téléchargez la dernière version depuis la page des [versions de Mémento](https://github.com/hamon-e/flashcard/releases/latest), puis ouvrez le fichier APK sur votre téléphone.
+Télécharge la dernière version depuis la page des [versions de Réviz’](https://github.com/bhamon-lab/flashcard/releases/latest), puis ouvre le fichier APK sur ton téléphone.
 
-Android peut demander l’autorisation d’installer une application provenant de votre navigateur ou de votre gestionnaire de fichiers.
+Android peut demander l’autorisation d’installer une application provenant de ton navigateur ou de ton gestionnaire de fichiers.
 
 ### iPhone et développement
 
-Il n’existe pas encore de version distribuée sur l’App Store. Pour essayer Mémento depuis le code source, consultez la section destinée aux contributeurs ci-dessous.
-
-<details>
-<summary><strong>Importer plusieurs personnes avec un fichier</strong></summary>
-
-Mémento accepte les fichiers CSV séparés par des virgules ou des points-virgules. Seule la colonne `prenom` est obligatoire.
-
-```csv
-prenom,nom,photo,contexte,id_externe
-Alice,Martin,https://example.com/alice.jpg,Design,alice-001
-```
-
-La colonne `photo` peut contenir une adresse web publique. Vous pouvez aussi sélectionner une archive ZIP contenant le CSV et les portraits. La colonne `id_externe` permet de mettre à jour une personne lors d’un prochain import sans perdre sa progression.
-
-Les noms de colonnes anglais (`firstname`, `lastname`, `context`, `external_id`) sont également reconnus. Le fichier [`example.csv`](./example.csv) peut servir de modèle.
-
-</details>
+Il n’existe pas encore de version distribuée sur l’App Store. Pour essayer Réviz’ depuis le code source, consultez la section destinée aux contributeurs ci-dessous.
 
 <details>
 <summary><strong>Lancer le projet depuis le code source</strong></summary>
@@ -86,6 +65,17 @@ Scannez le QR code avec Expo Go, ou appuyez sur `i`, `a` ou `w` pour ouvrir resp
 
 </details>
 
+<details>
+<summary><strong>Publier une version Android</strong></summary>
+
+La CI construit automatiquement l’APK signé lorsqu’un tag `vX.Y.Z` est poussé :
+
+1. le tag déclenche le workflow `android-release.yml` ;
+2. ce workflow lance `publish-android-release.yml` sur la branche par défaut ;
+3. le workflow met à jour la version depuis le tag, construit l’APK signé (Gradle + keystore fourni par les secrets du dépôt) et publie une release GitHub avec l’APK.
+
+</details>
+
 ## Licence
 
-Mémento est distribué sous [licence MIT](./LICENSE).
+Réviz’ est distribué sous [licence MIT](./LICENSE).

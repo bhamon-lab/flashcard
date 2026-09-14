@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Mémento",
-    "slug": "flashcard",
+    "name": "Réviz’",
+    "slug": "reviz",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -10,7 +10,7 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.hamon.memento",
+      "package": "com.hamon.reviz",
       "adaptiveIcon": {
         "backgroundColor": "#DFE5FA",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -30,7 +30,7 @@
       [
         "expo-image-picker",
         {
-          "photosPermission": "Mémento utilise tes photos pour ajouter des schémas à tes cartes."
+          "photosPermission": "Réviz’ utilise tes photos pour ajouter des schémas à tes cartes."
         }
       ],
       "expo-font"

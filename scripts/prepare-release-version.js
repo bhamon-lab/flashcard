@@ -26,4 +26,4 @@ config.expo.android.versionCode = versionCode;
 
 fs.writeFileSync(configPath, `${JSON.stringify(config, null, 2)}\n`);
 
-console.log(`Préparation de Mémento ${config.expo.version} (Android versionCode ${versionCode}).`);
+console.log(`Préparation de Réviz’ ${config.expo.version} (Android versionCode ${versionCode}).`);
