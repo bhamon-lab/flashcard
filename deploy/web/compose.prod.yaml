@@ -1,0 +1,14 @@
+services:
+  web:
+    image: nginx:1.27-alpine
+    container_name: reviz-web
+    restart: unless-stopped
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./www:/usr/share/nginx/html:ro
+    networks:
+      - gdo_default
+
+networks:
+  gdo_default:
+    external: true
