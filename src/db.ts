@@ -24,6 +24,9 @@ const startOfToday = () => {
 
 /** Début du « jour de révision » à 4 h du matin : une carte notée pour
  * le lendemain redevient due à 4 h, pas exactement 24 h plus tard. */
+/** Délai sentinel : la carte est acquise et ne revient jamais (next_due_at = NULL). */
+export const NEVER_DELAY_MINUTES = -1;
+
 const REVIEW_DAY_START_HOUR = 4;
 const MINUTES_PER_DAY = 1440;
 
@@ -83,13 +86,22 @@ export async function initializeDatabase() {
   const reviewDelayColumns = [
     ['again_delay_minutes', 0],
     ['soon_delay_minutes', 10],
-    ['later_delay_minutes', 60],
+    ['later_delay_minutes', NEVER_DELAY_MINUTES],
     ['tomorrow_delay_minutes', 1440],
   ] as const;
   for (const [name, defaultValue] of reviewDelayColumns) {
     if (!existingColumns.has(name)) {
       await db.execAsync(`ALTER TABLE decks ADD COLUMN ${name} INTEGER NOT NULL DEFAULT ${defaultValue}`);
     }
+  }
+
+  const neverMigration = await db.getFirstAsync<{ value: string }>(
+    "SELECT value FROM app_metadata WHERE key = 'never-delay-migrated'",
+  );
+  if (!neverMigration) {
+    // L'ancien intervalle « 1 h » devient « Jamais » : carte acquise, plus jamais due.
+    await db.runAsync('UPDATE decks SET later_delay_minutes = ?', NEVER_DELAY_MINUTES);
+    await db.runAsync("INSERT INTO app_metadata (key, value) VALUES ('never-delay-migrated', '1')");
   }
   if (!existingColumns.has('kind')) {
     await db.execAsync("ALTER TABLE decks ADD COLUMN kind TEXT NOT NULL DEFAULT 'people'");
@@ -201,7 +213,7 @@ export async function updateDailyLimit(deckId: number, limit: number) {
 
 export async function updateReviewDelays(deckId: number, delays: ReviewDelays) {
   const db = await getDatabase();
-  const normalise = (value: number) => Math.max(0, Math.round(value));
+  const normalise = (value: number) => (value < 0 ? NEVER_DELAY_MINUTES : Math.max(0, Math.round(value)));
   await db.runAsync(
     `UPDATE decks
      SET again_delay_minutes = ?, soon_delay_minutes = ?, later_delay_minutes = ?, tomorrow_delay_minutes = ?
@@ -273,10 +285,16 @@ export async function getNewCards(deckIds: number[], limit: number, excludedIds:
 export async function recordReview(cardId: number, delayMinutes: number) {
   const db = await getDatabase();
   const now = Date.now();
-  const days = delayMinutes >= MINUTES_PER_DAY ? Math.round(delayMinutes / MINUTES_PER_DAY) : 0;
-  const nextDue = days
-    ? startOfReviewDay(now) + days * 86_400_000
-    : now + delayMinutes * 60_000;
+  let nextDue: number | null;
+  if (delayMinutes < 0) {
+    // « Jamais » : carte acquise, elle ne réapparaît plus dans les révisions.
+    nextDue = null;
+  } else {
+    const days = delayMinutes >= MINUTES_PER_DAY ? Math.round(delayMinutes / MINUTES_PER_DAY) : 0;
+    nextDue = days
+      ? startOfReviewDay(now) + days * 86_400_000
+      : now + delayMinutes * 60_000;
+  }
   await db.withTransactionAsync(async () => {
     await db.runAsync(
       `UPDATE progress SET first_seen_at = COALESCE(first_seen_at, ?), next_due_at = ? WHERE card_id = ?`,
@@ -344,7 +362,7 @@ export type StatsSnapshot = {
   cardsSeenToday: number;
   /** Cartes ouvertes pour la première fois aujourd'hui. */
   newSeenToday: number;
-  /** Nouvelles cartes du jour dont la dernière réponse est « Plus tard » ou « Demain ». */
+  /** Nouvelles cartes du jour dont la dernière réponse est « Demain » ou « Jamais ». */
   learnedToday: number;
   reviewsToday: number;
   breakdownToday: Record<ReviewBucket, number>;
@@ -368,10 +386,10 @@ export async function getStatsSnapshot(): Promise<StatsSnapshot> {
     db.getFirstAsync<{ cards_seen: number; reviews: number; again: number; soon: number; later: number; tomorrow: number }>(
       `SELECT COUNT(DISTINCT r.card_id) AS cards_seen,
         COUNT(*) AS reviews,
-        COALESCE(SUM(CASE WHEN r.delay_minutes <= d.again_delay_minutes THEN 1 ELSE 0 END), 0) AS again,
+        COALESCE(SUM(CASE WHEN r.delay_minutes >= 0 AND r.delay_minutes <= d.again_delay_minutes THEN 1 ELSE 0 END), 0) AS again,
         COALESCE(SUM(CASE WHEN r.delay_minutes > d.again_delay_minutes AND r.delay_minutes <= d.soon_delay_minutes THEN 1 ELSE 0 END), 0) AS soon,
-        COALESCE(SUM(CASE WHEN r.delay_minutes > d.soon_delay_minutes AND r.delay_minutes <= d.later_delay_minutes THEN 1 ELSE 0 END), 0) AS later,
-        COALESCE(SUM(CASE WHEN r.delay_minutes > d.later_delay_minutes THEN 1 ELSE 0 END), 0) AS tomorrow
+        COALESCE(SUM(CASE WHEN r.delay_minutes < 0 OR (r.delay_minutes > d.soon_delay_minutes AND r.delay_minutes <= d.later_delay_minutes) THEN 1 ELSE 0 END), 0) AS later,
+        COALESCE(SUM(CASE WHEN r.delay_minutes >= 0 AND r.delay_minutes > d.later_delay_minutes THEN 1 ELSE 0 END), 0) AS tomorrow
       FROM reviews r
       JOIN cards c ON c.id = r.card_id
       JOIN decks d ON d.id = c.deck_id
@@ -389,7 +407,7 @@ export async function getStatsSnapshot(): Promise<StatsSnapshot> {
         WHERE r.reviewed_at >= ?
           AND r.card_id IN (SELECT card_id FROM progress WHERE first_seen_at >= ?)
         GROUP BY r.card_id
-      ) WHERE delay_minutes > soon_delay`,
+      ) WHERE delay_minutes > soon_delay OR delay_minutes < 0`,
       todayStart, todayStart,
     ),
     db.getFirstAsync<{ count: number }>(
