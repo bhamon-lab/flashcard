@@ -1,7 +1,7 @@
 # Decks
 
 Ce dossier stocke les paquets de cartes synchronisés par l'application.
-Chaque **sous-dossier est une matière** (ex. `maths/`, `francais/`, `histoire/`)
+Chaque **sous-dossier est une matière** (ex. `maths/`, `anglais/`, `histoire/`)
 affichée sur l'écran d'accueil. Chaque fichier `.json` du sous-dossier devient
 un paquet de cette matière, synchronisé à l'ouverture de l'app (ou en tirant la
 liste vers le bas).
@@ -12,10 +12,8 @@ decks/
     6e-nombres.json … 3e-trigonometrie.json   (catalogue collège)
   anglais/
     6e-vocab-salutations.json … term-grammaire-emphase-synthese.json
-  francais/
-    orthographe.json
   histoire/
-    dates-xxe-siecle.json
+    dates-6e.json … dates-terminale.json
 ```
 
 Les fichiers `.json` posés directement à la racine de `decks/` restent acceptés
@@ -71,6 +69,13 @@ Consulter l'[arbre de progression en anglais](../docs/progression-anglais.md)
 pour les parcours conseillés, les prérequis et les principes de conception.
 Vérifier avec `python3 scripts/validate_english_decks.py`.
 
+## Histoire du collège au lycée
+
+Le catalogue initial contient **6 decks et 135 cartes**, de la 6e à la terminale
+(hors 3e pour le moment). Il est volontairement limité aux repères chronologiques
+essentiels des thèmes d'histoire en vigueur en 2026-2027. La progression et les
+sources officielles sont décrites dans [`curriculum/histoire.json`](../curriculum/histoire.json).
+
 ## Format
 
 ```json
@@ -95,8 +100,7 @@ Vérifier avec `python3 scripts/validate_english_decks.py`.
 ## Matières
 
 - Le nom du dossier donne la matière (`maths` → « Maths ») ; le champ
-  `subject` du JSON permet de préciser le nom affiché (ex. `francais/` →
-  « Français » avec l'accent).
+  `subject` du JSON permet de préciser le nom affiché.
 - Créer un nouveau dossier = créer une nouvelle matière dans l'app.
 - Dans l'app, chaque matière peut être masquée ou affichée depuis l'accueil
   (bouton en haut à droite de la section « Mes matières »).
