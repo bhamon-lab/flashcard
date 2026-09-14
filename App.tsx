@@ -50,6 +50,7 @@ import { MathView, stripMathText } from './src/MathView';
 import { syncDecks } from './src/sync';
 import { buildProgression, getGradeStops, type GradeStop, type ProgressionBranch } from './src/progression';
 import { checkForAppUpdate } from './src/app-update';
+import { WebInstallBanner } from './src/WebInstallBanner';
 import { Card, Deck, ReviewDelay, ReviewDelays } from './src/types';
 import { insertLaterInQueue } from './src/sessionQueue';
 import type { StatsSnapshot } from './src/db';
@@ -269,6 +270,8 @@ function HomeScreen({ onOpenSubject, onOpenStats }: { onOpenSubject: (subject: s
             <View style={styles.avatar}><Ionicons name="school" size={20} color={colors.blue} /></View>
           </View>
         </View>
+
+        <WebInstallBanner />
 
         <View style={styles.sectionHeader}>
           <View>

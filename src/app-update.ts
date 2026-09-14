@@ -1,12 +1,14 @@
 import Constants from 'expo-constants';
-import { Alert, Linking } from 'react-native';
+import { Alert, Linking, Platform } from 'react-native';
 
-const LATEST_RELEASE_URL = 'https://api.github.com/repos/hamon-e/flashcard/releases/latest';
+const LATEST_RELEASE_URL = 'https://api.github.com/repos/bhamon-lab/flashcard/releases/latest';
+const RELEASES_PAGE_URL = 'https://github.com/bhamon-lab/flashcard/releases';
 
 type GitHubRelease = {
   html_url: string;
   name: string | null;
   tag_name: string;
+  assets?: Array<{ name: string; browser_download_url: string }>;
 };
 
 type ParsedVersion = {
@@ -83,19 +85,36 @@ async function getLatestRelease(): Promise<GitHubRelease | null> {
       return null;
     }
 
+    const assets = Array.isArray(candidate.assets)
+      ? candidate.assets.flatMap((asset) => {
+          if (!asset || typeof asset !== 'object') return [];
+          const entry = asset as Record<string, unknown>;
+          if (typeof entry.name !== 'string' || typeof entry.browser_download_url !== 'string') return [];
+          return [{ name: entry.name, browser_download_url: entry.browser_download_url }];
+        })
+      : undefined;
+
     return {
       tag_name: candidate.tag_name,
       html_url: candidate.html_url,
       name: candidate.name,
+      assets,
     };
   } catch {
     return null;
   }
 }
 
-/** Vérifie la dernière release GitHub et propose sa page si elle est plus récente. */
+/** Version installée sur mobile ; indéfinie sur web où la PWA est toujours à jour. */
+function getInstalledVersion() {
+  if (Platform.OS === 'web') return undefined;
+  return Constants.expoConfig?.version;
+}
+
+/** Vérifie la dernière release GitHub et propose sa page si elle est plus récente (apps natives). */
 export async function checkForAppUpdate() {
-  const currentVersion = Constants.expoConfig?.version;
+  if (Platform.OS === 'web') return;
+  const currentVersion = getInstalledVersion();
   if (!currentVersion) return;
 
   const release = await getLatestRelease();
@@ -110,4 +129,38 @@ export async function checkForAppUpdate() {
       { text: 'Voir la mise à jour', onPress: () => void Linking.openURL(release.html_url) },
     ],
   );
+}
+
+export type WebInstallTarget = 'android-apk' | 'ios-pwa';
+
+/**
+ * Plateforme d'installation proposée aux visiteurs de la PWA :
+ * Android reçoit l'APK de la release GitHub, iPhone le guide d'installation PWA.
+ * Retourne null hors mobile, ou quand la PWA tourne déjà en mode installé.
+ */
+export function detectWebInstallTarget(): WebInstallTarget | null {
+  if (Platform.OS !== 'web') return null;
+  if (typeof navigator === 'undefined') return null;
+
+  const standalone =
+    window.matchMedia?.('(display-mode: standalone)').matches ||
+    window.matchMedia?.('(display-mode: fullscreen)').matches ||
+    (navigator as { standalone?: boolean }).standalone === true;
+  if (standalone) return null;
+
+  const userAgent = navigator.userAgent ?? '';
+  const isAndroid = /android/i.test(userAgent);
+  const isIOS = /ipad|iphone|ipod/i.test(userAgent) || (userAgent.includes('Macintosh') && 'ontouchend' in document);
+  if (isAndroid) return 'android-apk';
+  if (isIOS) return 'ios-pwa';
+  return null;
+}
+
+/** URL de téléchargement directe de l'APK de la dernière release, sinon la page des releases. */
+export async function getLatestApkDownloadUrl(): Promise<string | null> {
+  const release = await getLatestRelease();
+  if (!release) return RELEASES_PAGE_URL;
+
+  const apk = release.assets?.find((asset) => asset.name.toLowerCase().endsWith('.apk'));
+  return apk?.browser_download_url ?? release.html_url;
 }
