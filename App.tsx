@@ -28,6 +28,7 @@ import {
   getDeck,
   getDecks,
   getDecksByIds,
+  getCurriculumOverrides,
   getHideLearnedPref,
   getNewCards,
   getProgressionExpands,
@@ -48,9 +49,9 @@ import {
 } from './src/db';
 import { colors, mono, radius } from './src/theme';
 import { MathView, stripMathText } from './src/MathView';
-import { syncDecks } from './src/sync';
+import { syncDecks, syncCurriculums } from './src/sync';
 import { speakAudioText, stopSpeaking } from './src/tts';
-import { buildProgression, getGradeStops, type GradeStop, type ProgressionBranch } from './src/progression';
+import { buildProgression, getGradeStops, mergeCurriculums, type CurriculumData, type GradeStop, type ProgressionBranch } from './src/progression';
 import { checkForAppUpdate } from './src/app-update';
 import { WebInstallBanner } from './src/WebInstallBanner';
 import { Card, Deck, ReviewDelay, ReviewDelays } from './src/types';
@@ -214,13 +215,18 @@ function HomeScreen({ onOpenSubject, onOpenStats }: { onOpenSubject: (subject: s
   const runSync = useCallback(async (announce: boolean) => {
     setSyncing(true);
     try {
-      const result = await syncDecks();
+      // La sync des curricula est indépendante : un échec n'annule pas celle des paquets.
+      const [result, curriculumResult] = await Promise.all([
+        syncDecks(),
+        syncCurriculums().catch(() => null),
+      ]);
       if (announce) {
         const parts: string[] = [];
         if (result.created) parts.push(`${result.created} nouveau${result.created > 1 ? 'x' : ''} paquet${result.created > 1 ? 's' : ''}`);
         if (result.updated) parts.push(`${result.updated} mis${result.updated > 1 ? 's' : ''} à jour`);
         if (result.removed) parts.push(`${result.removed} supprimé${result.removed > 1 ? 's' : ''}`);
-        setSyncNote(parts.length ? `Synchronisé · ${parts.join(', ')}` : 'Paquets déjà à jour');
+        if (curriculumResult?.updated) parts.push(`${curriculumResult.updated} programme${curriculumResult.updated > 1 ? 's' : ''} mis${curriculumResult.updated > 1 ? 's' : ''} à jour`);
+        setSyncNote(parts.length ? `Synchronisé · ${parts.join(', ')}` : 'Déjà à jour');
       }
     } catch {
       if (announce) setSyncNote('Synchronisation impossible (hors ligne ?)');
@@ -638,13 +644,17 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate, onSetti
     });
   }, []);
   useEffect(() => { void getDecks().then(setDecks); }, []);
+  // Curricula téléchargés du dépôt (comme les paquets) ; repli sur les embarqués tant que rien n'est chargé.
+  const [curriculumOverrides, setCurriculumOverrides] = useState<CurriculumData[]>([]);
+  useEffect(() => { void getCurriculumOverrides().then(setCurriculumOverrides); }, []);
   const group = groupBySubject(decks).find((entry) => entry.name.toLowerCase() === subject.toLowerCase())
     ?? { name: subject, decks: [] as Deck[] };
 
   // L'arbre de progression existe pour les matières référencées dans curriculum/ (un JSON par matière).
+  const curriculums = useMemo(() => mergeCurriculums(curriculumOverrides), [curriculumOverrides]);
   const progression = useMemo(
-    () => buildProgression(group.name, group.decks),
-    [group.name, group.decks],
+    () => buildProgression(group.name, group.decks, curriculums),
+    [group.name, group.decks, curriculums],
   );
 
   // Hors curriculum : une branche unique liste tous les paquets de la matière.
@@ -657,7 +667,7 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate, onSetti
   );
 
   // Étapes ordonnées du curseur de niveaux (6e → terminale) pour les matières avec curriculum.
-  const stops = useMemo(() => getGradeStops(group.name), [group.name]);
+  const stops = useMemo(() => getGradeStops(group.name, curriculums), [group.name, curriculums]);
   const lastStop = Math.max(stops.length - 1, 0);
   const rangeMax = Math.min(maxLevel, lastStop);
   const rangeMin = Math.min(minLevel, rangeMax);

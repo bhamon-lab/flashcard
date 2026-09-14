@@ -1,19 +1,24 @@
 import Constants from 'expo-constants';
 import {
+  getCurriculumMap,
   getMetadata,
   getSyncedSubjects,
   removeDecksNotIn,
+  saveCurriculumOverrides,
   setMetadata,
   upsertSyncedDeck,
   type SyncedDeck,
 } from './db';
+import { asCurriculum } from './progression';
 
 const DEFAULT_REPO = 'bhamon-lab/flashcard';
 const DECKS_PATH = 'decks';
+const CURRICULUM_PATH = 'curriculum';
 const LAST_SYNC_KEY = 'decks-last-sync';
 // Clé versionnée : le passage à v2 (champs audio de compréhension orale) force
 // un re-téléchargement complet une seule fois, y compris des fichiers inchangés.
 const FILE_STATE_KEY = 'decks-file-state-v2';
+const CURRICULUM_STATE_KEY = 'curriculum-file-state';
 const BUNDLE_NAME = '_bundle.json';
 const BUNDLE_THRESHOLD = 20;
 
@@ -334,7 +339,86 @@ export async function syncDecks(): Promise<SyncResult> {
   return result;
 }
 
+export type CurriculumSyncResult = {
+  updated: number;
+  removed: number;
+  errors: string[];
+};
+
+async function readCurriculumState(): Promise<FileStateMap> {
+  const raw = await getMetadata(CURRICULUM_STATE_KEY);
+  if (!raw) return {};
+  try {
+    return JSON.parse(raw) as FileStateMap;
+  } catch {
+    return {};
+  }
+}
+
+/**
+ * Synchronise les curricula du dossier `curriculum/` du dépôt vers la base
+ * locale, avec la même logique que les decks : seuls les fichiers nouveaux ou
+ * modifiés (SHA git) sont téléchargés, un fichier illisible ou invalide
+ * conserve sa version précédente, et un fichier disparu du dépôt est retiré
+ * (repli sur le curriculum embarqué dans l'app).
+ */
+export async function syncCurriculums(): Promise<CurriculumSyncResult> {
+  const result: CurriculumSyncResult = { updated: 0, removed: 0, errors: [] };
+  const entries = await listGithubContents(CURRICULUM_PATH);
+  const previousState = await readCurriculumState();
+  const nextState: FileStateMap = {};
+  const overrides = await getCurriculumMap();
+  let changed = false;
+
+  for (const entry of entries) {
+    if (entry.type !== 'file' || !entry.name.toLowerCase().endsWith('.json')) continue;
+    const previous = previousState[entry.name];
+    if (previous && entry.sha && previous.sha === entry.sha) {
+      nextState[entry.name] = previous;
+      continue;
+    }
+    if (!entry.download_url) {
+      if (previous) nextState[entry.name] = previous;
+      result.errors.push(`${entry.name} : URL de téléchargement indisponible.`);
+      continue;
+    }
+    try {
+      const response = await fetch(entry.download_url);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const curriculum = asCurriculum(await response.json());
+      if (!curriculum) {
+        if (previous) nextState[entry.name] = previous;
+        result.errors.push(`${entry.name} : format de curriculum invalide.`);
+        continue;
+      }
+      overrides[entry.name] = curriculum;
+      nextState[entry.name] = { sha: entry.sha ?? '', deckId: curriculum.subject };
+      changed = true;
+      result.updated += 1;
+    } catch (error) {
+      if (previous) nextState[entry.name] = previous;
+      result.errors.push(`${entry.name} : ${error instanceof Error ? error.message : 'illisible'}`);
+    }
+  }
+
+  // Fichiers disparus du dépôt → on retire leur override (repli embarqué).
+  for (const fileName of Object.keys(overrides)) {
+    if (!nextState[fileName]) {
+      delete overrides[fileName];
+      changed = true;
+      result.removed += 1;
+    }
+  }
+
+  if (changed) {
+    await saveCurriculumOverrides(overrides);
+    await setMetadata(CURRICULUM_STATE_KEY, JSON.stringify(nextState));
+  }
+  return result;
+}
+
 if (__DEV__) {
   // Pratique pour tester la synchronisation depuis la console web.
   (globalThis as { __syncDecks?: typeof syncDecks }).__syncDecks = syncDecks;
+  (globalThis as { __syncCurriculums?: typeof syncCurriculums }).__syncCurriculums = syncCurriculums;
 }
