@@ -15,6 +15,7 @@ const LAST_SYNC_KEY = 'decks-last-sync';
 // un re-téléchargement complet une seule fois, y compris des fichiers inchangés.
 const FILE_STATE_KEY = 'decks-file-state-v2';
 const BUNDLE_NAME = '_bundle.json';
+const BUNDLE_THRESHOLD = 20;
 
 export type SyncResult = {
   created: number;
@@ -133,6 +134,22 @@ function carryState(previousState: FileStateMap, nextState: FileStateMap, prefix
 }
 
 /**
+ * Nombre de fichiers d'une matière à télécharger (nouveaux ou modifiés, mêmes
+ * critères que syncFileEntry). Sert à décider si le bundle compact vaut le
+ * coup face aux requêtes fichier à fichier.
+ */
+function countPendingFiles(files: GitHubContent[], previousState: FileStateMap, keyPrefix: string): number {
+  let count = 0;
+  for (const file of files) {
+    if (file.type !== 'file' || !file.name.toLowerCase().endsWith('.json')) continue;
+    if (file.name === BUNDLE_NAME || file.name.startsWith('_')) continue;
+    const previous = previousState[keyPrefix + file.name];
+    if (!previous || !file.sha || previous.sha !== file.sha) count += 1;
+  }
+  return count;
+}
+
+/**
  * Télécharge le bundle compact d'une matière (généré par le git hook, un seul
  * fichier pour toute la matière). Renvoie null si le bundle est absent :
  * l'appelant se replie alors sur le listing fichier à fichier.
@@ -218,7 +235,8 @@ async function syncFileEntry(
  * - matière absente localement → télécharge le bundle compact `_bundle.json`
  *   généré par le git hook (une seule requête pour toute la matière) ;
  * - matière déjà présente → compare les SHA des fichiers et ne télécharge que
- *   les decks nouveaux ou modifiés.
+ *   les decks nouveaux ou modifiés ; si plus de 20 fichiers à télécharger,
+ *   re-télécharge le bundle (une seule requête raw, hors quota API GitHub).
  * Chaque sous-dossier (ex. `decks/maths/`) devient une matière, les fichiers
  * JSON à la racine restent acceptés (matière « Divers »).
  */
@@ -249,8 +267,28 @@ export async function syncDecks(): Promise<SyncResult> {
           continue;
         }
         // Pas de bundle (dépôt pas encore à jour) : repli fichier à fichier.
+        const subjectFiles = await listGithubContents(entry.path);
+        for (const file of subjectFiles) {
+          await syncFileEntry(file, prefix + file.name, subject, previousState, nextState, decks, errors);
+        }
+        continue;
       }
       const subjectFiles = await listGithubContents(entry.path);
+      // Trop de fichiers à télécharger → une seule requête raw via le bundle,
+      // pour éviter le rate limit de l'API GitHub.
+      if (countPendingFiles(subjectFiles, previousState, prefix) > BUNDLE_THRESHOLD) {
+        const bundleStates = await fetchBundleStates(
+          `${rawBase}/${entry.name}/${BUNDLE_NAME}`,
+          subject,
+          entry.name,
+          decks,
+          errors,
+        );
+        if (bundleStates) {
+          Object.assign(nextState, bundleStates);
+          continue;
+        }
+      }
       for (const file of subjectFiles) {
         await syncFileEntry(file, prefix + file.name, subject, previousState, nextState, decks, errors);
       }
@@ -262,13 +300,21 @@ export async function syncDecks(): Promise<SyncResult> {
 
   // Ancienne organisation à plat : paquets sans dossier de matière (« Divers »).
   const rootBundle = entries.find((entry) => entry.type === 'file' && entry.name === BUNDLE_NAME);
-  if (rootBundle?.download_url && !localSubjects.has('Divers')) {
+  const rootFiles = entries.filter((entry) => entry.type === 'file');
+  const diversLocal = localSubjects.has('Divers');
+  const rootPending = diversLocal ? countPendingFiles(rootFiles, previousState, '') : rootFiles.length;
+  let rootFromBundle = false;
+  if (rootBundle?.download_url && rootPending > BUNDLE_THRESHOLD) {
     const bundleStates = await fetchBundleStates(rootBundle.download_url, 'Divers', BUNDLE_NAME, decks, errors);
-    if (bundleStates) Object.assign(nextState, bundleStates);
+    if (bundleStates) {
+      Object.assign(nextState, bundleStates);
+      rootFromBundle = true;
+    }
   }
-  for (const entry of entries) {
-    if (entry.type !== 'file') continue;
-    await syncFileEntry(entry, entry.name, 'Divers', previousState, nextState, decks, errors);
+  if (!rootFromBundle) {
+    for (const entry of rootFiles) {
+      await syncFileEntry(entry, entry.name, 'Divers', previousState, nextState, decks, errors);
+    }
   }
 
   const result: SyncResult = { created: 0, updated: 0, removed: 0, total: decks.length, errors };
