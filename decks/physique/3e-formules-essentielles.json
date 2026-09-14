@@ -1,0 +1,44 @@
+{
+  "id": "physique-3e-formules-essentielles",
+  "subject": "Physique",
+  "title": "Physique · 3e · Formules essentielles",
+  "description": "3e · 2026-2027 · Forces, énergie cinétique et signaux.",
+  "format": "math",
+  "color": "#C8E6DF",
+  "daily_new_limit": 2,
+  "grade": "3e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "cycle4-physique-2020",
+  "cards": [
+    {
+      "id": "poids",
+      "kind": "formule",
+      "front": "Valeur du poids $P$ d’un objet de masse $m$ ?",
+      "back": "$P=mg$."
+    },
+    {
+      "id": "gravitation",
+      "kind": "formule",
+      "front": "Valeur de la force gravitationnelle entre deux masses $m_A$ et $m_B$ distantes de $d$ ?",
+      "back": "$F=G\\frac{m_A m_B}{d^2}$."
+    },
+    {
+      "id": "energie-cinetique",
+      "kind": "formule",
+      "front": "Énergie cinétique d’un objet de masse $m$ animé d’une vitesse $v$ ?",
+      "back": "$E_c=\\frac{1}{2}mv^2$."
+    },
+    {
+      "id": "frequence-periode",
+      "kind": "formule",
+      "front": "Relation entre fréquence $f$ et période $T$ ?",
+      "back": "$f=\\frac{1}{T}$."
+    },
+    {
+      "id": "periode-frequence",
+      "kind": "formule",
+      "front": "Période $T$ d’un signal de fréquence $f$ ?",
+      "back": "$T=\\frac{1}{f}$."
+    }
+  ]
+}

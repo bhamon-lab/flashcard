@@ -1,0 +1,128 @@
+{
+  "id": "physique-2de-formules-essentielles",
+  "subject": "Physique",
+  "title": "Physique · 2de · Formules essentielles",
+  "description": "2de générale et technologique · 2026-2027 · Uniquement les relations de physique à mémoriser.",
+  "format": "math",
+  "color": "#CDEAE0",
+  "daily_new_limit": 3,
+  "grade": "2de",
+  "school_year": "2026-2027",
+  "curriculum_reference": "seconde-physique-2019",
+  "cards": [
+    {
+      "id": "moyenne-mesures",
+      "kind": "formule",
+      "front": "Moyenne de $n$ mesures $x_1,\\ldots,x_n$ ?",
+      "back": "$\\overline{x}=\\frac{x_1+\\cdots+x_n}{n}$."
+    },
+    {
+      "id": "masse-volumique",
+      "kind": "formule",
+      "front": "Relation entre masse volumique $\\rho$, masse $m$ et volume $V$ ?",
+      "back": "$\\rho=\\frac{m}{V}$."
+    },
+    {
+      "id": "principe-inertie",
+      "kind": "formule",
+      "front": "Principe d’inertie dans un référentiel galiléen ?",
+      "back": "$\\sum\\vec F_{\\text{ext}}=\\vec 0\\iff\\vec v$ est constante."
+    },
+    {
+      "id": "loi-noeuds",
+      "kind": "formule",
+      "front": "Loi des nœuds sous sa forme générale ?",
+      "back": "$\\sum I_{\\text{entrantes}}=\\sum I_{\\text{sortantes}}$."
+    },
+    {
+      "id": "loi-mailles",
+      "kind": "formule",
+      "front": "Loi des mailles avec les tensions orientées ?",
+      "back": "$\\sum_{\\text{maille}}U=0$."
+    },
+    {
+      "id": "loi-ohm",
+      "kind": "formule",
+      "front": "Loi d’Ohm aux bornes d’un conducteur ohmique ?",
+      "back": "$U=RI$."
+    },
+    {
+      "id": "energie-changement-etat",
+      "kind": "formule",
+      "front": "Énergie transférée lors du changement d’état d’une masse $m$ ?",
+      "back": "$Q=mL$."
+    },
+    {
+      "id": "vitesse-moyenne",
+      "kind": "formule",
+      "front": "Vitesse moyenne sur une distance $d$ parcourue pendant $\\Delta t$ ?",
+      "back": "$v_{\\text{moy}}=\\frac{d}{\\Delta t}$."
+    },
+    {
+      "id": "vecteur-vitesse",
+      "kind": "formule",
+      "front": "Vecteur vitesse moyenne entre deux positions $M_1$ et $M_2$ ?",
+      "back": "$\\vec v_{\\text{moy}}=\\frac{\\overrightarrow{M_1M_2}}{t_2-t_1}$."
+    },
+    {
+      "id": "variation-vitesse",
+      "kind": "formule",
+      "front": "Variation du vecteur vitesse entre deux instants ?",
+      "back": "$\\Delta\\vec v=\\vec v_2-\\vec v_1$."
+    },
+    {
+      "id": "gravitation",
+      "kind": "formule",
+      "front": "Valeur de la force gravitationnelle entre deux masses $m_A$ et $m_B$ distantes de $d$ ?",
+      "back": "$F=G\\frac{m_A m_B}{d^2}$."
+    },
+    {
+      "id": "poids",
+      "kind": "formule",
+      "front": "Relation vectorielle entre le poids et le champ de pesanteur ?",
+      "back": "$\\vec P=m\\vec g$."
+    },
+    {
+      "id": "actions-reciproques",
+      "kind": "formule",
+      "front": "Principe des actions réciproques entre deux systèmes $A$ et $B$ ?",
+      "back": "$\\vec F_{A/B}=-\\vec F_{B/A}$."
+    },
+    {
+      "id": "snell-descartes",
+      "kind": "formule",
+      "front": "Loi de Snell-Descartes pour la réfraction ?",
+      "back": "$n_1\\sin i_1=n_2\\sin i_2$."
+    },
+    {
+      "id": "indice-refraction",
+      "kind": "formule",
+      "front": "Indice de réfraction $n$ d’un milieu où la lumière se propage à la célérité $v$ ?",
+      "back": "$n=\\frac{c}{v}$."
+    },
+    {
+      "id": "grandissement",
+      "kind": "formule",
+      "front": "Grandissement $\\gamma$ d’une lentille mince ?",
+      "back": "$\\gamma=\\frac{A'B'}{AB}=\\frac{\\overline{OA'}}{\\overline{OA}}$."
+    },
+    {
+      "id": "reflexion",
+      "kind": "formule",
+      "front": "Loi de la réflexion entre angle d’incidence $i$ et angle de réflexion $r$ ?",
+      "back": "$i=r$."
+    },
+    {
+      "id": "periode-frequence",
+      "kind": "formule",
+      "front": "Relation entre période $T$ et fréquence $f$ ?",
+      "back": "$T=\\frac{1}{f}$."
+    },
+    {
+      "id": "celerite-lumiere",
+      "kind": "formule",
+      "front": "Valeur de la célérité de la lumière dans le vide ?",
+      "back": "$c=3{,}00\\times10^8\\ \\mathrm{m\\,s^{-1}}$."
+    }
+  ]
+}

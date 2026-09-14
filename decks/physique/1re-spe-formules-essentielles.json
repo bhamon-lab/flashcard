@@ -1,0 +1,164 @@
+{
+  "id": "physique-1re-spe-formules-essentielles",
+  "subject": "Physique",
+  "title": "Physique · 1re spécialité · Formules essentielles",
+  "description": "1re spécialité physique-chimie · 2026-2027 · Uniquement les relations de physique à mémoriser.",
+  "format": "math",
+  "color": "#BFE3DA",
+  "daily_new_limit": 3,
+  "grade": "1re-spe",
+  "school_year": "2026-2027",
+  "curriculum_reference": "premiere-spe-physique-2019",
+  "cards": [
+    {
+      "id": "charge-quantifiee",
+      "kind": "formule",
+      "front": "Charge électrique $q$ portée par un nombre entier $n$ de charges élémentaires ?",
+      "back": "$q=ne$."
+    },
+    {
+      "id": "coulomb",
+      "kind": "formule",
+      "front": "Valeur de la force électrostatique entre deux charges ponctuelles $q_A$ et $q_B$ distantes de $r$ ?",
+      "back": "$F=k\\frac{|q_Aq_B|}{r^2}$, avec $k=\\frac{1}{4\\pi\\varepsilon_0}$."
+    },
+    {
+      "id": "champ-electrique",
+      "kind": "formule",
+      "front": "Force subie par une charge $q$ placée dans un champ électrique $\\vec E$ ?",
+      "back": "$\\vec F=q\\vec E$."
+    },
+    {
+      "id": "champ-charge-ponctuelle",
+      "kind": "formule",
+      "front": "Valeur du champ électrique créé par une charge ponctuelle $Q$ à la distance $r$ ?",
+      "back": "$E=k\\frac{|Q|}{r^2}$."
+    },
+    {
+      "id": "gravitation",
+      "kind": "formule",
+      "front": "Valeur de la force gravitationnelle entre deux masses $m_A$ et $m_B$ distantes de $r$ ?",
+      "back": "$F=G\\frac{m_A m_B}{r^2}$."
+    },
+    {
+      "id": "champ-gravitationnel",
+      "kind": "formule",
+      "front": "Valeur du champ gravitationnel créé par une masse $M$ à la distance $r$ ?",
+      "back": "$g=G\\frac{M}{r^2}$."
+    },
+    {
+      "id": "mariotte",
+      "kind": "formule",
+      "front": "Loi de Mariotte à température et quantité de matière constantes ?",
+      "back": "$pV=\\text{constante}$, donc $p_1V_1=p_2V_2$."
+    },
+    {
+      "id": "force-pressante",
+      "kind": "formule",
+      "front": "Valeur de la force pressante sur une surface plane $S$ soumise à une pression $p$ ?",
+      "back": "$F=pS$."
+    },
+    {
+      "id": "statique-fluides",
+      "kind": "formule",
+      "front": "Loi fondamentale de la statique d’un fluide incompressible ?",
+      "back": "$p_2-p_1=\\rho g(z_1-z_2)$."
+    },
+    {
+      "id": "deuxieme-loi-approchee",
+      "kind": "formule",
+      "front": "Relation approchée entre forces et variation de vitesse sur une courte durée $\\Delta t$ ?",
+      "back": "$\\sum\\vec F_{\\text{ext}}\\simeq m\\frac{\\Delta\\vec v}{\\Delta t}$."
+    },
+    {
+      "id": "intensite-debit-charge",
+      "kind": "formule",
+      "front": "Intensité moyenne d’un courant transportant une charge $\\Delta Q$ pendant $\\Delta t$ ?",
+      "back": "$I=\\frac{\\Delta Q}{\\Delta t}$."
+    },
+    {
+      "id": "charge-courant",
+      "kind": "formule",
+      "front": "Charge transportée par un courant constant $I$ pendant $\\Delta t$ ?",
+      "back": "$\\Delta Q=I\\,\\Delta t$."
+    },
+    {
+      "id": "source-reelle",
+      "kind": "formule",
+      "front": "Caractéristique d’une source réelle de tension de force électromotrice $E$ et de résistance interne $r$ ?",
+      "back": "$U=E-rI$."
+    },
+    {
+      "id": "puissance-electrique",
+      "kind": "formule",
+      "front": "Puissance électrique reçue par un dipôle ?",
+      "back": "$P=UI$."
+    },
+    {
+      "id": "puissance-joule",
+      "kind": "formule",
+      "front": "Puissance dissipée par effet Joule dans un conducteur ohmique ?",
+      "back": "$P_J=RI^2=\\frac{U^2}{R}$."
+    },
+    {
+      "id": "rendement",
+      "kind": "formule",
+      "front": "Rendement énergétique d’un convertisseur ?",
+      "back": "$\\eta=\\frac{P_{\\text{utile}}}{P_{\\text{reçue}}}=\\frac{E_{\\text{utile}}}{E_{\\text{reçue}}}$."
+    },
+    {
+      "id": "energie-cinetique",
+      "kind": "formule",
+      "front": "Énergie cinétique d’un point matériel de masse $m$ et de vitesse $v$ ?",
+      "back": "$E_c=\\frac{1}{2}mv^2$."
+    },
+    {
+      "id": "travail-force-constante",
+      "kind": "formule",
+      "front": "Travail d’une force constante $\\vec F$ entre $A$ et $B$ ?",
+      "back": "$W_{A\\to B}(\\vec F)=\\vec F\\cdot\\overrightarrow{AB}=F\\,AB\\cos\\theta$."
+    },
+    {
+      "id": "theoreme-energie-cinetique",
+      "kind": "formule",
+      "front": "Théorème de l’énergie cinétique entre $A$ et $B$ ?",
+      "back": "$\\Delta E_c=E_{c,B}-E_{c,A}=\\sum W_{A\\to B}(\\vec F)$."
+    },
+    {
+      "id": "energie-potentielle-pesanteur",
+      "kind": "formule",
+      "front": "Énergie potentielle de pesanteur près de la surface terrestre, avec origine à $z=0$ ?",
+      "back": "$E_p=mgz$."
+    },
+    {
+      "id": "energie-mecanique",
+      "kind": "formule",
+      "front": "Énergie mécanique d’un système ?",
+      "back": "$E_m=E_c+E_p$."
+    },
+    {
+      "id": "retard-onde",
+      "kind": "formule",
+      "front": "Retard $\\tau$ d’une onde parcourant une distance $d$ à la célérité $v$ ?",
+      "back": "$\\tau=\\frac{d}{v}$."
+    },
+    {
+      "id": "longueur-onde",
+      "kind": "formule",
+      "front": "Relation entre longueur d’onde $\\lambda$, célérité $v$, période $T$ et fréquence $f$ ?",
+      "back": "$\\lambda=vT=\\frac{v}{f}$."
+    },
+    {
+      "id": "conjugaison-lentille",
+      "kind": "formule",
+      "front": "Relation de conjugaison d’une lentille mince convergente ?",
+      "back": "$\\frac{1}{\\overline{OA'}}-\\frac{1}{\\overline{OA}}=\\frac{1}{f'}$."
+    },
+    {
+      "id": "energie-photon",
+      "kind": "formule",
+      "front": "Énergie d’un photon de fréquence $\\nu$ et de longueur d’onde $\\lambda$ dans le vide ?",
+      "back": "$E=h\\nu=\\frac{hc}{\\lambda}$."
+    }
+  ]
+}

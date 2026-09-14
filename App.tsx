@@ -33,6 +33,7 @@ import {
   getProgressionExpands,
   getSessionCards,
   getStatsSnapshot,
+  getSubjectDelays,
   getSubjectPrefs,
   initializeDatabase,
   markCardSeen,
@@ -43,8 +44,8 @@ import {
   setProgressionExpands,
   setHideLearnedPref,
   setSubjectPrefs,
+  setSubjectDelays,
   updateDailyLimit,
-  updateReviewDelays,
 } from './src/db';
 import { colors, mono, radius } from './src/theme';
 import { MathView, stripMathText } from './src/MathView';
@@ -61,7 +62,7 @@ type Route =
   | { name: 'home' }
   | { name: 'subject'; subject: string }
   | { name: 'deck'; deckId: number }
-  | { name: 'settings'; deckId: number }
+  | { name: 'subject-settings'; subject: string }
   | { name: 'stats' }
   | { name: 'study'; deckIds: number[]; newCardAllowance: number; subject?: string };
 
@@ -610,12 +611,13 @@ function RangeSlider({ stops, minIndex, maxIndex, onChange }: {
   );
 }
 
-function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
+function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate, onSettings }: {
   subject: string;
   onBack: () => void;
   onOpenDeck: (deckId: number) => void;
   onStudy: (deckIds: number[], newCardAllowance: number) => void;
   onCreate: (subject: string) => void;
+  onSettings: () => void;
 }) {
   const [decks, setDecks] = useState<Deck[]>([]);
   // État du filtre « Masquer les terminés » : null tant que le choix sauvegardé n'est pas chargé.
@@ -723,7 +725,10 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
         <View style={styles.topBar}>
           <IconButton name="arrow-back" label="Retour" onPress={onBack} />
           <Text style={styles.topBarTitle} numberOfLines={1}>{group.name}</Text>
-          <IconButton name="add" label="Nouveau paquet" onPress={() => onCreate(group.name)} />
+          <View style={styles.topBarActions}>
+            <IconButton name="settings-outline" label="Timers de révision" onPress={onSettings} />
+            <IconButton name="add" label="Nouveau paquet" onPress={() => onCreate(group.name)} />
+          </View>
         </View>
 
         <View style={styles.deckHero}>
@@ -822,7 +827,7 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
   );
 }
 
-function DeckScreen({ deckId, onBack, onStudy, onSettings }: { deckId: number; onBack: (subject: string) => void; onStudy: (newCardAllowance: number, subject: string) => void; onSettings: () => void }) {
+function DeckScreen({ deckId, onBack, onStudy }: { deckId: number; onBack: (subject: string) => void; onStudy: (newCardAllowance: number, subject: string) => void }) {
   const [deck, setDeck] = useState<Deck | null>(null);
   const [cards, setCards] = useState<Card[]>([]);
   const [editorCard, setEditorCard] = useState<Card | null | undefined>(undefined);
@@ -856,7 +861,7 @@ function DeckScreen({ deckId, onBack, onStudy, onSettings }: { deckId: number; o
         <View style={styles.topBar}>
           <IconButton name="arrow-back" label="Retour" onPress={() => onBack(deck.subject)} />
           <Text style={styles.topBarTitle}>Paquet</Text>
-          <IconButton name="ellipsis-horizontal" label="Réglages du paquet" onPress={onSettings} />
+          <View style={{ width: 44 }} />
         </View>
 
         <View style={styles.deckHero}>
@@ -933,24 +938,13 @@ function DeckScreen({ deckId, onBack, onStudy, onSettings }: { deckId: number; o
   );
 }
 
-function DeckSettingsScreen({ deckId, onBack }: { deckId: number; onBack: () => void }) {
-  const [deck, setDeck] = useState<Deck | null>(null);
+function SubjectSettingsScreen({ subject, onBack }: { subject: string; onBack: () => void }) {
   const [delays, setDelays] = useState<ReviewDelays | null>(null);
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    getDeck(deckId).then((nextDeck) => {
-      setDeck(nextDeck);
-      if (nextDeck) {
-        setDelays({
-          again: Number(nextDeck.again_delay_minutes),
-          soon: Number(nextDeck.soon_delay_minutes),
-          later: Number(nextDeck.later_delay_minutes),
-          tomorrow: Number(nextDeck.tomorrow_delay_minutes),
-        });
-      }
-    });
-  }, [deckId]);
+    void getSubjectDelays(subject).then(setDelays);
+  }, [subject]);
 
   const updateDelay = (key: keyof ReviewDelays, value: string) => {
     const parsed = Number.parseInt(value.replace(/[^0-9]/g, ''), 10);
@@ -960,12 +954,12 @@ function DeckSettingsScreen({ deckId, onBack }: { deckId: number; onBack: () => 
   const save = async () => {
     if (!delays) return;
     setSaving(true);
-    await updateReviewDelays(deckId, delays);
+    await setSubjectDelays(subject, delays);
     setSaving(false);
     onBack();
   };
 
-  if (!deck || !delays) return <View style={styles.loading}><ActivityIndicator color={colors.blue} /></View>;
+  if (!delays) return <View style={styles.loading}><ActivityIndicator color={colors.blue} /></View>;
 
   const timerRows: Array<{ key: keyof ReviewDelays; title: string; note: string; icon: keyof typeof Ionicons.glyphMap; tint: string; fg: string }> = [
     { key: 'again', title: 'Immédiatement', note: 'La carte reste dans la session', icon: 'refresh', tint: colors.redSoft, fg: colors.red },
@@ -978,14 +972,14 @@ function DeckSettingsScreen({ deckId, onBack }: { deckId: number; onBack: () => 
     <SafeAreaView style={styles.screen} edges={['top', 'bottom']}>
       <ScrollView contentContainerStyle={styles.page} keyboardShouldPersistTaps="handled">
         <View style={styles.topBar}>
-          <IconButton name="arrow-back" label="Retour au paquet" onPress={onBack} />
+          <IconButton name="arrow-back" label="Retour à la matière" onPress={onBack} />
           <Text style={styles.topBarTitle}>Réglages</Text>
           <View style={{ width: 44 }} />
         </View>
         <View style={styles.settingsHero}>
           <View style={styles.settingsIcon}><Ionicons name="timer-outline" size={31} color={colors.blue} /></View>
           <Text style={styles.settingsTitle}>Timers de révision</Text>
-          <Text style={styles.settingsText}>Choisis le délai appliqué à chaque réponse pour « {deck.title} ».</Text>
+          <Text style={styles.settingsText}>Choisis le délai appliqué à chaque réponse pour tous les paquets de « {subject} ».</Text>
         </View>
         <Text style={styles.settingsLabel}>DURÉES EN MINUTES</Text>
         <View style={styles.timerList}>
@@ -1584,10 +1578,10 @@ function AppContent() {
 
       if (route.name === 'deck') {
         void getDeck(route.deckId).then((deck) => setRoute(deck ? { name: 'subject', subject: deck.subject } : { name: 'home' }));
-      } else if (route.name === 'study' || route.name === 'subject' || route.name === 'stats') {
-        setRoute(route.name === 'study' && route.subject ? { name: 'subject', subject: route.subject } : { name: 'home' });
+      } else if (route.name === 'subject-settings') {
+        setRoute({ name: 'subject', subject: route.subject });
       } else {
-        setRoute({ name: 'deck', deckId: route.deckId });
+        setRoute(route.name === 'study' && route.subject ? { name: 'subject', subject: route.subject } : { name: 'home' });
       }
       return true;
     });
@@ -1608,9 +1602,9 @@ function AppContent() {
     <View style={styles.app}>
       <StatusBar style="dark" />
       {route.name === 'home' ? <HomeScreen onOpenSubject={(subject) => setRoute({ name: 'subject', subject })} onOpenStats={() => setRoute({ name: 'stats' })} /> : null}
-      {route.name === 'subject' ? <SubjectScreen subject={route.subject} onBack={() => setRoute({ name: 'home' })} onOpenDeck={(deckId) => setRoute({ name: 'deck', deckId })} onStudy={(deckIds, newCardAllowance) => setRoute({ name: 'study', deckIds, newCardAllowance, subject: route.subject })} onCreate={(subject) => void openCreate(subject)} /> : null}
-      {route.name === 'deck' ? <DeckScreen deckId={route.deckId} onBack={(subject) => setRoute({ name: 'subject', subject })} onStudy={(newCardAllowance, subject) => setRoute({ name: 'study', deckIds: [route.deckId], newCardAllowance, subject })} onSettings={() => setRoute({ name: 'settings', deckId: route.deckId })} /> : null}
-      {route.name === 'settings' ? <DeckSettingsScreen deckId={route.deckId} onBack={() => setRoute({ name: 'deck', deckId: route.deckId })} /> : null}
+      {route.name === 'subject' ? <SubjectScreen subject={route.subject} onBack={() => setRoute({ name: 'home' })} onOpenDeck={(deckId) => setRoute({ name: 'deck', deckId })} onStudy={(deckIds, newCardAllowance) => setRoute({ name: 'study', deckIds, newCardAllowance, subject: route.subject })} onCreate={(subject) => void openCreate(subject)} onSettings={() => setRoute({ name: 'subject-settings', subject: route.subject })} /> : null}
+      {route.name === 'deck' ? <DeckScreen deckId={route.deckId} onBack={(subject) => setRoute({ name: 'subject', subject })} onStudy={(newCardAllowance, subject) => setRoute({ name: 'study', deckIds: [route.deckId], newCardAllowance, subject })} /> : null}
+      {route.name === 'subject-settings' ? <SubjectSettingsScreen subject={route.subject} onBack={() => setRoute({ name: 'subject', subject: route.subject })} /> : null}
       {route.name === 'stats' ? <StatsScreen onBack={() => setRoute({ name: 'home' })} /> : null}
       {route.name === 'study' ? <StudyScreen deckIds={route.deckIds} newCardAllowance={route.newCardAllowance} onClose={() => setRoute(route.subject ? { name: 'subject', subject: route.subject } : { name: 'home' })} /> : null}
       <CreateDeckModal visible={createOpen} defaultSubject={createSubject} subjects={subjects} onClose={() => setCreateOpen(false)} onCreated={(deckId) => { setCreateOpen(false); setRoute({ name: 'deck', deckId }); }} />
@@ -1642,6 +1636,7 @@ const styles = StyleSheet.create({
   cardPressed: { opacity: 0.88, transform: [{ scale: 0.99 }] },
   disabled: { opacity: 0.4 },
   iconButton: { width: 44, height: 44, borderRadius: 15, backgroundColor: colors.paper, alignItems: 'center', justifyContent: 'center', borderWidth: 1, borderColor: colors.line },
+  topBarActions: { flexDirection: 'row', alignItems: 'center', gap: 9 },
   primaryButton: { minHeight: 56, borderRadius: 15, paddingHorizontal: 20, backgroundColor: colors.blue, alignItems: 'center', justifyContent: 'center', flexDirection: 'row', gap: 9 },
   primaryButtonText: { color: colors.white, fontSize: 16, fontWeight: '800' },
   homeHeader: { paddingTop: 25, paddingBottom: 28, flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'space-between' },

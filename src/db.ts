@@ -22,11 +22,11 @@ const startOfToday = () => {
   return date.getTime();
 };
 
-/** Début du « jour de révision » à 4 h du matin : une carte notée pour
- * le lendemain redevient due à 4 h, pas exactement 24 h plus tard. */
 /** Délai sentinel : la carte est acquise et ne revient jamais (next_due_at = NULL). */
 export const NEVER_DELAY_MINUTES = -1;
 
+/** Début du « jour de révision » à 4 h du matin : une carte notée pour
+ * le lendemain redevient due à 4 h, pas exactement 24 h plus tard. */
 const REVIEW_DAY_START_HOUR = 4;
 const MINUTES_PER_DAY = 1440;
 
@@ -95,13 +95,29 @@ export async function initializeDatabase() {
     }
   }
 
-  const neverMigration = await db.getFirstAsync<{ value: string }>(
-    "SELECT value FROM app_metadata WHERE key = 'never-delay-migrated'",
+  const acquiredStateMigration = await db.getFirstAsync<{ value: string }>(
+    "SELECT value FROM app_metadata WHERE key = 'acquired-state-migrated'",
   );
-  if (!neverMigration) {
-    // L'ancien intervalle « 1 h » devient « Jamais » : carte acquise, plus jamais due.
+  if (!acquiredStateMigration) {
+    // Création de l'état « Jamais » (carte acquise) à la place de l'ancien
+    // créneau « Plus tard » (1 h) : les cartes qui s'y trouvaient replongent
+    // immédiatement dans la file de révision.
+    await db.runAsync(
+      `UPDATE progress SET next_due_at = ?
+       WHERE card_id IN (
+         SELECT r.card_id
+         FROM reviews r
+         JOIN cards c ON c.id = r.card_id
+         JOIN decks d ON d.id = c.deck_id
+         WHERE d.later_delay_minutes = 60
+           AND r.delay_minutes = d.later_delay_minutes
+           AND r.reviewed_at = (SELECT MAX(r2.reviewed_at) FROM reviews r2 WHERE r2.card_id = r.card_id)
+       )`,
+      Date.now(),
+    );
+    // Le créneau devient « Jamais » : non configurable, délai sentinel -1.
     await db.runAsync('UPDATE decks SET later_delay_minutes = ?', NEVER_DELAY_MINUTES);
-    await db.runAsync("INSERT INTO app_metadata (key, value) VALUES ('never-delay-migrated', '1')");
+    await db.runAsync("INSERT INTO app_metadata (key, value) VALUES ('acquired-state-migrated', '1')");
   }
   if (!existingColumns.has('kind')) {
     await db.execAsync("ALTER TABLE decks ADD COLUMN kind TEXT NOT NULL DEFAULT 'people'");
@@ -211,14 +227,55 @@ export async function updateDailyLimit(deckId: number, limit: number) {
   await db.runAsync('UPDATE decks SET daily_new_limit = ? WHERE id = ?', Math.max(0, limit), deckId);
 }
 
-export async function updateReviewDelays(deckId: number, delays: ReviewDelays) {
+/** Délais de révision partagés par tous les paquets d'une matière.
+ * « later » est l'état « Jamais » (carte acquise) : non configurable, délai sentinel -1. */
+export const DEFAULT_REVIEW_DELAYS: ReviewDelays = { again: 0, soon: 10, later: NEVER_DELAY_MINUTES, tomorrow: 1440 };
+
+const SUBJECT_DELAYS_KEY = 'subject-delays';
+
+type StoredSubjectDelays = Record<string, Partial<ReviewDelays>>;
+
+const normaliseDelays = (delays: ReviewDelays): ReviewDelays => ({
+  again: Math.max(0, Math.round(delays.again)),
+  soon: Math.max(0, Math.round(delays.soon)),
+  later: NEVER_DELAY_MINUTES,
+  tomorrow: Math.max(0, Math.round(delays.tomorrow)),
+});
+
+const parseSubjectDelays = (raw: string | null): StoredSubjectDelays => {
+  if (!raw) return {};
+  try {
+    const parsed = JSON.parse(raw) as StoredSubjectDelays;
+    return parsed && typeof parsed === 'object' ? parsed : {};
+  } catch {
+    return {};
+  }
+};
+
+export async function getSubjectDelays(subject: string): Promise<ReviewDelays> {
+  const stored = parseSubjectDelays(await getMetadata(SUBJECT_DELAYS_KEY))[subject.trim().toLowerCase()];
+  if (!stored) return { ...DEFAULT_REVIEW_DELAYS };
+  return {
+    again: Number.isFinite(Number(stored.again)) ? Number(stored.again) : DEFAULT_REVIEW_DELAYS.again,
+    soon: Number.isFinite(Number(stored.soon)) ? Number(stored.soon) : DEFAULT_REVIEW_DELAYS.soon,
+    later: NEVER_DELAY_MINUTES,
+    tomorrow: Number.isFinite(Number(stored.tomorrow)) ? Number(stored.tomorrow) : DEFAULT_REVIEW_DELAYS.tomorrow,
+  };
+}
+
+export async function setSubjectDelays(subject: string, delays: ReviewDelays) {
+  const next = normaliseDelays(delays);
+  const map = parseSubjectDelays(await getMetadata(SUBJECT_DELAYS_KEY));
+  map[subject.trim().toLowerCase()] = next;
+  await setMetadata(SUBJECT_DELAYS_KEY, JSON.stringify(map));
+  // Réplique les délais sur les paquets de la matière : les statistiques
+  // classent les réponses via les colonnes de délai des paquets.
   const db = await getDatabase();
-  const normalise = (value: number) => (value < 0 ? NEVER_DELAY_MINUTES : Math.max(0, Math.round(value)));
   await db.runAsync(
     `UPDATE decks
      SET again_delay_minutes = ?, soon_delay_minutes = ?, later_delay_minutes = ?, tomorrow_delay_minutes = ?
-     WHERE id = ?`,
-    normalise(delays.again), normalise(delays.soon), normalise(delays.later), normalise(delays.tomorrow), deckId,
+     WHERE lower(subject) = lower(?)`,
+    next.again, next.soon, next.later, next.tomorrow, subject.trim(),
   );
 }
 
