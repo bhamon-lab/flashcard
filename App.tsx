@@ -51,7 +51,7 @@ import { syncDecks } from './src/sync';
 import { buildProgression, getGradeStops, type GradeStop, type ProgressionBranch } from './src/progression';
 import { checkForAppUpdate } from './src/app-update';
 import { Card, Deck, ReviewDelay, ReviewDelays } from './src/types';
-import { insertLaterInQueue } from './src/sessionQueue';
+import { insertLaterInQueue, shuffleCards } from './src/sessionQueue';
 import type { StatsSnapshot } from './src/db';
 
 type Route =
@@ -1240,7 +1240,7 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
   const addFresh = async (amount: number) => {
     const excluded = queue.map((item) => item.id);
     const fresh = await getNewCards(deckIds, amount, excluded);
-    setQueue((items) => items.length ? [items[0], ...fresh, ...items.slice(1)] : fresh);
+    setQueue((items) => (items.length ? [items[0], ...shuffleCards(fresh), ...items.slice(1)] : shuffleCards(fresh)));
     setManualOpen(false);
     if (!fresh.length) Alert.alert('Tout est déjà là', 'Il ne reste aucune nouvelle carte dans ces paquets.');
   };
