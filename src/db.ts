@@ -8,7 +8,7 @@ function getDatabase() {
   if (!dbPromise) {
     dbPromise = SQLite.openDatabaseAsync('memento-v1.db').catch((error) => {
       // Web SQLite holds an exclusive File System Access API handle. Allow a
-      // retry after another Mémento tab has released the database file.
+      // retry after another Réviz’ tab has released the database file.
       dbPromise = null;
       throw error;
     });

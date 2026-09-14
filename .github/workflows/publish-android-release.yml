@@ -77,14 +77,14 @@ jobs:
       - name: Prepare APK
         id: apk
         run: |
-          apk_name="Memento-${RELEASE_TAG}.apk"
+          apk_name="Reviz-${RELEASE_TAG}.apk"
           cp android/app/build/outputs/apk/release/app-release.apk "$apk_name"
           echo "path=$apk_name" >> "$GITHUB_OUTPUT"
 
       - name: Store build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Memento-${{ inputs.release_tag }}
+          name: Reviz-${{ inputs.release_tag }}
           path: ${{ steps.apk.outputs.path }}
           if-no-files-found: error
 
