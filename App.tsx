@@ -48,6 +48,7 @@ import {
 import { colors, mono, radius } from './src/theme';
 import { MathView, stripMathText } from './src/MathView';
 import { syncDecks } from './src/sync';
+import { speakAudioText, stopSpeaking } from './src/tts';
 import { buildProgression, getGradeStops, type GradeStop, type ProgressionBranch } from './src/progression';
 import { checkForAppUpdate } from './src/app-update';
 import { WebInstallBanner } from './src/WebInstallBanner';
@@ -67,6 +68,9 @@ type Route =
 const hasMath = (text: string) => text.includes('$');
 
 const VERB_FRONT_DASH = /^(.*\S)[\s\u00A0]*[—–-]\s*$/;
+
+/** Paquet de compréhension orale : synthèse vocale à l'ouverture de la carte. */
+const isListeningDeck = (deck: Deck) => Boolean(deck.audio_language);
 
 const cardQuestion = (card: Card) => {
   const verb = VERB_FRONT_DASH.exec(card.first_name);
@@ -469,7 +473,7 @@ function ProgressionDeckRow({ entry, onOpen, onStudy }: {
         accessibilityLabel={`Lancer une session sur ${title}`}
         style={({ pressed }) => [styles.treeRowMark, { backgroundColor: deck.color }, pressed && styles.pressed]}
       >
-        <Ionicons name="play" size={16} color={colors.white} />
+        <Ionicons name={isListeningDeck(deck) ? 'headset' : 'play'} size={16} color={colors.white} />
       </Pressable>
       <View style={styles.treeRowBody}>
         <Text style={styles.treeRowTitle} numberOfLines={1}>{title}</Text>
@@ -855,8 +859,20 @@ function DeckScreen({ deckId, onBack, onStudy, onSettings }: { deckId: number; o
         </View>
 
         <View style={styles.deckHero}>
-          <View style={[styles.largeDeckMark, { backgroundColor: deck.color }]}><Text style={styles.largeDeckGlyph}>{glyphFor(deck.id)}</Text></View>
+          <View style={[styles.largeDeckMark, { backgroundColor: deck.color }]}>
+            {isListeningDeck(deck) ? (
+              <Ionicons name="headset" size={32} color={colors.blue} />
+            ) : (
+              <Text style={styles.largeDeckGlyph}>{glyphFor(deck.id)}</Text>
+            )}
+          </View>
           <Text style={styles.deckHeroTitle}>{deck.title}</Text>
+          {isListeningDeck(deck) ? (
+            <View style={styles.listeningBadge}>
+              <Ionicons name="volume-high" size={13} color={colors.blue} />
+              <Text style={styles.listeningBadgeText}>Audio · {deck.audio_language}</Text>
+            </View>
+          ) : null}
           <Text style={styles.deckHeroDescription}>{stripMathText(deck.description)}</Text>
           <View style={styles.statRow}>
             <View style={styles.stat}><Text style={styles.statValue}>{deck.due_count}</Text><Text style={styles.statLabel}>À revoir</Text></View>
@@ -892,9 +908,12 @@ function DeckScreen({ deckId, onBack, onStudy, onSettings }: { deckId: number; o
             <Pressable key={card.id} onPress={() => setEditorCard(card)} style={[styles.cardRow, index < visibleCards.length - 1 && styles.cardRowBorder]}>
               <View style={styles.cardThumbWrap}><CardImage card={card} style={styles.cardThumb} /></View>
               <View style={styles.cardText}>
-                <Text style={styles.cardFront} numberOfLines={1}>{stripMathText(cardQuestion(card))}</Text>
+                <Text style={styles.cardFront} numberOfLines={1}>
+                  {card.audio_text ? stripMathText(card.audio_text) : stripMathText(cardQuestion(card))}
+                </Text>
                 <Text style={styles.cardBack} numberOfLines={1}>{stripMathText(card.last_name || card.context) || 'Pas encore de réponse'}</Text>
               </View>
+              {card.audio_text ? <Ionicons name="volume-high" size={16} color={colors.blue} /> : null}
               <View style={[styles.statusDot, { backgroundColor: card.first_seen_at ? colors.green : colors.yellow }]} />
               <Ionicons name="chevron-forward" size={18} color="#A9AFC0" />
             </Pressable>
@@ -1211,6 +1230,25 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
   }, [deckIds, newCardAllowance]);
 
   const current = queue[0];
+  const isListeningCard = Boolean(current?.audio_text);
+  const audioLanguage = useMemo(() => {
+    const deck = decks.find((entry) => entry.id === current?.deck_id);
+    return deck?.audio_language || 'en-GB';
+  }, [decks, current?.deck_id]);
+  const replayAudio = () => {
+    if (current?.audio_text) speakAudioText(current.audio_text, audioLanguage);
+  };
+
+  // Compréhension orale : le mot est prononcé dès l'affichage de la carte,
+  // et la lecture s'arrête au changement de carte ou à la sortie de session.
+  useEffect(() => {
+    if (!current?.audio_text) return;
+    const timer = setTimeout(() => speakAudioText(current.audio_text, audioLanguage), 300);
+    return () => {
+      clearTimeout(timer);
+      stopSpeaking();
+    };
+  }, [current?.id, current?.audio_text, audioLanguage]);
   useEffect(() => {
     setSmallPhoto(false);
     if (!current?.photo_uri) return;
@@ -1336,9 +1374,33 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
                   : <Text style={styles.answerNote}>{current.context}</Text>
               )) : null}
               {!current.last_name && !current.context ? <Text style={styles.answerText}>Pas de réponse enregistrée</Text> : null}
+              {isListeningCard ? (
+                <Pressable
+                  accessibilityRole="button"
+                  accessibilityLabel="Réécouter le mot en anglais"
+                  onPress={replayAudio}
+                  style={({ pressed }) => [styles.answerAudioRow, pressed && styles.pressed]}
+                >
+                  <Ionicons name="volume-high" size={17} color={colors.blue} />
+                  <Text style={styles.answerAudioText}>{current.audio_text}</Text>
+                </Pressable>
+              ) : null}
             </View>
           ) : current.photo_uri ? (
             <View style={styles.questionStrip}><Text style={styles.questionStripText} numberOfLines={3}>{current.first_name}</Text></View>
+          ) : isListeningCard ? (
+            <View style={styles.questionStage}>
+              <Text style={styles.questionEyebrow}>COMPRÉHENSION ORALE</Text>
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel="Réécouter le mot"
+                onPress={replayAudio}
+                style={({ pressed }) => [styles.audioPlayButton, pressed && styles.pressed]}
+              >
+                <Ionicons name="volume-high" size={46} color={colors.white} />
+              </Pressable>
+              <Text style={styles.audioHintText}>Écoute, puis donne le sens en français</Text>
+            </View>
           ) : (
             <View style={styles.questionStage}>
               <Text style={styles.questionEyebrow}>QUESTION</Text>
@@ -1370,7 +1432,7 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
                   : <Text style={styles.hintText}>{cardHintText}</Text>}
               </View>
             ) : null}
-            <Text style={styles.hint}>Prends le temps de calculer dans ta tête avant de révéler</Text>
+            <Text style={styles.hint}>{isListeningCard ? 'Réécoute autant de fois que nécessaire avant de révéler' : 'Prends le temps de calculer dans ta tête avant de révéler'}</Text>
           </View>
         ) : (
           <View style={styles.ratingArea}>
@@ -1711,6 +1773,12 @@ const styles = StyleSheet.create({
   photoShade: { position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, backgroundColor: 'rgba(12, 23, 42, 0.32)' },
   questionBadge: { position: 'absolute', top: 18, right: 18, width: 38, height: 38, borderRadius: 13, backgroundColor: 'rgba(255,255,255,0.9)', alignItems: 'center', justifyContent: 'center' },
   questionStage: { paddingHorizontal: 28, alignItems: 'center', zIndex: 2 },
+  audioPlayButton: { width: 104, height: 104, borderRadius: 30, backgroundColor: colors.blue, alignItems: 'center', justifyContent: 'center', marginBottom: 16, shadowColor: '#2F52DA', shadowOpacity: 0.3, shadowRadius: 14, shadowOffset: { width: 0, height: 6 }, elevation: 6 },
+  audioHintText: { color: colors.muted, fontSize: 13, fontWeight: '600', textAlign: 'center' },
+  answerAudioRow: { flexDirection: 'row', alignItems: 'center', gap: 7, marginTop: 14, paddingHorizontal: 14, paddingVertical: 9, borderRadius: 999, backgroundColor: colors.blueSoft, alignSelf: 'center' },
+  answerAudioText: { color: colors.blue, fontSize: 15, fontWeight: '800', fontFamily: mono },
+  listeningBadge: { flexDirection: 'row', alignItems: 'center', gap: 5, marginTop: 8, paddingHorizontal: 10, paddingVertical: 5, borderRadius: 999, backgroundColor: colors.blueSoft, alignSelf: 'center' },
+  listeningBadgeText: { color: colors.blue, fontSize: 12, fontWeight: '800', fontFamily: mono },
   questionEyebrow: { color: '#5E6C84', fontSize: 10, fontWeight: '900', letterSpacing: 2.4, marginBottom: 14, fontFamily: mono },
   questionBig: { color: '#17233A', fontSize: 26, lineHeight: 35, fontWeight: '800', textAlign: 'center', fontFamily: mono },
   questionStrip: { position: 'absolute', left: 14, right: 14, bottom: 14, borderRadius: 16, backgroundColor: 'rgba(18, 33, 55, 0.94)', paddingVertical: 15, paddingHorizontal: 16, zIndex: 2 },
