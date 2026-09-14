@@ -1,0 +1,129 @@
+{
+  "schema_version": 2,
+  "subject": "Histoire",
+  "school_year": "2026-2027",
+  "country": "FR",
+  "description": "Première progression d'histoire centrée uniquement sur les repères chronologiques essentiels des programmes français, de la 6e à la terminale générale et technologique.",
+  "grade_order": [
+    "6e",
+    "5e",
+    "4e",
+    "3e",
+    "2de",
+    "1re",
+    "Terminale"
+  ],
+  "grade_labels": {
+    "6e": "6e",
+    "5e": "5e",
+    "4e": "4e",
+    "3e": "3e",
+    "2de": "2de",
+    "1re": "1re",
+    "Terminale": "Terminale"
+  },
+  "tracks": {},
+  "branches": [
+    {
+      "title": "Repères chronologiques essentiels",
+      "domains": [
+        "dates"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "cycle3-histoire-2020",
+      "url": "https://eduscol.education.gouv.fr/4791/ressources-daccompagnement-du-programme-dhistoire-et-geographie-au-cycle-3",
+      "label": "Histoire-géographie cycle 3 — programme 2020 maintenu en 6e pour 2026-2027"
+    },
+    {
+      "id": "college-histoire-2026",
+      "url": "https://www.education.gouv.fr/les-programmes-du-college-470408",
+      "label": "Programmes d'histoire du collège en vigueur — cycle 4"
+    },
+    {
+      "id": "lycee-histoire-2019",
+      "url": "https://eduscol.education.gouv.fr/5799/programmes-et-ressources-en-histoire-geographie-voie-gt",
+      "label": "Programmes d'histoire-géographie du lycée général et technologique — BO 2019"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "histoire-6e-dates",
+      "deck_id": "histoire-6e-dates",
+      "grade": "6e",
+      "title": "Préhistoire et Antiquité",
+      "domain": "dates",
+      "source_id": "cycle3-histoire-2020",
+      "source_section": "La longue histoire de l'humanité ; Méditerranée antique ; Empire romain",
+      "prerequisites": [],
+      "card_count": 14
+    },
+    {
+      "id": "histoire-5e-dates",
+      "deck_id": "histoire-5e-dates",
+      "grade": "5e",
+      "title": "Moyen Âge et débuts des Temps modernes",
+      "domain": "dates",
+      "source_id": "college-histoire-2026",
+      "source_section": "Chrétientés et islam ; Occident féodal ; transformations de l'Europe",
+      "prerequisites": [
+        "histoire-6e-dates"
+      ],
+      "card_count": 17
+    },
+    {
+      "id": "histoire-4e-dates",
+      "deck_id": "histoire-4e-dates",
+      "grade": "4e",
+      "title": "Lumières, Révolution et XIXe siècle",
+      "domain": "dates",
+      "source_id": "college-histoire-2026",
+      "source_section": "XVIIIe siècle ; Révolution et Empire ; Europe et France au XIXe siècle",
+      "prerequisites": [
+        "histoire-5e-dates"
+      ],
+      "card_count": 21
+    },
+    {
+      "id": "histoire-2de-dates",
+      "deck_id": "histoire-2de-dates",
+      "grade": "2de",
+      "title": "Formation du monde moderne",
+      "domain": "dates",
+      "source_id": "lycee-histoire-2019",
+      "source_section": "Méditerranée antique et médiévale ; XVe-XVIe siècles ; État moderne",
+      "prerequisites": [
+        "histoire-dates-xxe"
+      ],
+      "card_count": 20
+    },
+    {
+      "id": "histoire-1re-dates",
+      "deck_id": "histoire-1re-dates",
+      "grade": "1re",
+      "title": "Nations et empires, 1789-1923",
+      "domain": "dates",
+      "source_id": "lycee-histoire-2019",
+      "source_section": "Révolutions ; nationalités ; Troisième République ; Première Guerre mondiale",
+      "prerequisites": [
+        "histoire-2de-dates"
+      ],
+      "card_count": 27
+    },
+    {
+      "id": "histoire-terminale-dates",
+      "deck_id": "histoire-terminale-dates",
+      "grade": "Terminale",
+      "title": "Puissances et modèles politiques depuis 1922",
+      "domain": "dates",
+      "source_id": "lycee-histoire-2019",
+      "source_section": "Totalitarismes et guerre ; monde bipolaire ; monde, Europe et France depuis 1991",
+      "prerequisites": [
+        "histoire-1re-dates"
+      ],
+      "card_count": 36
+    }
+  ]
+}
