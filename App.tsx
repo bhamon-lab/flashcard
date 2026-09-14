@@ -437,9 +437,10 @@ function SubjectsEditorModal({ visible, subjects, hidden, custom, onClose, onCha
   );
 }
 
-function ProgressionDeckRow({ entry, onOpen }: {
+function ProgressionDeckRow({ entry, onOpen, onStudy }: {
   entry: { deck: Deck; title: string };
   onOpen: (id: number) => void;
+  onStudy: (deck: Deck) => void;
 }) {
   const { deck, title } = entry;
   const progress = deck.total_count ? Math.round((Number(deck.learned_count) / Number(deck.total_count)) * 100) : 0;
@@ -461,16 +462,25 @@ function ProgressionDeckRow({ entry, onOpen }: {
       {isDeckLearned(deck) ? (
         <View style={styles.treeRowDone}><Ionicons name="checkmark" size={15} color={colors.green} /></View>
       ) : null}
+      <Pressable
+        onPress={() => onStudy(deck)}
+        accessibilityRole="button"
+        accessibilityLabel={`Lancer une session sur ${title}`}
+        style={({ pressed }) => [styles.treeRowPlay, pressed && styles.pressed]}
+      >
+        <Ionicons name="play" size={15} color={colors.blue} />
+      </Pressable>
     </Pressable>
   );
 }
 
-function ProgressionBranchCard({ branchKey, branch, expanded, onToggleExpanded, onOpen }: {
+function ProgressionBranchCard({ branchKey, branch, expanded, onToggleExpanded, onOpen, onStudy }: {
   branchKey: string;
   branch: ProgressionBranch;
   expanded: boolean;
   onToggleExpanded: () => void;
   onOpen: (id: number) => void;
+  onStudy: (deck: Deck) => void;
 }) {
   const deckCount = branch.levels.reduce((sum, level) => sum + level.tracks.reduce((acc, track) => acc + track.decks.length, 0), 0);
   return (
@@ -493,7 +503,7 @@ function ProgressionBranchCard({ branchKey, branch, expanded, onToggleExpanded, 
             <View key={track.label || 'principal'} style={styles.treeTrack}>
               {track.label ? <Text style={styles.treeTrackLabel}>{track.label}</Text> : null}
               {track.decks.map((entry) => (
-                <ProgressionDeckRow key={entry.deck.id} entry={entry} onOpen={onOpen} />
+                <ProgressionDeckRow key={entry.deck.id} entry={entry} onOpen={onOpen} onStudy={onStudy} />
               ))}
             </View>
           ))}
@@ -742,6 +752,7 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
               expanded={!(foldedBranches ?? []).includes(branchKey)}
               onToggleExpanded={() => toggleBranch(branchKey)}
               onOpen={onOpenDeck}
+              onStudy={(deck) => onStudy([deck.id], Math.max(0, Number(deck.daily_new_limit) - Number(deck.introduced_today)))}
             />
           );
         })}
@@ -1756,6 +1767,7 @@ const styles = StyleSheet.create({
   treePillNewText: { color: colors.green, fontSize: 10, fontWeight: '800' },
   treeRowProgress: { fontSize: 10, fontWeight: '700', color: colors.muted },
   treeRowDone: { width: 28, height: 28, borderRadius: 10, backgroundColor: '#DCEDE2', alignItems: 'center', justifyContent: 'center' },
+  treeRowPlay: { width: 28, height: 28, borderRadius: 10, backgroundColor: colors.blueSoft, alignItems: 'center', justifyContent: 'center', marginLeft: 8 },
   homeHeaderActions: { flexDirection: 'row', alignItems: 'center', gap: 10 },
   statsBoard: { backgroundColor: colors.board, borderRadius: radius.large, padding: 22, overflow: 'hidden', ...shadow },
   statsBoardRow: { flexDirection: 'row', zIndex: 2 },
