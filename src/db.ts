@@ -1,6 +1,7 @@
 import * as SQLite from 'expo-sqlite';
 import { Card, Deck, ReviewDelays } from './types';
 import { shuffleCards } from './sessionQueue';
+import { asCurriculum, type CurriculumData } from './progression';
 
 let dbPromise: Promise<SQLite.SQLiteDatabase> | null = null;
 
@@ -691,4 +692,35 @@ export async function removeDecksNotIn(syncIds: string[]): Promise<number> {
     ...syncIds,
   );
   return result.changes;
+}
+
+/** Curricula téléchargés du dépôt (remplaçant les versions embarquées), indexés par nom de fichier. */
+export type CurriculumOverrides = Record<string, CurriculumData>;
+
+const CURRICULUMS_KEY = 'curriculums';
+
+export async function getCurriculumMap(): Promise<CurriculumOverrides> {
+  const raw = await getMetadata(CURRICULUMS_KEY);
+  if (!raw) return {};
+  try {
+    const parsed = JSON.parse(raw) as unknown;
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return {};
+    const map: CurriculumOverrides = {};
+    for (const [fileName, entry] of Object.entries(parsed)) {
+      const curriculum = asCurriculum(entry);
+      if (curriculum) map[fileName] = curriculum;
+    }
+    return map;
+  } catch {
+    return {};
+  }
+}
+
+/** Curricula téléchargés prêts pour l'arbre de progression (liste vide → repli sur les embarqués). */
+export async function getCurriculumOverrides(): Promise<CurriculumData[]> {
+  return Object.values(await getCurriculumMap());
+}
+
+export async function saveCurriculumOverrides(overrides: CurriculumOverrides) {
+  await setMetadata(CURRICULUMS_KEY, JSON.stringify(overrides));
 }
