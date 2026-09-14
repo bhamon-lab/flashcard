@@ -472,26 +472,26 @@ export async function setSubjectPrefs(prefs: SubjectPrefs) {
   await setMetadata(SUBJECT_PREFS_KEY, JSON.stringify({ hidden: prefs.hidden, custom: prefs.custom }));
 }
 
-/** Branches repliées de l'arbre de progression, par matière et titre de branche. */
-export type ProgressionFolds = {
-  folded: string[];
+/** Branches dépliées de l'arbre de progression (repliées par défaut), par matière et titre de branche. */
+export type ProgressionExpands = {
+  expanded: string[];
 };
 
-const PROGRESSION_FOLDS_KEY = 'progression-folds';
+const PROGRESSION_EXPANDS_KEY = 'progression-expands';
 
-export async function getProgressionFolds(): Promise<ProgressionFolds> {
-  const raw = await getMetadata(PROGRESSION_FOLDS_KEY);
-  if (!raw) return { folded: [] };
+export async function getProgressionExpands(): Promise<ProgressionExpands> {
+  const raw = await getMetadata(PROGRESSION_EXPANDS_KEY);
+  if (!raw) return { expanded: [] };
   try {
-    const parsed = JSON.parse(raw) as Partial<ProgressionFolds>;
-    return { folded: Array.isArray(parsed.folded) ? parsed.folded : [] };
+    const parsed = JSON.parse(raw) as Partial<ProgressionExpands>;
+    return { expanded: Array.isArray(parsed.expanded) ? parsed.expanded : [] };
   } catch {
-    return { folded: [] };
+    return { expanded: [] };
   }
 }
 
-export async function setProgressionFolds(folds: ProgressionFolds) {
-  await setMetadata(PROGRESSION_FOLDS_KEY, JSON.stringify({ folded: folds.folded }));
+export async function setProgressionExpands(expands: ProgressionExpands) {
+  await setMetadata(PROGRESSION_EXPANDS_KEY, JSON.stringify({ expanded: expands.expanded }));
 }
 
 /** État sauvegardé du filtre « Masquer les terminés » (partagé entre les matières). */

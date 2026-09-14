@@ -30,7 +30,7 @@ import {
   getDecksByIds,
   getHideLearnedPref,
   getNewCards,
-  getProgressionFolds,
+  getProgressionExpands,
   getSessionCards,
   getStatsSnapshot,
   getSubjectPrefs,
@@ -39,7 +39,7 @@ import {
   recordReview,
   resetDeckProgress,
   saveCard,
-  setProgressionFolds,
+  setProgressionExpands,
   setHideLearnedPref,
   setSubjectPrefs,
   updateDailyLimit,
@@ -615,10 +615,19 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
   useEffect(() => { void getHideLearnedPref().then(setHideLearned); }, []);
   const [minLevel, setMinLevel] = useState(0);
   const [maxLevel, setMaxLevel] = useState(Number.MAX_SAFE_INTEGER);
-  // Branches repliées de l'arbre de progression : null tant que l'état sauvegardé
-  // n'est pas chargé (l'arbre reste replié par défaut).
-  const [foldedBranches, setFoldedBranches] = useState<string[] | null>(null);
-  useEffect(() => { void getProgressionFolds().then((folds) => setFoldedBranches(folds.folded)); }, []);
+  // Branches dépliées de l'arbre de progression : null tant que l'état sauvegardé n'est pas chargé,
+  // et [] dans ce cas — l'arbre est ainsi replié par défaut.
+  const [expandedBranches, setExpandedBranches] = useState<string[] | null>(null);
+  const expandedRef = useRef<string[]>([]);
+  const interactedRef = useRef(false);
+  useEffect(() => {
+    void getProgressionExpands().then((expands) => {
+      // Ne pas écraser un appui qui aurait eu lieu avant la fin du chargement.
+      if (interactedRef.current) return;
+      expandedRef.current = expands.expanded;
+      setExpandedBranches(expands.expanded);
+    });
+  }, []);
   useEffect(() => { void getDecks().then(setDecks); }, []);
   const group = groupBySubject(decks).find((entry) => entry.name.toLowerCase() === subject.toLowerCase())
     ?? { name: subject, decks: [] as Deck[] };
@@ -675,12 +684,12 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
   ), [branches, hideLearned, allowedGrades]);
 
   const toggleBranch = (branchKey: string) => {
-    setFoldedBranches((current) => {
-      const folded = current ?? [];
-      const next = folded.includes(branchKey) ? folded.filter((entry) => entry !== branchKey) : [...folded, branchKey];
-      void setProgressionFolds({ folded: next });
-      return next;
-    });
+    interactedRef.current = true;
+    const expanded = expandedRef.current;
+    const next = expanded.includes(branchKey) ? expanded.filter((entry) => entry !== branchKey) : [...expanded, branchKey];
+    expandedRef.current = next;
+    setExpandedBranches(next);
+    void setProgressionExpands({ expanded: next });
   };
 
   const toggleHideLearned = () => {
@@ -772,7 +781,7 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
               key={branch.title}
               branchKey={branchKey}
               branch={branch}
-              expanded={!(foldedBranches ?? []).includes(branchKey)}
+              expanded={(expandedBranches ?? []).includes(branchKey)}
               onToggleExpanded={() => toggleBranch(branchKey)}
               onOpen={onOpenDeck}
               onStudy={(deck) => onStudy([deck.id], Math.max(0, Number(deck.daily_new_limit) - Number(deck.introduced_today)))}
