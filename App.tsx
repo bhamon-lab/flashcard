@@ -95,8 +95,8 @@ const formatDelay = (minutes: number) => {
 const getDelayOptions = (deck: Deck): Array<{ value: ReviewDelay; title: string; subtitle: string; color: string; fg: string; icon: keyof typeof Ionicons.glyphMap }> => [
   { value: Number(deck.again_delay_minutes), title: formatDelay(Number(deck.again_delay_minutes)), subtitle: 'À la suite', color: colors.redSoft, fg: colors.red, icon: 'refresh' },
   { value: Number(deck.soon_delay_minutes), title: formatDelay(Number(deck.soon_delay_minutes)), subtitle: 'Encore bientôt', color: colors.yellowSoft, fg: '#9A7412', icon: 'timer-outline' },
-  { value: NEVER_DELAY_MINUTES, title: 'Jamais', subtitle: 'Carte acquise', color: colors.greenSoft, fg: colors.green, icon: 'checkmark-circle-outline' },
   { value: Number(deck.tomorrow_delay_minutes), title: formatDelay(Number(deck.tomorrow_delay_minutes)), subtitle: 'Demain', color: colors.blueSoft, fg: colors.blue, icon: 'calendar-outline' },
+  { value: NEVER_DELAY_MINUTES, title: 'Jamais', subtitle: 'Carte acquise', color: colors.greenSoft, fg: colors.green, icon: 'checkmark-circle-outline' },
 ];
 
 const GLYPHS = ['π', '∑', '√', 'ƒ', 'Δ', '∞', 'θ', 'x²', 'λ', 'Ω', '§', 'æ'];
@@ -964,8 +964,8 @@ function SubjectSettingsScreen({ subject, onBack }: { subject: string; onBack: (
   const timerRows: Array<{ key: keyof ReviewDelays; title: string; note: string; icon: keyof typeof Ionicons.glyphMap; tint: string; fg: string }> = [
     { key: 'again', title: 'Immédiatement', note: 'La carte reste dans la session', icon: 'refresh', tint: colors.redSoft, fg: colors.red },
     { key: 'soon', title: '10 min', note: 'Pour la revoir bientôt', icon: 'timer-outline', tint: colors.yellowSoft, fg: '#9A7412' },
-    { key: 'later', title: 'Jamais', note: 'Carte acquise : plus jamais revue', icon: 'checkmark-circle-outline', tint: colors.greenSoft, fg: colors.green },
     { key: 'tomorrow', title: '1 jour', note: 'Pour la revoir demain', icon: 'calendar-outline', tint: colors.blueSoft, fg: colors.blue },
+    { key: 'later', title: 'Jamais', note: 'Carte acquise : plus jamais revue', icon: 'checkmark-circle-outline', tint: colors.greenSoft, fg: colors.green },
   ];
 
   return (
