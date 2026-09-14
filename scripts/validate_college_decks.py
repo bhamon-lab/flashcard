@@ -71,6 +71,8 @@ def main():
     deck_ids = set()
     # Check global ID collisions, including the pre-existing non-college decks.
     for path in (ROOT / "decks").glob("*/*.json"):
+        if path.name.startswith("_"):
+            continue
         deck = json.loads(path.read_text())
         require(deck["id"] not in deck_ids, f"ID de deck dupliqué : {deck['id']}")
         deck_ids.add(deck["id"])
