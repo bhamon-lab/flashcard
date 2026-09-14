@@ -22,6 +22,9 @@ const startOfToday = () => {
   return date.getTime();
 };
 
+/** Délai sentinel : la carte est acquise et ne revient jamais (next_due_at = NULL). */
+export const NEVER_DELAY_MINUTES = -1;
+
 /** Début du « jour de révision » à 4 h du matin : une carte notée pour
  * le lendemain redevient due à 4 h, pas exactement 24 h plus tard. */
 const REVIEW_DAY_START_HOUR = 4;
@@ -83,13 +86,38 @@ export async function initializeDatabase() {
   const reviewDelayColumns = [
     ['again_delay_minutes', 0],
     ['soon_delay_minutes', 10],
-    ['later_delay_minutes', 60],
+    ['later_delay_minutes', NEVER_DELAY_MINUTES],
     ['tomorrow_delay_minutes', 1440],
   ] as const;
   for (const [name, defaultValue] of reviewDelayColumns) {
     if (!existingColumns.has(name)) {
       await db.execAsync(`ALTER TABLE decks ADD COLUMN ${name} INTEGER NOT NULL DEFAULT ${defaultValue}`);
     }
+  }
+
+  const acquiredStateMigration = await db.getFirstAsync<{ value: string }>(
+    "SELECT value FROM app_metadata WHERE key = 'acquired-state-migrated'",
+  );
+  if (!acquiredStateMigration) {
+    // Création de l'état « Jamais » (carte acquise) à la place de l'ancien
+    // créneau « Plus tard » (1 h) : les cartes qui s'y trouvaient replongent
+    // immédiatement dans la file de révision.
+    await db.runAsync(
+      `UPDATE progress SET next_due_at = ?
+       WHERE card_id IN (
+         SELECT r.card_id
+         FROM reviews r
+         JOIN cards c ON c.id = r.card_id
+         JOIN decks d ON d.id = c.deck_id
+         WHERE d.later_delay_minutes = 60
+           AND r.delay_minutes = d.later_delay_minutes
+           AND r.reviewed_at = (SELECT MAX(r2.reviewed_at) FROM reviews r2 WHERE r2.card_id = r.card_id)
+       )`,
+      Date.now(),
+    );
+    // Le créneau devient « Jamais » : non configurable, délai sentinel -1.
+    await db.runAsync('UPDATE decks SET later_delay_minutes = ?', NEVER_DELAY_MINUTES);
+    await db.runAsync("INSERT INTO app_metadata (key, value) VALUES ('acquired-state-migrated', '1')");
   }
   if (!existingColumns.has('kind')) {
     await db.execAsync("ALTER TABLE decks ADD COLUMN kind TEXT NOT NULL DEFAULT 'people'");
@@ -199,8 +227,9 @@ export async function updateDailyLimit(deckId: number, limit: number) {
   await db.runAsync('UPDATE decks SET daily_new_limit = ? WHERE id = ?', Math.max(0, limit), deckId);
 }
 
-/** Délais de révision partagés par tous les paquets d'une matière. */
-export const DEFAULT_REVIEW_DELAYS: ReviewDelays = { again: 0, soon: 10, later: 60, tomorrow: 1440 };
+/** Délais de révision partagés par tous les paquets d'une matière.
+ * « later » est l'état « Jamais » (carte acquise) : non configurable, délai sentinel -1. */
+export const DEFAULT_REVIEW_DELAYS: ReviewDelays = { again: 0, soon: 10, later: NEVER_DELAY_MINUTES, tomorrow: 1440 };
 
 const SUBJECT_DELAYS_KEY = 'subject-delays';
 
@@ -209,7 +238,7 @@ type StoredSubjectDelays = Record<string, Partial<ReviewDelays>>;
 const normaliseDelays = (delays: ReviewDelays): ReviewDelays => ({
   again: Math.max(0, Math.round(delays.again)),
   soon: Math.max(0, Math.round(delays.soon)),
-  later: Math.max(0, Math.round(delays.later)),
+  later: NEVER_DELAY_MINUTES,
   tomorrow: Math.max(0, Math.round(delays.tomorrow)),
 });
 
@@ -229,7 +258,7 @@ export async function getSubjectDelays(subject: string): Promise<ReviewDelays> {
   return {
     again: Number.isFinite(Number(stored.again)) ? Number(stored.again) : DEFAULT_REVIEW_DELAYS.again,
     soon: Number.isFinite(Number(stored.soon)) ? Number(stored.soon) : DEFAULT_REVIEW_DELAYS.soon,
-    later: Number.isFinite(Number(stored.later)) ? Number(stored.later) : DEFAULT_REVIEW_DELAYS.later,
+    later: NEVER_DELAY_MINUTES,
     tomorrow: Number.isFinite(Number(stored.tomorrow)) ? Number(stored.tomorrow) : DEFAULT_REVIEW_DELAYS.tomorrow,
   };
 }
@@ -313,10 +342,16 @@ export async function getNewCards(deckIds: number[], limit: number, excludedIds:
 export async function recordReview(cardId: number, delayMinutes: number) {
   const db = await getDatabase();
   const now = Date.now();
-  const days = delayMinutes >= MINUTES_PER_DAY ? Math.round(delayMinutes / MINUTES_PER_DAY) : 0;
-  const nextDue = days
-    ? startOfReviewDay(now) + days * 86_400_000
-    : now + delayMinutes * 60_000;
+  let nextDue: number | null;
+  if (delayMinutes < 0) {
+    // « Jamais » : carte acquise, elle ne réapparaît plus dans les révisions.
+    nextDue = null;
+  } else {
+    const days = delayMinutes >= MINUTES_PER_DAY ? Math.round(delayMinutes / MINUTES_PER_DAY) : 0;
+    nextDue = days
+      ? startOfReviewDay(now) + days * 86_400_000
+      : now + delayMinutes * 60_000;
+  }
   await db.withTransactionAsync(async () => {
     await db.runAsync(
       `UPDATE progress SET first_seen_at = COALESCE(first_seen_at, ?), next_due_at = ? WHERE card_id = ?`,
@@ -384,7 +419,7 @@ export type StatsSnapshot = {
   cardsSeenToday: number;
   /** Cartes ouvertes pour la première fois aujourd'hui. */
   newSeenToday: number;
-  /** Nouvelles cartes du jour dont la dernière réponse est « Plus tard » ou « Demain ». */
+  /** Nouvelles cartes du jour dont la dernière réponse est « Demain » ou « Jamais ». */
   learnedToday: number;
   reviewsToday: number;
   breakdownToday: Record<ReviewBucket, number>;
@@ -408,10 +443,10 @@ export async function getStatsSnapshot(): Promise<StatsSnapshot> {
     db.getFirstAsync<{ cards_seen: number; reviews: number; again: number; soon: number; later: number; tomorrow: number }>(
       `SELECT COUNT(DISTINCT r.card_id) AS cards_seen,
         COUNT(*) AS reviews,
-        COALESCE(SUM(CASE WHEN r.delay_minutes <= d.again_delay_minutes THEN 1 ELSE 0 END), 0) AS again,
+        COALESCE(SUM(CASE WHEN r.delay_minutes >= 0 AND r.delay_minutes <= d.again_delay_minutes THEN 1 ELSE 0 END), 0) AS again,
         COALESCE(SUM(CASE WHEN r.delay_minutes > d.again_delay_minutes AND r.delay_minutes <= d.soon_delay_minutes THEN 1 ELSE 0 END), 0) AS soon,
-        COALESCE(SUM(CASE WHEN r.delay_minutes > d.soon_delay_minutes AND r.delay_minutes <= d.later_delay_minutes THEN 1 ELSE 0 END), 0) AS later,
-        COALESCE(SUM(CASE WHEN r.delay_minutes > d.later_delay_minutes THEN 1 ELSE 0 END), 0) AS tomorrow
+        COALESCE(SUM(CASE WHEN r.delay_minutes < 0 OR (r.delay_minutes > d.soon_delay_minutes AND r.delay_minutes <= d.later_delay_minutes) THEN 1 ELSE 0 END), 0) AS later,
+        COALESCE(SUM(CASE WHEN r.delay_minutes >= 0 AND r.delay_minutes > d.later_delay_minutes THEN 1 ELSE 0 END), 0) AS tomorrow
       FROM reviews r
       JOIN cards c ON c.id = r.card_id
       JOIN decks d ON d.id = c.deck_id
@@ -429,7 +464,7 @@ export async function getStatsSnapshot(): Promise<StatsSnapshot> {
         WHERE r.reviewed_at >= ?
           AND r.card_id IN (SELECT card_id FROM progress WHERE first_seen_at >= ?)
         GROUP BY r.card_id
-      ) WHERE delay_minutes > soon_delay`,
+      ) WHERE delay_minutes > soon_delay OR delay_minutes < 0`,
       todayStart, todayStart,
     ),
     db.getFirstAsync<{ count: number }>(

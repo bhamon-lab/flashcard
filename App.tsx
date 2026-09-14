@@ -37,6 +37,7 @@ import {
   getSubjectPrefs,
   initializeDatabase,
   markCardSeen,
+  NEVER_DELAY_MINUTES,
   recordReview,
   resetDeckProgress,
   saveCard,
@@ -94,8 +95,8 @@ const formatDelay = (minutes: number) => {
 const getDelayOptions = (deck: Deck): Array<{ value: ReviewDelay; title: string; subtitle: string; color: string; fg: string; icon: keyof typeof Ionicons.glyphMap }> => [
   { value: Number(deck.again_delay_minutes), title: formatDelay(Number(deck.again_delay_minutes)), subtitle: 'À la suite', color: colors.redSoft, fg: colors.red, icon: 'refresh' },
   { value: Number(deck.soon_delay_minutes), title: formatDelay(Number(deck.soon_delay_minutes)), subtitle: 'Encore bientôt', color: colors.yellowSoft, fg: '#9A7412', icon: 'timer-outline' },
-  { value: Number(deck.later_delay_minutes), title: formatDelay(Number(deck.later_delay_minutes)), subtitle: 'Plus tard', color: colors.blueSoft, fg: colors.blue, icon: 'time-outline' },
-  { value: Number(deck.tomorrow_delay_minutes), title: formatDelay(Number(deck.tomorrow_delay_minutes)), subtitle: 'Demain', color: colors.greenSoft, fg: colors.green, icon: 'calendar-outline' },
+  { value: NEVER_DELAY_MINUTES, title: 'Jamais', subtitle: 'Carte acquise', color: colors.greenSoft, fg: colors.green, icon: 'checkmark-circle-outline' },
+  { value: Number(deck.tomorrow_delay_minutes), title: formatDelay(Number(deck.tomorrow_delay_minutes)), subtitle: 'Demain', color: colors.blueSoft, fg: colors.blue, icon: 'calendar-outline' },
 ];
 
 const GLYPHS = ['π', '∑', '√', 'ƒ', 'Δ', '∞', 'θ', 'x²', 'λ', 'Ω', '§', 'æ'];
@@ -963,8 +964,8 @@ function SubjectSettingsScreen({ subject, onBack }: { subject: string; onBack: (
   const timerRows: Array<{ key: keyof ReviewDelays; title: string; note: string; icon: keyof typeof Ionicons.glyphMap; tint: string; fg: string }> = [
     { key: 'again', title: 'Immédiatement', note: 'La carte reste dans la session', icon: 'refresh', tint: colors.redSoft, fg: colors.red },
     { key: 'soon', title: '10 min', note: 'Pour la revoir bientôt', icon: 'timer-outline', tint: colors.yellowSoft, fg: '#9A7412' },
-    { key: 'later', title: '1 h', note: 'Pour la revoir plus tard', icon: 'time-outline', tint: colors.blueSoft, fg: colors.blue },
-    { key: 'tomorrow', title: '1 jour', note: 'Pour la revoir demain', icon: 'calendar-outline', tint: colors.greenSoft, fg: colors.green },
+    { key: 'later', title: 'Jamais', note: 'Carte acquise : plus jamais revue', icon: 'checkmark-circle-outline', tint: colors.greenSoft, fg: colors.green },
+    { key: 'tomorrow', title: '1 jour', note: 'Pour la revoir demain', icon: 'calendar-outline', tint: colors.blueSoft, fg: colors.blue },
   ];
 
   return (
@@ -986,17 +987,21 @@ function SubjectSettingsScreen({ subject, onBack }: { subject: string; onBack: (
             <View key={timer.key} style={[styles.timerRow, index < timerRows.length - 1 && styles.timerRowBorder]}>
               <View style={[styles.timerIcon, { backgroundColor: timer.tint }]}><Ionicons name={timer.icon} size={20} color={timer.fg} /></View>
               <View style={styles.timerCopy}><Text style={styles.timerTitle}>{timer.title}</Text><Text style={styles.timerNote}>{timer.note}</Text></View>
-              <View style={styles.timerInputWrap}>
-                <TextInput
-                  accessibilityLabel={`Durée ${timer.title} en minutes`}
-                  value={String(delays[timer.key])}
-                  onChangeText={(value) => updateDelay(timer.key, value)}
-                  keyboardType="number-pad"
-                  selectTextOnFocus
-                  style={styles.timerInput}
-                />
-                <Text style={styles.timerUnit}>min</Text>
-              </View>
+              {timer.key === 'later' ? (
+                <Text style={[styles.timerUnit, { color: colors.green, fontWeight: '800' }]}>Acquise</Text>
+              ) : (
+                <View style={styles.timerInputWrap}>
+                  <TextInput
+                    accessibilityLabel={`Durée ${timer.title} en minutes`}
+                    value={String(delays[timer.key])}
+                    onChangeText={(value) => updateDelay(timer.key, value)}
+                    keyboardType="number-pad"
+                    selectTextOnFocus
+                    style={styles.timerInput}
+                  />
+                  <Text style={styles.timerUnit}>min</Text>
+                </View>
+              )}
             </View>
           ))}
         </View>
@@ -1023,8 +1028,8 @@ function StatsScreen({ onBack }: { onBack: () => void }) {
   const breakdownRows: Array<{ key: keyof StatsSnapshot['breakdownToday']; label: string; icon: keyof typeof Ionicons.glyphMap; tint: string; fg: string }> = [
     { key: 'again', label: 'À la suite', icon: 'refresh', tint: colors.redSoft, fg: colors.red },
     { key: 'soon', label: 'Encore bientôt', icon: 'timer-outline', tint: colors.yellowSoft, fg: '#9A7412' },
-    { key: 'later', label: 'Plus tard', icon: 'time-outline', tint: colors.blueSoft, fg: colors.blue },
-    { key: 'tomorrow', label: 'Demain', icon: 'calendar-outline', tint: colors.greenSoft, fg: colors.green },
+    { key: 'later', label: 'Jamais', icon: 'checkmark-circle-outline', tint: colors.greenSoft, fg: colors.green },
+    { key: 'tomorrow', label: 'Demain', icon: 'calendar-outline', tint: colors.blueSoft, fg: colors.blue },
   ];
 
   return (
@@ -1048,7 +1053,7 @@ function StatsScreen({ onBack }: { onBack: () => void }) {
             <View style={styles.statsBoardCell}>
               <Text style={styles.statsBoardLabel}>CARTES APPRISES</Text>
               <Text style={styles.statsBoardNumber}>{stats.learnedToday}</Text>
-              <Text style={styles.statsBoardCaption}>nouvelles · « Plus tard » ou « Demain »</Text>
+              <Text style={styles.statsBoardCaption}>nouvelles · « Demain » ou « Jamais »</Text>
             </View>
           </View>
         </View>
@@ -1088,7 +1093,7 @@ function StatsScreen({ onBack }: { onBack: () => void }) {
         <View style={styles.sectionHeaderCompact}>
           <View>
             <Text style={styles.sectionTitle}>Réponses du jour</Text>
-            <Text style={styles.sectionCaption}>{mastery}% « Plus tard » ou « Demain » : tu maîtrises</Text>
+            <Text style={styles.sectionCaption}>{mastery}% « Demain » ou « Jamais » : tu maîtrises</Text>
           </View>
         </View>
         <View style={styles.timerList}>
@@ -1269,7 +1274,9 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
     await recordReview(current.id, delay);
     setReviewed((value) => value + 1);
     setRevealed(false);
-    if (delay === 0) {
+    if (delay < 0) {
+      setQueue((items) => items.slice(1));
+    } else if (delay === 0) {
       setQueue((items) => insertLaterInQueue(items.slice(1), current));
     } else {
       setQueue((items) => items.slice(1));
