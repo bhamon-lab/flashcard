@@ -10,6 +10,8 @@ liste vers le bas).
 decks/
   maths/
     6e-nombres.json … 3e-trigonometrie.json   (catalogue collège)
+  physique/
+    5e-formules-essentielles.json … term-spe-formules-essentielles.json
   anglais/
     6e-vocab-salutations.json … term-grammaire-emphase-synthese.json
   histoire/
@@ -70,6 +72,18 @@ listes.
 Consulter l'[arbre de progression en anglais](../docs/progression-anglais.md)
 pour les parcours conseillés, les prérequis et les principes de conception.
 Vérifier avec `python3 scripts/validate_english_decks.py`.
+
+## Physique du collège au lycée
+
+Le premier catalogue de physique contient **6 decks et 94 cartes**, de la 5e
+à la terminale spécialité. Il est volontairement limité aux relations
+mathématiques de physique à mémoriser : toutes les cartes portent le type
+`formule`. Les attendus nationaux du cycle 4 sont répartis en trois étapes
+pédagogiques, une par classe : 5e, 4e et 3e.
+
+Consulter l'[arbre de progression en physique](../docs/progression-physique.md)
+et le [graphe de curriculum](../curriculum/physique.json).
+Vérifier avec `python3 scripts/validate_physics_decks.py`.
 
 ## Histoire du collège au lycée
 
