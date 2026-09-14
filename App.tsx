@@ -29,6 +29,7 @@ import {
   getDecks,
   getDecksByIds,
   getCurriculumOverrides,
+  getDeckReversedPref,
   getHideLearnedPref,
   getNewCards,
   getLevelRange,
@@ -37,6 +38,7 @@ import {
   getStatsSnapshot,
   getSubjectDelays,
   getSubjectPrefs,
+  getReversedDeckIds,
   initializeDatabase,
   markCardSeen,
   NEVER_DELAY_MINUTES,
@@ -48,6 +50,7 @@ import {
   setHideLearnedPref,
   setSubjectPrefs,
   setSubjectDelays,
+  setDeckReversedPref,
   updateDailyLimit,
 } from './src/db';
 import { colors, mono, radius } from './src/theme';
@@ -86,6 +89,16 @@ const cardHint = (card: Card) => {
   const verb = VERB_FRONT_DASH.exec(card.first_name);
   return verb && card.context ? verb[1] : card.context;
 };
+
+/** Vue inversée d'une carte : la réponse devient la question. Le schéma et l'audio
+ * restent attachés au recto d'origine : ils sont retirés pour ne pas révéler la réponse. */
+const reverseCard = (card: Card): Card => ({
+  ...card,
+  first_name: card.last_name,
+  last_name: card.first_name,
+  photo_uri: '',
+  audio_text: '',
+});
 
 const formatDelay = (minutes: number) => {
   if (minutes === 0) return 'Immédiatement';
@@ -853,6 +866,16 @@ function DeckScreen({ deckId, onBack, onStudy }: { deckId: number; onBack: (subj
   const [editorCard, setEditorCard] = useState<Card | null | undefined>(undefined);
   const [query, setQuery] = useState('');
   const [manualNewCards, setManualNewCards] = useState<number | null>(null);
+  // Option « Inverser question et réponse » : appliquée aux sessions de ce paquet.
+  const [reversed, setReversed] = useState(false);
+  useEffect(() => { void getDeckReversedPref(deckId).then(setReversed); }, [deckId]);
+  const toggleReversed = () => {
+    setReversed((value) => {
+      const next = !value;
+      void setDeckReversedPref(deckId, next);
+      return next;
+    });
+  };
   const load = useCallback(async () => {
     const [nextDeck, nextCards] = await Promise.all([getDeck(deckId), getCards(deckId)]);
     setDeck(nextDeck); setCards(nextCards);
@@ -918,6 +941,19 @@ function DeckScreen({ deckId, onBack, onStudy }: { deckId: number; onBack: (subj
               <Pressable onPress={() => changeLimit(1)} style={styles.stepperButton}><Ionicons name="add" size={18} color={colors.ink} /></Pressable>
             </View>
           </View>
+          <Pressable
+            onPress={toggleReversed}
+            accessibilityRole="button"
+            accessibilityLabel={reversed ? 'Ne plus inverser question et réponse' : 'Inverser question et réponse'}
+            style={({ pressed }) => [styles.reverseRow, reversed && styles.reverseRowOn, pressed && styles.pressed]}
+          >
+            <View style={styles.reverseIcon}><Ionicons name="swap-horizontal" size={17} color={reversed ? colors.blue : colors.muted} /></View>
+            <View style={styles.reverseCopy}>
+              <Text style={styles.reverseTitle}>Inverser question et réponse</Text>
+              <Text style={styles.reverseNote}>{reversed ? 'La réponse s’affiche comme question' : 'Réviser dans le sens question → réponse'}</Text>
+            </View>
+            <Ionicons name={reversed ? 'checkbox' : 'square-outline'} size={22} color={reversed ? colors.blue : colors.muted} />
+          </Pressable>
           <PrimaryButton label={sessionCount ? `Commencer · ${sessionCount} carte${sessionCount > 1 ? 's' : ''}` : 'Lancer une session'} icon="play" onPress={() => onStudy(newCardsToAdd, deck.subject)} />
         </View>
 
@@ -1235,6 +1271,8 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
   const [manualOpen, setManualOpen] = useState(false);
   const [rating, setRating] = useState(false);
   const [smallPhoto, setSmallPhoto] = useState(false);
+  // Paquets dont l'option « Inverser question et réponse » est active.
+  const [reversedDeckIds, setReversedDeckIds] = useState<Set<number>>(new Set());
   const reviewTimers = useRef<Set<ReturnType<typeof setTimeout>>>(new Set());
 
   useEffect(() => () => {
@@ -1243,13 +1281,12 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
   }, []);
 
   useEffect(() => {
-    Promise.all([getDecksByIds(deckIds), getSessionCards(deckIds, newCardAllowance)]).then(([nextDecks, cards]) => {
-      setDecks(nextDecks); setQueue(cards); setLoading(false);
+    Promise.all([getDecksByIds(deckIds), getSessionCards(deckIds, newCardAllowance), getReversedDeckIds()]).then(([nextDecks, cards, reversedIds]) => {
+      setDecks(nextDecks); setQueue(cards); setReversedDeckIds(reversedIds); setLoading(false);
     });
   }, [deckIds, newCardAllowance]);
 
   const current = queue[0];
-  const isListeningCard = Boolean(current?.audio_text);
   const audioLanguage = useMemo(() => {
     const deck = decks.find((entry) => entry.id === current?.deck_id);
     return deck?.audio_language || 'en-GB';
@@ -1260,17 +1297,18 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
 
   // Compréhension orale : le mot est prononcé dès l'affichage de la carte,
   // et la lecture s'arrête au changement de carte ou à la sortie de session.
+  // En sens inversé le mot est la réponse : aucune prononciation automatique.
   useEffect(() => {
-    if (!current?.audio_text) return;
+    if (!current?.audio_text || reversedDeckIds.has(current.deck_id)) return;
     const timer = setTimeout(() => speakAudioText(current.audio_text, audioLanguage), 300);
     return () => {
       clearTimeout(timer);
       stopSpeaking();
     };
-  }, [current?.id, current?.audio_text, audioLanguage]);
+  }, [current?.id, current?.audio_text, reversedDeckIds, audioLanguage]);
   useEffect(() => {
     setSmallPhoto(false);
-    if (!current?.photo_uri) return;
+    if (!current?.photo_uri || reversedDeckIds.has(current.deck_id)) return;
 
     let active = true;
     Image.getSize(current.photo_uri)
@@ -1279,7 +1317,7 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
       })
       .catch(() => {});
     return () => { active = false; };
-  }, [current?.id, current?.photo_uri]);
+  }, [current?.id, current?.photo_uri, reversedDeckIds]);
 
   useEffect(() => {
     setHintShown(false);
@@ -1362,8 +1400,13 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
     );
   }
 
-  const question = cardQuestion(current);
-  const cardHintText = cardHint(current);
+  // Carte vue en session : inversée pour les paquets concernés. Les cartes sans
+  // réponse (aucun verso) restent à l'endroit, faute de question à afficher.
+  const isReversedCard = reversedDeckIds.has(current.deck_id) && Boolean(current.last_name.trim());
+  const view = isReversedCard ? reverseCard(current) : current;
+  const isListeningCard = Boolean(view.audio_text);
+  const question = cardQuestion(view);
+  const cardHintText = cardHint(view);
 
   return (
     <SafeAreaView style={styles.studyScreen} edges={['top', 'bottom']}>
@@ -1375,26 +1418,26 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
       <View style={styles.studyProgress}><View style={[styles.studyProgressFill, { width: `${Math.max(8, 100 / Math.max(queue.length, 1))}%` }]} /></View>
       <View style={styles.studyContent}>
         <View style={[styles.flashCard, smallPhoto && styles.flashCardSmall]}>
-          {current.photo_uri ? <Image source={{ uri: current.photo_uri }} style={styles.flashImage} resizeMode="cover" /> : null}
-          {current.photo_uri ? <View style={styles.photoShade} /> : null}
+          {view.photo_uri ? <Image source={{ uri: view.photo_uri }} style={styles.flashImage} resizeMode="cover" /> : null}
+          {view.photo_uri ? <View style={styles.photoShade} /> : null}
           {revealed ? (
             <View style={styles.answerPaper}>
               <Text style={styles.answerEyebrow}>RÉPONSE</Text>
-              {current.last_name ? (
-                hasMath(current.last_name)
-                  ? <MathView text={current.last_name} fontSize={22} />
-                  : <Text style={styles.answerText}>{current.last_name}</Text>
+              {view.last_name ? (
+                hasMath(view.last_name)
+                  ? <MathView text={view.last_name} fontSize={22} />
+                  : <Text style={styles.answerText}>{view.last_name}</Text>
               ) : null}
-              {current.context ? (!current.last_name ? (
-                hasMath(current.context)
-                  ? <MathView text={current.context} fontSize={22} />
-                  : <Text style={styles.answerText}>{current.context}</Text>
+              {view.context ? (!view.last_name ? (
+                hasMath(view.context)
+                  ? <MathView text={view.context} fontSize={22} />
+                  : <Text style={styles.answerText}>{view.context}</Text>
               ) : (
-                hasMath(current.context)
-                  ? <MathView text={current.context} fontSize={15} color={colors.muted} />
-                  : <Text style={styles.answerNote}>{current.context}</Text>
+                hasMath(view.context)
+                  ? <MathView text={view.context} fontSize={15} color={colors.muted} />
+                  : <Text style={styles.answerNote}>{view.context}</Text>
               )) : null}
-              {!current.last_name && !current.context ? <Text style={styles.answerText}>Pas de réponse enregistrée</Text> : null}
+              {!view.last_name && !view.context ? <Text style={styles.answerText}>Pas de réponse enregistrée</Text> : null}
               {isListeningCard ? (
                 <Pressable
                   accessibilityRole="button"
@@ -1403,12 +1446,12 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
                   style={({ pressed }) => [styles.answerAudioRow, pressed && styles.pressed]}
                 >
                   <Ionicons name="volume-high" size={17} color={colors.blue} />
-                  <Text style={styles.answerAudioText}>{current.audio_text}</Text>
+                  <Text style={styles.answerAudioText}>{view.audio_text}</Text>
                 </Pressable>
               ) : null}
             </View>
-          ) : current.photo_uri ? (
-            <View style={styles.questionStrip}><Text style={styles.questionStripText} numberOfLines={3}>{current.first_name}</Text></View>
+          ) : view.photo_uri ? (
+            <View style={styles.questionStrip}><Text style={styles.questionStripText} numberOfLines={3}>{view.first_name}</Text></View>
           ) : isListeningCard ? (
             <View style={styles.questionStage}>
               <Text style={styles.questionEyebrow}>COMPRÉHENSION ORALE</Text>
@@ -1430,7 +1473,7 @@ function StudyScreen({ deckIds, newCardAllowance, onClose }: { deckIds: number[]
                 : <Text style={styles.questionBig}>{question}</Text>}
             </View>
           )}
-          {!revealed && current.photo_uri ? <View style={styles.questionBadge}><Ionicons name="help" size={20} color={colors.blue} /></View> : null}
+          {!revealed && view.photo_uri ? <View style={styles.questionBadge}><Ionicons name="help" size={20} color={colors.blue} /></View> : null}
           {!revealed && cardHintText ? (
             <Pressable
               accessibilityRole="button"
@@ -1745,6 +1788,12 @@ const styles = StyleSheet.create({
   stepper: { height: 39, flexDirection: 'row', borderRadius: 10, borderWidth: 1, borderColor: colors.line, alignItems: 'center', overflow: 'hidden' },
   stepperButton: { width: 37, height: '100%', alignItems: 'center', justifyContent: 'center', backgroundColor: '#F7F8FA' },
   stepperValue: { width: 34, textAlign: 'center', fontWeight: '700', color: colors.ink, fontFamily: mono },
+  reverseRow: { minHeight: 52, flexDirection: 'row', alignItems: 'center', gap: 11, borderRadius: 13, borderWidth: 1, borderColor: colors.line, backgroundColor: '#F7F8FA', paddingHorizontal: 12, paddingVertical: 9, marginBottom: 17 },
+  reverseRowOn: { backgroundColor: colors.blueSoft, borderColor: 'rgba(47, 82, 218, 0.25)' },
+  reverseIcon: { width: 36, height: 36, borderRadius: 11, backgroundColor: colors.paper, alignItems: 'center', justifyContent: 'center' },
+  reverseCopy: { flex: 1, minWidth: 0 },
+  reverseTitle: { fontSize: 13.5, fontWeight: '800', color: colors.ink },
+  reverseNote: { fontSize: 11, color: colors.muted, marginTop: 2 },
   actionsRow: { flexDirection: 'row', gap: 7 },
   smallAction: { height: 36, paddingHorizontal: 10, borderRadius: 10, backgroundColor: colors.blueSoft, flexDirection: 'row', gap: 5, alignItems: 'center' },
   smallActionText: { fontSize: 12, fontWeight: '800', color: colors.blue },
