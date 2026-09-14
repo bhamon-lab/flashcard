@@ -28,6 +28,7 @@ import {
   getDeck,
   getDecks,
   getDecksByIds,
+  getHideLearnedPref,
   getNewCards,
   getProgressionFolds,
   getSessionCards,
@@ -39,6 +40,7 @@ import {
   resetDeckProgress,
   saveCard,
   setProgressionFolds,
+  setHideLearnedPref,
   setSubjectPrefs,
   updateDailyLimit,
   updateReviewDelays,
@@ -609,7 +611,9 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
   onCreate: (subject: string) => void;
 }) {
   const [decks, setDecks] = useState<Deck[]>([]);
-  const [hideLearned, setHideLearned] = useState(false);
+  // État du filtre « Masquer les terminés » : null tant que le choix sauvegardé n'est pas chargé.
+  const [hideLearned, setHideLearned] = useState<boolean | null>(null);
+  useEffect(() => { void getHideLearnedPref().then(setHideLearned); }, []);
   const [minLevel, setMinLevel] = useState(0);
   const [maxLevel, setMaxLevel] = useState(Number.MAX_SAFE_INTEGER);
   // Branches repliées de l'arbre de progression : null tant que l'état sauvegardé
@@ -680,6 +684,14 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
     });
   };
 
+  const toggleHideLearned = () => {
+    setHideLearned((value) => {
+      const next = !(value ?? false);
+      void setHideLearnedPref(next);
+      return next;
+    });
+  };
+
   const learnedCount = group.decks.filter(isDeckLearned).length;
   const dueTotal = group.decks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
   const newTotal = group.decks.reduce((sum, deck) => sum + Number(deck.new_count), 0);
@@ -734,7 +746,7 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate }: {
           <Text style={styles.sectionTitle}>{progression ? 'Arbre de progression' : 'Tous les paquets'}</Text>
           {group.decks.length ? (
             <Pressable
-              onPress={() => setHideLearned((value) => !value)}
+              onPress={toggleHideLearned}
               accessibilityRole="button"
               accessibilityLabel={hideLearned ? 'Afficher les paquets appris' : 'Masquer les paquets appris'}
               style={({ pressed }) => [styles.filterToggle, hideLearned && styles.filterToggleOn, pressed && styles.pressed]}
