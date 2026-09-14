@@ -1,0 +1,28 @@
+name: Trigger Web deploy
+
+on:
+  push:
+    tags:
+      - "*"
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  trigger_deploy:
+    name: Run the web deploy pipeline on the default branch
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Start the deploy pipeline
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          gh workflow run publish-web-deploy.yml \
+            --repo "$REPOSITORY" \
+            --ref "$DEFAULT_BRANCH" \
+            -f "release_tag=$RELEASE_TAG"

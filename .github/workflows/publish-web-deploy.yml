@@ -1,0 +1,71 @@
+name: Build and deploy Web PWA
+run-name: Deploy Web PWA for ${{ inputs.release_tag }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Existing Git tag to deploy to reviz.bot.nu.
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Build and deploy PWA
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    environment: main
+    env:
+      RELEASE_TAG: ${{ inputs.release_tag }}
+      DEPLOY_SSH_HOST: 51.15.121.23
+      DEPLOY_SSH_USER: root
+      DEPLOY_SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
+
+    steps:
+      - name: Check out the default branch
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build the PWA
+        run: npm run build:web
+
+      - name: Set up SSH key
+        run: |
+          if [ -z "$DEPLOY_SSH_PRIVATE_KEY" ]; then
+            echo "Missing GitHub Actions secret: DEPLOY_SSH_PRIVATE_KEY" >&2
+            exit 1
+          fi
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_PRIVATE_KEY" > ~/.ssh/deploy_ed25519
+          chmod 600 ~/.ssh/deploy_ed25519
+          ssh-keyscan -H "$DEPLOY_SSH_HOST" >> ~/.ssh/known_hosts
+
+      - name: Deploy to the server
+        run: |
+          tar --no-xattrs -czf - -C dist . | ssh \
+            -i ~/.ssh/deploy_ed25519 \
+            -o IdentitiesOnly=yes \
+            "$DEPLOY_SSH_USER@$DEPLOY_SSH_HOST" /opt/reviz/deploy.sh
+
+      - name: Verify the deployment
+        run: |
+          sleep 2
+          status=$(curl -sS -o /dev/null -w '%{http_code}' https://reviz.bot.nu)
+          echo "https://reviz.bot.nu answered HTTP $status"
+          if [ "$status" != "200" ]; then
+            echo "Deployment verification failed" >&2
+            exit 1
+          fi
