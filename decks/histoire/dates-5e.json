@@ -1,0 +1,31 @@
+{
+  "id": "histoire-5e-dates",
+  "subject": "Histoire",
+  "title": "Histoire · 5e · Dates essentielles",
+  "description": "5e · 2026-2027 · Chrétientés, islam, Occident féodal et transformations de l'Europe.",
+  "format": "people",
+  "color": "#FBE3DE",
+  "daily_new_limit": 4,
+  "grade": "5e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "college-histoire-2026",
+  "cards": [
+    { "id": "hegire", "front": "622", "back": "Hégire : départ de Muhammad de La Mecque vers Médine ; début du calendrier musulman." },
+    { "id": "charlemagne", "front": "800", "back": "Couronnement impérial de Charlemagne à Rome." },
+    { "id": "verdun", "front": "843", "back": "Traité de Verdun : partage de l'Empire carolingien." },
+    { "id": "hugues-capet", "front": "987", "back": "Hugues Capet devient roi : début de la dynastie capétienne." },
+    { "id": "schisme", "front": "1054", "back": "Schisme entre les Églises catholique d'Occident et orthodoxe d'Orient." },
+    { "id": "premiere-croisade", "front": "1095-1099", "back": "Appel puis déroulement de la première croisade ; prise de Jérusalem en 1099." },
+    { "id": "bouvines", "front": "1214", "back": "Victoire de Philippe Auguste à Bouvines, qui renforce le pouvoir capétien." },
+    { "id": "saint-louis", "front": "1226-1270", "back": "Règne de Louis IX, dit Saint Louis." },
+    { "id": "bagdad", "front": "1258", "back": "Prise de Bagdad par les Mongols." },
+    { "id": "guerre-cent-ans", "front": "1337-1453", "back": "Guerre de Cent Ans entre les royaumes de France et d'Angleterre." },
+    { "id": "constantinople", "front": "1453", "back": "Prise de Constantinople par les Ottomans ; fin de l'Empire byzantin." },
+    { "id": "colomb", "front": "1492", "back": "Christophe Colomb atteint l'Amérique pour les monarchies espagnoles." },
+    { "id": "luther", "front": "1517", "back": "Publication des 95 thèses de Luther : début de la Réforme protestante." },
+    { "id": "villers-cotterets", "front": "1539", "back": "Ordonnance de Villers-Cotterêts : le français devient la langue des actes administratifs et judiciaires." },
+    { "id": "nantes", "front": "1598", "back": "Édit de Nantes accordant des droits de culte aux protestants du royaume de France." },
+    { "id": "regne-personnel", "front": "1661", "back": "Début du gouvernement personnel de Louis XIV." },
+    { "id": "revocation-nantes", "front": "1685", "back": "Révocation de l'édit de Nantes par Louis XIV." }
+  ]
+}

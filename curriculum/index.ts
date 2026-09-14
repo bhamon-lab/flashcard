@@ -4,9 +4,11 @@ import type { CurriculumData } from '../src/progression';
 import maths from './maths.json';
 import anglais from './anglais.json';
 import physique from './physique.json';
+import histoire from './histoire.json';
 
 export const CURRICULUMS: CurriculumData[] = [
   maths as CurriculumData,
   anglais as CurriculumData,
   physique as CurriculumData,
+  histoire as CurriculumData,
 ];

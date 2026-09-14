@@ -104,6 +104,14 @@ export async function initializeDatabase() {
   if (!existingColumns.has('grade')) {
     await db.execAsync('ALTER TABLE decks ADD COLUMN grade TEXT');
   }
+  if (!existingColumns.has('audio_language')) {
+    await db.execAsync("ALTER TABLE decks ADD COLUMN audio_language TEXT NOT NULL DEFAULT ''");
+  }
+
+  const cardColumns = await db.getAllAsync<{ name: string }>('PRAGMA table_info(cards)');
+  if (!cardColumns.some((column) => column.name === 'audio_text')) {
+    await db.execAsync("ALTER TABLE cards ADD COLUMN audio_text TEXT NOT NULL DEFAULT ''");
+  }
 
   const syncedAnswerFix = await db.getFirstAsync<{ value: string }>(
     "SELECT value FROM app_metadata WHERE key = 'synced-answer-field-fixed'",
@@ -510,6 +518,7 @@ export type SyncedCard = {
   front: string;
   back?: string;
   indice?: string;
+  audio_text?: string;
 };
 
 export type SyncedDeck = {
@@ -521,6 +530,8 @@ export type SyncedDeck = {
   daily_new_limit?: number;
   subject?: string;
   grade?: string;
+  mode?: string;
+  audio_language?: string;
   cards: SyncedCard[];
 };
 
@@ -542,22 +553,23 @@ export async function upsertSyncedDeck(deck: SyncedDeck): Promise<'created' | 'u
   const description = deck.description?.trim() ?? '';
   const subject = deck.subject?.trim() || 'Divers';
   const grade = deck.grade?.trim() || null;
+  const audioLanguage = deck.mode === 'listening' && deck.audio_language?.trim() ? deck.audio_language.trim() : '';
 
   const existing = await db.getFirstAsync<{ id: number }>('SELECT id FROM decks WHERE sync_id = ?', deck.id);
   let deckId: number;
   let outcome: 'created' | 'updated';
   if (existing) {
     await db.runAsync(
-      'UPDATE decks SET title = ?, description = ?, color = ?, kind = ?, daily_new_limit = ?, subject = ?, grade = ? WHERE id = ?',
-      deck.title, description, color, kind, dailyNewLimit, subject, grade, existing.id,
+      'UPDATE decks SET title = ?, description = ?, color = ?, kind = ?, daily_new_limit = ?, subject = ?, grade = ?, audio_language = ? WHERE id = ?',
+      deck.title, description, color, kind, dailyNewLimit, subject, grade, audioLanguage, existing.id,
     );
     deckId = existing.id;
     outcome = 'updated';
   } else {
     const inserted = await db.runAsync(
-      `INSERT INTO decks (title, description, color, daily_new_limit, kind, sync_id, subject, grade, created_at)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-      deck.title, description, color, dailyNewLimit, kind, deck.id, subject, grade, Date.now(),
+      `INSERT INTO decks (title, description, color, daily_new_limit, kind, sync_id, subject, grade, audio_language, created_at)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      deck.title, description, color, dailyNewLimit, kind, deck.id, subject, grade, audioLanguage, Date.now(),
     );
     deckId = inserted.lastInsertRowId;
     outcome = 'created';
@@ -568,21 +580,22 @@ export async function upsertSyncedDeck(deck: SyncedDeck): Promise<'created' | 'u
       const front = card.front.trim();
       const back = card.back?.trim() ?? '';
       const indice = card.indice?.trim() ?? '';
+      const audioText = audioLanguage ? card.audio_text?.trim() ?? '' : '';
       const externalId = `${deck.id}:${card.id}`;
       const existingCard = await db.getFirstAsync<{ id: number }>(
         'SELECT id FROM cards WHERE deck_id = ? AND external_id = ?', deckId, externalId,
       );
       if (existingCard) {
         await db.runAsync(
-          'UPDATE cards SET first_name = ?, last_name = ?, context = ?, photo_uri = \'\' WHERE id = ?',
-          front, back, indice, existingCard.id,
+          'UPDATE cards SET first_name = ?, last_name = ?, context = ?, audio_text = ?, photo_uri = \'\' WHERE id = ?',
+          front, back, indice, audioText, existingCard.id,
         );
         continue;
       }
       const insertedCard = await db.runAsync(
-        `INSERT INTO cards (deck_id, first_name, last_name, context, photo_uri, external_id, created_at)
-         VALUES (?, ?, ?, ?, '', ?, ?)`,
-        deckId, front, back, indice, externalId, Date.now(),
+        `INSERT INTO cards (deck_id, first_name, last_name, context, audio_text, photo_uri, external_id, created_at)
+         VALUES (?, ?, ?, ?, ?, '', ?, ?)`,
+        deckId, front, back, indice, audioText, externalId, Date.now(),
       );
       await db.runAsync('INSERT INTO progress (card_id) VALUES (?)', insertedCard.lastInsertRowId);
     }

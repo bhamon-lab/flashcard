@@ -1,0 +1,28 @@
+{
+  "id": "histoire-6e-dates",
+  "subject": "Histoire",
+  "title": "Histoire · 6e · Dates essentielles",
+  "description": "6e · 2026-2027 · Préhistoire, premières civilisations, monde grec, Rome et monothéismes.",
+  "format": "people",
+  "color": "#FBE3DE",
+  "daily_new_limit": 4,
+  "grade": "6e",
+  "school_year": "2026-2027",
+  "curriculum_reference": "cycle3-histoire-2020",
+  "cards": [
+    { "id": "premiers-humains", "front": "Vers 3 millions d'années avant notre ère", "back": "Apparition des premiers représentants du genre Homo en Afrique." },
+    { "id": "neolithique", "front": "Vers 10 000 avant notre ère", "back": "Début du Néolithique : agriculture et sédentarisation au Proche-Orient." },
+    { "id": "ecriture", "front": "Vers 3 300 avant notre ère", "back": "Premières écritures en Mésopotamie." },
+    { "id": "huitieme-siecle", "front": "VIIIe siècle avant notre ère", "back": "Poèmes d'Homère, fondation traditionnelle de Rome et début de la colonisation grecque." },
+    { "id": "jeux-olympiques", "front": "776 avant notre ère", "back": "Premiers Jeux olympiques antiques traditionnellement attestés." },
+    { "id": "republique-romaine", "front": "509 avant notre ère", "back": "Fondation traditionnelle de la République romaine." },
+    { "id": "athenes", "front": "Ve siècle avant notre ère", "back": "Apogée de la démocratie athénienne, notamment sous Périclès." },
+    { "id": "alesia", "front": "52 avant notre ère", "back": "Victoire de César à Alésia et défaite de Vercingétorix." },
+    { "id": "auguste", "front": "27 avant notre ère", "back": "Octave devient Auguste : début de l'Empire romain." },
+    { "id": "christianisme", "front": "Ier siècle", "back": "Naissance et diffusion du christianisme dans l'Empire romain." },
+    { "id": "temple-jerusalem", "front": "70", "back": "Destruction du second Temple de Jérusalem par les Romains." },
+    { "id": "caracalla", "front": "212", "back": "Édit de Caracalla : citoyenneté romaine accordée à presque tous les hommes libres de l'Empire." },
+    { "id": "milan", "front": "313", "back": "Édit de Milan : liberté de culte pour les chrétiens dans l'Empire romain." },
+    { "id": "fin-empire-occident", "front": "476", "back": "Fin de l'Empire romain d'Occident." }
+  ]
+}

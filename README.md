@@ -31,7 +31,7 @@ Réviz’ est une application de révision par cartes (flashcards) pour les él�
 
 ## Les paquets
 
-Les paquets sont des fichiers JSON versionnés dans le dossier [`decks/`](./decks), organisés par matière (`maths`, `anglais`, `francais`, `histoire`). L’application les télécharge depuis le dépôt GitHub : pas besoin de compte, ni de serveur dédié. Les scripts Python du dossier [`scripts/`](./scripts) permettent de générer et de valider les paquets.
+Les paquets sont des fichiers JSON versionnés dans le dossier [`decks/`](./decks), organisés par matière (`maths`, `anglais`, `histoire`). L’application les télécharge depuis le dépôt GitHub : pas besoin de compte, ni de serveur dédié. Les scripts Python du dossier [`scripts/`](./scripts) permettent de générer et de valider les paquets.
 
 Pour contribuer un paquet, ajoute un fichier JSON au bon endroit, valide-le avec le script adapté, puis ouvre une pull request.
 

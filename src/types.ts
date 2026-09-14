@@ -7,6 +7,8 @@ export type Deck = {
   subject: string;
   grade: string | null;
   sync_id: string | null;
+  /** Langue de synthèse vocale pour les paquets de compréhension orale (ex. « en-GB »), vide sinon. */
+  audio_language: string;
   daily_new_limit: number;
   again_delay_minutes: number;
   soon_delay_minutes: number;
@@ -26,6 +28,8 @@ export type Card = {
   last_name: string;
   context: string;
   photo_uri: string;
+  /** Texte à prononcer à voix haute (compréhension orale), vide sinon. */
+  audio_text: string;
   external_id: string | null;
   created_at: number;
   first_seen_at: number | null;
