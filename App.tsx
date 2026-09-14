@@ -31,6 +31,7 @@ import {
   getCurriculumOverrides,
   getHideLearnedPref,
   getNewCards,
+  getLevelRange,
   getProgressionExpands,
   getSessionCards,
   getStatsSnapshot,
@@ -42,6 +43,7 @@ import {
   recordReview,
   resetDeckProgress,
   saveCard,
+  setLevelRange,
   setProgressionExpands,
   setHideLearnedPref,
   setSubjectPrefs,
@@ -631,6 +633,14 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate, onSetti
   useEffect(() => { void getHideLearnedPref().then(setHideLearned); }, []);
   const [minLevel, setMinLevel] = useState(0);
   const [maxLevel, setMaxLevel] = useState(Number.MAX_SAFE_INTEGER);
+  // Fourchette de niveaux sauvegardée pour cette matière (indices d'étape du curseur).
+  useEffect(() => {
+    void getLevelRange(subject).then((range) => {
+      if (!range) return;
+      setMinLevel(range.min);
+      setMaxLevel(range.max);
+    });
+  }, [subject]);
   // Branches dépliées de l'arbre de progression : null tant que l'état sauvegardé n'est pas chargé,
   // et [] dans ce cas — l'arbre est ainsi replié par défaut.
   const [expandedBranches, setExpandedBranches] = useState<string[] | null>(null);
@@ -793,7 +803,7 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate, onSetti
             stops={stops}
             minIndex={rangeMin}
             maxIndex={rangeMax}
-            onChange={(min, max) => { setMinLevel(min); setMaxLevel(max); }}
+            onChange={(min, max) => { setMinLevel(min); setMaxLevel(max); void setLevelRange(group.name, min, max); }}
           />
         ) : null}
 
