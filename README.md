@@ -1,80 +1,55 @@
 # Réviz’
 
-**Des fiches de révision pour le collège et le lycée, dans ta poche.**
+**Révise un peu, souvent — et retiens plus longtemps.**
 
-Réviz’ est une application de révision par cartes (flashcards) pour les élèves de la 6e à la Terminale. Les paquets couvrent les maths, l’anglais, le français et l’histoire : lance une courte session, réponds aux cartes du jour, et l’application te proposera de revoir chaque carte au bon moment.
+Réviz’ est une application de flashcards pensée pour les élèves de la 6e à la Terminale. Choisis ta matière, réponds aux cartes du jour et laisse l’application te les reproposer avant que tu ne les oublies.
 
 <p align="center">
-  <img src="docs/screenshots/home.png" alt="Accueil de Réviz’" width="30%" />
+  <img src="docs/screenshots/home.png" alt="Les matières disponibles sur l’accueil de Réviz’" width="30%" />
   &nbsp;
-  <img src="docs/screenshots/deck-list.png" alt="L’arbre de progression dans Réviz’" width="30%" />
+  <img src="docs/screenshots/deck-list.png" alt="La sélection de paquets de révision en mathématiques" width="30%" />
   &nbsp;
-  <img src="docs/screenshots/study.png" alt="Une session de révision dans Réviz’" width="30%" />
+  <img src="docs/screenshots/study.png" alt="Le choix du moment de la prochaine révision d’une carte" width="30%" />
 </p>
 
-## Comment ça marche ?
+## Pour réviser à ton rythme
 
-1. **Choisis un paquet** dans l’arbre de progression (par matière et par niveau), ou lance une session mixte.
-2. **Réponds aux cartes du jour** : formule ta réponse, retourne la carte, compare.
-3. **Évalue-toi** : la carte revient immédiatement, demain ou plus tard selon ton niveau de certitude.
-4. **Reviens chaque jour** : les cartes se présentent au moment où tu risques de les oublier.
+Que tu prépares un contrôle, le brevet ou le bac, Réviz’ t’aide à transformer quelques minutes disponibles en vraie révision. Les cartes déjà acquises s’espacent ; celles qui te posent problème reviennent plus vite.
 
-## Ce que tu peux faire
+- choisis parmi les matières et les niveaux qui te concernent ;
+- révise un thème précis ou lance une session qui mélange toute une matière ;
+- retourne la carte après avoir cherché la réponse, puis indique si tu veux la revoir tout de suite, bientôt, demain ou plus tard ;
+- suis ce qu’il reste à apprendre, sans avoir à organiser toi-même ton planning.
 
-- réviser par matière et par niveau (6e à Terminale) grâce à l’arbre de progression ;
-- lancer une session sur un paquet ou sur plusieurs paquets à la fois ;
-- lire les formules mathématiques en LaTeX, rendues avec KaTeX ;
-- créer, modifier et supprimer tes propres cartes ;
-- suivre ta progression globale et masquer les paquets déjà maîtrisés ;
-- synchroniser les paquets depuis le dépôt GitHub, ou réviser hors ligne ;
-- régler les délais de révision et le nombre de cartes par session.
+## Des contenus pour le collège et le lycée
 
-## Les paquets
+Les paquets de révision couvrent actuellement les maths, l’anglais, l’histoire et la physique, de la 6e à la Terminale. Tu peux parcourir les thèmes et les classes dans l’ordre qui te convient : rien n’est bloqué.
 
-Les paquets sont des fichiers JSON versionnés dans le dossier [`decks/`](./decks), organisés par matière (`maths`, `anglais`, `histoire`). L’application les télécharge depuis le dépôt GitHub : pas besoin de compte, ni de serveur dédié. Les scripts Python du dossier [`scripts/`](./scripts) permettent de générer et de valider les paquets.
+Les formules de maths sont affichées clairement, et tu peux aussi créer tes propres cartes pour retenir une définition, une date, du vocabulaire ou une méthode.
 
-Pour contribuer un paquet, ajoute un fichier JSON au bon endroit, valide-le avec le script adapté, puis ouvre une pull request.
+## Une session, en trois gestes
 
-## Tes données restent sur ton appareil
+1. Ouvre une matière ou un paquet.
+2. Cherche la réponse avant de révéler la carte.
+3. Choisis quand tu souhaites la revoir. Réviz’ prépare la suite pour toi.
 
-Ta progression est enregistrée localement (SQLite). Réviz’ ne nécessite pas de compte et n’envoie aucune donnée personnelle vers un service distant : seule la synchronisation des paquets interroge GitHub, en lecture seule.
+L’idée n’est pas de tout faire d’un coup : quelques cartes régulièrement sont plus efficaces qu’une longue session la veille d’un contrôle.
 
-## Installation
+## Tes données, sur ton appareil
 
-### Android
+Réviz’ ne demande pas de compte. Ta progression et tes cartes personnelles restent enregistrées sur ton téléphone. L’application peut récupérer les nouveaux paquets de révision depuis GitHub, en lecture seule ; aucune donnée personnelle n’y est envoyée.
+
+## Installer Réviz’ sur Android
 
 Télécharge la dernière version depuis la page des [versions de Réviz’](https://github.com/bhamon-lab/flashcard/releases/latest), puis ouvre le fichier APK sur ton téléphone.
 
-Android peut demander l’autorisation d’installer une application provenant de ton navigateur ou de ton gestionnaire de fichiers.
+Android peut te demander d’autoriser l’installation d’applications depuis ton navigateur ou ton gestionnaire de fichiers. Cette autorisation ne concerne que la source depuis laquelle tu as téléchargé le fichier.
 
-### iPhone et développement
+Réviz’ n’est pas encore distribuée sur l’App Store.
 
-Il n’existe pas encore de version distribuée sur l’App Store. Pour essayer Réviz’ depuis le code source, consultez la section destinée aux contributeurs ci-dessous.
+## Besoin d’aide ?
 
-<details>
-<summary><strong>Lancer le projet depuis le code source</strong></summary>
-
-Le projet utilise Expo SDK 57. Après avoir installé Node.js :
-
-```bash
-npm install
-npm start
-```
-
-Scannez le QR code avec Expo Go, ou appuyez sur `i`, `a` ou `w` pour ouvrir respectivement les versions iOS, Android ou web.
-
-</details>
-
-<details>
-<summary><strong>Publier une version Android</strong></summary>
-
-La CI construit automatiquement l’APK signé lorsqu’un tag `vX.Y.Z` est poussé :
-
-1. le tag déclenche le workflow `android-release.yml` ;
-2. ce workflow lance `publish-android-release.yml` sur la branche par défaut ;
-3. le workflow met à jour la version depuis le tag, construit l’APK signé (Gradle + keystore fourni par les secrets du dépôt) et publie une release GitHub avec l’APK.
-
-</details>
+Pour signaler un problème ou proposer une amélioration, ouvre un [ticket sur le projet](https://github.com/bhamon-lab/flashcard/issues).
 
 ## Licence
 
