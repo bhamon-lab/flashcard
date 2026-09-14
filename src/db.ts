@@ -524,6 +524,15 @@ export type SyncedDeck = {
   cards: SyncedCard[];
 };
 
+/** Matières ayant au moins un deck synchronisé localement. */
+export async function getSyncedSubjects(): Promise<Set<string>> {
+  const db = await getDatabase();
+  const rows = await db.getAllAsync<{ subject: string }>(
+    'SELECT DISTINCT subject FROM decks WHERE sync_id IS NOT NULL',
+  );
+  return new Set(rows.map((row) => row.subject));
+}
+
 /** Crée ou met à jour un paquet synchronisé (et ses cartes) en conservant la progression. */
 export async function upsertSyncedDeck(deck: SyncedDeck): Promise<'created' | 'updated'> {
   const db = await getDatabase();

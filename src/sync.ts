@@ -1,9 +1,18 @@
 import Constants from 'expo-constants';
-import { removeDecksNotIn, setMetadata, upsertSyncedDeck, type SyncedDeck } from './db';
+import {
+  getMetadata,
+  getSyncedSubjects,
+  removeDecksNotIn,
+  setMetadata,
+  upsertSyncedDeck,
+  type SyncedDeck,
+} from './db';
 
 const DEFAULT_REPO = 'bhamon-lab/flashcard';
 const DECKS_PATH = 'decks';
 const LAST_SYNC_KEY = 'decks-last-sync';
+const FILE_STATE_KEY = 'decks-file-state';
+const BUNDLE_NAME = '_bundle.json';
 
 export type SyncResult = {
   created: number;
@@ -17,7 +26,16 @@ type GitHubContent = {
   name: string;
   type: string;
   path: string;
+  sha?: string;
   download_url: string | null;
+};
+
+/** État connu d'un fichier distant : SHA git du blob + id du deck importé. */
+type FileState = { sha: string; deckId: string };
+type FileStateMap = Record<string, FileState>;
+
+type BundlePayload = {
+  files?: { file?: unknown; sha?: unknown; raw?: unknown }[];
 };
 
 function repoIdentifier(): string {
@@ -90,14 +108,84 @@ async function listGithubContents(path: string): Promise<GitHubContent[]> {
   return entries;
 }
 
-async function fetchDeckFile(
-  entry: GitHubContent,
+async function readFileState(): Promise<FileStateMap> {
+  const raw = await getMetadata(FILE_STATE_KEY);
+  if (!raw) return {};
+  try {
+    return JSON.parse(raw) as FileStateMap;
+  } catch {
+    return {};
+  }
+}
+
+/** Reporte l'état d'un dossier (listing en échec) pour ne pas supprimer ses decks. */
+function carryState(previousState: FileStateMap, nextState: FileStateMap, prefix: string) {
+  for (const [key, state] of Object.entries(previousState)) {
+    if (key.startsWith(prefix)) nextState[key] = state;
+  }
+}
+
+/**
+ * Télécharge le bundle compact d'une matière (généré par le git hook, un seul
+ * fichier pour toute la matière). Renvoie null si le bundle est absent :
+ * l'appelant se replie alors sur le listing fichier à fichier.
+ */
+async function fetchBundleStates(
+  url: string,
   fallbackSubject: string,
+  label: string,
+  decks: SyncedDeck[],
+  errors: string[],
+): Promise<FileStateMap | null> {
+  let payload: BundlePayload;
+  try {
+    const response = await fetch(url);
+    if (response.status === 404) return null;
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    payload = (await response.json()) as BundlePayload;
+  } catch (error) {
+    errors.push(`${label}/${BUNDLE_NAME} : ${error instanceof Error ? error.message : 'illisible'}`);
+    return null;
+  }
+  if (!payload || !Array.isArray(payload.files)) return null;
+  const states: FileStateMap = {};
+  for (const entry of payload.files) {
+    const fileName = typeof entry?.file === 'string' ? entry.file : '';
+    const sha = typeof entry?.sha === 'string' ? entry.sha : '';
+    const deck = asDeck(entry?.raw, fileName || 'deck.json', fallbackSubject);
+    if (!deck || !sha) {
+      errors.push(`${label}/${fileName || '?'} : entrée de bundle invalide.`);
+      continue;
+    }
+    decks.push(deck);
+    states[`${label}/${fileName}`] = { sha, deckId: deck.id };
+  }
+  return states;
+}
+
+/**
+ * Synchronise un fichier distant : inchangé (SHA identique) → conservé sans
+ * re-téléchargement ; nouveau/modifié → téléchargé ; en échec → conservé
+ * tel quel pour éviter toute perte.
+ */
+async function syncFileEntry(
+  entry: GitHubContent,
+  key: string,
+  fallbackSubject: string,
+  previousState: FileStateMap,
+  nextState: FileStateMap,
   decks: SyncedDeck[],
   errors: string[],
 ): Promise<void> {
   if (entry.type !== 'file' || !entry.name.toLowerCase().endsWith('.json')) return;
+  if (entry.name === BUNDLE_NAME || entry.name.startsWith('_')) return;
+  const previous = previousState[key];
+  if (previous && entry.sha && previous.sha === entry.sha) {
+    nextState[key] = previous;
+    return;
+  }
   if (!entry.download_url) {
+    if (previous) nextState[key] = previous;
     errors.push(`${entry.name} : URL de téléchargement indisponible.`);
     return;
   }
@@ -105,42 +193,77 @@ async function fetchDeckFile(
     const fileResponse = await fetch(entry.download_url);
     if (!fileResponse.ok) throw new Error(`HTTP ${fileResponse.status}`);
     const deck = asDeck(await fileResponse.json(), entry.name, fallbackSubject);
-    if (deck) decks.push(deck);
-    else errors.push(`${entry.name} : format invalide (title et cards avec front requis).`);
+    if (!deck) {
+      if (previous) nextState[key] = previous;
+      errors.push(`${entry.name} : format invalide (title et cards avec front requis).`);
+      return;
+    }
+    decks.push(deck);
+    nextState[key] = { sha: entry.sha ?? '', deckId: deck.id };
   } catch (error) {
+    if (previous) nextState[key] = previous;
     errors.push(`${entry.name} : ${error instanceof Error ? error.message : 'illisible'}`);
   }
 }
 
-async function fetchRepoDecks(): Promise<{ decks: SyncedDeck[]; errors: string[] }> {
-  const errors: string[] = [];
-  const decks: SyncedDeck[] = [];
-  const entries = await listGithubContents(DECKS_PATH);
-  for (const entry of entries) {
-    if (entry.type === 'dir') {
-      try {
-        const subjectFiles = await listGithubContents(entry.path);
-        for (const file of subjectFiles) {
-          await fetchDeckFile(file, subjectFromFolder(entry.name), decks, errors);
-        }
-      } catch (error) {
-        errors.push(`${entry.name}/ : ${error instanceof Error ? error.message : 'illisible'}`);
-      }
-    } else {
-      // Ancienne organisation à plat : paquets sans dossier de matière.
-      await fetchDeckFile(entry, 'Divers', decks, errors);
-    }
-  }
-  return { decks, errors };
-}
-
 /**
  * Synchronise les decks du dossier `decks/` du dépôt GitHub vers la base locale :
- * chaque sous-dossier (ex. `decks/maths/`) devient une matière, les fichiers
+ * - matière absente localement → télécharge le bundle compact `_bundle.json`
+ *   généré par le git hook (une seule requête pour toute la matière) ;
+ * - matière déjà présente → compare les SHA des fichiers et ne télécharge que
+ *   les decks nouveaux ou modifiés.
+ * Chaque sous-dossier (ex. `decks/maths/`) devient une matière, les fichiers
  * JSON à la racine restent acceptés (matière « Divers »).
  */
 export async function syncDecks(): Promise<SyncResult> {
-  const { decks, errors } = await fetchRepoDecks();
+  const entries = await listGithubContents(DECKS_PATH);
+  const previousState = await readFileState();
+  const nextState: FileStateMap = {};
+  const decks: SyncedDeck[] = [];
+  const errors: string[] = [];
+  const localSubjects = await getSyncedSubjects();
+  const rawBase = `https://raw.githubusercontent.com/${repoIdentifier()}/HEAD/${DECKS_PATH}`;
+
+  for (const entry of entries) {
+    if (entry.type !== 'dir') continue;
+    const subject = subjectFromFolder(entry.name);
+    const prefix = `${entry.name}/`;
+    try {
+      if (!localSubjects.has(subject)) {
+        const bundleStates = await fetchBundleStates(
+          `${rawBase}/${entry.name}/${BUNDLE_NAME}`,
+          subject,
+          entry.name,
+          decks,
+          errors,
+        );
+        if (bundleStates) {
+          Object.assign(nextState, bundleStates);
+          continue;
+        }
+        // Pas de bundle (dépôt pas encore à jour) : repli fichier à fichier.
+      }
+      const subjectFiles = await listGithubContents(entry.path);
+      for (const file of subjectFiles) {
+        await syncFileEntry(file, prefix + file.name, subject, previousState, nextState, decks, errors);
+      }
+    } catch (error) {
+      carryState(previousState, nextState, prefix);
+      errors.push(`${entry.name}/ : ${error instanceof Error ? error.message : 'illisible'}`);
+    }
+  }
+
+  // Ancienne organisation à plat : paquets sans dossier de matière (« Divers »).
+  const rootBundle = entries.find((entry) => entry.type === 'file' && entry.name === BUNDLE_NAME);
+  if (rootBundle?.download_url && !localSubjects.has('Divers')) {
+    const bundleStates = await fetchBundleStates(rootBundle.download_url, 'Divers', BUNDLE_NAME, decks, errors);
+    if (bundleStates) Object.assign(nextState, bundleStates);
+  }
+  for (const entry of entries) {
+    if (entry.type !== 'file') continue;
+    await syncFileEntry(entry, entry.name, 'Divers', previousState, nextState, decks, errors);
+  }
+
   const result: SyncResult = { created: 0, updated: 0, removed: 0, total: decks.length, errors };
   for (const deck of decks) {
     try {
@@ -151,7 +274,9 @@ export async function syncDecks(): Promise<SyncResult> {
       result.errors.push(`${deck.title} : ${error instanceof Error ? error.message : 'échec de l’enregistrement'}`);
     }
   }
-  result.removed = await removeDecksNotIn(decks.map((deck) => deck.id));
+  const expectedIds = [...new Set(Object.values(nextState).map((state) => state.deckId))];
+  result.removed = await removeDecksNotIn(expectedIds);
+  await setMetadata(FILE_STATE_KEY, JSON.stringify(nextState));
   await setMetadata(LAST_SYNC_KEY, String(Date.now()));
   return result;
 }

@@ -1,0 +1,17 @@
+#!/bin/sh
+# Régénère les bundles compacts par matière (decks/<matiere>/_bundle.json)
+# juste avant un push. Les commits existants ne contiennent pas les bundles :
+# si la régénération produit des changements, un commit de build est créé
+# puis poussé automatiquement après le push en cours.
+node "$(dirname "$0")/../scripts/build-deck-bundles.mjs" || exit 1
+
+bundles=$(find decks -name '_bundle.json' -type f 2>/dev/null)
+[ -n "$bundles" ] || exit 0
+
+if git status --porcelain -- $bundles | grep -q .; then
+  git add -- $bundles
+  git commit -m "build: régénère les bundles de decks" -- $bundles || exit 1
+  echo "pre-push : bundles committés, push du commit de build…"
+  git push || echo "⚠ pre-push : le push du commit de bundles a échoué, relancez « git push »."
+fi
+exit 0
