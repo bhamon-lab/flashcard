@@ -566,7 +566,8 @@ function RangeSlider({ stops, minIndex, maxIndex, onChange }: {
 }) {
   const widthRef = useRef(0);
   const valueRef = useRef({ min: minIndex, max: maxIndex });
-  const activeRef = useRef<'min' | 'max' | null>(null);
+  const activeRef = useRef<'min' | 'max' | 'both' | null>(null);
+  const dragStartXRef = useRef(0);
   useEffect(() => { valueRef.current = { min: minIndex, max: maxIndex }; }, [minIndex, maxIndex]);
 
   const count = Math.max(stops.length - 1, 1);
@@ -579,21 +580,36 @@ function RangeSlider({ stops, minIndex, maxIndex, onChange }: {
     } else if (activeRef.current === 'max') {
       const next = Math.max(index, current.min);
       if (next !== current.max) { valueRef.current = { min: current.min, max: next }; onChange(current.min, next); }
+    } else if (activeRef.current === 'both') {
+      // Quand les deux poignées se superposent, le côté où l'on glisse décide
+      // laquelle déplacer. On peut donc toujours rouvrir la fourchette.
+      if (index < current.min) {
+        valueRef.current = { min: index, max: current.max };
+        onChange(index, current.max);
+      } else if (index > current.max) {
+        valueRef.current = { min: current.min, max: index };
+        onChange(current.min, index);
+      }
     }
   };
-  const panResponder = useRef(PanResponder.create({
+  const createThumbResponder = (thumb: 'min' | 'max' | 'both') => PanResponder.create({
+    // Les gestes ne sont capturés que dans une large zone autour d'une poignée :
+    // le reste de la carte continue ainsi à défiler naturellement.
     onStartShouldSetPanResponder: () => true,
     onMoveShouldSetPanResponder: () => true,
-    onPanResponderGrant: (event) => {
-      const index = indexForX(event.nativeEvent.locationX);
+    onPanResponderGrant: () => {
+      activeRef.current = thumb;
       const current = valueRef.current;
-      activeRef.current = Math.abs(index - current.min) <= Math.abs(index - current.max) ? 'min' : 'max';
-      apply(index);
+      const index = thumb === 'min' ? current.min : thumb === 'max' ? current.max : current.min;
+      dragStartXRef.current = (index / count) * widthRef.current;
     },
-    onPanResponderMove: (event) => apply(indexForX(event.nativeEvent.locationX)),
+    onPanResponderMove: (_event, gestureState) => apply(indexForX(dragStartXRef.current + gestureState.dx)),
     onPanResponderRelease: () => { activeRef.current = null; },
     onPanResponderTerminate: () => { activeRef.current = null; },
-  })).current;
+  });
+  const minPanResponder = useRef(createThumbResponder('min')).current;
+  const maxPanResponder = useRef(createThumbResponder('max')).current;
+  const overlapPanResponder = useRef(createThumbResponder('both')).current;
 
   const percent = (index: number): `${number}%` => `${(index / count) * 100}%`;
 
@@ -604,21 +620,55 @@ function RangeSlider({ stops, minIndex, maxIndex, onChange }: {
         <Text style={styles.rangeCaption}>{stops[minIndex].label} → {stops[maxIndex].label}</Text>
       </View>
       <View
-        {...panResponder.panHandlers}
         onLayout={(event) => { widthRef.current = event.nativeEvent.layout.width; }}
         style={styles.rangeTrackArea}
-        accessibilityRole="adjustable"
-        accessibilityLabel={`Niveaux de ${stops[minIndex].label} à ${stops[maxIndex].label}`}
-        accessibilityActions={[{ name: 'increment' }, { name: 'decrement' }]}
-        onAccessibilityAction={(event) => {
-          if (event.nativeEvent.actionName === 'increment') onChange(minIndex, Math.min(maxIndex + 1, count));
-          if (event.nativeEvent.actionName === 'decrement') onChange(minIndex, Math.max(maxIndex - 1, minIndex));
-        }}
       >
         <View style={styles.rangeTrack} />
         <View style={[styles.rangeFill, { left: percent(minIndex), width: `${((maxIndex - minIndex) / count) * 100}%` }]} />
-        <View style={[styles.rangeThumb, { left: percent(minIndex) }]} />
-        <View style={[styles.rangeThumb, { left: percent(maxIndex) }]} />
+        {minIndex === maxIndex ? (
+          <View
+            {...overlapPanResponder.panHandlers}
+            style={[styles.rangeThumbHitArea, { left: percent(minIndex) }]}
+            accessibilityRole="adjustable"
+            accessibilityLabel={`Niveau ${stops[minIndex].label}`}
+            accessibilityActions={[{ name: 'increment' }, { name: 'decrement' }]}
+            onAccessibilityAction={(event) => {
+              if (event.nativeEvent.actionName === 'increment') onChange(minIndex, Math.min(maxIndex + 1, count));
+              if (event.nativeEvent.actionName === 'decrement') onChange(Math.max(minIndex - 1, 0), maxIndex);
+            }}
+          >
+            <View style={styles.rangeThumb} />
+          </View>
+        ) : (
+          <>
+            <View
+              {...minPanResponder.panHandlers}
+              style={[styles.rangeThumbHitArea, { left: percent(minIndex) }]}
+              accessibilityRole="adjustable"
+              accessibilityLabel={`Niveau minimum : ${stops[minIndex].label}`}
+              accessibilityActions={[{ name: 'increment' }, { name: 'decrement' }]}
+              onAccessibilityAction={(event) => {
+                const next = event.nativeEvent.actionName === 'increment' ? Math.min(minIndex + 1, maxIndex) : Math.max(minIndex - 1, 0);
+                onChange(next, maxIndex);
+              }}
+            >
+              <View style={styles.rangeThumb} />
+            </View>
+            <View
+              {...maxPanResponder.panHandlers}
+              style={[styles.rangeThumbHitArea, { left: percent(maxIndex) }]}
+              accessibilityRole="adjustable"
+              accessibilityLabel={`Niveau maximum : ${stops[maxIndex].label}`}
+              accessibilityActions={[{ name: 'increment' }, { name: 'decrement' }]}
+              onAccessibilityAction={(event) => {
+                const next = event.nativeEvent.actionName === 'increment' ? Math.min(maxIndex + 1, count) : Math.max(maxIndex - 1, minIndex);
+                onChange(minIndex, next);
+              }}
+            >
+              <View style={styles.rangeThumb} />
+            </View>
+          </>
+        )}
       </View>
       <View style={styles.rangeStopsRow}>
         {stops.map((stop, index) => (
@@ -2067,7 +2117,8 @@ const styles = StyleSheet.create({
   rangeTrackArea: { height: 34, justifyContent: 'center' },
   rangeTrack: { position: 'absolute', left: 0, right: 0, height: 4, borderRadius: 2, backgroundColor: '#E8E9EC' },
   rangeFill: { position: 'absolute', height: 4, borderRadius: 2, backgroundColor: colors.blue },
-  rangeThumb: { position: 'absolute', width: 22, height: 22, borderRadius: 11, backgroundColor: colors.paper, borderWidth: 2, borderColor: colors.blue, transform: [{ translateX: -11 }] },
+  rangeThumbHitArea: { position: 'absolute', width: 48, height: 48, top: -7, alignItems: 'center', justifyContent: 'center', transform: [{ translateX: -24 }] },
+  rangeThumb: { width: 22, height: 22, borderRadius: 11, backgroundColor: colors.paper, borderWidth: 2, borderColor: colors.blue },
   rangeStopsRow: { flexDirection: 'row', justifyContent: 'space-between', marginTop: 8 },
   rangeStopLabel: { fontSize: 10, fontWeight: '700', color: colors.muted },
   rangeStopLabelOn: { color: colors.blue },
