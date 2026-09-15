@@ -35,6 +35,7 @@ import {
   getLevelRange,
   getProgressionExpands,
   getSessionCards,
+  getSessionGroups,
   getStatsSnapshot,
   getSubjectDelays,
   getSubjectPrefs,
@@ -47,6 +48,7 @@ import {
   saveCard,
   setLevelRange,
   setProgressionExpands,
+  setSessionGroups as persistSessionGroups,
   setHideLearnedPref,
   setSubjectPrefs,
   setSubjectDelays,
@@ -632,6 +634,68 @@ function RangeSlider({ stops, minIndex, maxIndex, onChange }: {
   );
 }
 
+/** Fenêtre de choix des groupes de paquets (branches de l'arbre) mélangés dans la session de matière. */
+function SessionGroupsModal({ visible, branches, selected, onClose, onChange }: {
+  visible: boolean;
+  branches: ProgressionBranch[];
+  selected: string[] | null;
+  onClose: () => void;
+  onChange: (groups: string[] | null) => void;
+}) {
+  const base = selected ?? branches.map((branch) => branch.title);
+  const selectedKeys = new Set(base.map((title) => title.toLowerCase()));
+  const toggle = (title: string) => {
+    const key = title.toLowerCase();
+    onChange(selectedKeys.has(key) ? base.filter((entry) => entry.toLowerCase() !== key) : [...base, title]);
+  };
+
+  return (
+    <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
+      <Pressable style={styles.scrim} onPress={onClose}>
+        <Pressable style={styles.sheet} onPress={() => {}}>
+          <View style={styles.sheetHandle} />
+          <Text style={styles.sheetTitle}>Groupes à réviser</Text>
+          <Text style={styles.sheetText}>Choisis les groupes de paquets mélangés dans la session de matière. Les filtres de niveaux continuent de s’appliquer.</Text>
+          {selected !== null ? (
+            <Pressable
+              onPress={() => onChange(null)}
+              accessibilityRole="button"
+              accessibilityLabel="Tout sélectionner"
+              style={[styles.smallAction, styles.sessionGroupAll]}
+            >
+              <Ionicons name="checkbox-outline" size={15} color={colors.blue} />
+              <Text style={styles.smallActionText}>Tout sélectionner</Text>
+            </Pressable>
+          ) : null}
+          <ScrollView style={styles.sessionGroupList} nestedScrollEnabled>
+            {branches.map((branch, index) => {
+              const checked = selectedKeys.has(branch.title.toLowerCase());
+              const deckCount = branch.levels.reduce((sum, level) => sum + level.tracks.reduce((acc, track) => acc + track.decks.length, 0), 0);
+              return (
+                <Pressable
+                  key={branch.title}
+                  onPress={() => toggle(branch.title)}
+                  accessibilityRole="checkbox"
+                  accessibilityState={{ checked }}
+                  accessibilityLabel={`${checked ? 'Retirer' : 'Ajouter'} ${branch.title} ${checked ? 'de la session' : 'à la session'}`}
+                  style={[styles.sessionGroupRow, index < branches.length - 1 && styles.subjectEditorRowBorder]}
+                >
+                  <Ionicons name={checked ? 'checkbox' : 'square-outline'} size={22} color={checked ? colors.blue : colors.muted} />
+                  <View style={styles.subjectEditorCopy}>
+                    <Text style={styles.subjectEditorTitle} numberOfLines={1}>{branch.title}</Text>
+                    <Text style={styles.subjectEditorMeta}>{deckCount} {deckCount === 1 ? 'paquet' : 'paquets'}</Text>
+                  </View>
+                </Pressable>
+              );
+            })}
+          </ScrollView>
+          <PrimaryButton label="Terminé" onPress={onClose} />
+        </Pressable>
+      </Pressable>
+    </Modal>
+  );
+}
+
 function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate, onSettings }: {
   subject: string;
   onBack: () => void;
@@ -726,6 +790,51 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate, onSetti
       : branches
   ), [branches, hideLearned, allowedGrades]);
 
+  // Groupes de paquets retenus pour la session (null = tous). Une sélection sauvegardée
+  // qui ne correspond plus à aucune branche (curriculum mis à jour) est ignorée.
+  const [groupsModalVisible, setGroupsModalVisible] = useState(false);
+  const [sessionGroups, setSessionGroups] = useState<string[] | null>(null);
+  useEffect(() => {
+    setSessionGroups(null);
+    void getSessionGroups(subject).then(setSessionGroups);
+  }, [subject]);
+  const changeSessionGroups = (groups: string[] | null) => {
+    setSessionGroups(groups);
+    void persistSessionGroups(subject, groups ?? []);
+  };
+  const sessionSelection = useMemo(() => {
+    if (!sessionGroups) return null;
+    const keys = new Set(sessionGroups.map((title) => title.toLowerCase()));
+    return branches.some((branch) => keys.has(branch.title.toLowerCase())) ? keys : null;
+  }, [sessionGroups, branches]);
+
+  // Périmètre de la session : groupes choisis + niveaux de la fourchette (« autres » toujours inclus).
+  const sessionBranches = useMemo(() => (
+    branches
+      .filter((branch) => !sessionSelection || sessionSelection.has(branch.title.toLowerCase()))
+      .map((branch) => ({
+        ...branch,
+        levels: branch.levels.filter((level) => !allowedGrades || level.grade === 'autres' || allowedGrades.has(level.grade)),
+      }))
+      .filter((branch) => branch.levels.length > 0)
+  ), [branches, sessionSelection, allowedGrades]);
+  const sessionDecks = useMemo(() => {
+    const decks: Deck[] = [];
+    const seen = new Set<number>();
+    for (const branch of sessionBranches) {
+      for (const level of branch.levels) {
+        for (const track of level.tracks) {
+          for (const entry of track.decks) {
+            if (seen.has(entry.deck.id)) continue;
+            seen.add(entry.deck.id);
+            decks.push(entry.deck);
+          }
+        }
+      }
+    }
+    return decks;
+  }, [sessionBranches]);
+
   const toggleBranch = (branchKey: string) => {
     interactedRef.current = true;
     const expanded = expandedRef.current;
@@ -744,13 +853,24 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate, onSetti
   };
 
   const learnedCount = group.decks.filter(isDeckLearned).length;
-  const dueTotal = group.decks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
-  const newTotal = group.decks.reduce((sum, deck) => sum + Number(deck.new_count), 0);
+  // Statistiques du héros : toute la matière. La session, elle, suit filtres et groupes.
   const totalCards = group.decks.reduce((sum, deck) => sum + Number(deck.total_count), 0);
-  const allowance = group.decks.reduce((sum, deck) => sum + Math.max(0, Number(deck.daily_new_limit) - Number(deck.introduced_today)), 0);
+  const subjectDueTotal = group.decks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
+  const subjectNewTotal = group.decks.reduce((sum, deck) => sum + Number(deck.new_count), 0);
+  const dueTotal = sessionDecks.reduce((sum, deck) => sum + Number(deck.due_count), 0);
+  const newTotal = sessionDecks.reduce((sum, deck) => sum + Number(deck.new_count), 0);
+  const allowance = sessionDecks.reduce((sum, deck) => sum + Math.max(0, Number(deck.daily_new_limit) - Number(deck.introduced_today)), 0);
   const sessionCount = dueTotal + Math.min(newTotal, allowance);
-  const deckIds = group.decks.map((deck) => deck.id);
+  const deckIds = sessionDecks.map((deck) => deck.id);
   const visual = subjectVisual(group.name);
+  // Légende de la session : décrit le périmètre quand filtres ou groupes le réduisent.
+  const sessionCaption = (() => {
+    if (!group.decks.length || sessionDecks.length === group.decks.length) return `Tous les paquets de ${group.name} en une file`;
+    const parts = [`${sessionDecks.length} ${sessionDecks.length === 1 ? 'paquet' : 'paquets'}`];
+    if (stops.length > 1) parts.push(`${stops[rangeMin].label} → ${stops[rangeMax].label}`);
+    if (sessionSelection && sessionSelection.size < branches.length) parts.push(`${sessionSelection.size} ${sessionSelection.size > 1 ? 'groupes' : 'groupe'}`);
+    return parts.join(' · ');
+  })();
 
   return (
     <SafeAreaView style={styles.screen} edges={['top']}>
@@ -769,21 +889,54 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate, onSetti
           <Text style={styles.deckHeroTitle}>{group.name}</Text>
           <Text style={styles.deckHeroDescription}>{group.decks.length} {group.decks.length === 1 ? 'paquet' : 'paquets'} · {totalCards} {totalCards === 1 ? 'carte' : 'cartes'}</Text>
           <View style={styles.statRow}>
-            <View style={styles.stat}><Text style={styles.statValue}>{dueTotal}</Text><Text style={styles.statLabel}>À revoir</Text></View>
+            <View style={styles.stat}><Text style={styles.statValue}>{subjectDueTotal}</Text><Text style={styles.statLabel}>À revoir</Text></View>
             <View style={styles.statDivider} />
-            <View style={styles.stat}><Text style={styles.statValue}>{newTotal}</Text><Text style={styles.statLabel}>Nouvelles</Text></View>
+            <View style={styles.stat}><Text style={styles.statValue}>{subjectNewTotal}</Text><Text style={styles.statLabel}>Nouvelles</Text></View>
             <View style={styles.statDivider} />
             <View style={styles.stat}><Text style={styles.statValue}>{totalCards}</Text><Text style={styles.statLabel}>Total</Text></View>
           </View>
         </View>
 
+        {group.decks.length ? (
+          <>
+            <View style={styles.sectionHeaderCompact}>
+              <Text style={styles.sectionTitle}>Filtres</Text>
+              <Pressable
+                onPress={toggleHideLearned}
+                accessibilityRole="button"
+                accessibilityLabel={hideLearned ? 'Afficher les paquets appris' : 'Masquer les paquets appris'}
+                style={({ pressed }) => [styles.filterToggle, hideLearned && styles.filterToggleOn, pressed && styles.pressed]}
+              >
+                <Ionicons name={hideLearned ? 'eye-off' : 'eye'} size={15} color={colors.blue} />
+                <Text style={styles.filterToggleText}>{hideLearned ? 'Terminés masqués' : 'Masquer les terminés'}</Text>
+              </Pressable>
+            </View>
+
+            {stops.length > 1 ? (
+              <RangeSlider
+                stops={stops}
+                minIndex={rangeMin}
+                maxIndex={rangeMax}
+                onChange={(min, max) => { setMinLevel(min); setMaxLevel(max); void setLevelRange(group.name, min, max); }}
+              />
+            ) : null}
+          </>
+        ) : null}
+
         <View style={styles.sessionPanel}>
           <View style={styles.panelTop}>
-            <View><Text style={styles.panelTitle}>Session de matière</Text><Text style={styles.panelCaption}>Tous les paquets de {group.name} en une file</Text></View>
-            <View style={styles.sessionPanelIcon}><Ionicons name="play-circle-outline" size={30} color={colors.blue} /></View>
+            <View style={styles.panelCopy}>
+              <Text style={styles.panelTitle}>Session de matière</Text>
+              <Text style={styles.panelCaption}>{sessionCaption}</Text>
+            </View>
+            {branches.length > 1 ? (
+              <IconButton name="options-outline" label="Choisir les groupes à réviser" onPress={() => setGroupsModalVisible(true)} />
+            ) : (
+              <View style={styles.sessionPanelIcon}><Ionicons name="play-circle-outline" size={30} color={colors.blue} /></View>
+            )}
           </View>
           <PrimaryButton
-            label={!group.decks.length ? 'Crée un premier paquet' : sessionCount ? `Commencer · ${sessionCount} carte${sessionCount > 1 ? 's' : ''}` : 'Lancer une session'}
+            label={!group.decks.length ? 'Crée un premier paquet' : !deckIds.length ? 'Aucun paquet à réviser' : sessionCount ? `Commencer · ${sessionCount} carte${sessionCount > 1 ? 's' : ''}` : 'Lancer une session'}
             icon="play"
             disabled={!deckIds.length}
             onPress={() => onStudy(deckIds, allowance)}
@@ -798,27 +951,7 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate, onSetti
 
         <View style={styles.sectionHeaderCompact}>
           <Text style={styles.sectionTitle}>{progression ? 'Arbre de progression' : 'Tous les paquets'}</Text>
-          {group.decks.length ? (
-            <Pressable
-              onPress={toggleHideLearned}
-              accessibilityRole="button"
-              accessibilityLabel={hideLearned ? 'Afficher les paquets appris' : 'Masquer les paquets appris'}
-              style={({ pressed }) => [styles.filterToggle, hideLearned && styles.filterToggleOn, pressed && styles.pressed]}
-            >
-              <Ionicons name={hideLearned ? 'eye-off' : 'eye'} size={15} color={colors.blue} />
-              <Text style={styles.filterToggleText}>{hideLearned ? 'Terminés masqués' : 'Masquer les terminés'}</Text>
-            </Pressable>
-          ) : null}
         </View>
-
-        {stops.length > 1 ? (
-          <RangeSlider
-            stops={stops}
-            minIndex={rangeMin}
-            maxIndex={rangeMax}
-            onChange={(min, max) => { setMinLevel(min); setMaxLevel(max); void setLevelRange(group.name, min, max); }}
-          />
-        ) : null}
 
         {visibleBranches.map((branch) => {
           const branchKey = `${group.name.toLowerCase()}::${branch.title}`;
@@ -856,6 +989,14 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate, onSetti
           <View><Text style={styles.newDeckTitle}>Nouveau paquet</Text><Text style={styles.newDeckCaption}>Créer une nouvelle série de cartes</Text></View>
         </Pressable>
       </ScrollView>
+
+      <SessionGroupsModal
+        visible={groupsModalVisible}
+        branches={branches}
+        selected={sessionGroups}
+        onClose={() => setGroupsModalVisible(false)}
+        onChange={changeSessionGroups}
+      />
     </SafeAreaView>
   );
 }
@@ -1783,6 +1924,10 @@ const styles = StyleSheet.create({
   statDivider: { width: 1, height: 31, backgroundColor: colors.line, alignSelf: 'center' },
   sessionPanel: { backgroundColor: colors.paper, borderRadius: radius.large, padding: 18, borderWidth: 1, borderColor: '#EAEAF0', ...shadow },
   panelTop: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 17 },
+  panelCopy: { flex: 1, minWidth: 0, marginRight: 11 },
+  sessionGroupAll: { alignSelf: 'flex-end', marginTop: 12 },
+  sessionGroupList: { maxHeight: 320, marginTop: 16 },
+  sessionGroupRow: { minHeight: 54, flexDirection: 'row', alignItems: 'center', gap: 11 },
   panelTitle: { fontSize: 15, fontWeight: '800', color: colors.ink },
   panelCaption: { fontSize: 11, color: colors.muted, marginTop: 4 },
   stepper: { height: 39, flexDirection: 'row', borderRadius: 10, borderWidth: 1, borderColor: colors.line, alignItems: 'center', overflow: 'hidden' },
