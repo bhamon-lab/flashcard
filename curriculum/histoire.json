@@ -87,6 +87,19 @@
       "card_count": 21
     },
     {
+      "id": "histoire-3e-dates",
+      "deck_id": "histoire-3e-dates",
+      "grade": "3e",
+      "title": "Le monde depuis 1914",
+      "domain": "dates",
+      "source_id": "college-histoire-2026",
+      "source_section": "Guerres mondiales et régimes totalitaires ; monde depuis 1945 ; Françaises et Français dans une République repensée",
+      "prerequisites": [
+        "histoire-4e-dates"
+      ],
+      "card_count": 42
+    },
+    {
       "id": "histoire-2de-dates",
       "deck_id": "histoire-2de-dates",
       "grade": "2de",
@@ -95,7 +108,7 @@
       "source_id": "lycee-histoire-2019",
       "source_section": "Méditerranée antique et médiévale ; XVe-XVIe siècles ; État moderne",
       "prerequisites": [
-        "histoire-dates-xxe"
+        "histoire-3e-dates"
       ],
       "card_count": 20
     },
