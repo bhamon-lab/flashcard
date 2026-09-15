@@ -65,6 +65,24 @@
       "back": "$f(x)=a(x-\\alpha)^2+\\beta$, avec $a\\ne0$ ; le sommet est $(\\alpha;\\beta)$."
     },
     {
+      "id": "canonique-alpha",
+      "kind": "formule",
+      "front": "Pour $f(x)=ax^2+bx+c$, avec $a\\ne0$, comment calculer $\\alpha$ dans la forme canonique ?",
+      "back": "$\\alpha=-\\frac{b}{2a}$."
+    },
+    {
+      "id": "canonique-beta",
+      "kind": "formule",
+      "front": "Pour $f(x)=ax^2+bx+c$, avec $a\\ne0$, comment calculer $\\beta$ dans la forme canonique ?",
+      "back": "$\\beta=f(\\alpha)=c-\\frac{b^2}{4a}=-\\frac{\\Delta}{4a}$, avec $\\alpha=-\\frac{b}{2a}$ et $\\Delta=b^2-4ac$."
+    },
+    {
+      "id": "canonique-methode",
+      "kind": "methode",
+      "front": "Comment passer de $f(x)=ax^2+bx+c$, avec $a\\ne0$, à sa forme canonique ?",
+      "back": "Calculer $\\alpha=-\\frac{b}{2a}$, puis $\\beta=f(\\alpha)$ ; écrire $f(x)=a(x-\\alpha)^2+\\beta$."
+    },
+    {
       "id": "completion",
       "kind": "formule",
       "front": "Quelle identité utilise-t-on pour compléter un carré ?",
