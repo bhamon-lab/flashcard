@@ -38,6 +38,7 @@ import {
   getSessionGroups,
   getStatsSnapshot,
   getSubjectDelays,
+  getSubjectNewLimit,
   getSubjectPrefs,
   getReversedDeckIds,
   initializeDatabase,
@@ -52,6 +53,7 @@ import {
   setHideLearnedPref,
   setSubjectPrefs,
   setSubjectDelays,
+  setSubjectNewLimit,
   setDeckReversedPref,
   updateDailyLimit,
 } from './src/db';
@@ -929,7 +931,7 @@ function SubjectScreen({ subject, onBack, onOpenDeck, onStudy, onCreate, onSetti
           <IconButton name="arrow-back" label="Retour" onPress={onBack} />
           <Text style={styles.topBarTitle} numberOfLines={1}>{group.name}</Text>
           <View style={styles.topBarActions}>
-            <IconButton name="settings-outline" label="Timers de révision" onPress={onSettings} />
+            <IconButton name="settings-outline" label="Réglages de révision" onPress={onSettings} />
             <IconButton name="add" label="Nouveau paquet" onPress={() => onCreate(group.name)} />
           </View>
         </View>
@@ -1187,10 +1189,14 @@ function DeckScreen({ deckId, onBack, onStudy }: { deckId: number; onBack: (subj
 
 function SubjectSettingsScreen({ subject, onBack }: { subject: string; onBack: () => void }) {
   const [delays, setDelays] = useState<ReviewDelays | null>(null);
+  const [newLimit, setNewLimit] = useState<number | null>(null);
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    void getSubjectDelays(subject).then(setDelays);
+    void Promise.all([getSubjectDelays(subject), getSubjectNewLimit(subject)]).then(([nextDelays, nextNewLimit]) => {
+      setDelays(nextDelays);
+      setNewLimit(nextNewLimit);
+    });
   }, [subject]);
 
   const updateDelay = (key: keyof ReviewDelays, value: string) => {
@@ -1198,15 +1204,20 @@ function SubjectSettingsScreen({ subject, onBack }: { subject: string; onBack: (
     setDelays((current) => current ? { ...current, [key]: Number.isFinite(parsed) ? parsed : 0 } : current);
   };
 
+  const updateNewLimit = (value: string) => {
+    const parsed = Number.parseInt(value.replace(/[^0-9]/g, ''), 10);
+    setNewLimit(Number.isFinite(parsed) ? parsed : 0);
+  };
+
   const save = async () => {
-    if (!delays) return;
+    if (!delays || newLimit === null) return;
     setSaving(true);
-    await setSubjectDelays(subject, delays);
+    await Promise.all([setSubjectDelays(subject, delays), setSubjectNewLimit(subject, newLimit)]);
     setSaving(false);
     onBack();
   };
 
-  if (!delays) return <View style={styles.loading}><ActivityIndicator color={colors.blue} /></View>;
+  if (!delays || newLimit === null) return <View style={styles.loading}><ActivityIndicator color={colors.blue} /></View>;
 
   const timerRows: Array<{ key: keyof ReviewDelays; title: string; note: string; icon: keyof typeof Ionicons.glyphMap; tint: string; fg: string }> = [
     { key: 'again', title: 'Immédiatement', note: 'La carte reste dans la session', icon: 'refresh', tint: colors.redSoft, fg: colors.red },
@@ -1224,10 +1235,29 @@ function SubjectSettingsScreen({ subject, onBack }: { subject: string; onBack: (
           <View style={{ width: 44 }} />
         </View>
         <View style={styles.settingsHero}>
-          <View style={styles.settingsIcon}><Ionicons name="timer-outline" size={31} color={colors.blue} /></View>
-          <Text style={styles.settingsTitle}>Timers de révision</Text>
-          <Text style={styles.settingsText}>Choisis le délai appliqué à chaque réponse pour tous les paquets de « {subject} ».</Text>
+          <View style={styles.settingsIcon}><Ionicons name="options-outline" size={31} color={colors.blue} /></View>
+          <Text style={styles.settingsTitle}>Réglages de révision</Text>
+          <Text style={styles.settingsText}>Choisis le rythme de nouvelles cartes et les délais de révision pour tous les paquets de « {subject} ».</Text>
         </View>
+        <Text style={styles.settingsLabel}>NOUVELLES CARTES PAR JOUR</Text>
+        <View style={styles.timerList}>
+          <View style={styles.timerRow}>
+            <View style={[styles.timerIcon, { backgroundColor: colors.greenSoft }]}><Ionicons name="sparkles-outline" size={20} color={colors.green} /></View>
+            <View style={styles.timerCopy}><Text style={styles.timerTitle}>Quota quotidien</Text><Text style={styles.timerNote}>Nouvelles cartes introduites chaque jour</Text></View>
+            <View style={styles.timerInputWrap}>
+              <TextInput
+                accessibilityLabel="Nombre de nouvelles cartes par jour"
+                value={String(newLimit)}
+                onChangeText={updateNewLimit}
+                keyboardType="number-pad"
+                selectTextOnFocus
+                style={styles.timerInput}
+              />
+              <Text style={styles.timerUnit}>cartes</Text>
+            </View>
+          </View>
+        </View>
+        <Text style={styles.settingsHint}>S’applique à tous les paquets de la matière dès la prochaine session. Tu peux encore ajuster le quota d’un paquet depuis son écran.</Text>
         <Text style={styles.settingsLabel}>DURÉES EN MINUTES</Text>
         <View style={styles.timerList}>
           {timerRows.map((timer, index) => (

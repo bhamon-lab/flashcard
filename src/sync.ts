@@ -102,7 +102,6 @@ function asDeck(raw: unknown, fileName: string, fallbackSubject: string): Synced
     description: typeof candidate.description === 'string' ? candidate.description.trim() : '',
     color: typeof candidate.color === 'string' ? candidate.color : undefined,
     format: candidate.format === 'math' ? 'math' : 'people',
-    daily_new_limit: typeof candidate.daily_new_limit === 'number' ? candidate.daily_new_limit : undefined,
     cards: normalized,
   };
 }

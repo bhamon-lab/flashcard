@@ -219,7 +219,7 @@ export async function createDeck(title: string, description: string, subject = '
   const count = await db.getFirstAsync<{ count: number }>('SELECT COUNT(*) AS count FROM decks');
   return db.runAsync(
     'INSERT INTO decks (title, description, color, daily_new_limit, subject, created_at) VALUES (?, ?, ?, ?, ?, ?)',
-    title.trim(), description.trim(), palette[(count?.count ?? 0) % palette.length], 5, subject.trim() || 'Divers', Date.now(),
+    title.trim(), description.trim(), palette[(count?.count ?? 0) % palette.length], DEFAULT_NEW_CARDS_PER_DAY, subject.trim() || 'Divers', Date.now(),
   );
 }
 
@@ -232,7 +232,10 @@ export async function updateDailyLimit(deckId: number, limit: number) {
  * « later » est l'état « Jamais » (carte acquise) : non configurable, délai sentinel -1. */
 export const DEFAULT_REVIEW_DELAYS: ReviewDelays = { again: 0, soon: 10, later: NEVER_DELAY_MINUTES, tomorrow: 1440 };
 
+export const DEFAULT_NEW_CARDS_PER_DAY = 5;
+
 const SUBJECT_DELAYS_KEY = 'subject-delays';
+const SUBJECT_NEW_LIMITS_KEY = 'subject-new-limits';
 
 type StoredSubjectDelays = Record<string, Partial<ReviewDelays>>;
 
@@ -277,6 +280,36 @@ export async function setSubjectDelays(subject: string, delays: ReviewDelays) {
      SET again_delay_minutes = ?, soon_delay_minutes = ?, later_delay_minutes = ?, tomorrow_delay_minutes = ?
      WHERE lower(subject) = lower(?)`,
     next.again, next.soon, next.later, next.tomorrow, subject.trim(),
+  );
+}
+
+type StoredSubjectNewLimits = Record<string, number>;
+
+const parseSubjectNewLimits = (raw: string | null): StoredSubjectNewLimits => {
+  if (!raw) return {};
+  try {
+    const parsed = JSON.parse(raw) as StoredSubjectNewLimits;
+    return parsed && typeof parsed === 'object' ? parsed : {};
+  } catch {
+    return {};
+  }
+};
+
+export async function getSubjectNewLimit(subject: string): Promise<number> {
+  const stored = parseSubjectNewLimits(await getMetadata(SUBJECT_NEW_LIMITS_KEY))[subject.trim().toLowerCase()];
+  const value = Number(stored);
+  return Number.isFinite(value) ? Math.max(0, Math.round(value)) : DEFAULT_NEW_CARDS_PER_DAY;
+}
+
+export async function setSubjectNewLimit(subject: string, limit: number) {
+  const next = Math.max(0, Math.round(limit));
+  const map = parseSubjectNewLimits(await getMetadata(SUBJECT_NEW_LIMITS_KEY));
+  map[subject.trim().toLowerCase()] = next;
+  await setMetadata(SUBJECT_NEW_LIMITS_KEY, JSON.stringify(map));
+  const db = await getDatabase();
+  await db.runAsync(
+    'UPDATE decks SET daily_new_limit = ? WHERE lower(subject) = lower(?)',
+    next, subject.trim(),
   );
 }
 
@@ -692,7 +725,6 @@ export type SyncedDeck = {
   description?: string;
   color?: string;
   format?: string;
-  daily_new_limit?: number;
   subject?: string;
   grade?: string;
   mode?: string;
@@ -714,7 +746,6 @@ export async function upsertSyncedDeck(deck: SyncedDeck): Promise<'created' | 'u
   const db = await getDatabase();
   const kind = deck.format === 'math' ? 'math' : 'people';
   const color = deck.color && /^#[0-9A-Fa-f]{6}$/.test(deck.color) ? deck.color : '#DDE9DE';
-  const dailyNewLimit = Math.max(0, Math.round(deck.daily_new_limit ?? 5));
   const description = deck.description?.trim() ?? '';
   const subject = deck.subject?.trim() || 'Divers';
   const grade = deck.grade?.trim() || null;
@@ -725,16 +756,16 @@ export async function upsertSyncedDeck(deck: SyncedDeck): Promise<'created' | 'u
   let outcome: 'created' | 'updated';
   if (existing) {
     await db.runAsync(
-      'UPDATE decks SET title = ?, description = ?, color = ?, kind = ?, daily_new_limit = ?, subject = ?, grade = ?, audio_language = ? WHERE id = ?',
-      deck.title, description, color, kind, dailyNewLimit, subject, grade, audioLanguage, existing.id,
+      'UPDATE decks SET title = ?, description = ?, color = ?, kind = ?, subject = ?, grade = ?, audio_language = ? WHERE id = ?',
+      deck.title, description, color, kind, subject, grade, audioLanguage, existing.id,
     );
     deckId = existing.id;
     outcome = 'updated';
   } else {
     const inserted = await db.runAsync(
-      `INSERT INTO decks (title, description, color, daily_new_limit, kind, sync_id, subject, grade, audio_language, created_at)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-      deck.title, description, color, dailyNewLimit, kind, deck.id, subject, grade, audioLanguage, Date.now(),
+      `INSERT INTO decks (title, description, color, kind, sync_id, subject, grade, audio_language, created_at)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      deck.title, description, color, kind, deck.id, subject, grade, audioLanguage, Date.now(),
     );
     deckId = inserted.lastInsertRowId;
     outcome = 'created';
