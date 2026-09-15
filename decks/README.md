@@ -42,7 +42,7 @@ Vérifier le catalogue avec `python3 scripts/validate_college_decks.py`.
 
 ## Mathématiques du lycée
 
-Le catalogue 2026-2027 ajoute **54 decks et 542 cartes** pour la 2de générale et
+Le catalogue 2026-2027 ajoute **54 decks et 545 cartes** pour la 2de générale et
 technologique, la 1re spécialité, la terminale spécialité et la terminale
 mathématiques complémentaires. Même format de rappel : formules, définitions,
 propriétés et méthodes générales, avec des réponses courtes.

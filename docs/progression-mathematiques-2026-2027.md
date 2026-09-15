@@ -1,6 +1,6 @@
 # Arbre de progression en mathématiques — 2026-2027
 
-Cet arbre rassemble les **92 decks et 915 cartes**, de la 6e à la terminale, dans une progression commune organisée par thèmes.
+Cet arbre rassemble les **93 decks et 1 030 cartes**, de la 6e à la terminale, dans une progression commune organisée par thèmes.
 
 Dans chaque branche, les classes se lisent de haut en bas : **6e → 5e → 4e → 3e → 2de → 1re spécialité → terminale**. Les sous-branches de terminale correspondent à deux parcours alternatifs. Chaque feuille reprend le titre d’un deck ; un niveau absent signifie qu’aucun deck distinct de ce thème n’est proposé à ce niveau.
 
