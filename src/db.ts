@@ -647,6 +647,37 @@ export async function setLevelRange(subject: string, min: number, max: number) {
   await setMetadata(LEVEL_RANGE_KEY, JSON.stringify(map));
 }
 
+/** Groupes de paquets (branches de l'arbre) retenus pour la session de matière, par matière. Tableau vide = tous. */
+type StoredSessionGroups = Record<string, string[]>;
+
+const SESSION_GROUPS_KEY = 'session-groups';
+
+const parseSessionGroups = (raw: string | null): StoredSessionGroups => {
+  if (!raw) return {};
+  try {
+    const parsed = JSON.parse(raw) as StoredSessionGroups;
+    if (!parsed || typeof parsed !== 'object') return {};
+    const map: StoredSessionGroups = {};
+    for (const [key, value] of Object.entries(parsed)) {
+      if (Array.isArray(value)) map[key] = value.filter((item): item is string => typeof item === 'string');
+    }
+    return map;
+  } catch {
+    return {};
+  }
+};
+
+export async function getSessionGroups(subject: string): Promise<string[] | null> {
+  const groups = parseSessionGroups(await getMetadata(SESSION_GROUPS_KEY))[subject.trim().toLowerCase()];
+  return Array.isArray(groups) ? groups : null;
+}
+
+export async function setSessionGroups(subject: string, groups: string[]) {
+  const map = parseSessionGroups(await getMetadata(SESSION_GROUPS_KEY));
+  map[subject.trim().toLowerCase()] = groups;
+  await setMetadata(SESSION_GROUPS_KEY, JSON.stringify(map));
+}
+
 export type SyncedCard = {
   id: string;
   front: string;
